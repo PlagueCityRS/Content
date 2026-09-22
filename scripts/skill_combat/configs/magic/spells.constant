@@ -31,6 +31,7 @@
 ^bind = 46
 ^snare = 47
 ^entangle = 48
+^tele_block = 68
 
 //utility
 ^enchant_lvl1 = 22
@@ -54,7 +55,11 @@
 ^charge = 40
 ^ardougne_teleport = 49
 ^lumbridge_teleport = 50
-^trollheim_teleport = 52
+^trollheim_teleport = 80
+^enchant_lvl6 = 71
+^teleother_lumbridge = 81
+^teleother_falador = 82
+^teleother_camelot = 83
 
 // npc spells
 ^skeleton_mage_attack = 100
@@ -62,3 +67,29 @@
 ^flames_of_zamorak_npc = 102
 ^claws_of_guthix_npc = 103
 ^saradomin_strike_npc = 104
+
+// ancient magicks
+^smoke_rush = 52
+^smoke_burst = 53
+^smoke_blitz = 54
+^smoke_barrage = 55
+^shadow_rush = 56
+^shadow_burst = 57
+^shadow_blitz = 58
+^shadow_barrage = 59
+^blood_rush = 60
+^blood_burst = 61
+^blood_blitz = 62
+^blood_barrage = 63
+^ice_rush = 64
+^ice_burst = 65
+^ice_blitz = 66
+^ice_barrage = 67
+^paddewa_teleport = 72
+^senntisten_teleport = 73
+^kharyrll_teleport = 74
+^lassar_teleport = 75
+^dareeyak_teleport = 76
+^carrallanger_teleport = 77
+^annakarl_teleport = 78
+^ghorrock_teleport = 79

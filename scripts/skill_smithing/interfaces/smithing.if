@@ -1,711 +1,715 @@
+type=layer
+width=512
+height=334
+
 [com_0]
-type=graphic
 x=12
 y=20
+type=graphic
 width=88
 height=60
 graphic=tradebacking,0
 
 [com_1]
-type=graphic
 x=12
 y=80
+type=graphic
 width=88
 height=60
 graphic=tradebacking,0
 
 [com_2]
-type=graphic
 x=12
 y=140
+type=graphic
 width=88
 height=60
 graphic=tradebacking,0
 
 [com_3]
-type=graphic
 x=12
 y=200
+type=graphic
 width=88
 height=60
 graphic=tradebacking,0
 
 [com_4]
-type=graphic
 x=12
 y=260
+type=graphic
 width=88
 height=60
 graphic=tradebacking,0
 
 [com_5]
-type=graphic
 x=100
 y=20
+type=graphic
 width=88
 height=60
 graphic=tradebacking,0
 
 [com_6]
-type=graphic
 x=100
 y=80
+type=graphic
 width=88
 height=60
 graphic=tradebacking,0
 
 [com_7]
-type=graphic
 x=100
 y=140
+type=graphic
 width=88
 height=60
 graphic=tradebacking,0
 
 [com_8]
-type=graphic
 x=100
 y=200
+type=graphic
 width=88
 height=60
 graphic=tradebacking,0
 
 [com_9]
-type=graphic
 x=188
 y=20
+type=graphic
 width=88
 height=60
 graphic=tradebacking,0
 
 [com_10]
-type=graphic
 x=100
 y=260
+type=graphic
 width=88
 height=60
 graphic=tradebacking,0
 
 [com_11]
-type=graphic
 x=188
 y=80
+type=graphic
 width=88
 height=60
 graphic=tradebacking,0
 
 [com_12]
-type=graphic
 x=188
 y=140
+type=graphic
 width=88
 height=60
 graphic=tradebacking,0
 
 [com_13]
-type=graphic
 x=188
 y=200
+type=graphic
 width=88
 height=60
 graphic=tradebacking,0
 
 [com_14]
-type=graphic
 x=188
 y=260
+type=graphic
 width=88
 height=60
 graphic=tradebacking,0
 
 [com_15]
-type=graphic
 x=276
 y=20
+type=graphic
 width=88
 height=60
 graphic=tradebacking,0
 
 [com_16]
-type=graphic
 x=364
 y=80
+type=graphic
 width=88
 height=60
 graphic=tradebacking,0
 
 [com_17]
-type=graphic
 x=276
 y=80
+type=graphic
 width=88
 height=60
 graphic=tradebacking,0
 
 [com_18]
-type=graphic
 x=276
 y=140
+type=graphic
 width=88
 height=60
 graphic=tradebacking,0
 
 [com_19]
-type=graphic
 x=276
 y=200
+type=graphic
 width=88
 height=60
 graphic=tradebacking,0
 
 [com_20]
-type=graphic
 x=276
 y=260
+type=graphic
 width=88
 height=60
 graphic=tradebacking,0
 
 [com_21]
-type=graphic
 x=364
 y=140
+type=graphic
 width=88
 height=60
 graphic=tradebacking,0
 
 [com_22]
-type=graphic
 x=364
 y=20
+type=graphic
 width=88
 height=60
 graphic=tradebacking,0
 
 [com_23]
-type=graphic
 x=364
 y=200
+type=graphic
 width=88
 height=60
 graphic=tradebacking,0
 
 [com_24]
-type=graphic
 x=364
 y=260
+type=graphic
 width=88
 height=60
 graphic=tradebacking,0
 
 [com_25]
-type=graphic
 x=412
 y=20
+type=graphic
 width=88
 height=60
 graphic=tradebacking,0
 
 [com_26]
-type=graphic
 x=412
 y=80
+type=graphic
 width=88
 height=60
 graphic=tradebacking,0
 
 [com_27]
-type=graphic
 x=412
 y=140
+type=graphic
 width=88
 height=60
 graphic=tradebacking,0
 
 [com_28]
-type=graphic
 x=412
 y=200
+type=graphic
 width=88
 height=60
 graphic=tradebacking,0
 
 [com_29]
-type=graphic
 x=412
 y=260
+type=graphic
 width=88
 height=60
 graphic=tradebacking,0
 
 [com_30]
-type=graphic
 x=12
 y=20
+type=graphic
 width=25
 height=30
 graphic=steelborder,0
 
 [com_31]
-type=graphic
 x=-3
 y=49
+type=graphic
 width=36
 height=36
 graphic=miscgraphics,2
 
 [com_32]
-type=graphic
 x=-3
 y=85
+type=graphic
 width=36
 height=36
 graphic=miscgraphics,2
 
 [com_33]
-type=graphic
 x=-3
 y=121
+type=graphic
 width=36
 height=36
 graphic=miscgraphics,2
 
 [com_34]
-type=graphic
 x=-3
 y=157
+type=graphic
 width=36
 height=36
 graphic=miscgraphics,2
 
 [com_35]
-type=graphic
 x=-3
 y=193
+type=graphic
 width=36
 height=36
 graphic=miscgraphics,2
 
 [com_36]
-type=graphic
 x=-3
 y=229
+type=graphic
 width=36
 height=36
 graphic=miscgraphics,2
 
 [com_37]
-type=graphic
 x=-3
 y=265
+type=graphic
 width=36
 height=36
 graphic=miscgraphics,2
 
 [com_38]
-type=graphic
 x=479
 y=50
+type=graphic
 width=36
 height=36
 graphic=steelborder2,1
 
 [com_39]
-type=graphic
 x=479
 y=86
+type=graphic
 width=36
 height=36
 graphic=steelborder2,1
 
 [com_40]
-type=graphic
 x=479
 y=122
+type=graphic
 width=36
 height=36
 graphic=steelborder2,1
 
 [com_41]
-type=graphic
 x=479
 y=158
+type=graphic
 width=36
 height=36
 graphic=steelborder2,1
 
 [com_42]
-type=graphic
 x=479
 y=194
+type=graphic
 width=36
 height=36
 graphic=steelborder2,1
 
 [com_43]
-type=graphic
 x=479
 y=230
+type=graphic
 width=36
 height=36
 graphic=steelborder2,1
 
 [com_44]
-type=graphic
 x=479
 y=266
+type=graphic
 width=36
 height=36
 graphic=steelborder2,1
 
 [com_45]
-type=graphic
 x=73
 y=299
+type=graphic
 width=36
 height=36
 graphic=miscgraphics,3
 
 [com_46]
-type=graphic
 x=109
 y=299
+type=graphic
 width=36
 height=36
 graphic=miscgraphics,3
 
 [com_47]
-type=graphic
 x=145
 y=299
+type=graphic
 width=36
 height=36
 graphic=miscgraphics,3
 
 [com_48]
-type=graphic
 x=181
 y=299
+type=graphic
 width=36
 height=36
 graphic=miscgraphics,3
 
 [com_49]
-type=graphic
 x=217
 y=299
+type=graphic
 width=36
 height=36
 graphic=miscgraphics,3
 
 [com_50]
-type=graphic
 x=253
 y=299
+type=graphic
 width=36
 height=36
 graphic=miscgraphics,3
 
 [com_51]
-type=graphic
 x=289
 y=299
+type=graphic
 width=36
 height=36
 graphic=miscgraphics,3
 
 [com_52]
-type=graphic
 x=325
 y=299
+type=graphic
 width=36
 height=36
 graphic=miscgraphics,3
 
 [com_53]
-type=graphic
 x=361
 y=299
+type=graphic
 width=36
 height=36
 graphic=miscgraphics,3
 
 [com_54]
-type=graphic
 x=397
 y=299
+type=graphic
 width=36
 height=36
 graphic=miscgraphics,3
 
 [com_55]
-type=graphic
 x=433
 y=299
+type=graphic
 width=36
 height=36
 graphic=miscgraphics,3
 
 [com_56]
-type=graphic
 x=72
 y=5
+type=graphic
 width=36
 height=36
 graphic=steelborder2,0
 
 [com_57]
-type=graphic
 x=108
 y=5
+type=graphic
 width=36
 height=36
 graphic=steelborder2,0
 
 [com_58]
-type=graphic
 x=144
 y=5
+type=graphic
 width=36
 height=36
 graphic=steelborder2,0
 
 [com_59]
-type=graphic
 x=180
 y=5
+type=graphic
 width=36
 height=36
 graphic=steelborder2,0
 
 [com_60]
-type=graphic
 x=216
 y=5
+type=graphic
 width=36
 height=36
 graphic=steelborder2,0
 
 [com_61]
-type=graphic
 x=252
 y=5
+type=graphic
 width=36
 height=36
 graphic=steelborder2,0
 
 [com_62]
-type=graphic
 x=288
 y=5
+type=graphic
 width=36
 height=36
 graphic=steelborder2,0
 
 [com_63]
-type=graphic
 x=324
 y=5
+type=graphic
 width=36
 height=36
 graphic=steelborder2,0
 
 [com_64]
-type=graphic
 x=360
 y=5
+type=graphic
 width=36
 height=36
 graphic=steelborder2,0
 
 [com_65]
-type=graphic
 x=396
 y=5
+type=graphic
 width=36
 height=36
 graphic=steelborder2,0
 
 [com_66]
-type=graphic
 x=432
 y=5
+type=graphic
 width=36
 height=36
 graphic=steelborder2,0
 
 [com_67]
-type=graphic
 x=252
 y=34
+type=graphic
 width=36
 height=36
 graphic=steelborder2,0
 
 [com_68]
-type=graphic
 x=37
 y=5
+type=graphic
 width=36
 height=36
 graphic=steelborder2,0
 
 [com_69]
-type=graphic
 x=37
 y=299
+type=graphic
 width=36
 height=36
 graphic=miscgraphics,3
 
 [com_70]
-type=graphic
 x=12
 y=290
+type=graphic
 width=25
 height=30
 graphic=steelborder,2
 
 [com_71]
-type=graphic
 x=475
 y=20
+type=graphic
 width=25
 height=30
 graphic=steelborder,1
 
 [com_72]
-type=graphic
 x=439
 y=5
+type=graphic
 width=36
 height=36
 graphic=steelborder2,0
 
 [com_73]
-type=graphic
 x=475
 y=290
+type=graphic
 width=25
 height=30
 graphic=steelborder,3
 
 [com_74]
-type=graphic
 x=439
 y=299
+type=graphic
 width=36
 height=36
 graphic=miscgraphics,3
 
 [com_75]
-type=graphic
 x=288
 y=34
+type=graphic
 width=36
 height=36
 graphic=steelborder2,0
 
 [com_76]
-type=graphic
 x=324
 y=34
+type=graphic
 width=36
 height=36
 graphic=steelborder2,0
 
 [com_77]
-type=graphic
 x=360
 y=34
+type=graphic
 width=36
 height=36
 graphic=steelborder2,0
 
 [com_78]
-type=graphic
 x=396
 y=34
+type=graphic
 width=36
 height=36
 graphic=steelborder2,0
 
 [com_79]
-type=graphic
 x=432
 y=34
+type=graphic
 width=36
 height=36
 graphic=steelborder2,0
 
 [com_80]
-type=graphic
 x=459
 y=34
+type=graphic
 width=36
 height=36
 graphic=steelborder2,0
 
 [com_81]
-type=graphic
 x=216
 y=34
+type=graphic
 width=36
 height=36
 graphic=steelborder2,0
 
 [com_82]
-type=graphic
 x=180
 y=34
+type=graphic
 width=36
 height=36
 graphic=steelborder2,0
 
 [com_83]
-type=graphic
 x=144
 y=34
+type=graphic
 width=36
 height=36
 graphic=steelborder2,0
 
 [com_84]
-type=graphic
 x=108
 y=34
+type=graphic
 width=36
 height=36
 graphic=steelborder2,0
 
 [com_85]
-type=graphic
 x=72
 y=34
+type=graphic
 width=36
 height=36
 graphic=steelborder2,0
 
 [com_86]
-type=graphic
 x=36
 y=34
+type=graphic
 width=36
 height=36
 graphic=steelborder2,0
 
 [com_87]
-type=graphic
 x=17
 y=34
+type=graphic
 width=36
 height=36
 graphic=steelborder2,0
 
 [com_88]
-type=text
 x=116
 y=191
+type=text
 width=80
 height=14
 script1op1=pushvar,modified_smith
@@ -713,12 +717,15 @@ script1=gt,9
 center=yes
 font=p12_full
 text=Warhammer
+colour=0x000000
 activecolour=0xFFFFFF
+overcolour=0x000000
+activeovercolour=0x000000
 
 [com_89]
-type=text
 x=424
 y=28
+type=text
 buttontype=close
 width=68
 height=11
@@ -726,12 +733,14 @@ font=p11_full
 shadowed=yes
 text=Close Window
 colour=0xC00000
+activecolour=0x000000
 overcolour=0xFFFFFF
+activeovercolour=0x000000
 
 [com_90]
-type=text
 x=18
 y=141
+type=text
 width=80
 height=14
 script1op1=pushvar,modified_smith
@@ -739,12 +748,15 @@ script1=gt,4
 center=yes
 font=p12_full
 text=Sword
+colour=0x000000
 activecolour=0xFFFFFF
+overcolour=0x000000
+activeovercolour=0x000000
 
 [com_91]
-type=text
 x=18
 y=241
+type=text
 width=80
 height=14
 script1op1=pushvar,modified_smith
@@ -752,12 +764,15 @@ script1=gt,6
 center=yes
 font=p12_full
 text=Long sword
+colour=0x000000
 activecolour=0xFFFFFF
+overcolour=0x000000
+activeovercolour=0x000000
 
 [com_92]
-type=text
 x=18
 y=191
+type=text
 width=80
 height=14
 script1op1=pushvar,modified_smith
@@ -765,12 +780,15 @@ script1=gt,5
 center=yes
 font=p12_full
 text=Scimitar
+colour=0x000000
 activecolour=0xFFFFFF
+overcolour=0x000000
+activeovercolour=0x000000
 
 [com_93]
-type=text
 x=18
 y=291
+type=text
 width=80
 height=14
 script1op1=pushvar,modified_smith
@@ -778,12 +796,15 @@ script1=gt,14
 center=yes
 font=p12_full
 text=2 hand sword
+colour=0x000000
 activecolour=0xFFFFFF
+overcolour=0x000000
+activeovercolour=0x000000
 
 [com_94]
-type=text
 x=73
 y=219
+type=text
 width=34
 height=14
 script1op1=pushvar,smithbars
@@ -794,11 +815,13 @@ shadowed=yes
 text=2bars
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
 [com_95]
-type=text
 x=73
 y=269
+type=text
 width=33
 height=14
 script1op1=pushvar,smithbars
@@ -808,11 +831,13 @@ shadowed=yes
 text=3bars
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
 [com_96]
-type=text
 x=116
 y=91
+type=text
 width=80
 height=14
 script1op1=pushvar,modified_smith
@@ -820,12 +845,15 @@ script1=gt,1
 center=yes
 font=p12_full
 text=Axe
+colour=0x000000
 activecolour=0xFFFFFF
+overcolour=0x000000
+activeovercolour=0x000000
 
 [com_97]
-type=text
 x=116
 y=241
+type=text
 width=80
 height=14
 script1op1=pushvar,modified_smith
@@ -833,12 +861,15 @@ script1=gt,10
 center=yes
 font=p12_full
 text=Battle axe
+colour=0x000000
 activecolour=0xFFFFFF
+overcolour=0x000000
+activeovercolour=0x000000
 
 [com_98]
-type=text
 x=116
 y=141
+type=text
 width=80
 height=14
 script1op1=pushvar,modified_smith
@@ -846,12 +877,15 @@ script1=gt,2
 center=yes
 font=p12_full
 text=Mace
+colour=0x000000
 activecolour=0xFFFFFF
+overcolour=0x000000
+activeovercolour=0x000000
 
 [com_99]
-type=text
 x=18
 y=91
+type=text
 width=80
 height=14
 script1op1=pushvar,modified_smith
@@ -859,12 +893,15 @@ script1=gt,0
 center=yes
 font=p12_full
 text=Dagger
+colour=0x000000
 activecolour=0xFFFFFF
+overcolour=0x000000
+activeovercolour=0x000000
 
 [com_100]
-type=text
 x=171
 y=219
+type=text
 width=33
 height=14
 script1op1=pushvar,smithbars
@@ -874,19 +911,21 @@ shadowed=yes
 text=3bars
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
 [other_layer]
-type=layer
 x=410
 y=209
+type=layer
 width=80
 height=46
 
 [com_101]
 layer=other_layer
-type=text
 x=0
 y=32
+type=text
 width=80
 height=14
 script1op1=pushvar,modified_smith
@@ -894,13 +933,16 @@ script1=gt,6
 center=yes
 font=p12_full
 text=other
+colour=0x000000
 activecolour=0xFFFFFF
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_131]
+[com_137]
 layer=other_layer
-type=text
 x=55
 y=10
+type=text
 width=25
 height=14
 script1op1=pushvar,smithbars
@@ -911,11 +953,13 @@ shadowed=yes
 text=1bar
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_102]
-type=text
+[com_103]
 x=214
 y=91
+type=text
 width=80
 height=14
 script1op1=pushvar,modified_smith
@@ -923,12 +967,15 @@ script1=gt,11
 center=yes
 font=p12_full
 text=Chain body
+colour=0x000000
 activecolour=0xFFFFFF
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_103]
-type=text
+[com_104]
 x=214
 y=141
+type=text
 width=80
 height=14
 script1op1=pushvar,modified_smith
@@ -936,12 +983,15 @@ script1=gt,16
 center=yes
 font=p12_full
 text=Plate legs
+colour=0x000000
 activecolour=0xFFFFFF
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_104]
-type=text
+[com_105]
 x=214
 y=191
+type=text
 width=80
 height=14
 script1op1=pushvar,modified_smith
@@ -949,12 +999,15 @@ script1=gt,16
 center=yes
 font=p12_full
 text=Plate skirt
+colour=0x000000
 activecolour=0xFFFFFF
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_105]
-type=text
+[com_106]
 x=214
 y=241
+type=text
 width=80
 height=14
 script1op1=pushvar,modified_smith
@@ -962,12 +1015,15 @@ script1=gt,18
 center=yes
 font=p12_full
 text=Plate body
+colour=0x000000
 activecolour=0xFFFFFF
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_106]
-type=text
+[com_107]
 x=312
 y=91
+type=text
 width=80
 height=14
 script1op1=pushvar,modified_smith
@@ -975,12 +1031,15 @@ script1=gt,3
 center=yes
 font=p12_full
 text=Medium helm
+colour=0x000000
 activecolour=0xFFFFFF
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_107]
-type=text
+[com_108]
 x=312
 y=141
+type=text
 width=80
 height=14
 script1op1=pushvar,modified_smith
@@ -988,12 +1047,15 @@ script1=gt,7
 center=yes
 font=p12_full
 text=Full helm
+colour=0x000000
 activecolour=0xFFFFFF
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_108]
-type=text
+[com_109]
 x=312
 y=191
+type=text
 width=80
 height=14
 script1op1=pushvar,modified_smith
@@ -1001,12 +1063,15 @@ script1=gt,8
 center=yes
 font=p12_full
 text=Square shield
+colour=0x000000
 activecolour=0xFFFFFF
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_109]
-type=text
+[com_110]
 x=312
 y=241
+type=text
 width=80
 height=14
 script1op1=pushvar,modified_smith
@@ -1014,12 +1079,15 @@ script1=gt,12
 center=yes
 font=p12_full
 text=Kite shield
+colour=0x000000
 activecolour=0xFFFFFF
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_110]
-type=text
+[com_111]
 x=406
 y=191
+type=text
 width=88
 height=14
 script1op1=pushvar,modified_smith
@@ -1027,12 +1095,15 @@ script1=gt,7
 center=yes
 font=p12_full
 text=Throwing knives
+colour=0x000000
 activecolour=0xFFFFFF
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_111]
-type=text
+[com_112]
 x=410
 y=91
+type=text
 width=80
 height=14
 script1op1=pushvar,modified_smith
@@ -1042,12 +1113,15 @@ script2=eq,1
 center=yes
 font=p12_full
 text=Dart tips
+colour=0x000000
 activecolour=0xFFFFFF
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_112]
-type=text
+[com_113]
 x=410
 y=141
+type=text
 width=80
 height=14
 script1op1=pushvar,modified_smith
@@ -1055,26 +1129,15 @@ script1=gt,5
 center=yes
 font=p12_full
 text=Arrowtips
+colour=0x000000
 activecolour=0xFFFFFF
-
-[com_113]
-type=text
-x=269
-y=69
-width=33
-height=14
-script1op1=pushvar,smithbars
-script1=gt,2
-font=p12_full
-shadowed=yes
-text=3bars
-colour=0xC00000
-activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
 [com_114]
-type=text
 x=269
-y=119
+y=69
+type=text
 width=33
 height=14
 script1op1=pushvar,smithbars
@@ -1084,11 +1147,13 @@ shadowed=yes
 text=3bars
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
 [com_115]
-type=text
 x=269
-y=169
+y=119
+type=text
 width=33
 height=14
 script1op1=pushvar,smithbars
@@ -1098,11 +1163,29 @@ shadowed=yes
 text=3bars
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
 [com_116]
+x=269
+y=169
 type=text
+width=33
+height=14
+script1op1=pushvar,smithbars
+script1=gt,2
+font=p12_full
+shadowed=yes
+text=3bars
+colour=0xC00000
+activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
+
+[com_117]
 x=269
 y=219
+type=text
 width=33
 height=14
 script1op1=pushvar,smithbars
@@ -1112,26 +1195,13 @@ shadowed=yes
 text=5bars
 colour=0xC00000
 activecolour=0x00C000
-
-[com_117]
-type=text
-x=367
-y=119
-width=34
-height=14
-script1op1=pushvar,smithbars
-script1=gt,1
-center=yes
-font=p12_full
-shadowed=yes
-text=2bars
-colour=0xC00000
-activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
 [com_118]
-type=text
 x=367
-y=169
+y=119
+type=text
 width=34
 height=14
 script1op1=pushvar,smithbars
@@ -1142,11 +1212,30 @@ shadowed=yes
 text=2bars
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
 [com_119]
+x=367
+y=169
 type=text
+width=34
+height=14
+script1op1=pushvar,smithbars
+script1=gt,1
+center=yes
+font=p12_full
+shadowed=yes
+text=2bars
+colour=0xC00000
+activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
+
+[com_120]
 x=367
 y=219
+type=text
 width=33
 height=14
 script1op1=pushvar,smithbars
@@ -1156,11 +1245,13 @@ shadowed=yes
 text=3bars
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_120]
-type=text
+[com_121]
 x=73
 y=169
+type=text
 width=34
 height=14
 script1op1=pushvar,smithbars
@@ -1171,11 +1262,13 @@ shadowed=yes
 text=2bars
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_121]
-type=text
+[com_122]
 x=12
 y=30
+type=text
 width=488
 height=14
 center=yes
@@ -1183,11 +1276,14 @@ font=b12_full
 shadowed=yes
 text=What would you like to make?
 colour=0xFFFF00
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_122]
-type=text
+[com_123]
 x=171
 y=169
+type=text
 width=33
 height=14
 script1op1=pushvar,smithbars
@@ -1197,11 +1293,13 @@ shadowed=yes
 text=3bars
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
 [column1]
-type=inv
 x=42
 y=60
+type=inv
 width=1
 height=5
 margin=66,18
@@ -1210,9 +1308,9 @@ option2=Make 5
 option3=Make 10
 
 [column2]
-type=inv
 x=140
 y=60
+type=inv
 width=1
 height=5
 margin=66,18
@@ -1221,9 +1319,9 @@ option2=Make 5
 option3=Make 10
 
 [column3]
-type=inv
 x=238
 y=60
+type=inv
 width=1
 height=5
 margin=66,18
@@ -1232,9 +1330,9 @@ option2=Make 5
 option3=Make 10
 
 [column4]
-type=inv
 x=336
 y=60
+type=inv
 width=1
 height=5
 margin=66,18
@@ -1243,9 +1341,9 @@ option2=Make 5
 option3=Make 10
 
 [column5]
-type=inv
 x=434
 y=60
+type=inv
 width=1
 height=5
 margin=66,18
@@ -1253,100 +1351,10 @@ option1=Make set
 option2=Make 5 sets
 option3=Make 10 sets
 
-[com_123]
-type=text
-x=73
-y=119
-width=25
-height=14
-script1op1=pushvar,smithbars
-script1=gt,0
-center=yes
-font=p12_full
-shadowed=yes
-text=1bar
-colour=0xC00000
-activecolour=0x00C000
-
-[com_124]
-type=text
-x=73
-y=69
-width=25
-height=14
-script1op1=pushvar,smithbars
-script1=gt,0
-center=yes
-font=p12_full
-shadowed=yes
-text=1bar
-colour=0xC00000
-activecolour=0x00C000
-
-[com_125]
-type=text
-x=171
-y=69
-width=25
-height=14
-script1op1=pushvar,smithbars
-script1=gt,0
-center=yes
-font=p12_full
-shadowed=yes
-text=1bar
-colour=0xC00000
-activecolour=0x00C000
-
-[com_126]
-type=text
-x=367
-y=69
-width=25
-height=14
-script1op1=pushvar,smithbars
-script1=gt,0
-center=yes
-font=p12_full
-shadowed=yes
-text=1bar
-colour=0xC00000
-activecolour=0x00C000
-
-[com_127]
-type=text
-x=465
-y=69
-width=25
-height=14
-script1op1=pushvar,smithbars
-script1=gt,0
-center=yes
-font=p12_full
-shadowed=yes
-text=1bar
-colour=0xC00000
-activecolour=0x00C000
-
-[com_128]
-type=text
-x=171
-y=119
-width=25
-height=14
-script1op1=pushvar,smithbars
-script1=gt,0
-center=yes
-font=p12_full
-shadowed=yes
-text=1bar
-colour=0xC00000
-activecolour=0x00C000
-
 [com_129]
-type=text
-x=465
+x=73
 y=119
+type=text
 width=25
 height=14
 script1op1=pushvar,smithbars
@@ -1357,11 +1365,13 @@ shadowed=yes
 text=1bar
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
 [com_130]
+x=73
+y=69
 type=text
-x=465
-y=169
 width=25
 height=14
 script1op1=pushvar,smithbars
@@ -1372,19 +1382,123 @@ shadowed=yes
 text=1bar
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
+
+[com_131]
+x=171
+y=69
+type=text
+width=25
+height=14
+script1op1=pushvar,smithbars
+script1=gt,0
+center=yes
+font=p12_full
+shadowed=yes
+text=1bar
+colour=0xC00000
+activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
+
+[com_132]
+x=367
+y=69
+type=text
+width=25
+height=14
+script1op1=pushvar,smithbars
+script1=gt,0
+center=yes
+font=p12_full
+shadowed=yes
+text=1bar
+colour=0xC00000
+activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
+
+[com_133]
+x=465
+y=69
+type=text
+width=25
+height=14
+script1op1=pushvar,smithbars
+script1=gt,0
+center=yes
+font=p12_full
+shadowed=yes
+text=1bar
+colour=0xC00000
+activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
+
+[com_134]
+x=171
+y=119
+type=text
+width=25
+height=14
+script1op1=pushvar,smithbars
+script1=gt,0
+center=yes
+font=p12_full
+shadowed=yes
+text=1bar
+colour=0xC00000
+activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
+
+[com_135]
+x=465
+y=119
+type=text
+width=25
+height=14
+script1op1=pushvar,smithbars
+script1=gt,0
+center=yes
+font=p12_full
+shadowed=yes
+text=1bar
+colour=0xC00000
+activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
+
+[com_136]
+x=465
+y=169
+type=text
+width=25
+height=14
+script1op1=pushvar,smithbars
+script1=gt,0
+center=yes
+font=p12_full
+shadowed=yes
+text=1bar
+colour=0xC00000
+activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
 [stud_layer]
-type=layer
 x=410
 y=259
+type=layer
 width=80
 height=46
 
-[com_132]
+[com_139]
 layer=stud_layer
-type=text
 x=0
 y=32
+type=text
 width=80
 height=14
 script1op1=pushvar,modified_smith
@@ -1392,13 +1506,16 @@ script1=gt,6
 center=yes
 font=p12_full
 text=Studs
+colour=0x000000
 activecolour=0xFFFFFF
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_133]
+[com_140]
 layer=stud_layer
-type=text
 x=55
 y=10
+type=text
 width=25
 height=14
 script1op1=pushvar,smithbars
@@ -1409,19 +1526,21 @@ shadowed=yes
 text=1bar
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
 [claws_layer]
-type=layer
 x=116
 y=259
+type=layer
 width=89
 height=46
 
-[com_134]
+[com_141]
 layer=claws_layer
-type=text
 x=55
 y=10
+type=text
 width=34
 height=14
 script1op1=pushvar,smithbars
@@ -1432,12 +1551,14 @@ shadowed=yes
 text=2bars
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_135]
+[com_142]
 layer=claws_layer
-type=text
 x=0
 y=32
+type=text
 width=80
 height=14
 script1op1=pushvar,modified_smith
@@ -1445,31 +1566,34 @@ script1=gt,13
 center=yes
 font=p12_full
 text=Claws
+colour=0x000000
 activecolour=0xFFFFFF
+overcolour=0x000000
+activeovercolour=0x000000
 
 [column_claws]
 layer=claws_layer
-type=inv
 x=24
 y=0
+type=inv
 width=4
 height=4
 option1=Make
 option2=Make 5
 option3=Make 10
 
-[com_136]
-type=layer
+[com_145]
 x=209
 y=260
+type=layer
 width=119
 height=49
 
-[com_137]
-layer=com_136
-type=text
+[com_146]
+layer=com_145
 x=55
 y=10
+type=text
 width=25
 height=14
 script1op1=pushvar,smithbars
@@ -1480,23 +1604,25 @@ shadowed=yes
 text=1bar
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_138]
-layer=com_136
-type=inv
+[com_147]
+layer=com_145
 x=24
 y=0
+type=inv
 width=4
 height=4
 option1=Make
 option2=Make 5
 option3=Make 10
 
-[com_139]
-layer=com_136
-type=text
+[com_148]
+layer=com_145
 x=12
 y=31
+type=text
 width=95
 height=14
 script1op1=pushvar,if2
@@ -1504,12 +1630,15 @@ script1=eq,1
 center=yes
 font=p12_full
 text=Oil lantern frame
+colour=0x000000
 activecolour=0xFFFFFF
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_140]
-type=text
+[com_149]
 x=367
 y=269
+type=text
 width=25
 height=14
 script1op1=pushvar,smithbars
@@ -1519,11 +1648,13 @@ shadowed=yes
 text=1bar
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_141]
-type=text
+[com_150]
 x=337
 y=292
+type=text
 width=28
 height=14
 script1op1=pushvar,modified_smith
@@ -1531,4 +1662,7 @@ script1=gt,4
 center=yes
 font=p12_full
 text=Nails
+colour=0x000000
 activecolour=0xFFFFFF
+overcolour=0x000000
+activeovercolour=0x000000

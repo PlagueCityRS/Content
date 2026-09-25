@@ -1,0 +1,11 @@
+[oploc1,taverly_dungeon_floor_spikes_sc]
+if (map_members = ^false) {
+    mes(^mes_members_feature);
+    return;
+}
+
+[oploc1,taverly_dungeon_pipe_sc]
+if (map_members = ^false) {
+    mes(^mes_members_feature);
+    return;
+}

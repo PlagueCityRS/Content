@@ -39,6 +39,7 @@ data=successchance,black_axe,144,450
 data=successchance,mithril_axe,160,500
 data=successchance,adamant_axe,192,600
 data=successchance,rune_axe,224,700
+data=successchance,dragon_axe,224,700
 
 [jungle_tree_table]
 table=woodcutting_trees
@@ -66,6 +67,7 @@ data=successchance,black_axe,144,450
 data=successchance,mithril_axe,160,500
 data=successchance,adamant_axe,192,600
 data=successchance,rune_axe,224,700
+data=successchance,dragon_axe,224,700
 
 [achey_tree_table]
 table=woodcutting_trees
@@ -81,6 +83,7 @@ data=successchance,black_axe,144,450
 data=successchance,mithril_axe,160,500
 data=successchance,adamant_axe,192,600
 data=successchance,rune_axe,224,700
+data=successchance,dragon_axe,224,700
 
 [oak_tree_table]
 table=woodcutting_trees
@@ -96,6 +99,7 @@ data=successchance,black_axe,72,225
 data=successchance,mithril_axe,80,250
 data=successchance,adamant_axe,96,300
 data=successchance,rune_axe,112,350
+data=successchance,dragon_axe,112,350
 
 [willow_tree_table]
 table=woodcutting_trees
@@ -111,6 +115,7 @@ data=successchance,black_axe,36,112
 data=successchance,mithril_axe,40,125
 data=successchance,adamant_axe,48,150
 data=successchance,rune_axe,56,175
+data=successchance,dragon_axe,56,175
 
 [maple_tree_table]
 table=woodcutting_trees
@@ -126,6 +131,7 @@ data=successchance,black_axe,18,56
 data=successchance,mithril_axe,20,62
 data=successchance,adamant_axe,24,75
 data=successchance,rune_axe,28,87
+data=successchance,dragon_axe,28,87
 
 [yew_tree_table]
 table=woodcutting_trees
@@ -141,6 +147,7 @@ data=successchance,black_axe,9,28
 data=successchance,mithril_axe,10,31
 data=successchance,adamant_axe,12,37
 data=successchance,rune_axe,14,44
+data=successchance,dragon_axe,14,44
 
 [magic_tree_table]
 table=woodcutting_trees
@@ -156,6 +163,7 @@ data=successchance,black_axe,5,13
 data=successchance,mithril_axe,5,15
 data=successchance,adamant_axe,6,18
 data=successchance,rune_axe,7,21
+data=successchance,dragon_axe,7,21
 
 [hollow_tree_table]
 table=woodcutting_trees
@@ -172,3 +180,4 @@ data=successchance,black_axe,42,57
 data=successchance,mithril_axe,46,68
 data=successchance,adamant_axe,59,81
 data=successchance,rune_axe,64,94
+data=successchance,dragon_axe,64,94

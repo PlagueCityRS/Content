@@ -78,3 +78,11 @@ recol6d=8526
 length=2
 blockrange=no
 category=watersource
+
+[rimmington_sink]
+name=Sink
+desc=Wash your hands!
+model=loc_9684
+length=2
+blockrange=no
+category=watersource

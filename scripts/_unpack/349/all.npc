@@ -4587,38 +4587,6 @@ model1=npc_1850
 model2=npc_1856
 head1=npc_1850_head
 
-[salesman_ranging]
-vislevel=hide
-name=Brian
-desc=He sells ranging equipment.
-walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
-readyanim=human_ready
-op1=Talk-to
-op3=Trade
-model1=man_head_spikeyhair
-model2=man_jaw_split
-model3=man_torso_basic
-model4=man_torsoextra_buttons2
-model5=man_arms_longsleeves3
-model6=man_hands_basic
-model7=man_legs_basic
-model8=man_feet_boots_ranger
-model9=npc_1860
-head1=chat_male_head_spikeyhair
-head2=chat_male_jaw_split
-recol1s=14724
-recol1d=8484
-recol2s=2340
-recol2d=5313
-recol3s=14801
-recol3d=24075
-recol4s=6273
-recol4d=11525
-recol5s=3296
-recol5d=9410
-recol6s=6464
-recol6d=12544
-
 [npc_1861]
 name=Monkey boy
 desc=A cheeky little monkey...

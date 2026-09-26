@@ -2441,7 +2441,6 @@ contrast=50
 minimap=no
 vislevel=hide
 model1=npc_1689
-active=no
 
 [goopy_bloop]
 name=Slime
@@ -2453,7 +2452,6 @@ contrast=50
 minimap=no
 vislevel=hide
 model1=npc_1690
-active=no
 
 [ahoy_undead_cow]
 size=2
@@ -4931,7 +4929,6 @@ recol3s=15492
 recol3d=12420
 recol4s=12544
 recol4d=11488
-vislevel=6
 hitpoints=6
 attack=6
 strength=5

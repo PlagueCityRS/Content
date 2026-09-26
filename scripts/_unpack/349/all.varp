@@ -38,8 +38,6 @@
 
 [varp_413]
 
-[musicmulti_10]
-
 [roving_update_ilfeen_chant]
 
 [onesmallfavour]
@@ -137,8 +135,6 @@
 [varp_462]
 
 [varp_463]
-
-[musicmulti_11]
 
 [lost_tribe]
 
@@ -441,6 +437,8 @@
 [varp_614]
 
 [farming_tools]
+transmit=yes
+scope=perm
 
 [elid_main]
 

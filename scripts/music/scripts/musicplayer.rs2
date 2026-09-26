@@ -302,3 +302,6 @@ if (map_clock > add(%musicstart, %musiclength)) {
 [if_button,music:workshop] @music_playbybutton(music:workshop);
 [if_button,music:yesteryear] @music_playbybutton(music:yesteryear);
 [if_button,music:zealot] @music_playbybutton(music:zealot);
+[if_button,music:com_96] @music_playbybutton(music:com_96);
+[if_button,music:com_97] @music_playbybutton(music:com_97);
+[if_button,music:com_98] @music_playbybutton(music:com_98);

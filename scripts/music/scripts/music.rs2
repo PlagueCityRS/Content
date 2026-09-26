@@ -17,6 +17,10 @@ if ($var = 1) {
     return(%musicmulti_8);
 } else if ($var = 9) {
     return(%musicmulti_9);
+} else if ($var = 10) {
+    return(%musicmulti_10);
+} else if ($var = 11) {
+    return(%musicmulti_11);
 }
 return(null);
 
@@ -39,6 +43,10 @@ if ($var = 1) {
     %musicmulti_8 = setbit(%musicmulti_8, $bit);
 } else if ($var = 9) {
     %musicmulti_9 = setbit(%musicmulti_9, $bit);
+} else if ($var = 10) {
+    %musicmulti_10 = setbit(%musicmulti_10, $bit);
+} else if ($var = 11) {
+    %musicmulti_11 = setbit(%musicmulti_11, $bit);
 }
 
 [label,music_play](midi $song)

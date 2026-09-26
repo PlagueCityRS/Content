@@ -33,6 +33,12 @@ param=gem,dragonstone
 param=levelrequired,55
 param=productexp,1000
 
+[onyx_ring]
+param=product,onyx_ring
+param=gem,onyx
+param=levelrequired,67
+param=productexp,1150
+
 [gold_necklace]
 param=product,gold_necklace
 param=levelrequired,6
@@ -67,6 +73,12 @@ param=product,dragonstone_necklace
 param=gem,dragonstone
 param=levelrequired,72
 param=productexp,1050
+
+[onyx_necklace]
+param=product,onyx_necklace
+param=gem,onyx
+param=levelrequired,82
+param=productexp,1200
 
 [unstrung_gold_amulet]
 param=product,unstrung_gold_amulet
@@ -109,6 +121,13 @@ param=gem,dragonstone
 param=levelrequired,80
 param=productexp,1500
 
+[unstrung_onyx_amulet]
+param=product,unstrung_onyx_amulet
+param=strung,strung_onyx_amulet
+param=gem,onyx
+param=levelrequired,90
+param=productexp,1650
+
 [unstrung_symbol]
 param=product,nostringstar
 param=strung,stringstar
@@ -147,5 +166,23 @@ param=productexp,500
 param=name,Silver sickle
 param=mould,sickle_mould
 
+[tiara]
+param=product,tiara
+param=levelrequired,23
+param=productexp,525
+param=name,tiara
+param=mould,tiara_mould
 
+[fenk_conductor]
+param=product,fenk_conductor
+param=levelrequired,20
+param=productexp,500
+param=name,lightning conductor
+param=mould,fenk_lightning_mould
 
+[agrith_sigil]
+param=product,agrith_sigil
+param=levelrequired,30
+param=productexp,500
+param=name,demonic sigil
+param=mould,agrith_sigil_mould

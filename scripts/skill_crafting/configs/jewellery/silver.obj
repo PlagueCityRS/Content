@@ -1,45 +1,45 @@
 [nostringstar]
-name=Unstrung symbol
 desc=It needs a string so I can wear it.
 cost=200
-model=inv_holysymbol
+model=obj_nostringstar
 2dyof=4
 2dzoom=600
 2dyan=92
 2dxan=352
+name=Unstrung symbol
 weight=4g
 param=crafting_jewelry_struct,unstrung_symbol
 
 [nostringsnake]
-name=Unstrung emblem
 desc=It needs a string so I can wear it.
 cost=200
-model=inv_unholysymbol
-recol1s=25249
-recol1d=24311
+model=obj_nostringsnake
 2dxof=1
 2dyof=3
 2dzoom=600
 2dyan=172
 2dxan=336
-weight=4g
 members=yes
+recol1s=10163
+recol1d=94
+name=Unstrung emblem
+weight=4g
 param=crafting_jewelry_struct,unstrung_emblem
 
 [silver_sickle]
-name=Silver sickle
 desc=It's a silver sickle.
 cost=175
-model=quest_naturespirit_inv_silver_sickle
+model=obj_silver_sickle
 2dxof=-4
 2dyof=2
 2dzoom=980
 2dyan=948
 2dxan=604
 iop2=Wield
-manwear=human_weapons_silver_sickle,0
-womanwear=human_weapons_silver_sickle,6
+manwear=obj_silver_sickle_manwear,0
+womanwear=obj_silver_sickle_manwear,6
 members=yes
+name=Silver sickle
 category=weapon_slash
 wearpos=righthand
 weight=56oz
@@ -55,3 +55,19 @@ param=defend_anim,human_sword_def
 param=slash_sound,sickle_slash
 param=stab_sound,sickle_stab
 param=crafting_jewelry_struct,silver_sickle
+
+[tiara]
+desc=Makes me feel like a Princess.
+model=obj_tiara
+iop2=Wear
+2dyof=-25
+2dzoom=480
+2dxan=232
+manwear=obj_tiara_manwear,0
+womanwear=obj_tiara_womanwear,0
+wearpos=hat
+manhead=obj_tiara_manhead
+womanhead=obj_tiara_manhead
+cost=100
+name=Tiara
+param=crafting_jewelry_struct,tiara

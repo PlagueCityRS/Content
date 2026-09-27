@@ -57152,6 +57152,7 @@ desc=A case. With books.
 model=loc_9523
 op1=Search
 forceapproach=east
+category=bookcase
 
 [sarim_ship_chain]
 name=Chain
@@ -57242,6 +57243,7 @@ recol6d=11491
 blockrange=no
 ambient=35
 op1=Search
+category=empty_crate
 
 [sarim_crate2]
 name=Crate
@@ -57262,6 +57264,7 @@ recol6d=8320
 blockrange=no
 ambient=35
 op1=Search
+category=empty_crate
 
 [sarim_crate3]
 name=Crates
@@ -57281,6 +57284,7 @@ recol6s=9410
 recol6d=8320
 ambient=35
 op1=Search
+category=empty_crate
 
 [sarim_boxes]
 name=Boxes
@@ -57300,6 +57304,7 @@ recol6s=8354
 recol6d=11491
 ambient=35
 op1=Search
+category=empty_crate
 
 [serim_fishingcrane_noscript]
 name=Crane
@@ -58056,6 +58061,7 @@ model=loc_9611
 length=2
 op1=Search
 forceapproach=east
+category=bookcase
 
 [rimmington_makeovermage_bed]
 name=Bed

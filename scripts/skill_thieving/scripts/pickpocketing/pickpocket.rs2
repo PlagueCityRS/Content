@@ -7,6 +7,10 @@
 [opnpc3,man3] // Man
 @attempt_pick_pocket(npc_type);
 
+[opnpc3,rimmington_hengel] // Man
+@attempt_pick_pocket(npc_type);
+
+
 [opnpc3,woman] // Woman
 @attempt_pick_pocket(npc_type);
 
@@ -14,6 +18,9 @@
 @attempt_pick_pocket(npc_type);
 
 [opnpc3,woman3] // Woman
+@attempt_pick_pocket(npc_type);
+
+[opnpc3,rimmington_anja] // Woman
 @attempt_pick_pocket(npc_type);
 
 [opnpc3,farmer1] // Farmer

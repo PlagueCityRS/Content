@@ -56594,28 +56594,6 @@ recol4s=11456
 recol4d=3266
 active=no
 
-[poor_stairs]
-name=Staircase
-desc=I can climb these stairs.
-model=loc_9470
-width=2
-length=3
-op1=Climb-up
-forceapproach=south
-sharelight=yes
-mapscene=7
-
-[poor_stairstop]
-name=Staircase
-desc=They go down.
-model=loc_9471
-width=2
-length=2
-op1=Climb-down
-forceapproach=north
-sharelight=yes
-mapscene=7
-
 [fai_trapdoor]
 name=Trapdoor
 desc=What could be down here?

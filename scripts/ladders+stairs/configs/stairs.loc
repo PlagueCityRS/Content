@@ -131,3 +131,25 @@ model=spooky_stairs
 width=2
 length=3
 op1=Walk-Up
+
+[poor_stairs]
+name=Staircase
+desc=I can climb these stairs.
+model=loc_9470
+width=2
+length=3
+op1=Climb-up
+forceapproach=south
+sharelight=yes
+mapscene=7
+
+[poor_stairstop]
+name=Staircase
+desc=They go down.
+model=loc_9471
+width=2
+length=2
+op1=Climb-down
+forceapproach=north
+sharelight=yes
+mapscene=7

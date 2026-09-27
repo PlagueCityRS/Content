@@ -22495,6 +22495,7 @@ moverestrict=indoors
 wanderrange=15
 hitpoints=2
 respawnrate=4
+category=rats
 param=attackbonus,-47
 param=strengthbonus,-53
 param=stabdefence,-42

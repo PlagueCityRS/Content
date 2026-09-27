@@ -1,5 +1,5 @@
 [ai_queue3,rat] @rat_death;
-[ai_queue3,rat_indoors];
+[ai_queue3,rat_indoors] @rat_death;
 
 [label,rat_death]
 gosub(npc_death);

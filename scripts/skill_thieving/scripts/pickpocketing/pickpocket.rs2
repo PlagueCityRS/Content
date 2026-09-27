@@ -10,7 +10,6 @@
 [opnpc3,rimmington_hengel] // Man
 @attempt_pick_pocket(npc_type);
 
-
 [opnpc3,woman] // Woman
 @attempt_pick_pocket(npc_type);
 

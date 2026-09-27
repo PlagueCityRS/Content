@@ -15472,6 +15472,7 @@ recol5s=6144
 recol5d=6272
 recol6s=6307
 recol6d=6272
+members=yes
 
 [farming_gardener_bush_3]
 name=Rhazien
@@ -22490,63 +22491,6 @@ vislevel=1
 model1=npc_2682
 recol1s=14724
 recol1d=6342
-
-[rimmington_hengel]
-name=Hengel
-desc=A citizen of Rimmington.
-walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
-readyanim=human_ready
-op1=Talk-to
-op2=Attack
-op3=Pickpocket
-vislevel=2
-model1=man_head_shorthair2
-model2=man_jaw_moustache
-model3=man_torso_basic
-model4=man_torsoextra_shirt
-model5=man_arms_longsleeves3
-model6=man_hands_basic
-model7=man_legs_basic
-model8=man_feet_boots
-model9=man_legs_combats
-head1=chat_male_head_shorthair2
-head2=chat_male_jaw_moustache
-recol1s=14724
-recol1d=16844
-recol2s=2340
-recol2d=6377
-recol3s=6273
-recol3d=16609
-recol4s=7328
-recol4d=7434
-recol5s=14801
-recol5d=24075
-
-[rimmington_anja]
-name=Anja
-desc=A citizen of Rimmington.
-walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
-readyanim=human_ready
-op1=Talk-to
-op2=Attack
-op3=Pickpocket
-vislevel=2
-model1=woman_head_longhair
-model2=woman_torso_basic
-model3=woman_torsoextra_buttons2
-model4=woman_arms_basic
-model5=woman_hands_basic
-model6=woman_legs_turnups
-model7=woman_feet_basic
-head1=chat_female_head_longhair
-recol1s=14724
-recol1d=20876
-recol2s=2340
-recol2d=10468
-recol3s=6273
-recol3d=16737
-recol4s=14801
-recol4d=24075
 
 [rimmington_hobgoblin_unarmed_1]
 name=Hobgoblin
@@ -29783,6 +29727,7 @@ op1=Talk-to
 op3=Exchange
 model1=npc_3021
 head1=gnome_chat_model_24
+members=yes
 
 [elid_genie]
 vislevel=hide

@@ -22491,6 +22491,25 @@ vislevel=1
 model1=npc_2682
 recol1s=14724
 recol1d=6342
+moverestrict=indoors
+wanderrange=15
+hitpoints=2
+respawnrate=4
+param=attackbonus,-47
+param=strengthbonus,-53
+param=stabdefence,-42
+param=slashdefence,-42
+param=crushdefence,-42
+param=magicdefence,-42
+param=rangedefence,-42
+param=damagetype,^crush_style
+param=attack_anim,rat_attack
+param=defend_anim,rat_block
+param=death_anim,rat_death
+param=attack_sound,rat_attack
+param=defend_sound,rat_hit
+param=death_sound,rat_death
+param=death_drop,null
 
 [rimmington_hobgoblin_unarmed_1]
 name=Hobgoblin

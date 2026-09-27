@@ -1,4 +1,7 @@
-[ai_queue3,rat]
+[ai_queue3,rat] @rat_death;
+[ai_queue3,rat_indoors];
+
+[label,rat_death]
 gosub(npc_death);
 if (npc_findhero = ^false) {
     return;

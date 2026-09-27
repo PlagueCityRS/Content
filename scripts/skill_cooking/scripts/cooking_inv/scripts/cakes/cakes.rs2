@@ -33,6 +33,7 @@ switch_obj (last_useitem) {
     case pestle_and_mortar : ~attempt_grind_ingredient(last_useslot, last_slot);
     case half_baked_bowl : @add_bowl_ingredient(last_item);
     case half_baked_crunchy : @add_crunchies_ingredient(last_item);
+    case knife : @make_chocolate_dust(last_slot);
     case default : ~displaymessage(^dm_default);
 }
 
@@ -141,3 +142,11 @@ inv_del(inv, $snape_grass, 1);
 inv_del(inv, chocolaty_milk, 1);
 inv_add(inv, hangover_cure, 1);
 ~objbox(hangover_cure, "You mix the snape grass into the bucket.", 250, 0, divide(^objbox_height, 2));
+
+[label,make_chocolate_dust](int $last)
+def_obj $chocolate = inv_getobj(inv, $last);
+inv_del(inv, $chocolate, 1);
+inv_add(inv, chocolate_dust, 1);
+mes("You cut the chocolate bar into tiny pieces.");
+anim("human_chocolate_fletching", 0);
+sound_synth(fletch, 1, 0);

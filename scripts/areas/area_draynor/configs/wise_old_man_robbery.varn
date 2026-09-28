@@ -1,0 +1,3 @@
+// the npc each fighter in the Draynor Bank robbery recording is fighting (wise_old_man_robbery.rs2)
+[wom_robbery_opponent]
+type=npc_uid

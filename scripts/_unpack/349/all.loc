@@ -53405,6 +53405,7 @@ recol2d=5248
 sharelight=yes
 occlude=yes
 active=yes
+blockwalk=no
 
 [wom_fixed_wall]
 name=Patched Wall

@@ -1,0 +1,749 @@
+// Draynor Bank robbery security recording.
+// The bank guard (wom_bankguard) plays it back via the bank's "magical scrying orb".
+// Every viewer gets a private instance copied from the cutscene copy of Draynor (0_33_76),
+// with the wom_* cutscene npcs spawned into it.
+// Stage order and timings are from 2009scape (DBRCutscenePlugin.kt, region 8524).
+
+[label,wom_robbery_start_recording]
+if_close;
+def_coord $exit = coord;
+
+~wom_robbery_message("You close your eyes and watch the recording...");
+~fade_out;
+p_delay(2);
+
+// build the instance: all 4 floors of the mapsquare so roofs/upper floors come along
+def_coord $base = region_create(4, 8, 8);
+def_int $level = 0;
+while ($level < 4) {
+    def_int $zone_x = 0;
+    while ($zone_x < 8) {
+        def_int $zone_z = 0;
+        while ($zone_z < 8) {
+            region_set($level, $zone_x, $zone_z, movecoord(^wom_robbery_source_mapsquare, multiply($zone_x, 8), $level, multiply($zone_z, 8)), 0);
+            $zone_z = add($zone_z, 1);
+        }
+        $zone_x = add($zone_x, 1);
+    }
+    $level = add($level, 1);
+}
+region_setexitcoord($exit);
+$base = region_getcoord(0, 0, 0);
+
+// the viewer watches from inside the Wise Old Man's house, invisible
+if_close;
+p_telejump(movecoord($base, 17, 0, 51));
+p_transmogrify(desert_treasure_invisible_npc);
+buildappearance(worn);
+minimap_toggle(2);
+if_settab(null, 0);
+if_settab(null, 1);
+if_settab(null, 2);
+if_settab(null, 3);
+if_settab(null, 4);
+if_settab(null, 5);
+if_settab(null, 6);
+if_settab(null, 11);
+if_settab(null, 12);
+
+def_npc_uid $cool_mom = ~wom_robbery_spawn($base, wom_fakeplayer5, 8, 52, 0, 1);
+def_npc_uid $olivia = ~wom_robbery_spawn($base, wom_olivia, 5, 49, -1, 0);
+def_npc_uid $guard = ~wom_robbery_spawn($base, wom_marketguard, 10, 47, 1, 0);
+def_npc_uid $purepker = ~wom_robbery_spawn($base, wom_fakeplayer1, 24, 50, -1, 0);
+def_npc_uid $banker1 = ~wom_robbery_spawn($base, wom_banker1, 18, 45, 1, 0);
+def_npc_uid $banker2 = ~wom_robbery_spawn($base, wom_banker2, 18, 43, 0, -1);
+def_npc_uid $banker3 = ~wom_robbery_spawn($base, wom_banker3, 18, 42, 1, 0);
+def_npc_uid $elfinlocks = ~wom_robbery_spawn($base, wom_fakeplayer4, 21, 44, 0, 1);
+def_npc_uid $sp34kr = ~wom_robbery_spawn($base, wom_fakeplayer3, 22, 42, -1, 0);
+def_npc_uid $qutiedoll = ~wom_robbery_spawn($base, wom_fakeplayer2, 21, 42, 1, 0);
+def_npc_uid $wom = ~wom_robbery_spawn($base, wom_cutscene_1, 17, 52, 0, -1);
+
+// Every beat below is scheduled at an absolute tick from the fade-in (~wom_robbery_at), timed against
+// the 2007 recording (youtube 8zn14yuPBQk; tick = (video seconds - 3.6) / 0.6).
+// stage 1
+def_int $t0 = map_clock;
+~fade_in;
+~wom_robbery_walk($guard, $base, 12, 47);
+~wom_robbery_camera($base, 26, 46, 15, 47, 790, 0, 100);
+
+// stage 2 - Cool Mom227 helps herself at the market stall and the guard shouts at her
+~wom_robbery_at($t0, 1);
+~wom_robbery_anim($cool_mom, human_pickuptable);
+~wom_robbery_say($guard, "Hey! Get your hands off there!");
+
+// stage 3 - he turns back and hunts her down. His wander east leaves him where the npc's straight-line
+// path to her arrives on the tile south of her. A real fight: she swings back once he's hit her
+// (see ai_opnpc2 below), and they keep at it in the background for the rest of the recording.
+~wom_robbery_at($t0, 4);
+~wom_robbery_start_fight($guard, $cool_mom);
+~wom_robbery_walk($purepker, $base, 20, 45);
+
+// stage 4 - the camera glides over the bank to look down on the booths
+~wom_robbery_at($t0, 12);
+~wom_robbery_camera($base, 27, 43, 17, 43, 790, 0, 6);
+
+// stage 5 (13s)
+~wom_robbery_at($t0, 16);
+~wom_robbery_say($qutiedoll, "Thx");
+
+// stage 6-7 (14s)
+~wom_robbery_at($t0, 17);
+~wom_robbery_walk($qutiedoll, $base, 20, 42);
+~wom_robbery_say($sp34kr, "Yw");
+~wom_robbery_face($purepker, movecoord($base, 19, 0, 45));
+~wom_robbery_say($elfinlocks, "Buying 2k nats - no noob offers");
+
+// stage 8 (16s)
+~wom_robbery_at($t0, 21);
+~wom_robbery_say($sp34kr, "I h4ve n4ts");
+
+// stage 9 (18s)
+~wom_robbery_at($t0, 24);
+~wom_robbery_say($elfinlocks, "You sell?");
+
+// stage 10 (20s)
+~wom_robbery_at($t0, 27);
+~wom_robbery_say($sp34kr, "Tr4de");
+~wom_robbery_walk($sp34kr, $base, 21, 43);
+
+~wom_robbery_at($t0, 29);
+~wom_robbery_face_npc($sp34kr, $elfinlocks);
+
+// stage 11-12 - the camera drifts back out over the lane as the customers head outside
+~wom_robbery_at($t0, 30);
+~wom_robbery_walk($olivia, $base, 13, 49);
+~wom_robbery_camera($base, 25, 45, 17, 48, 790, 0, 5);
+~wom_robbery_walk($qutiedoll, $base, 20, 49);
+~wom_robbery_walk($purepker, $base, 20, 47);
+
+// stage 13
+~wom_robbery_at($t0, 33);
+~wom_robbery_walk($purepker, $base, 16, 49);
+
+// the Wise Old Man comes to his door
+~wom_robbery_at($t0, 35);
+~wom_robbery_walk($wom, $base, 16, 51);
+
+// the camera swings round to look down the lane as Purepker reaches the door
+~wom_robbery_at($t0, 36);
+~wom_robbery_camera($base, 22, 48, 14, 49, 790, 0, 5);
+
+// stage 14 - he opens it
+~wom_robbery_at($t0, 37);
+if (loc_find(movecoord($base, 16, 0, 51), loc_1530) = true) {
+    ~open_door(100);
+}
+
+// stage 15 - and shocks Purepker straight away, from his doorway
+~wom_robbery_at($t0, 38);
+~wom_robbery_cast_shock($wom, $purepker);
+~wom_robbery_say($qutiedoll, "Huh?");
+~wom_robbery_face_npc($qutiedoll, $purepker);
+
+~wom_robbery_at($t0, 39);
+~wom_robbery_say($wom, "Please don't block my line of fire!");
+
+// stage 16-17 - Purepker crumbles without a hitsplat, the Wise Old Man steps outside,
+// and the camera moves in closer on the doorway
+~wom_robbery_at($t0, 40);
+~wom_robbery_camera($base, 22, 47, 14, 50, 650, 0, 8);
+~wom_robbery_kill($purepker, false);
+~wom_robbery_walk($wom, $base, 16, 50);
+
+// Olivia takes two more steps as she calls out and he turns to her
+~wom_robbery_at($t0, 42);
+~wom_robbery_walk($olivia, $base, 15, 49);
+~wom_robbery_say($olivia, "Hey, what are you doing?");
+~wom_robbery_face_npc($wom, $olivia);
+
+// his ashes are left behind once he's gone
+~wom_robbery_at($t0, 43);
+obj_add(movecoord($base, 16, 0, 49), ashes, 1, ^wom_robbery_obj_duration);
+
+// stage 18 (30.5s)
+~wom_robbery_at($t0, 45);
+~wom_robbery_say($wom, "Olivia - please go away!");
+~wom_robbery_face_npc($wom, $olivia);
+~wom_robbery_anim($wom, human_teleport_other_casting);
+~wom_robbery_spotanim($wom, teleport_other_casting, 0);
+sound_synth(tele_other_cast, 1, 0);
+
+// stage 19 (32s)
+~wom_robbery_at($t0, 47);
+~wom_robbery_anim($olivia, human_teleport_other_impact);
+~wom_robbery_spotanim($olivia, teleport_other_impact, 92);
+sound_synth(teleport_all, 1, 0);
+~wom_robbery_say($olivia, "Eeeek!");
+
+// stage 20 - she's gone once the teleport has played out (3 ticks, as teleother does to a player)
+~wom_robbery_at($t0, 50);
+~wom_robbery_npc_del($olivia);
+
+// stage 21 - the ashes blow away, leaving his coins
+~wom_robbery_at($t0, 50);
+~wom_robbery_obj_del(movecoord($base, 16, 0, 49), ashes);
+obj_add(movecoord($base, 16, 0, 49), coins, 60, ^wom_robbery_obj_duration);
+
+~wom_robbery_at($t0, 51);
+~wom_robbery_say($wom, "Ah, now I can get on with it...");
+~wom_robbery_face($wom, movecoord($base, 16, 0, 49));
+
+// stage 22 - he stoops for the coins
+~wom_robbery_at($t0, 52);
+~wom_robbery_anim($wom, human_pickupfloor);
+
+// stage 23
+~wom_robbery_at($t0, 54);
+~wom_robbery_obj_del(movecoord($base, 16, 0, 49), coins);
+
+// stage 24 - blast a hole in the bank wall (37.2s)
+~wom_robbery_at($t0, 56);
+~wom_robbery_cast_shock_coord($wom, movecoord($base, 16, 0, 46));
+
+// stage 25 - the wall gives way
+~wom_robbery_at($t0, 59);
+if (loc_find(movecoord($base, 16, 0, 46), wom_unbroken_wall) = true) {
+    loc_del(^wom_robbery_obj_duration);
+}
+loc_add(movecoord($base, 16, 0, 46), wom_broken_wall, 0, centrepiece_straight, ^wom_robbery_obj_duration);
+// he heads from his doorway for the hole, just before the camera swings inside
+~wom_robbery_walk($wom, $base, 16, 46);
+
+// stage 26 - the camera cuts inside the bank (40.5s)
+~wom_robbery_at($t0, 61);
+~wom_robbery_camera($base, 21, 38, 13, 52, 450, 120, 99);
+
+// stage 27 - npc_walk only holds one waypoint (2009scape queues both), so he has to reach the
+// hole before being sent east, or he cuts the corner into the bank's north wall and gets stuck
+def_int $waited = ~wom_robbery_await_arrival($wom, movecoord($base, 16, 0, 46), 4);
+~wom_robbery_walk($wom, $base, 17, 46);
+~wom_robbery_at($t0, 63);
+~wom_robbery_say($wom, "Could everyone please not move?");
+
+// stage 28 - the first banker comes over (42.5s)
+~wom_robbery_at($t0, 65);
+~wom_robbery_say($banker1, "Hey - you can't come in here!");
+~wom_robbery_walk($banker1, $base, 18, 46);
+
+// stage 29 (44s)
+~wom_robbery_at($t0, 67);
+~wom_robbery_face_npc($banker1, $wom);
+~wom_robbery_say($banker2, "Oi!");
+~wom_robbery_say($banker3, "Uh-oh!");
+~wom_robbery_walk($banker3, $base, 18, 40);
+~wom_robbery_walk($banker2, $base, 16, 43);
+
+~wom_robbery_at($t0, 69);
+~wom_robbery_walk($banker2, $base, 16, 46);
+~wom_robbery_walk($banker3, $base, 16, 40);
+
+// he turns to the first banker and knocks him out (46.5s)
+~wom_robbery_at($t0, 69);
+~wom_robbery_face_npc($wom, $banker1);
+~wom_robbery_at($t0, 70);
+~wom_robbery_wom_attack($wom, $banker1, 0, false);
+
+// stage 30 - the second banker attacks him and he blocks (48.5s)
+~wom_robbery_at($t0, 74);
+~wom_robbery_face_npc($banker2, $wom);
+~wom_robbery_at($t0, 75);
+~wom_robbery_banker_punch($banker2, $wom, true);
+
+// stage 31 - he retaliates for 11 (50s)
+~wom_robbery_at($t0, 76);
+~wom_robbery_face_npc($wom, $banker2);
+~wom_robbery_wom_attack($wom, $banker2, 11, true);
+
+// stage 32 (51s)
+~wom_robbery_at($t0, 79);
+~wom_robbery_say($wom, "I do wish you'd just stop it!");
+~wom_robbery_at($t0, 80);
+~wom_robbery_face_npc($banker2, $wom);
+~wom_robbery_banker_punch($banker2, $wom, true);
+
+// stage 33 - and finishes her with a 12, her 23 hitpoints (54s)
+~wom_robbery_at($t0, 83);
+~wom_robbery_face_npc($wom, $banker2);
+~wom_robbery_wom_attack($wom, $banker2, 12, true);
+
+// stage 34
+~wom_robbery_at($t0, 85);
+~wom_robbery_face_npc($banker3, $wom);
+
+// stage 36 - the camera swings round to the south of the bank
+~wom_robbery_camera($base, 26, 41, 15, 45, 700, 0, 7);
+
+~wom_robbery_at($t0, 88);
+~wom_robbery_say($banker3, "Help! Help!");
+
+// stage 35 - Elfinlocks says it as she walks forward, and he turns to her
+~wom_robbery_walk($elfinlocks, $base, 20, 44);
+~wom_robbery_say($elfinlocks, "Hey - how'd he get in there?");
+~wom_robbery_face_npc($wom, $elfinlocks);
+
+// 1337sp34kr only turns and says it once she's had her say
+~wom_robbery_at($t0, 91);
+~wom_robbery_say($sp34kr, "Hax!");
+~wom_robbery_face($sp34kr, movecoord($base, 20, 0, 43));
+
+// stage 37
+~wom_robbery_at($t0, 92);
+~wom_robbery_face_npc($wom, $elfinlocks);
+~wom_robbery_say($wom, "My sincerest regrets, dear lady...");
+
+// stage 38
+~wom_robbery_at($t0, 94);
+~wom_robbery_cast_shock($wom, $elfinlocks);
+
+// stage 39 - she crumbles
+~wom_robbery_at($t0, 97);
+~wom_robbery_kill($elfinlocks, true);
+
+~wom_robbery_at($t0, 98);
+~wom_robbery_face_npc($wom, $sp34kr);
+~wom_robbery_say($wom, "And also you, sir...");
+
+// stage 40-41 - she leaves her ashes and a blue partyhat
+~wom_robbery_at($t0, 99);
+obj_add(movecoord($base, 20, 0, 44), ashes, 1, ^wom_robbery_obj_duration);
+obj_add(movecoord($base, 20, 0, 44), blue_partyhat, 1, ^wom_robbery_obj_duration);
+
+// stage 42
+~wom_robbery_at($t0, 100);
+~wom_robbery_cast_shock($wom, $sp34kr);
+~wom_robbery_walk($qutiedoll, $base, 21, 44);
+
+// stage 44 - he crumbles
+~wom_robbery_at($t0, 103);
+~wom_robbery_kill($sp34kr, true);
+
+// stage 45
+~wom_robbery_at($t0, 105);
+obj_add(movecoord($base, 21, 0, 43), ashes, 1, ^wom_robbery_obj_duration);
+
+// Elfinlocks' ashes blow away, leaving just the partyhat
+~wom_robbery_obj_del(movecoord($base, 20, 0, 44), ashes);
+
+// stage 43 - Qutiedoll walks in and faces him (67s)
+~wom_robbery_face_npc($qutiedoll, $wom);
+~wom_robbery_say($qutiedoll, "How you do that?");
+
+// 1337sp34kr's ashes blow away
+~wom_robbery_at($t0, 107);
+~wom_robbery_obj_del(movecoord($base, 21, 0, 43), ashes);
+
+// stage 46 (69.5s)
+~wom_robbery_at($t0, 110);
+~wom_robbery_face_npc($wom, $qutiedoll);
+~wom_robbery_say($wom, "Oh dear - another one...");
+
+// stage 48
+~wom_robbery_at($t0, 112);
+~wom_robbery_cast_shock($wom, $qutiedoll);
+
+// he steps towards the partyhat before she's even crumbled
+~wom_robbery_at($t0, 113);
+~wom_robbery_walk($wom, $base, 18, 46);
+~wom_robbery_at($t0, 114);
+~wom_robbery_say($wom, "Ooh - a party hat?");
+
+// stage 49
+~wom_robbery_at($t0, 115);
+~wom_robbery_kill($qutiedoll, true);
+
+// her ashes, gone again before he reaches for the partyhat
+~wom_robbery_at($t0, 116);
+obj_add(movecoord($base, 21, 0, 44), ashes, 1, ^wom_robbery_obj_duration);
+
+// stage 51 - telekinetic grab on the partyhat, once only the partyhat is left
+~wom_robbery_at($t0, 117);
+~wom_robbery_obj_del(movecoord($base, 21, 0, 44), ashes);
+~wom_robbery_cast_telegrab($wom, movecoord($base, 20, 0, 44));
+
+~wom_robbery_at($t0, 120);
+~wom_robbery_obj_del(movecoord($base, 20, 0, 44), blue_partyhat);
+
+// stage 52 - the Wise Old Man puts the partyhat on
+~wom_robbery_at($t0, 121);
+if (npc_finduid($wom) = true) {
+    npc_changetype(wom_cutscene_2, ^wom_robbery_npc_duration);
+    $wom = npc_uid;
+}
+
+// stage 53
+~wom_robbery_at($t0, 124);
+~wom_robbery_walk($wom, $base, 18, 42);
+~wom_robbery_at($t0, 126);
+~wom_robbery_say($wom, "Now, my dear...");
+
+// stage 54
+~wom_robbery_at($t0, 128);
+~wom_robbery_say($banker3, "Eeek!");
+
+// stage 55 - he turns to her with his demand
+~wom_robbery_at($t0, 130);
+~wom_robbery_face_npc($wom, $banker3);
+~wom_robbery_at($t0, 131);
+~wom_robbery_say($wom, "Just give me the money, please.");
+
+// stage 56 - a watchman bursts in through the hole (the market guard is still busy with Cool Mom227)
+~wom_robbery_at($t0, 133);
+def_npc_uid $watchman = ~wom_robbery_spawn($base, wom_watchman, 18, 46, 0, -1);
+// the same puff of smoke random events arrive with
+sound_synth(smokepuff, 1, 0);
+~wom_robbery_say($watchman, "Old man, you're under arrest!");
+
+// stage 57
+~wom_robbery_at($t0, 134);
+~wom_robbery_camera($base, 25, 42, 5, 42, 400, 133, 4);
+~wom_robbery_walk($watchman, $base, 18, 43);
+
+// stage 58
+~wom_robbery_at($t0, 136);
+~wom_robbery_face_npc($wom, $watchman);
+
+// stage 59
+~wom_robbery_at($t0, 137);
+~wom_robbery_say($wom, "Oh, am I?");
+
+// stage 61 - the charge glow
+~wom_robbery_at($t0, 141);
+~wom_robbery_face_npc($wom, $watchman);
+~wom_robbery_anim($wom, human_casting);
+~wom_robbery_spotanim($wom, spotanim_301, 100);
+// spotanim_301 is the Charge spell's glow, so it gets the charge sound
+sound_synth(charge, 1, 0);
+
+// stage 62 - the charged hit, 44 damage
+~wom_robbery_at($t0, 144);
+sound_synth(saradomin_strike, 1, 0);
+~wom_robbery_hit($watchman, 44);
+~wom_robbery_say($watchman, "Aaargh!");
+
+// stage 63
+~wom_robbery_at($t0, 147);
+~wom_robbery_say($wom, "Yah!");
+~wom_robbery_anim($wom, wom_kung_fu_attack);
+
+// stage 64
+~wom_robbery_at($t0, 148);
+~wom_robbery_anim($watchman, wom_recoil);
+
+// stage 65
+~wom_robbery_at($t0, 150);
+~wom_robbery_npc_del($watchman);
+
+// stage 66 - he spots the scrying orb, and the camera creeps in on him
+~wom_robbery_at($t0, 151);
+~wom_robbery_say($wom, "And YOU can stop spying on me!");
+~wom_robbery_face($wom, movecoord($base, 24, 0, 42));
+~wom_robbery_camera($base, 24, 42, 4, 42, 400, 133, 4);
+
+// stage 67
+~wom_robbery_at($t0, 153);
+~wom_robbery_cast_stomp($wom, movecoord($base, 24, 0, 42));
+
+// stage 68 - the orb cracks as the spell hits it
+~wom_robbery_at($t0, 155);
+if_openoverlay(wiserobbery_crack_overlay);
+~wom_robbery_at($t0, 159);
+
+// stage 69 - end of recording (2009scape's Cutscene.end: 8 ticks black, teleport, fade in, done at tick 16)
+~fade_out;
+p_delay(7);
+cam_reset;
+p_telejump($exit);
+p_transmogrify(null);
+buildappearance(worn);
+minimap_toggle(0);
+~initalltabs;
+%wom_robbery_recording = ^true;
+p_delay(0);
+~fade_in;
+p_delay(6);
+if_openoverlay(null);
+~mesbox("End of recording.");
+
+// ---- helpers ----
+
+// waits until $tick ticks after the recording's first frame ($t0); does nothing if already past it
+[proc,wom_robbery_at](int $t0, int $tick)
+def_int $wait = calc($t0 + $tick - map_clock);
+if ($wait > 0) {
+    p_delay(calc($wait - 1));
+}
+
+[proc,wom_robbery_message](string $text)
+split_init($text, 470, 5, q8_full);
+~mesbox_page(0);
+
+[proc,wom_robbery_spawn](coord $base, npc $type, int $x, int $z, int $face_x, int $face_z)(npc_uid)
+npc_add(movecoord($base, $x, 0, $z), $type, ^wom_robbery_npc_duration);
+npc_setmode(none);
+npc_facesquare(movecoord($base, add($x, $face_x), 0, add($z, $face_z)));
+return(npc_uid);
+
+// Positions the camera at ($x, $z), looking at ($look_x, $look_z), framed against the 2007 recording.
+// The camera sits over the bank's roofed tiles below 800 height where it can, which is what hides the roofs.
+// Sent as rate 1, rate2 $speed: the client moves the camera by rate + (distance * rate2 / 1000) each
+// frame, snapping instantly once rate2 is 100 or more (both are single bytes on the wire).
+[proc,wom_robbery_camera](coord $base, int $x, int $z, int $look_x, int $look_z, int $height, int $look_height, int $speed)
+cam_moveto(movecoord($base, $x, 0, $z), $height, 1, $speed);
+cam_lookat(movecoord($base, $look_x, 0, $look_z), $look_height, 1, $speed);
+
+[proc,wom_robbery_say](npc_uid $uid, string $text)
+if (npc_finduid($uid) = true) {
+    npc_say($text);
+}
+
+[proc,wom_robbery_anim](npc_uid $uid, seq $seq)
+if (npc_finduid($uid) = true) {
+    npc_anim($seq, 0);
+}
+
+[proc,wom_robbery_spotanim](npc_uid $uid, spotanim $spotanim, int $height)
+if (npc_finduid($uid) = true) {
+    spotanim_npc($spotanim, $height, 0);
+}
+
+[proc,wom_robbery_walk](npc_uid $uid, coord $base, int $x, int $z)
+if (npc_finduid($uid) = true) {
+    npc_walk(movecoord($base, $x, 0, $z));
+}
+
+[proc,wom_robbery_face](npc_uid $uid, coord $coord)
+if (npc_finduid($uid) = true) {
+    npc_facesquare($coord);
+}
+
+[proc,wom_robbery_face_npc](npc_uid $uid, npc_uid $target)
+if (npc_finduid($target) = false) {
+    return;
+}
+def_coord $coord = npc_coord;
+~wom_robbery_face($uid, $coord);
+
+// $damage of 0 deals the npc's remaining hitpoints
+[proc,wom_robbery_hit](npc_uid $uid, int $damage)
+if (npc_finduid($uid) = false) {
+    return;
+}
+if ($damage = 0) {
+    $damage = npc_stat(hitpoints);
+}
+npc_damage(^hitmark_damage, $damage);
+
+// waits (up to $max_ticks) for the npc to reach $coord, returning how many ticks it took
+[proc,wom_robbery_await_arrival](npc_uid $uid, coord $coord, int $max_ticks)(int)
+def_int $waited = 0;
+while ($waited < $max_ticks) {
+    if (npc_finduid($uid) = false) {
+        return($waited);
+    }
+    if (npc_coord = $coord) {
+        return($waited);
+    }
+    p_delay(0);
+    $waited = add($waited, 1);
+}
+return($waited);
+
+[proc,wom_robbery_npc_del](npc_uid $uid)
+if (npc_finduid($uid) = true) {
+    npc_del;
+}
+
+[proc,wom_robbery_obj_del](coord $coord, obj $obj)
+if (obj_find($coord, $obj) = true) {
+    obj_del;
+}
+
+// the skeleton death the Wise Old Man's shock spell inflicts
+[proc,wom_robbery_kill](npc_uid $uid, boolean $hit)
+if (npc_finduid($uid) = true) {
+    npc_anim(human_become_skeleton_death, 0);
+    spotanim_npc(human_to_skeleton_death, 0, 0);
+    if ($hit = true) {
+        npc_damage(^hitmark_damage, npc_stat(hitpoints));
+    }
+    sound_synth(elemental_wizard_death, 1, 0);
+    // gone once the skeleton death has played out (ai_queue1)
+    npc_queue(1, 0, 2);
+}
+
+// the Wise Old Man's staff blows on the bankers; $damage of 0 deals their remaining hitpoints
+[proc,wom_robbery_wom_attack](npc_uid $wom, npc_uid $target, int $damage, boolean $female)
+if (npc_finduid($wom) = true) {
+    npc_anim(human_blunt_pound, 0);
+}
+// the blow lands the tick after the swing
+p_delay(0);
+if (npc_finduid($target) = false) {
+    return;
+}
+if ($damage = 0) {
+    $damage = npc_stat(hitpoints);
+}
+npc_damage(^hitmark_damage, $damage);
+def_synth $hit_sound = ~wom_robbery_hit_sound($female);
+sound_synth($hit_sound, 1, 20);
+if (npc_stat(hitpoints) > 0) {
+    npc_anim(human_unarmedblock, 20);
+    return;
+}
+npc_anim(human_death, 20);
+if ($female = true) {
+    sound_synth(female_death, 1, 20);
+} else {
+    sound_synth(human_death, 1, 20);
+}
+npc_queue(1, 0, ^wom_robbery_death_ticks);
+
+// a banker's unarmed punch, which the Wise Old Man blocks
+[proc,wom_robbery_banker_punch](npc_uid $banker, npc_uid $wom, boolean $female)
+if (npc_finduid($banker) = true) {
+    npc_anim(human_unarmedpunch, 0);
+    sound_synth(unarmed_punch, 1, 0);
+}
+if (npc_finduid($wom) = true) {
+    npc_anim(human_blunt_block, 20);
+    npc_damage(^hitmark_block, 0);
+    sound_synth(human_block_1, 1, 20);
+}
+
+// the same male/female hit sounds players make when damaged (see poison.rs2)
+[proc,wom_robbery_hit_sound](boolean $female)(synth)
+if ($female = true) {
+    if (random(2) = 0) {
+        return(female_hit);
+    }
+    return(female_hit2);
+}
+switch_int (random(3)) {
+    case 0 : return(human_hit2);
+    case 1 : return(human_hit3);
+    case default : return(human_hit4);
+}
+
+[ai_queue1,wom_banker1] ~wom_robbery_banker_drop;
+[ai_queue1,wom_banker2] ~wom_robbery_banker_drop;
+[ai_queue1,wom_banker3] npc_del;
+[ai_queue1,wom_fakeplayer1] npc_del;
+[ai_queue1,wom_fakeplayer2] npc_del;
+[ai_queue1,wom_fakeplayer3] npc_del;
+[ai_queue1,wom_fakeplayer4] npc_del;
+
+// a killed banker's drop
+[proc,wom_robbery_banker_drop]
+obj_addall(npc_coord, bones, 1, ^wom_robbery_obj_duration);
+obj_addall(npc_coord, coins, 10, ^wom_robbery_obj_duration);
+npc_del;
+
+// ---- market guard vs Cool Mom227 ----
+// 2009scape starts real combat between them (combatPulse.attack). The guard hunts her down with opnpc2,
+// which only fires once he's in melee range (never diagonally). Every swing queues the next one
+// (ai_queue4) after the attack delay, and she retaliates the way any npc does: after flinching for half
+// her attack delay. She's never finished off, as she's still there at the end.
+[proc,wom_robbery_start_fight](npc_uid $attacker, npc_uid $target)
+if (.npc_finduid($target) = false) {
+    return;
+}
+if (npc_finduid($attacker) = true) {
+    %wom_robbery_opponent = $target;
+    npc_setmode(opnpc2);
+}
+
+[ai_queue4,wom_marketguard] ~wom_robbery_reengage;
+[ai_queue4,wom_fakeplayer5] ~wom_robbery_reengage;
+[ai_opnpc2,wom_marketguard] @wom_robbery_melee_swing(human_sword_slash, 3);
+[ai_opnpc2,wom_fakeplayer5] @wom_robbery_melee_swing(human_unarmedpunch, 2);
+
+[proc,wom_robbery_reengage]
+if (.npc_finduid(%wom_robbery_opponent) = false) {
+    npc_setmode(none);
+    return;
+}
+npc_setmode(opnpc2);
+
+[label,wom_robbery_melee_swing](seq $attack, int $maxhit)
+def_npc_uid $self = npc_uid;
+def_coord $self_coord = npc_coord;
+npc_facesquare(.npc_coord);
+npc_anim($attack, 0);
+npc_setmode(none);
+// the next swing, once this one's attack delay is up
+npc_queue(4, 0, ^wom_robbery_attackrate);
+if (npc_finduid(.npc_uid) = false) {
+    return;
+}
+// the target: Cool Mom227 is the only woman in the fight
+def_boolean $female = false;
+if (npc_type = wom_fakeplayer5) {
+    $female = true;
+}
+def_int $damage = min(random(add($maxhit, 1)), sub(npc_stat(hitpoints), 1));
+if ($damage > 0) {
+    npc_damage(^hitmark_damage, $damage);
+} else {
+    npc_damage(^hitmark_block, 0);
+}
+if ($female = true) {
+    npc_anim(human_unarmedblock, 20);
+} else {
+    npc_anim(human_sword_def, 20);
+}
+// retaliate, as an npc does when attacked: turn to the attacker and swing back after a flinch
+if (%wom_robbery_opponent = null) {
+    %wom_robbery_opponent = $self;
+    npc_facesquare($self_coord);
+    npc_queue(4, 0, divide(^wom_robbery_attackrate, 2));
+}
+
+[proc,wom_robbery_cast_shock](npc_uid $wom, npc_uid $target)
+if (npc_finduid($target) = false) {
+    return;
+}
+def_coord $target_coord = npc_coord;
+if (npc_finduid($wom) = false) {
+    return;
+}
+npc_facesquare($target_coord);
+npc_anim(human_castwave_staff, 0);
+spotanim_npc(wom_wall_crush_casting, 0, 0);
+sound_synth(earthwave_cast_and_fire, 1, 0);
+def_int $duration = calc(51 + distance(npc_coord, $target_coord) * 10);
+projanim_npc(npc_coord, $target, wom_wall_crush_travel, 43, 31, 51, $duration, 16, 64);
+sound_synth(earthwave_hit, 1, $duration);
+
+[proc,wom_robbery_cast_shock_coord](npc_uid $wom, coord $coord)
+if (npc_finduid($wom) = false) {
+    return;
+}
+npc_facesquare($coord);
+npc_anim(human_castwave_staff, 0);
+spotanim_npc(wom_wall_crush_casting, 0, 0);
+sound_synth(earthwave_cast_and_fire, 1, 0);
+def_int $duration = calc(41 + distance(npc_coord, $coord) * 10);
+projanim_map(npc_coord, $coord, wom_wall_crush_travel, 30, 30, 41, $duration, 0, 0);
+sound_synth(earthwave_hit, 1, $duration);
+
+[proc,wom_robbery_cast_telegrab](npc_uid $wom, coord $coord)
+if (npc_finduid($wom) = false) {
+    return;
+}
+npc_facesquare($coord);
+npc_anim(human_casttelegrab, 0);
+spotanim_npc(telegrab_casting, 96, 0);
+sound_synth(telegrab_all, 1, 0);
+def_int $duration = calc(48 + distance(npc_coord, $coord) * 10);
+projanim_map(npc_coord, $coord, telegrab_travel, 35, 0, 48, $duration, 16, 64);
+spotanim_map(telegrab_impact, $coord, 0, $duration);
+
+// the final spell aimed at the scrying orb (the camera)
+[proc,wom_robbery_cast_stomp](npc_uid $wom, coord $coord)
+if (npc_finduid($wom) = false) {
+    return;
+}
+npc_anim(human_casting_tele_block_staff, 0);
+sound_synth(saradomin_strike, 1, 0);
+projanim_map(npc_coord, $coord, wom_wall_crush_travel, 50, 100, 41, calc(41 + distance(npc_coord, $coord) * 10), 0, 0);

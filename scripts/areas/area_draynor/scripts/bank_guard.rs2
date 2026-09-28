@@ -1,0 +1,94 @@
+// Draynor bank guard, stationed by the wall the Wise Old Man smashed through.
+// He can show the bank's security recording of the robbery (see wise_old_man_robbery.rs2).
+
+[opnpc1,wom_bankguard]
+~chatnpc("<p,neutral>Yes?");
+if (%wom_robbery_recording = ^true) {
+    switch_int (~p_choice2("Can I see that recording again, please?", 1, "Sorry, I don't want anything.", 2)) {
+        case 1 : @wom_bankguard_replay;
+        case 2 : @wom_bankguard_nothing;
+    }
+}
+switch_int (~p_choice3("Can I deposit my stuff here?", 1, "That wall doesn't look very good.", 2, "Sorry, I don't want anything.", 3)) {
+    case 1 :
+        ~chatplayer("<p,neutral>Hello. Can I deposit my stuff here?");
+        ~chatnpc("<p,neutral>No. I'm a security guard, not a bank clerk.");
+    case 2 : @wom_bankguard_wall;
+    case 3 : @wom_bankguard_nothing;
+}
+
+[label,wom_bankguard_nothing]
+~chatplayer("<p,neutral>Sorry, I don't want anything.");
+~chatnpc("<p,neutral>Ok.");
+
+[label,wom_bankguard_wall]
+~chatplayer("<p,neutral>That wall doesn't look very good.");
+~chatnpc("<p,neutral>No, it doesn't.");
+if (~p_choice2("Are you going to tell me what happened?", 1, "Alright, I'll stop bothering you now.", 2) = 2) {
+    ~chatplayer("<p,neutral>Alright, I'll stop bothering you now.");
+    ~chatnpc("<p,neutral>Good day, sir.");
+    return;
+}
+~chatplayer("<p,quiz>Are you going to tell me what happened?");
+~chatnpc("<p,neutral>I could do.");
+~chatplayer("<p,happy>Ok, go on!");
+~chatnpc("<p,neutral>Someone smashed the wall when they were robbing the bank.");
+~chatplayer("<p,shock>Someone's robbed the bank?");
+~chatnpc("<p,neutral>Yes.");
+~chatplayer("<p,sad>But... was anyone hurt? Did they get anything valuable?");
+~chatnpc("<p,neutral>Yes, but we were able to get more staff and mend the wall easily enough.");
+~chatnpc("<p,neutral>The Bank has already replaced all the stolen items that belonged to customers.");
+~chatplayer("<p,sad>Oh, good... but the bank staff got hurt?");
+~chatnpc("<p,neutral>Yes but the new ones are just as good.");
+~chatplayer("<p,angry>You're not very nice, are you?");
+~chatnpc("<p,neutral>No-one's expecting me to be nice.");
+~chatplayer("<p,neutral>Anyway... So, someone's robbed the bank?");
+~chatnpc("<p,neutral>Yes.");
+~chatplayer("<p,quiz>Do you know who did it?");
+~chatnpc("<p,neutral>We are fairly sure we know who the robber was. The security recording was damaged in the attack, but it still shows his face clearly enough.");
+~chatplayer("<p,quiz>You've got a security recording?");
+~chatnpc("<p,neutral>Yes. Our insurers insisted that we install a magical scrying orb.");
+~chatplayer("<p,quiz>Can I see the recording?");
+~chatnpc("<p,neutral>I suppose so. But it's quite long.");
+if (~p_choice2("That's ok, show me the recording.", 1, "Thanks, maybe another day.", 2) = 2) {
+    ~chatplayer("<p,neutral>Thanks, maybe another day.");
+    return;
+}
+~chatplayer("<p,happy>That's ok, show me the recording.");
+~chatnpc("<p,neutral>Alright... The bank's magical playback device will feed the recorded images into your mind. Just shut your eyes.");
+@wom_robbery_start_recording;
+
+// Watching it again costs 50 coins, taken from the bank if the player isn't carrying enough.
+[label,wom_bankguard_replay]
+~chatplayer("<p,quiz>Can I see that recording again, please?");
+~chatnpc("<p,neutral>I'd like you to pay me 50 gp first.");
+if (inv_total(inv, coins) >= ^wom_robbery_replay_cost) {
+    if (~p_choice2("Ok, here's 50 gp.", 1, "Thanks, maybe another day.", 2) = 2) {
+        @wom_bankguard_another_day;
+    }
+    ~chatplayer("<p,neutral>Ok, here's 50 gp.");
+    if (inv_total(inv, coins) < ^wom_robbery_replay_cost) {
+        return;
+    }
+    inv_del(inv, coins, ^wom_robbery_replay_cost);
+    @wom_robbery_start_recording;
+}
+~chatplayer("<p,sad>I'm not carrying that much.");
+if (inv_total(bank, coins) < ^wom_robbery_replay_cost) {
+    ~chatnpc("<p,neutral>Come back when you do.");
+    return;
+}
+~chatnpc("<p,neutral>As a bank employee, I suppose I could take the money directly from your bank account.");
+if (~p_choice2("Ok, you can take 50 gp from my bank account.", 1, "Thanks, maybe another day.", 2) = 2) {
+    @wom_bankguard_another_day;
+}
+~chatplayer("<p,neutral>Ok, you can take 50 gp from my bank account.");
+if (inv_total(bank, coins) < ^wom_robbery_replay_cost) {
+    return;
+}
+inv_del(bank, coins, ^wom_robbery_replay_cost);
+@wom_robbery_start_recording;
+
+[label,wom_bankguard_another_day]
+~chatplayer("<p,neutral>Thanks, maybe another day.");
+~chatnpc("<p,neutral>Ok.");

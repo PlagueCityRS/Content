@@ -1,0 +1,9 @@
+// Draynor Bank robbery security recording (wise_old_man_robbery.rs2)
+^wom_robbery_source_mapsquare = 0_33_76_0_0
+^wom_robbery_npc_duration = 500
+^wom_robbery_obj_duration = 200
+^wom_robbery_replay_cost = 50
+// how long a killed actor stays so its death animation plays out
+^wom_robbery_death_ticks = 4
+// the market guard and Cool Mom227 swing every 5 ticks, as the Draynor market guard does
+^wom_robbery_attackrate = 5

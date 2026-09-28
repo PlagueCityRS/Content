@@ -8,6 +8,10 @@ if (~npc_is_attackable = false) { // test: wormbrain's special mes shows before 
     return;
 }
 def_dbrow $spell_data = ~get_spell_data(%autocast_spell);
+if (~spellbook_allows_spell(db_getfield($spell_data, magic_spell_table:spell, 0)) = false) {
+    ~player_autocast_reset;
+    return;
+}
 if (~check_spell_requirements($spell_data) = false) {
     if (%autocast_spell = db_getfield($spell_data, magic_spell_table:spell, 0)) { // matches osrs behavior
         ~player_autocast_reset;
@@ -92,6 +96,12 @@ if (~player_npc_hit_roll(^magic_style) = true) {
 [proc,pvm_combat_spell_checks](dbrow $spell_data)(boolean)
 if_close;
 p_stopaction;
+if (~spellbook_allows_spell(db_getfield($spell_data, magic_spell_table:spell, 0)) = false) {
+    if (%autocast_spell = db_getfield($spell_data, magic_spell_table:spell, 0)) {
+        ~player_autocast_reset;
+    }
+    return(false);
+}
 if (map_clock < %action_delay) {
     p_opnpct(db_getfield($spell_data, magic_spell_table:spellcom, 0));
     return(false);
@@ -184,6 +194,9 @@ if($weapon ! null & oc_category($weapon) = weapon_staff & db_getfieldcount($spel
 if (db_getfieldcount($spell_data, magic_spell_table:spotanim_origin) > 0) {
     spotanim_pl(db_getfield($spell_data, magic_spell_table:spotanim_origin, 0), 92, 0);
 }
+if (db_getfieldcount($spell_data, magic_spell_table:sound_impact) > 0) {
+    sound_synth(db_getfield($spell_data, magic_spell_table:sound_success, 0), 0, 0);
+}
 // shoot spell projectile
 %action_delay = add(map_clock, 5);
 def_int $duration = 0;
@@ -200,39 +213,36 @@ if (~player_autocast_enabled = true & db_getfield($spell_data, magic_spell_table
 return($duration);
 
 
-[proc,pvm_spell_success](dbrow $spell_data, int $maxhit, int $duration)
+[proc,pvm_spell_success](dbrow $spell_data, int $maxhit, int $duration)(int)
 def_obj $weapon = inv_getobj(worn, ^wearpos_rhand);
 def_int $damagestyle = ^style_magic_normal;
 if (%damagestyle = ^style_melee_defensive) { // check varp directly
     $damagestyle = ^style_magic_defensive; // casting a spell with defensive on gives mage + def xp
 }
-// play spell success sound
-sound_synth(db_getfield($spell_data, magic_spell_table:sound_success, 0), 0, 0);
-// roll 0-maxhit
+if (db_getfieldcount($spell_data, magic_spell_table:sound_impact) > 0) {
+    sound_synth(db_getfield($spell_data, magic_spell_table:sound_impact, 0), 0, $duration);
+} else if (db_getfieldcount($spell_data, magic_spell_table:sound_success) > 0) {
+    sound_synth(db_getfield($spell_data, magic_spell_table:sound_success, 0), 0, $duration);
+}
 def_int $spell = db_getfield($spell_data, magic_spell_table:spell, 0);
-def_int $damage = randominc(~npc_max_dealt($maxhit, $spell));
-if(npc_type = salarin_the_twisted) {
-    // strike spells are the only way to damage salarin the twisted, the damage is fixed 9-12
-    switch_int ($spell) {
-        case ^wind_strike : $damage = 9;
-        case ^water_strike : $damage = 10;
-        case ^earth_strike : $damage = 11;
-        case ^fire_strike : $damage = 12;
+def_int $damage = 0;
+if ($maxhit ! null) {
+    $damage = randominc(~npc_max_dealt($maxhit, $spell));
+    if(npc_type = salarin_the_twisted) {
+        switch_int ($spell) {
+            case ^wind_strike : $damage = 9;
+            case ^water_strike : $damage = 10;
+            case ^earth_strike : $damage = 11;
+            case ^fire_strike : $damage = 12;
+        }
     }
 }
-else if (npc_type = chronozon) {
+if (npc_type = chronozon) {
     ~chronozon_spell($spell);
 }
-// if maxhit is defined then damage npc
 ~npc_retaliate(calc($duration / 30 + 1)); // delayed an extra tick in osrs
 if ($maxhit ! null) {
-    // damage npc
-    // mes("Duration: <tostring($duration)>, Duration (ticks): <tostring(calc($duration / 30))>");
     npc_queue(2, $damage, calc($duration / 30 + 1)); // delayed an extra tick in osrs
-    // npcs didnt have a flinch anim until sept 20 2006. https://youtu.be/UFgMqvI4to8
-    // https://oldschool.runescape.wiki/w/Update:Slug_Menace
-    // npc_anim(npc_param(defend_anim), $duration); // delay npc this tick
-    // npc sound
     if (npc_param(defend_sound) ! null) {
         sound_synth(npc_param(defend_sound), 1, $duration); // delay 1 client tick for the hit queue
     }
@@ -240,25 +250,28 @@ if ($maxhit ! null) {
     ~give_combat_experience($damagestyle, $damage_capped, %npc_combat_xp_multiplier);
     npc_heropoints($damage_capped);
 }
-// spell visual
 spotanim_npc(db_getfield($spell_data, magic_spell_table:spotanim_target, 0), $duration);
-
+return($damage);
 
 [proc,pvm_spell_fail](dbrow $spell_data, int $duration)
-// splash
+def_synth $sound = spellfail;
 if (db_getfieldcount($spell_data, magic_spell_table:sound_fail) > 0) {
-    sound_synth(db_getfield($spell_data, magic_spell_table:sound_fail, 0), 0, 0);
-} else {
-    // reduce stat, and freeze spells dont have fail sounds, so i assume they just play their normal sound
-    // every time?
-    sound_synth(db_getfield($spell_data, magic_spell_table:sound_success, 0), 0, 0);
+    $sound = db_getfield($spell_data, magic_spell_table:sound_fail, 0);
 }
-// splash sound would play here, doesnt exist in this rev?
-// sound_synth(, 0, $duration);
+~pvm_spell_fail_custom($spell_data, $duration, $sound);
+
+[proc,pvm_spell_fail_custom](dbrow $spell_data, int $duration, synth $fail_sound)
+if (db_getfieldcount($spell_data, magic_spell_table:sound_success) = 0 & db_getfieldcount($spell_data, magic_spell_table:sound_impact) > 0) {
+    sound_synth(db_getfield($spell_data, magic_spell_table:sound_impact, 0), 0, 0);
+}
+sound_synth($fail_sound, 0, $duration);
 spotanim_npc(failedspell_impact, 92, $duration);
-// splashing in osrs causes insta auto retal
 ~npc_retaliate(0);
 
+[proc,pvm_restore_spell_target](npc_uid $primary_target)
+if (npc_finduid($primary_target) = true) {
+    facesquare(npc_coord);
+}
 
 [proc,pvm_stat_change_effect](dbrow $spell_data)
 def_stat $stat;

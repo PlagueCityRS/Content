@@ -1,50 +1,67 @@
-[com_0]
 type=layer
+width=512
+height=334
+
+[info_layer]
 x=3
 y=178
+type=layer
 width=186
 height=85
 
-[com_2]
-layer=com_0
-type=rect
+[info_back_1]
+layer=info_layer
 x=3
 y=9
+type=rect
 width=178
 height=72
 colour=0x726451
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_3]
-layer=com_0
-type=rect
+[info_back_2]
+layer=info_layer
 x=4
 y=10
+type=rect
 width=176
 height=70
 colour=0x726451
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_4]
-layer=com_0
-type=rect
+[info_back_3]
+layer=info_layer
 x=4
 y=10
+type=rect
 width=177
 height=71
 colour=0x2E2B23
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_5]
-layer=com_0
-type=rect
+[info_back_4]
+layer=info_layer
 x=5
 y=11
+type=rect
 width=174
 height=68
 fill=yes
+colour=0x000000
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_1]
-type=text
+[title]
 x=34
 y=213
+type=text
 width=120
 height=14
 center=yes
@@ -52,11 +69,14 @@ font=p12_full
 shadowed=yes
 text=Select a Combat Spell
 colour=0xB0A392
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_6]
-type=text
+[cancelspell]
 x=143
 y=169
+type=text
 buttontype=normal
 width=36
 height=14
@@ -64,15 +84,18 @@ font=p12_full
 shadowed=yes
 text=cancel
 colour=0x808080
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_7]
-type=graphic
+[assb3]
 x=143
 y=12
+type=graphic
 buttontype=normal
 width=20
 height=20
-overlayer=com_8
+overlayer=assb3_hover
 script1op1=inv_count,inventory:inv,chaosrune
 script2op1=inv_count,inventory:inv,deathrune
 script3op1=inv_count,inventory:inv,waterrune
@@ -92,28 +115,32 @@ script4=gt,57
 graphic=magicoff2,6
 activegraphic=magicon2,6
 
-[com_8]
-type=layer
+[assb3_hover]
 x=3
 y=184
+type=layer
 width=182
 height=76
 hide=yes
 
-[com_9]
-layer=com_8
-type=rect
+[assb3_hover_bg]
+layer=assb3_hover
 x=5
 y=5
+type=rect
 width=174
 height=68
 fill=yes
+colour=0x000000
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_10]
-layer=com_8
-type=text
+[assb3_hover_0]
+layer=assb3_hover
 x=3
 y=5
+type=text
 width=174
 height=14
 center=yes
@@ -121,12 +148,15 @@ font=p12_full
 shadowed=yes
 text=Level 58 : Ice Rush
 colour=0xFFF000
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_11]
-layer=com_8
-type=text
+[assb3_hover_1]
+layer=assb3_hover
 x=3
 y=18
+type=text
 width=175
 height=10
 center=yes
@@ -134,48 +164,51 @@ font=p11_full
 shadowed=yes
 text=A single target ice attack
 colour=0x6B6F33
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_12]
-layer=com_8
-type=model
+[assb3_hover_2]
+layer=assb3_hover
 x=29
 y=35
+type=model
 width=28
 height=28
-model=inv_chaosrune
+model=obj_chaosrune
 zoom=900
 xan=512
 yan=1024
 
-[com_13]
-layer=com_8
-type=model
+[assb3_hover_3]
+layer=assb3_hover
 x=79
 y=35
+type=model
 width=28
 height=28
-model=inv_deathrune
+model=obj_deathrune
 zoom=900
 xan=512
 yan=1024
 
-[com_14]
-layer=com_8
-type=model
+[assb3_hover_4]
+layer=assb3_hover
 x=128
 y=35
+type=model
 width=28
 height=28
-model=inv_waterrune
+model=obj_waterrune
 zoom=900
 xan=512
 yan=1024
 
-[com_15]
-layer=com_8
-type=text
+[assb3_hover_5]
+layer=assb3_hover
 x=30
 y=62
+type=text
 width=26
 height=12
 script1op1=inv_count,inventory:inv,chaosrune
@@ -186,12 +219,14 @@ shadowed=yes
 text=%1/2
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_16]
-layer=com_8
-type=text
+[assb3_hover_6]
+layer=assb3_hover
 x=80
 y=62
+type=text
 width=26
 height=12
 script1op1=inv_count,inventory:inv,deathrune
@@ -202,12 +237,14 @@ shadowed=yes
 text=%1/2
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_17]
-layer=com_8
-type=text
+[assb3_hover_7]
+layer=assb3_hover
 x=130
 y=62
+type=text
 width=26
 height=12
 script1op1=inv_count,inventory:inv,waterrune
@@ -226,15 +263,17 @@ shadowed=yes
 text=%1/2
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_18]
-type=graphic
+[assb11]
 x=143
 y=96
+type=graphic
 buttontype=normal
 width=20
 height=20
-overlayer=com_19
+overlayer=assb11_hover
 script1op1=inv_count,inventory:inv,deathrune
 script2op1=inv_count,inventory:inv,bloodrune
 script3op1=inv_count,inventory:inv,waterrune
@@ -254,28 +293,32 @@ script4=gt,81
 graphic=magicoff2,8
 activegraphic=magicon2,8
 
-[com_19]
-type=layer
+[assb11_hover]
 x=3
 y=184
+type=layer
 width=182
 height=76
 hide=yes
 
-[com_20]
-layer=com_19
-type=rect
+[assb11_hover_bg]
+layer=assb11_hover
 x=5
 y=5
+type=rect
 width=174
 height=68
 fill=yes
+colour=0x000000
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_21]
-layer=com_19
-type=text
+[assb11_hover_0]
+layer=assb11_hover
 x=3
 y=5
+type=text
 width=175
 height=13
 center=yes
@@ -283,12 +326,15 @@ font=p12_full
 shadowed=yes
 text=Level 82 : Ice Blitz
 colour=0xFFF000
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_22]
-layer=com_19
-type=text
+[assb11_hover_1]
+layer=assb11_hover
 x=3
 y=18
+type=text
 width=174
 height=22
 center=yes
@@ -296,48 +342,51 @@ font=p11_full
 shadowed=yes
 text=A single target strong\nice attack
 colour=0x6B6F33
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_23]
-layer=com_19
-type=model
+[assb11_hover_2]
+layer=assb11_hover
 x=29
 y=35
+type=model
 width=28
 height=28
-model=inv_deathrune
+model=obj_deathrune
 zoom=900
 xan=512
 yan=1024
 
-[com_24]
-layer=com_19
-type=model
+[assb11_hover_3]
+layer=assb11_hover
 x=79
 y=35
+type=model
 width=28
 height=28
-model=inv_bloodrune
+model=obj_bloodrune
 zoom=900
 xan=512
 yan=1024
 
-[com_25]
-layer=com_19
-type=model
+[assb11_hover_4]
+layer=assb11_hover
 x=128
 y=35
+type=model
 width=28
 height=28
-model=inv_waterrune
+model=obj_waterrune
 zoom=900
 xan=512
 yan=1024
 
-[com_26]
-layer=com_19
-type=text
+[assb11_hover_5]
+layer=assb11_hover
 x=32
 y=62
+type=text
 width=26
 height=12
 script1op1=inv_count,inventory:inv,deathrune
@@ -348,12 +397,14 @@ shadowed=yes
 text=%1/2
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_27]
-layer=com_19
-type=text
+[assb11_hover_6]
+layer=assb11_hover
 x=82
 y=62
+type=text
 width=26
 height=12
 script1op1=inv_count,inventory:inv,bloodrune
@@ -364,12 +415,14 @@ shadowed=yes
 text=%1/2
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_28]
-layer=com_19
-type=text
+[assb11_hover_7]
+layer=assb11_hover
 x=130
 y=62
+type=text
 width=25
 height=12
 script1op1=inv_count,inventory:inv,waterrune
@@ -388,15 +441,17 @@ shadowed=yes
 text=%1/3
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_29]
-type=graphic
+[assb7]
 x=143
 y=52
+type=graphic
 buttontype=normal
 width=20
 height=20
-overlayer=com_30
+overlayer=assb7_hover
 script1op1=inv_count,inventory:inv,chaosrune
 script2op1=inv_count,inventory:inv,deathrune
 script3op1=inv_count,inventory:inv,waterrune
@@ -416,28 +471,32 @@ script4=gt,69
 graphic=magicoff2,7
 activegraphic=magicon2,7
 
-[com_30]
-type=layer
+[assb7_hover]
 x=3
 y=184
+type=layer
 width=182
 height=76
 hide=yes
 
-[com_31]
-layer=com_30
-type=rect
+[assb7_hover_bg]
+layer=assb7_hover
 x=5
 y=5
+type=rect
 width=174
 height=68
 fill=yes
+colour=0x000000
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_32]
-layer=com_30
-type=text
+[assb7_hover_0]
+layer=assb7_hover
 x=3
 y=5
+type=text
 width=176
 height=15
 center=yes
@@ -445,12 +504,15 @@ font=p12_full
 shadowed=yes
 text=Level 70 : Ice Burst
 colour=0xFFF000
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_33]
-layer=com_30
-type=text
+[assb7_hover_1]
+layer=assb7_hover
 x=3
 y=18
+type=text
 width=174
 height=12
 center=yes
@@ -458,48 +520,51 @@ font=p11_full
 shadowed=yes
 text=A multi-target ice attack
 colour=0x6B6F33
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_34]
-layer=com_30
-type=model
+[assb7_hover_2]
+layer=assb7_hover
 x=29
 y=35
+type=model
 width=28
 height=28
-model=inv_chaosrune
+model=obj_chaosrune
 zoom=900
 xan=512
 yan=1024
 
-[com_35]
-layer=com_30
-type=model
+[assb7_hover_3]
+layer=assb7_hover
 x=79
 y=35
+type=model
 width=28
 height=28
-model=inv_deathrune
+model=obj_deathrune
 zoom=900
 xan=512
 yan=1024
 
-[com_36]
-layer=com_30
-type=model
+[assb7_hover_4]
+layer=assb7_hover
 x=128
 y=35
+type=model
 width=28
 height=28
-model=inv_waterrune
+model=obj_waterrune
 zoom=900
 xan=512
 yan=1024
 
-[com_37]
-layer=com_30
-type=text
+[assb7_hover_5]
+layer=assb7_hover
 x=31
 y=62
+type=text
 width=24
 height=12
 script1op1=inv_count,inventory:inv,chaosrune
@@ -510,12 +575,14 @@ shadowed=yes
 text=%1/4
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_38]
-layer=com_30
-type=text
+[assb7_hover_6]
+layer=assb7_hover
 x=80
 y=62
+type=text
 width=26
 height=12
 script1op1=inv_count,inventory:inv,deathrune
@@ -526,12 +593,14 @@ shadowed=yes
 text=%1/2
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_39]
-layer=com_30
-type=text
+[assb7_hover_7]
+layer=assb7_hover
 x=130
 y=62
+type=text
 width=24
 height=12
 script1op1=inv_count,inventory:inv,waterrune
@@ -550,15 +619,17 @@ shadowed=yes
 text=%1/4
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_40]
-type=graphic
+[assb15]
 x=143
 y=136
+type=graphic
 buttontype=normal
 width=20
 height=20
-overlayer=com_41
+overlayer=assb15_hover
 script1op1=inv_count,inventory:inv,deathrune
 script2op1=inv_count,inventory:inv,bloodrune
 script3op1=inv_count,inventory:inv,waterrune
@@ -570,28 +641,32 @@ script4=gt,93
 graphic=magicoff2,9
 activegraphic=magicon2,9
 
-[com_41]
-type=layer
+[assb15_hover]
 x=3
 y=184
+type=layer
 width=182
 height=76
 hide=yes
 
-[com_42]
-layer=com_41
-type=rect
+[assb15_hover_bg]
+layer=assb15_hover
 x=5
 y=5
+type=rect
 width=174
 height=68
 fill=yes
+colour=0x000000
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_43]
-layer=com_41
-type=text
+[assb15_hover_0]
+layer=assb15_hover
 x=3
 y=5
+type=text
 width=175
 height=13
 center=yes
@@ -599,12 +674,15 @@ font=p12_full
 shadowed=yes
 text=Level 94 : Ice Barrage
 colour=0xFFF000
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_44]
-layer=com_41
-type=text
+[assb15_hover_1]
+layer=assb15_hover
 x=3
 y=18
+type=text
 width=175
 height=22
 center=yes
@@ -612,48 +690,51 @@ font=p11_full
 shadowed=yes
 text=A multi-target strong\nice attack
 colour=0x6B6F33
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_45]
-layer=com_41
-type=model
+[assb15_hover_2]
+layer=assb15_hover
 x=29
 y=35
+type=model
 width=28
 height=28
-model=inv_deathrune
+model=obj_deathrune
 zoom=900
 xan=512
 yan=1024
 
-[com_46]
-layer=com_41
-type=model
+[assb15_hover_3]
+layer=assb15_hover
 x=79
 y=35
+type=model
 width=28
 height=28
-model=inv_bloodrune
+model=obj_bloodrune
 zoom=900
 xan=512
 yan=1024
 
-[com_47]
-layer=com_41
-type=model
+[assb15_hover_4]
+layer=assb15_hover
 x=128
 y=35
+type=model
 width=28
 height=28
-model=inv_waterrune
+model=obj_waterrune
 zoom=900
 xan=512
 yan=1024
 
-[com_48]
-layer=com_41
-type=text
+[assb15_hover_5]
+layer=assb15_hover
 x=31
 y=62
+type=text
 width=24
 height=12
 script1op1=inv_count,inventory:inv,deathrune
@@ -664,12 +745,14 @@ shadowed=yes
 text=%1/4
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_49]
-layer=com_41
-type=text
+[assb15_hover_6]
+layer=assb15_hover
 x=80
 y=62
+type=text
 width=26
 height=12
 script1op1=inv_count,inventory:inv,bloodrune
@@ -680,12 +763,14 @@ shadowed=yes
 text=%1/2
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_50]
-layer=com_41
-type=text
+[assb15_hover_7]
+layer=assb15_hover
 x=129
 y=62
+type=text
 width=26
 height=12
 script1op1=inv_count,inventory:inv,waterrune
@@ -704,15 +789,17 @@ shadowed=yes
 text=%1/6
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_51]
-type=graphic
+[assb2]
 x=103
 y=12
+type=graphic
 buttontype=normal
 width=20
 height=20
-overlayer=com_52
+overlayer=assb2_hover
 script1op1=inv_count,inventory:inv,chaosrune
 script2op1=inv_count,inventory:inv,deathrune
 script3op1=inv_count,inventory:inv,bloodrune
@@ -724,28 +811,32 @@ script4=gt,55
 graphic=magicoff2,14
 activegraphic=magicon2,14
 
-[com_52]
-type=layer
+[assb2_hover]
 x=3
 y=184
+type=layer
 width=182
 height=76
 hide=yes
 
-[com_53]
-layer=com_52
-type=rect
+[assb2_hover_bg]
+layer=assb2_hover
 x=5
 y=5
+type=rect
 width=174
 height=68
 fill=yes
+colour=0x000000
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_54]
-layer=com_52
-type=text
+[assb2_hover_0]
+layer=assb2_hover
 x=3
 y=5
+type=text
 width=175
 height=13
 center=yes
@@ -753,12 +844,15 @@ font=p12_full
 shadowed=yes
 text=Level 56 : Blood Rush
 colour=0xFFF000
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_55]
-layer=com_52
-type=text
+[assb2_hover_1]
+layer=assb2_hover
 x=3
 y=18
+type=text
 width=175
 height=12
 center=yes
@@ -766,48 +860,51 @@ font=p11_full
 shadowed=yes
 text=A single target blood attack
 colour=0x6B6F33
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_56]
-layer=com_52
-type=model
+[assb2_hover_2]
+layer=assb2_hover
 x=29
 y=35
+type=model
 width=28
 height=28
-model=inv_chaosrune
+model=obj_chaosrune
 zoom=900
 xan=512
 yan=1024
 
-[com_57]
-layer=com_52
-type=model
+[assb2_hover_3]
+layer=assb2_hover
 x=79
 y=35
+type=model
 width=28
 height=28
-model=inv_deathrune
+model=obj_deathrune
 zoom=900
 xan=512
 yan=1024
 
-[com_58]
-layer=com_52
-type=model
+[assb2_hover_4]
+layer=assb2_hover
 x=128
 y=35
+type=model
 width=28
 height=28
-model=inv_bloodrune
+model=obj_bloodrune
 zoom=900
 xan=512
 yan=1024
 
-[com_59]
-layer=com_52
-type=text
+[assb2_hover_5]
+layer=assb2_hover
 x=30
 y=62
+type=text
 width=26
 height=12
 script1op1=inv_count,inventory:inv,chaosrune
@@ -818,12 +915,14 @@ shadowed=yes
 text=%1/2
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_60]
-layer=com_52
-type=text
+[assb2_hover_6]
+layer=assb2_hover
 x=80
 y=62
+type=text
 width=26
 height=12
 script1op1=inv_count,inventory:inv,deathrune
@@ -834,12 +933,14 @@ shadowed=yes
 text=%1/2
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_61]
-layer=com_52
-type=text
+[assb2_hover_7]
+layer=assb2_hover
 x=130
 y=62
+type=text
 width=23
 height=12
 script1op1=inv_count,inventory:inv,bloodrune
@@ -850,15 +951,17 @@ shadowed=yes
 text=%1/1
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_62]
-type=graphic
+[assb10]
 x=103
 y=96
+type=graphic
 buttontype=normal
 width=20
 height=20
-overlayer=com_63
+overlayer=assb10_hover
 script1op1=inv_count,inventory:inv,deathrune
 script2op1=inv_count,inventory:inv,bloodrune
 script3op1=stat_level,magic
@@ -868,28 +971,32 @@ script3=gt,79
 graphic=magicoff2,16
 activegraphic=magicon2,16
 
-[com_63]
-type=layer
+[assb10_hover]
 x=3
 y=184
+type=layer
 width=182
 height=76
 hide=yes
 
-[com_64]
-layer=com_63
-type=rect
+[assb10_hover_bg]
+layer=assb10_hover
 x=5
 y=5
+type=rect
 width=174
 height=68
 fill=yes
+colour=0x000000
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_65]
-layer=com_63
-type=text
+[assb10_hover_0]
+layer=assb10_hover
 x=3
 y=5
+type=text
 width=175
 height=12
 center=yes
@@ -897,12 +1004,15 @@ font=p12_full
 shadowed=yes
 text=Level 80 : Blood Blitz
 colour=0xFFF000
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_66]
-layer=com_63
-type=text
+[assb10_hover_1]
+layer=assb10_hover
 x=3
 y=18
+type=text
 width=175
 height=22
 center=yes
@@ -910,36 +1020,39 @@ font=p11_full
 shadowed=yes
 text=A single target strong\nblood attack
 colour=0x6B6F33
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_67]
-layer=com_63
-type=model
+[assb10_hover_2]
+layer=assb10_hover
 x=54
 y=35
+type=model
 width=28
 height=28
-model=inv_deathrune
+model=obj_deathrune
 zoom=900
 xan=512
 yan=1024
 
-[com_68]
-layer=com_63
-type=model
+[assb10_hover_3]
+layer=assb10_hover
 x=108
 y=35
+type=model
 width=28
 height=28
-model=inv_bloodrune
+model=obj_bloodrune
 zoom=900
 xan=512
 yan=1024
 
-[com_69]
-layer=com_63
-type=text
+[assb10_hover_4]
+layer=assb10_hover
 x=55
 y=62
+type=text
 width=26
 height=12
 script1op1=inv_count,inventory:inv,deathrune
@@ -950,12 +1063,14 @@ shadowed=yes
 text=%1/2
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_70]
-layer=com_63
-type=text
+[assb10_hover_5]
+layer=assb10_hover
 x=111
 y=62
+type=text
 width=24
 height=12
 script1op1=inv_count,inventory:inv,bloodrune
@@ -966,15 +1081,17 @@ shadowed=yes
 text=%1/4
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_71]
-type=graphic
+[assb6]
 x=103
 y=52
+type=graphic
 buttontype=normal
 width=20
 height=20
-overlayer=com_72
+overlayer=assb6_hover
 script1op1=inv_count,inventory:inv,chaosrune
 script2op1=inv_count,inventory:inv,deathrune
 script3op1=inv_count,inventory:inv,bloodrune
@@ -986,28 +1103,32 @@ script4=gt,67
 graphic=magicoff2,15
 activegraphic=magicon2,15
 
-[com_72]
-type=layer
+[assb6_hover]
 x=3
 y=184
+type=layer
 width=182
 height=76
 hide=yes
 
-[com_73]
-layer=com_72
-type=rect
+[assb6_hover_bg]
+layer=assb6_hover
 x=5
 y=5
+type=rect
 width=174
 height=68
 fill=yes
+colour=0x000000
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_74]
-layer=com_72
-type=text
+[assb6_hover_0]
+layer=assb6_hover
 x=3
 y=5
+type=text
 width=175
 height=12
 center=yes
@@ -1015,12 +1136,15 @@ font=p12_full
 shadowed=yes
 text=Level 68 : Blood Burst
 colour=0xFFF000
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_75]
-layer=com_72
-type=text
+[assb6_hover_1]
+layer=assb6_hover
 x=3
 y=18
+type=text
 width=175
 height=12
 center=yes
@@ -1028,48 +1152,51 @@ font=p11_full
 shadowed=yes
 text=A multi-target blood attack
 colour=0x6B6F33
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_76]
-layer=com_72
-type=model
+[assb6_hover_2]
+layer=assb6_hover
 x=29
 y=35
+type=model
 width=28
 height=28
-model=inv_chaosrune
+model=obj_chaosrune
 zoom=900
 xan=512
 yan=1024
 
-[com_77]
-layer=com_72
-type=model
+[assb6_hover_3]
+layer=assb6_hover
 x=79
 y=35
+type=model
 width=28
 height=28
-model=inv_deathrune
+model=obj_deathrune
 zoom=900
 xan=512
 yan=1024
 
-[com_78]
-layer=com_72
-type=model
+[assb6_hover_4]
+layer=assb6_hover
 x=128
 y=35
+type=model
 width=28
 height=28
-model=inv_bloodrune
+model=obj_bloodrune
 zoom=900
 xan=512
 yan=1024
 
-[com_79]
-layer=com_72
-type=text
+[assb6_hover_5]
+layer=assb6_hover
 x=31
 y=62
+type=text
 width=24
 height=12
 script1op1=inv_count,inventory:inv,chaosrune
@@ -1080,12 +1207,14 @@ shadowed=yes
 text=%1/4
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_80]
-layer=com_72
-type=text
+[assb6_hover_6]
+layer=assb6_hover
 x=80
 y=62
+type=text
 width=26
 height=12
 script1op1=inv_count,inventory:inv,deathrune
@@ -1096,12 +1225,14 @@ shadowed=yes
 text=%1/2
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_81]
-layer=com_72
-type=text
+[assb6_hover_7]
+layer=assb6_hover
 x=129
 y=62
+type=text
 width=26
 height=12
 script1op1=inv_count,inventory:inv,bloodrune
@@ -1112,15 +1243,17 @@ shadowed=yes
 text=%1/2
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_82]
-type=graphic
+[assb14]
 x=103
 y=136
+type=graphic
 buttontype=normal
 width=20
 height=20
-overlayer=com_83
+overlayer=assb14_hover
 script1op1=inv_count,inventory:inv,deathrune
 script2op1=inv_count,inventory:inv,bloodrune
 script3op1=inv_count,inventory:inv,soulrune
@@ -1132,28 +1265,32 @@ script4=gt,91
 graphic=magicoff2,17
 activegraphic=magicon2,17
 
-[com_83]
-type=layer
+[assb14_hover]
 x=3
 y=184
+type=layer
 width=182
 height=76
 hide=yes
 
-[com_84]
-layer=com_83
-type=rect
+[assb14_hover_bg]
+layer=assb14_hover
 x=5
 y=5
+type=rect
 width=174
 height=68
 fill=yes
+colour=0x000000
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_85]
-layer=com_83
-type=text
+[assb14_hover_0]
+layer=assb14_hover
 x=3
 y=5
+type=text
 width=174
 height=12
 center=yes
@@ -1161,12 +1298,15 @@ font=p12_full
 shadowed=yes
 text=Level 92 : Blood Barrage
 colour=0xFFF000
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_86]
-layer=com_83
-type=text
+[assb14_hover_1]
+layer=assb14_hover
 x=3
 y=18
+type=text
 width=174
 height=22
 center=yes
@@ -1174,48 +1314,51 @@ font=p11_full
 shadowed=yes
 text=A multi-target strong\nblood attack
 colour=0x6B6F33
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_87]
-layer=com_83
-type=model
+[assb14_hover_2]
+layer=assb14_hover
 x=29
 y=35
+type=model
 width=28
 height=28
-model=inv_deathrune
+model=obj_deathrune
 zoom=900
 xan=512
 yan=1024
 
-[com_88]
-layer=com_83
-type=model
+[assb14_hover_3]
+layer=assb14_hover
 x=79
 y=35
+type=model
 width=28
 height=28
-model=inv_bloodrune
+model=obj_bloodrune
 zoom=900
 xan=512
 yan=1024
 
-[com_89]
-layer=com_83
-type=model
+[assb14_hover_4]
+layer=assb14_hover
 x=128
 y=35
+type=model
 width=28
 height=28
-model=inv_soulrune
+model=obj_soulrune
 zoom=900
 xan=512
 yan=1024
 
-[com_90]
-layer=com_83
-type=text
+[assb14_hover_5]
+layer=assb14_hover
 x=31
 y=62
+type=text
 width=24
 height=12
 script1op1=inv_count,inventory:inv,deathrune
@@ -1226,12 +1369,14 @@ shadowed=yes
 text=%1/4
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_91]
-layer=com_83
-type=text
+[assb14_hover_6]
+layer=assb14_hover
 x=81
 y=62
+type=text
 width=24
 height=12
 script1op1=inv_count,inventory:inv,bloodrune
@@ -1242,12 +1387,14 @@ shadowed=yes
 text=%1/4
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_92]
-layer=com_83
-type=text
+[assb14_hover_7]
+layer=assb14_hover
 x=130
 y=62
+type=text
 width=23
 height=12
 script1op1=inv_count,inventory:inv,soulrune
@@ -1258,15 +1405,17 @@ shadowed=yes
 text=%1/1
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_93]
-type=graphic
+[assb0]
 x=23
 y=12
+type=graphic
 buttontype=normal
 width=20
 height=20
-overlayer=com_94
+overlayer=assb0_hover
 script1op1=inv_count,inventory:inv,chaosrune
 script2op1=inv_count,inventory:inv,deathrune
 script3op1=inv_count,inventory:inv,airrune
@@ -1294,28 +1443,32 @@ script5=gt,49
 graphic=magicoff2,10
 activegraphic=magicon2,10
 
-[com_94]
-type=layer
+[assb0_hover]
 x=3
 y=184
+type=layer
 width=182
 height=76
 hide=yes
 
-[com_95]
-layer=com_94
-type=rect
+[assb0_hover_bg]
+layer=assb0_hover
 x=5
 y=5
+type=rect
 width=174
 height=68
 fill=yes
+colour=0x000000
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_96]
-layer=com_94
-type=text
+[assb0_hover_0]
+layer=assb0_hover
 x=3
 y=5
+type=text
 width=174
 height=13
 center=yes
@@ -1323,12 +1476,15 @@ font=p12_full
 shadowed=yes
 text=Level 50 : Smoke Rush
 colour=0xFFF000
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_97]
-layer=com_94
-type=text
+[assb0_hover_1]
+layer=assb0_hover
 x=3
 y=18
+type=text
 width=174
 height=12
 center=yes
@@ -1336,60 +1492,63 @@ font=p11_full
 shadowed=yes
 text=A single target smoke attack
 colour=0x6B6F33
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_98]
-layer=com_94
-type=model
+[assb0_hover_2]
+layer=assb0_hover
 x=20
 y=35
+type=model
 width=28
 height=28
-model=inv_chaosrune
+model=obj_chaosrune
 zoom=900
 xan=512
 yan=1024
 
-[com_99]
-layer=com_94
-type=model
+[assb0_hover_3]
+layer=assb0_hover
 x=59
 y=35
+type=model
 width=28
 height=28
-model=inv_deathrune
+model=obj_deathrune
 zoom=900
 xan=512
 yan=1024
 
-[com_100]
-layer=com_94
-type=model
+[assb0_hover_4]
+layer=assb0_hover
 x=98
 y=35
+type=model
 width=28
 height=28
-model=inv_firerune
+model=obj_firerune
 zoom=900
 xan=512
 yan=1024
 
-[com_101]
-layer=com_94
-type=model
+[assb0_hover_5]
+layer=assb0_hover
 x=136
 y=35
+type=model
 width=28
 height=28
-model=inv_airrune
+model=obj_airrune
 zoom=900
 xan=512
 yan=1024
 
-[com_102]
-layer=com_94
-type=text
+[assb0_hover_6]
+layer=assb0_hover
 x=21
 y=62
+type=text
 width=26
 height=12
 script1op1=inv_count,inventory:inv,chaosrune
@@ -1400,12 +1559,14 @@ shadowed=yes
 text=%1/2
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_103]
-layer=com_94
-type=text
+[assb0_hover_7]
+layer=assb0_hover
 x=60
 y=62
+type=text
 width=26
 height=12
 script1op1=inv_count,inventory:inv,deathrune
@@ -1416,12 +1577,14 @@ shadowed=yes
 text=%1/2
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_104]
-layer=com_94
-type=text
+[assb0_hover_8]
+layer=assb0_hover
 x=100
 y=62
+type=text
 width=24
 height=12
 script1op1=inv_count,inventory:inv,firerune
@@ -1440,12 +1603,14 @@ shadowed=yes
 text=%1/1
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_105]
-layer=com_94
-type=text
+[assb0_hover_9]
+layer=assb0_hover
 x=138
 y=63
+type=text
 width=24
 height=12
 script1op1=inv_count,inventory:inv,airrune
@@ -1462,15 +1627,17 @@ shadowed=yes
 text=%1/4
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_106]
-type=graphic
+[assb8]
 x=23
 y=95
+type=graphic
 buttontype=normal
 width=20
 height=20
-overlayer=com_107
+overlayer=assb8_hover
 script1op1=inv_count,inventory:inv,deathrune
 script2op1=inv_count,inventory:inv,bloodrune
 script3op1=inv_count,inventory:inv,firerune
@@ -1498,28 +1665,32 @@ script5=gt,73
 graphic=magicoff2,12
 activegraphic=magicon2,12
 
-[com_107]
-type=layer
+[assb8_hover]
 x=3
 y=184
+type=layer
 width=182
 height=76
 hide=yes
 
-[com_108]
-layer=com_107
-type=rect
+[assb8_hover_bg]
+layer=assb8_hover
 x=5
 y=5
+type=rect
 width=174
 height=68
 fill=yes
+colour=0x000000
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_109]
-layer=com_107
-type=text
+[assb8_hover_0]
+layer=assb8_hover
 x=3
 y=5
+type=text
 width=175
 height=13
 center=yes
@@ -1527,12 +1698,15 @@ font=p12_full
 shadowed=yes
 text=Level 74 : Smoke Blitz
 colour=0xFFF000
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_110]
-layer=com_107
-type=text
+[assb8_hover_1]
+layer=assb8_hover
 x=3
 y=18
+type=text
 width=175
 height=22
 center=yes
@@ -1540,60 +1714,63 @@ font=p11_full
 shadowed=yes
 text=A single target strong\n smoke attack
 colour=0x6B6F33
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_111]
-layer=com_107
-type=model
+[assb8_hover_2]
+layer=assb8_hover
 x=20
 y=35
+type=model
 width=28
 height=28
-model=inv_deathrune
+model=obj_deathrune
 zoom=900
 xan=512
 yan=1024
 
-[com_112]
-layer=com_107
-type=model
+[assb8_hover_3]
+layer=assb8_hover
 x=59
 y=35
+type=model
 width=28
 height=28
-model=inv_bloodrune
+model=obj_bloodrune
 zoom=900
 xan=512
 yan=1024
 
-[com_113]
-layer=com_107
-type=model
+[assb8_hover_4]
+layer=assb8_hover
 x=98
 y=35
+type=model
 width=28
 height=28
-model=inv_firerune
+model=obj_firerune
 zoom=900
 xan=512
 yan=1024
 
-[com_114]
-layer=com_107
-type=model
+[assb8_hover_5]
+layer=assb8_hover
 x=136
 y=35
+type=model
 width=28
 height=28
-model=inv_airrune
+model=obj_airrune
 zoom=900
 xan=512
 yan=1024
 
-[com_115]
-layer=com_107
-type=text
+[assb8_hover_6]
+layer=assb8_hover
 x=21
 y=62
+type=text
 width=26
 height=12
 script1op1=inv_count,inventory:inv,deathrune
@@ -1604,12 +1781,14 @@ shadowed=yes
 text=%1/2
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_116]
-layer=com_107
-type=text
+[assb8_hover_7]
+layer=assb8_hover
 x=60
 y=62
+type=text
 width=26
 height=12
 script1op1=inv_count,inventory:inv,bloodrune
@@ -1620,12 +1799,14 @@ shadowed=yes
 text=%1/2
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_117]
-layer=com_107
-type=text
+[assb8_hover_8]
+layer=assb8_hover
 x=99
 y=62
+type=text
 width=26
 height=12
 script1op1=inv_count,inventory:inv,firerune
@@ -1644,12 +1825,14 @@ shadowed=yes
 text=%1/2
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_118]
-layer=com_107
-type=text
+[assb8_hover_9]
+layer=assb8_hover
 x=137
 y=62
+type=text
 width=26
 height=12
 script1op1=inv_count,inventory:inv,airrune
@@ -1660,15 +1843,17 @@ shadowed=yes
 text=%1/2
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_119]
-type=graphic
+[assb4]
 x=23
 y=52
+type=graphic
 buttontype=normal
 width=20
 height=20
-overlayer=com_120
+overlayer=assb4_hover
 script1op1=inv_count,inventory:inv,chaosrune
 script2op1=inv_count,inventory:inv,deathrune
 script3op1=inv_count,inventory:inv,firerune
@@ -1696,28 +1881,32 @@ script5=gt,61
 graphic=magicoff2,11
 activegraphic=magicon2,11
 
-[com_120]
-type=layer
+[assb4_hover]
 x=3
 y=184
+type=layer
 width=182
 height=76
 hide=yes
 
-[com_121]
-layer=com_120
-type=rect
+[assb4_hover_bg]
+layer=assb4_hover
 x=5
 y=5
+type=rect
 width=174
 height=68
 fill=yes
+colour=0x000000
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_122]
-layer=com_120
-type=text
+[assb4_hover_0]
+layer=assb4_hover
 x=3
 y=5
+type=text
 width=175
 height=13
 center=yes
@@ -1725,12 +1914,15 @@ font=p12_full
 shadowed=yes
 text=Level 62 : Smoke Burst
 colour=0xFFF000
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_123]
-layer=com_120
-type=text
+[assb4_hover_1]
+layer=assb4_hover
 x=3
 y=18
+type=text
 width=175
 height=12
 center=yes
@@ -1738,60 +1930,63 @@ font=p11_full
 shadowed=yes
 text=A multi-target smoke attack
 colour=0x6B6F33
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_124]
-layer=com_120
-type=model
+[assb4_hover_2]
+layer=assb4_hover
 x=20
 y=35
+type=model
 width=28
 height=28
-model=inv_chaosrune
+model=obj_chaosrune
 zoom=900
 xan=512
 yan=1024
 
-[com_125]
-layer=com_120
-type=model
+[assb4_hover_3]
+layer=assb4_hover
 x=59
 y=35
+type=model
 width=28
 height=28
-model=inv_deathrune
+model=obj_deathrune
 zoom=900
 xan=512
 yan=1024
 
-[com_126]
-layer=com_120
-type=model
+[assb4_hover_4]
+layer=assb4_hover
 x=98
 y=35
+type=model
 width=28
 height=28
-model=inv_firerune
+model=obj_firerune
 zoom=900
 xan=512
 yan=1024
 
-[com_127]
-layer=com_120
-type=model
+[assb4_hover_5]
+layer=assb4_hover
 x=136
 y=35
+type=model
 width=28
 height=28
-model=inv_airrune
+model=obj_airrune
 zoom=900
 xan=512
 yan=1024
 
-[com_128]
-layer=com_120
-type=text
+[assb4_hover_6]
+layer=assb4_hover
 x=23
 y=62
+type=text
 width=24
 height=12
 script1op1=inv_count,inventory:inv,chaosrune
@@ -1802,12 +1997,14 @@ shadowed=yes
 text=%1/4
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_129]
-layer=com_120
-type=text
+[assb4_hover_7]
+layer=assb4_hover
 x=60
 y=62
+type=text
 width=26
 height=12
 script1op1=inv_count,inventory:inv,deathrune
@@ -1818,12 +2015,14 @@ shadowed=yes
 text=%1/2
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_130]
-layer=com_120
-type=text
+[assb4_hover_8]
+layer=assb4_hover
 x=99
 y=62
+type=text
 width=26
 height=12
 script1op1=inv_count,inventory:inv,firerune
@@ -1842,12 +2041,14 @@ shadowed=yes
 text=%1/2
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_131]
-layer=com_120
-type=text
+[assb4_hover_9]
+layer=assb4_hover
 x=137
 y=62
+type=text
 width=26
 height=12
 script1op1=inv_count,inventory:inv,airrune
@@ -1864,15 +2065,17 @@ shadowed=yes
 text=%1/2
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_132]
-type=graphic
+[assb12]
 x=23
 y=136
+type=graphic
 buttontype=normal
 width=20
 height=20
-overlayer=com_133
+overlayer=assb12_hover
 script1op1=inv_count,inventory:inv,deathrune
 script2op1=inv_count,inventory:inv,bloodrune
 script3op1=inv_count,inventory:inv,firerune
@@ -1900,28 +2103,32 @@ script5=gt,85
 graphic=magicoff2,13
 activegraphic=magicon2,13
 
-[com_133]
-type=layer
+[assb12_hover]
 x=3
 y=184
+type=layer
 width=182
 height=76
 hide=yes
 
-[com_134]
-layer=com_133
-type=rect
+[assb12_hover_bg]
+layer=assb12_hover
 x=5
 y=5
+type=rect
 width=174
 height=68
 fill=yes
+colour=0x000000
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_135]
-layer=com_133
-type=text
+[assb12_hover_0]
+layer=assb12_hover
 x=3
 y=5
+type=text
 width=175
 height=13
 center=yes
@@ -1929,12 +2136,15 @@ font=p12_full
 shadowed=yes
 text=Level 86 : Smoke Barrage
 colour=0xFFF000
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_136]
-layer=com_133
-type=text
+[assb12_hover_1]
+layer=assb12_hover
 x=3
 y=18
+type=text
 width=175
 height=22
 center=yes
@@ -1942,60 +2152,63 @@ font=p11_full
 shadowed=yes
 text=A multi-target strong\nsmoke attack
 colour=0x6B6F33
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_137]
-layer=com_133
-type=model
+[assb12_hover_2]
+layer=assb12_hover
 x=20
 y=35
+type=model
 width=28
 height=28
-model=inv_deathrune
+model=obj_deathrune
 zoom=900
 xan=512
 yan=1024
 
-[com_138]
-layer=com_133
-type=model
+[assb12_hover_3]
+layer=assb12_hover
 x=59
 y=35
+type=model
 width=28
 height=28
-model=inv_bloodrune
+model=obj_bloodrune
 zoom=900
 xan=512
 yan=1024
 
-[com_139]
-layer=com_133
-type=model
+[assb12_hover_4]
+layer=assb12_hover
 x=98
 y=35
+type=model
 width=28
 height=28
-model=inv_firerune
+model=obj_firerune
 zoom=900
 xan=512
 yan=1024
 
-[com_140]
-layer=com_133
-type=model
+[assb12_hover_5]
+layer=assb12_hover
 x=136
 y=35
+type=model
 width=28
 height=28
-model=inv_airrune
+model=obj_airrune
 zoom=900
 xan=512
 yan=1024
 
-[com_141]
-layer=com_133
-type=text
+[assb12_hover_6]
+layer=assb12_hover
 x=22
 y=62
+type=text
 width=24
 height=12
 script1op1=inv_count,inventory:inv,deathrune
@@ -2006,12 +2219,14 @@ shadowed=yes
 text=%1/4
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_142]
-layer=com_133
-type=text
+[assb12_hover_7]
+layer=assb12_hover
 x=60
 y=62
+type=text
 width=26
 height=12
 script1op1=inv_count,inventory:inv,bloodrune
@@ -2022,12 +2237,14 @@ shadowed=yes
 text=%1/2
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_143]
-layer=com_133
-type=text
+[assb12_hover_8]
+layer=assb12_hover
 x=100
 y=62
+type=text
 width=24
 height=12
 script1op1=inv_count,inventory:inv,firerune
@@ -2046,12 +2263,14 @@ shadowed=yes
 text=%1/4
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_144]
-layer=com_133
-type=text
+[assb12_hover_9]
+layer=assb12_hover
 x=138
 y=63
+type=text
 width=24
 height=12
 script1op1=inv_count,inventory:inv,airrune
@@ -2068,15 +2287,17 @@ shadowed=yes
 text=%1/4
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_145]
-type=graphic
+[assb1]
 x=63
 y=12
+type=graphic
 buttontype=normal
 width=20
 height=20
-overlayer=com_146
+overlayer=assb1_hover
 script1op1=inv_count,inventory:inv,chaosrune
 script2op1=inv_count,inventory:inv,deathrune
 script3op1=inv_count,inventory:inv,airrune
@@ -2096,28 +2317,32 @@ script5=gt,51
 graphic=magicoff2,18
 activegraphic=magicon2,18
 
-[com_146]
-type=layer
+[assb1_hover]
 x=3
 y=184
+type=layer
 width=182
 height=76
 hide=yes
 
-[com_147]
-layer=com_146
-type=rect
+[assb1_hover_bg]
+layer=assb1_hover
 x=5
 y=5
+type=rect
 width=174
 height=68
 fill=yes
+colour=0x000000
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_148]
-layer=com_146
-type=text
+[assb1_hover_0]
+layer=assb1_hover
 x=3
 y=5
+type=text
 width=175
 height=13
 center=yes
@@ -2125,12 +2350,15 @@ font=p12_full
 shadowed=yes
 text=Level 52 : Shadow Rush
 colour=0xFFF000
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_149]
-layer=com_146
-type=text
+[assb1_hover_1]
+layer=assb1_hover
 x=3
 y=18
+type=text
 width=175
 height=12
 center=yes
@@ -2138,60 +2366,63 @@ font=p11_full
 shadowed=yes
 text=A single target shadow attack
 colour=0x6B6F33
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_150]
-layer=com_146
-type=model
+[assb1_hover_2]
+layer=assb1_hover
 x=20
 y=35
+type=model
 width=28
 height=28
-model=inv_chaosrune
+model=obj_chaosrune
 zoom=900
 xan=512
 yan=1024
 
-[com_151]
-layer=com_146
-type=model
+[assb1_hover_3]
+layer=assb1_hover
 x=59
 y=35
+type=model
 width=28
 height=28
-model=inv_deathrune
+model=obj_deathrune
 zoom=900
 xan=512
 yan=1024
 
-[com_152]
-layer=com_146
-type=model
+[assb1_hover_4]
+layer=assb1_hover
 x=98
 y=35
+type=model
 width=28
 height=28
-model=inv_airrune
+model=obj_airrune
 zoom=900
 xan=512
 yan=1024
 
-[com_153]
-layer=com_146
-type=model
+[assb1_hover_5]
+layer=assb1_hover
 x=136
 y=35
+type=model
 width=28
 height=28
-model=inv_soulrune
+model=obj_soulrune
 zoom=900
 xan=512
 yan=1024
 
-[com_154]
-layer=com_146
-type=text
+[assb1_hover_6]
+layer=assb1_hover
 x=22
 y=62
+type=text
 width=26
 height=12
 script1op1=inv_count,inventory:inv,chaosrune
@@ -2202,12 +2433,14 @@ shadowed=yes
 text=%1/2
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_155]
-layer=com_146
-type=text
+[assb1_hover_7]
+layer=assb1_hover
 x=60
 y=62
+type=text
 width=26
 height=12
 script1op1=inv_count,inventory:inv,deathrune
@@ -2218,12 +2451,14 @@ shadowed=yes
 text=%1/2
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_156]
-layer=com_146
-type=text
+[assb1_hover_8]
+layer=assb1_hover
 x=100
 y=62
+type=text
 width=24
 height=12
 script1op1=inv_count,inventory:inv,airrune
@@ -2240,12 +2475,14 @@ shadowed=yes
 text=%1/1
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_157]
-layer=com_146
-type=text
+[assb1_hover_9]
+layer=assb1_hover
 x=138
 y=63
+type=text
 width=23
 height=12
 script1op1=inv_count,inventory:inv,soulrune
@@ -2256,15 +2493,17 @@ shadowed=yes
 text=%1/1
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_158]
-type=graphic
+[assb9]
 x=63
 y=96
+type=graphic
 buttontype=normal
 width=20
 height=20
-overlayer=com_159
+overlayer=assb9_hover
 script1op1=inv_count,inventory:inv,deathrune
 script2op1=inv_count,inventory:inv,bloodrune
 script3op1=inv_count,inventory:inv,airrune
@@ -2284,28 +2523,32 @@ script5=gt,75
 graphic=magicoff2,20
 activegraphic=magicon2,20
 
-[com_159]
-type=layer
+[assb9_hover]
 x=3
 y=184
+type=layer
 width=182
 height=76
 hide=yes
 
-[com_160]
-layer=com_159
-type=rect
+[assb9_hover_bg]
+layer=assb9_hover
 x=5
 y=5
+type=rect
 width=174
 height=68
 fill=yes
+colour=0x000000
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_161]
-layer=com_159
-type=text
+[assb9_hover_0]
+layer=assb9_hover
 x=3
 y=5
+type=text
 width=175
 height=13
 center=yes
@@ -2313,12 +2556,15 @@ font=p12_full
 shadowed=yes
 text=Level 76 : Shadow Blitz
 colour=0xFFF000
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_162]
-layer=com_159
-type=text
+[assb9_hover_1]
+layer=assb9_hover
 x=3
 y=18
+type=text
 width=175
 height=22
 center=yes
@@ -2326,60 +2572,63 @@ font=p11_full
 shadowed=yes
 text=A single target strong\nshadow attack
 colour=0x6B6F33
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_163]
-layer=com_159
-type=model
+[assb9_hover_2]
+layer=assb9_hover
 x=20
 y=35
+type=model
 width=28
 height=28
-model=inv_deathrune
+model=obj_deathrune
 zoom=900
 xan=512
 yan=1024
 
-[com_164]
-layer=com_159
-type=model
+[assb9_hover_3]
+layer=assb9_hover
 x=59
 y=36
+type=model
 width=28
 height=28
-model=inv_bloodrune
+model=obj_bloodrune
 zoom=900
 xan=512
 yan=1024
 
-[com_165]
-layer=com_159
-type=model
+[assb9_hover_4]
+layer=assb9_hover
 x=98
 y=35
+type=model
 width=28
 height=28
-model=inv_airrune
+model=obj_airrune
 zoom=900
 xan=512
 yan=1024
 
-[com_166]
-layer=com_159
-type=model
+[assb9_hover_5]
+layer=assb9_hover
 x=136
 y=35
+type=model
 width=28
 height=28
-model=inv_soulrune
+model=obj_soulrune
 zoom=900
 xan=512
 yan=1024
 
-[com_167]
-layer=com_159
-type=text
+[assb9_hover_6]
+layer=assb9_hover
 x=21
 y=62
+type=text
 width=26
 height=12
 script1op1=inv_count,inventory:inv,deathrune
@@ -2390,12 +2639,14 @@ shadowed=yes
 text=%1/2
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_168]
-layer=com_159
-type=text
+[assb9_hover_7]
+layer=assb9_hover
 x=60
 y=63
+type=text
 width=26
 height=12
 script1op1=inv_count,inventory:inv,bloodrune
@@ -2406,12 +2657,14 @@ shadowed=yes
 text=%1/2
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_169]
-layer=com_159
-type=text
+[assb9_hover_8]
+layer=assb9_hover
 x=99
 y=62
+type=text
 width=26
 height=12
 script1op1=inv_count,inventory:inv,airrune
@@ -2428,12 +2681,14 @@ shadowed=yes
 text=%1/2
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_170]
-layer=com_159
-type=text
+[assb9_hover_9]
+layer=assb9_hover
 x=137
 y=62
+type=text
 width=26
 height=12
 script1op1=inv_count,inventory:inv,soulrune
@@ -2444,15 +2699,17 @@ shadowed=yes
 text=%1/2
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_171]
-type=graphic
+[assb5]
 x=63
 y=52
+type=graphic
 buttontype=normal
 width=20
 height=20
-overlayer=com_172
+overlayer=assb5_hover
 script1op1=inv_count,inventory:inv,chaosrune
 script2op1=inv_count,inventory:inv,deathrune
 script3op1=inv_count,inventory:inv,airrune
@@ -2472,28 +2729,32 @@ script5=gt,63
 graphic=magicoff2,19
 activegraphic=magicon2,19
 
-[com_172]
-type=layer
+[assb5_hover]
 x=3
 y=184
+type=layer
 width=182
 height=76
 hide=yes
 
-[com_173]
-layer=com_172
-type=rect
+[assb5_hover_bg]
+layer=assb5_hover
 x=5
 y=5
+type=rect
 width=174
 height=68
 fill=yes
+colour=0x000000
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_174]
-layer=com_172
-type=text
+[assb5_hover_0]
+layer=assb5_hover
 x=3
 y=5
+type=text
 width=175
 height=14
 center=yes
@@ -2501,12 +2762,15 @@ font=p12_full
 shadowed=yes
 text=Level 64 : Shadow Burst
 colour=0xFFF000
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_175]
-layer=com_172
-type=text
+[assb5_hover_1]
+layer=assb5_hover
 x=3
 y=18
+type=text
 width=175
 height=12
 center=yes
@@ -2514,60 +2778,63 @@ font=p11_full
 shadowed=yes
 text=A multi-target shadow attack
 colour=0x6B6F33
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_176]
-layer=com_172
-type=model
+[assb5_hover_2]
+layer=assb5_hover
 x=20
 y=35
+type=model
 width=28
 height=28
-model=inv_chaosrune
+model=obj_chaosrune
 zoom=900
 xan=512
 yan=1024
 
-[com_177]
-layer=com_172
-type=model
+[assb5_hover_3]
+layer=assb5_hover
 x=59
 y=36
+type=model
 width=28
 height=28
-model=inv_deathrune
+model=obj_deathrune
 zoom=900
 xan=512
 yan=1024
 
-[com_178]
-layer=com_172
-type=model
+[assb5_hover_4]
+layer=assb5_hover
 x=98
 y=35
+type=model
 width=28
 height=28
-model=inv_airrune
+model=obj_airrune
 zoom=900
 xan=512
 yan=1024
 
-[com_179]
-layer=com_172
-type=model
+[assb5_hover_5]
+layer=assb5_hover
 x=136
 y=35
+type=model
 width=28
 height=28
-model=inv_soulrune
+model=obj_soulrune
 zoom=900
 xan=512
 yan=1024
 
-[com_180]
-layer=com_172
-type=text
+[assb5_hover_6]
+layer=assb5_hover
 x=22
 y=62
+type=text
 width=24
 height=12
 script1op1=inv_count,inventory:inv,chaosrune
@@ -2578,12 +2845,14 @@ shadowed=yes
 text=%1/4
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_181]
-layer=com_172
-type=text
+[assb5_hover_7]
+layer=assb5_hover
 x=60
 y=63
+type=text
 width=26
 height=12
 script1op1=inv_count,inventory:inv,deathrune
@@ -2594,12 +2863,14 @@ shadowed=yes
 text=%1/2
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_182]
-layer=com_172
-type=text
+[assb5_hover_8]
+layer=assb5_hover
 x=99
 y=62
+type=text
 width=26
 height=12
 script1op1=inv_count,inventory:inv,airrune
@@ -2616,12 +2887,14 @@ shadowed=yes
 text=%1/2
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_183]
-layer=com_172
-type=text
+[assb5_hover_9]
+layer=assb5_hover
 x=137
 y=62
+type=text
 width=26
 height=12
 script1op1=inv_count,inventory:inv,soulrune
@@ -2632,15 +2905,17 @@ shadowed=yes
 text=%1/2
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_184]
-type=graphic
+[assb13]
 x=63
 y=136
+type=graphic
 buttontype=normal
 width=20
 height=20
-overlayer=com_185
+overlayer=assb13_hover
 script1op1=inv_count,inventory:inv,deathrune
 script2op1=inv_count,inventory:inv,bloodrune
 script3op1=inv_count,inventory:inv,airrune
@@ -2660,28 +2935,32 @@ script5=gt,87
 graphic=magicoff2,21
 activegraphic=magicon2,21
 
-[com_185]
-type=layer
+[assb13_hover]
 x=3
 y=184
+type=layer
 width=182
 height=76
 hide=yes
 
-[com_186]
-layer=com_185
-type=rect
+[assb13_hover_bg]
+layer=assb13_hover
 x=5
 y=5
+type=rect
 width=174
 height=68
 fill=yes
+colour=0x000000
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_187]
-layer=com_185
-type=text
+[assb13_hover_0]
+layer=assb13_hover
 x=3
 y=5
+type=text
 width=175
 height=13
 center=yes
@@ -2689,12 +2968,15 @@ font=p12_full
 shadowed=yes
 text=Level 88 : Shadow Barrage
 colour=0xFFF000
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_188]
-layer=com_185
-type=text
+[assb13_hover_1]
+layer=assb13_hover
 x=3
 y=18
+type=text
 width=175
 height=22
 center=yes
@@ -2702,60 +2984,63 @@ font=p11_full
 shadowed=yes
 text=A multi-target strong\nshadow attack
 colour=0x6B6F33
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_189]
-layer=com_185
-type=model
+[assb13_hover_2]
+layer=assb13_hover
 x=20
 y=35
+type=model
 width=28
 height=28
-model=inv_deathrune
+model=obj_deathrune
 zoom=900
 xan=512
 yan=1024
 
-[com_190]
-layer=com_185
-type=model
+[assb13_hover_3]
+layer=assb13_hover
 x=59
 y=36
+type=model
 width=28
 height=28
-model=inv_bloodrune
+model=obj_bloodrune
 zoom=900
 xan=512
 yan=1024
 
-[com_191]
-layer=com_185
-type=model
+[assb13_hover_4]
+layer=assb13_hover
 x=98
 y=35
+type=model
 width=28
 height=28
-model=inv_airrune
+model=obj_airrune
 zoom=900
 xan=512
 yan=1024
 
-[com_192]
-layer=com_185
-type=model
+[assb13_hover_5]
+layer=assb13_hover
 x=136
 y=35
+type=model
 width=28
 height=28
-model=inv_soulrune
+model=obj_soulrune
 zoom=900
 xan=512
 yan=1024
 
-[com_193]
-layer=com_185
-type=text
+[assb13_hover_6]
+layer=assb13_hover
 x=23
 y=62
+type=text
 width=24
 height=12
 script1op1=inv_count,inventory:inv,deathrune
@@ -2766,12 +3051,14 @@ shadowed=yes
 text=%1/4
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_194]
-layer=com_185
-type=text
+[assb13_hover_7]
+layer=assb13_hover
 x=60
 y=63
+type=text
 width=26
 height=12
 script1op1=inv_count,inventory:inv,bloodrune
@@ -2782,12 +3069,14 @@ shadowed=yes
 text=%1/2
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_195]
-layer=com_185
-type=text
+[assb13_hover_8]
+layer=assb13_hover
 x=100
 y=62
+type=text
 width=24
 height=12
 script1op1=inv_count,inventory:inv,airrune
@@ -2804,12 +3093,14 @@ shadowed=yes
 text=%1/4
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000
 
-[com_196]
-layer=com_185
-type=text
+[assb13_hover_9]
+layer=assb13_hover
 x=138
 y=63
+type=text
 width=25
 height=12
 script1op1=inv_count,inventory:inv,soulrune
@@ -2820,3 +3111,5 @@ shadowed=yes
 text=%1/3
 colour=0xC00000
 activecolour=0x00C000
+overcolour=0x000000
+activeovercolour=0x000000

@@ -1,5 +1,9 @@
 [label,pvp_magic_attack]
 def_dbrow $spell_data = ~get_spell_data(%autocast_spell);
+if (~spellbook_allows_spell(db_getfield($spell_data, magic_spell_table:spell, 0)) = false) {
+    ~player_autocast_reset;
+    return;
+}
 if (~check_spell_requirements($spell_data) = false) {
     if (%autocast_spell = db_getfield($spell_data, magic_spell_table:spell, 0)) { // matches osrs behavior
         ~player_autocast_reset;
@@ -67,6 +71,12 @@ if (.%death = ^true) {
 }
 if (map_clock < %action_delay) {
     p_opplayert(db_getfield($spell_data, magic_spell_table:spellcom, 0));
+    return(false);
+}
+if (~spellbook_allows_spell(db_getfield($spell_data, magic_spell_table:spell, 0)) = false) {
+    if (%autocast_spell = db_getfield($spell_data, magic_spell_table:spell, 0)) {
+        ~player_autocast_reset;
+    }
     return(false);
 }
 if (~check_spell_requirements($spell_data) = false) {
@@ -163,51 +173,73 @@ if ($freeze_time > 0) {
     .queue(pvp_freeze_player, 0, $freeze_time);
 }
 
-[proc,pvp_spell_success](dbrow $spell_data, int $maxhit, int $duration)
+[proc,pvp_freeze_ancients](dbrow $spell_data)
+def_int $freeze_time = db_getfield($spell_data, magic_spell_table:freeze_time, 0);
+if ($freeze_time > 0 & map_clock > calc(.%frozen + 5)) {
+    if (~.check_protect_prayer(^magic_style) = true) {
+        $freeze_time = divide($freeze_time, 2);
+    }
+    if (.p_finduid(.uid) = true) {
+        .p_walk(.coord);
+    }
+    .%pk_binder = uid;
+    .queue(pvp_freeze_player, 0, $freeze_time);
+}
+
+[proc,pvp_spell_success](dbrow $spell_data, int $maxhit, int $duration)(int)
 def_obj $weapon = inv_getobj(worn, ^wearpos_rhand);
 def_int $damagestyle = ^style_magic_normal;
 if (%damagestyle = ^style_melee_defensive) { // check varp directly
     $damagestyle = ^style_magic_defensive; // casting a spell with defensive on gives mage + def xp
 }
-def_synth $sound = db_getfield($spell_data, magic_spell_table:sound_success, 0);
-sound_synth($sound, 1, 0);
-.sound_synth($sound, 1, 0);
-
+def_synth $sound;
+if (db_getfieldcount($spell_data, magic_spell_table:sound_impact) > 0) {
+    $sound = db_getfield($spell_data, magic_spell_table:sound_impact, 0);
+} else if (db_getfieldcount($spell_data, magic_spell_table:sound_success) > 0) {
+    $sound = db_getfield($spell_data, magic_spell_table:sound_success, 0);
+}
+if ($sound ! null) {
+    sound_synth($sound, 1, $duration);
+    .sound_synth($sound, 1, $duration);
+}
 if ($maxhit = null) {
     ~.pvp_damage(calc($duration / 30 + 1), null); // delayed an extra tick: https://youtu.be/eEdE0mvglM4?t=62
     .spotanim_pl(db_getfield($spell_data, magic_spell_table:spotanim_target, 0), $duration);
-    return;
+    return(0);
 }
-
 if (~.check_protect_prayer(^magic_style) = true) {
     $maxhit = scale(6, 10, $maxhit); // reduction of 40%
 }
 def_int $damage = randominc($maxhit); // tick eating existed! https://oldschool.runescape.wiki/w/Update:The_Wintertodt
 $damage = min($damage, .stat(hitpoints));
 ~.pvp_damage(calc($duration / 30 + 1), $damage); // delayed an extra tick: https://youtu.be/eEdE0mvglM4?t=62
-// didnt have a flinch anim until sept 20 2006: https://oldschool.runescape.wiki/w/Update:Slug_Menace
 ~give_combat_experience_pvp($damagestyle, $damage, ~pvp_xp_multiplier(~.player_combat_level));
 both_heropoints($damage);
-
 .spotanim_pl(db_getfield($spell_data, magic_spell_table:spotanim_target, 0), $duration);
 .queue*(pvp_retaliate, calc($duration / 30 + 1))(uid);
+return($damage);
 
 [proc,pvp_spell_fail](dbrow $spell_data, int $duration)
-// splash
-def_synth $sound;
+def_synth $sound = spellfail;
 if (db_getfieldcount($spell_data, magic_spell_table:sound_fail) > 0) {
     $sound = db_getfield($spell_data, magic_spell_table:sound_fail, 0);
-} else {
-    // reduce stat, and freeze spells dont have fail sounds, so i assume they just play their normal sound
-    // every time?
-    $sound = db_getfield($spell_data, magic_spell_table:sound_success, 0);
 }
+~pvp_spell_fail_custom($spell_data, $duration, $sound);
 
-sound_synth($sound, 1, 0);
-.sound_synth($sound, 1, 0);
-// no splash sound?
+[proc,pvp_spell_fail_custom](dbrow $spell_data, int $duration, synth $fail_sound)
+if (db_getfieldcount($spell_data, magic_spell_table:sound_success) = 0 & db_getfieldcount($spell_data, magic_spell_table:sound_impact) > 0) {
+    sound_synth(db_getfield($spell_data, magic_spell_table:sound_impact, 0), 1, 0);
+    .sound_synth(db_getfield($spell_data, magic_spell_table:sound_impact, 0), 1, 0);
+}
+sound_synth($fail_sound, 1, $duration);
+.sound_synth($fail_sound, 1, $duration);
 .spotanim_pl(failedspell_impact, 92, $duration);
 .queue*(pvp_retaliate, 0)(uid);
+
+[proc,pvp_restore_spell_target](player_uid $primary_target)
+if (.finduid($primary_target) = true) {
+    facesquare(.coord);
+}
 
 [proc,pvp_spell_cast](dbrow $spell_data)(int)
 ~set_pk_vars;
@@ -225,6 +257,11 @@ if($weapon ! null & oc_category($weapon) = weapon_staff & db_getfieldcount($spel
 // player spell visual effect
 if (db_getfieldcount($spell_data, magic_spell_table:spotanim_origin) > 0) {
     spotanim_pl(db_getfield($spell_data, magic_spell_table:spotanim_origin, 0), 92, 0);
+}
+if (db_getfieldcount($spell_data, magic_spell_table:sound_impact) > 0) {
+    def_synth $cast_sound = db_getfield($spell_data, magic_spell_table:sound_success, 0);
+    sound_synth($cast_sound, 1, 0);
+    .sound_synth($cast_sound, 1, 0);
 }
 // shoot spell projectile
 %action_delay = add(map_clock, 5);

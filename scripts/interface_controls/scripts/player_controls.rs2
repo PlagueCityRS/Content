@@ -66,28 +66,24 @@ if (p_finduid(uid) = true) {
 [if_button,controls:com_41]
 if(testbit(%emote_access, ^macro_mime_glass_wall) = ^false) {
     @lockemote_mime_event;
-    return;
 }
 @controls_emote(emote_glass_wall);
 
 [if_button,controls:com_42]
 if(testbit(%emote_access, ^macro_mime_glass_box) = ^false) {
     @lockemote_mime_event;
-    return;
 }
 @controls_emote(emote_glass_box);
 
 [if_button,controls:com_43]
 if(testbit(%emote_access, ^macro_mime_climb_rope) = ^false) {
     @lockemote_mime_event;
-    return;
 }
 @controls_emote(emote_climbing_rope);
 
 [if_button,controls:com_44]
 if(testbit(%emote_access, ^macro_mime_lean) = ^false) {
     @lockemote_mime_event;
-    return;
 }
 @controls_emote(emote_mime_lean);
 
@@ -105,21 +101,18 @@ if(testbit(%emote_access, ^macro_mime_lean) = ^false) {
 [if_button,controls:com_76]
 if (%lost_tribe_quest < 7) {
     @lockemote_lost_tribe;
-    return;
 }
 @controls_emote(human_cave_goblin_bow);
 
 [if_button,controls:com_77]
 if (%lost_tribe_quest < 7) {
     @lockemote_lost_tribe;
-    return;
 }
 @controls_emote(human_cave_goblin_dance);
 
 [if_button,controls:com_78]
-if (%emote_terrified = 0) {
-    @lockemote_halloween_event;
-    return;
+if(testbit(%emote_access, ^emote_terrified) = ^false) {
+    @lockemote_terrified;
 }
 @controls_emote(terrified_emote);
 
@@ -148,7 +141,7 @@ if (p_finduid(uid) = true) {
     ~mesbox("You can't use that emote yet.");
 }
 
-[label,lockemote_halloween_event]
+[label,lockemote_terrified]
 if (p_finduid(uid) = true) {
     ~mesbox("You can't use that emote yet.");
 }

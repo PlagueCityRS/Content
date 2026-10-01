@@ -1,0 +1,122 @@
+[proc,macro_event_pillory_spawn]
+if (~macro_event_kidnap_allowed = false) {
+    ~macro_event_general_spawn(~macro_event_set_random);
+    return;
+}
+def_coord $event_coord = map_findsquare(coord, 1, 1, ^map_findsquare_lineofwalk);
+if ($event_coord = null) {
+    return;
+}
+npc_add($event_coord, macro_pillory_guard, 10);
+npc_facesquare(coord);
+npc_say("<displayname>, you're under arrest!");
+%macro_event = ^macro_pillory;
+p_delay(1);
+~macro_event_disappear;
+%macro_pillory_needed = ^pillory_needed_start;
+%macro_transmit = 0;
+~macro_event_kidnap(enum(int, coord, macro_pillory_cells, random(enum_getoutputcount(macro_pillory_cells))));
+~macro_events_set_tabs;
+~mesbox("Solve the pillory puzzle to be returned to where you came from.");
+
+[proc,macro_pillory_in_cell](coord $coord)(boolean)
+def_int $i = 0;
+while ($i < enum_getoutputcount(macro_pillory_cells)) {
+    if (enum(int, coord, macro_pillory_cells, $i) = $coord) {
+        return(true);
+    }
+    $i = add($i, 1);
+}
+return(false);
+
+[proc,macro_pillory_login]
+if (%macro_pillory_needed > 0) {
+    %macro_event = ^macro_pillory;
+    ~macro_events_set_tabs;
+}
+
+[oploc1,macro_pillory_cage]
+if (~macro_pillory_in_cell(coord) = false | %macro_pillory_needed = 0) {
+    mes("You can't unlock the pillory, you'll let all the prisoners out!");
+    return;
+}
+~mesbox("Pick the @dre@swinging key@bla@ that matches the|hole in the @dre@spinning lock@bla@.");
+~macro_pillory_open;
+
+[proc,macro_pillory_open]
+def_int $key1 = random(4);
+def_int $key2 = random(4);
+while ($key2 = $key1) {
+    $key2 = random(4);
+}
+def_int $key3 = random(4);
+while ($key3 = $key1 | $key3 = $key2) {
+    $key3 = random(4);
+}
+%macro_pillory_answer = random(3);
+def_int $lock = $key1;
+if (%macro_pillory_answer = 1) {
+    $lock = $key2;
+} else if (%macro_pillory_answer = 2) {
+    $lock = $key3;
+}
+if_setmodel(macro_pillory:lock, enum(int, int, macro_pillory_lock_models, $lock));
+if_setanim(macro_pillory:lock, pillory_lock_rotate);
+if_setmodel(macro_pillory:key1, enum(int, int, macro_pillory_key_models, $key1));
+if_setmodel(macro_pillory:key2, enum(int, int, macro_pillory_key_models, $key2));
+if_setmodel(macro_pillory:key3, enum(int, int, macro_pillory_key_models, $key3));
+if_sethide(macro_pillory:padlock1, false);
+if_sethide(macro_pillory:padlock2, false);
+if_sethide(macro_pillory:padlock3, false);
+if_sethide(macro_pillory:padlock4, true);
+if_sethide(macro_pillory:padlock5, true);
+if_sethide(macro_pillory:padlock6, true);
+if (%macro_pillory_needed >= 4) {
+    if_sethide(macro_pillory:padlock4, false);
+}
+if (%macro_pillory_needed >= 5) {
+    if_sethide(macro_pillory:padlock5, false);
+}
+if (%macro_pillory_needed >= 6) {
+    if_sethide(macro_pillory:padlock6, false);
+}
+if_openmain(macro_pillory);
+
+[if_button,macro_pillory:key_button1] ~macro_pillory_select(0);
+[if_button,macro_pillory:key_button2] ~macro_pillory_select(1);
+[if_button,macro_pillory:key_button3] ~macro_pillory_select(2);
+
+[proc,macro_pillory_select](int $key)
+if (%macro_pillory_needed = 0) {
+    return;
+}
+if ($key ! %macro_pillory_answer) {
+    if_close;
+    sound_synth(pillory_wrong, 1, 0);
+    if (%macro_pillory_needed < ^pillory_needed_max) {
+        %macro_pillory_needed = add(%macro_pillory_needed, 1);
+    }
+    %macro_transmit = 0;
+    ~chatnpc_specific("Tramp", pillory_tramp_thrower_yanille, "<p,angry>Bah, that's not right.|Use the key that matches the hole|in the spinning lock.");
+    return;
+}
+%macro_transmit = add(%macro_transmit, 1);
+if (%macro_transmit < %macro_pillory_needed) {
+    sound_synth(pillory_unlock, 1, 0);
+    mes("Correct! <tostring(%macro_transmit)> down, <tostring(sub(%macro_pillory_needed, %macro_transmit))> to go!");
+    ~macro_pillory_open;
+    return;
+}
+if_close;
+sound_synth(pillory_success, 1, 0);
+mes("You've escaped!");
+%macro_pillory_needed = 0;
+%macro_transmit = 0;
+anim(human_castteleport, 0);
+spotanim_pl(teleport_casting, 92, 0);
+sound_synth(teleport_all, 1, 0);
+p_delay(2);
+~macro_return_teleport;
+~initalltabs;
+~macro_events_varps_reset;
+inv_add(inv, ~macro_certer_reward);

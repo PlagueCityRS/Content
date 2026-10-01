@@ -2,10 +2,11 @@
 if (~macro_event_allowed = false) {
     return;
 }
-switch_int (random(calc(~macro_event_general_count + 3))) {
+switch_int (random(calc(~macro_event_general_count + 4))) {
     case 0 : ~macro_event_dryad_spawn;
     case 1 : ~macro_event_ent_spawn;
     case 2 : ~macro_event_lost_axe_spawn;
+    case 3 : ~macro_event_freaky_forester_spawn;
     case default : ~macro_event_general_spawn(~macro_event_set_random);
 }
 
@@ -14,8 +15,9 @@ switch_int (random(calc(~macro_event_general_count + 3))) {
 if (~macro_event_allowed = false) {
     return;
 }
-switch_int (random(calc(~macro_event_general_count + 2))) {
+switch_int (random(calc(~macro_event_general_count + 3))) {
     case 0 : ~macro_event_dryad_spawn;
     case 1 : ~macro_event_lost_axe_spawn;
+    case 2 : ~macro_event_freaky_forester_spawn;
     case default : ~macro_event_general_spawn(~macro_event_set_random);
 }

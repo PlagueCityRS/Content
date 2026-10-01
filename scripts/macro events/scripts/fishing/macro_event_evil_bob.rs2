@@ -1,0 +1,320 @@
+[proc,macro_event_evil_bob_spawn]
+if (~macro_event_kidnap_allowed = false) {
+    ~macro_event_general_spawn(~macro_event_set_random);
+    return;
+}
+def_coord $event_coord = map_findsquare(coord, 1, 1, ^map_findsquare_lineofwalk);
+if ($event_coord = null) {
+    return;
+}
+npc_add($event_coord, macro_evil_bob_outside, 10);
+npc_facesquare(coord);
+npc_say("meow");
+%macro_event = ^macro_evil_bob;
+say("No... what? Nooooooooooooo!");
+p_delay(1);
+~macro_event_disappear;
+%macro_evil_bob_var = 0;
+~macro_evil_bob_choose_fish;
+~macro_event_kidnap(0_39_74_27_40);
+mes("Welcome to ScapeRune.");
+~macro_evil_bob_talk;
+
+[mapzone,0_39_74]
+%macro_event = ^macro_evil_bob;
+@music_playbyregion(coord);
+
+[mapzoneexit,0_39_74]
+~macro_events_varps_reset;
+
+[proc,macro_evil_bob_choose_fish]
+%macro_evil_bob_fishlocation = add(random(4), 1);
+
+[proc,macro_evil_bob_good_spot]()(boolean)
+switch_int (%macro_evil_bob_fishlocation) {
+    case ^evil_bob_fish_north : return(~inzone_coord_pair_table(evil_bob_fishing_zone_north, coord));
+    case ^evil_bob_fish_south : return(~inzone_coord_pair_table(evil_bob_fishing_zone_south, coord));
+    case ^evil_bob_fish_east : return(~inzone_coord_pair_table(evil_bob_fishing_zone_east, coord));
+    case ^evil_bob_fish_west : return(~inzone_coord_pair_table(evil_bob_fishing_zone_west, coord));
+}
+return(false);
+
+[opnpc1,macro_evil_bob_island] ~macro_evil_bob_talk;
+
+[opnpcu,macro_evil_bob_island]
+switch_obj (last_useitem) {
+    case evil_bob_cooked_fish_correct, evil_bob_cooked_fish_incorrect, evil_bob_uncooked_fish_correct, evil_bob_uncooked_fish_incorrect : ~macro_evil_bob_talk;
+    case default : ~displaymessage(^dm_default);
+}
+
+[proc,macro_evil_bob_talk]
+if (%macro_evil_bob_fishlocation = ^evil_bob_fish_none) {
+    ~macro_evil_bob_choose_fish;
+}
+if (%macro_evil_bob_trigger = 1) {
+    ~mesbox("Evil Bob appears to be sleeping, best not to wake him up.");
+    return;
+}
+if (inv_total(inv, evil_bob_uncooked_fish_correct) > 0) {
+    inv_del(inv, evil_bob_uncooked_fish_correct, 1);
+    ~chatplayer("<p,neutral>Here, I've brought you some fish.");
+    ~chatnpc_specific("Evil Bob", macro_evil_bob_island, "<p,neutral>Mmm, mmm...that's delicious.");
+    if (%macro_evil_bob_attention = 1) {
+        %macro_evil_bob_attention = 0;
+        %macro_evil_bob_spotchosen = 1;
+        ~macro_evil_bob_choose_fish;
+        ~chatnpc_specific("Evil Bob", macro_evil_bob_island, "<p,neutral>Now get me another, you no-good human.");
+        ~mesbox("Evil Bob seems slightly less attentive of you.");
+        return;
+    }
+    ~chatnpc_specific("Evil Bob", macro_evil_bob_island, "<p,neutral>Now, let me take...a little...catnap.");
+    %macro_evil_bob_trigger = 1;
+    if (npc_find(coord, macro_evil_bob_island, 15, 0) = true) {
+        npc_say("ZZZzzz");
+    }
+    return;
+}
+if (inv_total(inv, evil_bob_uncooked_fish_incorrect) > 0) {
+    inv_del(inv, evil_bob_uncooked_fish_incorrect, 1);
+    %macro_evil_bob_attention = 1;
+    %macro_evil_bob_spotchosen = 1;
+    ~chatplayer("<p,neutral>Here, I've brought you some fish.");
+    ~chatnpc_specific("Evil Bob", macro_evil_bob_island, "<p,neutral>What was this? That was absolutely disgusting!");
+    ~chatnpc_specific("Evil Bob", macro_evil_bob_island, "<p,neutral>Don't you know what kind of fish I like? Talk to my other servants for some advice.");
+    ~mesbox("Evil Bob seems more attentive of you.");
+    return;
+}
+if (inv_total(inv, evil_bob_cooked_fish_correct) > 0 | inv_total(inv, evil_bob_cooked_fish_incorrect) > 0) {
+    ~chatnpc_specific("Evil Bob", macro_evil_bob_island, "<p,neutral>What, are you giving me cooked fish? What am I going to do with that? Uncook it first!");
+    ~chatplayer("<p,confused>Errr... Uncook it?");
+    ~chatnpc_specific("Evil Bob", macro_evil_bob_island, "<p,neutral>You heard me! There's the cold fire, by the trees, now get uncooking!");
+    return;
+}
+if (testbit(%macro_evil_bob_exposition, ^evil_bob_exposition_start) = ^false) {
+    %macro_evil_bob_exposition = setbit(%macro_evil_bob_exposition, ^evil_bob_exposition_start);
+    ~chatplayer("<p,confused>Huh?");
+    ~chatplayer("<p,angry>Where am I?");
+    ~chatnpc_specific("Evil Bob", macro_evil_bob_island, "<p,neutral>On my island.");
+    ~chatplayer("<p,angry>Who brought me here?");
+    ~chatnpc_specific("Evil Bob", macro_evil_bob_island, "<p,neutral>That would be telling.");
+    ~chatplayer("<p,angry>Take me to your leader!");
+    ~chatnpc_specific("Evil Bob", macro_evil_bob_island, "<p,neutral>I am your leader, you are but a slave.");
+    ~chatplayer("<p,angry>I am not a slave, I am a free man!");
+    ~chatnpc_specific("Evil Bob", macro_evil_bob_island, "<p,laugh>Ah-ha-ha-ha-ha-ha!");
+    return;
+}
+~chatplayer("<p,angry>Let me out of here!");
+~chatnpc_specific("Evil Bob", macro_evil_bob_island, "<p,neutral>I will never let you go, <displayname>!");
+switch_int (~p_choice4("Why not?", 1, "What's it all about?", 2, "How is it possible that you're talking?", 3, "What did you do to Bob?", 4)) {
+    case 1 :
+        ~chatplayer("<p,confused>Why not?");
+        ~chatnpc_specific("Evil Bob", macro_evil_bob_island, "<p,neutral>Uhm...");
+        ~chatnpc_specific("Evil Bob", macro_evil_bob_island, "<p,neutral>Because I say so! And because I can never have enough servants!");
+        ~chatnpc_specific("Evil Bob", macro_evil_bob_island, "<p,neutral>Now catch me some fish, I'm hungry.");
+        ~chatplayer("<p,confused>What fish, where?");
+        ~chatnpc_specific("Evil Bob", macro_evil_bob_island, "<p,neutral>Talk to my other servants, and hurry it up!");
+    case 2 :
+        ~chatplayer("<p,confused>What's it all about?");
+        ~chatnpc_specific("Evil Bob", macro_evil_bob_island, "<p,neutral>Sit down and I'll tell you. It's a question of servant shortage.");
+        ~chatplayer("<p,neutral>Go on.");
+        ~chatnpc_specific("Evil Bob", macro_evil_bob_island, "<p,neutral>You are a skilled worker. A human like you is worth a great deal as a slave.");
+        ~chatplayer("<p,angry>A slave?? I will have nothing to do with you. Is that clear? Absolutely nothing.");
+        ~chatnpc_specific("Evil Bob", macro_evil_bob_island, "<p,neutral>Now be reasonable little human. It's just a matter of time before you will do everything I ask you to. Play along and this can be a very nice place.");
+        ~chatplayer("<p,angry>I will not make any deals with you. I'm a human. I will not be pushed, numbered, meowed at, teleported or enslaved. My life is my own.");
+        ~chatnpc_specific("Evil Bob", macro_evil_bob_island, "<p,neutral>Is it?");
+        ~chatplayer("<p,angry>Yes. You won't hold me.");
+        ~chatnpc_specific("Evil Bob", macro_evil_bob_island, "<p,neutral>Won't I?");
+        ~chatnpc_specific("Evil Bob", macro_evil_bob_island, "<p,neutral>Let me assure you there's no way out.");
+        ~chatnpc_specific("Evil Bob", macro_evil_bob_island, "<p,neutral>Just ask my servants!");
+    case 3 :
+        ~chatplayer("<p,confused>How is it possible that you're talking?");
+        ~chatnpc_specific("Evil Bob", macro_evil_bob_island, "<p,neutral>How is it possible that you're not meowing?");
+        ~chatplayer("<p,confused>Meowing?? Why would I be meowing?");
+        ~chatnpc_specific("Evil Bob", macro_evil_bob_island, "<p,neutral>Most humans do, that's why I'm wearing this amulet of Man speak... but I do try to train my staff in civilised speech.");
+        ~chatnpc_specific("Evil Bob", macro_evil_bob_island, "<p,neutral>Ah, but I suppose things are slightly different in your world... what a dreadful place that must be.");
+        ~chatplayer("<p,neutral>I think I'm getting a headache...");
+    case 4 :
+        ~chatplayer("<p,confused>What did you do to Bob?");
+        ~chatnpc_specific("Evil Bob", macro_evil_bob_island, "<p,neutral>Bob? I am Bob!");
+        ~chatnpc_specific("Evil Bob", macro_evil_bob_island, "<p,neutral>Oh, you mean the Bob in your world? Nothing. I am an incarnation of Bob here on ScapeRune.");
+        ~chatplayer("<p,neutral>What, you mean this is... like some kind of mirror land?");
+        ~chatnpc_specific("Evil Bob", macro_evil_bob_island, "<p,neutral>Something like that... somewhere in ScapeRune there must be a human servant called <displayname>.");
+        ~chatnpc_specific("Evil Bob", macro_evil_bob_island, "<p,neutral>But you work just as well for me! Now get to work, human! Fish for me!");
+}
+
+[opnpc1,_macro_evil_bob_servant]
+if (%macro_evil_bob_trigger = 1) {
+    ~chatplayer("<p,neutral>Evil Bob has fallen asleep, come quickly!");
+    ~chatnpc("<p,sad>Come? Come where?");
+    ~chatplayer("<p,happy>Away from this place! To RuneScape proper!");
+    ~chatnpc("<p,sad>You go, <displayname>, I don't belong there... I belong here, in ScapeRune. This is the only place I can ever go...");
+    if (~p_choice2("But I love you!", 1, "Oh alright then.", 2) = 1) {
+        ~chatplayer("<p,sad>But I love you!");
+        ~chatnpc("<p,neutral>Our love can never be, sweet <displayname>.");
+        ~chatnpc("<p,neutral>Go now! Go, and don't look back!");
+    } else {
+        ~chatplayer("<p,neutral>Oh, alright then, I'll be off! See you around!");
+    }
+    return;
+}
+if (testbit(%macro_evil_bob_exposition, ^evil_bob_exposition_servant) = ^false) {
+    ~chatplayer("<p,angry>I need help, I've been kidnapped by an evil cat!");
+    ~chatnpc("<p,sad>Meow! Errr... I c-c-c-can't help you... He'll kill us all!");
+    ~chatplayer("<p,angry>Now you listen to me! He's just a little cat! There must be something I can do!");
+    ~chatnpc("<p,sad>F-f-f-fish... give him the f-f-f-fish he likes and he might f- f-f-fall asleep.");
+    %macro_evil_bob_exposition = setbit(%macro_evil_bob_exposition, ^evil_bob_exposition_servant);
+    ~chatnpc("<p,sad>Look... over t-t-there! That fishing spot c-c-contains the f-f-f-fish he likes.");
+    ~macro_evil_bob_statue_cutscene;
+    return;
+}
+if (%macro_evil_bob_spotchosen = 1) {
+    ~chatnpc("<p,sad>Look... over t-t-there! That fishing spot c-c-contains the f-f-f-fish he likes.");
+    ~macro_evil_bob_statue_cutscene;
+    return;
+}
+~chatnpc("<p,sad>F-f-f-fish... give him the f-f-f-fish he likes and he might f- f-f-fall asleep.");
+
+[proc,macro_evil_bob_statue_cutscene]
+%macro_evil_bob_spotchosen = 0;
+def_coord $start = null;
+def_coord $end = null;
+def_coord $statue = null;
+def_int $start_height = 0;
+def_int $end_height = 0;
+switch_int (%macro_evil_bob_fishlocation) {
+    case ^evil_bob_fish_north :
+        $start = 0_39_74_30_37;
+        $end = 0_39_74_30_45;
+        $statue = 0_39_74_30_50;
+        $start_height = 400;
+        $end_height = 340;
+    case ^evil_bob_fish_south :
+        $start = 0_39_74_31_46;
+        $end = 0_39_74_31_36;
+        $statue = 0_39_74_29_30;
+        $start_height = 365;
+        $end_height = 395;
+    case ^evil_bob_fish_east :
+        $start = 0_39_74_25_41;
+        $end = 0_39_74_36_41;
+        $statue = 0_39_74_42_41;
+        $start_height = 440;
+        $end_height = 340;
+    case default :
+        $start = 0_39_74_34_41;
+        $end = 0_39_74_23_41;
+        $statue = 0_39_74_16_40;
+        $start_height = 325;
+        $end_height = 300;
+}
+if_close;
+if_openoverlay(macro_evilbob);
+cam_moveto($start, $start_height, 255, 0);
+cam_lookat($statue, $start_height, 255, 0);
+p_delay(1);
+cam_moveto($end, $end_height, 3, 0);
+p_delay(10);
+cam_reset;
+if_openoverlay(null);
+
+[oploc1,macro_evil_bob_fishing_spot]
+if (%macro_evil_bob_spotchosen = 1 | %macro_evil_bob_trigger = 1) {
+    ~mesbox("You don't know if this is a good place to go fishing. Perhaps you should ask someone, like one of the human servants.");
+    return;
+}
+if (inv_total(inv, evil_bob_net) = 0 & inv_total(inv, net) = 0) {
+    ~chatnpc_specific("Servant", macro_evil_bob_female_servant, "<p,sad>You'll need a fishing net. There are plenty scattered around the beach.");
+    return;
+}
+if (inv_freespace(inv) = 0) {
+    ~mesbox("You don't have enough space in your inventory.");
+    return;
+}
+if (inv_total(inv, evil_bob_cooked_fish_correct) > 0 | inv_total(inv, evil_bob_cooked_fish_incorrect) > 0
+    | inv_total(inv, evil_bob_uncooked_fish_correct) > 0 | inv_total(inv, evil_bob_uncooked_fish_incorrect) > 0) {
+    ~chatnpc_specific("Servant", macro_evil_bob_female_servant, "<p,sad>You've already got a fish. Come over here to uncook it, then serve it to Evil Bob.");
+    return;
+}
+p_arrivedelay;
+anim(human_largenet, 0);
+mes("You cast out your net...");
+p_delay(5);
+if (~macro_evil_bob_good_spot = true) {
+    inv_add(inv, evil_bob_cooked_fish_correct, 1);
+} else {
+    inv_add(inv, evil_bob_cooked_fish_incorrect, 1);
+}
+anim(null, 0);
+~objbox(evil_bob_cooked_fish_correct, "You catch a... what is this?? Is this a fish?? And it's cooked already??", 250, 0, 0);
+
+[oplocu,macro_evil_bob_uncook_pot]
+switch_obj (last_useitem) {
+    case evil_bob_cooked_fish_correct : ~macro_evil_bob_uncook(evil_bob_cooked_fish_correct, evil_bob_uncooked_fish_correct);
+    case evil_bob_cooked_fish_incorrect : ~macro_evil_bob_uncook(evil_bob_cooked_fish_incorrect, evil_bob_uncooked_fish_incorrect);
+    case default : ~displaymessage(^dm_default);
+}
+
+[proc,macro_evil_bob_uncook](namedobj $cooked, namedobj $raw)
+p_arrivedelay;
+anim(human_firecooking, 0);
+sound_synth(uncooking, 1, 0);
+inv_del(inv, $cooked, 1);
+inv_add(inv, $raw, 1);
+p_delay(1);
+
+[opheld1,evil_bob_cooked_fish_correct] mes("It looks vile and smells even worse. You're not eating that!");
+[opheld1,evil_bob_cooked_fish_incorrect] mes("It looks vile and smells even worse. You're not eating that!");
+
+[oploc1,macro_evil_bob_portal]
+if (%macro_evil_bob_trigger ! 1) {
+    ~chatnpc_specific("Evil Bob", macro_evil_bob_island, "<p,angry>You're going nowhere, human!");
+    return;
+}
+p_arrivedelay;
+def_int $dir = ^exact_south;
+if (coordx(loc_coord) > coordx(coord)) {
+    $dir = ^exact_east;
+} else if (coordx(loc_coord) < coordx(coord)) {
+    $dir = ^exact_west;
+} else if (coordz(loc_coord) > coordz(coord)) {
+    $dir = ^exact_north;
+}
+anim(human_walk_f, 0);
+p_exactmove(coord, loc_coord, 0, 50, $dir);
+p_delay(2);
+facesquare(0_39_74_29_41);
+anim(emote_ya_boo_sucks, 0);
+say("Be seeing you!");
+p_delay(1);
+sound_synth(teleport_all, 1, 0);
+anim(human_castteleport, 0);
+spotanim_pl(teleport_casting, 92, 0);
+p_delay(1);
+mes("Welcome back to RuneScape.");
+~macro_return_teleport;
+~macro_evil_bob_cleanup;
+~macro_evil_bob_reward;
+
+[proc,macro_evil_bob_cleanup]
+%macro_evil_bob_var = 0;
+inv_del(inv, evil_bob_cooked_fish_correct, ^max_32bit_int);
+inv_del(bank, evil_bob_cooked_fish_correct, ^max_32bit_int);
+inv_del(inv, evil_bob_cooked_fish_incorrect, ^max_32bit_int);
+inv_del(bank, evil_bob_cooked_fish_incorrect, ^max_32bit_int);
+inv_del(inv, evil_bob_uncooked_fish_correct, ^max_32bit_int);
+inv_del(bank, evil_bob_uncooked_fish_correct, ^max_32bit_int);
+inv_del(inv, evil_bob_uncooked_fish_incorrect, ^max_32bit_int);
+inv_del(bank, evil_bob_uncooked_fish_incorrect, ^max_32bit_int);
+
+[proc,macro_evil_bob_reward]
+def_stat $stat = fishing;
+if (stat(magic) > 50 & random(2) = 1) {
+    $stat = magic;
+}
+stat_advance($stat, 6500);
+~chatplayer("<p,confused>That was the strangest dream I've ever had! Assuming it was a dream...");
+if ($stat = magic) {
+    ~mesbox("You feel somehow that you've become better at magic.");
+} else {
+    ~mesbox("You feel somehow that you've become better at fishing.");
+}

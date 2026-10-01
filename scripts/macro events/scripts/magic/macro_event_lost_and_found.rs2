@@ -1,0 +1,63 @@
+[proc,macro_event_lost_and_found](coord $destination)(boolean)
+if (~macro_event_allowed = false | ~macro_event_kidnap_allowed = false) {
+    return(false);
+}
+%macro_event = ^macro_lost_and_found;
+%macro_event_target_coord = $destination;
+~macro_lost_and_found_appendages;
+say("Uh? Help!");
+~player_teleport_normal(0_36_74_34_11);
+mes("There has been a fault in the teleportation matrix.");
+mes("Please operate the odd appendage out to be forwarded to your destination.");
+~mesbox("There has been a fault in the teleportation matrix. Please operate the|odd appendage out to be forwarded to your destination.");
+return(true);
+
+[mapzone,0_36_74]
+%macro_event = ^macro_lost_and_found;
+~macro_events_set_tabs;
+if (%macro_transmit = 0) {
+    ~macro_lost_and_found_appendages;
+}
+
+[mapzoneexit,0_36_74]
+~initalltabs;
+%macro_transmit = 0;
+~macro_events_varps_reset;
+
+[proc,macro_lost_and_found_appendages]
+def_int $common = random(^lost_and_found_shapes);
+def_int $odd = random(^lost_and_found_shapes);
+while ($odd = $common) {
+    $odd = random(^lost_and_found_shapes);
+}
+%lost_n_found_lever_n = $common;
+%lost_n_found_lever_e = $common;
+%lost_n_found_lever_s = $common;
+%lost_n_found_lever_w = $common;
+switch_int (random(4)) {
+    case 0 : %lost_n_found_lever_n = $odd;
+    case 1 : %lost_n_found_lever_e = $odd;
+    case 2 : %lost_n_found_lever_s = $odd;
+    case default : %lost_n_found_lever_w = $odd;
+}
+
+[oploc1,lost_n_found_lever_1] ~macro_lost_and_found_operate(%lost_n_found_lever_n, %lost_n_found_lever_e, %lost_n_found_lever_s);
+[oploc1,lost_n_found_lever_2] ~macro_lost_and_found_operate(%lost_n_found_lever_e, %lost_n_found_lever_s, %lost_n_found_lever_w);
+[oploc1,lost_n_found_lever_3] ~macro_lost_and_found_operate(%lost_n_found_lever_s, %lost_n_found_lever_w, %lost_n_found_lever_n);
+[oploc1,lost_n_found_lever_4] ~macro_lost_and_found_operate(%lost_n_found_lever_w, %lost_n_found_lever_n, %lost_n_found_lever_e);
+
+[proc,macro_lost_and_found_operate](int $appendage, int $other1, int $other2)
+if (%macro_event ! ^macro_lost_and_found) {
+    return;
+}
+if ($appendage = $other1 | $appendage = $other2) {
+    stat_drain(magic, 10, 0);
+    p_delay(0);
+    ~macro_lost_and_found_appendages;
+    return;
+}
+%macro_transmit = 0;
+~player_teleport_normal(%macro_event_target_coord);
+inv_add(inv, lawrune, 1);
+inv_add(inv, airrune, 3);
+~objbox(blankrune, "Abyssal Services apologise for any inconvenience. Please|accept these runes in way of recompense.", 150, 0, divide(^objbox_height, 2));

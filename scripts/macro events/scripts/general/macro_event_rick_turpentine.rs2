@@ -1,0 +1,69 @@
+[proc,macro_rick_turpentine_spawn]
+npc_say("Good day to you, <text_gender("milord", "milady")> <displayname>.");
+%npc_macro_event_target = uid;
+npc_setmode(playerfollow);
+
+[ai_timer,macro_highwayman]
+if (%npc_int = ^rick_turpentine_angry) {
+    if (~macro_event_lost_hostile = true) {
+        npc_queue(5, 0, 0);
+    }
+    return;
+}
+if (~macro_event_lost = true) {
+    npc_queue(5, 0, 0);
+    return;
+}
+if (%npc_int = ^rick_turpentine_happy) {
+    return;
+}
+if (finduid(%npc_macro_event_target) = true) {
+    if (%npc_int = 3) {
+        %aggressive_npc = npc_uid;
+        npc_setmode(opplayer2);
+        %npc_int = ^rick_turpentine_angry;
+        %macro_event = ^no_macro_event;
+        return;
+    }
+    %npc_int = add(%npc_int, 1);
+}
+
+[ai_queue5,macro_highwayman]
+~macro_event_disappear;
+
+[ai_queue6,macro_highwayman]
+~macro_event_disappear;
+
+[opnpc1,macro_highwayman]
+if (uid ! %npc_macro_event_target) {
+    mes("They aren't interested in talking to you.");
+    return;
+}
+if (%npc_int = ^rick_turpentine_happy) {
+    return;
+}
+%npc_int = ^rick_turpentine_happy;
+%macro_event = ^no_macro_event;
+npc_settimer(0);
+npc_setmode(none);
+inv_add(inv, ~macro_certer_reward);
+~chatnpc("<p,neutral>Today is your lucky day, <text_gender("sirrah!", "madam!")> I am donating to the victims of crime to atone for my past actions!");
+npc_queue(6, 0, 0);
+
+[ai_opplayer2,macro_highwayman]
+if (%npc_action_delay > map_clock) return;
+if (~npc_check_notcombat = false) {
+    npc_setmode(null);
+    return;
+}
+if (~npc_check_notcombat_self = false) {
+    return;
+}
+
+npc_anim(npc_param(attack_anim), 0);
+sound_synth(npc_param(attack_sound), 1, 0);
+spotanim_npc(crossbowbolt_launch, 96, 0);
+%npc_action_delay = add(map_clock, npc_param(attackrate));
+def_int $duration = ~player_projectile(npc_coord, coord, uid, crossbowbolt_travel, 40, 36, 32, 15, 0, 11, 5);
+
+~playerhit_n_ranged(true, randominc(npc_param(max_dealt)), $duration, npc_param(attackrate));

@@ -9,7 +9,7 @@ zoom=578
 xan=496
 yan=1
 
-[com_1]
+[answer_text1]
 type=text
 x=120
 y=46
@@ -19,7 +19,7 @@ font=q8_full
 text=A....a lemming
 colour=0xF342E10
 
-[com_2]
+[answer_text2]
 type=text
 x=118
 y=79
@@ -29,7 +29,7 @@ font=q8_full
 text=B....a fryingpan
 colour=0xF342E10
 
-[com_3]
+[answer_text3]
 type=text
 x=118
 y=111
@@ -39,7 +39,7 @@ font=q8_full
 text=C....the disenfrachaised youth of 1940's Columbia
 colour=0xF342E10
 
-[com_4]
+[question]
 type=text
 x=117
 y=20
@@ -49,7 +49,7 @@ font=q8_full
 text=Is this:
 colour=0xF1B1805
 
-[com_5]
+[item_border]
 type=rect
 x=142
 y=143
@@ -58,7 +58,7 @@ height=153
 fill=yes
 colour=0xF342E10
 
-[com_6]
+[item_background]
 type=rect
 x=147
 y=147
@@ -67,7 +67,7 @@ height=144
 fill=yes
 colour=0xF5F551D
 
-[com_7]
+[item_model]
 type=model
 x=197
 y=149
@@ -78,7 +78,7 @@ zoom=400
 xan=346
 yan=1883
 
-[com_8]
+[close]
 type=text
 x=437
 y=0
@@ -90,7 +90,7 @@ shadowed=yes
 text=Close Window
 colour=0xFFFF00
 
-[com_9]
+[answer_button1]
 type=model
 x=85
 y=36
@@ -103,7 +103,7 @@ xan=540
 yan=2043
 option=select option A
 
-[com_10]
+[answer_button2]
 type=model
 x=84
 y=69
@@ -116,7 +116,7 @@ xan=490
 yan=10
 option=select option B
 
-[com_11]
+[answer_button3]
 type=model
 x=83
 y=102

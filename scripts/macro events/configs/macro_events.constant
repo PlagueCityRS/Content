@@ -7,12 +7,27 @@
 
 ^macro_cube = 6
 
-^macro_mime = 7
+^macro_certer = 7
+
+^macro_rick_turpentine = 8
+
+^macro_jekyll = 9
+
+^macro_mime = 10
 ^macro_mime_solve_1 = 100
 ^macro_mime_solve_2 = 101
 ^macro_mime_solve_3 = 102
 
-^macro_maze = 8
+^macro_maze = 11
+
+^macro_drill_demon = 12
+
+^macro_quiz_master = 13
+
+^macro_evil_bob = 14
+^macro_freaky_forester = 15
+^macro_pillory = 16
+^macro_lost_and_found = 17
 
 ^no_macro_event = 0
 
@@ -50,5 +65,39 @@
 ^macro_mime_climb_rope = 2
 ^macro_mime_lean = 3
 
-^members_macro_count = 1
-^teleport_macro_start = 7
+^members_macro_count = 2
+^teleport_macro_start = 10
+
+^rick_turpentine_angry = -2
+^rick_turpentine_happy = -1
+
+^certer_happy = -1
+
+^jekyll_happy = -1
+^jekyll_hyde = -2
+^jekyll_transform = 5
+
+^drill_demon_run = 0
+^drill_demon_situps = 1
+^drill_demon_pushups = 2
+^drill_demon_starjumps = 3
+^drill_demon_required = 4
+
+^quiz_master_required = 4
+
+^evil_bob_fish_none = 0
+^evil_bob_fish_north = 1
+^evil_bob_fish_south = 2
+^evil_bob_fish_east = 3
+^evil_bob_fish_west = 4
+^evil_bob_exposition_start = 0
+^evil_bob_exposition_servant = 1
+
+^lost_and_found_shapes = 8
+
+^forester_none = 0
+^forester_killed = 1
+^forester_complete = 2
+
+^pillory_needed_start = 3
+^pillory_needed_max = 6

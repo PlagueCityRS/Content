@@ -39,19 +39,28 @@ if (p_finduid(uid) = true) {
     if (~pre_tele_checks(coord) = false) {
         return;
     }
+    def_coord $destination = map_findsquare(db_getfield($spell_data, magic_spell_table:tele_coord, 0), 0, 2, ^map_findsquare_lineofwalk);
     if (afk_event = ^true) {
-        ~macro_event_general_spawn(~macro_event_set_random);
-        return;
+        if (~macro_event_lost_and_found($destination) = true) {
+            return;
+        }
     }
     // delete runes and give xp
     ~delete_spell_runes($spell_data);
     ~give_spell_xp($spell_data);
     // give additional affects
     // teleport player. Always a radius of 2
-    ~player_teleport_normal(map_findsquare(db_getfield($spell_data, magic_spell_table:tele_coord, 0), 0, 2, ^map_findsquare_lineofwalk));
+    ~player_teleport_normal($destination);
 }
 
 [proc,player_teleport_normal](coord $coord)
+if (%macro_event_target_coord = null) {
+    if (afk_event = ^true) {
+        if (~macro_event_lost_and_found($coord) = true) {
+            return;
+        }
+    }
+}
 if_close;
 p_stopaction;
 ~tele_checks;
@@ -137,6 +146,10 @@ if (~inzone_coord_pair_table(random_event_mime_zones, $coord) = true) {
 }
 if (~inzone_coord_pair_table(random_event_maze_zones, $coord) = true) {
     say("I need to find the center of the maze!"); // https://www.youtube.com/watch?v=SFugJO98ap4
+    return(false);
+}
+if (~macro_event_kidnap_area($coord) = true) {
+    mes("A magical force has stopped you from teleporting.");
     return(false);
 }
 if (~in_duel_arena($coord) = true) {

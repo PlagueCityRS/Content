@@ -4,12 +4,35 @@ if (p_finduid(uid) = false) {
     @please_finish;
     return;
 }
-if ($event < 1 | $event > add(~macro_event_general_count,1)) {
-    mes("event_id must be between 1 and <tostring(add(~macro_event_general_count,1))>.");
+if ($event < 1 | $event > enum_getoutputcount(general_macro_events)) {
+    mes("event_id must be between 1 and <tostring(enum_getoutputcount(general_macro_events))>.");
     @debugusage("::macro_event (event_id)", "::macro_event 2", "");
     return;
 }
 ~macro_event_general_spawn($event);
+
+[debugproc,macro_event_skill](int $event)
+if_close;
+if (p_finduid(uid) = false) {
+    @please_finish;
+    return;
+}
+if (~macro_event_allowed = false) {
+    mes("You can't get a random event right now.");
+    return;
+}
+switch_int ($event) {
+    case 1 : ~macro_event_evil_bob_spawn;
+    case 2 : ~macro_event_freaky_forester_spawn;
+    case 3 : ~macro_event_pillory_spawn;
+    case 4 :
+        if (~macro_event_lost_and_found(coord) = false) {
+            mes("You can't get a random event right now.");
+        }
+    case default :
+        mes("1: Evil Bob, 2: Freaky Forester, 3: Pillory, 4: Lost and Found");
+        @debugusage("::macro_event_skill (event_id)", "::macro_event_skill 1", "");
+}
 
 [debugproc,random_event]
 if_close;

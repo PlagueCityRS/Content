@@ -1,0 +1,135 @@
+[proc,macro_drill_demon_spawn]
+npc_facesquare(coord);
+npc_say("<displayname>! Drop and give me 20!");
+p_delay(1);
+npc_del;
+%macro_event = ^macro_drill_demon;
+%macro_drill_demon_correct = 0;
+~macro_event_kidnap(0_49_75_27_19);
+~chatnpc_specific("Sergeant Damien", macro_drilldemon, "<p,neutral>Move yourself private! Follow my orders and you may, just may, leave here in a fit state for my corps!");
+~macro_drill_demon_assign;
+~macro_drill_demon_orders(true);
+
+[mapzone,0_49_75]
+%macro_event = ^macro_drill_demon;
+~macro_events_set_tabs;
+if (%macro_transmit = 0) {
+    ~macro_drill_demon_assign;
+}
+@music_playbyregion(coord);
+
+[mapzoneexit,0_49_75]
+~initalltabs;
+%macro_transmit = 0;
+~macro_events_varps_reset;
+
+[proc,macro_drill_demon_assign]
+def_int $post1 = random(4);
+def_int $post2 = random(4);
+while ($post2 = $post1) {
+    $post2 = random(4);
+}
+def_int $post3 = random(4);
+while ($post3 = $post1 | $post3 = $post2) {
+    $post3 = random(4);
+}
+%macro_drilldemon_post_1 = $post1;
+%macro_drilldemon_post_2 = $post2;
+%macro_drilldemon_post_3 = $post3;
+%macro_drilldemon_post_4 = calc(6 - $post1 - $post2 - $post3);
+%macro_drill_demon_task = random(4);
+
+[proc,macro_drill_demon_orders](boolean $correct)
+def_string $wrong = "";
+if ($correct = false) {
+    $wrong = "Wrong exercise, worm! ";
+}
+switch_int (%macro_drill_demon_task) {
+    case ^drill_demon_run :
+        ~chatnpc_specific("Sergeant Damien", macro_drilldemon, "<p,neutral><$wrong>Get yourself over there and jog on that mat private!");
+        ~mesbox("Go to this mat and jog on the spot!");
+    case ^drill_demon_situps :
+        ~chatnpc_specific("Sergeant Damien", macro_drilldemon, "<p,neutral><$wrong>Get on that mat and give me sit ups private!");
+        ~mesbox("Go to this mat and do some sit ups!");
+    case ^drill_demon_pushups :
+        ~chatnpc_specific("Sergeant Damien", macro_drilldemon, "<p,neutral><$wrong>Drop and give me push ups on that mat private!");
+        ~mesbox("Go to this mat and do some pushups!");
+    case ^drill_demon_starjumps :
+        ~chatnpc_specific("Sergeant Damien", macro_drilldemon, "<p,neutral><$wrong>I want to see you on that mat doing star jumps private!");
+        ~mesbox("Go to this mat and do some starjumps!");
+}
+
+[opnpc1,macro_drilldemon]
+if (%macro_event ! ^macro_drill_demon | ~inzone_coord_pair_table(random_event_drill_demon_zones, coord) = false) {
+    mes("They aren't interested in talking to you.");
+    return;
+}
+~macro_drill_demon_orders(true);
+
+[oploc1,barrack_mat_1] @macro_drill_demon_exercise(%macro_drilldemon_post_1);
+[oploc1,barrack_mat_2] @macro_drill_demon_exercise(%macro_drilldemon_post_2);
+[oploc1,barrack_mat_3] @macro_drill_demon_exercise(%macro_drilldemon_post_3);
+[oploc1,barrack_mat_4] @macro_drill_demon_exercise(%macro_drilldemon_post_4);
+
+[label,macro_drill_demon_exercise](int $exercise)
+if (%macro_event ! ^macro_drill_demon) {
+    mes("You can't do that right now.");
+    return;
+}
+p_arrivedelay;
+def_coord $mat = movecoord(loc_coord, 0, 0, sub(4820, coordz(loc_coord)));
+p_walk($mat);
+def_int $i = 0;
+while (coord ! $mat & $i < 10) {
+    p_delay(0);
+    $i = add($i, 1);
+}
+facesquare(movecoord(coord, 0, 0, -1));
+p_delay(1);
+
+def_seq $anim = null;
+switch_int ($exercise) {
+    case ^drill_demon_run :
+        $anim = run_on_spot;
+        sound_synth(runonspot, 5, 0);
+    case ^drill_demon_situps :
+        $anim = situps_5;
+        sound_synth(situps, 5, 40);
+    case ^drill_demon_pushups :
+        $anim = pushups_5;
+        sound_synth(pressups, 5, 25);
+    case ^drill_demon_starjumps :
+        $anim = starjump_5;
+        sound_synth(star_jump, 5, 0);
+}
+anim($anim, 0);
+p_delay(add(divide(seqlength($anim), 30), 2));
+
+def_int $task = %macro_drill_demon_task;
+~macro_drill_demon_assign;
+if ($exercise ! $task) {
+    ~macro_drill_demon_orders(false);
+    return;
+}
+%macro_drill_demon_correct = add(%macro_drill_demon_correct, 1);
+if (%macro_drill_demon_correct < ^drill_demon_required) {
+    ~macro_drill_demon_orders(true);
+    return;
+}
+~chatnpc_specific("Sergeant Damien", macro_drilldemon, "<p,neutral>Well I'll be, you actually did it private. Now take this and get yourself out of my sight.");
+%macro_drill_demon_correct = 0;
+~macro_return_teleport;
+p_delay(1);
+inv_add(inv, ~macro_drill_demon_reward);
+
+[proc,macro_drill_demon_reward]()(namedobj, int)
+if (~obj_gettotal(drill_helm) = 0) {
+    return(drill_helm, 1);
+}
+if (~obj_gettotal(drill_top) = 0) {
+    return(drill_top, 1);
+}
+if (~obj_gettotal(drill_bottoms) = 0) {
+    return(drill_bottoms, 1);
+}
+return(coins, 500);

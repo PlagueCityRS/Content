@@ -1,0 +1,118 @@
+[proc,macro_quiz_master_spawn]
+npc_facesquare(coord);
+npc_say("Hey <displayname>! It's your lucky day!");
+p_delay(1);
+npc_del;
+%macro_event = ^macro_quiz_master;
+%macro_quiz_master_correct = 0;
+~macro_event_kidnap(0_30_74_32_28);
+mes("Answer four questions correctly in a row to be teleported back where you came from.");
+~macro_quiz_master_sit;
+~chatnpc_specific("Quiz Master", macro_magneson, "<p,quiz>WELCOME to the GREATEST QUIZ SHOW in the|whole of RuneScape:|@dre@O D D  @mag@O N E  @dbl@O U T");
+~chatplayer("<p,confused>I'm sure I didn't ask to take part in a quiz show...");
+~chatnpc_specific("Quiz Master", macro_magneson, "<p,quiz>Please welcome our newest contestant:|@red@<displayname>@bla@!|Just pick the O D D  O N E  O U T.|Four questions right, and then you win!");
+~macro_quiz_master_questions;
+
+[mapzone,0_30_74]
+%macro_event = ^macro_quiz_master;
+~macro_events_set_tabs;
+settimer(macro_quiz_master, 1);
+@music_playbyregion(coord);
+
+[mapzoneexit,0_30_74]
+cleartimer(macro_quiz_master);
+~initalltabs;
+~macro_events_varps_reset;
+
+[timer,macro_quiz_master]
+if (%macro_event ! ^macro_quiz_master) {
+    cleartimer(macro_quiz_master);
+    return;
+}
+~macro_quiz_master_sit;
+~macro_quiz_master_questions;
+
+[proc,macro_quiz_master_sit]
+facesquare(0_30_74_32_32);
+anim(quiz_sit, 0);
+
+[proc,macro_quiz_master_questions]
+while (%macro_quiz_master_correct < ^quiz_master_required) {
+    if (~macro_quiz_master_question = true) {
+        %macro_quiz_master_correct = add(%macro_quiz_master_correct, 1);
+        if (%macro_quiz_master_correct < ^quiz_master_required) {
+            ~chatnpc_specific("Quiz Master", macro_magneson, "<p,quiz>Wow, you're a smart one!|You're absolutely RIGHT!|Okay, next question!");
+        }
+    } else {
+        ~chatnpc_specific("Quiz Master", macro_magneson, "<p,quiz>WRONG!|That's just WRONG!|Okay, next question!");
+    }
+}
+~chatnpc_specific("Quiz Master", macro_magneson, "<p,quiz>@dbl@CONGRATULATIONS!|@bla@You are a @dre@WINNER@bla@!|Please choose your @dbl@PRIZE@bla@!");
+def_int $prize = ~p_choice2("1000 Coins", 1, "Random Item", 2);
+%macro_quiz_master_correct = 0;
+cleartimer(macro_quiz_master);
+anim(null, 0);
+~macro_return_teleport;
+if ($prize = 1) {
+    inv_add(inv, coins, 1000);
+} else {
+    inv_add(inv, macro_quiz_mystery_box, 1);
+}
+
+[proc,macro_quiz_master_question]()(boolean)
+def_int $set = random(enum_getoutputcount(macro_quiz_master_answers));
+def_namedobj $answer = enum(int, namedobj, macro_quiz_master_answers, $set);
+def_namedobj $other1 = enum(int, namedobj, macro_quiz_master_others1, $set);
+def_namedobj $other2 = enum(int, namedobj, macro_quiz_master_others2, $set);
+
+%macro_quiz_master_answer = random(3);
+if (%macro_quiz_master_answer = 0) {
+    if_setobject(macro_quizmaster:option1, $answer, 200);
+    if_setobject(macro_quizmaster:option2, $other1, 200);
+    if_setobject(macro_quizmaster:option3, $other2, 200);
+} else if (%macro_quiz_master_answer = 1) {
+    if_setobject(macro_quizmaster:option1, $other1, 200);
+    if_setobject(macro_quizmaster:option2, $answer, 200);
+    if_setobject(macro_quizmaster:option3, $other2, 200);
+} else {
+    if_setobject(macro_quizmaster:option1, $other1, 200);
+    if_setobject(macro_quizmaster:option2, $other2, 200);
+    if_setobject(macro_quizmaster:option3, $answer, 200);
+}
+if_openchat(macro_quizmaster);
+if_addresumebutton(macro_quizmaster:option1);
+if_addresumebutton(macro_quizmaster:option2);
+if_addresumebutton(macro_quizmaster:option3);
+p_pausebutton;
+sound_synth(quiz_select, 1, 0);
+
+def_int $picked = 2;
+switch_component (last_com) {
+    case macro_quizmaster:option1 : $picked = 0;
+    case macro_quizmaster:option2 : $picked = 1;
+}
+if ($picked = %macro_quiz_master_answer) {
+    sound_synth(quiz_correct, 1, 0);
+    return(true);
+}
+return(false);
+
+[opheld1,macro_quiz_mystery_box]
+inv_del(inv, macro_quiz_mystery_box, 1);
+inv_add(inv, ~macro_quiz_mystery_box_reward);
+
+[proc,macro_quiz_mystery_box_reward]()(namedobj, int)
+switch_int (random(12)) {
+    case 0 : return(macro_genilamp, 1);
+    case 1 : return(cabbage, 1);
+    case 2 : return(diamond, 1);
+    case 3 : return(bucket_empty, 1);
+    case 4 : return(flier, 1);
+    case 5 : return(old_boot, 1);
+    case 6 : return(bodyrune, 1);
+    case 7 : return(onion, 1);
+    case 8 : return(mithril_scimitar, 1);
+    case 9 : return(casket, 1);
+    case 10 : return(steel_platebody, 1);
+    case default : return(naturerune, 20);
+}

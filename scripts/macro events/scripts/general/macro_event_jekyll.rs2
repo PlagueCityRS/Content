@@ -1,0 +1,138 @@
+[proc,macro_jekyll_spawn]
+spotanim_map(smokepuff, npc_coord, 124, 0);
+sound_synth(smokepuff2, 1, 0);
+npc_say("Hello, <displayname>, I need a herb.");
+%npc_macro_event_target = uid;
+npc_setmode(playerfollow);
+
+[ai_timer,macro_jekyll]
+if (~macro_event_lost = true) {
+    npc_queue(5, 0, 0);
+    return;
+}
+if (finduid(%npc_macro_event_target) = true) {
+    if (%npc_int = 0) {
+        npc_say("Hey, <displayname>!");
+    } else if (%npc_int = 1) {
+        npc_say("Excuse me, <displayname>?");
+    } else if (%npc_int = 2) {
+        npc_say("Can you hear me <displayname>?");
+    } else if (%npc_int = 3) {
+        npc_say("I just need a herb, <displayname>!");
+    } else if (%npc_int = 4) {
+        npc_say("I'll give you a free potion, <displayname>!");
+    } else if (%npc_int = ^jekyll_transform) {
+        ~macro_jekyll_transform;
+        return;
+    }
+    %npc_int = add(%npc_int, 1);
+}
+
+[proc,macro_jekyll_transform]
+%npc_int = ^jekyll_hyde;
+%macro_event = ^no_macro_event;
+npc_settimer(0);
+npc_setmode(none);
+npc_anim(change_jekyll_hyde1, 0);
+npc_delay(3);
+npc_changetype_keepall(enum(int, npc, macro_event_hyde_levels, ~macro_event_combat_level), ^max_32bit_int);
+npc_anim(change_jekyll_hyde2, 0);
+npc_delay(2);
+npc_settimer(20);
+if (finduid(%npc_macro_event_target) = true) {
+    %aggressive_npc = npc_uid;
+    npc_setmode(opplayer2);
+}
+
+[ai_queue5,macro_jekyll]
+npc_delay(2);
+~macro_event_disappear;
+
+[ai_queue6,macro_jekyll]
+npc_anim(emote_wave, 20);
+npc_delay(2);
+~macro_event_disappear;
+
+[opnpc1,macro_jekyll]
+if (uid ! %npc_macro_event_target) {
+    if (.finduid(%npc_macro_event_target) = true) {
+        ~chatnpc("<p,neutral>Sorry, I'm trying to get a herb from <.displayname>,|but <.text_gender("he", "she")> seems to be ignoring me.");
+        return;
+    }
+    ~chatnpc("<p,neutral>Sorry, I'm trying to get a herb from another player,|but they seem to be ignoring me.");
+    return;
+}
+if (%npc_int = ^jekyll_happy) {
+    ~chatnpc("<p,neutral>Excuse me, I must be off now.");
+    return;
+}
+%npc_int = 0;
+def_int $herb = ~macro_jekyll_find_herb;
+if ($herb = -1) {
+    ~chatnpc("<p,neutral>Have you got any guam leaf? I've fixed my Hyde problem,|so it's not urgent, but I could do with a guam leaf.");
+    ~chatplayer("<p,neutral>I don't have any.");
+    ~macro_jekyll_spare_potion;
+    return;
+}
+def_string $herb_name = enum(int, string, macro_jekyll_herb_names, $herb);
+~chatnpc("<p,neutral>Have you got any <$herb_name>? I've fixed my Hyde problem,|so it's not urgent, but I could do with <~add_article($herb_name)>.");
+if (~p_choice2("Here you are.", 1, "No, I need it myself.", 2) = 2) {
+    ~chatplayer("<p,neutral>No, I need it myself.");
+    ~macro_jekyll_spare_potion;
+    return;
+}
+~chatplayer("<p,neutral>Here you are.");
+def_namedobj $herb_obj = enum(int, namedobj, macro_jekyll_herbs, $herb);
+if (inv_total(inv, $herb_obj) < 1) {
+    ~macro_jekyll_spare_potion;
+    return;
+}
+inv_del(inv, $herb_obj, 1);
+~macro_jekyll_leave;
+inv_add(inv, enum(int, namedobj, macro_jekyll_potions, $herb), 1);
+~chatnpc("<p,neutral>Thank you so much! Here, take this potion in return.");
+
+[proc,macro_jekyll_spare_potion]
+~macro_jekyll_leave;
+inv_add(inv, 2dose1strength, 1);
+~chatnpc("<p,neutral>Fair enough. Here, have a spare potion, and thanks|for your time.");
+
+[proc,macro_jekyll_leave]
+%npc_int = ^jekyll_happy;
+%macro_event = ^no_macro_event;
+npc_settimer(0);
+npc_queue(6, 0, 2);
+
+[proc,macro_jekyll_find_herb]()(int)
+def_int $i = 0;
+while ($i < enum_getoutputcount(macro_jekyll_herbs)) {
+    if (inv_total(inv, enum(int, namedobj, macro_jekyll_herbs, $i)) > 0) {
+        return($i);
+    }
+    $i = add($i, 1);
+}
+return(-1);
+
+[ai_timer,_macro_event_hyde]
+if (~macro_event_lost_hostile = true) {
+    npc_queue(5, 0, 0);
+}
+
+[ai_queue5,_macro_event_hyde]
+~macro_event_disappear;
+
+[ai_queue3,_macro_event_hyde]
+gosub(npc_death);
+if (npc_findhero = ^false) {
+    return;
+}
+def_int $restore = enum(npc, int, macro_event_hyde_restore_weights, npc_type);
+def_int $double_restore = enum(npc, int, macro_event_hyde_double_restore_weights, npc_type);
+def_int $random = random(12800);
+if ($random < 800) {
+    obj_add(npc_coord, vial_empty, 1, ^lootdrop_duration);
+} else if ($random < calc(800 + $restore)) {
+    obj_add(npc_coord, 4dose2restore, 1, ^lootdrop_duration);
+} else if ($random < calc(800 + $restore + $double_restore)) {
+    obj_add(npc_coord, 4dose2restore, 2, ^lootdrop_duration);
+}

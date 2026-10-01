@@ -1,0 +1,130 @@
+[proc,macro_certer_spawn]
+npc_anim(emote_bow, 20);
+npc_say("Greetings <displayname>, I need your help.");
+%npc_macro_event_target = uid;
+npc_setmode(playerfollow);
+
+[ai_timer,_macro_certer]
+if (~macro_event_lost = true) {
+    npc_queue(5, 0, 0);
+    return;
+}
+if (%npc_int = ^certer_happy) {
+    return;
+}
+if (finduid(%npc_macro_event_target) = true) {
+    if (%npc_int = 0) {
+        npc_say("ehem... Hello <displayname>, please talk to me!");
+    } else if (%npc_int = 1) {
+        npc_say("Hello, are you there <displayname>?");
+    } else if (%npc_int = 2) {
+        npc_say("It's really rude to ignore someone, <displayname>!");
+    } else if (%npc_int = 3) {
+        npc_say("No-one ignores me!");
+        npc_anim(human_castteleport, 0);
+        %macro_event = ^no_macro_event;
+        queue(macro_event_fail_teleport, 0, 0);
+        npc_delay(0);
+        npc_del;
+        return;
+    }
+    %npc_int = add(%npc_int, 1);
+}
+
+[ai_queue5,_macro_certer]
+npc_delay(2);
+~macro_event_disappear;
+
+[ai_queue6,_macro_certer]
+npc_anim(emote_wave, 20);
+npc_delay(2);
+~macro_event_disappear;
+
+[opnpc1,_macro_certer]
+if (uid ! %npc_macro_event_target) {
+    mes("They aren't interested in talking to you.");
+    return;
+}
+if (%npc_int = ^certer_happy) {
+    return;
+}
+%npc_int = 0;
+npc_settimer(20);
+~chatnpc("<p,neutral>Ah, hello, <displayname>. Could you|please help me identify this?");
+~macro_certer_open;
+
+[proc,macro_certer_open]
+def_int $item = random(enum_getoutputcount(macro_certer_items));
+def_int $answer = random(3);
+%macro_certer_answer = $answer;
+
+def_int $false_count = enum_getoutputcount(macro_certer_false_names);
+def_int $false1 = random($false_count);
+def_int $false2 = random($false_count);
+while ($false2 = $false1) {
+    $false2 = random($false_count);
+}
+
+def_string $correct_name = enum(int, string, macro_certer_item_names, $item);
+def_string $false1_name = enum(int, string, macro_certer_false_names, $false1);
+def_string $false2_name = enum(int, string, macro_certer_false_names, $false2);
+
+if ($answer = 0) {
+    if_settext(macro_certer:answer_text1, $correct_name);
+    if_settext(macro_certer:answer_text2, $false1_name);
+    if_settext(macro_certer:answer_text3, $false2_name);
+} else if ($answer = 1) {
+    if_settext(macro_certer:answer_text1, $false1_name);
+    if_settext(macro_certer:answer_text2, $correct_name);
+    if_settext(macro_certer:answer_text3, $false2_name);
+} else {
+    if_settext(macro_certer:answer_text1, $false1_name);
+    if_settext(macro_certer:answer_text2, $false2_name);
+    if_settext(macro_certer:answer_text3, $correct_name);
+}
+if_setobject(macro_certer:item_model, enum(int, namedobj, macro_certer_items, $item), 400);
+if_openmain(macro_certer);
+
+[if_button,macro_certer:answer_button1] ~macro_certer_select(0);
+[if_button,macro_certer:answer_button2] ~macro_certer_select(1);
+[if_button,macro_certer:answer_button3] ~macro_certer_select(2);
+
+[proc,macro_certer_select](int $answer)
+if_close;
+if (npc_finduid(%macro_event_uid) = false) {
+    return;
+}
+if (%npc_macro_event_target ! uid | npc_category ! macro_certer | %npc_int = ^certer_happy) {
+    return;
+}
+%npc_int = ^certer_happy;
+%macro_event = ^no_macro_event;
+npc_settimer(0);
+if ($answer = %macro_certer_answer) {
+    inv_add(inv, ~macro_certer_reward);
+    ~chatnpc("<p,neutral>Thank you, I hope you like your present. I must be|leaving now though.");
+} else {
+    ~chatnpc("<p,neutral>Sorry, I don't think so.");
+}
+npc_queue(6, 0, 0);
+
+[proc,macro_certer_reward]()(namedobj, int)
+def_int $random = random(1616);
+if (map_members = ^false) {
+    $random = random(1596);
+}
+if ($random < 340) return(uncut_sapphire, 1);
+if ($random < 510) return(kebab, 1);
+if ($random < 680) return(uncut_emerald, 1);
+if ($random < 830) return(spinach_roll, 1);
+if ($random < 940) return(coins, 80);
+if ($random < 1050) return(coins, 160);
+if ($random < 1160) return(coins, 320);
+if ($random < 1270) return(coins, 480);
+if ($random < 1380) return(coins, 640);
+if ($random < 1466) return(uncut_ruby, 1);
+if ($random < 1531) return(coins, 240);
+if ($random < 1574) return(cosmic_talisman, 1);
+if ($random < 1596) return(uncut_diamond, 1);
+if ($random < 1606) return(keyhalf1, 1);
+return(keyhalf2, 1);

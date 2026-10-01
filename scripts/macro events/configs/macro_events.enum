@@ -7,8 +7,126 @@ val=3,macro_dwarf
 val=4,macro_mage
 val=5,macro_triffidseed
 val=6,macro_mage
-val=7,macro_mage
-val=8,macro_mage
+val=7,macro_niles
+val=8,macro_highwayman
+val=9,macro_jekyll
+val=10,macro_mage
+val=11,macro_mage
+val=12,macro_drilldemon
+val=13,macro_magneson
+
+[macro_certer_npcs]
+inputtype=int
+outputtype=npc
+val=0,macro_niles
+val=1,macro_miles
+val=2,macro_giles
+
+[macro_certer_items]
+inputtype=int
+outputtype=namedobj
+val=0,bowl_empty
+val=1,macro_quiz_food1
+val=2,macro_quiz_food2
+val=3,macro_quiz_weapon1
+val=4,macro_quiz_weapon2
+val=5,macro_quiz_armour1
+val=6,macro_quiz_armour2
+val=7,macro_quiz_tool1
+val=8,macro_quiz_tool2
+val=9,macro_quiz_jewel1
+val=10,macro_quiz_jewel2
+
+[macro_certer_item_names]
+inputtype=int
+outputtype=string
+val=0,A bowl.
+val=1,A fish.
+val=2,A bass.
+val=3,A sword.
+val=4,A battleaxe.
+val=5,A helmet.
+val=6,A kiteshield.
+val=7,A pair of shears.
+val=8,A shovel.
+val=9,A ring.
+val=10,A necklace.
+
+[macro_certer_false_names]
+inputtype=int
+outputtype=string
+val=0,An axe.
+val=1,An arrow.
+val=2,A pair of boots.
+val=3,A pair of gloves.
+val=4,A staff.
+val=5,A bow.
+val=6,A feather.
+val=7,The disenfrachaised youth of 1940's Columbia.
+
+[macro_quiz_master_answers]
+inputtype=int
+outputtype=namedobj
+val=0,macro_quiz_weapon2
+val=1,macro_quiz_jewel2
+val=2,macro_quiz_food2
+val=3,macro_quiz_tool1
+val=4,macro_quiz_tool2
+
+[macro_quiz_master_others1]
+inputtype=int
+outputtype=namedobj
+val=0,macro_quiz_food1
+val=1,macro_quiz_tool2
+val=2,macro_quiz_armour2
+val=3,macro_quiz_jewel1
+val=4,macro_quiz_weapon1
+
+[macro_quiz_master_others2]
+inputtype=int
+outputtype=namedobj
+val=0,macro_quiz_food1
+val=1,macro_quiz_tool1
+val=2,macro_quiz_armour1
+val=3,macro_quiz_jewel2
+val=4,macro_quiz_weapon2
+
+[macro_pheasants]
+inputtype=int
+outputtype=npc
+val=1,macro_pheasant_onetail
+val=2,macro_pheasant_twotail
+val=3,macro_pheasant_threetail
+val=4,macro_pheasant_fourtail
+
+[macro_pillory_cells]
+inputtype=int
+outputtype=coord
+val=0,0_50_53_26_15
+val=1,0_50_53_28_15
+val=2,0_50_53_30_15
+val=3,0_41_54_57_33
+val=4,0_41_54_59_33
+val=5,0_41_54_61_33
+val=6,0_40_48_44_33
+val=7,0_40_48_46_33
+val=8,0_40_48_48_33
+
+[macro_pillory_lock_models]
+inputtype=int
+outputtype=int
+val=0,9753
+val=1,9754
+val=2,9755
+val=3,9756
+
+[macro_pillory_key_models]
+inputtype=int
+outputtype=int
+val=0,9749
+val=1,9750
+val=2,9751
+val=3,9752
 
 [macro_event_zombie_levels]
 inputtype=int
@@ -86,3 +204,84 @@ val=3,0_45_71_11_11
 // drunken dwarf
 // genie
 // mysterious old man
+
+[macro_event_hyde_levels]
+inputtype=int
+outputtype=npc
+val=1,macro_hyde_1
+val=2,macro_hyde_2
+val=3,macro_hyde_3
+val=4,macro_hyde_4
+val=5,macro_hyde_5
+val=6,macro_hyde_6
+
+[macro_event_hyde_restore_weights]
+inputtype=npc
+outputtype=int
+val=macro_hyde_1,200
+val=macro_hyde_2,280
+val=macro_hyde_3,323
+val=macro_hyde_4,431
+val=macro_hyde_5,566
+val=macro_hyde_6,800
+
+[macro_event_hyde_double_restore_weights]
+inputtype=npc
+outputtype=int
+val=macro_hyde_1,100
+val=macro_hyde_2,108
+val=macro_hyde_3,144
+val=macro_hyde_4,200
+val=macro_hyde_5,251
+val=macro_hyde_6,323
+
+[macro_jekyll_herbs]
+inputtype=int
+outputtype=namedobj
+val=0,dwarf_weed
+val=1,lantadyme
+val=2,cadantine
+val=3,snapdragon
+val=4,kwuarm
+val=5,avantoe
+val=6,irit_leaf
+val=7,toadflax
+val=8,ranarr_weed
+val=9,harralander
+val=10,tarromin
+val=11,marentill
+val=12,guam_leaf
+
+[macro_jekyll_potions]
+inputtype=int
+outputtype=namedobj
+val=0,4dose1magic
+val=1,4dose2defense
+val=2,4dose2restore
+val=3,4dose2strength
+val=4,4dose2energy
+val=5,4dose2attack
+val=6,4dose1agility
+val=7,4dose1defense
+val=8,4dose1energy
+val=9,4dosestatrestore
+val=10,4dose1attack
+val=11,4doseantipoison
+val=12,strength4
+
+[macro_jekyll_herb_names]
+inputtype=int
+outputtype=string
+val=0,dwarf weed
+val=1,lantadyme
+val=2,cadantine
+val=3,snapdragon
+val=4,kwuarm
+val=5,avantoe
+val=6,irit leaf
+val=7,toadflax
+val=8,ranarr weed
+val=9,harralander
+val=10,tarromin
+val=11,marrentill
+val=12,guam leaf

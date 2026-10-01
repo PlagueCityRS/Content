@@ -52,6 +52,6 @@ if ($initial_obj = strung_dragonstone_amulet) {
 }
 p_delay(1);
 if (afk_event = ^true) {
-    ~macro_event_general_spawn(~macro_event_set_random);
+    ~macro_event_magic;
     return;
 }

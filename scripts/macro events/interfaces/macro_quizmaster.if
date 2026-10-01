@@ -1,4 +1,4 @@
-[com_0]
+[background]
 type=rect
 x=-13
 y=-6
@@ -45,7 +45,7 @@ model=com_i470
 zoom=258
 xan=500
 
-[com_5]
+[option1]
 type=model
 x=37
 y=36
@@ -55,7 +55,7 @@ height=60
 model=obj_6198
 zoom=400
 
-[com_6]
+[option2]
 type=model
 x=212
 y=39
@@ -65,7 +65,7 @@ height=60
 model=obj_6197
 zoom=400
 
-[com_7]
+[option3]
 type=model
 x=386
 y=36
@@ -75,7 +75,7 @@ height=60
 model=obj_6196
 zoom=446
 
-[com_8]
+[question]
 type=text
 x=180
 y=15

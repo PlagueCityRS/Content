@@ -42,6 +42,11 @@ switch_int ($event) {
     case ^macro_dwarf : ~macro_dwarf_spawn;
     case ^macro_geni : ~macro_geni_spawn;
     case ^macro_mysterious_old_man, ^macro_cube, ^macro_mime, ^macro_maze : ~macro_mysterious_old_man_spawn($event);
+    case ^macro_certer : ~macro_certer_spawn;
+    case ^macro_rick_turpentine : ~macro_rick_turpentine_spawn;
+    case ^macro_jekyll : ~macro_jekyll_spawn;
+    case ^macro_drill_demon : ~macro_drill_demon_spawn;
+    case ^macro_quiz_master : ~macro_quiz_master_spawn;
 }
 
 [proc,macro_event_area](coord $coord)(boolean)
@@ -60,7 +65,25 @@ if (~in_tutorial_island($coord) = true) {
 if (~inzone_coord_pair_table(games_room_zones, $coord) = true) { // https://runescape.salmoneus.net/forums/topic/244971-no-random-events/ Not sure about '04 - 07' but in '08 they weren't allowed. Were updated to be allowed in 2009.
     return(false);
 }
+if (~macro_event_kidnap_area($coord) = true) {
+    return(false);
+}
 return(true);
+
+[proc,macro_event_kidnap_area](coord $coord)(boolean)
+if (~inzone_coord_pair_table(random_event_drill_demon_zones, $coord) = true | ~inzone_coord_pair_table(random_event_quiz_master_zones, $coord) = true) {
+    return(true);
+}
+if (~inzone_coord_pair_table(random_event_evil_bob_zones, $coord) = true | ~inzone_coord_pair_table(random_event_freaky_forester_zones, $coord) = true) {
+    return(true);
+}
+if (~inzone_coord_pair_table(random_event_lost_and_found_zones, $coord) = true) {
+    return(true);
+}
+if (~macro_pillory_in_cell($coord) = true) {
+    return(true);
+}
+return(false);
 
 [proc,macro_event_allowed]()(boolean)
 if (~macro_event_area(coord) = false) {
@@ -81,10 +104,29 @@ return(true);
 
 // called when the player logs in
 [queue,macro_event_login]
+if (~macro_event_kidnap_area(coord) = true) {
+    ~macro_event_kidnap_login;
+    return;
+}
 def_int $macro_event = %macro_event;
 %macro_event = 0;
 if (nc_param(~macro_event_npc($macro_event), follow_player_on_logout) = ^true) {
     ~macro_event_general_spawn($macro_event);
+}
+
+[proc,macro_event_kidnap_login]
+if (~inzone_coord_pair_table(random_event_drill_demon_zones, coord) = true) {
+    %macro_event = ^macro_drill_demon;
+} else if (~inzone_coord_pair_table(random_event_quiz_master_zones, coord) = true) {
+    %macro_event = ^macro_quiz_master;
+} else if (~inzone_coord_pair_table(random_event_evil_bob_zones, coord) = true) {
+    %macro_event = ^macro_evil_bob;
+} else if (~inzone_coord_pair_table(random_event_freaky_forester_zones, coord) = true) {
+    %macro_event = ^macro_freaky_forester;
+} else if (~inzone_coord_pair_table(random_event_lost_and_found_zones, coord) = true) {
+    %macro_event = ^macro_lost_and_found;
+} else {
+    ~macro_pillory_login;
 }
 
 [proc,macro_event_logout]
@@ -93,6 +135,9 @@ if (npc_finduid(%macro_event_uid) = true) {
 }
 
 [proc,macro_event_npc](int $event)(npc)
+if ($event = ^macro_certer) {
+    return(enum(int, npc, macro_certer_npcs, random(enum_getoutputcount(macro_certer_npcs))));
+}
 return(enum(int, npc, general_macro_events, $event));
 
 [proc,macro_event_set_random]()(int)
@@ -106,7 +151,7 @@ if ($random >= ^teleport_macro_start & (random(4) ! 0 | ~wilderness_level(coord)
 }
 
 if(map_members = ^false) {
-    while($random = ^macro_triffidseed) $random = ~random_range(1, sub(^teleport_macro_start, 1));
+    while($random = ^macro_triffidseed | $random = ^macro_jekyll) $random = ~random_range(1, sub(^teleport_macro_start, 1));
 }
 return($random);
 
@@ -231,6 +276,23 @@ if_settabactive(^tab_friends);
 %macro_event = ^no_macro_event;
 %macro_event_target_coord = null;
 %macro_event_uid = null;
+
+[proc,macro_event_kidnap](coord $coord)
+%macro_event_target_coord = coord;
+if_close;
+p_stopaction;
+sound_synth(teleport_all, 1, 0);
+anim(human_castteleport, 0);
+spotanim_pl(teleport_casting, 92, 0);
+p_delay(2);
+p_telejump($coord);
+anim(null, 0);
+
+[proc,macro_event_kidnap_allowed]()(boolean)
+if (~wilderness_level(coord) > 20) {
+    return(false);
+}
+return(true);
 
 [proc,macro_return_teleport]
 if(%macro_event_target_coord = null | map_blocked(%macro_event_target_coord) = true) {

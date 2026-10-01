@@ -22,7 +22,7 @@ if (db_getfield($spell_data, magic_spell_table:loc_type, 0) ! $loc) {
     return;
 }
 if (afk_event = ^true) {
-    ~macro_event_general_spawn(~macro_event_set_random);
+    ~macro_event_magic;
     return;
 }
 def_namedobj $final_obj;

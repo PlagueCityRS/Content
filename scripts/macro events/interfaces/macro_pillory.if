@@ -9,7 +9,7 @@ zoom=410
 xan=6
 yan=5
 
-[com_1]
+[lock]
 type=model
 x=80
 y=98
@@ -19,7 +19,7 @@ model=com_i131
 zoom=358
 xan=528
 
-[com_2]
+[key1]
 type=model
 x=184
 y=227
@@ -30,7 +30,7 @@ anim=pillory_key_rotate
 zoom=422
 xan=565
 
-[com_3]
+[key2]
 type=model
 x=278
 y=227
@@ -41,7 +41,7 @@ anim=pillory_key_rotate
 zoom=422
 xan=565
 
-[com_4]
+[key3]
 type=model
 x=373
 y=227
@@ -52,7 +52,7 @@ anim=pillory_key_rotate
 zoom=422
 xan=565
 
-[com_5]
+[key_button1]
 type=graphic
 x=181
 y=203
@@ -60,7 +60,7 @@ buttontype=normal
 width=46
 height=95
 
-[com_6]
+[key_button2]
 type=graphic
 x=271
 y=204
@@ -68,7 +68,7 @@ buttontype=normal
 width=51
 height=90
 
-[com_7]
+[key_button3]
 type=graphic
 x=370
 y=205
@@ -76,7 +76,7 @@ buttontype=normal
 width=46
 height=96
 
-[com_8]
+[close]
 type=text
 x=473
 y=10
@@ -88,7 +88,7 @@ shadowed=yes
 text=Close
 colour=0xFFFF00
 
-[com_9]
+[padlock1]
 type=model
 x=180
 y=25
@@ -104,7 +104,7 @@ zoom=1200
 xan=498
 yan=9
 
-[com_10]
+[padlock2]
 type=model
 x=230
 y=25
@@ -120,7 +120,7 @@ zoom=1200
 xan=498
 yan=9
 
-[com_11]
+[padlock3]
 type=model
 x=280
 y=25
@@ -136,7 +136,7 @@ zoom=1200
 xan=498
 yan=9
 
-[com_12]
+[padlock4]
 type=model
 x=330
 y=25
@@ -151,7 +151,7 @@ zoom=1200
 xan=498
 yan=9
 
-[com_13]
+[padlock5]
 type=model
 x=380
 y=25
@@ -167,7 +167,7 @@ zoom=1200
 xan=498
 yan=9
 
-[com_14]
+[padlock6]
 type=model
 x=430
 y=25

@@ -148,6 +148,10 @@ if (npc_type = grip) {
     return(~grip_attack);
 }
 
+if (npc_category = macro_pheasant) {
+    return(~macro_freaky_forester_pheasant_attackable);
+}
+
 if(npc_type = ikov_lucien2) {
     return (~lucien_attack);
 } 
@@ -228,6 +232,9 @@ if (npc_type = priestperilguarddog) {
 }
 if (npc_type = grip) {
     return(~grip_attack);
+}
+if (npc_category = macro_pheasant) {
+    return(~macro_freaky_forester_pheasant_attackable);
 }
 if (npc_category = battle_mage & %magearena < ^mage_arena_complete) {
     mes("You are not ready to fight the battle mages.");

@@ -4,3 +4,4 @@ anim(human_pickuptable, 0);
 p_delay(0);
 sound_synth(remove_axe, 0, 0);
 loc_change(rimmington_mining_no_spade, 50);
+inv_add(inv, spade, 1);

@@ -58,6 +58,7 @@ resizey=100
 resizez=90
 blockrange=no
 ambient=20
+category=well
 
 [mortton_sink]
 name=Sink

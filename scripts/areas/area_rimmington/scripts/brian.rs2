@@ -1,0 +1,15 @@
+[opnpc1,salesman_ranging]
+~chatnpc("<p,happy>Would you like to buy some archery equipment?");
+def_int $choice = ~p_choice2(
+    "No thanks, I've got all the archery equipment I need.", 1,
+    "Let's see what you've got, then.", 2
+);
+
+switch_int($choice) {
+    case 1 : @salesman_ranging_no_thanks;
+    case 2 : ~openshop_activenpc;
+}
+
+[label,salesman_ranging_no_thanks]
+~chatplayer("<p,happy>No thanks, I've got all the archery equipment I need.");
+~chatnpc("<p,happy>Okay. Fare well on your travels.");

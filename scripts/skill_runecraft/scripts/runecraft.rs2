@@ -218,5 +218,5 @@ if ($last = tiara & inv_total(inv, $talisman) > 0) {
     ~displaymessage(^dm_default);
     return;
 }
-stat_advance(crafting, db_getfield($data, runecraft_table:tiara_experience, 0));
+stat_advance(runecraft, db_getfield($data, runecraft_table:tiara_experience, 0));
 mes("You bind the power of the talisman into your Tiara.");

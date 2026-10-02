@@ -13225,6 +13225,7 @@ param=shop_sell_multiplier,1200
 param=shop_buy_multiplier,600
 param=shop_delta,30
 param=shop_title,Draynor Seed Market.
+members=yes
 
 [master_farmer_1]
 name=Master Farmer
@@ -20023,7 +20024,6 @@ recol5s=6273
 recol5d=18627
 recol6s=14801
 recol6d=24075
-members=yes
 
 [wom_watchman]
 name=Watchman

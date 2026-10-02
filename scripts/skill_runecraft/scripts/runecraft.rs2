@@ -189,7 +189,7 @@ if ($data = null) {
 def_obj $last = last_useitem;
 def_obj $talisman = db_getfield($data, runecraft_table:talisman, 0);
 def_namedobj $rune = db_getfield($data, runecraft_table:rune, 0);
-def_namedobj $imbued_tiara = db_getfield($data, runecraft_table:tiara, 0);
+def_namedobj $elemental_tiara = db_getfield($data, runecraft_table:tiara, 0);
 if (oc_members($rune) = true) {
     if (map_members = ^false) {
         mes(^mes_members_do_that); // guess
@@ -206,14 +206,14 @@ if ($last = tiara & inv_total(inv, $talisman) < 1) {
 }
 
 if ($last = tiara & inv_total(inv, $talisman) > 0) {
-    // imbued tiara replaces the last used item, rather than going into the first slot
+    // elemental tiara replaces the last used item, rather than going into the first slot
     // https://youtu.be/qwqu630ZRFY?t=115
     // also matches osrs
     inv_del(inv, $talisman, 1);
-    inv_setslot(inv, last_useslot, $imbued_tiara, 1);
+    inv_setslot(inv, last_useslot, $elemental_tiara, 1);
 } else if ($last = $talisman & inv_total(inv, tiara) > 0) {
     inv_del(inv, tiara, 1);
-    inv_setslot(inv, last_useslot, $imbued_tiara, 1);
+    inv_setslot(inv, last_useslot, $elemental_tiara, 1);
 } else if ($last ! $talisman) {
     ~displaymessage(^dm_default);
     return;

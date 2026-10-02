@@ -10,6 +10,8 @@ p_telejump(map_findsquare(db_getfield($data, runecraft_table:exit_coord, random(
 
 [oplocu,_rc_altar]
 switch_obj(last_useitem) {
+    case tiara, air_talisman, mind_talisman, water_talisman, earth_talisman, fire_talisman,
+    body_talisman, cosmic_talisman, chaos_talisman, nature_talisman, law_talisman : @craft_elemental_tiara;
     case blankrune : @runecraft_runes;
     case default : ~displaymessage(^dm_default);
 }
@@ -174,3 +176,47 @@ if ($delta_x < 0 & $delta_z > 0) {
 db_find(runecraft_table:type, $rune_type);
 def_dbrow $data = db_findnext;
 return ($data);
+
+// will need to handle combination runes for members at some point
+// since tiara or talisman can be used on altar to imbue tiara
+// but talismans are also used on altars for combination runes
+[label,craft_elemental_tiara]
+def_dbrow $data = ~get_runecraft_data(loc_param(rune_type));
+if ($data = null) {
+    ~displaymessage(^dm_default);
+    return;
+}
+def_obj $last = last_useitem;
+def_obj $talisman = db_getfield($data, runecraft_table:talisman, 0);
+def_namedobj $rune = db_getfield($data, runecraft_table:rune, 0);
+def_namedobj $elemental_tiara = db_getfield($data, runecraft_table:tiara, 0);
+if (oc_members($rune) = true) {
+    if (map_members = ^false) {
+        mes(^mes_members_do_that); // guess
+        return;
+    }
+}
+
+if ($last = tiara & inv_total(inv, $talisman) < 1) {
+    mes("You need a <db_getfield($data, runecraft_table:name, 0)> Talisman to bind a Tiara here."); // matches osrs
+    return;
+} else if ($last = $talisman & inv_total(inv, tiara) < 1) {
+    mes("You need a Tiara to bind to your talisman."); // matches osrs
+    return;
+}
+
+if ($last = tiara & inv_total(inv, $talisman) > 0) {
+    // elemental tiara replaces the last used item, rather than going into the first slot
+    // https://youtu.be/qwqu630ZRFY?t=115
+    // also matches osrs
+    inv_del(inv, $talisman, 1);
+    inv_setslot(inv, last_useslot, $elemental_tiara, 1);
+} else if ($last = $talisman & inv_total(inv, tiara) > 0) {
+    inv_del(inv, tiara, 1);
+    inv_setslot(inv, last_useslot, $elemental_tiara, 1);
+} else if ($last ! $talisman) {
+    ~displaymessage(^dm_default);
+    return;
+}
+stat_advance(runecraft, db_getfield($data, runecraft_table:tiara_experience, 0));
+mes("You bind the power of the talisman into your Tiara.");

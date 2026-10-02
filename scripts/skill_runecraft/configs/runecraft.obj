@@ -218,3 +218,251 @@ iop4=Locate
 weight=15g
 category=talismans
 param=rune_type,9
+
+[tiara_air]
+name=Air tiara
+recol1s=22198
+recol1d=25368
+desc=A tiara infused with the properties of air.
+model=obj_5527
+iop2=Wear
+wearpos=hat
+weight=1kg
+2dyof=-25
+2dzoom=480
+2dxan=232
+manwear=obj_5527_manwear,0
+womanwear=obj_5527_womanwear,0
+manhead=obj_5527_manhead
+womanhead=obj_5527_manhead
+cost=100
+
+[tiara_mind]
+name=Mind tiara
+recol1s=22198
+recol1d=27316
+desc=A tiara infused with the properties of the mind.
+model=obj_5529
+iop2=Wear
+wearpos=hat
+weight=1kg
+2dyof=-25
+2dzoom=480
+2dxan=232
+manwear=obj_5529_manwear,0
+womanwear=obj_5529_womanwear,0
+manhead=obj_5529_manhead
+womanhead=obj_5529_manhead
+cost=100
+
+[tiara_water]
+name=Water tiara
+recol1s=22198
+recol1d=21176
+desc=A tiara infused with the properties of water.
+model=obj_5531
+iop2=Wear
+wearpos=hat
+weight=1kg
+2dyof=-25
+2dzoom=480
+2dxan=232
+manwear=obj_5531_manwear,0
+womanwear=obj_5531_womanwear,0
+manhead=obj_5531_manhead
+womanhead=obj_5531_manhead
+cost=100
+
+[tiara_body]
+name=Body tiara
+recol1s=22198
+recol1d=20083
+desc=A tiara infused with the properties of the body.
+model=obj_5533
+iop2=Wear
+wearpos=hat
+weight=1kg
+2dyof=-25
+2dzoom=480
+2dxan=232
+manwear=obj_5533_manwear,0
+womanwear=obj_5533_womanwear,0
+manhead=obj_5533_manhead
+womanhead=obj_5533_manhead
+cost=100
+
+[tiara_earth]
+name=Earth tiara
+recol1s=22198
+recol1d=22130
+desc=A tiara infused with the properties of the earth.
+model=obj_5535
+iop2=Wear
+wearpos=hat
+weight=1kg
+2dyof=-25
+2dzoom=480
+2dxan=232
+manwear=obj_5535_manwear,0
+womanwear=obj_5535_womanwear,0
+manhead=obj_5535_manhead
+womanhead=obj_5535_manhead
+cost=100
+
+[tiara_fire]
+name=Fire tiara
+recol1s=22198
+recol1d=24179
+desc=A tiara infused with the properties of fire.
+model=obj_5537
+iop2=Wear
+wearpos=hat
+weight=1kg
+2dyof=-25
+2dzoom=480
+2dxan=232
+manwear=obj_5537_manwear,0
+womanwear=obj_5537_womanwear,0
+manhead=obj_5537_manhead
+womanhead=obj_5537_manhead
+cost=100
+
+[tiara_cosmic]
+name=Cosmic tiara
+recol1s=22198
+recol1d=23252
+desc=A tiara infused with the properties of the cosmos.
+model=obj_5539
+iop2=Wear
+wearpos=hat
+weight=1kg
+2dyof=-25
+2dzoom=480
+2dxan=232
+manwear=obj_5539_manwear,0
+womanwear=obj_5539_womanwear,0
+manhead=obj_5539_manhead
+womanhead=obj_5539_manhead
+members=yes
+cost=100
+
+[tiara_nature]
+name=Nature tiara
+recol1s=22198
+recol1d=21204
+desc=A tiara infused with the properties of nature.
+model=obj_5541
+iop2=Wear
+wearpos=hat
+weight=1kg
+2dyof=-25
+2dzoom=480
+2dxan=232
+manwear=obj_5541_manwear,0
+womanwear=obj_5541_womanwear,0
+manhead=obj_5541_manhead
+womanhead=obj_5541_manhead
+members=yes
+cost=100
+
+[tiara_chaos]
+name=Chaos tiara
+recol1s=22198
+recol1d=24243
+desc=A tiara infused with the properties of chaos.
+model=obj_5543
+iop2=Wear
+wearpos=hat
+weight=1kg
+2dyof=-25
+2dzoom=480
+2dxan=232
+manwear=obj_5543_manwear,0
+womanwear=obj_5543_womanwear,0
+manhead=obj_5543_manhead
+womanhead=obj_5543_manhead
+members=yes
+cost=100
+
+[tiara_law]
+name=Law tiara
+recol1s=22198
+recol1d=21144
+desc=A tiara infused with the properties of law.
+model=obj_5545
+iop2=Wear
+wearpos=hat
+weight=1kg
+2dyof=-25
+2dzoom=480
+2dxan=232
+manwear=obj_5545_manwear,0
+womanwear=obj_5545_womanwear,0
+manhead=obj_5545_manhead
+womanhead=obj_5545_manhead
+members=yes
+cost=100
+tradeable=no
+
+[cert_tiara_law]
+name=Broken tiara
+recol1s=2340
+recol1d=25073
+desc=This tiara has decayed and is useless.
+stackable=yes
+cost=1
+model=obj_5525
+2dyof=1
+2dzoom=1940
+2dxan=572
+
+[tiara_death]
+name=Death tiara
+recol1s=22198
+recol1d=20082
+desc=A tiara infused with the properties of death.
+model=obj_5547
+iop2=Wear
+2dyof=-25
+2dzoom=480
+2dxan=232
+manwear=obj_5547_manwear,0
+womanwear=obj_5547_womanwear,0
+manhead=obj_5547_manhead
+womanhead=obj_5547_manhead
+members=yes
+cost=100
+
+[tiara_blood]
+name=Blood tiara
+recol1s=22198
+recol1d=25270
+desc=A tiara infused with the properties of blood.
+model=obj_5549
+iop2=Wear
+2dyof=-25
+2dzoom=480
+2dxan=232
+manwear=obj_5549_manwear,0
+womanwear=obj_5549_womanwear,0
+manhead=obj_5549_manhead
+womanhead=obj_5549_manhead
+members=yes
+cost=100
+
+[tiara_soul]
+name=Soul tiara
+recol1s=22198
+recol1d=24279
+desc=A tiara infused with the properties of the soul.
+model=obj_5551
+iop2=Wear
+2dyof=-25
+2dzoom=480
+2dxan=232
+manwear=obj_5551_manwear,0
+womanwear=obj_5551_womanwear,0
+manhead=obj_5551_manhead
+womanhead=obj_5551_manhead
+members=yes
+cost=100

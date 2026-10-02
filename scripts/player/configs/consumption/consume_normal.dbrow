@@ -137,7 +137,6 @@ data=consume_sound,eat
 [heal_9]
 table=consume_table
 data=consumable,salmon
-data=consumable,stew
 data=consumable,anchovie_pizza
 data=consumable,half_anchovie_pizza
 data=stat_heal,hitpoints,9,0

@@ -25,7 +25,7 @@ if (%action_delay < map_clock) {
 }
 
 if (%temple_resources > 100 | (inv_total(inv,woodplank) > 0 & inv_total(inv,swamppaste) > 4 & inv_total(inv,limestonebrick) > 0)) {
-    if_openoverlay(flamtaer_status);
+    if_openoverlay(temple_screen);
     anim(human_pickuptable, 0);
     p_oploc(3);
 } else {

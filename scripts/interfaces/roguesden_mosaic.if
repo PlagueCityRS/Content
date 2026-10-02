@@ -38,7 +38,7 @@ text=Close Window
 colour=0xFFFFFF
 activecolour=0xFFFF00
 
-[com_4]
+[roguesden_puzzle_mosaic_tile1]
 type=model
 x=366
 y=187
@@ -51,7 +51,7 @@ activemodel=com_i344
 zoom=1046
 xan=500
 
-[com_5]
+[roguesden_puzzle_mosaic_tile2]
 type=model
 x=365
 y=45
@@ -64,7 +64,7 @@ activemodel=com_i345
 zoom=1046
 xan=500
 
-[com_6]
+[roguesden_puzzle_mosaic_tile3]
 type=model
 x=46
 y=47
@@ -77,7 +77,7 @@ activemodel=com_i346
 zoom=1046
 xan=500
 
-[com_7]
+[roguesden_puzzle_mosaic_tile4]
 type=model
 x=42
 y=189

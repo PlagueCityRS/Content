@@ -25,7 +25,7 @@ height=282
 fill=yes
 colour=0x543E04
 
-[com_3]
+[ics_game_background]
 type=model
 x=78
 y=167
@@ -34,7 +34,7 @@ height=94
 model=com_i88
 zoom=328
 
-[com_4]
+[ics_1]
 type=model
 x=62
 y=130
@@ -45,7 +45,7 @@ model=com_i89
 zoom=328
 option=turn tile
 
-[com_5]
+[ics_2]
 type=model
 x=93
 y=131
@@ -56,7 +56,7 @@ model=com_i90
 zoom=328
 option=turn tile
 
-[com_6]
+[ics_3]
 type=model
 x=124
 y=131
@@ -67,7 +67,7 @@ model=com_i91
 zoom=328
 option=turn tile
 
-[com_7]
+[ics_4]
 type=model
 x=154
 y=131
@@ -78,7 +78,7 @@ model=com_i92
 zoom=328
 option=turn tile
 
-[com_8]
+[ics_5]
 type=model
 x=186
 y=131
@@ -89,7 +89,7 @@ model=com_i93
 zoom=328
 option=turn tile
 
-[com_9]
+[ics_6]
 type=model
 x=63
 y=162
@@ -100,7 +100,7 @@ model=com_i94
 zoom=328
 option=turn tile
 
-[com_10]
+[ics_7]
 type=model
 x=93
 y=162
@@ -111,7 +111,7 @@ model=com_i95
 zoom=328
 option=turn tile
 
-[com_11]
+[ics_8]
 type=model
 x=123
 y=162
@@ -122,7 +122,7 @@ model=com_i96
 zoom=328
 option=turn tile
 
-[com_12]
+[ics_9]
 type=model
 x=154
 y=162
@@ -133,7 +133,7 @@ model=com_i97
 zoom=328
 option=turn tile
 
-[com_13]
+[ics_10]
 type=model
 x=186
 y=162
@@ -144,7 +144,7 @@ model=com_i98
 zoom=328
 option=turn tile
 
-[com_14]
+[ics_11]
 type=model
 x=63
 y=192
@@ -155,7 +155,7 @@ model=com_i99
 zoom=328
 option=turn tile
 
-[com_15]
+[ics_12]
 type=model
 x=93
 y=192
@@ -166,7 +166,7 @@ model=com_i100
 zoom=328
 option=turn tile
 
-[com_16]
+[ics_13]
 type=model
 x=123
 y=192
@@ -177,7 +177,7 @@ model=com_i101
 zoom=328
 option=turn tile
 
-[com_17]
+[ics_14]
 type=model
 x=154
 y=192
@@ -188,7 +188,7 @@ model=com_i102
 zoom=328
 option=turn tile
 
-[com_18]
+[ics_15]
 type=model
 x=185
 y=192
@@ -199,7 +199,7 @@ model=com_i103
 zoom=328
 option=turn tile
 
-[com_19]
+[ics_16]
 type=model
 x=63
 y=222
@@ -210,7 +210,7 @@ model=com_i104
 zoom=328
 option=turn tile
 
-[com_20]
+[ics_17]
 type=model
 x=93
 y=222
@@ -221,7 +221,7 @@ model=com_i105
 zoom=328
 option=turn tile
 
-[com_21]
+[ics_18]
 type=model
 x=123
 y=222
@@ -232,7 +232,7 @@ model=com_i106
 zoom=328
 option=turn tile
 
-[com_22]
+[ics_19]
 type=model
 x=154
 y=222
@@ -243,7 +243,7 @@ model=com_i107
 zoom=328
 option=turn tile
 
-[com_23]
+[ics_20]
 type=model
 x=186
 y=222
@@ -254,7 +254,7 @@ model=com_i108
 zoom=328
 option=turn tile
 
-[com_24]
+[ics_21]
 type=model
 x=63
 y=254
@@ -265,7 +265,7 @@ model=com_i109
 zoom=328
 option=turn tile
 
-[com_25]
+[ics_22]
 type=model
 x=93
 y=254
@@ -276,7 +276,7 @@ model=com_i110
 zoom=328
 option=turn tile
 
-[com_26]
+[ics_23]
 type=model
 x=124
 y=253
@@ -287,7 +287,7 @@ model=com_i111
 zoom=328
 option=turn tile
 
-[com_27]
+[ics_24]
 type=model
 x=154
 y=253
@@ -298,7 +298,7 @@ model=com_i112
 zoom=328
 option=turn tile
 
-[com_28]
+[ics_25]
 type=model
 x=185
 y=254
@@ -309,7 +309,7 @@ model=com_i113
 zoom=328
 option=turn tile
 
-[com_29]
+[ics_tilegame_picture]
 type=model
 x=313
 y=145
@@ -322,7 +322,7 @@ xan=2036
 yan=2
 option=Reset puzzle
 
-[com_30]
+[ics_tilegame_counter]
 type=model
 x=343
 y=89

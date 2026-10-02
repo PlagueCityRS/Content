@@ -713,7 +713,7 @@ shadowed=yes
 text=Teleport Option
 colour=0xFFFF00
 
-[com_89]
+[casters_name]
 type=text
 x=164
 y=108
@@ -736,7 +736,7 @@ shadowed=yes
 text=...wants to teleport you to...
 colour=0xFFFF00
 
-[com_91]
+[teleport_location]
 type=text
 x=164
 y=168
@@ -783,7 +783,7 @@ y=255
 width=87
 height=52
 
-[com_97]
+[teleport_accept]
 layer=com_95
 type=rect
 x=10
@@ -860,15 +860,15 @@ width=36
 height=36
 graphic=miscgraphics,3
 
-[com_96]
+[nl]
 type=layer
 x=267
 y=255
 width=88
 height=52
 
-[com_99]
-layer=com_96
+[teleport_decline]
+layer=nl
 type=rect
 x=10
 y=10
@@ -879,7 +879,7 @@ fill=yes
 option=Decline
 
 [com_100]
-layer=com_96
+layer=nl
 type=text
 x=24
 y=18
@@ -891,7 +891,7 @@ text=Decline
 colour=0xC00000
 
 [com_102]
-layer=com_96
+layer=nl
 type=graphic
 x=25
 y=-11
@@ -900,7 +900,7 @@ height=36
 graphic=steelborder2,0
 
 [com_103]
-layer=com_96
+layer=nl
 type=graphic
 x=27
 y=26
@@ -909,7 +909,7 @@ height=36
 graphic=miscgraphics,3
 
 [com_105]
-layer=com_96
+layer=nl
 type=graphic
 x=4
 y=4
@@ -918,7 +918,7 @@ height=30
 graphic=steelborder,0
 
 [com_107]
-layer=com_96
+layer=nl
 type=graphic
 x=57
 y=4
@@ -927,7 +927,7 @@ height=30
 graphic=steelborder,1
 
 [com_109]
-layer=com_96
+layer=nl
 type=graphic
 x=4
 y=17
@@ -936,7 +936,7 @@ height=30
 graphic=steelborder,2
 
 [com_112]
-layer=com_96
+layer=nl
 type=graphic
 x=57
 y=17

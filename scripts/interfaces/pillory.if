@@ -1,4 +1,4 @@
-[com_0]
+[backdrop]
 type=model
 x=115
 y=189
@@ -9,7 +9,7 @@ zoom=410
 xan=6
 yan=5
 
-[com_1]
+[pillory_lock]
 type=model
 x=80
 y=98
@@ -19,7 +19,7 @@ model=com_i131
 zoom=358
 xan=528
 
-[com_2]
+[pillory_key1]
 type=model
 x=184
 y=227
@@ -30,7 +30,7 @@ anim=pillory_key_rotate
 zoom=422
 xan=565
 
-[com_3]
+[pillory_key2]
 type=model
 x=278
 y=227
@@ -41,7 +41,7 @@ anim=pillory_key_rotate
 zoom=422
 xan=565
 
-[com_4]
+[pillory_key3]
 type=model
 x=373
 y=227
@@ -76,7 +76,7 @@ buttontype=normal
 width=46
 height=96
 
-[com_8]
+[pillory_close]
 type=text
 x=473
 y=10
@@ -88,7 +88,7 @@ shadowed=yes
 text=Close
 colour=0xFFFF00
 
-[com_9]
+[pillory_lock_done_1]
 type=model
 x=180
 y=25
@@ -104,7 +104,7 @@ zoom=1200
 xan=498
 yan=9
 
-[com_10]
+[pillory_lock_done_2]
 type=model
 x=230
 y=25
@@ -120,7 +120,7 @@ zoom=1200
 xan=498
 yan=9
 
-[com_11]
+[pillory_lock_done_3]
 type=model
 x=280
 y=25
@@ -136,7 +136,7 @@ zoom=1200
 xan=498
 yan=9
 
-[com_12]
+[pillory_lock_done_4]
 type=model
 x=330
 y=25
@@ -151,7 +151,7 @@ zoom=1200
 xan=498
 yan=9
 
-[com_13]
+[pillory_lock_done_5]
 type=model
 x=380
 y=25
@@ -167,7 +167,7 @@ zoom=1200
 xan=498
 yan=9
 
-[com_14]
+[pillory_lock_done_6]
 type=model
 x=430
 y=25

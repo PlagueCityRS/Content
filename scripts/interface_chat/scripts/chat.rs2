@@ -236,34 +236,34 @@ if ($lines = 0) {
     return;
 } else if ($lines = 1) {
     $interface = chat1;
-    if_setplayerhead(chat1:com_0);
-    if_setanim(chat1:com_0, split_getanim($page));
-    if_settext(chat1:com_1, displayname);
-    if_settext(chat1:com_2, split_get($page, 0));
+    if_setplayerhead(chat1:chat1head);
+    if_setanim(chat1:chat1head, split_getanim($page));
+    if_settext(chat1:chat1name, displayname);
+    if_settext(chat1:chat1a, split_get($page, 0));
 } else if ($lines = 2) {
     $interface = chat2;
-    if_setplayerhead(chat2:com_0);
-    if_setanim(chat2:com_0, split_getanim($page));
-    if_settext(chat2:com_1, displayname);
-    if_settext(chat2:com_2, split_get($page, 0));
-    if_settext(chat2:com_3, split_get($page, 1));
+    if_setplayerhead(chat2:chat2head);
+    if_setanim(chat2:chat2head, split_getanim($page));
+    if_settext(chat2:chat2name, displayname);
+    if_settext(chat2:chat2a, split_get($page, 0));
+    if_settext(chat2:chat2b, split_get($page, 1));
 } else if ($lines = 3) {
     $interface = chat3;
-    if_setplayerhead(chat3:com_0);
-    if_setanim(chat3:com_0, split_getanim($page));
-    if_settext(chat3:com_1, displayname);
-    if_settext(chat3:com_2, split_get($page, 0));
-    if_settext(chat3:com_3, split_get($page, 1));
-    if_settext(chat3:com_4, split_get($page, 2));
+    if_setplayerhead(chat3:chat3head);
+    if_setanim(chat3:chat3head, split_getanim($page));
+    if_settext(chat3:chat3name, displayname);
+    if_settext(chat3:chat3a, split_get($page, 0));
+    if_settext(chat3:chat3b, split_get($page, 1));
+    if_settext(chat3:chat3c, split_get($page, 2));
 } else if ($lines = 4) {
     $interface = chat4;
-    if_setplayerhead(chat4:com_0);
-    if_setanim(chat4:com_0, split_getanim($page));
-    if_settext(chat4:com_1, displayname);
-    if_settext(chat4:com_2, split_get($page, 0));
-    if_settext(chat4:com_3, split_get($page, 1));
-    if_settext(chat4:com_4, split_get($page, 2));
-    if_settext(chat4:com_5, split_get($page, 3));
+    if_setplayerhead(chat4:chat4head);
+    if_setanim(chat4:chat4head, split_getanim($page));
+    if_settext(chat4:chat4name, displayname);
+    if_settext(chat4:chat4a, split_get($page, 0));
+    if_settext(chat4:chat4b, split_get($page, 1));
+    if_settext(chat4:chat4c, split_get($page, 2));
+    if_settext(chat4:chat4d, split_get($page, 3));
 }
 
 if_openchat($interface);
@@ -289,34 +289,34 @@ if ($lines = 0) {
     return;
 } else if ($lines = 1) {
     $interface = npcchat1;
-    if_setnpchead(npcchat1:com_0, $npc);
-    if_setanim(npcchat1:com_0, split_getanim($page));
-    if_settext(npcchat1:com_1, $npc_name);
-    if_settext(npcchat1:com_2, split_get($page, 0));
+    if_setnpchead(npcchat1:npcchat1head, $npc);
+    if_setanim(npcchat1:npcchat1head, split_getanim($page));
+    if_settext(npcchat1:npcchat1name, $npc_name);
+    if_settext(npcchat1:npcchat1a, split_get($page, 0));
 } else if ($lines < 3) {
     $interface = npcchat2;
-    if_setnpchead(npcchat2:com_0, $npc);
-    if_setanim(npcchat2:com_0, split_getanim($page));
-    if_settext(npcchat2:com_1, $npc_name);
-    if_settext(npcchat2:com_2, split_get($page, 0));
-    if_settext(npcchat2:com_3, split_get($page, 1));
+    if_setnpchead(npcchat2:npcchat2head, $npc);
+    if_setanim(npcchat2:npcchat2head, split_getanim($page));
+    if_settext(npcchat2:npcchat2name, $npc_name);
+    if_settext(npcchat2:npcchat2a, split_get($page, 0));
+    if_settext(npcchat2:npcchat2b, split_get($page, 1));
 } else if ($lines = 3) {
     $interface = npcchat3;
-    if_setnpchead(npcchat3:com_0, $npc);
-    if_setanim(npcchat3:com_0, split_getanim($page));
-    if_settext(npcchat3:com_1, $npc_name);
-    if_settext(npcchat3:com_2, split_get($page, 0));
-    if_settext(npcchat3:com_3, split_get($page, 1));
-    if_settext(npcchat3:com_4, split_get($page, 2));
+    if_setnpchead(npcchat3:npcchat3head, $npc);
+    if_setanim(npcchat3:npcchat3head, split_getanim($page));
+    if_settext(npcchat3:npcchat3name, $npc_name);
+    if_settext(npcchat3:npcchat3a, split_get($page, 0));
+    if_settext(npcchat3:npcchat3b, split_get($page, 1));
+    if_settext(npcchat3:npcchat3c, split_get($page, 2));
 } else if ($lines = 4) {
     $interface = npcchat4;
-    if_setnpchead(npcchat4:com_0, $npc);
-    if_setanim(npcchat4:com_0, split_getanim($page));
-    if_settext(npcchat4:com_1, $npc_name);
-    if_settext(npcchat4:com_2, split_get($page, 0));
-    if_settext(npcchat4:com_3, split_get($page, 1));
-    if_settext(npcchat4:com_4, split_get($page, 2));
-    if_settext(npcchat4:com_5, split_get($page, 3));
+    if_setnpchead(npcchat4:npcchat4head, $npc);
+    if_setanim(npcchat4:npcchat4head, split_getanim($page));
+    if_settext(npcchat4:npcchat4name, $npc_name);
+    if_settext(npcchat4:npcchat4a, split_get($page, 0));
+    if_settext(npcchat4:npcchat4b, split_get($page, 1));
+    if_settext(npcchat4:npcchat4c, split_get($page, 2));
+    if_settext(npcchat4:npcchat4d, split_get($page, 3));
 }
 if_openchat($interface);
 
@@ -410,29 +410,29 @@ if ($lines = 0) {
     return;
 } else if ($lines = 1) {
     $interface = message1;
-    if_settext(message1:com_0, split_get($page, 0));
+    if_settext(message1:mes1a, split_get($page, 0));
 } else if ($lines = 2) {
     $interface = message2;
-    if_settext(message2:com_0, split_get($page, 0));
-    if_settext(message2:com_1, split_get($page, 1));
+    if_settext(message2:mes2a, split_get($page, 0));
+    if_settext(message2:mes2b, split_get($page, 1));
 } else if ($lines = 3) {
     $interface = message3;
-    if_settext(message3:com_0, split_get($page, 0));
-    if_settext(message3:com_1, split_get($page, 1));
-    if_settext(message3:com_2, split_get($page, 2));
+    if_settext(message3:mes3a, split_get($page, 0));
+    if_settext(message3:mes3b, split_get($page, 1));
+    if_settext(message3:mes3c, split_get($page, 2));
 } else if ($lines = 4) {
     $interface = message4;
-    if_settext(message4:com_0, split_get($page, 0));
-    if_settext(message4:com_1, split_get($page, 1));
-    if_settext(message4:com_2, split_get($page, 2));
-    if_settext(message4:com_3, split_get($page, 3));
+    if_settext(message4:mes4a, split_get($page, 0));
+    if_settext(message4:mes4b, split_get($page, 1));
+    if_settext(message4:mes4c, split_get($page, 2));
+    if_settext(message4:mes4d, split_get($page, 3));
 } else if ($lines = 5) {
     $interface = message5;
-    if_settext(message5:com_0, split_get($page, 0));
-    if_settext(message5:com_1, split_get($page, 1));
-    if_settext(message5:com_2, split_get($page, 2));
-    if_settext(message5:com_3, split_get($page, 3));
-    if_settext(message5:com_4, split_get($page, 4));
+    if_settext(message5:mes5a, split_get($page, 0));
+    if_settext(message5:mes5b, split_get($page, 1));
+    if_settext(message5:mes5c, split_get($page, 2));
+    if_settext(message5:mes5d, split_get($page, 3));
+    if_settext(message5:mes5e, split_get($page, 4));
 }
 if_openchat($interface);
 
@@ -455,29 +455,29 @@ if ($lines = 0) {
     return;
 } else if ($lines = 1) {
     $interface = message1;
-    .if_settext(message1:com_0, split_get($page, 0));
+    .if_settext(message1:mes1a, split_get($page, 0));
 } else if ($lines = 2) {
     $interface = message2;
-    .if_settext(message2:com_0, split_get($page, 0));
-    .if_settext(message2:com_1, split_get($page, 1));
+    .if_settext(message2:mes2a, split_get($page, 0));
+    .if_settext(message2:mes2b, split_get($page, 1));
 } else if ($lines = 3) {
     $interface = message3;
-    .if_settext(message3:com_0, split_get($page, 0));
-    .if_settext(message3:com_1, split_get($page, 1));
-    .if_settext(message3:com_2, split_get($page, 2));
+    .if_settext(message3:mes3a, split_get($page, 0));
+    .if_settext(message3:mes3b, split_get($page, 1));
+    .if_settext(message3:mes3c, split_get($page, 2));
 } else if ($lines = 4) {
     $interface = message4;
-    .if_settext(message4:com_0, split_get($page, 0));
-    .if_settext(message4:com_1, split_get($page, 1));
-    .if_settext(message4:com_2, split_get($page, 2));
-    .if_settext(message4:com_3, split_get($page, 3));
+    .if_settext(message4:mes4a, split_get($page, 0));
+    .if_settext(message4:mes4b, split_get($page, 1));
+    .if_settext(message4:mes4c, split_get($page, 2));
+    .if_settext(message4:mes4d, split_get($page, 3));
 } else if ($lines = 5) {
     $interface = message5;
-    .if_settext(message5:com_0, split_get($page, 0));
-    .if_settext(message5:com_1, split_get($page, 1));
-    .if_settext(message5:com_2, split_get($page, 2));
-    .if_settext(message5:com_3, split_get($page, 3));
-    .if_settext(message5:com_4, split_get($page, 4));
+    .if_settext(message5:mes5a, split_get($page, 0));
+    .if_settext(message5:mes5b, split_get($page, 1));
+    .if_settext(message5:mes5c, split_get($page, 2));
+    .if_settext(message5:mes5d, split_get($page, 3));
+    .if_settext(message5:mes5e, split_get($page, 4));
 }
 .if_openchat($interface);
 
@@ -1128,34 +1128,34 @@ if ($lines = 0) {
     return;
 } else if ($lines = 1) {
     $interface = npcchat1;
-    if_setmodel(npcchat1:com_0, $chathead);
-    if_setanim(npcchat1:com_0, split_getanim($page));
-    if_settext(npcchat1:com_1, $npc_name);
-    if_settext(npcchat1:com_2, split_get($page, 0));
+    if_setmodel(npcchat1:npcchat1head, $chathead);
+    if_setanim(npcchat1:npcchat1head, split_getanim($page));
+    if_settext(npcchat1:npcchat1name, $npc_name);
+    if_settext(npcchat1:npcchat1a, split_get($page, 0));
 } else if ($lines < 3) {
     $interface = npcchat2;
-    if_setmodel(npcchat2:com_0, $chathead);
-    if_setanim(npcchat2:com_0, split_getanim($page));
-    if_settext(npcchat2:com_1, $npc_name);
-    if_settext(npcchat2:com_2, split_get($page, 0));
-    if_settext(npcchat2:com_3, split_get($page, 1));
+    if_setmodel(npcchat2:npcchat2head, $chathead);
+    if_setanim(npcchat2:npcchat2head, split_getanim($page));
+    if_settext(npcchat2:npcchat2name, $npc_name);
+    if_settext(npcchat2:npcchat2a, split_get($page, 0));
+    if_settext(npcchat2:npcchat2b, split_get($page, 1));
 } else if ($lines = 3) {
     $interface = npcchat3;
-    if_setmodel(npcchat3:com_0, $chathead);
-    if_setanim(npcchat3:com_0, split_getanim($page));
-    if_settext(npcchat3:com_1, $npc_name);
-    if_settext(npcchat3:com_2, split_get($page, 0));
-    if_settext(npcchat3:com_3, split_get($page, 1));
-    if_settext(npcchat3:com_4, split_get($page, 2));
+    if_setmodel(npcchat3:npcchat3head, $chathead);
+    if_setanim(npcchat3:npcchat3head, split_getanim($page));
+    if_settext(npcchat3:npcchat3name, $npc_name);
+    if_settext(npcchat3:npcchat3a, split_get($page, 0));
+    if_settext(npcchat3:npcchat3b, split_get($page, 1));
+    if_settext(npcchat3:npcchat3c, split_get($page, 2));
 } else if ($lines = 4) {
     $interface = npcchat4;
-    if_setmodel(npcchat4:com_0, $chathead);
-    if_setanim(npcchat4:com_0, split_getanim($page));
-    if_settext(npcchat4:com_1, $npc_name);
-    if_settext(npcchat4:com_2, split_get($page, 0));
-    if_settext(npcchat4:com_3, split_get($page, 1));
-    if_settext(npcchat4:com_4, split_get($page, 2));
-    if_settext(npcchat4:com_5, split_get($page, 3));
+    if_setmodel(npcchat4:npcchat4head, $chathead);
+    if_setanim(npcchat4:npcchat4head, split_getanim($page));
+    if_settext(npcchat4:npcchat4name, $npc_name);
+    if_settext(npcchat4:npcchat4a, split_get($page, 0));
+    if_settext(npcchat4:npcchat4b, split_get($page, 1));
+    if_settext(npcchat4:npcchat4c, split_get($page, 2));
+    if_settext(npcchat4:npcchat4d, split_get($page, 3));
 }
 if_openchat($interface);
 
@@ -1176,23 +1176,23 @@ if ($lines = 0) {
     return;
 } 
 if ($lines < 3) {
-    if_setnpchead(inter_213:com_0, $npc);
-    if_setanim(inter_213:com_0, split_getanim($page));
-    if_settext(inter_213:com_1, $npc_name);
-    if_settext(inter_213:com_2, "");
-    if_settext(inter_213:com_3, split_get($page, 0));
-    if_settext(inter_213:com_4, split_get($page, 1));
-    if_settext(inter_213:com_5, "");
+    if_setnpchead(mm_message:mm_message_close_button, $npc);
+    if_setanim(mm_message:mm_message_close_button, split_getanim($page));
+    if_settext(mm_message:com_1, $npc_name);
+    if_settext(mm_message:mm_mstitle, "");
+    if_settext(mm_message:mm_ms1, split_get($page, 0));
+    if_settext(mm_message:mm_ms2, split_get($page, 1));
+    if_settext(mm_message:mm_ms3, "");
 } else if ($lines > 2) {
-    if_setnpchead(inter_213:com_0, $npc);
-    if_setanim(inter_213:com_0, split_getanim($page));
-    if_settext(inter_213:com_1, $npc_name);
-    if_settext(inter_213:com_2, split_get($page, 0));
-    if_settext(inter_213:com_3, split_get($page, 1));
-    if_settext(inter_213:com_4, split_get($page, 2));
-    if_settext(inter_213:com_5, split_get($page, 3));
+    if_setnpchead(mm_message:mm_message_close_button, $npc);
+    if_setanim(mm_message:mm_message_close_button, split_getanim($page));
+    if_settext(mm_message:com_1, $npc_name);
+    if_settext(mm_message:mm_mstitle, split_get($page, 0));
+    if_settext(mm_message:mm_ms1, split_get($page, 1));
+    if_settext(mm_message:mm_ms2, split_get($page, 2));
+    if_settext(mm_message:mm_ms3, split_get($page, 3));
 }
-if_openchat(inter_213);
+if_openchat(mm_message);
 
 [proc,chatnc_cutscene](string $npc_name, npc $npc, string $string)
 split_init($string, 380, 4, q8_full);

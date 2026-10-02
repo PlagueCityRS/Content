@@ -1,4 +1,4 @@
-[com_0]
+[garden_quiz_a]
 type=text
 x=31
 y=42
@@ -9,7 +9,7 @@ font=p12_full
 text=option1
 overcolour=0x00C000
 
-[com_1]
+[garden_quiz_b]
 type=text
 x=31
 y=60
@@ -20,7 +20,7 @@ font=p12_full
 text=option1
 overcolour=0x00C000
 
-[com_2]
+[garden_quiz_c]
 type=text
 x=31
 y=78
@@ -64,7 +64,7 @@ font=p12_full
 text=[C]
 colour=0x0000FF
 
-[com_6]
+[garden_quiz_title_1]
 type=text
 x=38
 y=5
@@ -73,7 +73,7 @@ height=14
 font=p12_full
 colour=0x800000
 
-[com_7]
+[garden_quiz_title_2]
 type=text
 x=38
 y=21
@@ -82,7 +82,7 @@ height=14
 font=p12_full
 colour=0x800000
 
-[com_8]
+[garden_quiz_number]
 type=text
 x=4
 y=5

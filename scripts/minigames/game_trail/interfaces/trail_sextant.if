@@ -1,4 +1,4 @@
-[com_0]
+[sextant_backing]
 type=model
 x=273
 y=70
@@ -8,7 +8,7 @@ model=com_i139
 zoom=162
 xan=500
 
-[com_1]
+[sextant_horizon]
 type=model
 x=419
 y=141
@@ -18,7 +18,7 @@ model=com_i140
 zoom=353
 xan=500
 
-[com_2]
+[sextant_sun]
 type=model
 x=419
 y=141
@@ -28,7 +28,7 @@ model=com_i141
 zoom=898
 xan=500
 
-[com_3]
+[sextant_viewer]
 type=model
 x=419
 y=141
@@ -51,7 +51,7 @@ text=Close Window
 colour=0x505050
 overcolour=0xFFFFFF
 
-[com_5]
+[sextant_tilt_up]
 type=model
 x=313
 y=275
@@ -63,7 +63,7 @@ zoom=1389
 xan=275
 yan=2029
 
-[com_6]
+[sextant_tilt_down]
 type=model
 x=315
 y=13
@@ -75,7 +75,7 @@ zoom=1418
 xan=478
 yan=14
 
-[com_7]
+[sextant_arm_right]
 type=model
 x=258
 y=258
@@ -87,7 +87,7 @@ zoom=1228
 xan=300
 yan=285
 
-[com_8]
+[sextant_arm_left]
 type=model
 x=21
 y=264
@@ -99,7 +99,7 @@ zoom=1219
 xan=308
 yan=695
 
-[com_9]
+[sextant_back]
 type=model
 x=152
 y=180
@@ -109,7 +109,7 @@ model=com_i146
 zoom=566
 xan=500
 
-[com_10]
+[sextant_arm]
 type=model
 x=152
 y=180
@@ -119,7 +119,7 @@ model=com_i147
 zoom=566
 xan=500
 
-[com_11]
+[sextant_foreground]
 type=model
 x=152
 y=180
@@ -129,7 +129,7 @@ model=com_i148
 zoom=566
 xan=500
 
-[get_location]
+[sextant_location]
 type=text
 x=131
 y=313

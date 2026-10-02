@@ -1,4 +1,4 @@
-[com_0]
+[ratcatcher_music_scroll]
 type=model
 x=219
 y=135
@@ -8,7 +8,7 @@ model=com_i269
 zoom=874
 xan=492
 
-[com_1]
+[close_button]
 type=text
 x=419
 y=13
@@ -20,7 +20,7 @@ shadowed=yes
 text=Close Window
 colour=0xFFFF00
 
-[com_2]
+[ratcatcher_flute_music1]
 type=model
 x=74
 y=76
@@ -30,7 +30,7 @@ model=com_i539
 zoom=400
 xan=512
 
-[com_3]
+[ratcatcher_flute_music2]
 type=model
 x=119
 y=82
@@ -40,7 +40,7 @@ model=com_i539
 zoom=400
 xan=512
 
-[com_4]
+[ratcatcher_flute_music3]
 type=model
 x=168
 y=77
@@ -50,7 +50,7 @@ model=com_i539
 zoom=400
 xan=512
 
-[com_5]
+[ratcatcher_flute_music4]
 type=model
 x=216
 y=71
@@ -60,7 +60,7 @@ model=com_i539
 zoom=400
 xan=512
 
-[com_6]
+[ratcatcher_flute_music5]
 type=model
 x=266
 y=71
@@ -70,7 +70,7 @@ model=com_i539
 zoom=400
 xan=512
 
-[com_7]
+[ratcatcher_flute_music6]
 type=model
 x=316
 y=76
@@ -80,7 +80,7 @@ model=com_i539
 zoom=400
 xan=512
 
-[com_8]
+[ratcatcher_flute_music7]
 type=model
 x=359
 y=81
@@ -90,7 +90,7 @@ model=com_i539
 zoom=400
 xan=512
 
-[com_9]
+[ratcatcher_flute_music8]
 type=model
 x=404
 y=84
@@ -100,7 +100,7 @@ model=com_i539
 zoom=400
 xan=512
 
-[com_10]
+[rc_m1]
 type=model
 x=74
 y=81
@@ -110,7 +110,7 @@ model=com_i543
 zoom=400
 xan=512
 
-[com_11]
+[rc_m2]
 type=model
 x=119
 y=87
@@ -120,7 +120,7 @@ model=com_i549
 zoom=400
 xan=512
 
-[com_12]
+[rc_m3]
 type=model
 x=168
 y=83
@@ -130,7 +130,7 @@ model=com_i545
 zoom=400
 xan=512
 
-[com_13]
+[rc_m4]
 type=model
 x=216
 y=76
@@ -140,7 +140,7 @@ model=com_i547
 zoom=400
 xan=512
 
-[com_14]
+[rc_m5]
 type=model
 x=266
 y=77
@@ -150,7 +150,7 @@ model=com_i543
 zoom=400
 xan=512
 
-[com_15]
+[rc_m6]
 type=model
 x=316
 y=81
@@ -160,7 +160,7 @@ model=com_i553
 zoom=400
 xan=512
 
-[com_16]
+[rc_m7]
 type=model
 x=359
 y=85
@@ -170,7 +170,7 @@ model=com_i555
 zoom=400
 xan=512
 
-[com_17]
+[rc_m8]
 type=model
 x=404
 y=89
@@ -180,7 +180,7 @@ model=com_i551
 zoom=400
 xan=512
 
-[com_18]
+[rc_music_sharp]
 type=model
 x=272
 y=39

@@ -714,7 +714,7 @@ shadowed=yes
 text=Catapult Controls
 colour=0xFFAA44
 
-[com_89]
+[castlewars_catapult_close_button]
 type=text
 x=425
 y=29
@@ -1104,7 +1104,7 @@ model=obj_4058
 zoom=1209
 xan=512
 
-[com_151]
+[castlewars_z_up]
 layer=com_131
 type=model
 x=121
@@ -1116,7 +1116,7 @@ model=com_i273
 zoom=1379
 xan=512
 
-[com_152]
+[castlewars_z_down]
 layer=com_131
 type=model
 x=125
@@ -1289,7 +1289,7 @@ zoom=1209
 xan=474
 yan=2020
 
-[com_153]
+[castlewars_x_up]
 layer=com_132
 type=model
 x=82
@@ -1302,7 +1302,7 @@ zoom=1379
 xan=512
 yan=512
 
-[com_154]
+[castlewars_x_down]
 layer=com_132
 type=model
 x=16
@@ -1350,7 +1350,7 @@ shadowed=yes
 text=Fire Catapult
 colour=0xFFAA44
 
-[com_159]
+[castlewars_catapult_fire]
 type=graphic
 x=383
 y=269

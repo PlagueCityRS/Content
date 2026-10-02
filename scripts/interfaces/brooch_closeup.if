@@ -609,7 +609,7 @@ zoom=133
 xan=360
 yan=1975
 
-[com_76]
+[brooch1]
 type=text
 x=231
 y=29
@@ -621,7 +621,7 @@ shadowed=yes
 text=Brooch
 colour=0xFF981F
 
-[com_77]
+[brooch_closeup_close_button]
 type=text
 x=420
 y=29

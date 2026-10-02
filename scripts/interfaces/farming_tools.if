@@ -538,7 +538,7 @@ shadowed=yes
 text=Amazing Farming Equipment Store
 colour=0x7DD764
 
-[com_67]
+[farming_tools_1]
 type=inv
 x=168
 y=104
@@ -547,7 +547,7 @@ height=2
 margin=64,32
 option1=Remove
 
-[com_68]
+[farming_tools_2]
 type=inv
 x=168
 y=232
@@ -559,7 +559,7 @@ option2=Remove 5
 option3=Remove All
 option4=Remove X
 
-[com_69]
+[farming_tools_close]
 type=text
 x=436
 y=8

@@ -142,7 +142,7 @@ width=36
 height=36
 graphic=miscgraphics,3
 
-[com_18]
+[dr_text_sc1]
 type=text
 x=92
 y=179
@@ -154,7 +154,7 @@ text=Schematic 1
 colour=0xAA8822
 activecolour=0xAA3322
 
-[com_19]
+[dr_text_sc2]
 type=text
 x=92
 y=199
@@ -166,7 +166,7 @@ text=Schematic 2
 colour=0xAA8822
 activecolour=0xAA3322
 
-[com_20]
+[dr_text_sc3]
 type=text
 x=92
 y=219
@@ -178,7 +178,7 @@ text=Schematic 3
 colour=0xAA8822
 activecolour=0xAA3322
 
-[com_21]
+[dr_text_hide]
 type=text
 x=29
 y=159
@@ -189,7 +189,7 @@ shadowed=yes
 text=Show/Select
 colour=0xAA8822
 
-[com_22]
+[f4_select1]
 type=graphic
 x=70
 y=179
@@ -202,7 +202,7 @@ graphic=miscgraphics,10
 activegraphic=miscgraphics,11
 option=Select Schematic One
 
-[com_23]
+[f4_select2]
 type=graphic
 x=70
 y=199
@@ -215,7 +215,7 @@ graphic=miscgraphics,10
 activegraphic=miscgraphics,11
 option=Select Schematic Two
 
-[com_24]
+[f4_select3]
 type=graphic
 x=70
 y=219
@@ -228,7 +228,7 @@ graphic=miscgraphics,10
 activegraphic=miscgraphics,11
 option=Select Schematic Three
 
-[com_25]
+[f4_hide1]
 type=graphic
 x=38
 y=179
@@ -241,7 +241,7 @@ graphic=miscgraphics,10
 activegraphic=miscgraphics,11
 option=Show Schematic One
 
-[com_26]
+[f4_hide2]
 type=graphic
 x=38
 y=199
@@ -254,7 +254,7 @@ graphic=miscgraphics,10
 activegraphic=miscgraphics,11
 option=Show Schematic Two
 
-[com_27]
+[f4_hide3]
 type=graphic
 x=38
 y=219
@@ -267,7 +267,7 @@ graphic=miscgraphics,10
 activegraphic=miscgraphics,11
 option=Show Schematic Three
 
-[com_28]
+[dr_rotate_button]
 type=model
 x=80
 y=60
@@ -280,7 +280,7 @@ zoom=1000
 xan=500
 option=Rotate the image
 
-[com_29]
+[dr_move_up]
 type=model
 x=80
 y=20
@@ -293,7 +293,7 @@ zoom=1000
 xan=500
 option=Move Schematic Up
 
-[com_30]
+[dr_move_right]
 type=model
 x=121
 y=59
@@ -307,7 +307,7 @@ xan=500
 yan=500
 option=Move Schematic Right
 
-[com_31]
+[dr_move_left]
 type=model
 x=41
 y=59
@@ -321,7 +321,7 @@ xan=500
 yan=1530
 option=Move Schematic Left
 
-[com_32]
+[dr_move_down]
 type=model
 x=80
 y=99

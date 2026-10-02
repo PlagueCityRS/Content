@@ -17,7 +17,7 @@ model=com_i127
 zoom=190
 xan=498
 
-[com_8]
+[mirror1]
 type=layer
 x=396
 y=66
@@ -25,8 +25,8 @@ width=82
 height=83
 hide=yes
 
-[com_2]
-layer=com_8
+[mirror_nw_es]
+layer=mirror1
 type=model
 x=-4
 y=-6
@@ -37,7 +37,7 @@ zoom=190
 xan=510
 yan=762
 
-[com_9]
+[mirror2]
 type=layer
 x=399
 y=65
@@ -45,8 +45,8 @@ width=82
 height=83
 hide=yes
 
-[com_3]
-layer=com_9
+[mirror_ne_ws]
+layer=mirror2
 type=model
 x=-9
 y=-5
@@ -57,7 +57,7 @@ zoom=190
 xan=514
 yan=1241
 
-[com_10]
+[mirror3]
 type=layer
 x=398
 y=63
@@ -65,8 +65,8 @@ width=82
 height=83
 hide=yes
 
-[com_4]
-layer=com_10
+[mirror_nu_wu]
+layer=mirror3
 type=model
 x=-8
 y=-2
@@ -77,7 +77,7 @@ zoom=206
 xan=495
 yan=512
 
-[com_11]
+[mirror4]
 type=layer
 x=395
 y=67
@@ -85,8 +85,8 @@ width=82
 height=83
 hide=yes
 
-[com_5]
-layer=com_11
+[mirror_nu_eu]
+layer=mirror4
 type=model
 x=-3
 y=-5
@@ -97,7 +97,7 @@ zoom=206
 xan=521
 yan=1024
 
-[com_12]
+[mirror5]
 type=layer
 x=397
 y=65
@@ -105,8 +105,8 @@ width=82
 height=83
 hide=yes
 
-[com_6]
-layer=com_12
+[mirror_eu_su]
+layer=mirror5
 type=model
 x=-7
 y=0
@@ -117,7 +117,7 @@ zoom=206
 xan=416
 yan=1536
 
-[com_13]
+[mirror6]
 type=layer
 x=397
 y=71
@@ -125,8 +125,8 @@ width=82
 height=83
 hide=yes
 
-[com_7]
-layer=com_13
+[mirror_su_wu]
+layer=mirror6
 type=model
 x=-11
 y=-4
@@ -136,7 +136,7 @@ model=com_i129
 zoom=206
 xan=495
 
-[com_14]
+[mirror_rotate]
 type=rect
 x=381
 y=12
@@ -146,7 +146,7 @@ height=27
 fill=yes
 colour=0x857E09
 
-[com_15]
+[lighttemple_piller_close]
 type=text
 x=392
 y=17

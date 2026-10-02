@@ -1,4 +1,4 @@
-[com_0]
+[trail_reward_close_button]
 type=text
 x=430
 y=8
@@ -11,7 +11,7 @@ text=Close Window
 colour=0xFAD782
 overcolour=0xFFFFFF
 
-[com_1]
+[trail_reward_scroll]
 type=model
 x=232
 y=158

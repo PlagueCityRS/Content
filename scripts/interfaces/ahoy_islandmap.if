@@ -6,7 +6,7 @@ width=512
 height=334
 fill=yes
 
-[com_1]
+[dragontoothisland_paper]
 type=model
 x=260
 y=166
@@ -17,7 +17,7 @@ zoom=886
 xan=416
 yan=1023
 
-[com_2]
+[dragontooth_map]
 type=model
 x=222
 y=145
@@ -28,7 +28,7 @@ zoom=962
 xan=450
 yan=2039
 
-[com_3]
+[ahoy_islandmap_close_button]
 type=text
 x=406
 y=11

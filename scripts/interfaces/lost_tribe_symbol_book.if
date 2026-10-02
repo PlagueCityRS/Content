@@ -313,7 +313,7 @@ center=yes
 font=q8_full
 text=-Narogoshuun-\nGoblins of the\nWest
 
-[com_17]
+[lost_tribe_symbol__book_close]
 type=text
 x=425
 y=14
@@ -326,15 +326,15 @@ activetext=Closes Interface
 colour=0x808080
 overcolour=0xFFFFFF
 
-[com_20]
+[lost_tribe_r_arrow_layer]
 type=layer
 x=349
 y=282
 width=63
 height=52
 
-[com_18]
-layer=com_20
+[lost_tribe_right_arrow]
+layer=lost_tribe_r_arrow_layer
 type=graphic
 x=11
 y=10
@@ -343,15 +343,15 @@ width=45
 height=36
 graphic=rightarrow,0
 
-[com_21]
+[lost_tribe_l_arrow_layer]
 type=layer
 x=107
 y=279
 width=63
 height=52
 
-[com_19]
-layer=com_21
+[lost_tribe_left_arrow]
+layer=lost_tribe_l_arrow_layer
 type=graphic
 x=8
 y=12

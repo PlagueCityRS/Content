@@ -1,11 +1,11 @@
 [opheld1,regicide_quest_kings_summons]
-if_settext(inter_110:com_3, "Squire <displayname()>.");
-if_settext(inter_110:com_1, "You are needed to serve the Kingdom of");
-if_settext(inter_110:com_4, "Kandarin. At last our magi have reopened");
-if_settext(inter_110:com_5, "the well of voyage. We must discuss your");
-if_settext(inter_110:com_8, "next commission.");
-if_settext(inter_110:com_6, "His Majesty King Lathas");
-if_openmain(inter_110);
+if_settext(kings_letter_v2:com_3, "Squire <displayname()>.");
+if_settext(kings_letter_v2:kings_letter_text, "You are needed to serve the Kingdom of");
+if_settext(kings_letter_v2:com_4, "Kandarin. At last our magi have reopened");
+if_settext(kings_letter_v2:com_5, "the well of voyage. We must discuss your");
+if_settext(kings_letter_v2:com_8, "next commission.");
+if_settext(kings_letter_v2:kings_letter_signature, "His Majesty King Lathas");
+if_openmain(kings_letter_v2);
 
 [oploc1,regicide_voyage_temple_well1]
 anim(human_reachforladder, 0);
@@ -839,13 +839,13 @@ mes("The seal on the scroll is unbreakable.");
 
 [proc,regicide_iowerth_message_scroll]
 // https://web.archive.org/web/20061231211932im_/http://www.runeweb.net/fireball/Regicide%20Images/Regicide27.PNG
-if_settext(inter_110:com_3, "Your Majesty King Lathas");
-if_settext(inter_110:com_1, "Your man did well. The path is now open");
-if_settext(inter_110:com_4, "for the dark lord to enter this realm.");
-if_settext(inter_110:com_5, "You will yet live to see Camelot crushed");
-if_settext(inter_110:com_8, "under foot.");
-if_settext(inter_110:com_6, "Warmaster Iorwerth");
-if_openmain(inter_110);
+if_settext(kings_letter_v2:com_3, "Your Majesty King Lathas");
+if_settext(kings_letter_v2:kings_letter_text, "Your man did well. The path is now open");
+if_settext(kings_letter_v2:com_4, "for the dark lord to enter this realm.");
+if_settext(kings_letter_v2:com_5, "You will yet live to see Camelot crushed");
+if_settext(kings_letter_v2:com_8, "under foot.");
+if_settext(kings_letter_v2:kings_letter_signature, "Warmaster Iorwerth");
+if_openmain(kings_letter_v2);
 
 [queue,quest_regicide_complete]
 inv_add(inv, coins, 15000);

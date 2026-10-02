@@ -1,4 +1,4 @@
-[com_0]
+[stone_bar]
 type=model
 x=61
 y=83
@@ -128,7 +128,7 @@ activemodel=com_i72
 zoom=400
 xan=437
 
-[com_11]
+[stone_bowl]
 type=model
 x=64
 y=173
@@ -139,7 +139,7 @@ zoom=400
 xan=468
 yan=2045
 
-[com_12]
+[drip1]
 type=model
 x=65
 y=173
@@ -152,7 +152,7 @@ zoom=400
 xan=468
 yan=2045
 
-[com_13]
+[drip2]
 type=model
 x=65
 y=173
@@ -166,7 +166,7 @@ zoom=400
 xan=468
 yan=2045
 
-[com_14]
+[drip3]
 type=model
 x=65
 y=173
@@ -180,7 +180,7 @@ zoom=400
 xan=468
 yan=2045
 
-[com_15]
+[drip4]
 type=model
 x=65
 y=173
@@ -194,7 +194,7 @@ zoom=400
 xan=468
 yan=2045
 
-[com_16]
+[drip5]
 type=model
 x=65
 y=173
@@ -208,7 +208,7 @@ zoom=400
 xan=468
 yan=2045
 
-[com_17]
+[drip6]
 type=model
 x=65
 y=173
@@ -222,7 +222,7 @@ zoom=400
 xan=468
 yan=2045
 
-[com_18]
+[drip7]
 type=model
 x=65
 y=173
@@ -236,7 +236,7 @@ zoom=400
 xan=468
 yan=2045
 
-[com_19]
+[drip8]
 type=model
 x=65
 y=173
@@ -250,7 +250,7 @@ zoom=400
 xan=468
 yan=2045
 
-[com_20]
+[drip9]
 type=model
 x=65
 y=173
@@ -264,7 +264,7 @@ zoom=400
 xan=468
 yan=2045
 
-[com_21]
+[drip10]
 type=model
 x=65
 y=173
@@ -299,7 +299,7 @@ shadowed=yes
 text=Time Left
 colour=0xFFFF00
 
-[com_24]
+[number_count]
 type=model
 x=120
 y=211
@@ -310,7 +310,7 @@ zoom=400
 xan=409
 yan=97
 
-[com_25]
+[count]
 type=text
 x=126
 y=216
@@ -322,7 +322,7 @@ shadowed=yes
 text=%1
 colour=0xFFFF00
 
-[com_26]
+[water]
 type=layer
 x=4
 y=60

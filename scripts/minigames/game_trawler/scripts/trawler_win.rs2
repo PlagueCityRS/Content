@@ -65,8 +65,8 @@ if ($level < 15) { // osrs wiki says its unboostable but this is untrue.
 anim(human_pickupfloor, 0);
 p_delay(0);
 
-inv_transmit(trawler_rewardinv, trawler_catch:inv);
-if_openmain(trawler_catch);
+inv_transmit(trawler_rewardinv, trawler_reward:inv);
+if_openmain(trawler_reward);
 
 def_int $i = 0;
 while ($i < %trawler_catch) {
@@ -77,7 +77,7 @@ while ($i < %trawler_catch) {
 %trawler_catch = 0;
 
 
-[if_close,trawler_catch]
+[if_close,trawler_reward]
 def_int $i = 0;
 while ($i < inv_size(trawler_rewardinv)) {
     if (inv_getobj(trawler_rewardinv, $i) ! null) {
@@ -85,15 +85,15 @@ while ($i < inv_size(trawler_rewardinv)) {
     }
     $i = add($i, 1);
 }
-inv_stoptransmit(trawler_catch:inv);
+inv_stoptransmit(trawler_reward:inv);
 
 // osrs drops on ground on full inv
-[inv_button1,trawler_catch:inv] 
+[inv_button1,trawler_reward:inv] 
 inv_moveitem(trawler_rewardinv, inv, last_item, 1);
 if (inv_freespace(trawler_rewardinv) = inv_size(trawler_rewardinv)) {
     if_close; // osrs
 }
-[inv_button2,trawler_catch:inv]
+[inv_button2,trawler_reward:inv]
 inv_movefromslot(trawler_rewardinv, inv, last_slot);
 if (inv_freespace(trawler_rewardinv) = inv_size(trawler_rewardinv)) {
     if_close; // osrs

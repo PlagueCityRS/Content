@@ -1,4 +1,4 @@
-[com_0]
+[garden_list_close]
 type=text
 x=424
 y=28
@@ -21,7 +21,7 @@ model=com_i340
 zoom=671
 xan=510
 
-[com_2]
+[garden_list_1]
 type=text
 x=61
 y=68
@@ -31,7 +31,7 @@ center=yes
 font=p12_full
 text=lj1
 
-[com_3]
+[garden_list_2]
 type=text
 x=61
 y=84
@@ -41,7 +41,7 @@ center=yes
 font=p12_full
 text=lj2
 
-[com_4]
+[garden_list_3]
 type=text
 x=61
 y=100
@@ -51,7 +51,7 @@ center=yes
 font=p12_full
 text=lj3
 
-[com_5]
+[garden_list_4]
 type=text
 x=61
 y=116
@@ -61,7 +61,7 @@ center=yes
 font=p12_full
 text=lj4
 
-[com_6]
+[garden_list_5]
 type=text
 x=61
 y=132
@@ -71,7 +71,7 @@ center=yes
 font=p12_full
 text=lj5
 
-[com_7]
+[garden_list_6]
 type=text
 x=61
 y=148
@@ -81,7 +81,7 @@ center=yes
 font=p12_full
 text=lj6
 
-[com_8]
+[garden_list_7]
 type=text
 x=61
 y=164
@@ -91,7 +91,7 @@ center=yes
 font=p12_full
 text=lj7
 
-[com_9]
+[garden_list_8]
 type=text
 x=61
 y=180
@@ -101,7 +101,7 @@ center=yes
 font=p12_full
 text=lj8
 
-[com_10]
+[garden_list_9]
 type=text
 x=61
 y=196
@@ -111,7 +111,7 @@ center=yes
 font=p12_full
 text=lj9
 
-[com_11]
+[garden_list_10]
 type=text
 x=61
 y=212
@@ -121,7 +121,7 @@ center=yes
 font=p12_full
 text=lj10
 
-[com_12]
+[garden_list_11]
 type=text
 x=61
 y=228
@@ -131,7 +131,7 @@ center=yes
 font=p12_full
 text=lj11
 
-[com_13]
+[garden_list_arrows_1]
 type=layer
 x=58
 y=63
@@ -139,7 +139,7 @@ width=340
 height=23
 
 [com_14]
-layer=com_13
+layer=garden_list_arrows_1
 type=text
 x=12
 y=5
@@ -152,7 +152,7 @@ text=>>>
 colour=0xFF0000
 
 [com_15]
-layer=com_13
+layer=garden_list_arrows_1
 type=text
 x=306
 y=5
@@ -164,7 +164,7 @@ shadowed=yes
 text=<<<
 colour=0xFF0000
 
-[com_16]
+[garden_list_arrows_2]
 type=layer
 x=58
 y=79
@@ -172,7 +172,7 @@ width=340
 height=23
 
 [com_17]
-layer=com_16
+layer=garden_list_arrows_2
 type=text
 x=12
 y=5
@@ -185,7 +185,7 @@ text=>>>
 colour=0xFF0000
 
 [com_18]
-layer=com_16
+layer=garden_list_arrows_2
 type=text
 x=306
 y=5
@@ -197,7 +197,7 @@ shadowed=yes
 text=<<<
 colour=0xFF0000
 
-[com_19]
+[garden_list_arrows_3]
 type=layer
 x=58
 y=95
@@ -205,7 +205,7 @@ width=340
 height=23
 
 [com_20]
-layer=com_19
+layer=garden_list_arrows_3
 type=text
 x=12
 y=5
@@ -218,7 +218,7 @@ text=>>>
 colour=0xFF0000
 
 [com_21]
-layer=com_19
+layer=garden_list_arrows_3
 type=text
 x=306
 y=5
@@ -230,7 +230,7 @@ shadowed=yes
 text=<<<
 colour=0xFF0000
 
-[com_22]
+[garden_list_arrows_4]
 type=layer
 x=58
 y=111
@@ -238,7 +238,7 @@ width=340
 height=23
 
 [com_23]
-layer=com_22
+layer=garden_list_arrows_4
 type=text
 x=12
 y=5
@@ -251,7 +251,7 @@ text=>>>
 colour=0xFF0000
 
 [com_24]
-layer=com_22
+layer=garden_list_arrows_4
 type=text
 x=306
 y=5
@@ -263,7 +263,7 @@ shadowed=yes
 text=<<<
 colour=0xFF0000
 
-[com_25]
+[garden_list_arrows_5]
 type=layer
 x=58
 y=127
@@ -271,7 +271,7 @@ width=340
 height=23
 
 [com_26]
-layer=com_25
+layer=garden_list_arrows_5
 type=text
 x=12
 y=5
@@ -284,7 +284,7 @@ text=>>>
 colour=0xFF0000
 
 [com_27]
-layer=com_25
+layer=garden_list_arrows_5
 type=text
 x=306
 y=5
@@ -296,7 +296,7 @@ shadowed=yes
 text=<<<
 colour=0xFF0000
 
-[com_28]
+[garden_list_arrows_6]
 type=layer
 x=58
 y=143
@@ -304,7 +304,7 @@ width=340
 height=23
 
 [com_29]
-layer=com_28
+layer=garden_list_arrows_6
 type=text
 x=12
 y=5
@@ -317,7 +317,7 @@ text=>>>
 colour=0xFF0000
 
 [com_30]
-layer=com_28
+layer=garden_list_arrows_6
 type=text
 x=306
 y=5
@@ -329,7 +329,7 @@ shadowed=yes
 text=<<<
 colour=0xFF0000
 
-[com_31]
+[garden_list_arrows_7]
 type=layer
 x=58
 y=159
@@ -337,7 +337,7 @@ width=340
 height=23
 
 [com_32]
-layer=com_31
+layer=garden_list_arrows_7
 type=text
 x=12
 y=5
@@ -350,7 +350,7 @@ text=>>>
 colour=0xFF0000
 
 [com_33]
-layer=com_31
+layer=garden_list_arrows_7
 type=text
 x=306
 y=5
@@ -362,7 +362,7 @@ shadowed=yes
 text=<<<
 colour=0xFF0000
 
-[com_34]
+[garden_list_arrows_8]
 type=layer
 x=58
 y=175
@@ -370,7 +370,7 @@ width=340
 height=23
 
 [com_35]
-layer=com_34
+layer=garden_list_arrows_8
 type=text
 x=12
 y=5
@@ -383,7 +383,7 @@ text=>>>
 colour=0xFF0000
 
 [com_36]
-layer=com_34
+layer=garden_list_arrows_8
 type=text
 x=306
 y=5
@@ -395,7 +395,7 @@ shadowed=yes
 text=<<<
 colour=0xFF0000
 
-[com_37]
+[garden_list_arrows_9]
 type=layer
 x=58
 y=191
@@ -403,7 +403,7 @@ width=340
 height=23
 
 [com_38]
-layer=com_37
+layer=garden_list_arrows_9
 type=text
 x=12
 y=5
@@ -416,7 +416,7 @@ text=>>>
 colour=0xFF0000
 
 [com_39]
-layer=com_37
+layer=garden_list_arrows_9
 type=text
 x=306
 y=5
@@ -428,7 +428,7 @@ shadowed=yes
 text=<<<
 colour=0xFF0000
 
-[com_40]
+[garden_list_arrows_10]
 type=layer
 x=58
 y=207
@@ -436,7 +436,7 @@ width=340
 height=23
 
 [com_41]
-layer=com_40
+layer=garden_list_arrows_10
 type=text
 x=12
 y=5
@@ -449,7 +449,7 @@ text=>>>
 colour=0xFF0000
 
 [com_42]
-layer=com_40
+layer=garden_list_arrows_10
 type=text
 x=306
 y=5
@@ -461,7 +461,7 @@ shadowed=yes
 text=<<<
 colour=0xFF0000
 
-[com_43]
+[garden_list_arrows_11]
 type=layer
 x=58
 y=223
@@ -469,7 +469,7 @@ width=340
 height=23
 
 [com_44]
-layer=com_43
+layer=garden_list_arrows_11
 type=text
 x=12
 y=5
@@ -482,7 +482,7 @@ text=>>>
 colour=0xFF0000
 
 [com_45]
-layer=com_43
+layer=garden_list_arrows_11
 type=text
 x=306
 y=5

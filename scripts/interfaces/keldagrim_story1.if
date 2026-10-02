@@ -1,4 +1,4 @@
-[com_0]
+[keldagrim_story1_line1_l]
 type=layer
 x=40
 y=62
@@ -6,8 +6,8 @@ width=450
 height=15
 hide=yes
 
-[com_9]
-layer=com_0
+[keldagrim_story1_line1]
+layer=keldagrim_story1_line1_l
 type=text
 x=0
 y=0
@@ -19,7 +19,7 @@ shadowed=yes
 text=Five hundred years have passed since the rule of King Alvis,
 colour=0xFF0000
 
-[com_1]
+[keldagrim_story1_line2_l]
 type=layer
 x=40
 y=77
@@ -27,8 +27,8 @@ width=451
 height=18
 hide=yes
 
-[com_10]
-layer=com_1
+[keldagrim_story1_line2]
+layer=keldagrim_story1_line2_l
 type=text
 x=0
 y=1
@@ -40,7 +40,7 @@ shadowed=yes
 text=saviour of Keldagrim, victim of his own inventions.
 colour=0xFF0000
 
-[com_2]
+[keldagrim_story1_line3_l]
 type=layer
 x=40
 y=107
@@ -48,8 +48,8 @@ width=450
 height=18
 hide=yes
 
-[com_11]
-layer=com_2
+[keldagrim_story1_line3]
+layer=keldagrim_story1_line3_l
 type=text
 x=0
 y=0
@@ -61,7 +61,7 @@ shadowed=yes
 text=Founder of the Consortium, the gathering of mining companies
 colour=0xFF0000
 
-[com_3]
+[keldagrim_story1_line4_l]
 type=layer
 x=39
 y=124
@@ -69,8 +69,8 @@ width=450
 height=18
 hide=yes
 
-[com_12]
-layer=com_3
+[keldagrim_story1_line4]
+layer=keldagrim_story1_line4_l
 type=text
 x=0
 y=1
@@ -82,7 +82,7 @@ shadowed=yes
 text=that were to serve the monarchy, eventually the monarchy came
 colour=0xFF0000
 
-[com_4]
+[keldagrim_story1_line5_l]
 type=layer
 x=39
 y=142
@@ -90,8 +90,8 @@ width=449
 height=14
 hide=yes
 
-[com_13]
-layer=com_4
+[keldagrim_story1_line5]
+layer=keldagrim_story1_line5_l
 type=text
 x=0
 y=0
@@ -103,7 +103,7 @@ shadowed=yes
 text=to serve the Consortium.
 colour=0xFF0000
 
-[com_5]
+[keldagrim_story1_line6_l]
 type=layer
 x=38
 y=167
@@ -111,8 +111,8 @@ width=452
 height=15
 hide=yes
 
-[com_14]
-layer=com_5
+[keldagrim_story1_line6]
+layer=keldagrim_story1_line6_l
 type=text
 x=0
 y=0
@@ -124,7 +124,7 @@ shadowed=yes
 text=By the time of his death, the monarchy was all but abolished.
 colour=0xFF0000
 
-[com_6]
+[keldagrim_story1_line7_l]
 type=layer
 x=38
 y=181
@@ -132,8 +132,8 @@ width=453
 height=16
 hide=yes
 
-[com_15]
-layer=com_6
+[keldagrim_story1_line7]
+layer=keldagrim_story1_line7_l
 type=text
 x=0
 y=0
@@ -145,7 +145,7 @@ shadowed=yes
 text=By now, the Kings of Keldagrim are but a distant memory...
 colour=0xFF0000
 
-[com_7]
+[keldagrim_story1_line8_l]
 type=layer
 x=38
 y=196
@@ -153,8 +153,8 @@ width=453
 height=18
 hide=yes
 
-[com_16]
-layer=com_7
+[keldagrim_story1_line8]
+layer=keldagrim_story1_line8_l
 type=text
 x=0
 y=1
@@ -166,7 +166,7 @@ shadowed=yes
 text=with only the statue of King Alvis to remind the people of the
 colour=0xFF0000
 
-[com_8]
+[keldagrim_story1_line9_l]
 type=layer
 x=39
 y=212
@@ -174,8 +174,8 @@ width=452
 height=16
 hide=yes
 
-[com_17]
-layer=com_8
+[keldagrim_story1_line9]
+layer=keldagrim_story1_line9_l
 type=text
 x=0
 y=0

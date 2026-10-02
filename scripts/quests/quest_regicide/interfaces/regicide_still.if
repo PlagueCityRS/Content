@@ -714,7 +714,7 @@ shadowed=yes
 text=Fractional still
 colour=0xFFAA44
 
-[com_89]
+[regicide_still_close]
 type=text
 x=425
 y=29
@@ -1104,7 +1104,7 @@ zoom=400
 xan=512
 yan=1024
 
-[com_120]
+[regicide_add_coal]
 type=model
 x=190
 y=120
@@ -1212,7 +1212,7 @@ zoom=400
 xan=512
 yan=512
 
-[com_129]
+[regicide_pressure_valve_down]
 type=text
 x=56
 y=224
@@ -1224,7 +1224,7 @@ shadowed=yes
 colour=0xFFFF00
 option=Turn pressure valve down
 
-[com_130]
+[regicide_pressure_valve_up]
 type=text
 x=88
 y=224
@@ -1236,7 +1236,7 @@ shadowed=yes
 colour=0xFFFF00
 option=Turn pressure valve up
 
-[com_131]
+[regicide_tar_valve_down]
 type=text
 x=391
 y=224
@@ -1248,7 +1248,7 @@ shadowed=yes
 colour=0xFFFF00
 option=Turn tar flow valve down
 
-[com_132]
+[regicide_tar_valve_up]
 type=text
 x=423
 y=224

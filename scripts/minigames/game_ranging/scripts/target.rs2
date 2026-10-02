@@ -40,7 +40,7 @@ if (%targetcount = 0) {
     def_int $points =  ~get_targetpts;
     %targetscore = calc(%targetscore + $points);
     stat_advance(ranged, calc(($points / 2) * 10));
-    if_settext(target:com_120, ~get_targetstr);
+    if_settext(target:dart_hitmiss, ~get_targetstr);
     if_openmain(target);
 } else if(%targetcount = 11) {   
     if(npc_find(coord, ranging_guild_competition_judge, 5, 0) = true) {

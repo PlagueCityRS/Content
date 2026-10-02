@@ -64,7 +64,7 @@ font=p11_full
 activetext=Safe
 activecolour=0x00FF00
 
-[com_6]
+[castlewars_icon_sar]
 type=layer
 x=0
 y=180
@@ -72,7 +72,7 @@ width=106
 height=148
 
 [com_7]
-layer=com_6
+layer=castlewars_icon_sar
 type=text
 x=33
 y=15
@@ -87,7 +87,7 @@ colour=0x00FF00
 activecolour=0xFF0000
 
 [com_9]
-layer=com_6
+layer=castlewars_icon_sar
 type=model
 x=1
 y=4
@@ -98,7 +98,7 @@ zoom=1244
 xan=512
 
 [com_10]
-layer=com_6
+layer=castlewars_icon_sar
 type=model
 x=-5
 y=35
@@ -109,7 +109,7 @@ zoom=1165
 xan=512
 
 [com_11]
-layer=com_6
+layer=castlewars_icon_sar
 type=text
 x=33
 y=47
@@ -124,7 +124,7 @@ colour=0x00FF00
 activecolour=0xFF0000
 
 [com_12]
-layer=com_6
+layer=castlewars_icon_sar
 type=model
 x=1
 y=59
@@ -135,7 +135,7 @@ zoom=2063
 xan=512
 
 [com_13]
-layer=com_6
+layer=castlewars_icon_sar
 type=text
 x=33
 y=78
@@ -150,7 +150,7 @@ colour=0x00FF00
 activecolour=0xFF0000
 
 [com_15]
-layer=com_6
+layer=castlewars_icon_sar
 type=text
 x=33
 y=103
@@ -165,7 +165,7 @@ colour=0x00FF00
 activecolour=0xFF0000
 
 [com_16]
-layer=com_6
+layer=castlewars_icon_sar
 type=model
 x=0
 y=111
@@ -176,7 +176,7 @@ zoom=1135
 xan=512
 
 [com_17]
-layer=com_6
+layer=castlewars_icon_sar
 type=text
 x=33
 y=128
@@ -264,7 +264,7 @@ shadowed=yes
 activetext=Dropped
 activecolour=0xFFFF00
 
-[com_22]
+[castlewars_saradomin_eject]
 type=text
 x=247
 y=119

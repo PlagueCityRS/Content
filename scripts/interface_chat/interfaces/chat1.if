@@ -1,4 +1,4 @@
-[com_0]
+[chat1head]
 type=model
 x=414
 y=34
@@ -8,7 +8,7 @@ zoom=796
 xan=40
 yan=166
 
-[com_1]
+[chat1name]
 type=text
 x=20
 y=0
@@ -19,7 +19,7 @@ font=q8_full
 text=Name
 colour=0x800000
 
-[com_2]
+[chat1a]
 type=text
 x=20
 y=40
@@ -29,7 +29,7 @@ center=yes
 font=q8_full
 text=Line1
 
-[com_3]
+[chat1next]
 type=text
 x=20
 y=80

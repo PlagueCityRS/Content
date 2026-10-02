@@ -38,7 +38,7 @@ minimap_toggle(2);
 // modal closing if you get attacked (by a ghast) is authentic
 // theres no fade here either
 if_openmain(swamp_boatjourney); // [7924]
-if_setanim(swamp_boatjourney:shipmodel, swamp_boatjourney_back);
+if_setanim(swamp_boatjourney:swamp_shipmodel, swamp_boatjourney_back);
 p_delay(13);
 p_teleport(0_55_51_2_20);
 if_close;

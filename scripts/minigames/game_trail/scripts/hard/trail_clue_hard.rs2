@@ -2,16 +2,16 @@
 ~full_trail_readclue_map(trail_map05);
 
 [opheld1,trail_clue_hard_map002]
-~full_trail_readclue_map(inter_189);
+~full_trail_readclue_map(trail_map08);
 
 [opheld1,trail_clue_hard_map003]
-~full_trail_readclue_map(inter_193);
+~full_trail_readclue_map(trail_map12);
 
 [opheld1,trail_clue_hard_map004]
-~full_trail_readclue_map(inter_180);
+~full_trail_readclue_map(forget_traintrack_puzzle1);
 
 [opheld1,trail_clue_hard_map005]
-~full_trail_readclue_map(inter_181);
+~full_trail_readclue_map(forget_traintrack_puzzle2);
 
 [opheld1,trail_clue_hard_riddle011]
 ~full_trail_readclue(oc_param(last_item,trail_desc));

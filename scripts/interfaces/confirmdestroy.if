@@ -5,7 +5,7 @@ y=23
 width=1
 height=1
 
-[com_1]
+[tick]
 type=model
 x=225
 y=24
@@ -16,7 +16,7 @@ zoom=1463
 xan=291
 yan=2032
 
-[com_2]
+[cross]
 type=model
 x=358
 y=25
@@ -27,7 +27,7 @@ zoom=2278
 xan=400
 yan=2030
 
-[com_3]
+[destroy_title]
 type=text
 x=0
 y=-1
@@ -38,7 +38,7 @@ font=q8_full
 text=Are you sure you want to destroy this object?
 colour=0x800000
 
-[com_4]
+[destroy_yes]
 type=text
 x=226
 y=32
@@ -51,7 +51,7 @@ text=Yes.
 overcolour=0x00C000
 option=Destroy Object
 
-[com_5]
+[destroy_no]
 type=text
 x=362
 y=32
@@ -98,7 +98,7 @@ center=yes
 font=q8_full
 colour=0x000088
 
-[com_10]
+[destroy_message]
 type=layer
 x=0
 y=50
@@ -106,7 +106,7 @@ width=482
 height=66
 
 [com_11]
-layer=com_10
+layer=destroy_message
 type=text
 x=1
 y=12
@@ -118,7 +118,7 @@ text=option2
 colour=0x000088
 
 [com_12]
-layer=com_10
+layer=destroy_message
 type=text
 x=2
 y=28
@@ -129,7 +129,7 @@ font=q8_full
 text=option2
 colour=0x000088
 
-[com_13]
+[destroy_name]
 type=text
 x=62
 y=32

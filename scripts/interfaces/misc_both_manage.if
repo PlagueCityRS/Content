@@ -1,4 +1,4 @@
-[com_0]
+[miscb_if_bg]
 type=model
 x=240
 y=133
@@ -19,7 +19,7 @@ shadowed=yes
 text=Kingdom of Miscellania
 colour=0xCCAA44
 
-[com_2]
+[misc_both_manage_close_button]
 type=text
 x=437
 y=10
@@ -41,15 +41,15 @@ height=86
 fill=yes
 colour=0x442D22
 
-[com_4]
+[miscb_if_mining]
 type=layer
 x=331
 y=22
 width=95
 height=86
 
-[com_5]
-layer=com_4
+[miscb_if_mining_text]
+layer=miscb_if_mining
 type=text
 x=7
 y=6
@@ -60,8 +60,8 @@ shadowed=yes
 text=Mining
 colour=0xBFBC8F
 
-[com_6]
-layer=com_4
+[miscb_if_mining_icon]
+layer=miscb_if_mining
 type=model
 x=-42
 y=14
@@ -72,8 +72,8 @@ zoom=987
 xan=578
 yan=4
 
-[com_11]
-layer=com_4
+[miscb_if_mining_up]
+layer=miscb_if_mining
 type=model
 x=70
 y=-1
@@ -85,8 +85,8 @@ zoom=1739
 xan=512
 option=Add
 
-[com_12]
-layer=com_4
+[miscb_if_mining_down]
+layer=miscb_if_mining
 type=model
 x=71
 y=53
@@ -99,8 +99,8 @@ xan=512
 yan=1024
 option=Remove
 
-[com_13]
-layer=com_4
+[miscb_if_mining_bar1]
+layer=miscb_if_mining
 type=rect
 x=52
 y=74
@@ -111,8 +111,8 @@ script1=gt,0
 fill=yes
 activecolour=0x918F6D
 
-[com_14]
-layer=com_4
+[miscb_if_mining_bar2]
+layer=miscb_if_mining
 type=rect
 x=52
 y=66
@@ -123,8 +123,8 @@ script1=gt,1
 fill=yes
 activecolour=0x969471
 
-[com_15]
-layer=com_4
+[miscb_if_mining_bar3]
+layer=miscb_if_mining
 type=rect
 x=52
 y=58
@@ -135,8 +135,8 @@ script1=gt,2
 fill=yes
 activecolour=0x9C9975
 
-[com_16]
-layer=com_4
+[miscb_if_mining_bar4]
+layer=miscb_if_mining
 type=rect
 x=52
 y=50
@@ -147,8 +147,8 @@ script1=gt,3
 fill=yes
 activecolour=0xA19E78
 
-[com_17]
-layer=com_4
+[miscb_if_mining_bar5]
+layer=miscb_if_mining
 type=rect
 x=52
 y=42
@@ -159,8 +159,8 @@ script1=gt,4
 fill=yes
 activecolour=0xA6A37C
 
-[com_18]
-layer=com_4
+[miscb_if_mining_bar6]
+layer=miscb_if_mining
 type=rect
 x=52
 y=34
@@ -171,8 +171,8 @@ script1=gt,5
 fill=yes
 activecolour=0xABA880
 
-[com_19]
-layer=com_4
+[miscb_if_mining_bar7]
+layer=miscb_if_mining
 type=rect
 x=52
 y=26
@@ -183,8 +183,8 @@ script1=gt,6
 fill=yes
 activecolour=0xB0AD84
 
-[com_20]
-layer=com_4
+[miscb_if_mining_bar8]
+layer=miscb_if_mining
 type=rect
 x=52
 y=18
@@ -195,8 +195,8 @@ script1=gt,7
 fill=yes
 activecolour=0xB5B288
 
-[com_21]
-layer=com_4
+[miscb_if_mining_bar9]
+layer=miscb_if_mining
 type=rect
 x=52
 y=10
@@ -207,8 +207,8 @@ script1=gt,8
 fill=yes
 activecolour=0xBAB78C
 
-[com_22]
-layer=com_4
+[miscb_if_mining_bar10]
+layer=miscb_if_mining
 type=rect
 x=52
 y=2
@@ -228,15 +228,15 @@ height=86
 fill=yes
 colour=0x442D22
 
-[com_8]
+[miscb_if_herbs]
 type=layer
 x=117
 y=161
 width=96
 height=84
 
-[com_9]
-layer=com_8
+[miscb_if_herbs_text]
+layer=miscb_if_herbs
 type=text
 x=7
 y=6
@@ -248,7 +248,7 @@ text=Herbs
 colour=0xBFBC8F
 
 [com_10]
-layer=com_8
+layer=miscb_if_herbs
 type=model
 x=-17
 y=-18
@@ -258,8 +258,8 @@ model=com_i263
 zoom=424
 xan=512
 
-[com_27]
-layer=com_8
+[miscb_if_herbs_up]
+layer=miscb_if_herbs
 type=model
 x=72
 y=-1
@@ -271,8 +271,8 @@ zoom=1739
 xan=512
 option=Add
 
-[com_28]
-layer=com_8
+[miscb_if_herbs_down]
+layer=miscb_if_herbs
 type=model
 x=72
 y=53
@@ -285,8 +285,8 @@ xan=512
 yan=1024
 option=Remove
 
-[com_30]
-layer=com_8
+[miscb_if_herbs_bar1]
+layer=miscb_if_herbs
 type=rect
 x=52
 y=74
@@ -297,8 +297,8 @@ script1=gt,0
 fill=yes
 activecolour=0x918F6D
 
-[com_49]
-layer=com_8
+[miscb_if_herbs_bar2]
+layer=miscb_if_herbs
 type=rect
 x=52
 y=66
@@ -309,8 +309,8 @@ script1=gt,1
 fill=yes
 activecolour=0x969471
 
-[com_51]
-layer=com_8
+[miscb_if_herbs_bar3]
+layer=miscb_if_herbs
 type=rect
 x=52
 y=58
@@ -321,8 +321,8 @@ script1=gt,2
 fill=yes
 activecolour=0x9C9975
 
-[com_52]
-layer=com_8
+[miscb_if_herbs_bar4]
+layer=miscb_if_herbs
 type=rect
 x=52
 y=50
@@ -333,8 +333,8 @@ script1=gt,3
 fill=yes
 activecolour=0xA19E78
 
-[com_53]
-layer=com_8
+[miscb_if_herbs_bar5]
+layer=miscb_if_herbs
 type=rect
 x=52
 y=42
@@ -345,8 +345,8 @@ script1=gt,4
 fill=yes
 activecolour=0xA6A37C
 
-[com_54]
-layer=com_8
+[miscb_if_herbs_bar6]
+layer=miscb_if_herbs
 type=rect
 x=52
 y=34
@@ -357,8 +357,8 @@ script1=gt,5
 fill=yes
 activecolour=0xABA880
 
-[com_55]
-layer=com_8
+[miscb_if_herbs_bar7]
+layer=miscb_if_herbs
 type=rect
 x=52
 y=26
@@ -369,8 +369,8 @@ script1=gt,6
 fill=yes
 activecolour=0xB0AD84
 
-[com_56]
-layer=com_8
+[miscb_if_herbs_bar8]
+layer=miscb_if_herbs
 type=rect
 x=52
 y=18
@@ -381,8 +381,8 @@ script1=gt,7
 fill=yes
 activecolour=0xB5B288
 
-[com_57]
-layer=com_8
+[miscb_if_herbs_bar9]
+layer=miscb_if_herbs
 type=rect
 x=52
 y=10
@@ -393,8 +393,8 @@ script1=gt,8
 fill=yes
 activecolour=0xBAB78C
 
-[com_58]
-layer=com_8
+[miscb_if_herbs_bar10]
+layer=miscb_if_herbs
 type=rect
 x=52
 y=2
@@ -406,7 +406,7 @@ fill=yes
 activecolour=0xBFBC8F
 
 [com_92]
-layer=com_8
+layer=miscb_if_herbs
 type=model
 x=-42
 y=-57
@@ -416,8 +416,8 @@ model=com_i263
 zoom=623
 xan=512
 
-[com_93]
-layer=com_8
+[miscb_herbs_icon]
+layer=miscb_if_herbs
 type=model
 x=-52
 y=-18
@@ -427,7 +427,7 @@ model=com_i263
 zoom=805
 xan=512
 
-[com_23]
+[miscb_if_north]
 type=model
 x=453
 y=21
@@ -438,7 +438,7 @@ zoom=1955
 xan=563
 yan=312
 
-[com_24]
+[miscb_herbs_iconcopy]
 type=model
 x=12
 y=39
@@ -448,15 +448,15 @@ model=com_i264
 zoom=490
 xan=512
 
-[com_25]
+[miscb_if_coffers]
 type=layer
 x=21
 y=46
 width=122
 height=56
 
-[com_26]
-layer=com_25
+[miscb_if_coffers_text]
+layer=miscb_if_coffers
 type=text
 x=10
 y=1
@@ -467,8 +467,8 @@ shadowed=yes
 text=Coffers:
 colour=0xBFBC8F
 
-[com_87]
-layer=com_25
+[miscb_if_coffers_money]
+layer=miscb_if_coffers
 type=text
 x=66
 y=1
@@ -479,8 +479,8 @@ shadowed=yes
 text=500,000
 colour=0xFFFFFF
 
-[com_88]
-layer=com_25
+[miscb_if_coffers_deposit]
+layer=miscb_if_coffers
 type=text
 x=66
 y=20
@@ -494,8 +494,8 @@ colour=0xFFFFFF
 overcolour=0xFFFF00
 option=Deposit
 
-[com_89]
-layer=com_25
+[miscb_if_coffers_withdraw]
+layer=miscb_if_coffers
 type=text
 x=66
 y=35
@@ -538,15 +538,15 @@ model=com_i265
 zoom=1328
 xan=512
 
-[com_43]
+[miscb_if_wood]
 type=layer
 x=238
 y=105
 width=96
 height=84
 
-[com_29]
-layer=com_43
+[miscb_if_wood_bar1]
+layer=miscb_if_wood
 type=rect
 x=52
 y=74
@@ -557,8 +557,8 @@ script1=gt,0
 fill=yes
 activecolour=0x918F6D
 
-[com_33]
-layer=com_43
+[miscb_if_wood_bar2]
+layer=miscb_if_wood
 type=rect
 x=52
 y=66
@@ -569,8 +569,8 @@ script1=gt,1
 fill=yes
 activecolour=0x969471
 
-[com_34]
-layer=com_43
+[miscb_if_wood_bar3]
+layer=miscb_if_wood
 type=rect
 x=52
 y=58
@@ -581,8 +581,8 @@ script1=gt,2
 fill=yes
 activecolour=0x9C9975
 
-[com_35]
-layer=com_43
+[miscb_if_wood_bar4]
+layer=miscb_if_wood
 type=rect
 x=52
 y=50
@@ -593,8 +593,8 @@ script1=gt,3
 fill=yes
 activecolour=0xA19E78
 
-[com_36]
-layer=com_43
+[miscb_if_wood_bar5]
+layer=miscb_if_wood
 type=rect
 x=52
 y=42
@@ -605,8 +605,8 @@ script1=gt,4
 fill=yes
 activecolour=0xA6A37C
 
-[com_37]
-layer=com_43
+[miscb_if_wood_bar6]
+layer=miscb_if_wood
 type=rect
 x=52
 y=34
@@ -617,8 +617,8 @@ script1=gt,5
 fill=yes
 activecolour=0xABA880
 
-[com_38]
-layer=com_43
+[miscb_if_wood_bar7]
+layer=miscb_if_wood
 type=rect
 x=52
 y=26
@@ -629,8 +629,8 @@ script1=gt,6
 fill=yes
 activecolour=0xB0AD84
 
-[com_39]
-layer=com_43
+[miscb_if_wood_bar8]
+layer=miscb_if_wood
 type=rect
 x=52
 y=18
@@ -641,8 +641,8 @@ script1=gt,7
 fill=yes
 activecolour=0xB5B288
 
-[com_41]
-layer=com_43
+[miscb_if_wood_bar9]
+layer=miscb_if_wood
 type=rect
 x=52
 y=10
@@ -653,8 +653,8 @@ script1=gt,8
 fill=yes
 activecolour=0xBAB78C
 
-[com_44]
-layer=com_43
+[miscb_if_wood_text]
+layer=miscb_if_wood
 type=text
 x=7
 y=6
@@ -665,8 +665,8 @@ shadowed=yes
 text=Wood
 colour=0xBFBC8F
 
-[com_46]
-layer=com_43
+[miscb_if_wood_up]
+layer=miscb_if_wood
 type=model
 x=70
 y=-1
@@ -678,8 +678,8 @@ zoom=1739
 xan=512
 option=Add
 
-[com_47]
-layer=com_43
+[miscb_if_wood_down]
+layer=miscb_if_wood
 type=model
 x=72
 y=53
@@ -692,8 +692,8 @@ xan=512
 yan=1024
 option=Remove
 
-[com_48]
-layer=com_43
+[miscb_if_wood_bar10]
+layer=miscb_if_wood
 type=rect
 x=52
 y=2
@@ -714,7 +714,7 @@ model=com_i265
 zoom=837
 xan=512
 
-[com_59]
+[miscb_if_fishing]
 type=layer
 x=355
 y=232
@@ -722,7 +722,7 @@ width=90
 height=86
 
 [com_50]
-layer=com_59
+layer=miscb_if_fishing
 type=rect
 x=49
 y=-1
@@ -731,8 +731,8 @@ height=86
 fill=yes
 colour=0x442D22
 
-[com_60]
-layer=com_59
+[miscb_if_fishing_text]
+layer=miscb_if_fishing
 type=text
 x=1
 y=2
@@ -743,8 +743,8 @@ shadowed=yes
 text=Fishing
 colour=0xBFBC8F
 
-[com_62]
-layer=com_59
+[miscb_if_fishing_up]
+layer=miscb_if_fishing
 type=model
 x=70
 y=-1
@@ -756,8 +756,8 @@ zoom=1739
 xan=512
 option=Add
 
-[com_63]
-layer=com_59
+[miscb_if_fishing_down]
+layer=miscb_if_fishing
 type=model
 x=70
 y=54
@@ -770,8 +770,8 @@ xan=512
 yan=1024
 option=Remove
 
-[com_64]
-layer=com_59
+[miscb_if_fishing_bar1]
+layer=miscb_if_fishing
 type=rect
 x=52
 y=74
@@ -782,8 +782,8 @@ script1=gt,0
 fill=yes
 activecolour=0x918F6D
 
-[com_65]
-layer=com_59
+[miscb_if_fishing_bar2]
+layer=miscb_if_fishing
 type=rect
 x=52
 y=66
@@ -794,8 +794,8 @@ script1=gt,1
 fill=yes
 activecolour=0x969471
 
-[com_66]
-layer=com_59
+[miscb_if_fishing_bar3]
+layer=miscb_if_fishing
 type=rect
 x=52
 y=58
@@ -806,8 +806,8 @@ script1=gt,2
 fill=yes
 activecolour=0x9C9975
 
-[com_68]
-layer=com_59
+[miscb_if_fishing_bar4]
+layer=miscb_if_fishing
 type=rect
 x=52
 y=50
@@ -818,8 +818,8 @@ script1=gt,3
 fill=yes
 activecolour=0xA19E78
 
-[com_69]
-layer=com_59
+[miscb_if_fishing_bar5]
+layer=miscb_if_fishing
 type=rect
 x=52
 y=42
@@ -830,8 +830,8 @@ script1=gt,4
 fill=yes
 activecolour=0xA6A37C
 
-[com_70]
-layer=com_59
+[miscb_if_fishing_bar6]
+layer=miscb_if_fishing
 type=rect
 x=52
 y=34
@@ -842,8 +842,8 @@ script1=gt,5
 fill=yes
 activecolour=0xABA880
 
-[com_71]
-layer=com_59
+[miscb_if_fishing_bar7]
+layer=miscb_if_fishing
 type=rect
 x=52
 y=26
@@ -854,8 +854,8 @@ script1=gt,6
 fill=yes
 activecolour=0xB0AD84
 
-[com_72]
-layer=com_59
+[miscb_if_fishing_bar8]
+layer=miscb_if_fishing
 type=rect
 x=52
 y=18
@@ -866,8 +866,8 @@ script1=gt,7
 fill=yes
 activecolour=0xB5B288
 
-[com_73]
-layer=com_59
+[miscb_if_fishing_bar9]
+layer=miscb_if_fishing
 type=rect
 x=52
 y=10
@@ -878,8 +878,8 @@ script1=gt,8
 fill=yes
 activecolour=0xBAB78C
 
-[com_74]
-layer=com_59
+[miscb_if_fishing_bar10]
+layer=miscb_if_fishing
 type=rect
 x=52
 y=2
@@ -890,8 +890,8 @@ script1=gt,9
 fill=yes
 activecolour=0xBFBC8F
 
-[com_107]
-layer=com_59
+[miscb_if_fishing_cookedtext]
+layer=miscb_if_fishing
 type=text
 x=9
 y=45
@@ -904,8 +904,8 @@ text=Cooked
 colour=0xBFBC8F
 option=Cooked or raw fish?
 
-[com_108]
-layer=com_59
+[miscb_if_fishing_cooked]
+layer=miscb_if_fishing
 type=graphic
 x=3
 y=28
@@ -937,15 +937,15 @@ height=86
 fill=yes
 colour=0x442D22
 
-[com_78]
+[miscb_if_idle]
 type=layer
 x=17
 y=233
 width=74
 height=84
 
-[com_31]
-layer=com_78
+[miscb_if_idle_bar1]
+layer=miscb_if_idle
 type=rect
 x=52
 y=74
@@ -956,8 +956,8 @@ script1=gt,0
 fill=yes
 activecolour=0x918F6D
 
-[com_75]
-layer=com_78
+[miscb_if_idle_bar2]
+layer=miscb_if_idle
 type=rect
 x=52
 y=66
@@ -968,8 +968,8 @@ script1=gt,1
 fill=yes
 activecolour=0x969471
 
-[com_76]
-layer=com_78
+[miscb_if_idle_bar3]
+layer=miscb_if_idle
 type=rect
 x=52
 y=58
@@ -980,8 +980,8 @@ script1=gt,2
 fill=yes
 activecolour=0x9C9975
 
-[com_77]
-layer=com_78
+[miscb_if_idle_bar4]
+layer=miscb_if_idle
 type=rect
 x=52
 y=50
@@ -992,8 +992,8 @@ script1=gt,3
 fill=yes
 activecolour=0xA49E78
 
-[com_79]
-layer=com_78
+[miscb_if_idle_text]
+layer=miscb_if_idle
 type=text
 x=14
 y=7
@@ -1005,7 +1005,7 @@ text=Idle
 colour=0xBFBC8F
 
 [com_80]
-layer=com_78
+layer=miscb_if_idle
 type=model
 x=-7
 y=43
@@ -1016,8 +1016,8 @@ zoom=1227
 xan=583
 yan=2012
 
-[com_81]
-layer=com_78
+[miscb_if_idle_bar5]
+layer=miscb_if_idle
 type=rect
 x=52
 y=42
@@ -1028,8 +1028,8 @@ script1=gt,4
 fill=yes
 activecolour=0xA6A37C
 
-[com_82]
-layer=com_78
+[miscb_if_idle_bar6]
+layer=miscb_if_idle
 type=rect
 x=52
 y=34
@@ -1040,8 +1040,8 @@ script1=gt,5
 fill=yes
 activecolour=0xABA880
 
-[com_83]
-layer=com_78
+[miscb_if_idle_bar7]
+layer=miscb_if_idle
 type=rect
 x=52
 y=26
@@ -1052,8 +1052,8 @@ script1=gt,6
 fill=yes
 activecolour=0xB0AD84
 
-[com_84]
-layer=com_78
+[miscb_if_idle_bar8]
+layer=miscb_if_idle
 type=rect
 x=52
 y=18
@@ -1064,8 +1064,8 @@ script1=gt,7
 fill=yes
 activecolour=0xB5B288
 
-[com_85]
-layer=com_78
+[miscb_if_idle_bar9]
+layer=miscb_if_idle
 type=rect
 x=52
 y=10
@@ -1076,8 +1076,8 @@ script1=gt,8
 fill=yes
 activecolour=0xBAB78C
 
-[com_86]
-layer=com_78
+[miscb_if_idle_bar10]
+layer=miscb_if_idle
 type=rect
 x=52
 y=2
@@ -1118,7 +1118,7 @@ model=com_i268
 zoom=442
 xan=512
 
-[com_95]
+[miscb_if_questionmark]
 type=model
 x=243
 y=255
@@ -1130,7 +1130,7 @@ zoom=1850
 xan=515
 yan=18
 
-[com_96]
+[miscb_if_text_help]
 type=text
 x=254
 y=307

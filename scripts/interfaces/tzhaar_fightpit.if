@@ -10,15 +10,15 @@ shadowed=yes
 text=Current Champion: TzHaar-Xil-Huz
 colour=0xCCCCCC
 
-[com_2]
+[tzhaar_fightpit_remaining]
 type=layer
 x=170
 y=31
 width=191
 height=27
 
-[tzhaar_fightpit_remaining]
-layer=com_2
+[tzhaar_fightpit_foes]
+layer=tzhaar_fightpit_remaining
 type=text
 x=50
 y=7

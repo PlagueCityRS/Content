@@ -702,7 +702,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_88]
+[thormac_close_button]
 type=text
 x=424
 y=28
@@ -811,7 +811,7 @@ text=Mud Battlestaff
 colour=0xAAAAAA
 activecolour=0xFFFFFF
 
-[air]
+[thormac_airstaff]
 type=model
 x=70
 y=80
@@ -824,7 +824,7 @@ xan=148
 yan=1400
 option=Enchant Air Battlestaff
 
-[water]
+[thormac_waterstaff]
 type=model
 x=180
 y=80
@@ -837,7 +837,7 @@ xan=148
 yan=1400
 option=Enchant Water Battlestaff
 
-[earth]
+[thormac_earthstaff]
 type=model
 x=290
 y=80
@@ -850,7 +850,7 @@ xan=148
 yan=1400
 option=Enchant Earth Battlestaff
 
-[fire]
+[thormac_firestaff]
 type=model
 x=400
 y=80
@@ -863,7 +863,7 @@ xan=148
 yan=1400
 option=Enchant Fire Battlestaff
 
-[lava]
+[thormac_lavastaff]
 type=model
 x=70
 y=160
@@ -876,7 +876,7 @@ xan=148
 yan=1400
 option=Enchant Lava Battlestaff
 
-[com_96]
+[thormac_mudstaff]
 type=model
 x=180
 y=160

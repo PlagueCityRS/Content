@@ -13256,6 +13256,7 @@ recol4s=4192
 recol4d=8388
 recol5s=32735
 recol5d=15817
+members=yes
 
 [master_farmer_2]
 name=Master Farmer
@@ -13285,6 +13286,7 @@ recol4s=6273
 recol4d=28299
 recol5s=0
 recol5d=12485
+members=yes
 
 [farming_market_guard]
 name=Market Guard
@@ -13311,6 +13313,7 @@ recol3s=15855
 recol3d=15755
 recol4s=31649
 recol4d=15655
+members=yes
 
 [lumbridge_guide2_man]
 walkanim=human_halberdwalk_f,human_halberdwalk_b,human_halberdwalk_l,human_halberdwalk_r
@@ -15096,6 +15099,7 @@ recol3s=24075
 recol3d=29362
 recol4s=6273
 recol4d=23937
+members=yes
 
 [dantaera]
 name=Dantaera
@@ -15121,6 +15125,7 @@ recol3s=6273
 recol3d=27342
 recol4s=14801
 recol4d=24075
+members=yes
 
 [kragen]
 name=Kragen
@@ -15151,6 +15156,7 @@ recol4s=6273
 recol4d=11588
 recol5s=6144
 recol5d=12580
+members=yes
 
 [lyra]
 name=Lyra
@@ -15181,6 +15187,7 @@ recol5s=14764
 recol5d=11723
 recol6s=16878
 recol6d=13837
+members=yes
 
 [francis]
 name=Francis
@@ -15207,6 +15214,7 @@ recol3s=6273
 recol3d=17932
 recol4s=14801
 recol4d=24075
+members=yes
 
 [npc_2328]
 name=Gardener
@@ -15228,6 +15236,7 @@ recol3s=352
 recol3d=10528
 recol4s=13728
 recol4d=6274
+members=yes
 
 [iago]
 name=Iago
@@ -15260,6 +15269,7 @@ recol5s=32702
 recol5d=29525
 recol6s=6144
 recol6d=25297
+members=yes
 
 [farming_gardener_fruit_3]
 name=Garth
@@ -15292,6 +15302,7 @@ recol5s=14801
 recol5d=24075
 recol6s=24452
 recol6d=12617
+members=yes
 
 [farming_gardener_fruit_4]
 name=Ellena
@@ -15322,6 +15333,7 @@ recol5s=5299
 recol5d=19946
 recol6s=6341
 recol6d=16775
+members=yes
 
 [farming_gardener_hops_1]
 name=Selena
@@ -15350,6 +15362,7 @@ recol4s=14801
 recol4d=24075
 recol5s=6144
 recol5d=7328
+members=yes
 
 [farming_gardener_hops_3]
 name=Vasquen
@@ -15381,6 +15394,7 @@ recol4s=14801
 recol4d=24075
 recol5s=6144
 recol5d=7328
+members=yes
 
 [farming_gardener_hops_4]
 name=Rhonen
@@ -15412,6 +15426,7 @@ recol5s=6144
 recol5d=9445
 recol6s=14801
 recol6d=24075
+members=yes
 
 [farming_gardener_bush_1]
 name=Dreven
@@ -15444,6 +15459,7 @@ recol5s=24075
 recol5d=25133
 recol6s=6273
 recol6d=10433
+members=yes
 
 [farming_gardener_bush_2]
 name=Taria
@@ -15502,6 +15518,7 @@ recol3s=2340
 recol3d=5314
 recol4s=6144
 recol4d=6274
+members=yes
 
 [farming_gardener_bush_4]
 name=Torrell
@@ -15528,6 +15545,7 @@ recol3s=6144
 recol3d=12516
 recol4s=14801
 recol4d=24075
+members=yes
 
 [farming_gardener_tree_1]
 name=Alain
@@ -15558,6 +15576,7 @@ recol5s=6144
 recol5d=6307
 recol6s=24075
 recol6d=21961
+members=yes
 
 [farming_gardener_tree_2]
 name=Heskel
@@ -15587,6 +15606,7 @@ recol5s=6144
 recol5d=6272
 recol6s=24329
 recol6d=6272
+members=yes
 
 [farming_gardener_tree_3]
 name=Treznor
@@ -15610,6 +15630,7 @@ recol2s=14724
 recol2d=8353
 recol3s=15855
 recol3d=8354
+members=yes
 
 [farming_gardener_tree_4]
 name=Fayeth
@@ -15639,6 +15660,7 @@ recol5s=24075
 recol5d=25166
 recol6s=24329
 recol6d=5216
+members=yes
 
 [farming_gardener_fruit_1]
 name=Bolongo
@@ -15661,6 +15683,7 @@ recol4s=13728
 recol4d=8353
 recol5s=6144
 recol5d=8353
+members=yes
 
 [farming_gardener_fruit_2]
 name=Gileth
@@ -15678,6 +15701,7 @@ model6=obj_5331_manwear
 model7=woman_legs_longskirt
 model8=obj_5345_womanwear
 head1=chat_female_head_longhair
+members=yes
 
 [herder_plaguesheep_1]
 vislevel=hide
@@ -19968,6 +19992,7 @@ recol3s=15855
 recol3d=15755
 recol4s=31649
 recol4d=15655
+members=yes
 
 [wom_olivia]
 name=Olivia
@@ -19998,6 +20023,7 @@ recol5s=6273
 recol5d=18627
 recol6s=14801
 recol6d=24075
+members=yes
 
 [wom_watchman]
 name=Watchman

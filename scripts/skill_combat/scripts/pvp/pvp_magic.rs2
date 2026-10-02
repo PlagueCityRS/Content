@@ -34,6 +34,18 @@ p_opplayert(db_getfield($spell_data, magic_spell_table:spellcom, 0));
 [applayert,magic:enfeeble] ~pvp_default_spell(^enfeeble);
 [applayert,magic:stun] ~pvp_default_spell(^stun);
 [applayert,magic:crumble_undead] ~pvp_default_spell(^crumble_undead);
+[applayert,magic:teleport_block] ~magic_teleblock(^tele_block); // temporary just for f2p check
+
+// temporary just for f2p check
+[proc,magic_teleblock](int $spell)
+if_close;
+p_stopaction;
+if (p_finduid(uid) = true) {
+    def_dbrow $spell_data = ~get_spell_data($spell);
+    if (~check_spell_requirements($spell_data) = false) {
+        return;
+    }
+}
 
 [proc,pvp_default_spell](int $spell)
 def_dbrow $spell_data = ~get_spell_data($spell);

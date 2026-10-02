@@ -6,6 +6,6 @@ if (inv_freespace(inv) = 0) {
     anim(human_pickuptable, 0);
     p_delay(0);
     sound_synth(remove_axe, 0, 0);
-    loc_change(log_withoutaxe, 50);
+    loc_change(log_withoutaxe, 300); // matches rs3
     inv_add(inv, bronze_axe, 1);
 }

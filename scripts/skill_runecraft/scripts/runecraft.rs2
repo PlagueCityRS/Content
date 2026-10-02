@@ -205,16 +205,18 @@ if ($last = tiara & inv_total(inv, $talisman) < 1) {
     return;
 }
 
-if ($last = tiara & inv_total(inv, $talisman) > 0 | $last = $talisman & inv_total(inv, tiara) > 0) {
-    // TODO: imbued tiara replaces the last used item, rather than going into the first slot
+if ($last = tiara & inv_total(inv, $talisman) > 0) {
+    // imbued tiara replaces the last used item, rather than going into the first slot
     // https://youtu.be/qwqu630ZRFY?t=115
     // also matches osrs
     inv_del(inv, $talisman, 1);
+    inv_setslot(inv, last_useslot, $imbued_tiara, 1);
+} else if ($last = $talisman & inv_total(inv, tiara) > 0) {
     inv_del(inv, tiara, 1);
-    stat_advance(crafting, db_getfield($data, runecraft_table:tiara_experience, 0));
-    mes("You bind the power of the talisman into your Tiara.");
     inv_setslot(inv, last_useslot, $imbued_tiara, 1);
 } else if ($last ! $talisman) {
     ~displaymessage(^dm_default);
+    return;
 }
-
+stat_advance(crafting, db_getfield($data, runecraft_table:tiara_experience, 0));
+mes("You bind the power of the talisman into your Tiara.");

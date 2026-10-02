@@ -1,4 +1,4 @@
-[com_0]
+[farming_tools_side_1]
 type=inv
 x=40
 y=24
@@ -7,7 +7,7 @@ height=3
 margin=48,16
 option1=Store
 
-[com_1]
+[farming_tools_side_2]
 type=inv
 x=40
 y=168

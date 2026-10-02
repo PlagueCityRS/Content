@@ -14,71 +14,71 @@
 if_openmain(misc_both_manage);
 %if1 = calc(10 - %misc_points_mine - %misc_points_wood - %misc_points_herb - %misc_points_fish);
 %if2 = 0;
-if_settext(misc_both_manage:com_87, tostring(%misc_coffers));
+if_settext(misc_both_manage:miscb_if_coffers_money, tostring(%misc_coffers));
 
 // Mining Up
-[if_button,misc_both_manage:com_11]
+[if_button,misc_both_manage:miscb_if_mining_up]
 if (%if1 > 0) {
     %if1 = max(sub(%if1, 1), 0);
     %misc_points_mine = min(add(%misc_points_mine, 1), 10);
 }
 // Mining Down
-[if_button,misc_both_manage:com_12]
+[if_button,misc_both_manage:miscb_if_mining_down]
 if (%misc_points_mine > 0) {
     %misc_points_mine = max(sub(%misc_points_mine, 1), 0);
     %if1 = min(add(%if1, 1), 10);
 }
 
 // Wood Up
-[if_button,misc_both_manage:com_46]
+[if_button,misc_both_manage:miscb_if_wood_up]
 if (%if1 > 0) {
     %if1 = max(sub(%if1, 1), 0);
     %misc_points_wood = min(add(%misc_points_wood, 1), 10);
 }
 // Wood Down
-[if_button,misc_both_manage:com_47]
+[if_button,misc_both_manage:miscb_if_wood_down]
 if (%misc_points_wood > 0) {
     %misc_points_wood = max(sub(%misc_points_wood, 1), 0);
     %if1 = min(add(%if1, 1), 10);
 }
 
 // Herb Up
-[if_button,misc_both_manage:com_27]
+[if_button,misc_both_manage:miscb_if_herbs_up]
 if (%if1 > 0) {
     %if1 = max(sub(%if1, 1), 0);
     %misc_points_herb = min(add(%misc_points_herb, 1), 10);
 }
 // Herb Down
-[if_button,misc_both_manage:com_28]
+[if_button,misc_both_manage:miscb_if_herbs_down]
 if (%misc_points_herb > 0) {
     %misc_points_herb = max(sub(%misc_points_herb, 1), 0);
     %if1 = min(add(%if1, 1), 10);
 }
 
 // Fishing Up
-[if_button,misc_both_manage:com_62]
+[if_button,misc_both_manage:miscb_if_fishing_up]
 if (%if1 > 0) {
     %if1 = max(sub(%if1, 1), 0);
     %misc_points_fish = min(add(%misc_points_fish, 1), 10);
 }
 // Fishing Down
-[if_button,misc_both_manage:com_63]
+[if_button,misc_both_manage:miscb_if_fishing_down]
 if (%misc_points_fish > 0) {
     %misc_points_fish = max(sub(%misc_points_fish, 1), 0);
     %if1 = min(add(%if1, 1), 10);
 }
 // Fishing Cooked
-[if_button,misc_both_manage:com_108]
+[if_button,misc_both_manage:miscb_if_fishing_cooked]
 %misc_cooked = togglebit(%misc_cooked, 0);
-[if_button,misc_both_manage:com_107]
+[if_button,misc_both_manage:miscb_if_fishing_cookedtext]
 %misc_cooked = togglebit(%misc_cooked, 0);
 
 // Help Button
-[if_button,misc_both_manage:com_95]
+[if_button,misc_both_manage:miscb_if_questionmark]
 %if2 = togglebit(%if2, 0);
 
 // // Deposit
-[if_button,misc_both_manage:com_88]
+[if_button,misc_both_manage:miscb_if_coffers_deposit]
 p_countdialog;
 def_int $requested_deposit = last_int;
 
@@ -121,7 +121,7 @@ if ($deposit_amt > 0) {
 ~open_manage_miscellania_interface;
 
 // Withdraw
-[if_button,misc_both_manage:com_89]
+[if_button,misc_both_manage:miscb_if_coffers_withdraw]
 p_countdialog;
 def_int $withdraw_amt = last_int;
 if(%misc_coffers >= $withdraw_amt) {

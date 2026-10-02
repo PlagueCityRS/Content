@@ -1,4 +1,4 @@
-[com_0]
+[mm_puzzle_complete_layer1]
 type=layer
 x=163
 y=48
@@ -21,7 +21,7 @@ text=Close Window
 colour=0xFAD782
 overcolour=0xFFFFFF
 
-[com_2]
+[mm_puzzleback]
 type=model
 x=247
 y=145
@@ -40,7 +40,7 @@ height=5
 interactable=yes
 margin=5,5
 
-[com_4]
+[mm_puzzletop]
 type=model
 x=247
 y=145

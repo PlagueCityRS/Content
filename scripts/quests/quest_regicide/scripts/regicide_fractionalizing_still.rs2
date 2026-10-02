@@ -16,9 +16,9 @@ if(%regicide_still_total >= 26) {
     %regicide_still_total = 0;
 }
 
-[if_button,regicide_still:com_89] if_close;
+[if_button,regicide_still:regicide_still_close] if_close;
 
-[if_button,regicide_still:com_129]
+[if_button,regicide_still:regicide_pressure_valve_down]
 if(testbit(%regicide_still_settings, 27) = ^true) {
     %regicide_still_settings = clearbit(%regicide_still_settings, 27);
     %regicide_still_settings = setbit(%regicide_still_settings, 26);
@@ -28,7 +28,7 @@ if(testbit(%regicide_still_settings, 27) = ^true) {
 }
 sound_synth(valveturn, 1, 0);
 
-[if_button,regicide_still:com_130]
+[if_button,regicide_still:regicide_pressure_valve_up]
 if(testbit(%regicide_still_settings, 26) = ^true) {
     %regicide_still_settings = clearbit(%regicide_still_settings, 26);
     %regicide_still_settings = setbit(%regicide_still_settings, 27);
@@ -40,7 +40,7 @@ if(testbit(%regicide_still_settings, 26) = ^true) {
 }
 sound_synth(valveturn, 1, 0);
 
-[if_button,regicide_still:com_131]
+[if_button,regicide_still:regicide_tar_valve_down]
 if(testbit(%regicide_still_settings, 30) = ^true) {
     %regicide_still_settings = clearbit(%regicide_still_settings, 30);
     %regicide_still_settings = setbit(%regicide_still_settings, 29);
@@ -50,7 +50,7 @@ if(testbit(%regicide_still_settings, 30) = ^true) {
 }
 sound_synth(valveturn, 1, 0);
 
-[if_button,regicide_still:com_132]
+[if_button,regicide_still:regicide_tar_valve_up]
 if(testbit(%regicide_still_settings, 29) = ^true) {
     %regicide_still_settings = clearbit(%regicide_still_settings, 29);
     %regicide_still_settings = setbit(%regicide_still_settings, 30);
@@ -60,7 +60,7 @@ if(testbit(%regicide_still_settings, 29) = ^true) {
 }
 sound_synth(valveturn, 1, 0);
 
-[if_button,regicide_still:com_120]
+[if_button,regicide_still:regicide_add_coal]
 if(inv_total(inv, coal) = 0) {
     return;
 }

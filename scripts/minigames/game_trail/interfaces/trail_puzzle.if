@@ -1,4 +1,4 @@
-[com_0]
+[trail_puzzle_close_button]
 type=text
 x=430
 y=8
@@ -11,7 +11,7 @@ text=Close Window
 colour=0xFAD782
 overcolour=0xFFFFFF
 
-[com_1]
+[puzzleback]
 type=model
 x=247
 y=145
@@ -30,22 +30,22 @@ height=5
 interactable=yes
 margin=5,5
 
-[com_5]
+[puzzle_complete_layer2]
 type=layer
 x=110
 y=249
 width=37
 height=45
 
-[com_3]
-layer=com_5
+[puzzle_hint_scroll]
+layer=puzzle_complete_layer2
 type=model
 x=3
 y=3
 buttontype=normal
 width=30
 height=30
-overlayer=com_6
+overlayer=puzzle_complete_layer1
 model=inv_trail_scroll
 zoom=1010
 xan=360
@@ -53,7 +53,7 @@ yan=672
 option=Hint
 
 [com_4]
-layer=com_5
+layer=puzzle_complete_layer2
 type=text
 x=8
 y=30
@@ -63,7 +63,7 @@ font=p11_full
 text=Hint
 colour=0xFAD782
 
-[com_6]
+[puzzle_complete_layer1]
 type=layer
 x=156
 y=40
@@ -74,7 +74,7 @@ script1=eq,2
 hide=yes
 
 [com_7]
-layer=com_6
+layer=puzzle_complete_layer1
 type=model
 x=90
 y=107
@@ -85,7 +85,7 @@ zoom=430
 xan=512
 
 [com_8]
-layer=com_6
+layer=puzzle_complete_layer1
 type=inv
 x=15
 y=14
@@ -93,7 +93,7 @@ width=5
 height=5
 margin=5,5
 
-[com_9]
+[puzzletop]
 type=model
 x=247
 y=145

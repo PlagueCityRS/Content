@@ -337,7 +337,7 @@ switch_int(getbit_range(%viking_bits, ^viking_seerdoor_start, ^viking_seerdoor_e
 @viking_seer_enter_riddle;
 
 // functionally (nearly) the same as the tribal door
-[if_button,combolockdoor:com_57]
+[if_button,seer_combolock:seerenter]
 if_close;
 def_int $solved = ^false;
 def_int $riddle_id = getbit_range(%viking_bits, ^viking_seerdoor_start, ^viking_seerdoor_end);
@@ -374,23 +374,23 @@ if(~get_viking_peer_progress < ^peer_completed_riddle) {
     return;
 } 
 
-[if_button,combolockdoor:com_47] @viking_door_combo(1, -1);
-[if_button,combolockdoor:com_49] @viking_door_combo(2, -1);
-[if_button,combolockdoor:com_51] @viking_door_combo(3, -1);
-[if_button,combolockdoor:com_53] @viking_door_combo(4, -1);
+[if_button,seer_combolock:seera_left] @viking_door_combo(1, -1);
+[if_button,seer_combolock:seerb_left] @viking_door_combo(2, -1);
+[if_button,seer_combolock:seerc_left] @viking_door_combo(3, -1);
+[if_button,seer_combolock:seerd_left] @viking_door_combo(4, -1);
 
-[if_button,combolockdoor:com_48] @viking_door_combo(1, 1);
-[if_button,combolockdoor:com_50] @viking_door_combo(2, 1);
-[if_button,combolockdoor:com_52] @viking_door_combo(3, 1);
-[if_button,combolockdoor:com_54] @viking_door_combo(4, 1);
+[if_button,seer_combolock:seera_right] @viking_door_combo(1, 1);
+[if_button,seer_combolock:seerb_right] @viking_door_combo(2, 1);
+[if_button,seer_combolock:seerc_right] @viking_door_combo(3, 1);
+[if_button,seer_combolock:seerd_right] @viking_door_combo(4, 1);
 
 [label,viking_seer_enter_riddle]
 %temp = 0;
-if_openmain(combolockdoor);
-if_settext(combolockdoor:com_43, "A");
-if_settext(combolockdoor:com_44, "A");
-if_settext(combolockdoor:com_45, "A");
-if_settext(combolockdoor:com_46, "A");
+if_openmain(seer_combolock);
+if_settext(seer_combolock:seera, "A");
+if_settext(seer_combolock:seerb, "A");
+if_settext(seer_combolock:seerc, "A");
+if_settext(seer_combolock:seerd, "A");
 
 [proc,get_viking_door_lock](int $lock_index)(int)
 return (getbit_range(%temp, calc(5 * $lock_index - 4), calc(5 * $lock_index)));
@@ -400,10 +400,10 @@ def_int $current_stage = ~get_viking_door_lock($lock_index);
 def_int $stage = ~calc_tribaldoor_value($current_stage, $change);
 %temp = setbit_range_toint(%temp, $stage, calc(5 * $lock_index - 4), calc(5 * $lock_index));
 switch_int($lock_index) {
-    case 1 : if_settext(combolockdoor:com_43, enum(int, string, alphabet, $stage));
-    case 2 : if_settext(combolockdoor:com_44, enum(int, string, alphabet, $stage));
-    case 3 : if_settext(combolockdoor:com_45, enum(int, string, alphabet, $stage));
-    case 4 : if_settext(combolockdoor:com_46, enum(int, string, alphabet, $stage));
+    case 1 : if_settext(seer_combolock:seera, enum(int, string, alphabet, $stage));
+    case 2 : if_settext(seer_combolock:seerb, enum(int, string, alphabet, $stage));
+    case 3 : if_settext(seer_combolock:seerc, enum(int, string, alphabet, $stage));
+    case 4 : if_settext(seer_combolock:seerd, enum(int, string, alphabet, $stage));
 }
 
 [oploc1,viking_seer_up_ladder]
@@ -986,20 +986,20 @@ if(testbit(%viking_bits, ^viking_seerdoor_reddisk_1) = ^true & testbit(%viking_b
 mes("You study the mural... it appears to be missing something...");
 
 if(testbit(%viking_bits, ^viking_seerdoor_reddisk_1) = ^true & testbit(%viking_bits, ^viking_seerdoor_reddisk_2) = ^true & inv_total(inv, viking_vase_lid) > 0) {
-    if_setobject(viking_mural:com_1, viking_dummy_lid, 10);
+    if_setobject(viking_mural:viking_juglid, viking_dummy_lid, 10);
 }
 
-if_setobject(viking_mural:com_9, viking_dummy_coin, 116);
-if_setobject(viking_mural:com_10, viking_dummy_coin, 116);
-if_setobject(viking_mural:com_11, viking_dummy_coin, 116);
-if_setobject(viking_mural:com_12, viking_dummy_coin, 116);
-if_setobject(viking_mural:com_13, viking_dummy_coin, 116);
-if_setobject(viking_mural:com_14, viking_dummy_coin, 116);
-if(testbit(%viking_bits, ^viking_seerdoor_reddisk_1) = ^true) if_setobject(viking_mural:com_15, viking_dummy_coin, 116);
-else if_setobject(viking_mural:com_15, viking_dummy_coin2, 116);
+if_setobject(viking_mural:viking_redcoin1, viking_dummy_coin, 116);
+if_setobject(viking_mural:viking_redcoin2, viking_dummy_coin, 116);
+if_setobject(viking_mural:viking_redcoin3, viking_dummy_coin, 116);
+if_setobject(viking_mural:viking_redcoin4, viking_dummy_coin, 116);
+if_setobject(viking_mural:viking_redcoin5, viking_dummy_coin, 116);
+if_setobject(viking_mural:viking_redcoin6, viking_dummy_coin, 116);
+if(testbit(%viking_bits, ^viking_seerdoor_reddisk_1) = ^true) if_setobject(viking_mural:viking_blackcircle1, viking_dummy_coin, 116);
+else if_setobject(viking_mural:viking_blackcircle1, viking_dummy_coin2, 116);
 
-if(testbit(%viking_bits, ^viking_seerdoor_reddisk_2) = ^true) if_setobject(viking_mural:com_16, viking_dummy_coin, 116);
-else if_setobject(viking_mural:com_16, viking_dummy_coin2, 116);
+if(testbit(%viking_bits, ^viking_seerdoor_reddisk_2) = ^true) if_setobject(viking_mural:viking_blackcircle2, viking_dummy_coin, 116);
+else if_setobject(viking_mural:viking_blackcircle2, viking_dummy_coin2, 116);
 
 if_openmain(viking_mural);
 

@@ -31,7 +31,7 @@ zoom=184
 xan=513
 yan=514
 
-[com_3]
+[weregolf_close_button]
 type=text
 x=430
 y=9
@@ -57,7 +57,7 @@ shadowed=yes
 text=Time
 colour=0xFEA924
 
-[com_5]
+[waa_time]
 type=text
 x=138
 y=176
@@ -69,7 +69,7 @@ shadowed=yes
 text=4:17
 colour=0xF4BE68
 
-[com_6]
+[waa_xp]
 type=text
 x=341
 y=177

@@ -1,4 +1,4 @@
-[com_0]
+[mes5a]
 type=text
 x=21
 y=0
@@ -8,7 +8,7 @@ center=yes
 font=q8_full
 text=Line1
 
-[com_1]
+[mes5b]
 type=text
 x=21
 y=16
@@ -18,7 +18,7 @@ center=yes
 font=q8_full
 text=Line2
 
-[com_2]
+[mes5c]
 type=text
 x=21
 y=32
@@ -28,7 +28,7 @@ center=yes
 font=q8_full
 text=Line3
 
-[com_3]
+[mes5d]
 type=text
 x=21
 y=48
@@ -38,7 +38,7 @@ center=yes
 font=q8_full
 text=Line4
 
-[com_4]
+[mes5e]
 type=text
 x=21
 y=64
@@ -48,7 +48,7 @@ center=yes
 font=q8_full
 text=Line5
 
-[com_5]
+[mes5next]
 type=text
 x=65
 y=80

@@ -9,7 +9,7 @@ zoom=151
 xan=509
 yan=1536
 
-[com_1]
+[viking_juglid]
 type=model
 x=235
 y=150
@@ -64,15 +64,15 @@ zoom=197
 xan=159
 yan=57
 
-[com_6]
+[viking_jug_layer]
 type=layer
 x=110
 y=38
 width=335
 height=259
 
-[com_9]
-layer=com_6
+[viking_redcoin1]
+layer=viking_jug_layer
 type=model
 x=74
 y=-5
@@ -80,8 +80,8 @@ width=32
 height=32
 model=inv_goldpeices_1
 
-[com_10]
-layer=com_6
+[viking_redcoin2]
+layer=viking_jug_layer
 type=model
 x=37
 y=57
@@ -92,8 +92,8 @@ zoom=306
 xan=353
 yan=1927
 
-[com_11]
-layer=com_6
+[viking_redcoin3]
+layer=viking_jug_layer
 type=model
 x=29
 y=131
@@ -104,8 +104,8 @@ zoom=306
 xan=328
 yan=1916
 
-[com_12]
-layer=com_6
+[viking_redcoin4]
+layer=viking_jug_layer
 type=model
 x=55
 y=199
@@ -116,8 +116,8 @@ zoom=306
 xan=311
 yan=1735
 
-[com_13]
-layer=com_6
+[viking_redcoin5]
+layer=viking_jug_layer
 type=model
 x=301
 y=117
@@ -128,8 +128,8 @@ zoom=306
 xan=361
 yan=1883
 
-[com_14]
-layer=com_6
+[viking_redcoin6]
+layer=viking_jug_layer
 type=model
 x=271
 y=193
@@ -140,8 +140,8 @@ zoom=306
 xan=360
 yan=1905
 
-[com_15]
-layer=com_6
+[viking_blackcircle1]
+layer=viking_jug_layer
 type=model
 x=241
 y=-11
@@ -152,8 +152,8 @@ zoom=306
 xan=380
 yan=1870
 
-[com_16]
-layer=com_6
+[viking_blackcircle2]
+layer=viking_jug_layer
 type=model
 x=292
 y=39
@@ -164,7 +164,7 @@ zoom=306
 xan=351
 yan=1844
 
-[com_7]
+[viking_close_button]
 type=text
 x=429
 y=10

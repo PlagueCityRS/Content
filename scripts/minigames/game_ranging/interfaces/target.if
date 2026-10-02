@@ -712,7 +712,7 @@ model=com_i3
 zoom=360
 xan=97
 
-[com_89]
+[dart_bull]
 type=model
 x=253
 y=172
@@ -750,7 +750,7 @@ zoom=800
 xan=150
 yan=1200
 
-[com_92]
+[dart_1]
 type=model
 x=256
 y=131
@@ -764,7 +764,7 @@ zoom=400
 xan=100
 yan=150
 
-[com_93]
+[dart_4]
 type=model
 x=290
 y=193
@@ -778,7 +778,7 @@ zoom=400
 xan=100
 yan=150
 
-[com_94]
+[dart_6]
 type=model
 x=247
 y=233
@@ -792,7 +792,7 @@ zoom=400
 xan=100
 yan=150
 
-[com_95]
+[dart_5]
 type=model
 x=193
 y=189
@@ -806,7 +806,7 @@ zoom=400
 xan=100
 yan=150
 
-[com_96]
+[dart_9]
 type=model
 x=191
 y=90
@@ -820,7 +820,7 @@ zoom=400
 xan=100
 yan=150
 
-[com_97]
+[dart_3]
 type=model
 x=215
 y=126
@@ -834,7 +834,7 @@ zoom=400
 xan=100
 yan=150
 
-[com_98]
+[dart_8]
 type=model
 x=298
 y=101
@@ -848,7 +848,7 @@ zoom=400
 xan=100
 yan=150
 
-[com_99]
+[dart_2]
 type=model
 x=294
 y=144
@@ -862,7 +862,7 @@ zoom=400
 xan=100
 yan=150
 
-[com_100]
+[dart_7]
 type=model
 x=328
 y=163
@@ -876,7 +876,7 @@ zoom=400
 xan=100
 yan=150
 
-[com_101]
+[dart_10]
 type=model
 x=275
 y=61
@@ -912,7 +912,7 @@ shadowed=yes
 text=Score:
 colour=0xFFAA44
 
-[com_104]
+[score_text]
 type=text
 x=420
 y=169
@@ -1108,7 +1108,7 @@ zoom=800
 xan=150
 yan=1200
 
-[com_120]
+[dart_hitmiss]
 type=text
 x=241
 y=114
@@ -1120,7 +1120,7 @@ shadowed=yes
 text=Missed!
 colour=0xFFFF00
 
-[com_121]
+[dart_close_button]
 type=text
 x=420
 y=29

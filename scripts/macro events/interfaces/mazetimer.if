@@ -10,7 +10,7 @@ shadowed=yes
 text=Complete the Maze as fast as possible!
 colour=0xEAEAEA
 
-[com_4]
+[mazetimerlayer]
 type=layer
 x=161
 y=242
@@ -18,7 +18,7 @@ width=341
 height=77
 
 [com_1]
-layer=com_4
+layer=mazetimerlayer
 type=text
 x=169
 y=3
@@ -31,7 +31,7 @@ text=There is...
 colour=0xD1D1D1
 
 [com_2]
-layer=com_4
+layer=mazetimerlayer
 type=text
 x=233
 y=26
@@ -44,7 +44,7 @@ text=%1%
 colour=0xFFFF00
 
 [com_3]
-layer=com_4
+layer=mazetimerlayer
 type=text
 x=192
 y=45

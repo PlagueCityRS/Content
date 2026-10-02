@@ -1,4 +1,4 @@
-[com_0]
+[cat_backdrop]
 type=model
 x=240
 y=154
@@ -26,14 +26,14 @@ height=164
 fill=yes
 colour=0x404040
 
-[com_3]
+[cat_naming_cl1]
 type=layer
 x=11
 y=31
 width=488
 height=36
 
-[com_4]
+[cata_dial]
 type=model
 x=32
 y=122
@@ -43,7 +43,7 @@ model=if_combinationlock
 zoom=800
 xan=400
 
-[com_5]
+[catb_dial]
 type=model
 x=115
 y=122
@@ -53,7 +53,7 @@ model=if_combinationlock
 zoom=800
 xan=400
 
-[com_6]
+[catc_dial]
 type=model
 x=198
 y=122
@@ -63,7 +63,7 @@ model=if_combinationlock
 zoom=800
 xan=400
 
-[com_7]
+[catd_dial]
 type=model
 x=281
 y=122
@@ -73,7 +73,7 @@ model=if_combinationlock
 zoom=800
 xan=400
 
-[com_8]
+[cate_dial]
 type=model
 x=365
 y=123
@@ -83,7 +83,7 @@ model=if_combinationlock
 zoom=800
 xan=400
 
-[com_9]
+[catf_dial]
 type=model
 x=449
 y=122
@@ -93,7 +93,7 @@ model=if_combinationlock
 zoom=800
 xan=400
 
-[com_10]
+[cata]
 type=text
 x=43
 y=113
@@ -104,7 +104,7 @@ font=b12_full
 text=A
 colour=0x505050
 
-[com_11]
+[catb]
 type=text
 x=126
 y=113
@@ -115,7 +115,7 @@ font=b12_full
 text=A
 colour=0x505050
 
-[com_12]
+[catc]
 type=text
 x=210
 y=113
@@ -126,7 +126,7 @@ font=b12_full
 text=A
 colour=0x505050
 
-[com_13]
+[catd]
 type=text
 x=292
 y=114
@@ -137,7 +137,7 @@ font=b12_full
 text=A
 colour=0x505050
 
-[com_14]
+[cate]
 type=text
 x=376
 y=114
@@ -148,7 +148,7 @@ font=b12_full
 text=A
 colour=0x505050
 
-[com_15]
+[catf]
 type=text
 x=460
 y=114
@@ -159,7 +159,7 @@ font=b12_full
 text=A
 colour=0x505050
 
-[com_16]
+[cat_collar]
 type=model
 x=223
 y=11
@@ -170,7 +170,7 @@ zoom=278
 xan=396
 yan=6
 
-[com_17]
+[cata_left]
 type=graphic
 x=15
 y=194
@@ -179,7 +179,7 @@ width=31
 height=24
 graphic=leftarrow_small,0
 
-[com_18]
+[cata_right]
 type=graphic
 x=51
 y=194
@@ -188,7 +188,7 @@ width=31
 height=24
 graphic=rightarrow_small,0
 
-[com_19]
+[catb_left]
 type=graphic
 x=97
 y=194
@@ -197,7 +197,7 @@ width=32
 height=25
 graphic=leftarrow_small,0
 
-[com_20]
+[catb_right]
 type=graphic
 x=133
 y=194
@@ -206,7 +206,7 @@ width=32
 height=25
 graphic=rightarrow_small,0
 
-[com_21]
+[catc_left]
 type=graphic
 x=179
 y=194
@@ -215,7 +215,7 @@ width=32
 height=25
 graphic=leftarrow_small,0
 
-[com_22]
+[catc_right]
 type=graphic
 x=216
 y=194
@@ -224,7 +224,7 @@ width=32
 height=25
 graphic=rightarrow_small,0
 
-[com_23]
+[catd_left]
 type=graphic
 x=264
 y=194
@@ -233,7 +233,7 @@ width=32
 height=25
 graphic=leftarrow_small,0
 
-[com_24]
+[catd_right]
 type=graphic
 x=300
 y=194
@@ -242,7 +242,7 @@ width=32
 height=25
 graphic=rightarrow_small,0
 
-[com_25]
+[cate_left]
 type=graphic
 x=348
 y=194
@@ -251,7 +251,7 @@ width=32
 height=25
 graphic=leftarrow_small,0
 
-[com_26]
+[cate_right]
 type=graphic
 x=384
 y=194
@@ -260,7 +260,7 @@ width=32
 height=25
 graphic=rightarrow_small,0
 
-[com_27]
+[catf_right]
 type=graphic
 x=468
 y=193
@@ -269,7 +269,7 @@ width=32
 height=25
 graphic=rightarrow_small,0
 
-[com_28]
+[catf_left]
 type=graphic
 x=433
 y=193
@@ -278,7 +278,7 @@ width=32
 height=25
 graphic=leftarrow_small,0
 
-[com_29]
+[cat_close]
 type=text
 x=420
 y=39
@@ -291,7 +291,7 @@ text=Close Window
 colour=0x808080
 overcolour=0xFFFFFF
 
-[com_30]
+[catnaming]
 type=text
 x=206
 y=36
@@ -303,7 +303,7 @@ shadowed=yes
 text=Name your cat ...
 colour=0xFFAA44
 
-[com_31]
+[catname_enter]
 type=rect
 x=193
 y=262
@@ -313,7 +313,7 @@ height=32
 fill=yes
 colour=0x404040
 
-[com_32]
+[cat_naming_enter]
 type=text
 x=229
 y=269
@@ -323,7 +323,7 @@ font=b12_full
 text=E N T E R
 colour=0xFFAA44
 
-[com_33]
+[cathead1]
 type=model
 x=32
 y=397
@@ -334,7 +334,7 @@ zoom=400
 xan=11
 yan=1941
 
-[com_34]
+[cathead2]
 type=model
 x=469
 y=395
@@ -345,7 +345,7 @@ zoom=400
 xan=11
 yan=128
 
-[com_35]
+[cat_eye1]
 type=model
 x=69
 y=250
@@ -356,7 +356,7 @@ zoom=491
 xan=612
 yan=77
 
-[com_36]
+[cat_eye2]
 type=model
 x=89
 y=252
@@ -367,7 +367,7 @@ zoom=550
 xan=612
 yan=77
 
-[com_37]
+[cat_eye3]
 type=model
 x=417
 y=249
@@ -378,7 +378,7 @@ zoom=427
 xan=612
 yan=77
 
-[com_38]
+[cat_eye4]
 type=model
 x=398
 y=251

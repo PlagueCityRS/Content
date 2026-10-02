@@ -26,32 +26,32 @@ def_int $water = getbit_range($bits, 18, 25);
 def_int $time_left = getbit_range($bits, 26, 30);
 def_int $net_ripped = testbit($bits, 31);
 
-if ($catch = 0) if_settext(trawler_overlay:com_28, "Nothing");
-else if_settext(trawler_overlay:com_28, "<tostring($catch)> fish");
+if ($catch = 0) if_settext(trawler_overlay:trawler_catchtext, "Nothing");
+else if_settext(trawler_overlay:trawler_catchtext, "<tostring($catch)> fish");
 
 %trawler_water_overlay = $water;
 
-if ($time_left = 0) if_settext(trawler_overlay:com_29, "Under 1 min");
-else if_settext(trawler_overlay:com_29, ~pluralise($time_left, "min"));
+if ($time_left = 0) if_settext(trawler_overlay:trawler_timetext, "Under 1 min");
+else if_settext(trawler_overlay:trawler_timetext, ~pluralise($time_left, "min"));
 
 if ($net_ripped = ^true) {
-    if_settext(trawler_overlay:com_27, "Ripped!");
-    if_settext(trawler_overlay:com_26, "");
+    if_settext(trawler_overlay:trawler_nettextripped, "Ripped!");
+    if_settext(trawler_overlay:trawler_nettextok, "");
 } else {
-    if_settext(trawler_overlay:com_26, "Okay");
-    if_settext(trawler_overlay:com_27, "");
+    if_settext(trawler_overlay:trawler_nettextok, "Okay");
+    if_settext(trawler_overlay:trawler_nettextripped, "");
 }
 
 
 [proc,trawler_overlay_reset]
 %trawler_water_overlay = 0;
 
-if_settext(trawler_overlay:com_26, "Okay");
-if_settext(trawler_overlay:com_27, "");
+if_settext(trawler_overlay:trawler_nettextok, "Okay");
+if_settext(trawler_overlay:trawler_nettextripped, "");
 
-if_settext(trawler_overlay:com_28, "Nothing");
+if_settext(trawler_overlay:trawler_catchtext, "Nothing");
 
-if_settext(trawler_overlay:com_29, "10 mins");
+if_settext(trawler_overlay:trawler_timetext, "10 mins");
 
 [proc,trawler_mapzone]
 if_openoverlay(trawler_overlay);

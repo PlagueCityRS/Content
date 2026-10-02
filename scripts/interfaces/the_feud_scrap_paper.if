@@ -1,11 +1,11 @@
-[com_0]
+[feud_paper_l1]
 type=layer
 x=34
 y=34
 width=32
 height=32
 
-[com_1]
+[feud_paper_model]
 type=model
 x=306
 y=119
@@ -16,7 +16,7 @@ zoom=543
 xan=427
 yan=13
 
-[com_2]
+[feud_paper_text]
 type=text
 x=95
 y=114
@@ -26,7 +26,7 @@ center=yes
 font=q8_full
 text=Whatever text you need goes here!
 
-[com_3]
+[feud_paper_text2]
 type=text
 x=179
 y=218
@@ -35,7 +35,7 @@ height=17
 font=q8_full
 text=Combi for lock
 
-[com_4]
+[feud_paper_close]
 type=text
 x=427
 y=10
@@ -50,7 +50,7 @@ colour=0xFFFF00
 activecolour=0xFFFFFF
 overcolour=0xFFFFFF
 
-[com_5]
+[feud_paper_text3]
 type=text
 x=95
 y=140
@@ -60,7 +60,7 @@ center=yes
 font=q8_full
 text=Text
 
-[com_6]
+[feud_paper_text4]
 type=text
 x=95
 y=166
@@ -70,7 +70,7 @@ center=yes
 font=q8_full
 text=Text
 
-[com_7]
+[feud_paper_text5]
 type=text
 x=95
 y=192

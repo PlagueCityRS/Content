@@ -134,7 +134,7 @@ shadowed=yes
 text=Coke
 colour=0x00FF00
 
-[com_12]
+[x_1]
 type=model
 x=301
 y=114
@@ -146,7 +146,7 @@ zoom=1808
 xan=420
 yan=1
 
-[com_13]
+[x_3]
 type=model
 x=362
 y=226
@@ -158,7 +158,7 @@ zoom=1808
 xan=420
 yan=1
 
-[com_14]
+[x_4]
 type=model
 x=258
 y=263

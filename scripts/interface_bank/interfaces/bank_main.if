@@ -720,7 +720,7 @@ shadowed=yes
 text=The Bank of RuneScape
 colour=0xFF981F
 
-[com_90]
+[bankmain_close_button]
 type=text
 x=419
 y=32

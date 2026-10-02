@@ -713,7 +713,7 @@ shadowed=yes
 text=Castle Wars Ticket Exchange
 colour=0xCCAA44
 
-[com_89]
+[close_button]
 type=text
 x=423
 y=29
@@ -726,7 +726,7 @@ text=Close Window
 colour=0x808080
 overcolour=0xFFFFFF
 
-[com_90]
+[castlewars_trade_tickets]
 type=inv
 x=76
 y=65
@@ -736,7 +736,7 @@ margin=15,15
 option1=Value
 option2=Buy
 
-[com_91]
+[castlewars_trade_coins]
 type=inv
 x=217
 y=159

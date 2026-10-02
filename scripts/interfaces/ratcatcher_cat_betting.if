@@ -236,7 +236,7 @@ width=512
 height=334
 fill=yes
 
-[com_23]
+[vc_confirm_yes]
 layer=com_21
 type=graphic
 x=220
@@ -247,7 +247,7 @@ height=36
 graphic=combatboxes,0
 option=Yes.
 
-[com_24]
+[vc_confirm_no]
 layer=com_21
 type=graphic
 x=220
@@ -258,7 +258,7 @@ height=36
 graphic=combatboxes,0
 option=No.
 
-[com_25]
+[ratcatcher_cat_acceptcopy]
 layer=com_21
 type=text
 x=245
@@ -271,7 +271,7 @@ shadowed=yes
 text=YES
 colour=0x11D311
 
-[com_26]
+[ratcatcher_cat_declinecopy]
 layer=com_21
 type=text
 x=248
@@ -284,7 +284,7 @@ shadowed=yes
 text=NO
 colour=0xAC1414
 
-[com_27]
+[vc_ratpit_bet_amount]
 layer=com_21
 type=text
 x=180

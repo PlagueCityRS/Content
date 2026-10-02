@@ -9,7 +9,7 @@ shadowed=yes
 text=Blast Furnace Temp Gauge
 colour=0xFFAA44
 
-[com_1]
+[blast_furnace_temp_gauge_close_button]
 type=text
 x=470
 y=9
@@ -21,7 +21,7 @@ shadowed=yes
 text=Close
 colour=0x888888
 
-[com_2]
+[temp_gauge_fuelflag]
 type=model
 x=316
 y=176
@@ -30,7 +30,7 @@ height=32
 model=com_i508
 zoom=908
 
-[com_3]
+[clock_crazy_1]
 type=model
 x=185
 y=183
@@ -39,7 +39,7 @@ height=32
 model=com_i509
 zoom=960
 
-[com_4]
+[temp_gauge_needle]
 type=model
 x=248
 y=152

@@ -8,7 +8,7 @@ trans=120
 fill=yes
 colour=0x202020
 
-[com_1]
+[favour_keyring_close]
 type=text
 x=427
 y=7
@@ -87,7 +87,7 @@ zoom=234
 xan=207
 yan=309
 
-[com_4]
+[favour_key_01]
 layer=com_19
 type=model
 x=39
@@ -99,7 +99,7 @@ zoom=238
 xan=328
 yan=20
 
-[com_5]
+[favour_key_02]
 layer=com_19
 type=model
 x=95
@@ -111,7 +111,7 @@ zoom=308
 xan=328
 yan=20
 
-[com_6]
+[favour_key_03]
 layer=com_19
 type=model
 x=152
@@ -123,7 +123,7 @@ zoom=441
 xan=328
 yan=20
 
-[com_7]
+[favour_key_04]
 layer=com_19
 type=model
 x=205
@@ -135,7 +135,7 @@ zoom=616
 xan=328
 yan=20
 
-[com_8]
+[favour_key_05]
 layer=com_19
 type=model
 x=253
@@ -147,7 +147,7 @@ zoom=700
 xan=328
 yan=20
 
-[com_9]
+[favour_key_06]
 layer=com_19
 type=model
 x=295
@@ -159,7 +159,7 @@ zoom=700
 xan=328
 yan=20
 
-[com_10]
+[favour_down_arrow]
 layer=com_19
 type=model
 x=343
@@ -226,7 +226,7 @@ shadowed=yes
 text=***************
 colour=0xA6A692
 
-[com_24]
+[favour_up_arrow]
 layer=com_19
 type=model
 x=-11

@@ -713,7 +713,7 @@ font=b12_full
 text=What hides would you like tanning?
 colour=0xFF981F
 
-[com_89]
+[tanning_close_button]
 type=text
 x=423
 y=32
@@ -727,15 +727,15 @@ colour=0x808080
 activecolour=0xFFFFFF
 overcolour=0xFF7F00
 
-[com_90]
+[tanning_a]
 type=layer
 x=40
 y=56
 width=96
 height=128
 
-[com_98]
-layer=com_90
+[tanning_a_model]
+layer=tanning_a
 type=model
 x=0
 y=0
@@ -743,8 +743,8 @@ width=96
 height=96
 zoom=400
 
-[com_106]
-layer=com_90
+[tanning_a_text]
+layer=tanning_a
 type=text
 x=0
 y=96
@@ -756,8 +756,8 @@ shadowed=yes
 text=Hide
 colour=0x00CFFF
 
-[com_114]
-layer=com_90
+[tanning_a_price]
+layer=tanning_a
 type=text
 x=0
 y=111
@@ -769,8 +769,8 @@ shadowed=yes
 text=Cost
 colour=0x00CFFF
 
-[com_122]
-layer=com_90
+[tanning_a_all]
+layer=tanning_a
 type=text
 x=0
 y=0
@@ -781,8 +781,8 @@ font=p12_full
 colour=0xFFFF00
 option=Tan @or2@All
 
-[com_130]
-layer=com_90
+[tanning_a_x]
+layer=tanning_a
 type=text
 x=0
 y=0
@@ -793,8 +793,8 @@ font=p12_full
 colour=0xFFFF00
 option=Tan @or2@X
 
-[com_138]
-layer=com_90
+[tanning_a_5]
+layer=tanning_a
 type=text
 x=0
 y=0
@@ -805,8 +805,8 @@ font=p12_full
 colour=0xFFFF00
 option=Tan @or2@5
 
-[com_146]
-layer=com_90
+[tanning_a_1]
+layer=tanning_a
 type=text
 x=0
 y=0
@@ -817,15 +817,15 @@ font=p12_full
 colour=0xFFFF00
 option=Tan @or2@1
 
-[com_91]
+[tanning_b]
 type=layer
 x=152
 y=56
 width=96
 height=128
 
-[com_99]
-layer=com_91
+[tanning_b_model]
+layer=tanning_b
 type=model
 x=0
 y=0
@@ -833,8 +833,8 @@ width=96
 height=96
 zoom=400
 
-[com_107]
-layer=com_91
+[tanning_b_text]
+layer=tanning_b
 type=text
 x=0
 y=96
@@ -846,8 +846,8 @@ shadowed=yes
 text=Hide
 colour=0x00CFFF
 
-[com_115]
-layer=com_91
+[tanning_b_price]
+layer=tanning_b
 type=text
 x=0
 y=111
@@ -859,8 +859,8 @@ shadowed=yes
 text=Cost
 colour=0x00CFFF
 
-[com_123]
-layer=com_91
+[tanning_b_all]
+layer=tanning_b
 type=text
 x=0
 y=0
@@ -871,8 +871,8 @@ font=p12_full
 colour=0xFFFF00
 option=Tan @or2@All
 
-[com_131]
-layer=com_91
+[tanning_b_x]
+layer=tanning_b
 type=text
 x=0
 y=0
@@ -883,8 +883,8 @@ font=p12_full
 colour=0xFFFF00
 option=Tan @or2@X
 
-[com_139]
-layer=com_91
+[tanning_b_5]
+layer=tanning_b
 type=text
 x=0
 y=0
@@ -895,8 +895,8 @@ font=p12_full
 colour=0xFFFF00
 option=Tan @or2@5
 
-[com_147]
-layer=com_91
+[tanning_b_1]
+layer=tanning_b
 type=text
 x=0
 y=0
@@ -907,15 +907,15 @@ font=p12_full
 colour=0xFFFF00
 option=Tan @or2@1
 
-[com_92]
+[tanning_c]
 type=layer
 x=264
 y=56
 width=96
 height=128
 
-[com_100]
-layer=com_92
+[tanning_c_model]
+layer=tanning_c
 type=model
 x=0
 y=0
@@ -923,8 +923,8 @@ width=96
 height=96
 zoom=400
 
-[com_108]
-layer=com_92
+[tanning_c_text]
+layer=tanning_c
 type=text
 x=0
 y=96
@@ -936,8 +936,8 @@ shadowed=yes
 text=Hide
 colour=0x00CFFF
 
-[com_116]
-layer=com_92
+[tanning_c_price]
+layer=tanning_c
 type=text
 x=0
 y=111
@@ -949,8 +949,8 @@ shadowed=yes
 text=Cost
 colour=0x00CFFF
 
-[com_124]
-layer=com_92
+[tanning_c_all]
+layer=tanning_c
 type=text
 x=0
 y=0
@@ -961,8 +961,8 @@ font=p12_full
 colour=0xFFFF00
 option=Tan @or2@All
 
-[com_132]
-layer=com_92
+[tanning_c_x]
+layer=tanning_c
 type=text
 x=0
 y=0
@@ -973,8 +973,8 @@ font=p12_full
 colour=0xFFFF00
 option=Tan @or2@X
 
-[com_140]
-layer=com_92
+[tanning_c_5]
+layer=tanning_c
 type=text
 x=0
 y=0
@@ -985,8 +985,8 @@ font=p12_full
 colour=0xFFFF00
 option=Tan @or2@5
 
-[com_148]
-layer=com_92
+[tanning_c_1]
+layer=tanning_c
 type=text
 x=0
 y=0
@@ -997,15 +997,15 @@ font=p12_full
 colour=0xFFFF00
 option=Tan @or2@1
 
-[com_93]
+[tanning_d]
 type=layer
 x=376
 y=56
 width=96
 height=128
 
-[com_101]
-layer=com_93
+[tanning_d_model]
+layer=tanning_d
 type=model
 x=0
 y=0
@@ -1013,8 +1013,8 @@ width=96
 height=96
 zoom=400
 
-[com_109]
-layer=com_93
+[tanning_d_text]
+layer=tanning_d
 type=text
 x=0
 y=96
@@ -1026,8 +1026,8 @@ shadowed=yes
 text=Hide
 colour=0x00CFFF
 
-[com_117]
-layer=com_93
+[tanning_d_price]
+layer=tanning_d
 type=text
 x=0
 y=111
@@ -1039,8 +1039,8 @@ shadowed=yes
 text=Cost
 colour=0x00CFFF
 
-[com_125]
-layer=com_93
+[tanning_d_all]
+layer=tanning_d
 type=text
 x=0
 y=0
@@ -1051,8 +1051,8 @@ font=p12_full
 colour=0xFFFF00
 option=Tan @or2@All
 
-[com_133]
-layer=com_93
+[tanning_d_x]
+layer=tanning_d
 type=text
 x=0
 y=0
@@ -1063,8 +1063,8 @@ font=p12_full
 colour=0xFFFF00
 option=Tan @or2@X
 
-[com_141]
-layer=com_93
+[tanning_d_5]
+layer=tanning_d
 type=text
 x=0
 y=0
@@ -1075,8 +1075,8 @@ font=p12_full
 colour=0xFFFF00
 option=Tan @or2@5
 
-[com_149]
-layer=com_93
+[tanning_d_1]
+layer=tanning_d
 type=text
 x=0
 y=0
@@ -1087,15 +1087,15 @@ font=p12_full
 colour=0xFFFF00
 option=Tan @or2@1
 
-[com_94]
+[tanning_e]
 type=layer
 x=40
 y=184
 width=96
 height=128
 
-[com_102]
-layer=com_94
+[tanning_e_model]
+layer=tanning_e
 type=model
 x=0
 y=0
@@ -1103,8 +1103,8 @@ width=96
 height=96
 zoom=400
 
-[com_110]
-layer=com_94
+[tanning_e_text]
+layer=tanning_e
 type=text
 x=0
 y=96
@@ -1116,8 +1116,8 @@ shadowed=yes
 text=Hide
 colour=0x00CFFF
 
-[com_118]
-layer=com_94
+[tanning_e_price]
+layer=tanning_e
 type=text
 x=0
 y=111
@@ -1129,8 +1129,8 @@ shadowed=yes
 text=Cost
 colour=0x00CFFF
 
-[com_126]
-layer=com_94
+[tanning_e_all]
+layer=tanning_e
 type=text
 x=0
 y=0
@@ -1141,8 +1141,8 @@ font=p12_full
 colour=0xFFFF00
 option=Tan @or2@All
 
-[com_134]
-layer=com_94
+[tanning_e_x]
+layer=tanning_e
 type=text
 x=0
 y=0
@@ -1153,8 +1153,8 @@ font=p12_full
 colour=0xFFFF00
 option=Tan @or2@X
 
-[com_142]
-layer=com_94
+[tanning_e_5]
+layer=tanning_e
 type=text
 x=0
 y=0
@@ -1165,8 +1165,8 @@ font=p12_full
 colour=0xFFFF00
 option=Tan @or2@5
 
-[com_150]
-layer=com_94
+[tanning_e_1]
+layer=tanning_e
 type=text
 x=0
 y=0
@@ -1177,15 +1177,15 @@ font=p12_full
 colour=0xFFFF00
 option=Tan @or2@1
 
-[com_95]
+[tanning_f]
 type=layer
 x=152
 y=184
 width=96
 height=128
 
-[com_103]
-layer=com_95
+[tanning_f_model]
+layer=tanning_f
 type=model
 x=0
 y=0
@@ -1193,8 +1193,8 @@ width=96
 height=96
 zoom=400
 
-[com_111]
-layer=com_95
+[tanning_f_text]
+layer=tanning_f
 type=text
 x=0
 y=96
@@ -1206,8 +1206,8 @@ shadowed=yes
 text=Hide
 colour=0x00CFFF
 
-[com_119]
-layer=com_95
+[tanning_f_price]
+layer=tanning_f
 type=text
 x=0
 y=111
@@ -1219,8 +1219,8 @@ shadowed=yes
 text=Cost
 colour=0x00CFFF
 
-[com_127]
-layer=com_95
+[tanning_f_all]
+layer=tanning_f
 type=text
 x=0
 y=0
@@ -1231,8 +1231,8 @@ font=p12_full
 colour=0xFFFF00
 option=Tan @or2@All
 
-[com_135]
-layer=com_95
+[tanning_f_x]
+layer=tanning_f
 type=text
 x=0
 y=0
@@ -1243,8 +1243,8 @@ font=p12_full
 colour=0xFFFF00
 option=Tan @or2@X
 
-[com_143]
-layer=com_95
+[tanning_f_5]
+layer=tanning_f
 type=text
 x=0
 y=0
@@ -1255,8 +1255,8 @@ font=p12_full
 colour=0xFFFF00
 option=Tan @or2@5
 
-[com_151]
-layer=com_95
+[tanning_f_1]
+layer=tanning_f
 type=text
 x=0
 y=0
@@ -1267,15 +1267,15 @@ font=p12_full
 colour=0xFFFF00
 option=Tan @or2@1
 
-[com_96]
+[tanning_g]
 type=layer
 x=264
 y=184
 width=96
 height=128
 
-[com_104]
-layer=com_96
+[tanning_g_model]
+layer=tanning_g
 type=model
 x=0
 y=0
@@ -1283,8 +1283,8 @@ width=96
 height=96
 zoom=400
 
-[com_112]
-layer=com_96
+[tanning_g_text]
+layer=tanning_g
 type=text
 x=0
 y=96
@@ -1296,8 +1296,8 @@ shadowed=yes
 text=Hide
 colour=0x00CFFF
 
-[com_120]
-layer=com_96
+[tanning_g_price]
+layer=tanning_g
 type=text
 x=0
 y=111
@@ -1309,8 +1309,8 @@ shadowed=yes
 text=Cost
 colour=0x00CFFF
 
-[com_128]
-layer=com_96
+[tanning_g_all]
+layer=tanning_g
 type=text
 x=0
 y=0
@@ -1321,8 +1321,8 @@ font=p12_full
 colour=0xFFFF00
 option=Tan @or2@All
 
-[com_136]
-layer=com_96
+[tanning_g_x]
+layer=tanning_g
 type=text
 x=0
 y=0
@@ -1333,8 +1333,8 @@ font=p12_full
 colour=0xFFFF00
 option=Tan @or2@X
 
-[com_144]
-layer=com_96
+[tanning_g_5]
+layer=tanning_g
 type=text
 x=0
 y=0
@@ -1345,8 +1345,8 @@ font=p12_full
 colour=0xFFFF00
 option=Tan @or2@5
 
-[com_152]
-layer=com_96
+[tanning_g_1]
+layer=tanning_g
 type=text
 x=0
 y=0
@@ -1357,15 +1357,15 @@ font=p12_full
 colour=0xFFFF00
 option=Tan @or2@1
 
-[com_97]
+[tanning_h]
 type=layer
 x=376
 y=184
 width=96
 height=128
 
-[com_105]
-layer=com_97
+[tanning_h_model]
+layer=tanning_h
 type=model
 x=0
 y=0
@@ -1373,8 +1373,8 @@ width=96
 height=96
 zoom=400
 
-[com_113]
-layer=com_97
+[tanning_h_text]
+layer=tanning_h
 type=text
 x=0
 y=96
@@ -1386,8 +1386,8 @@ shadowed=yes
 text=Hide
 colour=0x00CFFF
 
-[com_121]
-layer=com_97
+[tanning_h_price]
+layer=tanning_h
 type=text
 x=0
 y=111
@@ -1399,8 +1399,8 @@ shadowed=yes
 text=Cost
 colour=0x00CFFF
 
-[com_129]
-layer=com_97
+[tanning_h_all]
+layer=tanning_h
 type=text
 x=0
 y=0
@@ -1411,8 +1411,8 @@ font=p12_full
 colour=0xFFFF00
 option=Tan @or2@All
 
-[com_137]
-layer=com_97
+[tanning_h_x]
+layer=tanning_h
 type=text
 x=0
 y=0
@@ -1423,8 +1423,8 @@ font=p12_full
 colour=0xFFFF00
 option=Tan @or2@X
 
-[com_145]
-layer=com_97
+[tanning_h_5]
+layer=tanning_h
 type=text
 x=0
 y=0
@@ -1435,8 +1435,8 @@ font=p12_full
 colour=0xFFFF00
 option=Tan @or2@5
 
-[com_153]
-layer=com_97
+[tanning_h_1]
+layer=tanning_h
 type=text
 x=0
 y=0

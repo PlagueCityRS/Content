@@ -21,7 +21,7 @@ text=Congratulations!
 colour=0xF5B405
 activecolour=0x453C26
 
-[com_2]
+[champions_scroll_close_button]
 type=text
 x=373
 y=84
@@ -33,7 +33,7 @@ text=Close
 colour=0x823C1A
 overcolour=0xDD5817
 
-[com_3]
+[champions_scroll_text]
 type=text
 x=142
 y=117
@@ -44,7 +44,7 @@ font=p12_full
 text=Well done, you defeated the Champion!
 colour=0x004000
 
-[com_4]
+[champions_scroll_model]
 type=model
 x=93
 y=153

@@ -34,6 +34,7 @@ table=consume_table
 data=consumable,cabbage
 data=consumable,equa_leaves
 data=consumable,pot_of_cream
+data=consumable,anchovies
 data=stat_heal,hitpoints,1,0
 data=consume_sound,eat
 
@@ -72,7 +73,6 @@ data=consumable,spicy_toads_legs
 data=consumable,seasoned_toads_legs
 data=consumable,spicy_worm
 data=consumable,shrimp
-data=consumable,anchovies
 data=consumable,tbwt_cooked_karambwanji
 data=stat_heal,hitpoints,3,0
 data=consume_sound,eat
@@ -119,6 +119,8 @@ data=consumable,trout
 data=consumable,cod
 data=consumable,apple_pie
 data=consumable,half_an_apple_pie
+data=consumable,plain_pizza
+data=consumable,half_plain_pizza
 data=stat_heal,hitpoints,7,0
 data=consume_sound,eat
 

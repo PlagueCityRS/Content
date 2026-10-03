@@ -20908,6 +20908,8 @@ iop2=Wear
 manwear=man_necklaces_amulet,0
 womanwear=woman_necklaces_amulet,0
 members=yes
+wearpos=front
+tradeable=no
 
 [magic_strung_emerald_amulet]
 name=Emerald amulet
@@ -20927,6 +20929,7 @@ iop2=Wear
 manwear=man_necklaces_amulet,0
 womanwear=woman_necklaces_amulet,0
 members=yes
+wearpos=front
 
 [oak_roots]
 name=Oak roots
@@ -20985,6 +20988,7 @@ model=obj_6043
 2dyan=2008
 2dxan=504
 members=yes
+param=crafting_spinning_struct,magic_roots
 
 [spirit_roots]
 name=Spirit roots

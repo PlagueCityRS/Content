@@ -21834,45 +21834,6 @@ manwear=obj_6123,0
 womanwear=obj_6123,6
 members=yes
 
-[magic_strung_lyre_2]
-name=Enchanted lyre(2)
-desc=This will teleport me to Rellekka when I play it.
-model=quest_viking_inv_lyre
-iop1=Play
-2dxof=-4
-2dzoom=1230
-2dyan=144
-2dxan=464
-cost=1000
-manwear=human_weapons_lyre,0
-members=yes
-
-[magic_strung_lyre_3]
-name=Enchanted lyre(3)
-desc=This will teleport me to Rellekka when I play it.
-model=quest_viking_inv_lyre
-iop1=Play
-2dxof=-4
-2dzoom=1230
-2dyan=144
-2dxan=464
-cost=1000
-manwear=human_weapons_lyre,0
-members=yes
-
-[magic_strung_lyre_4]
-name=Enchanted lyre(4)
-desc=This will teleport me to Rellekka when I play it.
-model=quest_viking_inv_lyre
-iop1=Play
-2dxof=-4
-2dzoom=1230
-2dyan=144
-2dxan=464
-cost=1000
-manwear=human_weapons_lyre,0
-members=yes
-
 [dagganoth_melee_helm]
 name=Rock-shell helm
 desc=Protective headwear made from crabs. Better than that sounds.

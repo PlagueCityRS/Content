@@ -156,6 +156,7 @@ hitpoints=22
 attack=22
 strength=18
 defence=18
+wanderrange=10
 param=damagetype,^stab_style
 param=attack_anim,crawler_attack
 param=defend_anim,crawler_parry
@@ -191,6 +192,7 @@ hitpoints=22
 attack=22
 strength=18
 defence=18
+wanderrange=10
 param=damagetype,^stab_style
 param=attack_anim,crawler_attack
 param=defend_anim,crawler_parry
@@ -226,6 +228,7 @@ hitpoints=22
 attack=22
 strength=18
 defence=18
+wanderrange=10
 param=damagetype,^stab_style
 param=attack_anim,crawler_attack
 param=defend_anim,crawler_parry
@@ -261,6 +264,7 @@ hitpoints=22
 attack=22
 strength=18
 defence=18
+wanderrange=10
 param=damagetype,^stab_style
 param=attack_anim,crawler_attack
 param=defend_anim,crawler_parry
@@ -289,6 +293,7 @@ respawnrate=30
 hitpoints=90
 defence=90
 magic=105
+wanderrange=10
 param=stabdefence,20
 param=slashdefence,20
 param=crushdefence,20
@@ -321,6 +326,7 @@ respawnrate=30
 hitpoints=90
 defence=90
 magic=105
+wanderrange=10
 param=stabdefence,20
 param=slashdefence,20
 param=crushdefence,20
@@ -353,6 +359,7 @@ respawnrate=30
 hitpoints=90
 defence=90
 magic=105
+wanderrange=10
 param=stabdefence,20
 param=slashdefence,20
 param=crushdefence,20
@@ -385,6 +392,7 @@ respawnrate=30
 hitpoints=90
 defence=90
 magic=105
+wanderrange=10
 param=stabdefence,20
 param=slashdefence,20
 param=crushdefence,20
@@ -416,6 +424,7 @@ hitpoints=97
 attack=67
 strength=105
 defence=105
+wanderrange=10
 param=slashdefence,20
 param=crushdefence,20
 param=attack_anim,kursk_attack
@@ -445,6 +454,7 @@ hitpoints=97
 attack=67
 strength=105
 defence=105
+wanderrange=10
 param=slashdefence,20
 param=crushdefence,20
 param=attack_anim,kursk_attack
@@ -473,6 +483,7 @@ hitpoints=105
 attack=75
 strength=105
 defence=107
+wanderrange=10
 param=stabdefence,50
 param=slashdefence,60
 param=crushdefence,-20
@@ -532,6 +543,7 @@ hitpoints=22
 attack=22
 strength=15
 defence=22
+wanderrange=10
 param=attack_anim,banshee_attack
 param=defend_anim,banshee_parry
 param=death_anim,banshee_death
@@ -556,6 +568,7 @@ hitpoints=105
 attack=97
 strength=97
 defence=105
+wanderrange=10
 param=stabdefence,20
 param=slashdefence,20
 param=crushdefence,20
@@ -658,6 +671,7 @@ hitpoints=75
 attack=30
 strength=45
 defence=75
+wanderrange=8
 param=stabdefence,20
 param=slashdefence,20
 param=magicdefence,20
@@ -688,6 +702,7 @@ hitpoints=75
 attack=30
 strength=45
 defence=75
+wanderrange=8
 param=stabdefence,20
 param=slashdefence,20
 param=magicdefence,20
@@ -717,6 +732,7 @@ hitpoints=120
 attack=75
 strength=45
 defence=30
+wanderrange=6
 param=attack_anim,bloodveld_attack
 param=defend_anim,bloodveld_defend
 param=death_anim,bloodveld_death
@@ -743,6 +759,7 @@ hitpoints=120
 attack=75
 strength=45
 defence=30
+wanderrange=6
 param=attack_anim,bloodveld_attack
 param=defend_anim,bloodveld_defend
 param=death_anim,bloodveld_death
@@ -770,6 +787,7 @@ hitpoints=120
 attack=75
 strength=45
 defence=30
+wanderrange=6
 param=stabdefence,10
 param=slashdefence,10
 param=magicdefence,10
@@ -853,6 +871,7 @@ op2=Attack
 vislevel=93
 model1=obj_4145
 model2=npc_1624
+wanderrange=6
 
 [smoke_devil]
 name=Smokedevil
@@ -875,6 +894,7 @@ recol5s=29455
 recol5d=16837
 recol6s=27279
 recol6d=16707
+wanderrange=6
 
 [slayer_turoth]
 name=Turoth
@@ -1178,6 +1198,7 @@ attack=45
 strength=45
 defence=120
 magic=45
+wanderrange=10
 param=attack_anim,jelly_attack
 param=defend_anim,jelly_defend
 param=death_anim,jelly_death
@@ -1214,6 +1235,7 @@ attack=45
 strength=45
 defence=120
 magic=45
+wanderrange=10
 param=attack_anim,jelly_attack
 param=defend_anim,jelly_defend
 param=death_anim,jelly_death
@@ -1250,6 +1272,7 @@ attack=45
 strength=45
 defence=120
 magic=45
+wanderrange=10
 param=attack_anim,jelly_attack
 param=defend_anim,jelly_defend
 param=death_anim,jelly_death
@@ -1286,6 +1309,7 @@ attack=45
 strength=45
 defence=120
 magic=45
+wanderrange=10
 param=attack_anim,jelly_attack
 param=defend_anim,jelly_defend
 param=death_anim,jelly_death
@@ -1322,6 +1346,7 @@ attack=45
 strength=45
 defence=120
 magic=45
+wanderrange=10
 param=attack_anim,jelly_attack
 param=defend_anim,jelly_defend
 param=death_anim,jelly_death
@@ -1358,6 +1383,7 @@ attack=45
 strength=45
 defence=120
 magic=45
+wanderrange=10
 param=attack_anim,jelly_attack
 param=defend_anim,jelly_defend
 param=death_anim,jelly_death
@@ -1579,6 +1605,7 @@ hitpoints=16
 attack=8
 strength=4
 defence=4
+wanderrange=10
 param=attack_anim,crawlinghand_attack
 param=defend_anim,crawlinghand_defend
 param=death_anim,crawlinghand_death
@@ -1616,6 +1643,7 @@ hitpoints=16
 attack=8
 strength=4
 defence=4
+wanderrange=10
 param=attack_anim,crawlinghand_attack
 param=defend_anim,crawlinghand_defend
 param=death_anim,crawlinghand_death
@@ -1653,6 +1681,7 @@ hitpoints=15
 attack=7
 strength=3
 defence=3
+wanderrange=10
 param=attack_anim,crawlinghand_attack
 param=defend_anim,crawlinghand_defend
 param=death_anim,crawlinghand_death
@@ -1690,6 +1719,7 @@ hitpoints=15
 attack=7
 strength=3
 defence=3
+wanderrange=10
 param=attack_anim,crawlinghand_attack
 param=defend_anim,crawlinghand_defend
 param=death_anim,crawlinghand_death
@@ -1727,6 +1757,7 @@ hitpoints=16
 attack=8
 strength=4
 defence=4
+wanderrange=10
 param=attack_anim,crawlinghand_attack
 param=defend_anim,crawlinghand_defend
 param=death_anim,crawlinghand_death
@@ -1753,6 +1784,7 @@ hitpoints=19
 attack=11
 strength=7
 defence=7
+wanderrange=10
 param=damagetype,^crush_style
 param=attack_anim,crawlinghand_attack
 param=defend_anim,crawlinghand_defend
@@ -1791,6 +1823,7 @@ hitpoints=19
 attack=11
 strength=7
 defence=7
+wanderrange=10
 param=damagetype,^crush_style
 param=attack_anim,crawlinghand_attack
 param=defend_anim,crawlinghand_defend
@@ -1829,6 +1862,7 @@ hitpoints=18
 attack=10
 strength=6
 defence=6
+wanderrange=10
 param=damagetype,^crush_style
 param=attack_anim,crawlinghand_attack
 param=defend_anim,crawlinghand_defend
@@ -1867,6 +1901,7 @@ hitpoints=19
 attack=11
 strength=7
 defence=7
+wanderrange=10
 param=damagetype,^crush_style
 param=attack_anim,crawlinghand_attack
 param=defend_anim,crawlinghand_defend
@@ -1905,6 +1940,7 @@ hitpoints=19
 attack=11
 strength=7
 defence=7
+wanderrange=10
 param=damagetype,^crush_style
 param=attack_anim,crawlinghand_attack
 param=defend_anim,crawlinghand_defend
@@ -1947,6 +1983,8 @@ op5=Show-Goal
 vislevel=hide
 ambient=20
 model1=npc_1659
+wanderrange=0
+maxrange=0
 
 [werewolf_skullballboss]
 name=Skullball Boss
@@ -1967,6 +2005,7 @@ recol4s=24075
 recol4d=17929
 recol5s=6144
 recol5d=3203
+wanderrange=0
 
 [werewolf_trainer_start]
 name=Agility Boss
@@ -1988,6 +2027,7 @@ recol4s=24075
 recol4d=17929
 recol5s=6144
 recol5d=3203
+wanderrange=0
 
 [werewolf_trainer_1]
 name=Skullball Trainer
@@ -2008,6 +2048,8 @@ recol4s=24075
 recol4d=17929
 recol5s=6144
 recol5d=3203
+wanderrange=3
+maxrange=3
 
 [werewolf_trainer_2]
 name=Agility Trainer
@@ -2027,6 +2069,8 @@ recol4s=24075
 recol4d=17929
 recol5s=6144
 recol5d=3203
+wanderrange=4
+maxrange=4
 
 [werewolf_trainer_stick]
 name=Agility Trainer
@@ -2047,6 +2091,7 @@ recol4s=24075
 recol4d=17929
 recol5s=6144
 recol5d=7298
+wanderrange=3
 
 [waa_werewolf_guard]
 name=Werewolf
@@ -2067,6 +2112,7 @@ recol4s=24075
 recol4d=14728
 recol5s=6144
 recol5d=4256
+wanderrange=0
 
 [fenk_gardener_multi]
 name=fenk_gardener_multi
@@ -2137,6 +2183,7 @@ recol4s=6273
 recol4d=14797
 recol5s=14724
 recol5d=3205
+wanderrange=8
 
 [fenk_creature]
 name=fenk_creature
@@ -2152,6 +2199,7 @@ multinpc=4,fenk_creature_model
 multinpc=5,fenk_creature_model
 multinpc=6,fenk_creature_model
 multinpc=7,fenk_creature_model
+wanderrange=8
 
 [fenk_creature_released]
 name=fenk_creature_released
@@ -2213,6 +2261,8 @@ recol5s=7298
 recol5d=9473
 recol6s=15855
 recol6d=10570
+wanderrange=3
+maxrange=3
 
 [fenk_experiment_1]
 name=Experiment
@@ -2224,6 +2274,7 @@ op2=Attack
 alwaysontop=yes
 vislevel=51
 model1=npc_1676
+wanderrange=3
 
 [fenk_experiment_2]
 name=Experiment
@@ -2264,6 +2315,8 @@ recol2s=24129
 recol2d=2114
 recol3s=24075
 recol3d=11488
+wanderrange=3
+maxrange=400
 
 [roving_islwyn]
 name=Islwyn
@@ -2281,6 +2334,8 @@ recol1s=15979
 recol1d=11846
 recol2s=31457
 recol2d=28539
+wanderrange=3
+maxrange=400
 
 [roving_mossgiant]
 size=2
@@ -2298,6 +2353,7 @@ recol1s=24075
 recol1d=290
 recol2s=21279
 recol2d=9472
+wanderrange=3
 
 [roving_golrie]
 name=Golrie
@@ -2310,6 +2366,7 @@ model1=model_2900_npc
 model2=model_2914_npc
 model3=model_2915_npc
 head1=gnome_chat_model_23
+wanderrange=3
 
 [ahoy_velorina]
 name=Velorina
@@ -2329,6 +2386,7 @@ model4=npc_1683i4
 head1=npc_1683_head
 recol1s=14861
 recol1d=15950
+wanderrange=2
 
 [ahoy_necrovarus]
 name=Necrovarus
@@ -2348,6 +2406,7 @@ model6=npc_1684i6
 head1=npc_1684_head
 recol1s=14861
 recol1d=15950
+wanderrange=2
 
 [ahoy_ghost_protestor]
 name=Gravingas
@@ -2366,6 +2425,8 @@ model5=npc_1685i2
 head1=npc_1685_head
 recol1s=14861
 recol1d=15950
+wanderrange=0
+maxrange=0
 
 [ahoy_disciple]
 name=Ghost Disciple
@@ -2387,6 +2448,8 @@ model6=npc_1686i2
 head1=npc_1686_head
 recol1s=14861
 recol1d=15950
+maxrange=4
+wanderrange=4
 
 [ahoy_akharanu_multi]
 name=ahoy_akharanu_multi
@@ -2429,6 +2492,8 @@ recol4s=6273
 recol4d=5286
 recol5s=2340
 recol5d=14403
+wanderrange=3
+maxrange=3
 
 [goopy_snake]
 name=Slime
@@ -2441,6 +2506,7 @@ contrast=50
 minimap=no
 vislevel=hide
 model1=npc_1689
+maxrange=20
 
 [goopy_bloop]
 name=Slime
@@ -2452,6 +2518,7 @@ contrast=50
 minimap=no
 vislevel=hide
 model1=npc_1690
+maxrange=20
 
 [ahoy_undead_cow]
 size=2
@@ -2494,6 +2561,7 @@ recol4s=15360
 recol4d=14595
 recol5s=31201
 recol5d=17793
+wanderrange=5
 param=slayer_category,^slayer_bird
 
 [giant_lobster]
@@ -2505,6 +2573,7 @@ desc=An extremely vicious lobster.
 op2=Attack
 vislevel=32
 model1=npc_1693
+wanderrange=12
 
 [ahoy_robin]
 name=Robin
@@ -2708,6 +2777,8 @@ model4=npc_1684i4
 head1=npc_1686_head
 recol1s=14861
 recol1d=15950
+wanderrange=0
+maxrange=4
 
 [ahoy_ghost_sailor]
 name=Ghost Sailor
@@ -2729,6 +2800,8 @@ model6=npc_1703i2
 head1=npc_1686_head
 recol1s=14861
 recol1d=15950
+wanderrange=3
+maxrange=6
 
 [ahoy_ghost_captain_1]
 name=Ghost Captain
@@ -2750,6 +2823,8 @@ model6=npc_1703i2
 head1=npc_1686_head
 recol1s=14861
 recol1d=15950
+wanderrange=0
+maxrange=0
 
 [ahoy_ghost_captain_2]
 name=Ghost Captain
@@ -2771,6 +2846,8 @@ model6=npc_1703i2
 head1=npc_1686_head
 recol1s=14861
 recol1d=15950
+wanderrange=0
+maxrange=0
 
 [ahoy_ghost_guard]
 name=Ghost Guard
@@ -2790,6 +2867,8 @@ model4=npc_1684i4
 head1=npc_1686_head
 recol1s=14861
 recol1d=15950
+wanderrange=0
+maxrange=0
 
 [ahoy_ghost_disguise]
 name=Ghost (?)
@@ -2878,6 +2957,8 @@ recol4s=15855
 recol4d=10434
 recol5s=24075
 recol5d=26219
+wanderrange=5
+maxrange=6
 
 [favour_guard_male_bearded]
 name=H.A.M. Guard
@@ -2944,6 +3025,8 @@ recol4s=15855
 recol4d=10434
 recol5s=24075
 recol5d=26219
+wanderrange=5
+maxrange=6
 
 [favour_deacon]
 vislevel=hide
@@ -2969,6 +3052,7 @@ recol2s=2340
 recol2d=6147
 recol3s=7329
 recol3d=6147
+wanderrange=2
 
 [favour_male_ham_civilian]
 vislevel=hide
@@ -3051,6 +3135,7 @@ recol2s=2340
 recol2d=16423
 recol3s=7329
 recol3d=16423
+wanderrange=0
 
 [favour_npc_chair]
 vislevel=hide
@@ -3078,6 +3163,7 @@ recol3s=7329
 recol3d=16423
 recol4s=10401
 recol4d=9411
+wanderrange=0
 
 [favour_jimmy]
 vislevel=hide
@@ -3496,6 +3582,8 @@ walkanim=crow_walk
 readyanim=crow_ready
 minimap=no
 model1=npc_1751
+wanderrange=2
+maxrange=2
 
 [crow2]
 vislevel=hide
@@ -3505,6 +3593,8 @@ walkanim=crow_walk
 readyanim=crow_ready2
 minimap=no
 model1=npc_1751
+wanderrange=3
+maxrange=3
 
 [crow3]
 vislevel=hide
@@ -3569,6 +3659,8 @@ recol4s=5120
 recol4d=8353
 recol5s=14801
 recol5d=24075
+wanderrange=20
+maxrange=22
 
 [farmer3]
 walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
@@ -3591,6 +3683,8 @@ recol1s=2340
 recol1d=14691
 recol2s=5120
 recol2d=8353
+wanderrange=5
+maxrange=5
 
 [farmer_farming]
 vislevel=hide
@@ -3614,6 +3708,7 @@ recol2s=14724
 recol2d=8353
 recol3s=14801
 recol3d=24075
+maxrange=12
 
 [farmer_farming_on_49_51]
 vislevel=hide
@@ -3638,6 +3733,10 @@ recol2s=14724
 recol2d=8353
 recol3s=14801
 recol3d=24075
+// intentional RS3 has this same layout...
+maxrange=12
+wanderrange=20
+maxrange=22
 
 [farmer_farming_on_48_51]
 vislevel=hide
@@ -3664,6 +3763,7 @@ recol3s=14801
 recol3d=24075
 recol4s=9473
 recol4d=5220
+maxrange=12
 
 [sheepsheered2]
 vislevel=hide
@@ -3947,6 +4047,8 @@ recol2s=14858
 recol2d=18918
 recol3s=32727
 recol3d=24207
+wanderrange=3
+maxrange=400
 
 [wilderness_capeseller_1]
 name=William
@@ -3969,6 +4071,8 @@ head1=chat_male_head_mediumhair
 head2=chat_male_jaw_long
 recol1s=14801
 recol1d=21107
+wanderrange=300
+maxrange=310
 
 [wilderness_capeseller_2]
 name=Ian
@@ -4014,6 +4118,8 @@ model8=man_torso_halfleather
 head1=chat_male_head_bald
 recol1s=14801
 recol1d=21107
+wanderrange=5
+maxrange=5
 
 [wilderness_capeseller_4]
 name=Darren
@@ -4084,6 +4190,7 @@ recol1s=14801
 recol1d=21107
 recol2s=24075
 recol2d=14626
+wanderrange=3
 
 [wilderness_capeseller_7]
 name=Neil
@@ -4129,6 +4236,8 @@ model8=man_torso_halfleather
 head1=chat_male_head_bald
 recol1s=14801
 recol1d=21107
+wanderrange=300
+maxrange=310
 
 [wilderness_capeseller_9]
 name=Simon
@@ -4188,6 +4297,8 @@ recol1s=416
 recol1d=12903
 recol2s=352
 recol2d=18696
+wanderrange=10
+maxrange=40
 
 [mm_bunkwicket_final_battle]
 name=Bunkwicket
@@ -4203,6 +4314,8 @@ recol1s=384
 recol1d=12581
 recol2s=416
 recol2d=9603
+wanderrange=10
+maxrange=40
 
 [mm_waymottin_final_battle]
 name=Waymottin
@@ -4218,6 +4331,8 @@ recol1s=384
 recol1d=12581
 recol2s=416
 recol2d=9603
+wanderrange=10
+maxrange=40
 
 [macro_ent_jungle_tree1]
 name=Jungle Tree
@@ -4290,6 +4405,7 @@ model6=model_2993_npc
 head1=dwarf_chat_model0
 recol1s=15426
 recol1d=8354
+wanderrange=3
 
 [favour_gangster_dwarf]
 name=Dwarf gang member
@@ -4312,6 +4428,8 @@ recol1s=15785
 recol1d=0
 recol2s=15426
 recol2d=0
+wanderrange=5
+maxrange=6
 
 [favour_gangster_dwarf_2]
 name=Dwarf gang member
@@ -4334,6 +4452,7 @@ recol1s=15785
 recol1d=0
 recol2s=15426
 recol2d=0
+wanderrange=3
 
 [favour_gangster_dwarf_3]
 name=Dwarf gang member
@@ -4358,6 +4477,8 @@ recol2s=15426
 recol2d=0
 recol3s=14897
 recol3d=0
+wanderrange=3
+maxrange=6
 
 [favour_phantuwti_farsight]
 vislevel=hide
@@ -4412,6 +4533,8 @@ recol3s=8384
 recol3d=5285
 recol4s=7298
 recol4d=0
+wanderrange=2
+maxrange=2
 
 [gnormadium_avlafrim]
 name=Gnormadium Avlafrim
@@ -4432,6 +4555,7 @@ recol3s=7647
 recol3d=24257
 recol4s=416
 recol4d=11492
+wanderrange=2
 
 [favour_petra]
 name=Petra Fiyed
@@ -4466,6 +4590,7 @@ resizev=50
 resizeh=50
 vislevel=92
 model1=npc_1802
+maxrange=7
 
 [slagilith_hybernate]
 name=Rock pile
@@ -4478,6 +4603,7 @@ walkanim=rock_hybernate
 resizev=40
 resizeh=40
 model1=npc_1802
+wanderrange=0
 
 [slagilith_birth]
 name=Slagilith
@@ -4489,6 +4615,7 @@ readyanim=rock_birth
 resizev=45
 resizeh=45
 model1=npc_1802
+wanderrange=0
 
 [mdaughter_rockslide_guard]
 vislevel=hide
@@ -4506,6 +4633,7 @@ model6=npc_1805i4
 model7=human_weapons_viking_sword
 head1=chat_male_head_longhair
 head2=chat_male_jaw_long
+wanderrange=1
 
 [mdaughter_ancientrock_guard]
 vislevel=hide
@@ -4523,6 +4651,7 @@ model6=npc_1805i4
 model7=human_weapons_viking_sword
 head1=chat_male_head_bald
 head2=chat_male_jaw_long
+wanderrange=0
 
 [mdaughter_hamal]
 vislevel=hide
@@ -4545,6 +4674,7 @@ head2=chat_male_jaw_long
 head3=npc_1807_head
 recol1s=6273
 recol1d=22162
+wanderrange=3
 
 [mdaughter_ragnar]
 vislevel=hide
@@ -4573,6 +4703,7 @@ recol5s=15855
 recol5d=8422
 recol6s=10570
 recol6d=6308
+wanderrange=2
 
 [mdaughter_svidi]
 vislevel=hide
@@ -4588,6 +4719,7 @@ model4=npc_1808i2
 model5=npc_1808i3
 model6=npc_1805i4
 head1=chat_male_head_bald
+wanderrange=30
 
 [mdaughter_jokul]
 vislevel=hide
@@ -4605,6 +4737,7 @@ model6=npc_1805i4
 model7=human_weapons_staffstraight
 head1=chat_male_head_spikeyhair2
 head2=chat_male_jaw_long
+wanderrange=3
 
 [mdaughter_multi_bear]
 name=mdaughter_multi_bear
@@ -4912,6 +5045,7 @@ readyanim=cave_slime_idle
 op2=Attack
 vislevel=23
 model1=obj_4520
+wanderrange=10
 
 [swamp_cave_bug]
 name=Cave Bug
@@ -4935,6 +5069,7 @@ strength=5
 defence=6
 magic=1
 ranged=1
+wanderrange=10
 param=stabdefence,10
 param=slashdefence,10
 param=crushdefence,5
@@ -4950,6 +5085,7 @@ readyanim=cave_littlebug_ready
 minimap=no
 vislevel=hide
 model1=npc_1833
+wanderrange=10
 
 [swamp_candle_guy]
 vislevel=hide
@@ -4977,6 +5113,7 @@ recol4s=2340
 recol4d=2114
 recol5s=7298
 recol5d=2114
+wanderrange=2
 
 [easter05_bunny]
 name=Easter Bunny
@@ -4990,6 +5127,8 @@ vislevel=hide
 model1=npc_1835
 model2=npc_1835i2
 head1=npc_1835_head
+wanderrange=2
+maxrange=0
 
 [dwarfrock_multi_dondakan]
 name=dwarfrock_multi_dondakan
@@ -5010,6 +5149,7 @@ multinpc=80,dwarfrock_dondakan
 multinpc=90,dwarfrock_dondakan
 multinpc=100,dwarfrock_dondakan
 multinpc=110,dwarfrock_dondakan_noaxe
+wanderrange=0
 
 [dwarfrock_dondakan]
 name=Dondakan the Dwarf
@@ -5034,6 +5174,7 @@ recol4s=10434
 recol4d=29561
 recol5s=15855
 recol5d=9444
+wanderrange=0
 
 [dwarfrock_dondakan_noaxe]
 name=Dondakan the Dwarf
@@ -5057,6 +5198,7 @@ recol4s=10434
 recol4d=29561
 recol5s=15855
 recol5d=9444
+wanderrange=0
 
 [dwarfrock_fake_dondakan]
 name=Dondakan the Dwarf
@@ -5081,6 +5223,7 @@ recol4s=10434
 recol4d=29561
 recol5s=15855
 recol5d=9444
+wanderrange=0
 
 [dwarfrock_engineer1]
 name=Dwarven Engineer
@@ -5102,6 +5245,7 @@ recol2s=15855
 recol2d=17900
 recol3s=9475
 recol3d=9410
+wanderrange=0
 
 [dwarfrock_rolad]
 name=Rolad
@@ -5125,6 +5269,7 @@ recol2s=3171
 recol2d=10469
 recol3s=10434
 recol3d=22945
+wanderrange=3
 
 [dwarfrock_engineer2]
 name=Khorvak, a dwarven engineer
@@ -5162,6 +5307,7 @@ model5=model_2985_npc
 head1=dwarf_chat_model1
 recol1s=15855
 recol1d=22058
+wanderrange=2
 
 [dwarfrock_ferryman2]
 name=Dwarven Ferryman
@@ -5178,6 +5324,7 @@ model5=model_2985_npc
 head1=dwarf_chat_model0
 recol1s=15855
 recol1d=22058
+wanderrange=2
 
 [dwarfrock_multi_gold_boatman]
 name=dwarfrock_multi_gold_boatman
@@ -5200,6 +5347,7 @@ model3=model_2979_npc
 model4=model_2983_npc
 model5=model_2985_npc
 head1=dwarf_chat_model0
+wanderrange=2
 
 [dwarfrock_boatman_bruv1]
 name=Miodvetnir
@@ -5228,6 +5376,7 @@ recol4s=12677
 recol4d=23218
 recol5s=12677
 recol5d=13811
+wanderrange=0
 
 [dwarfrock_boatman_bruv2]
 name=Dernu
@@ -5256,6 +5405,7 @@ recol4s=12677
 recol4d=11623
 recol5s=12677
 recol5d=11623
+wanderrange=0
 
 [dwarfrock_boatman_bruv3]
 name=Derni
@@ -5282,6 +5432,7 @@ recol3s=12677
 recol3d=11522
 recol4s=10434
 recol4d=19021
+wanderrange=0
 
 [dwarf_rock_avatar_warrior]
 name=Arzinian Avatar of Strength
@@ -5416,6 +5567,7 @@ vislevel=781
 model1=npc_1850
 model2=npc_1856
 head1=npc_1850_head
+wanderrange=0
 
 [npc_1861]
 name=Monkey boy
@@ -5454,6 +5606,8 @@ recol3s=21894
 recol3d=29594
 recol4s=24075
 recol4d=18855
+wanderrange=0
+maxrange=0
 
 [feud_drunken_ali]
 name=Drunken Ali
@@ -5531,6 +5685,7 @@ recol2s=2340
 recol2d=29594
 recol3s=24075
 recol3d=18855
+wanderrange=2
 
 [feud_marketseller]
 name=Market seller
@@ -5557,6 +5712,7 @@ recol2s=2340
 recol2d=29594
 recol3s=24075
 recol3d=18855
+wanderrange=1
 
 [feud_ali_the_discount_camel_seller]
 name=Ali the Camel Man
@@ -5616,6 +5772,7 @@ vislevel=hide
 alwaysontop=yes
 multivar=feud_mayor_invis
 multinpc=0,feud_mayor_geom
+wanderrange=3
 
 [feud_mayor_geom]
 name=Ali the Mayor
@@ -5641,6 +5798,7 @@ recol3s=6273
 recol3d=32767
 recol4s=24075
 recol4d=18855
+wanderrange=3
 
 [feud_hag]
 name=Ali the Hag
@@ -5688,6 +5846,8 @@ recol2s=21894
 recol2d=29594
 recol3s=24075
 recol3d=18855
+wanderrange=0
+maxrange=0
 
 [feud_camel]
 name=Ali the Camel
@@ -5699,6 +5859,7 @@ readyanim=camel_ready
 vislevel=hide
 model1=model_2939_npc
 head1=npc_1873_head
+wanderrange=5
 
 [feud_desert_snake]
 name=Desert snake
@@ -5709,6 +5870,7 @@ op2=Attack
 alwaysontop=yes
 vislevel=5
 model1=npc_snake
+wanderrange=5
 
 [feud_charmers_snake]
 name=Snake
@@ -5719,6 +5881,8 @@ readyanim=snake_charmed
 vislevel=hide
 alwaysontop=yes
 model1=npc_1875
+wanderrange=0
+maxrange=0
 
 [feud_black_jack_seller_multi]
 name=Blackjack seller
@@ -5729,6 +5893,8 @@ vislevel=hide
 alwaysontop=yes
 multivar=feud_var
 multinpc=28,feud_bjseller
+wanderrange=0
+maxrange=0
 
 [feud_bandit_boss]
 name=feud_bandit_boss
@@ -5737,6 +5903,8 @@ readyanim=human_ready
 vislevel=hide
 multivar=feud_bandit_boss_vis
 multinpc=1,feud_bandit_boss_vis
+wanderrange=0
+maxrange=2
 
 [feud_bandit_boss_vis]
 name=Bandit Leader
@@ -5757,6 +5925,7 @@ head3=chat_male_head_shorthair
 recol1s=24075
 recol1d=18855
 
+
 [feud_arabian_guard_multi]
 name=feud_arabian_guard_multi
 walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
@@ -5766,6 +5935,8 @@ multivar=feud_npc_multi
 multinpc=0,feud_arabian_guard1_1
 multinpc=1,feud_arabian_guard1_1
 multinpc=2,feud_arabian_guard1_2
+wanderrange=10
+maxrange=10
 
 [feud_arabian_guard1_1]
 name=Bandit
@@ -5790,6 +5961,8 @@ recol1s=14724
 recol1d=29594
 recol2s=24075
 recol2d=18855
+wanderrange=10
+maxrange=10
 
 [feud_arabian_guard1_2]
 name=Bandit
@@ -5816,6 +5989,8 @@ recol1s=14724
 recol1d=29594
 recol2s=24075
 recol2d=18855
+wanderrange=10
+maxrange=10
 
 [feud_arabian_guard2_multi]
 name=feud_arabian_guard2_multi
@@ -5905,6 +6080,8 @@ recol1s=14724
 recol1d=29594
 recol2s=24075
 recol2d=18855
+wanderrange=15
+maxrange=15
 
 [feud_arabian_guard_coward]
 name=Cowardly Bandit
@@ -5929,6 +6106,8 @@ recol1s=14724
 recol1d=29594
 recol2s=24075
 recol2d=18855
+wanderrange=10
+maxrange=10
 
 [feud_villager_multi_1]
 name=feud_villager_multi_1
@@ -5939,6 +6118,7 @@ multivar=feud_npc_multi
 multinpc=0,feud_villager_1_1
 multinpc=1,feud_villager_1_2
 multinpc=2,feud_villager_1_3
+wanderrange=10
 
 [feud_villager_1_1]
 name=Villager
@@ -6024,6 +6204,7 @@ multivar=feud_npc_multi
 multinpc=0,feud_villager_2_1
 multinpc=1,feud_villager_2_2
 multinpc=2,feud_villager_2_3
+wanderrange=10
 
 [feud_villager_2_1]
 name=Villager
@@ -6106,6 +6287,7 @@ multivar=feud_npc_multi
 multinpc=0,feud_villager_3_1
 multinpc=1,feud_villager_3_2
 multinpc=2,feud_villager_3_3
+wanderrange=10
 
 [feud_villager_3_1]
 name=Villager
@@ -6183,6 +6365,8 @@ readyanim=human_ready
 vislevel=hide
 multivar=feud_boss_vis
 multinpc=1,feud_menap_boss_vis
+wanderrange=0
+maxrange=0
 
 [feud_menap_boss2]
 name=feud_menap_boss2
@@ -6191,6 +6375,8 @@ readyanim=human_ready
 vislevel=hide
 multivar=feud_boss_vis2
 multinpc=1,feud_menap_boss_vis
+wanderrange=0
+maxrange=2
 
 [feud_menap_boss_vis]
 name=Menaphite Leader
@@ -6211,6 +6397,8 @@ recol1s=14724
 recol1d=7183
 recol2s=24075
 recol2d=18855
+wanderrange=0
+maxrange=2
 
 [feud_egyptian_minder]
 name=Ali the Operator
@@ -6246,6 +6434,8 @@ multivar=feud_npc_multi
 multinpc=0,feud_egyptian_doorman_1
 multinpc=1,feud_egyptian_doorman_1
 multinpc=2,feud_egyptian_doorman_2
+wanderrange=10
+maxrange=10
 
 [feud_egyptian_doorman_1]
 name=Menaphite Thug
@@ -6270,6 +6460,8 @@ recol2s=14724
 recol2d=7183
 recol3s=24075
 recol3d=18855
+wanderrange=10
+maxrange=10
 
 [feud_egyptian_doorman_2]
 name=Menaphite Thug
@@ -6299,6 +6491,8 @@ recol2s=14724
 recol2d=7183
 recol3s=24075
 recol3d=18855
+wanderrange=10
+maxrange=10
 
 [feud_menap_toughguy]
 name=Tough Guy
@@ -6325,6 +6519,10 @@ recol2s=14724
 recol2d=7183
 recol3s=24075
 recol3d=18855
+// Matches RS3
+wanderrange=2
+wanderrange=15
+maxrange=15
 
 [golem_golem]
 name=Golem
@@ -6350,6 +6548,7 @@ model1=npc_1908
 model2=npc_1908i2
 model3=npc_1908i3
 head1=npc_1908_head
+wanderrange=10
 
 [golem_partially_broken_golem]
 name=Damaged clay golem
@@ -6363,6 +6562,7 @@ model1=npc_1908
 model2=npc_1908i2
 model3=npc_1909
 head1=npc_1908_head
+wanderrange=10
 
 [golem_fixed_golem]
 name=Clay golem
@@ -6376,6 +6576,7 @@ model1=npc_1908
 model2=npc_1910
 model3=npc_1909
 head1=npc_1908_head
+wanderrange=10
 
 [golem_phoenix]
 name=Desert Phoenix
@@ -6391,6 +6592,7 @@ recol2s=21537
 recol2d=19777
 recol3s=27681
 recol3d=31365
+wanderrange=8
 
 [golem_elissa]
 resizeh=115
@@ -6445,6 +6647,8 @@ recol3s=10570
 recol3d=32767
 recol4s=14798
 recol4d=32767
+wanderrange=20
+maxrange=64
 
 [blooddiamond_vampirewarrior]
 name=Dessous
@@ -6471,6 +6675,8 @@ recol5s=18991
 recol5d=30582
 recol6s=26390
 recol6d=17866
+wanderrange=2
+maxrange=30
 
 [blooddiamond_vampirewarrior_unkillable]
 name=Dessous
@@ -6497,6 +6703,8 @@ recol5s=18991
 recol5d=30582
 recol6s=26390
 recol6d=17866
+wanderrange=2
+maxrange=20
 
 [malak]
 name=Ruantun
@@ -6522,6 +6730,7 @@ recol4s=32727
 recol4d=15781
 recol5s=18991
 recol5d=30582
+wanderrange=0
 
 [dt_bandit_shopkeeper]
 vislevel=hide
@@ -6554,6 +6763,7 @@ recol5s=14801
 recol5d=32767
 recol6s=24075
 recol6d=14596
+wanderrange=2
 
 [fourdiamonds_indiana]
 name=Archaeologist
@@ -6588,6 +6798,8 @@ recol5s=5120
 recol5d=0
 recol6s=15649
 recol6d=5248
+wanderrange=1
+maxrange=1
 
 [fourdiamonds_assasin]
 name=Stranger
@@ -6648,6 +6860,7 @@ recol5s=3491
 recol5d=5125
 recol6s=24075
 recol6d=30582
+wanderrange=0
 
 [fourdiamonds_bartender]
 vislevel=hide
@@ -6672,6 +6885,7 @@ recol2s=14724
 recol2d=4399
 recol3s=14801
 recol3d=24075
+wanderrange=0
 
 [fourdiamonds_elder]
 name=fourdiamonds_elder
@@ -6720,6 +6934,7 @@ recol5s=14801
 recol5d=32767
 recol6s=24075
 recol6d=14596
+wanderrange=0
 
 [fourdiamonds_elder2]
 name=fourdiamonds_elder2
@@ -6763,6 +6978,7 @@ recol5s=14801
 recol5d=32767
 recol6s=24075
 recol6d=14596
+wanderrange=0
 
 [fourdiamonds_sword_bandit_1]
 name=Bandit
@@ -6798,6 +7014,7 @@ recol5s=8386
 recol5d=15360
 recol6s=31649
 recol6d=15360
+wanderrange=1
 
 [fourdiamonds_sword_bandit_sitsouth]
 vislevel=hide
@@ -6829,6 +7046,7 @@ recol5s=8386
 recol5d=15360
 recol6s=31649
 recol6d=15360
+wanderrange=0
 
 [fourdiamonds_sword_bandit_sitnorth]
 vislevel=hide
@@ -6860,6 +7078,7 @@ recol5s=8386
 recol5d=15360
 recol6s=31649
 recol6d=15360
+wanderrange=0
 
 [fourdiamonds_sword_bandit_siteast]
 vislevel=hide
@@ -6891,6 +7110,7 @@ recol5s=8386
 recol5d=15360
 recol6s=31649
 recol6d=15360
+wanderrange=0
 
 [fourdiamonds_sword_bandit_sitwest]
 vislevel=hide
@@ -6922,6 +7142,7 @@ recol5s=8386
 recol5d=15360
 recol6s=31649
 recol6d=15360
+wanderrange=0
 
 [fourdiamonds_sword_bandit_free]
 name=Bandit
@@ -6957,6 +7178,7 @@ recol5s=8386
 recol5d=15360
 recol6s=31649
 recol6d=15360
+wanderrange=10
 
 [fourdiamonds_troll_child]
 alwaysontop=yes
@@ -6974,6 +7196,7 @@ multinpc=2,fourdiamonds_troll_child_okay
 multinpc=3,fourdiamonds_troll_child_okay
 multinpc=4,fourdiamonds_troll_child_okay
 multinpc=5,fourdiamonds_troll_child_okay
+wanderrange=0
 
 [fourdiamonds_troll_child_okay]
 alwaysontop=yes
@@ -6994,6 +7217,7 @@ recol1s=15855
 recol1d=21147
 recol2s=15919
 recol2d=19031
+wanderrange=0
 
 [fourdiamonds_troll_child_crying]
 alwaysontop=yes
@@ -7015,6 +7239,7 @@ recol1s=15855
 recol1d=21147
 recol2s=15919
 recol2d=19031
+wanderrange=0
 
 [i_troll_guard]
 name=Ice troll
@@ -7036,6 +7261,7 @@ recol1s=15855
 recol1d=21147
 recol2s=15919
 recol2d=19031
+wanderrange=0
 
 [trollrescue_icetroll_melee1]
 name=Ice Troll
@@ -7054,6 +7280,7 @@ recol1s=15855
 recol1d=30655
 recol2s=15919
 recol2d=25375
+wanderrange=5
 
 [trollrescue_icetroll_melee2]
 name=Ice Troll
@@ -7074,6 +7301,7 @@ recol2s=15919
 recol2d=22232
 recol3s=10501
 recol3d=32767
+wanderrange=5
 
 [trollrescue_icetroll_melee3]
 name=Ice Troll
@@ -7093,6 +7321,7 @@ recol1s=15855
 recol1d=21147
 recol2s=15919
 recol2d=19031
+wanderrange=5
 
 [trollrescue_icetroll_melee4]
 name=Ice Troll
@@ -7113,6 +7342,7 @@ recol2s=15919
 recol2d=16914
 recol3s=10501
 recol3d=32767
+wanderrange=5
 
 [trollrescue_icetroll_melee5]
 name=Ice Troll
@@ -7132,6 +7362,7 @@ recol1s=15855
 recol1d=21371
 recol2s=15919
 recol2d=21173
+wanderrange=5
 
 [trollrescue_icetroll_melee6]
 name=Ice Troll
@@ -7152,6 +7383,7 @@ recol2s=15919
 recol2d=25375
 recol3s=10501
 recol3d=32767
+wanderrange=5
 
 [trollrescue_icetroll_melee7]
 name=Ice Troll
@@ -7170,6 +7402,7 @@ recol1s=15855
 recol1d=23544
 recol2s=15919
 recol2d=19445
+wanderrange=5
 
 [troll_block_1]
 name=troll_block_1
@@ -7180,6 +7413,7 @@ vislevel=34
 multivar=fd_icewarrior_dadfree
 multinpc=0,fd_trollblock1
 multinpc=1,fd_troll_dad
+wanderrange=0
 
 [fd_trollblock1]
 name=Ice block
@@ -7190,6 +7424,7 @@ op1=Talk-to
 op2=Smash-ice
 turnspeed=0
 model1=npc_1944
+wanderrange=0
 
 [troll_block_2]
 name=troll_block_2
@@ -7200,6 +7435,7 @@ vislevel=34
 multivar=fd_icewarrior_mumfree
 multinpc=0,fd_trollblock2
 multinpc=1,fd_troll_mum
+wanderrange=0
 
 [fd_trollblock2]
 name=Ice block
@@ -7210,6 +7446,7 @@ op1=Talk-to
 op2=Smash-ice
 turnspeed=0
 model1=npc_1944
+wanderrange=0
 
 [troll_frozen_1]
 name=Troll father
@@ -7220,6 +7457,7 @@ vislevel=1
 multivar=fd_icewarrior_subquest
 multinpc=4,fd_troll_dad
 multinpc=5,fd_troll_dad
+wanderrange=0
 
 [fd_troll_dad]
 name=Troll father
@@ -7237,6 +7475,7 @@ recol1s=15855
 recol1d=21147
 recol2s=15919
 recol2d=19031
+wanderrange=0
 
 [troll_frozen_2]
 name=Troll Mother
@@ -7247,6 +7486,7 @@ vislevel=1
 multivar=fd_icewarrior_subquest
 multinpc=4,fd_troll_mum
 multinpc=5,fd_troll_mum
+wanderrange=0
 
 [fd_troll_mum]
 name=Troll mother
@@ -7268,6 +7508,7 @@ recol3s=31303
 recol3d=19025
 recol4s=30948
 recol4d=19724
+wanderrange=0
 
 [ice_wolf_1]
 name=Ice wolf
@@ -7282,6 +7523,7 @@ recol1s=15855
 recol1d=23254
 recol2s=23254
 recol2d=21140
+wanderrange=6
 
 [ice_wolf_2]
 name=Ice wolf
@@ -7298,6 +7540,7 @@ recol1s=15855
 recol1d=23254
 recol2s=23254
 recol2d=28539
+wanderrange=6
 
 [ice_wolf_3]
 name=Ice wolf
@@ -7314,6 +7557,7 @@ recol1s=15855
 recol1d=23254
 recol2s=23254
 recol2d=21140
+wanderrange=6
 
 [ice_wolf_4]
 name=Ice wolf
@@ -7330,6 +7574,7 @@ recol1s=15855
 recol1d=23254
 recol2s=23254
 recol2d=28539
+wanderrange=6
 
 [ice_wolf_5]
 name=Ice wolf
@@ -7346,6 +7591,7 @@ recol1s=15855
 recol1d=23254
 recol2s=23254
 recol2d=28539
+wanderrange=6
 
 [ice_wolf_6]
 name=Ice wolf
@@ -7362,6 +7608,7 @@ recol1s=15855
 recol1d=23254
 recol2s=23254
 recol2d=28539
+wanderrange=6
 
 [desert_treasure_invisible_npc]
 name=desert_treasure_invisible_npc
@@ -7384,6 +7631,7 @@ recol3s=29595
 recol3d=20971
 recol4s=0
 recol4d=7296
+wanderrange=63
 
 [deserttreasure_mummy_1_on_fire]
 vislevel=hide
@@ -7404,6 +7652,7 @@ recol3s=29595
 recol3d=20971
 recol4s=0
 recol4d=7296
+wanderrange=63
 
 [mummy_f_turn_to_ash]
 vislevel=96
@@ -7412,6 +7661,7 @@ desc=A tightly wrapped monster.
 walkanim=deserttreasure_mummy_turn_to_ash
 readyanim=deserttreasure_mummy_turn_to_ash
 model1=npc_1960
+wanderrange=0
 
 [deserttreasure_mummy_2]
 name=Mummy
@@ -7431,6 +7681,8 @@ recol4s=0
 recol4d=7296
 recol5s=28504
 recol5d=20971
+wanderrange=63
+maxrange=32
 
 [deserttreasure_mummy_3]
 name=Mummy
@@ -7450,6 +7702,8 @@ recol4s=0
 recol4d=7296
 recol5s=28504
 recol5d=20971
+wanderrange=63
+maxrange=32
 
 [deserttreasure_mummy_4]
 name=Mummy
@@ -7469,6 +7723,8 @@ recol4s=0
 recol4d=7296
 recol5s=28504
 recol5d=20971
+wanderrange=63
+maxrange=32
 
 [deserttreasure_mummy_5]
 name=Mummy
@@ -7488,6 +7744,8 @@ recol4s=0
 recol4d=7296
 recol5s=29562
 recol5d=30449
+wanderrange=63
+maxrange=32
 
 [deserttreasure_mummy_2_on_fire]
 name=Mummy
@@ -7510,6 +7768,8 @@ recol4s=0
 recol4d=7296
 recol5s=28504
 recol5d=20971
+wanderrange=63
+maxrange=32
 
 [deserttreasure_mummy_3_on_fire]
 name=Mummy
@@ -7532,6 +7792,8 @@ recol4s=0
 recol4d=7296
 recol5s=28504
 recol5d=20971
+wanderrange=63
+maxrange=32
 
 [deserttreasure_mummy_4_on_fire]
 name=Mummy
@@ -7554,6 +7816,8 @@ recol4s=0
 recol4d=7296
 recol5s=28504
 recol5d=20971
+wanderrange=63
+maxrange=32
 
 [deserttreasure_mummy_5_on_fire]
 name=Mummy
@@ -7576,6 +7840,8 @@ recol4s=0
 recol4d=7296
 recol5s=29562
 recol5d=30449
+wanderrange=63
+maxrange=32
 
 [scarab_swarm]
 name=Scarabs
@@ -7585,6 +7851,8 @@ readyanim=scarab_ready
 op2=Attack
 vislevel=92
 model1=npc_1969
+wanderrange=10
+maxrange=63
 
 [azzanadra]
 name=azzanadra
@@ -7595,6 +7863,8 @@ size=2
 multivar=deserttreasure
 multinpc=13,azzanadra_real
 multinpc=14,azzanadra_real
+wanderrange=0
+maxrange=0
 
 [azzanadra_real]
 name=Azzanadra
@@ -7608,6 +7878,8 @@ model1=npc_1971
 model2=npc_1971i2
 model3=npc_1971i3
 head1=npc_1971_head
+wanderrange=0
+maxrange=0
 
 [shadow_warrior_rasool]
 vislevel=hide
@@ -7646,6 +7918,7 @@ param=shop_sell_multiplier,2000
 param=shop_buy_multiplier,50
 param=shop_delta,20
 param=shop_title,Rasolo the Wandering Merchant.
+wanderrange=10
 
 [sword_skeleton_3]
 name=Giant skeleton
@@ -7664,6 +7937,8 @@ recol2s=24071
 recol2d=20937
 recol3s=28543
 recol3d=21140
+maxrange=15
+wanderrange=2
 
 [fd_damis_normal]
 name=Damis
@@ -7691,6 +7966,8 @@ recol3s=10570
 recol3d=3171
 recol4s=14798
 recol4d=3171
+wanderrange=2
+maxrange=32
 
 [fd_damis_tougher]
 name=Damis
@@ -7718,6 +7995,8 @@ recol3s=10570
 recol3d=3171
 recol4s=14798
 recol4d=3171
+wanderrange=2
+maxrange=32
 
 [shadow_dog_wild]
 name=Shadow Hound
@@ -7733,6 +8012,7 @@ recol2s=19979
 recol2d=4162
 recol3s=32767
 recol3d=20044
+wanderrange=10
 param=slayer_category,^slayer_dog
 
 [firediamond_firewarrior]
@@ -7747,6 +8027,7 @@ model2=npc_1977i2
 model3=npc_1977i3
 model4=npc_1977i4
 model5=npc_1977i5
+wanderrange=32
 
 [ics_little_worker1]
 name=Slave
@@ -7778,6 +8059,7 @@ recol5s=2340
 recol5d=46
 recol6s=14801
 recol6d=11524
+wanderrange=2
 
 [ics_little_worker2]
 name=Slave
@@ -7809,6 +8091,7 @@ recol5s=2340
 recol5d=46
 recol6s=14801
 recol6d=11524
+wanderrange=2
 
 [ics_little_embalmer]
 name=Embalmer
@@ -7842,6 +8125,7 @@ recol5s=2340
 recol5d=46
 recol6s=14801
 recol6d=11524
+wanderrange=2
 
 [ics_little_carpenter]
 name=Carpenter
@@ -7874,6 +8158,7 @@ recol5s=2340
 recol5d=46
 recol6s=14724
 recol6d=25187
+wanderrange=2
 
 [ics_little_linen1]
 name=Linen Worker
@@ -7909,6 +8194,7 @@ recol5s=2340
 recol5d=11558
 recol6s=14724
 recol6d=25187
+wanderrange=2
 
 [ics_little_linen2]
 name=Siamun
@@ -7944,6 +8230,7 @@ recol5s=2340
 recol5d=11558
 recol6s=14724
 recol6d=25187
+wanderrange=2
 
 [ics_little_hipriest_ceremony]
 name=ics_little_hipriest
@@ -7958,6 +8245,8 @@ multinpc=21,ics_little_hipriest_vis
 multinpc=22,ics_little_hipriest_vis
 multinpc=23,ics_little_hipriest_vis
 multinpc=24,ics_little_hipriest_vis
+maxrange=0
+wanderrange=0
 
 [ics_little_hipriest_town]
 name=ics_little_hipriest_town
@@ -7967,6 +8256,8 @@ alwaysontop=yes
 vislevel=1
 multivar=ics_little_priestvis
 multinpc=0,ics_little_hipriest_vis
+maxrange=0
+wanderrange=0
 
 [ics_little_hipriest_vis]
 name=High Priest
@@ -7995,6 +8286,8 @@ recol4s=24075
 recol4d=11524
 recol5s=21004
 recol5d=11524
+maxrange=0
+wanderrange=0
 
 [ics_little_priest_ceremony]
 name=ics_little_temple_priest
@@ -8041,6 +8334,7 @@ recol5s=24075
 recol5d=11524
 recol6s=21004
 recol6d=11524
+wanderrange=2
 
 [ics_little_priestdoorman]
 name=Priest
@@ -8072,6 +8366,7 @@ recol5s=24075
 recol5d=11524
 recol6s=21004
 recol6d=11524
+wanderrange=0
 
 [ics_little_sphinx]
 name=Sphinx
@@ -8099,6 +8394,8 @@ recol5s=7183
 recol5d=22052
 recol6s=6273
 recol6d=24075
+wanderrange=0
+maxrange=2
 
 [ics_little_possessedpriest]
 name=Possessed Priest
@@ -8131,6 +8428,8 @@ recol5s=24075
 recol5d=11524
 recol6s=21004
 recol6d=11524
+wanderrange=10
+maxrange=10
 
 [ics_little_cat]
 vislevel=hide
@@ -8144,6 +8443,8 @@ resizev=60
 alwaysontop=yes
 model1=npc_1992
 head1=npc_1992_head
+wanderrange=5
+maxrange=5
 
 [ics_little_croc]
 name=Crocodile
@@ -8155,6 +8456,7 @@ op2=Attack
 vislevel=63
 model1=npc_1993
 param=slayer_category,^slayer_crocodile
+wanderrange=4
 
 [ics_little_jackal]
 name=Jackal
@@ -8165,6 +8467,7 @@ op2=Attack
 vislevel=21
 model1=npc_1994
 param=slayer_category,^slayer_dog
+wanderrange=12
 
 [ics_little_locust]
 name=Locust
@@ -8174,6 +8477,7 @@ readyanim=locust_ready
 op2=Attack
 vislevel=18
 model1=npc_1995
+wanderrange=2
 
 [ics_little_vulture]
 name=Vulture
@@ -8268,6 +8572,8 @@ readyanim=scarab_ready
 op2=Attack
 vislevel=98
 model1=npc_1969
+maxrange=8
+wanderrange=8
 
 [ics_little_multi_wanderer]
 name=ics_little_multi_wanderer
@@ -8277,6 +8583,8 @@ alwaysontop=yes
 vislevel=1
 multivar=ics_wanderermulti
 multinpc=0,ics_little_redheadlady
+maxrange=0
+wanderrange=0
 
 [ics_little_multi_wanderer1]
 name=ics_little_multi_wanderer1
@@ -8286,6 +8594,8 @@ alwaysontop=yes
 vislevel=1
 multivar=ics_wanderermulti
 multinpc=2,ics_little_redheadlady
+maxrange=2
+wanderrange=1
 
 [ics_little_multi_wanderer2]
 name=ics_little_multi_wanderer2
@@ -8295,6 +8605,8 @@ alwaysontop=yes
 vislevel=1
 multivar=ics_wanderermulti
 multinpc=3,ics_little_redheadlady
+maxrange=2
+wanderrange=1
 
 [ics_little_redheadlady_normeyes]
 name=Wanderer
@@ -8324,6 +8636,8 @@ recol4s=6273
 recol4d=15585
 recol5s=2340
 recol5d=11524
+maxrange=2
+wanderrange=1
 
 [ics_little_redheadlady]
 name=Wanderer
@@ -8354,6 +8668,7 @@ recol4s=6273
 recol4d=15585
 recol5s=2340
 recol5d=11524
+wanderrange=2
 
 [ics_little_het]
 name=Het
@@ -8386,6 +8701,8 @@ recol5s=15649
 recol5d=25187
 recol6s=24075
 recol6d=11524
+wanderrange=10
+maxrange=10
 
 [ics_little_apmeken]
 name=Apmeken
@@ -8415,6 +8732,8 @@ recol4s=7298
 recol4d=12613
 recol5s=2340
 recol5d=46
+wanderrange=10
+maxrange=10
 
 [ics_little_scabaras]
 name=Scabaras
@@ -8445,6 +8764,8 @@ recol5s=15649
 recol5d=23077
 recol6s=2340
 recol6d=2160
+maxrange=10
+wanderrange=10
 
 [ics_little_crondis]
 name=Crondis
@@ -8476,6 +8797,8 @@ recol5s=2340
 recol5d=46
 recol6s=15649
 recol6d=25187
+maxrange=10
+wanderrange=10
 
 [ics_little_ic]
 name=ics_multi_ic
@@ -8485,6 +8808,8 @@ alwaysontop=yes
 vislevel=1
 multivar=ics_little_var
 multinpc=24,ics_little_ic_vis
+maxrange=0
+wanderrange=0
 
 [ics_little_ic_vis]
 name=Icthlarin
@@ -8517,6 +8842,8 @@ recol5s=2340
 recol5d=46
 recol6s=15649
 recol6d=25187
+maxrange=0
+wanderrange=0
 
 [ics_little_spectre]
 name=ics_little_spectre
@@ -8526,6 +8853,8 @@ alwaysontop=yes
 vislevel=1
 multivar=ics_specvis
 multinpc=1,ics_little_spectre_vis
+wanderrange=3
+maxrange=3
 
 [ics_little_spectre_vis]
 op1=Talk-to
@@ -8546,6 +8875,8 @@ recol3s=6144
 recol3d=15818
 recol4s=1024
 recol4d=7362
+wanderrange=3
+maxrange=3
 
 [ics_little_mummy_1]
 name=Mummy
@@ -8563,6 +8894,7 @@ recol3s=29595
 recol3d=20971
 recol4s=0
 recol4d=7296
+wanderrange=5
 
 [ics_little_mummy_2]
 name=Mummy
@@ -8582,6 +8914,7 @@ recol4s=0
 recol4d=7296
 recol5s=28504
 recol5d=20971
+wanderrange=5
 
 [ics_little_mummy_3]
 name=Mummy
@@ -8601,6 +8934,7 @@ recol4s=0
 recol4d=7296
 recol5s=28504
 recol5d=20971
+wanderrange=5
 
 [ics_little_mummy_4]
 name=Mummy
@@ -8620,6 +8954,7 @@ recol4s=0
 recol4d=7296
 recol5s=28504
 recol5d=20971
+wanderrange=5
 
 [ics_little_mummy_5]
 name=Mummy
@@ -8639,6 +8974,7 @@ recol4s=0
 recol4d=7296
 recol5s=29562
 recol5d=30449
+wanderrange=5
 
 [multi_vanstrom_stranger_entity]
 name=multi_vanstrom_stranger_entity
@@ -8647,6 +8983,7 @@ vislevel=1
 multivar=thsfm_vanstrom_hide
 multinpc=0,route_vanstrom_klause_sitting
 multinpc=1,canafis_stranger
+wanderrange=0
 
 [tog_light_creature]
 name=Light creature
@@ -8655,6 +8992,8 @@ walkanim=light_creature_ready
 readyanim=light_creature_ready
 vislevel=hide
 model1=npc_2021
+wanderrange=13
+maxrange=30
 
 [tog_light_creature_carrying]
 name=Light creature
@@ -8666,6 +9005,7 @@ resizeh=220
 resizev=220
 vislevel=hide
 model1=npc_2021
+wanderrange=0
 
 [tog_juna_dummy]
 name=Juna
@@ -8673,6 +9013,7 @@ desc=An ancient giant serpent.
 vislevel=hide
 model1=loc_6663_q
 head1=npc_2023_head
+wanderrange=0
 
 [barrows_oldman]
 vislevel=hide
@@ -8704,6 +9045,8 @@ recol5s=2340
 recol5d=6368
 recol6s=14801
 recol6d=22091
+wanderrange=15
+maxrange=30
 
 [barrows_ahrim]
 name=Ahrim the Blighted
@@ -8908,6 +9251,7 @@ model3=npc_2036i3
 model4=npc_2036i4
 recol1s=29562
 recol1d=16907
+wanderrange=8
 
 [barrows_skeleton_armed]
 name=Skeleton
@@ -8927,6 +9271,7 @@ recol3s=17936
 recol3d=11623
 recol4s=7296
 recol4d=9506
+wanderrange=9
 
 [zogre_ogre_shaman]
 vislevel=hide
@@ -8962,6 +9307,7 @@ readyanim=ogre_injured1
 op1=Talk-to
 model1=npc_2040
 head1=model_141_npc_head
+wanderrange=0
 
 [zogre_dying2]
 vislevel=hide
@@ -8972,6 +9318,7 @@ readyanim=ogre_injured2
 op1=Talk-to
 model1=npc_2040
 head1=model_141_npc_head
+wanderrange=0
 
 [zogre_ogre_guard]
 vislevel=hide
@@ -8984,6 +9331,8 @@ op1=Talk-to
 model1=model_2880_npc
 model2=model_2874_npc
 head1=model_141_npc_head
+wanderrange=0
+maxrange=0
 
 [zogre_ogre_coffin_guard]
 name=Ogre guard
@@ -8997,6 +9346,7 @@ vislevel=76
 model1=model_2880_npc
 model2=model_2876_npc
 head1=model_141_npc_head
+wanderrange=2
 
 [zogre_1]
 name=Zogre
@@ -9018,6 +9368,7 @@ recol3s=25368
 recol3d=30757
 recol4s=24207
 recol4d=20078
+wanderrange=3
 
 [zogre_2]
 name=Zogre
@@ -9039,6 +9390,7 @@ recol3s=25368
 recol3d=30757
 recol4s=24207
 recol4d=20078
+wanderrange=3
 
 [zogre_3]
 name=Zogre
@@ -9060,6 +9412,7 @@ recol3s=25368
 recol3d=30757
 recol4s=24207
 recol4d=20078
+wanderrange=3
 
 [zogre_4]
 name=Zogre
@@ -9081,6 +9434,7 @@ recol3s=25368
 recol3d=30757
 recol4s=24207
 recol4d=20078
+wanderrange=3
 
 [zogre_5]
 name=Zogre
@@ -9102,6 +9456,7 @@ recol3s=25368
 recol3d=30757
 recol4s=24207
 recol4d=20078
+wanderrange=3
 
 [zogre_6]
 name=Zogre
@@ -9123,6 +9478,7 @@ recol3s=25368
 recol3d=30757
 recol4s=24207
 recol4d=20078
+wanderrange=3
 
 [zogre_skele_dance]
 name=Skogre
@@ -9136,6 +9492,7 @@ op2=Attack
 size=2
 vislevel=44
 model1=npc_2050
+wanderrange=3
 
 [zogre_dance_1]
 name=Zogre
@@ -9157,6 +9514,7 @@ recol3s=25368
 recol3d=30757
 recol4s=24207
 recol4d=20078
+wanderrange=3
 
 [zogre_dance_2]
 name=Zogre
@@ -9178,6 +9536,7 @@ recol3s=25368
 recol3d=30757
 recol4s=24207
 recol4d=20078
+wanderrange=3
 
 [zogre_dance_3]
 name=Zogre
@@ -9199,6 +9558,7 @@ recol3s=25368
 recol3d=30757
 recol4s=24207
 recol4d=20078
+wanderrange=3
 
 [zogre_dance_4]
 name=Zogre
@@ -9220,6 +9580,7 @@ recol3s=25368
 recol3d=30757
 recol4s=24207
 recol4d=20078
+wanderrange=3
 
 [zogre_drummer1]
 name=Zogre
@@ -9241,6 +9602,7 @@ recol3s=25368
 recol3d=30757
 recol4s=24207
 recol4d=20078
+wanderrange=0
 
 [zogre_drummer2]
 name=Skogre
@@ -9262,6 +9624,7 @@ recol3s=25368
 recol3d=30757
 recol4s=24207
 recol4d=20078
+wanderrange=0
 
 [zogre_skele]
 name=Skogre
@@ -9274,6 +9637,7 @@ op2=Attack
 size=2
 vislevel=44
 model1=npc_2050
+wanderrange=3
 
 [zogre_human_brentle_vahn]
 name=Zombie
@@ -9319,6 +9683,8 @@ recol5s=8386
 recol5d=32767
 recol6s=15360
 recol6d=22230
+wanderrange=1
+maxrange=1
 
 [zogre_slash_bash]
 name=Slash Bash
@@ -9342,6 +9708,8 @@ recol4s=24207
 recol4d=13737
 recol5s=32634
 recol5d=26360
+wanderrange=10
+maxrange=20
 
 [zogre_sithik_man]
 name=Sithik Ints
@@ -9390,6 +9758,7 @@ model2=model_3442_npc
 head1=model_141_npc_head
 recol1s=7362
 recol1d=8515
+wanderrange=15
 
 [ogre_hunter2]
 vislevel=hide
@@ -9406,6 +9775,7 @@ model2=model_2878_npc
 head1=model_141_npc_head
 recol1s=7362
 recol1d=15685
+wanderrange=15
 
 [ogre_hunter3]
 vislevel=hide
@@ -9422,6 +9792,7 @@ model2=model_2878_npc
 head1=model_141_npc_head
 recol1s=7362
 recol1d=11589
+wanderrange=15
 
 [zogre_necromancers_assistant]
 vislevel=hide
@@ -9449,6 +9820,7 @@ recol2s=14724
 recol2d=20513
 recol3s=239
 recol3d=17476
+wanderrange=3
 
 [0_49_149_cavefish]
 vislevel=hide
@@ -9462,6 +9834,8 @@ op3=Bait
 op4=hidden
 op5=hidden
 model1=npc_2067
+wanderrange=0
+maxrange=50
 
 [0_50_149_cavefish]
 vislevel=hide
@@ -9475,6 +9849,8 @@ op3=Bait
 op4=hidden
 op5=hidden
 model1=npc_2067
+wanderrange=0
+maxrange=50
 
 [cave_goblin_miner]
 name=Cave goblin miner
@@ -9494,6 +9870,8 @@ recol1s=6337
 recol1d=7361
 recol2s=4289
 recol2d=5313
+wanderrange=8
+maxrange=10
 
 [cave_goblin_miner2]
 name=Cave goblin miner
@@ -9515,6 +9893,8 @@ recol2s=4289
 recol2d=14826
 recol3s=5313
 recol3d=13769
+wanderrange=8
+maxrange=10
 
 [cave_goblin_miner3]
 name=Cave goblin miner
@@ -9538,6 +9918,8 @@ recol3s=5313
 recol3d=13769
 recol4s=7361
 recol4d=19054
+wanderrange=8
+maxrange=10
 
 [cave_goblin_miner4]
 name=Cave goblin miner
@@ -9563,6 +9945,8 @@ recol4s=7361
 recol4d=19054
 recol5s=11589
 recol5d=20111
+wanderrange=8
+maxrange=10
 
 [cave_goblin_guard1]
 name=Cave goblin guard
@@ -9582,6 +9966,8 @@ recol1s=6337
 recol1d=7361
 recol2s=4289
 recol2d=5313
+wanderrange=8
+maxrange=10
 
 [cave_goblin_guard2]
 name=Cave goblin guard
@@ -9601,6 +9987,8 @@ recol1s=6337
 recol1d=7361
 recol2s=4289
 recol2d=5313
+wanderrange=8
+maxrange=10
 
 [cave_goblin_miner_mining]
 name=Cave goblin miner
@@ -9620,6 +10008,8 @@ recol1s=6337
 recol1d=7361
 recol2s=4289
 recol2d=5313
+wanderrange=8
+maxrange=10
 
 [cave_goblin_miner2_mining]
 name=Cave goblin miner
@@ -9641,6 +10031,8 @@ recol2s=4289
 recol2d=14826
 recol3s=5313
 recol3d=13769
+wanderrange=8
+maxrange=10
 
 [cave_goblin_miner3_mining]
 name=Cave goblin miner
@@ -9664,6 +10056,8 @@ recol3s=5313
 recol3d=13769
 recol4s=7361
 recol4d=19054
+wanderrange=8
+maxrange=10
 
 [cave_goblin_miner4_mining]
 name=Cave goblin miner
@@ -9689,6 +10083,8 @@ recol4s=7361
 recol4d=19054
 recol5s=11589
 recol5d=20111
+wanderrange=8
+maxrange=10
 
 [lost_tribe_sigmund]
 name=Sigmund
@@ -9706,6 +10102,7 @@ multinpc=6,lost_tribe_sigmund_there
 multinpc=7,lost_tribe_sigmund_there
 multinpc=8,lost_tribe_sigmund_there
 multinpc=9,lost_tribe_sigmund_there
+wanderrange=2
 
 [lost_tribe_sigmund_leaving]
 name=lost_tribe_sigmund_leaving
@@ -9832,6 +10229,7 @@ recol1s=6337
 recol1d=7361
 recol2s=4289
 recol2d=5313
+wanderrange=3
 
 [lost_tribe_cutscene_urtag]
 name=Ur-tag
@@ -9938,6 +10336,7 @@ recol2s=11628
 recol2d=20546
 recol3s=24075
 recol3d=25199
+wanderrange=2
 
 [dwarf_city_secretary_purple_pewter]
 name=Purple Pewter Secretary
@@ -9962,6 +10361,7 @@ recol3s=7266
 recol3d=14640
 recol4s=29253
 recol4d=0
+wanderrange=2
 
 [dwarf_city_secretary_yellow_fortune]
 name=Yellow Fortune Secretary
@@ -9988,6 +10388,7 @@ recol4s=3171
 recol4d=21961
 recol5s=7168
 recol5d=10566
+wanderrange=2
 
 [dwarf_city_secretary_blue_opal]
 name=Blue Opal Secretary
@@ -10005,6 +10406,7 @@ recol1s=15785
 recol1d=11765
 recol2s=15855
 recol2d=11765
+wanderrange=0
 
 [dwarf_city_secretary_green_gemstone]
 name=Green Gemstone Secretary
@@ -10022,6 +10424,7 @@ recol1s=15855
 recol1d=11881
 recol2s=6309
 recol2d=7232
+wanderrange=0
 
 [dwarf_city_secretary_white_chisel]
 name=White Chisel Secretary
@@ -10040,6 +10443,7 @@ recol2s=15785
 recol2d=32634
 recol3s=6309
 recol3d=17967
+wanderrange=0
 
 [dwarf_city_secretary_silver_cog]
 name=Silver Cog Secretary
@@ -10061,6 +10465,7 @@ recol3s=15855
 recol3d=17969
 recol4s=6309
 recol4d=12684
+wanderrange=0
 
 [dwarf_city_secretary_brown_engine]
 name=Brown Engine Secretary
@@ -10082,6 +10487,7 @@ recol3s=15855
 recol3d=14724
 recol4s=6309
 recol4d=12546
+wanderrange=0
 
 [dwarf_city_secretary_red_axe]
 name=Red Axe Secretary
@@ -10110,6 +10516,7 @@ recol5s=7266
 recol5d=4226
 recol6s=24075
 recol6d=26255
+wanderrange=2
 
 [dwarf_city_director_purple_pewter]
 name=Purple Pewter Director
@@ -10134,6 +10541,7 @@ recol3s=19026
 recol3d=27399
 recol4s=7298
 recol4d=5322
+wanderrange=2
 
 [dwarf_city_director_blue_opal]
 name=Blue Opal Director
@@ -10163,6 +10571,7 @@ recol5s=7298
 recol5d=69
 recol6s=7266
 recol6d=5352
+wanderrange=2
 
 [dwarf_city_director_yellow_fortune]
 name=Yellow Fortune Director
@@ -10194,6 +10603,7 @@ recol5s=7168
 recol5d=25319
 recol6s=6309
 recol6d=25319
+wanderrange=2
 
 [dwarf_city_director_green_gemstone]
 name=Green Gemstone Director
@@ -10223,6 +10633,7 @@ recol4s=15855
 recol4d=11881
 recol5s=10532
 recol5d=5474
+wanderrange=2
 
 [dwarf_city_director_white_chisel]
 name=White Chisel Director
@@ -10246,6 +10657,7 @@ recol3s=15855
 recol3d=16841
 recol4s=3171
 recol4d=16841
+wanderrange=2
 
 [dwarf_city_director_silver_cog]
 name=Silver Cog Director
@@ -10269,6 +10681,7 @@ recol2s=7298
 recol2d=2114
 recol3s=8456
 recol3d=20084
+wanderrange=2
 
 [dwarf_city_director_brown_engine]
 name=Brown Engine Director
@@ -10296,6 +10709,7 @@ recol4s=7168
 recol4d=12546
 recol5s=13741
 recol5d=12546
+wanderrange=2
 
 [dwarf_city_director_red_axe]
 name=Red Axe Director
@@ -10344,6 +10758,8 @@ recol2s=4228
 recol2d=15855
 recol3s=15855
 recol3d=32767
+wanderrange=0
+maxrange=0
 
 [dwarf_city_purple_trader1]
 name=Trader
@@ -10367,6 +10783,7 @@ recol2s=28537
 recol2d=12329
 recol3s=7298
 recol3d=9417
+wanderrange=1
 
 [dwarf_city_purple_trader2]
 name=Trader
@@ -10394,6 +10811,7 @@ recol5s=11628
 recol5d=20018
 recol6s=3171
 recol6d=24075
+wanderrange=1
 
 [dwarf_city_blue_trader1]
 name=Trader
@@ -10448,6 +10866,7 @@ recol5s=13639
 recol5d=6512
 recol6s=10434
 recol6d=11626
+wanderrange=1
 
 [dwarf_city_yellow_trader1]
 name=Trader
@@ -10473,6 +10892,7 @@ recol3s=11628
 recol3d=26252
 recol4s=13639
 recol4d=21072
+wanderrange=1
 
 [dwarf_city_yellow_trader2]
 name=Trader
@@ -10496,6 +10916,7 @@ recol4s=28537
 recol4d=17895
 recol5s=24075
 recol5d=27278
+wanderrange=1
 
 [dwarf_city_green_trader1]
 name=Trader
@@ -10521,6 +10942,7 @@ recol3s=24075
 recol3d=18884
 recol4s=28537
 recol4d=25327
+wanderrange=1
 
 [dwarf_city_green_trader2]
 name=Trader
@@ -10546,6 +10968,7 @@ recol3s=24075
 recol3d=23047
 recol4s=28537
 recol4d=22255
+wanderrange=1
 
 [dwarf_city_white_trader1]
 name=Trader
@@ -10565,6 +10988,7 @@ head1=dwarf_chat_model3
 head2=npc_2109_head
 recol1s=15855
 recol1d=32634
+wanderrange=1
 
 [dwarf_city_white_trader2]
 name=Trader
@@ -10581,6 +11005,7 @@ model6=model_2985_npc
 head1=dwarf_chat_model2
 recol1s=15855
 recol1d=32634
+wanderrange=1
 
 [dwarf_city_silver_trader1]
 name=Trader
@@ -10600,6 +11025,7 @@ recol1s=13639
 recol1d=12684
 recol2s=7298
 recol2d=2114
+wanderrange=1
 
 [dwarf_city_silver_trader2]
 name=Trader
@@ -10619,6 +11045,7 @@ recol1s=13639
 recol1d=12684
 recol2s=10434
 recol2d=24131
+wanderrange=1
 
 [dwarf_city_brown_trader1]
 name=Trader
@@ -10642,6 +11069,7 @@ recol2s=6309
 recol2d=10432
 recol3s=10434
 recol3d=15557
+wanderrange=1
 
 [dwarf_city_brown_trader2]
 name=Trader
@@ -10663,6 +11091,7 @@ recol2s=6309
 recol2d=10432
 recol3s=7168
 recol3d=8454
+wanderrange=1
 
 [dwarf_city_red_trader1_multi]
 name=Trader
@@ -10672,6 +11101,7 @@ walkanim=dwarf_drunkwalk
 vislevel=hide
 multivar=giantdwarf_red_traders_gone
 multinpc=0,dwarf_city_red_trader1
+wanderrange=1
 
 [dwarf_city_red_trader1]
 name=Trader
@@ -10695,6 +11125,7 @@ recol2s=28537
 recol2d=22627
 recol3s=24075
 recol3d=25199
+wanderrange=1
 
 [dwarf_city_red_trader2_multi]
 name=Trader
@@ -10704,6 +11135,7 @@ walkanim=dwarf_drunkwalk
 vislevel=hide
 multivar=giantdwarf_red_traders_gone
 multinpc=0,dwarf_city_red_trader2
+wanderrange=1
 
 [dwarf_city_red_trader2]
 name=Trader
@@ -10729,6 +11161,7 @@ recol3s=24075
 recol3d=24141
 recol4s=10434
 recol4d=17858
+wanderrange=1
 
 [dwarf_city_trader_referee]
 name=Trade Referee
@@ -10756,6 +11189,7 @@ recol3s=10434
 recol3d=25367
 recol4s=24075
 recol4d=28305
+wanderrange=0
 
 [dwarf_city_black_guard_supreme_leader]
 name=Supreme Commander
@@ -10811,6 +11245,7 @@ recol5s=11488
 recol5d=27472
 recol6s=7296
 recol6d=11628
+wanderrange=2
 
 [dwarf_city_black_guard1]
 name=Black Guard
@@ -10838,6 +11273,7 @@ recol3d=3171
 recol4s=7296
 recol4d=7399
 param=slayer_category,^slayer_dwarf
+wanderrange=2
 
 [dwarf_city_black_guard2]
 name=Black Guard
@@ -10867,6 +11303,7 @@ recol3d=3171
 recol4s=7296
 recol4d=7399
 param=slayer_category,^slayer_dwarf
+wanderrange=2
 
 [dwarf_city_black_guard3]
 name=Black Guard
@@ -10893,6 +11330,7 @@ recol3s=9513
 recol3d=3171
 recol4s=10434
 recol4d=18986
+wanderrange=2
 param=slayer_category,^slayer_dwarf
 
 [dwarf_city_black_guard4]
@@ -10920,6 +11358,7 @@ recol3s=9513
 recol3d=3171
 recol4s=7296
 recol4d=7399
+maxrange=26
 param=slayer_category,^slayer_dwarf
 
 [dwarf_city_berserker1]
@@ -10945,6 +11384,7 @@ recol2s=7399
 recol2d=6144
 recol3s=8456
 recol3d=6144
+wanderrange=2
 param=slayer_category,^slayer_dwarf
 
 [dwarf_city_berserker2]
@@ -10970,6 +11410,7 @@ recol2s=6144
 recol2d=3172
 recol3s=5120
 recol3d=3172
+wanderrange=2
 param=slayer_category,^slayer_dwarf
 
 [dwarf_city_berserker3]
@@ -10998,6 +11439,7 @@ recol4s=6144
 recol4d=96
 recol5s=5120
 recol5d=96
+wanderrange=2
 param=slayer_category,^slayer_dwarf
 
 [dwarf_city_gnome_emissary]
@@ -11083,6 +11525,7 @@ recol4s=15362
 recol4d=30257
 recol5s=7297
 recol5d=7398
+wanderrange=0
 
 [dwarf_city_shop_sculpture]
 name=Blasidar the sculptor
@@ -11110,6 +11553,7 @@ recol3s=10532
 recol3d=12646
 recol4s=7298
 recol4d=26387
+wanderrange=2
 
 [dwarf_city_shop_sculpture_model_multi]
 name=Riki the sculptor's model
@@ -11126,6 +11570,7 @@ multinpc=4,dwarf_city_shop_sculpture_model_axe
 multinpc=5,dwarf_city_shop_sculpture_model_boots_and_axe
 multinpc=6,dwarf_city_shop_sculpture_model_torso_and_axe
 multinpc=7,dwarf_city_shop_sculpture_model_finished
+wanderrange=0
 
 [dwarf_city_shop_sculpture_model]
 name=Riki the sculptor's model
@@ -11148,6 +11593,7 @@ recol2s=3171
 recol2d=15855
 recol3s=15855
 recol3d=15785
+wanderrange=2
 
 [dwarf_city_shop_sculpture_model_boots]
 name=Riki the sculptor's model
@@ -11170,6 +11616,7 @@ recol2s=3171
 recol2d=15855
 recol3s=15855
 recol3d=15785
+wanderrange=2
 
 [dwarf_city_shop_sculpture_model_torso]
 name=Riki the sculptor's model
@@ -11194,6 +11641,7 @@ recol3s=3171
 recol3d=11588
 recol4s=7266
 recol4d=13669
+wanderrange=2
 
 [dwarf_city_shop_sculpture_model_axe]
 name=Riki the sculptor's model
@@ -11217,6 +11665,7 @@ recol2s=3171
 recol2d=15855
 recol3s=15855
 recol3d=15785
+wanderrange=2
 
 [dwarf_city_shop_sculpture_model_boots_and_torso]
 name=Riki the sculptor's model
@@ -11241,6 +11690,7 @@ recol3s=3171
 recol3d=11588
 recol4s=7266
 recol4d=13669
+wanderrange=2
 
 [dwarf_city_shop_sculpture_model_boots_and_axe]
 name=Riki the sculptor's model
@@ -11264,6 +11714,7 @@ recol2s=3171
 recol2d=15855
 recol3s=15855
 recol3d=15785
+wanderrange=2
 
 [dwarf_city_shop_sculpture_model_torso_and_axe]
 name=Riki the sculptor's model
@@ -11289,6 +11740,7 @@ recol3s=3171
 recol3d=11588
 recol4s=7266
 recol4d=13669
+wanderrange=2
 
 [dwarf_city_shop_sculpture_model_finished]
 name=Riki the sculptor's model
@@ -11314,6 +11766,7 @@ recol3s=3171
 recol3d=11588
 recol4s=7266
 recol4d=13669
+wanderrange=2
 
 [dwarf_city_shop_warhammer]
 name=Vigr
@@ -11340,6 +11793,7 @@ recol3s=3171
 recol3d=12354
 recol4s=10532
 recol4d=11363
+wanderrange=2
 
 [dwarf_city_shop_weapons]
 name=Santiri
@@ -11364,6 +11818,7 @@ recol2s=15785
 recol2d=25368
 recol3s=7298
 recol3d=12677
+wanderrange=2
 
 [dwarf_city_shop_armour]
 name=Saro
@@ -11389,6 +11844,7 @@ recol3s=24242
 recol3d=7436
 recol4s=12677
 recol4d=7434
+wanderrange=2
 
 [dwarf_city_shop_general_store]
 name=Gunslik
@@ -11412,6 +11868,7 @@ recol3s=24242
 recol3d=7426
 recol4s=15855
 recol4d=98
+wanderrange=2
 
 [dwarf_city_shop_ship_mechanic]
 name=Wemund
@@ -11435,6 +11892,7 @@ recol2s=15785
 recol2d=15855
 recol3s=24242
 recol3d=7426
+wanderrange=2
 
 [dwarf_city_shop_bakery]
 name=Randivor
@@ -11461,6 +11919,7 @@ recol3s=10434
 recol3d=18882
 recol4s=24075
 recol4d=25134
+wanderrange=1
 
 [dwarf_city_shop_gems]
 name=Hervi
@@ -11488,6 +11947,7 @@ recol4s=10532
 recol4d=7332
 recol5s=7266
 recol5d=15682
+wanderrange=1
 
 [dwarf_city_shop_craft]
 name=Nolar
@@ -11514,6 +11974,7 @@ recol3s=12677
 recol3d=18886
 recol4s=10434
 recol4d=18754
+wanderrange=2
 
 [dwarf_city_shop_silver]
 name=Gulldamar
@@ -11542,6 +12003,7 @@ recol4s=10532
 recol4d=14794
 recol5s=15855
 recol5d=18986
+wanderrange=1
 
 [dwarf_city_shop_pickaxe]
 name=Tati
@@ -11567,6 +12029,7 @@ recol2s=7266
 recol2d=14798
 recol3s=10532
 recol3d=7332
+wanderrange=2
 
 [dwarf_city_shop_cloth]
 name=Agmundi
@@ -11590,6 +12053,7 @@ recol3s=3171
 recol3d=24075
 recol4s=7168
 recol4d=6212
+wanderrange=2
 
 [dwarf_city_shop_cloth_poor]
 name=Vermundi
@@ -11611,6 +12075,7 @@ recol2s=11628
 recol2d=20546
 recol3s=11488
 recol3d=23043
+wanderrange=2
 
 [dwarf_city_banker1]
 name=Banker
@@ -11637,6 +12102,7 @@ recol3s=7266
 recol3d=10534
 recol4s=3171
 recol4d=24075
+wanderrange=0
 
 [dwarf_city_banker2]
 name=Banker
@@ -11663,6 +12129,7 @@ recol4s=15855
 recol4d=98
 recol5s=7298
 recol5d=1024
+wanderrange=0
 
 [dwarf_city_librarian]
 name=Librarian
@@ -11683,6 +12150,7 @@ recol1s=15855
 recol1d=24242
 recol2s=24075
 recol2d=28273
+wanderrange=2
 
 [dwarf_city_library_assistant]
 name=Assistant
@@ -11707,6 +12175,7 @@ recol3s=28537
 recol3d=23216
 recol4s=11488
 recol4d=16609
+wanderrange=2
 
 [dwarf_city_library_customer]
 name=Customer
@@ -11729,6 +12198,7 @@ recol2s=6309
 recol2d=11429
 recol3s=24075
 recol3d=26256
+wanderrange=2
 
 [dwarf_city_library_customer_human]
 vislevel=hide
@@ -11749,6 +12219,7 @@ recol1s=14724
 recol1d=15940
 recol2s=2340
 recol2d=11556
+wanderrange=2
 
 [dwarf_city_excentric_dwarf]
 name=Dromund
@@ -11775,6 +12246,8 @@ recol5s=19982
 recol5d=6373
 recol6s=23254
 recol6d=6373
+wanderrange=10
+maxrange=10
 
 [dwarf_city_gardener_dwarf]
 name=Rind the gardener
@@ -11797,6 +12270,7 @@ recol2s=15426
 recol2d=5316
 recol3s=10434
 recol3d=18949
+wanderrange=2
 
 [dwarf_city_factory_guard]
 name=Factory Manager
@@ -11821,6 +12295,7 @@ recol3s=10434
 recol3d=12578
 recol4s=7298
 recol4d=12547
+wanderrange=2
 
 [dwarf_city_factory_worker1]
 name=Factory Worker
@@ -11843,6 +12318,7 @@ recol2s=28537
 recol2d=12684
 recol3s=24075
 recol3d=19880
+wanderrange=2
 
 [dwarf_city_factory_worker2]
 name=Factory Worker
@@ -11865,6 +12341,7 @@ recol2s=28537
 recol2d=12684
 recol3s=24075
 recol3d=19880
+wanderrange=2
 
 [dwarf_city_factory_worker3]
 name=Factory Worker
@@ -11891,6 +12368,7 @@ recol4s=28537
 recol4d=5285
 recol5s=15855
 recol5d=10570
+wanderrange=2
 
 [dwarf_city_factory_worker4]
 name=Factory Worker
@@ -11915,6 +12393,7 @@ recol3s=15855
 recol3d=13639
 recol4s=28537
 recol4d=5285
+wanderrange=2
 
 [dwarf_city_inn_keeper_poor]
 name=Inn Keeper
@@ -11959,6 +12438,7 @@ recol4s=15855
 recol4d=11628
 recol5s=24075
 recol5d=26223
+wanderrange=2
 
 [dwarf_city_barmaid_poor]
 name=Barmaid
@@ -11981,6 +12461,7 @@ recol3s=28537
 recol3d=5380
 recol4s=7168
 recol4d=3202
+wanderrange=2
 
 [dwarf_city_barman_rich]
 name=Barman
@@ -12005,6 +12486,7 @@ recol4s=24075
 recol4d=20971
 recol5s=15855
 recol5d=20971
+wanderrange=2
 
 [dwarf_city_train_conductor1]
 name=Cart conductor
@@ -12029,6 +12511,7 @@ recol3s=24309
 recol3d=4261
 recol4s=12677
 recol4d=4261
+wanderrange=2
 
 [dwarf_city_train_conductor2]
 name=Cart conductor
@@ -12053,6 +12536,7 @@ recol3s=24309
 recol3d=10405
 recol4s=12677
 recol4d=4261
+wanderrange=2
 
 [dwarf_city_train_conductor3]
 name=Cart conductor
@@ -12077,6 +12561,7 @@ recol3s=24309
 recol3d=10405
 recol4s=12677
 recol4d=4261
+wanderrange=2
 
 [dwarf_city_train_conductor4]
 name=Cart conductor
@@ -12101,6 +12586,7 @@ recol3s=24309
 recol3d=10405
 recol4s=12677
 recol4d=4261
+wanderrange=2
 
 [dwarf_city_train_conductor5]
 name=Cart conductor
@@ -12125,6 +12611,7 @@ recol3s=24309
 recol3d=10405
 recol4s=12677
 recol4d=4261
+wanderrange=2
 
 [dwarf_city_train_conductor6]
 name=Cart conductor
@@ -12154,6 +12641,7 @@ recol5s=10434
 recol5d=22914
 recol6s=24075
 recol6d=20904
+wanderrange=2
 
 [dwarf_city_train_conductor7]
 name=Cart conductor
@@ -12176,6 +12664,7 @@ recol2s=15855
 recol2d=9443
 recol3s=28537
 recol3d=9348
+wanderrange=2
 
 [dwarf_city_rowdy_dwarf]
 name=Rowdy dwarf
@@ -12206,6 +12695,7 @@ recol4s=13639
 recol4d=13573
 recol5s=24075
 recol5d=24043
+wanderrange=2
 
 [dwarf_city_old_dwarf1]
 name=Hegir
@@ -12225,6 +12715,7 @@ head1=npc_2100_head
 head2=npc_2112_head
 recol1s=15855
 recol1d=16876
+wanderrange=2
 
 [dwarf_city_old_dwarf2]
 name=Haera
@@ -12247,6 +12738,7 @@ recol3s=11488
 recol3d=16912
 recol4s=7168
 recol4d=12679
+wanderrange=2
 
 [dwarf_city_old_dwarf3]
 name=Runvastr
@@ -12269,6 +12761,7 @@ recol3s=11488
 recol3d=16912
 recol4s=7168
 recol4d=32767
+wanderrange=2
 
 [dwarf_city_dwarf_man1]
 name=Sune
@@ -12287,6 +12780,7 @@ head1=dwarf_chat_model0
 head2=npc_2109_head
 recol1s=15855
 recol1d=9543
+wanderrange=2
 
 [dwarf_city_dwarf_man2]
 name=Bentamir
@@ -12307,6 +12801,7 @@ recol2s=15855
 recol2d=13669
 recol3s=6309
 recol3d=8419
+wanderrange=1
 
 [dwarf_city_dwarf_man3]
 name=Ulifed
@@ -12329,6 +12824,7 @@ recol3s=3171
 recol3d=8419
 recol4s=7266
 recol4d=8419
+wanderrange=2
 
 [dwarf_city_dwarf_man4]
 name=Reinald
@@ -12345,6 +12841,7 @@ model5=model_2985_npc
 model6=npc_1847
 head1=dwarf_chat_model2
 head2=npc_1847_head
+wanderrange=2
 
 [dwarf_city_dwarf_man5]
 name=Karl
@@ -12365,6 +12862,7 @@ recol2s=24075
 recol2d=20937
 recol3s=7298
 recol3d=10533
+wanderrange=3
 
 [dwarf_city_dwarf_man6]
 name=Gauss
@@ -12386,6 +12884,7 @@ recol2s=28537
 recol2d=8419
 recol3s=15855
 recol3d=20047
+wanderrange=2
 
 [dwarf_city_dwarf_man7]
 name=Myndill
@@ -12408,6 +12907,7 @@ recol3s=15855
 recol3d=7534
 recol4s=6309
 recol4d=7461
+wanderrange=18
 
 [dwarf_city_dwarf_man8]
 name=Kjut
@@ -12430,6 +12930,7 @@ recol3s=12646
 recol3d=6377
 recol4s=24075
 recol4d=25166
+wanderrange=2
 
 [dwarf_city_dwarf_man9]
 name=Tombar
@@ -12456,6 +12957,7 @@ recol4s=7298
 recol4d=10469
 recol5s=11488
 recol5d=5283
+wanderrange=2
 
 [dwarf_city_dwarf_man10]
 name=Odmar
@@ -12478,6 +12980,7 @@ recol3s=12646
 recol3d=12711
 recol4s=24075
 recol4d=19878
+wanderrange=2
 
 [dwarf_city_dwarf_man11]
 name=Audmann
@@ -12504,6 +13007,7 @@ recol5s=23254
 recol5d=4228
 recol6s=7266
 recol6d=14791
+wanderrange=2
 
 [dwarf_city_drunken_dwarf_multi]
 name=Drunken Dwarf
@@ -12514,6 +13018,7 @@ vislevel=hide
 multivar=keldagrim_kebab_status
 multinpc=0,dwarf_city_drunken_dwarf
 multinpc=1,dwarf_city_drunken_kebab
+wanderrange=3
 
 [dwarf_city_drunken_dwarf]
 vislevel=hide
@@ -12531,6 +13036,8 @@ model6=npc_2099i2
 model7=model_2985_npc
 head1=dwarf_chat_model4
 head2=npc_1847_head
+maxrange=3
+wanderrange=3
 
 [dwarf_city_drunken_kebab]
 vislevel=hide
@@ -12542,6 +13049,8 @@ op1=Talk-to
 model1=inv_kebab
 head1=dwarf_chat_model4
 head2=npc_1847_head
+maxrange=3
+wanderrange=3
 
 [dwarf_city_boatman_mines_prequest]
 name=Dwarven Boatman
@@ -12566,6 +13075,7 @@ recol4s=7298
 recol4d=10469
 recol5s=11488
 recol5d=5283
+wanderrange=0
 
 [dwarf_city_boatman_city]
 name=Dwarven Boatman
@@ -12615,6 +13125,8 @@ recol3s=15855
 recol3d=7332
 recol4s=8456
 recol4d=27365
+wanderrange=25
+maxrange=25
 
 [dwarf_city_dwarf_sack_in_cart_empty]
 name=Dwarven Miner
@@ -12640,6 +13152,8 @@ recol3s=15855
 recol3d=7332
 recol4s=8456
 recol4d=27365
+wanderrange=25
+maxrange=25
 
 [dwarf_city_dwarf_sack_carrier_full]
 name=Dwarven Miner
@@ -12665,6 +13179,8 @@ recol3s=15855
 recol3d=7332
 recol4s=8456
 recol4d=27365
+wanderrange=25
+maxrange=25
 
 [dwarf_city_dwarf_sack_carrier_empty]
 name=Dwarven Miner
@@ -12690,6 +13206,8 @@ recol3s=15855
 recol3d=7332
 recol4s=8456
 recol4d=27365
+wanderrange=25
+maxrange=25
 
 [dwarf_city_dwarf_sack_in_cart_full2]
 name=Dwarven Miner
@@ -12712,6 +13230,8 @@ recol2s=12677
 recol2d=6275
 recol3s=15855
 recol3d=12682
+wanderrange=25
+maxrange=25
 
 [dwarf_city_dwarf_sack_in_cart_empty2]
 name=Dwarven Miner
@@ -12734,6 +13254,8 @@ recol2s=12677
 recol2d=6275
 recol3s=15855
 recol3d=12682
+wanderrange=25
+maxrange=25
 
 [dwarf_city_dwarf_sack_carrier_full2]
 name=Dwarven Miner
@@ -12757,6 +13279,8 @@ recol2s=12677
 recol2d=6275
 recol3s=15855
 recol3d=12682
+wanderrange=25
+maxrange=25
 
 [dwarf_city_dwarf_sack_carrier_empty2]
 name=Dwarven Miner
@@ -12779,6 +13303,8 @@ recol2s=12677
 recol2d=6275
 recol3s=15855
 recol3d=12682
+wanderrange=25
+maxrange=25
 
 [dwarf_city_dwarf_sack_in_cart_full3]
 name=Dwarven Miner
@@ -12802,6 +13328,8 @@ recol2s=12677
 recol2d=15523
 recol3s=15855
 recol3d=7332
+wanderrange=25
+maxrange=25
 
 [dwarf_city_dwarf_sack_in_cart_empty3]
 name=Dwarven Miner
@@ -12825,6 +13353,8 @@ recol2s=12677
 recol2d=15523
 recol3s=15855
 recol3d=7332
+wanderrange=25
+maxrange=25
 
 [dwarf_city_dwarf_sack_carrier_full3]
 name=Dwarven Miner
@@ -12848,6 +13378,8 @@ recol2s=12677
 recol2d=15523
 recol3s=15855
 recol3d=7332
+wanderrange=25
+maxrange=25
 
 [dwarf_city_dwarf_sack_carrier_empty3]
 name=Dwarven Miner
@@ -12871,6 +13403,8 @@ recol2s=12677
 recol2d=15523
 recol3s=15855
 recol3d=7332
+wanderrange=25
+maxrange=25
 
 [dwarf_city_director_purple_pewter_cutscene]
 name=Purple Pewter Director
@@ -12893,6 +13427,7 @@ recol3s=19026
 recol3d=27399
 recol4s=7298
 recol4d=5322
+wanderrange=0
 
 [dwarf_city_director_purple_pewter_cutscene_alt]
 name=Purple Pewter Director
@@ -12915,6 +13450,7 @@ recol3s=19026
 recol3d=27399
 recol4s=7298
 recol4d=5322
+wanderrange=0
 
 [dwarf_city_director_blue_opal_cutscene]
 name=Blue Opal Director
@@ -12942,6 +13478,7 @@ recol5s=7298
 recol5d=69
 recol6s=7266
 recol6d=5352
+wanderrange=0
 
 [dwarf_city_director_yellow_fortune_cutscene]
 name=Yellow Fortune Director
@@ -12971,6 +13508,7 @@ recol5s=7168
 recol5d=25319
 recol6s=6309
 recol6d=25319
+wanderrange=0
 
 [dwarf_city_director_green_gemstone_cutscene]
 name=Green Gemstone Director
@@ -12998,6 +13536,7 @@ recol4s=15855
 recol4d=11881
 recol5s=10532
 recol5d=5474
+wanderrange=0
 
 [dwarf_city_director_white_chisel_cutscene]
 name=White Chisel Director
@@ -13019,6 +13558,7 @@ recol3s=15855
 recol3d=16841
 recol4s=3171
 recol4d=16841
+wanderrange=0
 
 [dwarf_city_director_silver_cog_cutscene]
 name=Silver Cog Director
@@ -13040,6 +13580,7 @@ recol2s=7298
 recol2d=2114
 recol3s=8456
 recol3d=20084
+wanderrange=0
 
 [dwarf_city_director_brown_engine_cutscene]
 name=Brown Engine Director
@@ -13065,6 +13606,7 @@ recol4s=7168
 recol4d=12546
 recol5s=13741
 recol5d=12546
+wanderrange=0
 
 [dwarf_city_director_red_axe_cutscene]
 name=Red Axe Director
@@ -13119,6 +13661,7 @@ recol5s=11488
 recol5d=27472
 recol6s=7296
 recol6d=11628
+wanderrange=0
 
 [dwarf_city_evil_cat_cutscene_awake]
 vislevel=hide
@@ -13137,6 +13680,8 @@ recol2s=4228
 recol2d=15855
 recol3s=15855
 recol3d=32767
+wanderrange=0
+maxrange=300
 
 [dwarf_city_evil_cat_cutscene_sleeping]
 vislevel=hide
@@ -13155,6 +13700,8 @@ recol2s=4228
 recol2d=15855
 recol3s=15855
 recol3d=32767
+wanderrange=0
+maxrange=300
 
 [dwarf_city_berserker_cutscene_multi]
 name=Black Guard Berserker
@@ -13164,6 +13711,7 @@ readyanim=dwarf_ready
 vislevel=hide
 multivar=giantdwarf_cutscene_guard_visible
 multinpc=1,dwarf_city_berserker_cutscene
+wanderrange=0
 
 [dwarf_city_berserker_cutscene]
 name=Black Guard Berserker
@@ -13189,6 +13737,7 @@ recol4s=6144
 recol4d=96
 recol5s=5120
 recol5d=96
+wanderrange=0
 
 [seed_merchant]
 name=Olivia
@@ -13225,6 +13774,8 @@ param=shop_sell_multiplier,1200
 param=shop_buy_multiplier,600
 param=shop_delta,30
 param=shop_title,Draynor Seed Market.
+wanderrange=0
+maxrange=5
 
 [master_farmer_1]
 name=Master Farmer
@@ -13256,6 +13807,8 @@ recol4s=4192
 recol4d=8388
 recol5s=32735
 recol5d=15817
+wanderrange=5
+maxrange=10
 
 [master_farmer_2]
 name=Master Farmer
@@ -13285,6 +13838,8 @@ recol4s=6273
 recol4d=28299
 recol5s=0
 recol5d=12485
+wanderrange=5
+maxrange=10
 
 [farming_market_guard]
 name=Market Guard
@@ -13336,6 +13891,8 @@ recol2s=14724
 recol2d=8353
 recol3s=14801
 recol3d=24075
+wanderrange=20
+maxrange=22
 
 [lumbridge_guide2_woman]
 walkanim=human_halberdwalk_f,human_halberdwalk_b,human_halberdwalk_l,human_halberdwalk_r
@@ -13358,6 +13915,8 @@ recol2s=14724
 recol2d=8353
 recol3s=14801
 recol3d=24075
+wanderrange=6
+maxrange=6
 
 [pig_1]
 vislevel=hide
@@ -13367,6 +13926,9 @@ walkanim=farming_pig_walk
 readyanim=farming_pig_ready
 ambient=15
 model1=npc_2239
+// assumption based on piglet 2 and 3
+wanderrange=3
+maxrange=5
 
 [pig_2]
 vislevel=hide
@@ -13383,6 +13945,9 @@ recol1s=24078
 recol1d=23021
 recol2s=21964
 recol2d=20907
+// assumption based on piglet 2 and 3
+wanderrange=3
+maxrange=5
 
 [piglet_1]
 vislevel=hide
@@ -13394,6 +13959,9 @@ resizeh=50
 resizev=50
 ambient=15
 model1=npc_2241
+// assumption based on piglet 2 and 3
+wanderrange=3
+maxrange=5
 
 [piglet_2]
 vislevel=hide
@@ -13409,6 +13977,8 @@ recol1s=24078
 recol1d=25133
 recol2s=21964
 recol2d=23019
+wanderrange=3
+maxrange=5
 
 [piglet_3]
 vislevel=hide
@@ -13420,6 +13990,8 @@ resizeh=64
 resizev=64
 ambient=15
 model1=npc_2241
+wanderrange=3
+maxrange=5
 
 [lumbridge_guide]
 walkanim=human_halberdwalk_f,human_halberdwalk_b,human_halberdwalk_l,human_halberdwalk_r
@@ -13448,6 +14020,7 @@ recol4s=5249
 recol4d=24207
 recol5s=6273
 recol5d=32735
+wanderrange=0
 
 [battlefield_khazard_troop]
 name=Khazard trooper
@@ -13467,6 +14040,8 @@ model8=human_weapons_mace
 model9=human_weapons_roundshield4
 recol1s=15855
 recol1d=5285
+wanderrange=20
+maxrange=30
 
 [battlefield_khazard_troop_spearmen]
 name=Khazard trooper
@@ -13485,6 +14060,8 @@ model7=man_feet_boots
 model8=human_weapons_spear
 recol1s=15855
 recol1d=5285
+wanderrange=20
+maxrange=30
 
 [battlefield_gnomeknight]
 name=Gnome troop
@@ -13497,6 +14074,8 @@ model1=model_2914_npc
 model2=model_2903_npc
 model3=model_2919_npc
 head1=gnome_chat_model_22
+wanderrange=20
+maxrange=30
 
 [battlefield_d_skingnomeknight]
 name=Gnome troop
@@ -13517,6 +14096,8 @@ recol3s=21961
 recol3d=13537
 recol4s=20904
 recol4d=13537
+wanderrange=20
+maxrange=30
 
 [battlefield_gnome_troop]
 name=Gnome
@@ -13531,6 +14112,8 @@ model3=model_2915_npc
 head1=gnome_chat_head
 recol1s=352
 recol1d=14625
+wanderrange=20
+maxrange=30
 
 [battlefield_darkskinned_gnome_archer]
 name=Gnome
@@ -13549,6 +14132,8 @@ recol2s=21961
 recol2d=13537
 recol3s=20904
 recol3d=13537
+wanderrange=20
+maxrange=30
 
 [battlefield_gnome_archer]
 name=Gnome
@@ -13561,6 +14146,8 @@ model1=model_2909_npc
 model2=model_2890_npc
 model3=model_2915_npc
 head1=gnome_chat_head
+wanderrange=20
+maxrange=30
 
 [battlefield_terrorbird_mountedspear]
 name=Mounted terrorbird gnome
@@ -13601,6 +14188,7 @@ recol4s=31649
 recol4d=14726
 recol5s=2340
 recol5d=10498
+wanderrange=0
 
 [wom_bed_inactive]
 name=Bed
@@ -13612,6 +14200,8 @@ turnspeed=0
 size=2
 op1=Kick
 model1=npc_2254
+wanderrange=0
+maxrange=0
 
 [wom_bed_active]
 name=Thing under the bed
@@ -13622,6 +14212,8 @@ turnspeed=0
 size=2
 op2=Attack
 model1=npc_2254
+wanderrange=0
+maxrange=0
 
 [paladin2]
 name=Paladin
@@ -13722,6 +14314,7 @@ recol4s=21140
 recol4d=8291
 recol5s=27553
 recol5d=0
+wanderrange=6
 
 [rcu_zammy_mage1_edge]
 name=rcu_zammy_mage1_edge
@@ -13786,6 +14379,7 @@ recol2s=2340
 recol2d=0
 recol3s=24075
 recol3d=22028
+wanderrange=0
 
 [abyssal_leech]
 name=Abyssal leech
@@ -13795,6 +14389,8 @@ readyanim=abyssal_leech_ready
 op2=Attack
 vislevel=41
 model1=npc_2263
+wanderrange=5
+maxrange=7
 
 [abyssal_pyramid]
 name=Abyssal guardian
@@ -13804,6 +14400,8 @@ readyanim=abyssal_pyramid_ready
 op2=Attack
 vislevel=59
 model1=npc_2264
+wanderrange=5
+maxrange=7
 
 [abyssal_walker]
 name=Abyssal walker
@@ -13813,6 +14411,8 @@ readyanim=abyssal_walker_ready
 op2=Attack
 vislevel=81
 model1=npc_2265
+wanderrange=5
+maxrange=7
 
 [roguesden_mazemaster]
 vislevel=hide
@@ -14177,6 +14777,7 @@ recol5s=8386
 recol5d=26425
 recol6s=24075
 recol6d=28337
+wanderrange=0
 
 [rd_observer_room_2]
 vislevel=hide
@@ -14204,6 +14805,7 @@ recol5s=8386
 recol5d=26425
 recol6s=24075
 recol6d=23018
+wanderrange=0
 
 [rd_observer_room_3]
 vislevel=hide
@@ -14235,6 +14837,7 @@ recol5s=8386
 recol5d=26425
 recol6s=6273
 recol6d=15649
+wanderrange=0
 
 [rd_combat_npc_room_3]
 name=Sir Leye
@@ -14297,6 +14900,7 @@ recol5s=8386
 recol5d=26425
 recol6s=6273
 recol6d=10501
+wanderrange=0
 
 [rd_observer_room_5]
 vislevel=hide
@@ -14330,6 +14934,7 @@ recol5s=8386
 recol5d=26425
 recol6s=24075
 recol6d=19880
+wanderrange=0
 
 [rd_observer_room_6]
 vislevel=hide
@@ -14359,6 +14964,7 @@ recol5s=8386
 recol5d=26425
 recol6s=24075
 recol6d=24209
+wanderrange=0
 
 [rd_observer_room_7]
 vislevel=hide
@@ -14390,6 +14996,7 @@ recol5s=8386
 recol5d=26425
 recol6s=6273
 recol6d=24171
+wanderrange=0
 
 [rd_teleporter_guy]
 vislevel=hide
@@ -14419,6 +15026,7 @@ recol6s=6273
 recol6d=32666
 wanderrange=0
 moverestrict=nomove
+wanderrange=0
 
 [magic_carpet_seller1]
 name=Rug Merchant
@@ -14450,6 +15058,8 @@ recol4s=30618
 recol4d=27412
 recol5s=24075
 recol5d=22985
+wanderrange=1
+maxrange=1
 
 [magic_carpet_seller2]
 name=Rug Merchant
@@ -14480,6 +15090,8 @@ recol4s=6274
 recol4d=10502
 recol5s=24075
 recol5d=22985
+wanderrange=1
+maxrange=1
 
 [magic_carpet_seller3]
 name=Rug Merchant
@@ -14506,6 +15118,8 @@ recol2s=14724
 recol2d=25438
 recol3s=24075
 recol3d=22985
+wanderrange=1
+maxrange=1
 
 [magic_carpet_seller4]
 name=Rug Merchant
@@ -14539,6 +15153,8 @@ recol6s=24075
 recol6d=22985
 wanderrange=0
 moverestrict=nomove
+wanderrange=0
+maxrange=0
 
 [magic_carpet_seller5_multi]
 name=magic_carpet_seller5
@@ -14549,6 +15165,8 @@ op1=Talk-to
 vislevel=1
 multivar=golem_a
 multinpc=10,magic_carpet_seller5
+maxrange=0
+wanderrange=0
 
 [magic_carpet_seller5]
 name=Rug Merchant
@@ -14577,6 +15195,8 @@ recol3s=14724
 recol3d=27412
 recol4s=24075
 recol4d=22985
+maxrange=0
+wanderrange=0
 
 [magic_carpet_seller6_multi]
 name=magic_carpet_seller6
@@ -14587,6 +15207,8 @@ op1=Talk-to
 vislevel=hide
 multivar=ics_ent_open
 multinpc=1,magic_carpet_seller6
+wanderrange=2
+maxrange=2
 
 [magic_carpet_seller6]
 name=Rug Merchant
@@ -14620,6 +15242,8 @@ recol5s=29594
 recol5d=27412
 recol6s=24075
 recol6d=22985
+wanderrange=2
+maxrange=2
 
 [magic_carpet_seller7_multi]
 name=magic_carpet_seller7
@@ -14630,6 +15254,8 @@ op1=Talk-to
 vislevel=hide
 multivar=ics_ent_open
 multinpc=1,magic_carpet_seller7
+wanderrange=1
+maxrange=1
 
 [magic_carpet_seller7]
 name=Rug Station Attendant
@@ -14661,6 +15287,8 @@ recol4s=30618
 recol4d=27412
 recol5s=24075
 recol5d=22985
+wanderrange=1
+maxrange=1
 
 [magic_carpet_monkey]
 name=Monkey
@@ -14675,6 +15303,7 @@ recol1s=15749
 recol1d=18920
 recol2s=9409
 recol2d=12580
+wanderrange=5
 
 [magic_carpet_multi_monkey1]
 name=magic_carpet_multi_monkey1
@@ -14727,6 +15356,8 @@ param=shop_sell_multiplier,1000
 param=shop_buy_multiplier,700
 param=shop_delta,1
 param=shop_title,Sarah's Farming shop.
+wanderrange=1
+maxrange=1
 
 [farming_shopkeeper_2]
 name=Vanessa
@@ -14759,6 +15390,8 @@ param=shop_sell_multiplier,1000
 param=shop_buy_multiplier,700
 param=shop_delta,1
 param=shop_title,Vanessa's Farming shop.
+wanderrange=1
+maxrange=1
 
 [farming_shopkeeper_3]
 name=Richard
@@ -14792,6 +15425,8 @@ param=shop_sell_multiplier,1000
 param=shop_buy_multiplier,700
 param=shop_delta,1
 param=shop_title,Richard's Farming shop.
+wanderrange=1
+maxrange=1
 
 [farming_shopkeeper_4]
 name=Alice
@@ -14823,6 +15458,8 @@ param=shop_sell_multiplier,1000
 param=shop_buy_multiplier,700
 param=shop_delta,1
 param=shop_title,Alice's Farming shop.
+wanderrange=1
+maxrange=1
 
 [macro_combilock_pirate]
 name=Capt' Arnav
@@ -14855,6 +15492,7 @@ recol5s=15855
 recol5d=27241
 recol6s=6273
 recol6d=17865
+maxrange=7
 
 [npc_2309]
 name=
@@ -14896,6 +15534,7 @@ walkanim=roosterwalk
 readyanim=roosterready
 ambient=15
 model1=loc_7281_8
+wanderrange=0
 
 [farm_chicken_brown]
 name=Chicken
@@ -14914,6 +15553,7 @@ recol2s=21104
 recol2d=15717
 recol3s=15855
 recol3d=13603
+wanderrange=5
 
 [farm_chicken_dark_brown]
 name=Chicken
@@ -14934,6 +15574,7 @@ recol3s=15855
 recol3d=10466
 recol4s=31201
 recol4d=28257
+wanderrange=5
 
 [farm_chicken_tan]
 name=Chicken
@@ -14954,6 +15595,7 @@ recol3s=15855
 recol3d=16806
 recol4s=31201
 recol4d=28257
+wanderrange=5
 
 [farm_pig_1]
 vislevel=hide
@@ -14963,6 +15605,8 @@ walkanim=farming_pig_walk
 readyanim=farming_pig_ready
 ambient=15
 model1=npc_2316
+wanderrange=3
+maxrange=5
 
 [farm_pig_2]
 vislevel=hide
@@ -14979,6 +15623,8 @@ recol1s=24078
 recol1d=23021
 recol2s=21964
 recol2d=20907
+wanderrange=3
+maxrange=5
 
 [farm_piglet_1]
 vislevel=hide
@@ -14990,6 +15636,8 @@ resizeh=50
 resizev=50
 ambient=15
 model1=npc_2318
+wanderrange=3
+maxrange=5
 
 [farm_piglet_2]
 vislevel=hide
@@ -15005,6 +15653,8 @@ recol1s=24078
 recol1d=25133
 recol2s=21964
 recol2d=23019
+wanderrange=3
+maxrange=5
 
 [farm_piglet_3]
 vislevel=hide
@@ -15016,6 +15666,8 @@ resizeh=64
 resizev=64
 ambient=15
 model1=npc_2318
+wanderrange=3
+maxrange=5
 
 [blandebir]
 name=Blandebir
@@ -15044,6 +15696,8 @@ recol5s=13639
 recol5d=10433
 recol6s=28537
 recol6d=18889
+wanderrange=3
+maxrange=3
 
 [metarialus]
 name=Metarialus
@@ -15096,6 +15750,7 @@ recol3s=24075
 recol3d=29362
 recol4s=6273
 recol4d=23937
+wanderrange=0
 
 [dantaera]
 name=Dantaera
@@ -15121,6 +15776,8 @@ recol3s=6273
 recol3d=27342
 recol4s=14801
 recol4d=24075
+wanderrange=0
+maxrange=5
 
 [kragen]
 name=Kragen
@@ -15151,6 +15808,7 @@ recol4s=6273
 recol4d=11588
 recol5s=6144
 recol5d=12580
+wanderrange=0
 
 [lyra]
 name=Lyra
@@ -15181,6 +15839,7 @@ recol5s=14764
 recol5d=11723
 recol6s=16878
 recol6d=13837
+wanderrange=0
 
 [francis]
 name=Francis
@@ -15207,6 +15866,7 @@ recol3s=6273
 recol3d=17932
 recol4s=14801
 recol4d=24075
+wanderrange=0
 
 [npc_2328]
 name=Gardener
@@ -15292,6 +15952,7 @@ recol5s=14801
 recol5d=24075
 recol6s=24452
 recol6d=12617
+wanderrange=0
 
 [farming_gardener_fruit_4]
 name=Ellena
@@ -15322,6 +15983,7 @@ recol5s=5299
 recol5d=19946
 recol6s=6341
 recol6d=16775
+wanderrange=0
 
 [farming_gardener_hops_1]
 name=Selena
@@ -15350,6 +16012,7 @@ recol4s=14801
 recol4d=24075
 recol5s=6144
 recol5d=7328
+wanderrange=0
 
 [farming_gardener_hops_3]
 name=Vasquen
@@ -15381,6 +16044,7 @@ recol4s=14801
 recol4d=24075
 recol5s=6144
 recol5d=7328
+wanderrange=0
 
 [farming_gardener_hops_4]
 name=Rhonen
@@ -15412,6 +16076,7 @@ recol5s=6144
 recol5d=9445
 recol6s=14801
 recol6d=24075
+wanderrange=0
 
 [farming_gardener_bush_1]
 name=Dreven
@@ -15444,6 +16109,7 @@ recol5s=24075
 recol5d=25133
 recol6s=6273
 recol6d=10433
+wanderrange=0
 
 [farming_gardener_bush_2]
 name=Taria
@@ -15473,6 +16139,7 @@ recol5d=6272
 recol6s=6307
 recol6d=6272
 members=yes
+wanderrange=0
 
 [farming_gardener_bush_3]
 name=Rhazien
@@ -15502,6 +16169,7 @@ recol3s=2340
 recol3d=5314
 recol4s=6144
 recol4d=6274
+wanderrange=0
 
 [farming_gardener_bush_4]
 name=Torrell
@@ -15528,6 +16196,7 @@ recol3s=6144
 recol3d=12516
 recol4s=14801
 recol4d=24075
+wanderrange=0
 
 [farming_gardener_tree_1]
 name=Alain
@@ -15558,6 +16227,7 @@ recol5s=6144
 recol5d=6307
 recol6s=24075
 recol6d=21961
+wanderrange=0
 
 [farming_gardener_tree_2]
 name=Heskel
@@ -15587,6 +16257,7 @@ recol5s=6144
 recol5d=6272
 recol6s=24329
 recol6d=6272
+wanderrange=0
 
 [farming_gardener_tree_3]
 name=Treznor
@@ -15610,6 +16281,7 @@ recol2s=14724
 recol2d=8353
 recol3s=15855
 recol3d=8354
+wanderrange=0
 
 [farming_gardener_tree_4]
 name=Fayeth
@@ -15639,6 +16311,7 @@ recol5s=24075
 recol5d=25166
 recol6s=24329
 recol6d=5216
+wanderrange=0
 
 [farming_gardener_fruit_1]
 name=Bolongo
@@ -15661,6 +16334,7 @@ recol4s=13728
 recol4d=8353
 recol5s=6144
 recol5d=8353
+wanderrange=0
 
 [farming_gardener_fruit_2]
 name=Gileth
@@ -15678,6 +16352,7 @@ model6=obj_5331_manwear
 model7=woman_legs_longskirt
 model8=obj_5345_womanwear
 head1=chat_female_head_longhair
+wanderrange=0
 
 [herder_plaguesheep_1]
 vislevel=hide
@@ -15780,6 +16455,7 @@ recol4s=31649
 recol4d=1058
 recol5s=13600
 recol5d=11489
+maxrange=100
 
 [mourning_overpass_mourner2]
 name=Mourner
@@ -15806,6 +16482,7 @@ recol4s=31649
 recol4d=1058
 recol5s=13600
 recol5d=11489
+maxrange=100
 
 [mourning_overpass_mourner3]
 name=Mourner
@@ -15832,6 +16509,7 @@ recol4s=31649
 recol4d=1058
 recol5s=13600
 recol5d=11489
+maxrange=100
 
 [mourning_stores_man]
 vislevel=hide
@@ -15852,6 +16530,7 @@ recol1s=15750
 recol1d=21001
 recol2s=28464
 recol2d=26319
+wanderrange=3
 
 [mourning_seamstress]
 walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
@@ -15872,6 +16551,7 @@ recol1s=15750
 recol1d=21001
 recol2s=28464
 recol2d=17036
+wanderrange=3
 
 [mourning_elf_bankerm]
 vislevel=hide
@@ -15894,6 +16574,7 @@ recol3s=28464
 recol3d=17898
 recol4s=25293
 recol4d=8388
+wanderrange=0
 
 [mourning_elf_bankerf]
 vislevel=hide
@@ -15923,6 +16604,7 @@ recol5s=14858
 recol5d=17898
 recol6s=25293
 recol6d=12615
+wanderrange=0
 
 [mourning_bow_seller]
 vislevel=hide
@@ -15945,6 +16627,7 @@ recol2s=15750
 recol2d=13829
 recol3s=14724
 recol3d=13829
+wanderrange=3
 
 [mourning_elven_cook]
 vislevel=hide
@@ -15967,6 +16650,7 @@ recol2s=15750
 recol2d=24208
 recol3s=28464
 recol3d=19944
+wanderrange=3
 
 [mourning_arianwyn]
 vislevel=hide
@@ -15981,6 +16665,7 @@ model3=npc_1186i2
 model4=npc_1186i3
 model5=npc_1202i3
 head1=npc_1202_head
+
 
 [mourning_guard_melee]
 walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
@@ -16003,6 +16688,7 @@ recol2s=16808
 recol2d=30513
 recol3s=5447
 recol3d=30513
+wanderrange=8
 
 [mourning_guard_melee2]
 walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
@@ -16024,6 +16710,7 @@ recol2s=16808
 recol2d=30513
 recol3s=24075
 recol3d=18820
+wanderrange=8
 
 [mourning_guard_range]
 walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
@@ -16046,6 +16733,7 @@ recol2s=24129
 recol2d=17833
 recol3s=5447
 recol3d=30513
+wanderrange=8
 
 [mourning_guard_range2]
 walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
@@ -16066,6 +16754,7 @@ recol2s=24129
 recol2d=17833
 recol3s=24075
 recol3d=16773
+wanderrange=8
 
 [mourning_town_elf_1]
 name=Goreu
@@ -16237,6 +16926,7 @@ multinpc=14,mourner_hideout_gnome_head
 multinpc=15,mourner_hideout_gnome_head
 multinpc=16,mourner_hideout_gnome_head
 multinpc=17,mourner_hideout_gnome_head
+wanderrange=0
 
 [mourner_hideout_gnome_head]
 name=Gnome
@@ -16279,6 +16969,7 @@ recol2s=31649
 recol2d=12544
 recol3s=24129
 recol3d=6273
+wanderrange=5
 
 [mourner_hideout_guard]
 name=Mourner
@@ -16300,6 +16991,7 @@ recol2s=15360
 recol2d=7297
 recol3s=31649
 recol3d=12544
+wanderrange=8
 
 [mourner_hideout_gnome_guard]
 name=Mourner
@@ -16320,6 +17012,7 @@ recol2s=15360
 recol2d=7297
 recol3s=31649
 recol3d=12544
+wanderrange=0
 
 [roving_female_woodelf_temp]
 name=Eluned
@@ -16328,6 +17021,7 @@ readyanim=human_ready
 vislevel=1
 multivar=mourning_can_see_eluned
 multinpc=1,roving_female_woodelf_temp_1
+wanderrange=0
 
 [roving_female_woodelf_temp_1]
 name=Eluned
@@ -16364,6 +17058,7 @@ recol1s=15853
 recol1d=18894
 recol2s=29594
 recol2d=25135
+wanderrange=3
 
 [mourning_plaguesheep_2]
 vislevel=hide
@@ -16379,6 +17074,7 @@ recol1s=29594
 recol1d=17039
 recol2s=15853
 recol2d=16015
+wanderrange=3
 
 [mourning_plaguesheep_3]
 vislevel=hide
@@ -16394,6 +17090,7 @@ recol1s=29594
 recol1d=12815
 recol2s=15853
 recol2d=14800
+wanderrange=3
 
 [mourning_plaguesheep_4]
 vislevel=hide
@@ -16409,6 +17106,7 @@ recol1s=29594
 recol1d=23206
 recol2s=15853
 recol2d=21089
+wanderrange=3
 
 [secret_ghost1]
 name=secret_ghost1
@@ -16417,6 +17115,7 @@ readyanim=human_secret_ghost_transready
 vislevel=1
 multivar=fd_ladder_present
 multinpc=1,secret_ghost_explorer
+wanderrange=1
 
 [secret_ghost2]
 name=secret_ghost2
@@ -16425,6 +17124,7 @@ readyanim=human_secret_ghost_transready
 vislevel=1
 multivar=fd_ladder_present
 multinpc=1,secret_ghost_thief
+wanderrange=1
 
 [secret_ghost3]
 name=secret_ghost3
@@ -16433,6 +17133,7 @@ readyanim=human_secret_ghost_transready
 vislevel=1
 multivar=fd_ladder_present
 multinpc=1,secret_ghost_thief
+wanderrange=1
 
 [secret_ghost4]
 name=secret_ghost4
@@ -16441,6 +17142,7 @@ readyanim=human_secret_ghost_transready
 vislevel=1
 multivar=fd_ladder_present
 multinpc=1,secret_ghost_thief
+wanderrange=1
 
 [secret_ghost5]
 name=secret_ghost5
@@ -16449,6 +17151,7 @@ readyanim=human_secret_ghost_transready
 vislevel=1
 multivar=fd_ladder_present
 multinpc=1,secret_ghost_mage
+wanderrange=1
 
 [secret_ghost6]
 name=secret_ghost6
@@ -16465,6 +17168,7 @@ readyanim=human_secret_ghost_transready
 vislevel=1
 multivar=fd_ladder_present
 multinpc=1,secret_ghost_mage
+wanderrange=1
 
 [secret_ghost8]
 name=secret_ghost8
@@ -16473,6 +17177,7 @@ readyanim=human_secret_ghost_transready
 vislevel=1
 multivar=fd_ladder_present
 multinpc=1,secret_ghost_messenger
+wanderrange=1
 
 [secret_ghost9]
 name=secret_ghost9
@@ -16481,6 +17186,7 @@ readyanim=human_secret_ghost_transready
 vislevel=1
 multivar=fd_ladder_present
 multinpc=1,secret_ghost_messenger
+wanderrange=1
 
 [secret_ghost10]
 name=secret_ghost10
@@ -16489,6 +17195,7 @@ readyanim=human_secret_ghost_transready
 vislevel=1
 multivar=fd_ladder_present
 multinpc=1,secret_ghost_messenger
+wanderrange=1
 
 [secret_ghost11]
 name=secret_ghost11
@@ -16497,6 +17204,7 @@ readyanim=human_secret_ghost_transready
 vislevel=1
 multivar=fd_ladder_present
 multinpc=1,secret_ghost_spy
+wanderrange=1
 
 [secret_ghost12]
 name=secret_ghost12
@@ -16505,6 +17213,7 @@ readyanim=human_secret_ghost_transready
 vislevel=1
 multivar=fd_ladder_present
 multinpc=1,secret_ghost_spy
+wanderrange=1
 
 [secret_ghost13]
 name=secret_ghost13
@@ -16513,6 +17222,7 @@ readyanim=human_secret_ghost_transready
 vislevel=1
 multivar=fd_ladder_present
 multinpc=1,secret_ghost_spy
+wanderrange=1
 
 [secret_ghost14]
 name=secret_ghost14
@@ -16521,6 +17231,7 @@ readyanim=human_secret_ghost_transready
 vislevel=1
 multivar=fd_ladder_present
 multinpc=1,secret_ghost_swordsman
+wanderrange=1
 
 [secret_ghost15]
 name=secret_ghost15
@@ -16529,6 +17240,7 @@ readyanim=human_secret_ghost_transready
 vislevel=1
 multivar=fd_ladder_present
 multinpc=1,secret_ghost_swordsman
+wanderrange=1
 
 [secret_ghost16]
 name=secret_ghost16
@@ -16537,6 +17249,7 @@ readyanim=human_secret_ghost_transready
 vislevel=1
 multivar=fd_ladder_present
 multinpc=1,secret_ghost_swordsman
+wanderrange=1
 
 [secret_ghost_thief]
 name=Mysterious ghost
@@ -16563,6 +17276,8 @@ recol2s=10368
 recol2d=6274
 recol3s=9473
 recol3d=6274
+wanderrange=0
+maxrange=0
 
 [secret_ghost_mage]
 name=Mysterious ghost
@@ -16592,6 +17307,8 @@ recol2s=2340
 recol2d=2243
 recol3s=14724
 recol3d=3298
+wanderrange=0
+maxrange=0
 
 [secret_ghost_explorer]
 name=Mysterious ghost
@@ -16626,6 +17343,8 @@ recol4s=14724
 recol4d=4228
 recol5s=14731
 recol5d=5282
+wanderrange=0
+maxrange=0
 
 [secret_ghost_messenger]
 name=Mysterious ghost
@@ -16656,6 +17375,8 @@ recol3s=24075
 recol3d=20904
 recol4s=21001
 recol4d=5253
+wanderrange=0
+maxrange=0
 
 [secret_ghost_spy]
 name=Mysterious ghost
@@ -16684,6 +17405,8 @@ recol3s=15855
 recol3d=6274
 recol4s=2340
 recol4d=2244
+wanderrange=0
+maxrange=0
 
 [secret_ghost_swordsman]
 name=Mysterious ghost
@@ -16720,6 +17443,8 @@ recol5s=31649
 recol5d=15841
 recol6s=14798
 recol6d=8455
+wanderrange=0
+maxrange=0
 
 [dwarf_city_secretary_red_axe_multi]
 name=Red Axe Secretary
@@ -16729,6 +17454,7 @@ walkanim=dwarf_walk
 vislevel=hide
 multivar=giantdwarf_red_axe_gone
 multinpc=0,dwarf_city_secretary_red_axe
+wanderrange=2
 
 [dwarf_city_director_red_axe_multi]
 name=Red Axe Director
@@ -16748,6 +17474,8 @@ vislevel=hide
 turnspeed=0
 multivar=giantdwarf_red_axe_gone
 multinpc=0,dwarf_city_evil_cat
+wanderrange=0
+maxrange=0
 
 [dwarf_city_gnome_emissary_multi]
 name=Gnome emissary
@@ -16799,6 +17527,7 @@ recol3s=24309
 recol3d=10405
 recol4s=12677
 recol4d=4261
+wanderrange=2
 
 [forget_redaxe_director_cutscene]
 name=Red Axe Director
@@ -16825,6 +17554,7 @@ recol5s=23254
 recol5d=10339
 recol6s=13741
 recol6d=12420
+wanderrange=0
 
 [forget_redaxe_director_cutscene_alt]
 name=Red Axe Director
@@ -16852,6 +17582,7 @@ recol5s=23254
 recol5d=10339
 recol6s=13741
 recol6d=12420
+wanderrange=0
 
 [forget_redaxe_henchman_cutscene]
 name=Red Axe Henchman
@@ -16873,6 +17604,7 @@ recol2s=4228
 recol2d=15360
 recol3s=12684
 recol3d=19489
+wanderrange=0
 
 [forget_redaxe_henchman_cutscene_alt]
 name=Red Axe Henchman
@@ -16895,6 +17627,7 @@ recol2s=4228
 recol2d=15360
 recol3s=12684
 recol3d=19489
+wanderrange=0
 
 [forget_redaxe_henchman2_cutscene]
 name=Red Axe Henchman
@@ -16917,6 +17650,7 @@ recol2s=4228
 recol2d=15360
 recol3s=12684
 recol3d=19489
+wanderrange=0
 
 [forget_redaxe_henchman3_cutscene]
 name=Colonel Grimsson
@@ -16938,6 +17672,7 @@ recol2s=4228
 recol2d=15360
 recol3s=12684
 recol3d=19489
+wanderrange=0
 
 [forget_redaxe_henchman4_cutscene]
 name=Colonel Grimsson
@@ -16960,6 +17695,7 @@ recol2s=4228
 recol2d=15360
 recol3s=12684
 recol3d=19489
+wanderrange=0
 
 [forget_redaxe_shaman_cutscene]
 name=Ogre shaman
@@ -16971,6 +17707,7 @@ vislevel=hide
 model1=npc_2417
 model2=model_2877_npc
 head1=model_141_npc_head
+wanderrange=0
 
 [forget_redaxe_shaman_cutscene_alt]
 name=Ogre shaman
@@ -16983,6 +17720,7 @@ op1=Listen-to
 model1=npc_2417
 model2=model_2877_npc
 head1=model_141_npc_head
+wanderrange=0
 
 [forget_redaxe_shaman2_cutscene]
 name=Grunsh
@@ -16994,6 +17732,7 @@ vislevel=hide
 model1=npc_2417
 model2=model_2877_npc
 head1=model_141_npc_head
+wanderrange=0
 
 [forget_cutscene_gnome_emissary]
 name=Gnome emissary
@@ -17013,6 +17752,7 @@ recol3s=416
 recol3d=19588
 recol4s=11456
 recol4d=15360
+wanderrange=0
 
 [forget_cutscene_gnome_companion1]
 name=Gnome companion
@@ -17032,6 +17772,7 @@ recol3s=416
 recol3d=19588
 recol4s=11456
 recol4d=15360
+wanderrange=0
 
 [forget_cutscene_gnome_companion2]
 name=Gnome companion
@@ -17051,6 +17792,7 @@ recol3s=416
 recol3d=13572
 recol4s=12684
 recol4d=7396
+wanderrange=0
 
 [forget_cutscene_chaos_dwarf]
 walkanim=dwarf_walk
@@ -17070,6 +17812,7 @@ recol1s=15785
 recol1d=15855
 recol2s=24075
 recol2d=22855
+wanderrange=0
 
 [forget_cutscene_patron1]
 name=Gunslik
@@ -17092,6 +17835,7 @@ recol3s=24242
 recol3d=7426
 recol4s=15855
 recol4d=98
+wanderrange=0
 
 [forget_cutscene_patron2]
 name=Nolar
@@ -17117,6 +17861,7 @@ recol3s=12677
 recol3d=18886
 recol4s=10434
 recol4d=18754
+wanderrange=0
 
 [forget_cutscene_patron3]
 name=Factory Worker
@@ -17139,6 +17884,7 @@ recol2s=28537
 recol2d=12684
 recol3s=24075
 recol3d=19880
+wanderrange=0
 
 [forget_cutscene_patron4]
 name=Cart conductor
@@ -17167,6 +17913,7 @@ recol5s=10434
 recol5d=22914
 recol6s=24075
 recol6d=20904
+wanderrange=0
 
 [forget_cutscene_patron5]
 name=Gauss
@@ -17188,6 +17935,7 @@ recol2s=28537
 recol2d=8419
 recol3s=15855
 recol3d=20047
+wanderrange=0
 
 [forget_cutscene_drunken_dwarf]
 vislevel=hide
@@ -17205,6 +17953,7 @@ model6=model_2985_npc
 model7=model_2992_npc
 head1=dwarf_chat_model4
 head2=dwarf_chat_model6
+wanderrange=0
 
 [forget_cutscene_rowdy]
 name=Rowdy dwarf
@@ -17234,6 +17983,7 @@ recol4s=13639
 recol4d=13573
 recol5s=24075
 recol5d=24043
+wanderrange=0
 
 [forget_cutscene_sitting]
 name=Ulifed
@@ -17258,6 +18008,7 @@ recol3s=3171
 recol3d=8419
 recol4s=7266
 recol4d=8419
+wanderrange=0
 
 [dwarf_red_axe_henchman]
 name=Red Axe Henchman
@@ -17325,6 +18076,7 @@ vislevel=1
 multivar=dag_island_quick_travel
 multinpc=0,viking_dagganoth_cave_ferryman_1op
 multinpc=1,viking_dagganoth_cave_ferryman_island
+wanderrange=0
 
 [viking_dagganoth_cave_ferryman_1op]
 vislevel=hide
@@ -17374,6 +18126,7 @@ recol1s=2340
 recol1d=6340
 recol2s=14724
 recol2d=12614
+wanderrange=0
 
 [viking_dagganoth_cave_waterbirth_island]
 vislevel=hide
@@ -17399,6 +18152,7 @@ recol1s=2340
 recol1d=6340
 recol2s=14724
 recol2d=12614
+wanderrange=0
 
 [viking_askelapen_dagganoth_mountain]
 vislevel=hide
@@ -17424,6 +18178,7 @@ recol4s=416
 recol4d=12583
 recol5s=14560
 recol5d=8356
+wanderrange=1
 
 [dagannoth_weak_door_south]
 name=Door-support
@@ -17443,6 +18198,8 @@ recol4s=10603
 recol4d=7432
 recol5s=11660
 recol5d=8489
+wanderrange=0
+maxrange=0
 
 [dagannoth_weak_door_falling_south]
 name=Door
@@ -17462,6 +18219,8 @@ recol4s=10603
 recol4d=7432
 recol5s=11660
 recol5d=8489
+wanderrange=0
+maxrange=0
 
 [dagannoth_weak_door_fallen_south]
 name=Door
@@ -17481,6 +18240,8 @@ recol4s=10603
 recol4d=7432
 recol5s=11660
 recol5d=8489
+wanderrange=0
+maxrange=0
 
 [dagannoth_weak_door_west]
 name=Door-support
@@ -17501,6 +18262,8 @@ recol4s=10603
 recol4d=7432
 recol5s=11660
 recol5d=8489
+wanderrange=0
+maxrange=0
 
 [dagannoth_weak_door_falling_west]
 name=Door
@@ -17520,6 +18283,8 @@ recol4s=10603
 recol4d=7432
 recol5s=11660
 recol5d=8489
+wanderrange=0
+maxrange=0
 
 [dagannoth_weak_door_fallen_west]
 name=Door
@@ -17539,6 +18304,8 @@ recol4s=10603
 recol4d=7432
 recol5s=11660
 recol5d=8489
+wanderrange=0
+maxrange=0
 
 [dagannoth_weak_door_north]
 name=Door-support
@@ -17559,6 +18326,8 @@ recol4s=10603
 recol4d=7432
 recol5s=11660
 recol5d=8489
+wanderrange=0
+maxrange=0
 
 [dagannoth_weak_door_falling_north]
 name=Door
@@ -17578,6 +18347,8 @@ recol4s=10603
 recol4d=7432
 recol5s=11660
 recol5d=8489
+wanderrange=0
+maxrange=0
 
 [dagannoth_weak_door_fallen_north]
 name=Door
@@ -17597,6 +18368,8 @@ recol4s=10603
 recol4d=7432
 recol5s=11660
 recol5d=8489
+wanderrange=0
+maxrange=0
 
 [dungeon_dagganoth_egg1]
 name=Egg
@@ -17607,6 +18380,8 @@ turnspeed=0
 vislevel=hide
 minimap=no
 model1=npc_2449
+wanderrange=0
+maxrange=2
 
 [dungeon_dagganoth_egg2]
 name=Egg
@@ -17619,6 +18394,8 @@ turnspeed=0
 vislevel=hide
 minimap=no
 model1=npc_2450
+wanderrange=0
+maxrange=2
 
 [dungeon_dagganoth_egg3]
 name=Egg
@@ -17629,6 +18406,8 @@ turnspeed=0
 vislevel=hide
 minimap=no
 model1=npc_2451
+wanderrange=0
+maxrange=2
 
 [giant_rockcrab]
 name=Giant Rock Crab
@@ -17642,6 +18421,7 @@ op2=Attack
 vislevel=137
 model1=npc_2452
 model2=npc_2452i2
+wanderrange=7
 
 [giant_rockcrab_hidden]
 vislevel=hide
@@ -17652,6 +18432,8 @@ resizeh=250
 resizev=250
 turnspeed=0
 model1=npc_2453
+wanderrange=0
+maxrange=2
 
 [dagganoth_critter]
 name=Dagannoth spawn
@@ -17663,6 +18445,8 @@ resizev=60
 op2=Attack
 vislevel=42
 model1=npc_2454
+wanderrange=25
+maxrange=30
 param=slayer_category,^slayer_dagannoth
 
 [dungeon_dagganoth_mainroom]
@@ -17683,6 +18467,8 @@ recol3s=11626
 recol3d=10536
 recol4s=10569
 recol4d=9479
+wanderrange=63
+maxrange=63
 param=slayer_category,^slayer_dagannoth
 
 [dungeon_dagganoth_lighter]
@@ -17703,6 +18489,8 @@ recol3s=11626
 recol3d=13706
 recol4s=10569
 recol4d=12649
+wanderrange=63
+maxrange=63
 param=slayer_category,^slayer_dagannoth
 
 [dungeon_dagganoth_magic_monster]
@@ -17715,6 +18503,8 @@ resizev=110
 op2=Attack
 vislevel=98
 model1=npc_2457
+wanderrange=5
+maxrange=5
 
 [macro_forester_m]
 vislevel=hide
@@ -18048,6 +18838,7 @@ recol4s=7298
 recol4d=3171
 recol5s=2472
 recol5d=5289
+wanderrange=0
 
 [macro_evil_bob_outside]
 vislevel=hide
@@ -18150,6 +18941,7 @@ readyanim=bat_ready
 vislevel=hide
 minimap=no
 model1=model_2941_npc
+wanderrange=8
 
 [tbwt_tiadeche_multinpc_shore]
 name=tbwt_tiadeche_multinpc_shore
@@ -18222,6 +19014,7 @@ readyanim=snake_ready
 op2=Attack
 vislevel=35
 model1=npc_snake
+wanderrange=5
 
 [tbwcu_snakejungle_appear]
 name=Bush Snake
@@ -18232,6 +19025,7 @@ op2=Attack
 turnspeed=1024
 vislevel=35
 model1=npc_snake
+wanderrange=5
 
 [tbwcu_jungle_spider]
 name=Jungle spider
@@ -18244,6 +19038,7 @@ vislevel=44
 model1=npc_giantspider
 recol1s=5284
 recol1d=11846
+wanderrange=3
 
 [tbwcu_spider_appear]
 name=Jungle Spider
@@ -18257,6 +19052,7 @@ vislevel=44
 model1=npc_giantspider
 recol1s=5284
 recol1d=11846
+wanderrange=3
 
 [tbwcu_mosquito_single]
 name=Large mosquito
@@ -18266,6 +19062,7 @@ readyanim=tbw_mosquito_ready
 op2=Attack
 vislevel=13
 model1=npc_2493
+wanderrange=30
 
 [tbwcu_mosquito_swarm3]
 name=Mosquito swarm
@@ -18275,6 +19072,7 @@ readyanim=tbw_mosquito_ready
 op2=Attack
 vislevel=17
 model1=npc_2494
+wanderrange=30
 
 [tbwcu_mosquito_swarm5]
 name=Mosquito swarm
@@ -18284,6 +19082,7 @@ readyanim=tbw_mosquito_ready
 op2=Attack
 vislevel=20
 model1=npc_2495
+wanderrange=30
 
 [tbwcu_tribesman_instant]
 name=Tribesman
@@ -18438,6 +19237,8 @@ recol5s=30653
 recol5d=29092
 recol6s=8793
 recol6d=21894
+wanderrange=0
+maxrange=10
 
 [tbwcu_broodoo_combat_instant]
 name=Broodoo victim
@@ -18515,6 +19316,7 @@ recol2s=23083
 recol2d=23788
 recol3s=10401
 recol3d=27415
+wanderrange=3
 
 [tbwcu_sharimika_nosticks]
 vislevel=hide
@@ -18538,6 +19340,7 @@ recol2s=23083
 recol2d=23788
 recol3s=10401
 recol3d=27415
+wanderrange=3
 
 [tbwcu_mamma_bufetta_multinpc]
 name=Mamma Bufetta
@@ -18580,6 +19383,7 @@ recol5s=24075
 recol5d=10468
 recol6s=6273
 recol6d=23253
+wanderrange=3
 
 [tbwcu_mamma_bufetta_nosticks]
 vislevel=hide
@@ -18606,6 +19410,7 @@ recol5s=24075
 recol5d=10468
 recol6s=6273
 recol6d=23253
+wanderrange=3
 
 [tbwcu_layleen_multinpc]
 name=tbwcu_layleen_multinpc
@@ -18643,6 +19448,7 @@ recol2s=24075
 recol2d=17799
 recol3s=15855
 recol3d=9732
+wanderrange=3
 
 [tbwcu_layleen_nosticks]
 vislevel=hide
@@ -18665,6 +19471,7 @@ recol2s=24075
 recol2d=17799
 recol3s=15855
 recol3d=9732
+wanderrange=3
 
 [tbwcu_karaday_multinpc]
 name=tbwcu_karaday_multinpc
@@ -18703,6 +19510,7 @@ recol3s=26391
 recol3d=31710
 recol4s=14801
 recol4d=14627
+wanderrange=3
 
 [tbwcu_karaday_nosticks]
 vislevel=hide
@@ -18726,6 +19534,7 @@ recol3s=26391
 recol3d=31710
 recol4s=14801
 recol4d=14627
+wanderrange=3
 
 [tbwcu_safta_doc_multinpc]
 name=tbwcu_safta_doc_multinpc
@@ -18770,6 +19579,7 @@ recol4s=14801
 recol4d=14627
 recol5s=6273
 recol5d=21073
+wanderrange=3
 
 [tbwcu_safta_doc_nosticks]
 vislevel=hide
@@ -18799,6 +19609,7 @@ recol4s=14801
 recol4d=14627
 recol5s=6273
 recol5d=21073
+wanderrange=3
 
 [tbwcu_gabooty_multinpc]
 name=tbwcu_gabooty_multinpc
@@ -18843,6 +19654,7 @@ recol3s=14695
 recol3d=23083
 recol4s=14801
 recol4d=14627
+wanderrange=3
 
 [tbwcu_gabooty_nosticks]
 vislevel=hide
@@ -18872,6 +19684,7 @@ recol3s=14695
 recol3d=23083
 recol4s=14801
 recol4d=14627
+wanderrange=3
 
 [tbwcu_fanellaman_multinpc]
 name=tbwcu_fanellaman_multinpc
@@ -18917,6 +19730,7 @@ recol5s=2340
 recol5d=24209
 recol6s=6273
 recol6d=25029
+wanderrange=3
 
 [tbwcu_fanellaman_nosticks]
 vislevel=hide
@@ -18947,6 +19761,7 @@ recol5s=2340
 recol5d=24209
 recol6s=6273
 recol6d=25029
+wanderrange=3
 
 [tbwcu_jagbakoba_multinpc]
 name=tbwcu_jagbakoba_multinpc
@@ -18990,6 +19805,7 @@ recol4s=14801
 recol4d=23083
 recol5s=14695
 recol5d=23083
+wanderrange=3
 
 [tbwcu_jagbakoba_nosticks]
 vislevel=hide
@@ -19018,6 +19834,7 @@ recol4s=14801
 recol4d=23083
 recol5s=14695
 recol5d=23083
+wanderrange=3
 
 [tbwcu_murcaily_multinpc]
 name=tbwcu_murcaily_multinpc
@@ -19064,6 +19881,7 @@ recol5s=14695
 recol5d=23083
 recol6s=15649
 recol6d=23152
+wanderrange=3
 
 [tbwcu_murcaily_nosticks]
 vislevel=hide
@@ -19095,6 +19913,7 @@ recol5s=14695
 recol5d=23083
 recol6s=15649
 recol6d=23152
+wanderrange=3
 
 [tbwcu_rionasta_multinpc]
 name=tbwcu_rionasta_multinpc
@@ -19140,6 +19959,7 @@ recol4s=14801
 recol4d=11458
 recol5s=6273
 recol5d=27412
+wanderrange=3
 
 [tbwcu_rionasta_nosticks]
 vislevel=hide
@@ -19170,6 +19990,7 @@ recol4s=14801
 recol4d=11458
 recol5s=6273
 recol5d=27412
+wanderrange=3
 
 [macro_mahogany_ent]
 name=Mahogany
@@ -19342,6 +20163,7 @@ recol3s=2340
 recol3d=3171
 recol4s=6273
 recol4d=17968
+maxrange=50
 
 [macro_hyde_1]
 name=Mr Hyde
@@ -19546,6 +20368,7 @@ recol2s=2340
 recol2d=26420
 recol3s=29595
 recol3d=23222
+wanderrange=1
 
 [feud_dye_lady]
 name=Ali the dyer
@@ -19576,6 +20399,7 @@ recol5s=24075
 recol5d=21961
 recol6s=7298
 recol6d=12486
+wanderrange=3
 
 [dwarf_city_dwarf_sack_carrier_full_down]
 name=Dwarven Miner
@@ -19601,6 +20425,8 @@ recol3s=15855
 recol3d=7332
 recol4s=8456
 recol4d=27365
+wanderrange=25
+maxrange=25
 
 [dwarf_city_dwarf_sack_carrier_full_down2]
 name=Dwarven Miner
@@ -19624,6 +20450,8 @@ recol2s=12677
 recol2d=6275
 recol3s=15855
 recol3d=12682
+wanderrange=25
+maxrange=25
 
 [dwarf_city_dwarf_sack_carrier_full_down3]
 name=Dwarven Miner
@@ -19647,6 +20475,8 @@ recol2s=12677
 recol2d=15523
 recol3s=15855
 recol3d=7332
+wanderrange=25
+maxrange=25
 
 [blast_furnace_instructor]
 name=Blast Furnace Foreman
@@ -19669,6 +20499,7 @@ recol2s=15855
 recol2d=17900
 recol3s=9475
 recol3d=9410
+wanderrange=2
 
 [blast_furnace_tin_ore]
 name=Tin ore
@@ -19788,6 +20619,7 @@ recol2s=15855
 recol2d=17900
 recol3s=9475
 recol3d=9410
+wanderrange=0
 
 [smithing_guild_buyer]
 name=Jorzik
@@ -19809,6 +20641,7 @@ recol2s=15855
 recol2d=17900
 recol3s=9475
 recol3d=9410
+wanderrange=2
 
 [wom_cutscene_1]
 name=Wise Old Man
@@ -19838,6 +20671,8 @@ recol4s=31649
 recol4d=14726
 recol5s=2340
 recol5d=10498
+wanderrange=0
+maxrange=50
 
 [wom_cutscene_2]
 name=Wise Old Man
@@ -19868,6 +20703,8 @@ recol4s=31649
 recol4d=14726
 recol5s=2340
 recol5d=10498
+wanderrange=0
+maxrange=50
 
 [wom_banker1]
 vislevel=hide
@@ -19894,6 +20731,7 @@ recol3s=15855
 recol3d=24075
 recol4s=6273
 recol4d=10570
+maxrange=10
 
 [wom_banker2]
 vislevel=hide
@@ -19918,6 +20756,7 @@ recol3s=6273
 recol3d=10570
 recol4s=14724
 recol4d=11627
+maxrange=10
 
 [wom_banker3]
 vislevel=hide
@@ -19942,6 +20781,7 @@ recol3s=6273
 recol3d=10570
 recol4s=14724
 recol4d=11627
+maxrange=10
 
 [wom_marketguard]
 name=Market Guard
@@ -19968,6 +20808,7 @@ recol3s=15855
 recol3d=15755
 recol4s=31649
 recol4d=15655
+maxrange=10
 
 [wom_olivia]
 name=Olivia
@@ -19998,6 +20839,8 @@ recol5s=6273
 recol5d=18627
 recol6s=14801
 recol6d=24075
+wanderrange=0
+maxrange=10
 
 [wom_watchman]
 name=Watchman
@@ -20018,6 +20861,8 @@ model8=human_weapons_mace
 model9=human_weapons_roundshield4
 recol1s=14801
 recol1d=7364
+wanderrange=0
+maxrange=10
 
 [wom_bankguard]
 vislevel=hide
@@ -20043,6 +20888,8 @@ recol3s=15855
 recol3d=24075
 recol4s=6273
 recol4d=10570
+maxrange=2
+wanderrange=1
 
 [wom_fakeplayer1]
 name=Purepker895
@@ -20192,6 +21039,8 @@ recol5s=6273
 recol5d=12615
 recol6s=17441
 recol6d=18957
+wanderrange=3
+maxrange=5
 
 [queen_ellamaria]
 name=Ellamaria
@@ -20223,6 +21072,8 @@ recol5s=28609
 recol5d=29380
 recol6s=14801
 recol6d=29380
+wanderrange=3
+maxrange=5
 
 [garden_trolley_saradomin]
 name=Trolley
@@ -20293,6 +21144,8 @@ multivar=garden_trolley_varbit
 multinpc=0,garden_trolley_empty
 multinpc=1,garden_trolley_saradomin
 multinpc=2,garden_trolley_king
+maxrange=10000
+wanderrange=0
 
 [garden_cutscene_guard_1]
 name=Billy, a guard of Falador
@@ -20321,6 +21174,8 @@ recol4s=6273
 recol4d=16709
 recol5s=15855
 recol5d=8354
+wanderrange=0
+maxrange=0
 
 [garden_cutscene_guard_2]
 name=Bob, another guard of Falador
@@ -20349,6 +21204,8 @@ recol4s=6273
 recol4d=11492
 recol5s=15855
 recol5d=8354
+wanderrange=0
+maxrange=0
 
 [brother_althric]
 name=Brother Althric
@@ -20370,6 +21227,7 @@ recol1s=2340
 recol1d=13539
 recol2s=14724
 recol2d=13539
+wanderrange=0
 
 [garden_cutscene_aggressor]
 name=PKMaster0036
@@ -20394,6 +21252,8 @@ recol4s=15855
 recol4d=6342
 recol5s=14798
 recol5d=6342
+wanderrange=10
+maxrange=100
 
 [king_roald_cutscene]
 name=King Roald
@@ -20425,6 +21285,8 @@ recol5s=7328
 recol5d=6144
 recol6s=2340
 recol6d=2310
+wanderrange=0
+maxrange=100
 
 [tzhaar_mej1]
 name=TzHaar-Mej
@@ -21154,6 +22016,7 @@ recol1s=29921
 recol1d=30945
 recol2s=8291
 recol2d=14402
+wanderrange=1
 
 [tzhaar_fightpit_master]
 vislevel=hide
@@ -21176,6 +22039,7 @@ recol1s=29921
 recol1d=28705
 recol2s=8291
 recol2d=14336
+wanderrange=1
 
 [tzhaar_banker1]
 vislevel=hide
@@ -21325,6 +22189,7 @@ recol1s=29921
 recol1d=27937
 recol2s=8291
 recol2d=12483
+wanderrange=0
 
 [tzhaar_guard_border]
 vislevel=hide
@@ -21344,6 +22209,8 @@ model4=npc_2610i4
 model5=npc_2610i5
 model6=npc_2612
 head1=npc_2591_head
+wanderrange=0
+maxrange=0
 
 [tzhaar_morph_rock]
 name=Rocks
@@ -21472,6 +22339,7 @@ recol3s=15360
 recol3d=14726
 recol4s=31649
 recol4d=14726
+wanderrange=0
 
 [wom_gossip]
 name=Miss Schism
@@ -21514,6 +22382,8 @@ recol2s=4228
 recol2d=3171
 recol3s=32767
 recol3d=8456
+wanderrange=30000
+maxrange=30000
 
 [twocats_bob_cutscene2]
 vislevel=hide
@@ -21533,6 +22403,8 @@ recol2s=4228
 recol2d=3171
 recol3s=32767
 recol3d=8456
+wanderrange=30000
+maxrange=30000
 
 [twocats_sphinx_cutscene]
 name=Sphinx
@@ -21560,6 +22432,8 @@ recol5s=7183
 recol5d=22052
 recol6s=6273
 recol6d=24075
+wanderrange=0
+maxrange=2
 
 [twocats_niete_cutscene]
 vislevel=hide
@@ -21573,6 +22447,8 @@ resizev=60
 alwaysontop=yes
 model1=npc_1992
 head1=npc_1992_head
+wanderrange=30000
+maxrange=30000
 
 [twocats_robert_cutscene]
 vislevel=hide
@@ -21604,6 +22480,8 @@ recol5s=13744
 recol5d=2114
 recol6s=14801
 recol6d=14798
+wanderrange=0
+maxrange=4
 
 [twocats_odysseus_cutscene]
 vislevel=hide
@@ -21621,6 +22499,8 @@ recol2s=4228
 recol2d=3171
 recol3s=32767
 recol3d=8456
+wanderrange=30
+maxrange=20
 
 [twocats_dragonkin_cutscene]
 vislevel=hide
@@ -21707,6 +22587,8 @@ recol2s=32767
 recol2d=8456
 recol3s=15362
 recol3d=22197
+wanderrange=4
+maxrange=6
 
 [twocats_trawler_cats]
 vislevel=hide
@@ -21723,6 +22605,8 @@ recol2s=32767
 recol2d=8456
 recol3s=15362
 recol3d=22197
+wanderrange=0
+maxrange=0
 
 [twocats_niete_veil]
 vislevel=hide
@@ -21847,6 +22731,8 @@ multivar=twocats_quest
 multinpc=60,ics_little_cat_visible
 multinpc=65,ics_little_cat_visible
 multinpc=70,ics_little_cat_visible
+wanderrange=30000
+maxrange=30000
 
 [ics_little_cat_visible]
 vislevel=hide
@@ -21860,6 +22746,8 @@ resizev=60
 alwaysontop=yes
 model1=npc_1992
 head1=npc_1992_head
+wanderrange=30000
+maxrange=30000
 
 [twocats_unferth]
 name=Unferth
@@ -22085,6 +22973,8 @@ recol2s=4228
 recol2d=15855
 recol3s=15855
 recol3d=32767
+wanderrange=30000
+maxrange=30000
 
 [lazycat]
 vislevel=hide
@@ -22100,6 +22990,8 @@ resizev=70
 model1=npc_2662
 model2=obj_6549
 head1=npc_2662_head
+wanderrange=30000
+maxrange=30000
 
 [lazycat_brown]
 vislevel=hide
@@ -22121,6 +23013,8 @@ recol2s=4228
 recol2d=13537
 recol3s=32767
 recol3d=15685
+wanderrange=30000
+maxrange=30000
 
 [lazycat_black]
 vislevel=hide
@@ -22142,6 +23036,8 @@ recol2s=4228
 recol2d=3171
 recol3s=32767
 recol3d=8456
+wanderrange=30000
+maxrange=30000
 
 [lazycat_browngrey]
 vislevel=hide
@@ -22161,6 +23057,8 @@ recol1s=15855
 recol1d=10432
 recol2s=4228
 recol2d=15855
+wanderrange=30000
+maxrange=30000
 
 [lazycat_bluegrey]
 vislevel=hide
@@ -22180,6 +23078,8 @@ recol1s=15855
 recol1d=8459
 recol2s=4228
 recol2d=16911
+wanderrange=30000
+maxrange=30000
 
 [wileycat_light]
 vislevel=hide
@@ -22202,6 +23102,8 @@ recol2s=4228
 recol2d=15855
 recol3s=15855
 recol3d=32767
+wanderrange=30000
+maxrange=30000
 
 [wileycat]
 vislevel=hide
@@ -22218,6 +23120,8 @@ resizev=70
 model1=npc_2668
 model2=obj_6555
 head1=npc_2668_head
+wanderrange=30000
+maxrange=30000
 
 [wileycat_brown]
 vislevel=hide
@@ -22240,6 +23144,8 @@ recol2s=4228
 recol2d=13537
 recol3s=32767
 recol3d=15685
+wanderrange=30000
+maxrange=30000
 
 [wileycat_black]
 vislevel=hide
@@ -22262,6 +23168,8 @@ recol2s=4228
 recol2d=3171
 recol3s=32767
 recol3d=8456
+wanderrange=30000
+maxrange=30000
 
 [wileycat_browngrey]
 vislevel=hide
@@ -22282,6 +23190,8 @@ recol1s=15855
 recol1d=10432
 recol2s=4228
 recol2d=15855
+wanderrange=30000
+maxrange=30000
 
 [wileycat_bluegrey]
 vislevel=hide
@@ -22302,6 +23212,8 @@ recol1s=15855
 recol1d=8459
 recol2s=4228
 recol2d=16911
+wanderrange=30000
+maxrange=30000
 
 [thief2]
 name=Thief
@@ -22326,6 +23238,7 @@ recol1s=2340
 recol1d=11460
 recol2s=14724
 recol2d=9475
+wanderrange=8
 
 [man4_for_musa_point]
 walkanim=walk_walkingstick,human_walk_b,human_walk_l,human_walk_r
@@ -22381,6 +23294,7 @@ recol5s=8599
 recol5d=6445
 recol6s=7328
 recol6d=6445
+wanderrange=4
 
 [highwayman2]
 name=Highwayman
@@ -22409,6 +23323,7 @@ recol3s=15360
 recol3d=3171
 recol4s=14724
 recol4d=6272
+wanderrange=12
 
 [goblin_armed_melee_1]
 name=Goblin
@@ -22669,6 +23584,7 @@ readyanim=giant_frog_ready
 vislevel=hide
 ambient=15
 model1=npc_1828
+wanderrange=2
 
 [sarim_pub_drinker_1]
 name=Jack Seagull
@@ -22699,6 +23615,7 @@ recol5s=6273
 recol5d=15751
 recol6s=3170
 recol6d=9413
+wanderrange=3
 
 [sarim_pub_drinker_2]
 name=Longbow Ben
@@ -22729,6 +23646,7 @@ recol5s=3491
 recol5d=16549
 recol6s=7329
 recol6d=15721
+wanderrange=3
 
 [sarim_pub_sitting_patron]
 name=Ahab
@@ -22834,6 +23752,7 @@ recol2s=32735
 recol2d=15817
 recol3s=2340
 recol3d=8458
+wanderrange=8
 
 [jail_mugger]
 name=Mugger
@@ -22883,6 +23802,7 @@ recol4s=15855
 recol4d=6342
 recol5s=14798
 recol5d=6342
+wanderrange=10
 
 [jail_guard_1]
 name=Guard
@@ -23048,6 +23968,7 @@ recol4s=15855
 recol4d=14698
 recol5s=15360
 recol5d=14698
+wanderrange=0
 
 [jail_guard_lookout]
 name=Guard
@@ -23076,6 +23997,8 @@ recol4s=15855
 recol4d=14698
 recol5s=15360
 recol5d=14698
+wanderrange=5
+maxrange=30
 
 [crab_1]
 name=Crab
@@ -23096,6 +24019,7 @@ recol3s=13706
 recol3d=18726
 recol4s=15855
 recol4d=18760
+wanderrange=7
 
 [seagull_47_49_1]
 name=Seagull
@@ -23165,6 +24089,7 @@ attack=5
 strength=5
 defence=10
 magic=10
+wanderrange=6
 param=magicdefence,15
 param=attack_anim,human_staff_pummel
 param=defend_anim,human_staff_block
@@ -23208,6 +24133,7 @@ attack=5
 strength=5
 defence=10
 magic=10
+wanderrange=6
 param=magicdefence,15
 param=attack_anim,human_staff_pummel
 param=defend_anim,human_staff_block
@@ -23251,6 +24177,7 @@ attack=5
 strength=5
 defence=10
 magic=10
+wanderrange=6
 param=magicdefence,15
 param=attack_anim,human_staff_pummel
 param=defend_anim,human_staff_block
@@ -23292,6 +24219,7 @@ attack=5
 strength=5
 defence=10
 magic=10
+wanderrange=6
 param=magicdefence,15
 param=attack_anim,human_staff_pummel
 param=defend_anim,human_staff_block
@@ -23325,6 +24253,7 @@ recol4s=15360
 recol4d=2114
 recol5s=31649
 recol5d=2114
+wanderrange=4
 
 [unattackable_zombie]
 name=Zombie
@@ -23333,6 +24262,7 @@ walkanim=zombie_walk
 readyanim=zombie_ready
 vislevel=hide
 model1=model_2931_npc
+wanderrange=10
 
 [unattackable_skeleton]
 name=Skeleton
@@ -23341,6 +24271,7 @@ walkanim=skeleton_walk
 readyanim=skeleton_ready
 vislevel=hide
 model1=model_2944_npc
+wanderrange=10
 
 [unattackable_ghost]
 name=Ghost
@@ -23351,6 +24282,7 @@ vislevel=hide
 model1=model_2961_npc
 model2=model_2964_npc
 model3=model_2965_npc
+wanderrange=10
 
 [unattackable_skeleton_mage]
 name=Skeleton mage
@@ -23370,6 +24302,7 @@ recol2s=14724
 recol2d=4226
 recol3s=6273
 recol3d=4226
+wanderrange=10
 
 [sarim_betty]
 vislevel=hide
@@ -23674,6 +24607,7 @@ recol2s=16801
 recol2d=25398
 recol3s=31649
 recol3d=30241
+maxrange=100
 
 [thurgos_seagull2]
 name=Gull
@@ -23690,6 +24624,7 @@ recol2s=16801
 recol2d=25398
 recol3s=31649
 recol3d=30241
+maxrange=50
 
 [shipmonk1_b]
 vislevel=hide
@@ -23862,6 +24797,8 @@ ambient=60
 contrast=60
 vislevel=22
 model1=npc_2627
+wanderrange=65
+maxrange=80
 
 [tzhaar_fightcave_swarm_1b]
 name=Tz-Kih
@@ -23873,6 +24810,8 @@ ambient=60
 contrast=60
 vislevel=22
 model1=npc_2627
+wanderrange=65
+maxrange=80
 
 [tzhaar_fightcave_swarm_2a]
 name=Tz-Kek
@@ -23897,6 +24836,8 @@ recol4s=18529
 recol4d=3105
 recol5s=28961
 recol5d=16513
+wanderrange=65
+maxrange=80
 
 [tzhaar_fightcave_swarm_2b]
 name=Tz-Kek
@@ -23921,6 +24862,8 @@ recol4s=18529
 recol4d=3105
 recol5s=28961
 recol5d=16513
+wanderrange=65
+maxrange=80
 
 [tzhaar_fightcave_swarm_2spawn]
 name=Tz-Kek
@@ -23934,6 +24877,8 @@ ambient=40
 contrast=40
 vislevel=22
 model1=npc_2629
+wanderrange=65
+maxrange=80
 
 [tzhaar_fightcave_swarm_3a]
 name=Tok-Xil
@@ -23949,6 +24894,8 @@ model1=npc_2631
 model2=npc_2631i2
 model3=npc_2631i3
 model4=npc_2631i4
+wanderrange=65
+maxrange=80
 
 [tzhaar_fightcave_swarm_3b]
 name=Tok-Xil
@@ -23970,6 +24917,8 @@ recol2s=2115
 recol2d=3138
 recol3s=1059
 recol3d=3105
+wanderrange=65
+maxrange=80
 
 [tzhaar_fightcave_swarm_4a]
 name=Yt-MejKot
@@ -23986,6 +24935,8 @@ vislevel=180
 model1=npc_2741
 model2=npc_2741i2
 model3=npc_2741i3
+wanderrange=65
+maxrange=80
 
 [tzhaar_fightcave_swarm_4b]
 name=Yt-MejKot
@@ -24004,6 +24955,8 @@ model2=npc_2741i2
 model3=npc_2741i3
 recol1s=6144
 recol1d=5219
+wanderrange=65
+maxrange=80
 
 [tzhaar_fightcave_swarm_5a]
 name=Ket-Zek
@@ -24018,6 +24971,8 @@ model1=npc_2743
 model2=npc_2743i2
 model3=npc_2743i3
 model4=npc_2743i4
+wanderrange=65
+maxrange=80
 
 [tzhaar_fightcave_swarm_5b]
 name=Ket-Zek
@@ -24044,6 +24999,8 @@ recol5s=4096
 recol5d=14464
 recol6s=15394
 recol6d=20834
+wanderrange=65
+maxrange=80
 
 [tzhaar_fightcave_swarm_boss]
 name=TzTok-Jad
@@ -24055,6 +25012,8 @@ readyanim=lordmagmus_ready
 ambient=60
 vislevel=702
 model1=npc_2745
+wanderrange=65
+maxrange=80
 
 [tzhaar_fightcave_swarm_boss_cleric]
 name=Yt-HurKot
@@ -24072,6 +25031,8 @@ model2=npc_2741i2
 model3=npc_2741i3
 recol1s=6144
 recol1d=6276
+wanderrange=65
+maxrange=80
 
 [wanted_solus]
 name=Solus Dellagar
@@ -24108,6 +25069,7 @@ recol5s=7328
 recol5d=6144
 recol6s=20033
 recol6d=8225
+wanderrange=6
 
 [wanted_savant]
 vislevel=hide
@@ -24137,6 +25099,7 @@ recol5s=7298
 recol5d=20015
 recol6s=14801
 recol6d=24075
+wanderrange=0
 
 [wanted_lord_daquarius_for_cutscene]
 vislevel=hide
@@ -24166,6 +25129,7 @@ recol5s=8388
 recol5d=3137
 recol6s=6274
 recol6d=2080
+wanderrange=0
 
 [wanted_solus_for_cutscene]
 name=Solus Dellagar
@@ -24201,6 +25165,7 @@ recol5s=7328
 recol5d=6144
 recol6s=20033
 recol6d=8225
+wanderrange=0
 
 [wanted_black_knight_for_cutscene]
 vislevel=hide
@@ -24226,6 +25191,7 @@ recol4s=15855
 recol4d=6342
 recol5s=14798
 recol5d=6342
+wanderrange=0
 
 [wanted_lord_daquarius_for_cutscene2]
 vislevel=hide
@@ -24255,6 +25221,7 @@ recol5s=8388
 recol5d=3137
 recol6s=6274
 recol6d=2080
+wanderrange=0
 
 [wanted_zammy_mage_for_cutscene]
 name=Mage of Zamorak
@@ -24284,6 +25251,7 @@ recol4s=21140
 recol4d=8291
 recol5s=27553
 recol5d=0
+wanderrange=0
 
 [wanted_zammy_mage_for_cutscene_pray]
 name=Mage of Zamorak
@@ -24313,6 +25281,7 @@ recol4s=21140
 recol4d=8291
 recol5s=27553
 recol5d=0
+wanderrange=0
 
 [wanted_zammy_mage_for_cutscene_telly]
 name=Mage of Zamorak
@@ -24342,6 +25311,7 @@ recol4s=21140
 recol4d=8291
 recol5s=27553
 recol5d=0
+wanderrange=0
 
 [wanted_solus1]
 name=Solus
@@ -24352,6 +25322,7 @@ alwaysontop=yes
 vislevel=1
 multivar=wanted_mission1
 multinpc=1,wanted_solus
+wanderrange=0
 
 [wanted_solus2]
 name=Solus
@@ -24362,6 +25333,7 @@ alwaysontop=yes
 vislevel=1
 multivar=wanted_mission2
 multinpc=1,wanted_solus
+wanderrange=0
 
 [wanted_solus3]
 name=Solus
@@ -24372,6 +25344,7 @@ alwaysontop=yes
 vislevel=1
 multivar=wanted_mission3
 multinpc=1,wanted_solus
+wanderrange=0
 
 [wanted_solus4]
 name=Solus
@@ -24382,6 +25355,7 @@ alwaysontop=yes
 vislevel=1
 multivar=wanted_mission4
 multinpc=1,wanted_solus
+wanderrange=0
 
 [wanted_solus5]
 name=Solus
@@ -24392,6 +25366,7 @@ alwaysontop=yes
 vislevel=1
 multivar=wanted_mission5
 multinpc=1,wanted_solus
+wanderrange=0
 
 [wanted_solus6]
 name=Solus
@@ -24402,6 +25377,7 @@ alwaysontop=yes
 vislevel=1
 multivar=wanted_mission6
 multinpc=1,wanted_solus
+wanderrange=0
 
 [wanted_solus7]
 name=Solus
@@ -24412,6 +25388,7 @@ alwaysontop=yes
 vislevel=1
 multivar=wanted_mission7
 multinpc=1,wanted_solus
+wanderrange=0
 
 [wanted_solus8]
 name=Solus
@@ -24422,6 +25399,7 @@ alwaysontop=yes
 vislevel=1
 multivar=wanted_mission8
 multinpc=1,wanted_solus
+wanderrange=0
 
 [wanted_solus9]
 name=Solus
@@ -24432,6 +25410,7 @@ alwaysontop=yes
 vislevel=1
 multivar=wanted_mission9
 multinpc=1,wanted_solus
+wanderrange=0
 
 [wanted_solus10]
 name=Solus
@@ -24442,6 +25421,7 @@ alwaysontop=yes
 vislevel=1
 multivar=wanted_mission10
 multinpc=1,wanted_solus
+wanderrange=0
 
 [wanted_solus11]
 name=Solus
@@ -24452,6 +25432,7 @@ alwaysontop=yes
 vislevel=1
 multivar=wanted_mission11
 multinpc=1,wanted_solus
+wanderrange=0
 
 [wanted_solus12]
 name=Solus
@@ -24462,6 +25443,7 @@ alwaysontop=yes
 vislevel=1
 multivar=wanted_mission12
 multinpc=1,wanted_solus
+wanderrange=0
 
 [wanted_solus13]
 name=Solus
@@ -24472,6 +25454,7 @@ alwaysontop=yes
 vislevel=1
 multivar=wanted_mission13
 multinpc=1,wanted_solus
+wanderrange=0
 
 [wanted_solus14]
 name=Solus
@@ -24482,6 +25465,7 @@ alwaysontop=yes
 vislevel=1
 multivar=wanted_mission14
 multinpc=1,wanted_solus
+wanderrange=0
 
 [wanted_solus15]
 name=Solus
@@ -24492,6 +25476,7 @@ alwaysontop=yes
 vislevel=1
 multivar=wanted_mission15
 multinpc=1,wanted_solus
+wanderrange=0
 
 [wanted_solus16]
 name=Solus
@@ -24502,6 +25487,7 @@ alwaysontop=yes
 vislevel=1
 multivar=wanted_mission16
 multinpc=1,wanted_solus
+wanderrange=0
 
 [wanted_solus17]
 name=Solus
@@ -24512,6 +25498,7 @@ alwaysontop=yes
 vislevel=1
 multivar=wanted_mission17
 multinpc=1,wanted_solus
+wanderrange=0
 
 [wanted_solus18]
 name=Solus
@@ -24522,6 +25509,7 @@ alwaysontop=yes
 vislevel=1
 multivar=wanted_mission18
 multinpc=1,wanted_solus
+wanderrange=0
 
 [wanted_solus19]
 name=Solus
@@ -24532,6 +25520,7 @@ alwaysontop=yes
 vislevel=1
 multivar=wanted_mission19
 multinpc=1,wanted_solus
+wanderrange=0
 
 [wanted_solus_fake_woman]
 name=Woman
@@ -24542,6 +25531,7 @@ alwaysontop=yes
 vislevel=1
 multivar=wanted_mission3
 multinpc=1,wanted_solus_fake_woman_base_config
+wanderrange=0
 
 [wanted_solus_fake_woman_base_config]
 vislevel=hide
@@ -24596,6 +25586,8 @@ recol4s=15855
 recol4d=6342
 recol5s=14798
 recol5d=6342
+wanderrange=0
+maxrange=10
 
 [wanted_black_knight_attackable_base_config]
 name=Black Knight
@@ -24652,6 +25644,7 @@ recol5s=7330
 recol5d=25368
 recol6s=7298
 recol6d=19026
+wanderrange=0
 
 [wanted_solus_attackable]
 name=Solus Dellagar
@@ -24688,6 +25681,7 @@ recol5s=7328
 recol5d=6144
 recol6s=20033
 recol6d=8225
+maxrange=100
 
 [grandtree_spawnedguard]
 name=Gnome guard
@@ -24701,6 +25695,7 @@ model3=model_2915_npc
 head1=gnome_chat_head
 recol1s=352
 recol1d=20516
+maxrange=10
 
 [mourning_shadow_beast]
 name=Shadow
@@ -24710,6 +25705,7 @@ readyanim=shadow_ready
 op2=Attack
 vislevel=73
 model1=npc_2782
+wanderrange=7
 
 [mourning_dark_beast]
 size=3
@@ -24730,6 +25726,8 @@ recol3s=15648
 recol3d=11488
 recol4s=8192
 recol4d=20513
+wanderrange=8
+maxrange=16
 
 [mourner_hideout_slave_guard]
 name=Mourner
@@ -24750,6 +25748,7 @@ recol2s=15360
 recol2d=7297
 recol3s=31649
 recol3d=12544
+wanderrange=8
 
 [mourner_slave_pickaxe]
 name=Slave
@@ -24771,6 +25770,7 @@ recol2s=14801
 recol2d=23051
 recol3s=2340
 recol3d=5316
+wanderrange=4
 
 [mourner_slave_spade]
 name=Slave
@@ -24792,6 +25792,7 @@ recol2s=14801
 recol2d=23051
 recol3s=2340
 recol3d=7396
+wanderrange=4
 
 [mourner_slave_no_tools]
 name=Slave
@@ -24814,6 +25815,7 @@ recol2s=14801
 recol2d=23051
 recol3s=2340
 recol3d=7396
+wanderrange=4
 
 [mourning_deathalter_dwarf]
 name=mourning_deathalter_dwarf
@@ -24823,6 +25825,8 @@ alwaysontop=yes
 vislevel=1
 multivar=mourning_light_door_1_c_first_time
 multinpc=1,mourning_deathalter_dwarf_vis
+wanderrange=0
+maxrange=0
 
 [mourning_deathalter_dwarf_vis]
 vislevel=hide
@@ -24869,6 +25873,8 @@ recol4s=11264
 recol4d=17601
 recol5s=14801
 recol5d=15649
+maxrange=50
+wanderrange=3
 
 [macro_pillory_guard]
 vislevel=hide
@@ -24916,6 +25922,7 @@ recol2s=14724
 recol2d=8355
 recol3s=14801
 recol3d=24075
+wanderrange=3
 
 [pillory_tramp_thrower_seers]
 vislevel=hide
@@ -24937,6 +25944,7 @@ recol2s=14724
 recol2d=8355
 recol3s=14801
 recol3d=24075
+wanderrange=3
 
 [pillory_tramp_thrower_yanille]
 vislevel=hide
@@ -24958,6 +25966,7 @@ recol2s=14724
 recol2d=8355
 recol3s=14801
 recol3d=24075
+wanderrange=3
 
 [multi_skippy]
 name=multi_skippy
@@ -24971,6 +25980,7 @@ multinpc=0,skippy
 multinpc=1,damp_skippy
 multinpc=2,hungover_skippy
 multinpc=3,sober_skippy
+maxrange=10
 
 [skippy]
 vislevel=hide
@@ -25024,6 +26034,7 @@ recol3s=14695
 recol3d=11623
 recol4s=24075
 recol4d=28401
+maxrange=10
 
 [hungover_skippy]
 vislevel=hide
@@ -25050,6 +26061,7 @@ recol3s=14695
 recol3d=11623
 recol4s=24075
 recol4d=28401
+maxrange=10
 
 [sober_skippy]
 vislevel=hide
@@ -25076,6 +26088,7 @@ recol3s=14695
 recol3d=11623
 recol4s=24075
 recol4d=28401
+maxrange=10
 
 [skippy_target]
 vislevel=hide
@@ -25137,6 +26150,7 @@ readyanim=slayer_lizard_ready
 op2=Attack
 vislevel=42
 model1=obj_6695
+wanderrange=8
 
 [slayer_lizard_large1_green]
 name=Desert Lizard
@@ -25164,6 +26178,7 @@ recol5s=9508
 recol5d=8485
 recol6s=16616
 recol6d=3404
+wanderrange=12
 
 [slayer_lizard_large2_sandy]
 name=Desert Lizard
@@ -25190,6 +26205,7 @@ recol5s=9508
 recol5d=11557
 recol6s=23056
 recol6d=17834
+wanderrange=8
 
 [slayer_lizard_large3_sandy]
 name=Desert Lizard
@@ -25216,6 +26232,7 @@ recol5s=9508
 recol5d=11558
 recol6s=16616
 recol6d=10546
+wanderrange=12
 
 [slayer_lizard_small1_green]
 name=Small Lizard
@@ -25269,6 +26286,7 @@ model1=npc_2809
 model2=npc_2809i2
 model3=npc_2809i3
 head1=npc_2809_head
+wanderrange=5
 
 [elly_the_camel]
 name=Elly the Camel
@@ -25287,6 +26305,7 @@ head1=npc_2810_head
 head2=npc_2810_headi2
 recol1s=16841
 recol1d=22057
+wanderrange=5
 
 [ollie_the_camel]
 name=Ollie the Camel
@@ -25304,6 +26323,7 @@ model3=npc_2811
 head1=npc_2810_head
 recol1s=16841
 recol1d=19979
+wanderrange=5
 
 [cam_the_camel]
 name=Cam the Camel
@@ -25328,6 +26348,7 @@ recol4s=17898
 recol4d=23147
 recol5s=20012
 recol5d=23147
+wanderrange=5
 
 [alice_the_camel_multinpc]
 name=alice_the_camel_multinpc
@@ -25356,6 +26377,7 @@ head1=npc_2810_head
 head2=npc_2810_headi2
 recol1s=16841
 recol1d=22126
+wanderrange=5
 
 [neferti_the_camel]
 name=Neferti the Camel
@@ -25381,6 +26403,7 @@ recol4s=17898
 recol4d=23018
 recol5s=20012
 recol5d=23018
+wanderrange=5
 
 [ali_the_smith_multinpc]
 name=ali_the_smith_multinpc
@@ -25942,6 +26965,8 @@ recol5s=30618
 recol5d=18065
 recol6s=6273
 recol6d=6369
+wanderrange=10
+maxrange=10
 
 [deal_zombie_pirates_2]
 name=Zombie Pirate
@@ -25975,6 +27000,8 @@ recol5s=30618
 recol5d=18065
 recol6s=6273
 recol6d=6369
+wanderrange=10
+maxrange=10
 
 [deal_zombie_pirates_3]
 name=Zombie Pirate
@@ -26008,6 +27035,8 @@ recol5s=30618
 recol5d=18065
 recol6s=6273
 recol6d=4256
+wanderrange=10
+maxrange=10
 
 [deal_zombie_pirates_4]
 name=Zombie Pirate
@@ -26040,6 +27069,8 @@ recol5s=21279
 recol5d=18065
 recol6s=6273
 recol6d=4256
+wanderrange=10
+maxrange=10
 
 [deal_zombie_pirates_5]
 name=Zombie Pirate
@@ -26070,6 +27101,8 @@ recol5s=21279
 recol5d=18065
 recol6s=6273
 recol6d=4256
+wanderrange=10
+maxrange=10
 
 [deal_zombie_pirates_6]
 name=Zombie Pirate
@@ -26101,6 +27134,8 @@ recol5s=2340
 recol5d=15922
 recol6s=6273
 recol6d=2208
+wanderrange=10
+maxrange=10
 
 [deal_pirate_a]
 name=Zombie Swab
@@ -26135,6 +27170,8 @@ recol5s=30618
 recol5d=18065
 recol6s=6273
 recol6d=6369
+wanderrange=10
+maxrange=10
 
 [deal_pirate_b]
 name=Zombie Swab
@@ -26170,6 +27207,8 @@ recol5s=30618
 recol5d=18065
 recol6s=6273
 recol6d=6369
+wanderrange=10
+maxrange=10
 
 [deal_pirate_c]
 name=Zombie Swab
@@ -26205,6 +27244,8 @@ recol5s=30618
 recol5d=18065
 recol6s=6273
 recol6d=4256
+wanderrange=6
+maxrange=6
 
 [deal_pirate_d]
 name=Zombie Swab
@@ -26239,6 +27280,8 @@ recol5s=21279
 recol5d=18065
 recol6s=6273
 recol6d=4256
+wanderrange=6
+maxrange=6
 
 [deal_pirate_e]
 name=Zombie Swab
@@ -26271,6 +27314,8 @@ recol5s=21279
 recol5d=18065
 recol6s=6273
 recol6d=4256
+wanderrange=6
+maxrange=6
 
 [deal_pirate_f]
 name=Zombie Swab
@@ -26304,6 +27349,8 @@ recol5s=2340
 recol5d=15922
 recol6s=6273
 recol6d=2208
+wanderrange=6
+maxrange=6
 
 [deal_evil_spirit]
 size=2
@@ -26314,6 +27361,7 @@ readyanim=spirit_ready
 op2=Attack
 vislevel=150
 model1=npc_2849
+wanderrange=15
 
 [deal_fever_spiders1]
 size=2
@@ -26326,6 +27374,7 @@ readyanim=giantspider_ready
 op2=Attack
 vislevel=49
 model1=obj_6709
+wanderrange=10
 
 [deal_brewer_1]
 name=Brewer
@@ -26585,6 +27634,8 @@ op1=Fish
 op4=hidden
 op5=hidden
 model1=outdoorfurniture_loc_42
+wanderrange=0
+maxrange=50
 
 [deal_karamthulhu]
 name=Karamthulhu
@@ -26800,6 +27851,8 @@ recol5s=6273
 recol5d=10570
 recol6s=14801
 recol6d=13771
+wanderrange=10
+maxrange=12
 
 [break_zombie_middle]
 name=Zombie
@@ -27034,6 +28087,8 @@ recol5s=7329
 recol5d=6369
 recol6s=15649
 recol6d=9445
+wanderrange=3
+maxrange=4
 
 [jb_baby_dagganoth]
 name=Dagannoth fledgeling
@@ -27051,6 +28106,8 @@ op2=Attack
 vislevel=70
 model1=npc_2880
 model2=npc_2880i2
+wanderrange=25
+maxrange=30
 
 [dagcave_ranged_boss]
 vislevel=303
@@ -27066,6 +28123,8 @@ ambient=30
 op2=Attack
 model1=npc_2881
 model2=npc_2881i2
+wanderrange=5
+maxrange=50
 param=slayer_category,^slayer_dagannoth
 
 [dagcave_magic_boss]
@@ -27091,6 +28150,8 @@ recol3s=6373
 recol3d=6374
 recol4s=7430
 recol4d=7431
+wanderrange=5
+maxrange=50
 param=slayer_category,^slayer_dagannoth
 
 [dagcave_melee_boss]
@@ -27114,6 +28175,8 @@ recol3s=1122
 recol3d=10567
 recol4s=16646
 recol4d=13508
+wanderrange=5
+maxrange=63
 param=slayer_category,^slayer_dagannoth
 
 [dungeon_dagganoth_magic_monster_deeper]
@@ -27126,6 +28189,8 @@ resizev=110
 op2=Attack
 vislevel=98
 model1=npc_2457
+wanderrange=5
+maxrange=10
 
 [giant_rockcrab_deeper]
 name=Giant Rock Crab
@@ -27139,6 +28204,7 @@ op2=Attack
 vislevel=137
 model1=npc_2452
 model2=npc_2452i2
+wanderrange=7
 
 [giant_rockcrab_hidden_deeper]
 vislevel=hide
@@ -27149,6 +28215,8 @@ resizeh=250
 resizev=250
 turnspeed=0
 model1=npc_2453
+wanderrange=0
+maxrange=2
 
 [dungeon_dagganoth_lighter_deeper]
 name=Dagannoth
@@ -27168,6 +28236,8 @@ recol3s=11626
 recol3d=13706
 recol4s=10569
 recol4d=12649
+wanderrange=63
+maxrange=63
 param=slayer_category,^slayer_dagannoth
 
 [dungeon_dagganoth_mainroom_deeper]
@@ -27188,6 +28258,8 @@ recol3s=11626
 recol3d=10536
 recol4s=10569
 recol4d=9479
+wanderrange=63
+maxrange=63
 param=slayer_category,^slayer_dagannoth
 
 [dagannoth_rock_lobster_2x2]
@@ -27204,6 +28276,7 @@ op2=Attack
 vislevel=127
 model1=npc_2889
 model2=npc_2889i2
+wanderrange=20
 
 [dagannoth_rock_lobster_2x2_loc]
 vislevel=hide
@@ -27217,6 +28290,7 @@ ambient=15
 turnspeed=0
 minimap=no
 model1=npc_2890
+wanderrange=0
 
 [dagannoth_water_creature_1x1_invisible]
 name=Suspicious water
@@ -27224,6 +28298,8 @@ desc=If I didn't know better, I'd swear there's something in there...
 minimap=no
 vislevel=34
 model1=loc_6455_8
+wanderrange=10
+maxrange=63
 
 [dagannoth_water_creature_1x1]
 name=Spinolyp
@@ -27237,6 +28313,7 @@ readyanim=dagannoth_water_creature_ready
 op2=Attack
 vislevel=76
 model1=npc_2892
+maxrange=63
 
 [dagannoth_water_creature_1x1_invisible2]
 name=Suspicious water
@@ -27244,6 +28321,8 @@ desc=If I didn't know better, I'd swear there's something in there...
 minimap=no
 vislevel=34
 model1=loc_6455_8
+wanderrange=10
+maxrange=63
 
 [dagannoth_water_creature_1x12]
 name=Spinolyp
@@ -27257,6 +28336,7 @@ readyanim=dagannoth_water_creature_ready
 op2=Attack
 vislevel=76
 model1=npc_2892
+maxrange=63
 
 [dagannoth_water_creature_1x1_invisible3]
 name=Suspicious water
@@ -27264,6 +28344,8 @@ desc=If I didn't know better, I'd swear there's something in there...
 minimap=no
 vislevel=34
 model1=loc_6455_8
+wanderrange=10
+maxrange=63
 
 [dagannoth_water_creature_1x13]
 name=Spinolyp
@@ -27277,6 +28359,7 @@ readyanim=dagannoth_water_creature_ready
 op2=Attack
 vislevel=76
 model1=npc_2892
+maxrange=63
 
 [agrith_reen_alkharid]
 name=agrith_reen_alkharid
@@ -27287,6 +28370,7 @@ multivar=agrith_quest
 multinpc=0,agrith_reen
 multinpc=10,agrith_reen
 multinpc=20,agrith_reen
+wanderrange=5
 
 [agrith_reen_uzer]
 name=agrith_reen_uzer
@@ -27295,6 +28379,7 @@ readyanim=human_staffready
 vislevel=1
 multivar=agrith_reen_uzer
 multinpc=1,agrith_reen
+wanderrange=5
 
 [agrith_reen]
 vislevel=hide
@@ -27328,6 +28413,7 @@ recol5s=14724
 recol5d=13706
 recol6s=24075
 recol6d=17834
+wanderrange=5
 
 [agrith_reen_sigil]
 vislevel=hide
@@ -27361,6 +28447,7 @@ recol5s=14724
 recol5d=13706
 recol6s=24075
 recol6d=17834
+wanderrange=5
 
 [agrith_badden_uzer]
 name=agrith_badden_uzer
@@ -27369,6 +28456,7 @@ readyanim=human_ready
 vislevel=1
 multivar=agrith_badden_uzer
 multinpc=1,agrith_badden
+wanderrange=5
 
 [agrith_badden]
 vislevel=hide
@@ -27451,6 +28539,7 @@ model6=man_feet_basic
 head1=chat_male_head_bald
 head2=npc_1901_headi2
 head3=npc_2904_head
+wanderrange=3
 
 [agrith_denath_sigil]
 name=Denath
@@ -27471,6 +28560,7 @@ model7=obj_6748_manwear
 head1=chat_male_head_bald
 head2=npc_1901_headi2
 head3=npc_2904_head
+wanderrange=3
 
 [agrith_eric]
 name=Eric
@@ -27488,6 +28578,7 @@ model6=npc_2906i4
 model7=npc_2906i5
 head1=chat_male_head_shorthair
 head2=npc_2906_head
+wanderrange=3
 
 [agrith_eric_sigil]
 name=Eric
@@ -27506,6 +28597,7 @@ model7=npc_2906i5
 model8=obj_6748_manwear
 head1=chat_male_head_shorthair
 head2=npc_2906_head
+wanderrange=3
 
 [agrith_dave_at_portal]
 name=agrith_dave_at_portal
@@ -27520,6 +28612,7 @@ multinpc=40,agrith_dave
 multinpc=50,agrith_dave
 multinpc=60,agrith_dave
 multinpc=70,agrith_dave
+wanderrange=0
 
 [agrith_dave_sigil]
 name=Evil Dave
@@ -27744,6 +28837,7 @@ head2=npc_2906_head
 head3=chat_male_jaw_moustache
 recol1s=24075
 recol1d=30485
+wanderrange=0
 
 [agrith_patrick_sigil]
 name=Patrick
@@ -27767,6 +28861,7 @@ head2=npc_2906_head
 head3=chat_male_jaw_moustache
 recol1s=24075
 recol1d=30485
+wanderrange=0
 
 [agrith_naar]
 size=3
@@ -27780,6 +28875,8 @@ op2=Attack
 vislevel=100
 model1=npc_2919
 head1=npc_2919_head
+wanderrange=30
+maxrange=50
 
 [agrith_sandstorm]
 name=agrith_sandstorm
@@ -27791,6 +28888,7 @@ multivar=agrith_quest
 multinpc=90,agrith_sandy
 multinpc=100,agrith_sandy
 multinpc=110,agrith_sandy
+wanderrange=5
 
 [agrith_sandy]
 size=3
@@ -27812,6 +28910,7 @@ readyanim=human_ready
 vislevel=1
 multivar=agrith_convinced_dave
 multinpc=1,agrith_dave
+wanderrange=0
 
 [agrith_dave_walking]
 name=agrith_dave_walking
@@ -27820,6 +28919,7 @@ readyanim=human_ready
 vislevel=1
 multivar=agrith_convinced_dave
 multinpc=2,agrith_dave
+wanderrange=0
 
 [agrith_badden_walking]
 name=agrith_badden_walking
@@ -27828,6 +28928,7 @@ readyanim=human_ready
 vislevel=1
 multivar=agrith_badden_uzer
 multinpc=2,agrith_badden
+wanderrange=0
 
 [agrith_reen_walking]
 name=agrith_reen_walking
@@ -27836,6 +28937,7 @@ readyanim=human_staffready
 vislevel=1
 multivar=agrith_reen_uzer
 multinpc=2,agrith_reen
+wanderrange=0
 
 [agrith_golem_walking]
 name=agrith_golem_walking
@@ -27844,6 +28946,7 @@ walkanim=clay_golem_walk
 vislevel=1
 multivar=golem_clay
 multinpc=5,golem_fixed_golem
+wanderrange=0
 
 [agrith_golem_throneroom]
 name=Clay golem
@@ -27869,6 +28972,7 @@ model1=npc_1908
 model2=npc_2928
 model3=npc_1909
 head1=npc_1908_head
+wanderrange=10
 
 [agrith_tanya_falling]
 name=agrith_tanya_falling
@@ -27876,6 +28980,7 @@ turnspeed=0
 vislevel=2
 multivar=agrith_quest
 multinpc=90,agrith_tanya
+wanderrange=0
 
 [agrith_tanya_ghost]
 name=agrith_tanya_ghost
@@ -27883,6 +28988,7 @@ readyanim=ghost_attack
 vislevel=hide
 multivar=agrith_quest
 multinpc=90,agrith_noncombat_ghost
+wanderrange=0
 
 [agrith_noncombat_ghost]
 name=Ghost
@@ -27893,6 +28999,7 @@ vislevel=hide
 model1=model_2961_npc
 model2=model_2964_npc
 model3=model_2965_npc
+wanderrange=8
 
 [makinghistory_jorral]
 vislevel=hide
@@ -27928,6 +29035,7 @@ recol5s=6273
 recol5d=10433
 recol6s=24075
 recol6d=25199
+wanderrange=0
 
 [makinghistory_melina_multi]
 name=Melina
@@ -27946,6 +29054,7 @@ readyanim=makinghistory_ghost_fade
 ambient=40
 contrast=-112
 model1=npc_2934
+wanderrange=0
 
 [makinghistory_melina]
 name=Melina
@@ -27963,6 +29072,7 @@ model4=npc_1683i4
 head1=npc_1683_head
 recol1s=14861
 recol1d=15950
+wanderrange=0
 
 [makinghistory_droalak_multi]
 name=Droalak
@@ -27981,6 +29091,7 @@ ambient=40
 contrast=-112
 vislevel=hide
 model1=npc_2937
+wanderrange=0
 
 [makinghistory_droalak]
 name=Droalak
@@ -27998,6 +29109,8 @@ model4=npc_2938
 head1=npc_1686_head
 recol1s=14861
 recol1d=15950
+maxrange=4
+wanderrange=0
 
 [makinghistory_dron]
 name=Dron
@@ -28035,6 +29148,7 @@ recol5s=5120
 recol5d=16710
 recol6s=15855
 recol6d=10570
+wanderrange=3
 
 [makinghistory_blanin]
 name=Blanin
@@ -28068,6 +29182,7 @@ recol5s=7329
 recol5d=10469
 recol6s=15649
 recol6d=11493
+wanderrange=3
 
 [vc_the_beast]
 name=The Beast
@@ -28088,6 +29203,7 @@ recol2s=32767
 recol2d=17936
 recol3s=15362
 recol3d=386
+wanderrange=0
 
 [vc_bellemorde]
 name=Bellemorde
@@ -28110,6 +29226,7 @@ recol3s=4228
 recol3d=15790
 recol4s=15362
 recol4d=31651
+wanderrange=2
 
 [vc_pox]
 name=Pox
@@ -28134,6 +29251,7 @@ recol4s=28269
 recol4d=23979
 recol5s=15362
 recol5d=87
+wanderrange=1
 
 [vc_pox_inwarehouse]
 name=Pox
@@ -28158,6 +29276,7 @@ recol4s=28269
 recol4d=23979
 recol5s=15362
 recol5d=87
+wanderrange=4
 
 [vc_bones]
 name=Bones
@@ -28182,6 +29301,7 @@ recol4s=28269
 recol4d=23979
 recol5s=15362
 recol5d=886
+wanderrange=4
 
 [vc_grimesquit]
 name=Grimesquit
@@ -28216,6 +29336,7 @@ recol5s=7298
 recol5d=6308
 recol6s=14801
 recol6d=12614
+wanderrange=2
 
 [vc_phingspet]
 name=Phingspet
@@ -28247,6 +29368,7 @@ recol4s=7298
 recol4d=6308
 recol5s=14801
 recol5d=12614
+wanderrange=2
 
 [vc_hooknosed_jack]
 name=Hooknosed Jack
@@ -28281,6 +29403,7 @@ recol5s=7298
 recol5d=6308
 recol6s=9473
 recol6d=8452
+wanderrange=2
 
 [vc_jimmy_dazzler]
 name=Jimmy Dazzler
@@ -28309,6 +29432,7 @@ recol1s=2340
 recol1d=6314
 recol2s=10468
 recol2d=2116
+wanderrange=2
 
 [vc_face]
 name=The Face
@@ -28338,6 +29462,7 @@ recol3s=14724
 recol3d=6343
 recol4s=7298
 recol4d=13444
+wanderrange=2
 
 [vc_felkrash_the_bard]
 name=Felkrash
@@ -28366,6 +29491,7 @@ recol3s=14724
 recol3d=8525
 recol4s=10401
 recol4d=9443
+wanderrange=2
 
 [vc_smokin_joe]
 name=Smokin' Joe
@@ -28393,6 +29519,7 @@ recol3s=24309
 recol3d=19025
 recol4s=28537
 recol4d=19025
+wanderrange=2
 
 [vc_partyguests_sir_ceril_carnillean]
 vislevel=hide
@@ -28420,6 +29547,7 @@ recol3s=14724
 recol3d=22691
 recol4s=8386
 recol4d=22691
+wanderrange=3
 
 [vc_partyguests_councillor_halgrive]
 vislevel=hide
@@ -28451,6 +29579,7 @@ recol5s=32735
 recol5d=25930
 recol6s=7298
 recol6d=0
+wanderrange=3
 
 [vc_partyguests_spice_merchant]
 vislevel=hide
@@ -28631,6 +29760,8 @@ recol3s=21894
 recol3d=29594
 recol4s=24075
 recol4d=18855
+wanderrange=0
+wanderrange=3
 
 [ratcatcher_staticguard]
 name=Guard
@@ -28653,6 +29784,8 @@ recol2s=14724
 recol2d=8353
 recol3s=15855
 recol3d=8354
+wanderrange=0
+maxrange=0
 
 [ratcatcher_chiefguard]
 name=Guard
@@ -28675,6 +29808,8 @@ recol2s=14724
 recol2d=8353
 recol3s=15855
 recol3d=8354
+wanderrange=0
+maxrange=0
 
 [ratcatcher_guard_left_front]
 name=Guard
@@ -28697,6 +29832,8 @@ recol2s=14724
 recol2d=8353
 recol3s=15855
 recol3d=8354
+wanderrange=13
+maxrange=19
 
 [ratcatcher_guard_left_mid]
 name=Guard
@@ -28719,6 +29856,8 @@ recol2s=14724
 recol2d=8353
 recol3s=15855
 recol3d=8354
+wanderrange=8
+maxrange=16
 
 [ratcatcher_guard_left_back]
 name=Guard
@@ -28741,6 +29880,8 @@ recol2s=14724
 recol2d=8353
 recol3s=15855
 recol3d=8354
+wanderrange=15
+maxrange=21
 
 [ratcatcher_guard_left_fullback]
 name=Guard
@@ -28763,6 +29904,8 @@ recol2s=14724
 recol2d=8353
 recol3s=15855
 recol3d=8354
+wanderrange=15
+maxrange=21
 
 [ratcatcher_guard_right_front]
 name=Guard
@@ -28785,6 +29928,8 @@ recol2s=14724
 recol2d=8353
 recol3s=15855
 recol3d=8354
+wanderrange=13
+maxrange=19
 
 [ratcatcher_guard_right_mid]
 name=Guard
@@ -28807,6 +29952,8 @@ recol2s=14724
 recol2d=8353
 recol3s=15855
 recol3d=8354
+wanderrange=8
+maxrange=16
 
 [ratcatcher_guard_right_back]
 name=Guard
@@ -28829,6 +29976,8 @@ recol2s=14724
 recol2d=8353
 recol3s=15855
 recol3d=8354
+wanderrange=15
+maxrange=21
 
 [ratcatcher_guard_right_fullback]
 name=Guard
@@ -28851,6 +30000,8 @@ recol2s=14724
 recol2d=8353
 recol3s=15855
 recol3d=8354
+wanderrange=15
+maxrange=21
 
 [ratcatcher_guard_left_inside]
 name=Guard
@@ -28873,6 +30024,8 @@ recol2s=14724
 recol2d=8353
 recol3s=15855
 recol3d=8354
+wanderrange=15
+maxrange=21
 
 [ratcatcher_guard_right_inside]
 name=Guard
@@ -28895,6 +30048,11 @@ recol2s=14724
 recol2d=8353
 recol3s=15855
 recol3d=8354
+// Lifted from the RS3 config
+wanderrange=15
+maxrange=21
+wanderrange=15
+maxrange=15
 
 [vc_partyrat_multi1]
 name=vc_partyrat_multi1
@@ -28955,6 +30113,7 @@ resizev=134
 model1=npc_2682
 recol1s=14724
 recol1d=6342
+wanderrange=15
 
 [vc_rat]
 name=Rat
@@ -28969,6 +30128,7 @@ resizev=134
 model1=npc_2682
 recol1s=14724
 recol1d=6342
+wanderrange=15
 
 [vc_kingrat]
 name=King rat
@@ -28992,6 +30152,7 @@ recol2s=12679
 recol2d=2113
 recol3s=17801
 recol3d=15687
+wanderrange=2
 
 [vc_turbogroomer]
 vislevel=hide
@@ -29011,6 +30172,8 @@ recol2s=4228
 recol2d=13537
 recol3s=32767
 recol3d=15685
+wanderrange=30000
+maxrange=30000
 
 [vc_pusskins]
 vislevel=hide
@@ -29028,6 +30191,8 @@ recol1s=15855
 recol1d=10432
 recol2s=4228
 recol2d=15855
+wanderrange=30000
+maxrange=30000
 
 [vc_loki]
 vislevel=hide
@@ -29047,6 +30212,8 @@ recol2s=4228
 recol2d=13537
 recol3s=32767
 recol3d=15685
+wanderrange=30000
+maxrange=30000
 
 [vc_captaintom]
 vislevel=hide
@@ -29067,6 +30234,8 @@ recol2s=32767
 recol2d=17936
 recol3s=15362
 recol3d=386
+wanderrange=30000
+maxrange=30000
 
 [vc_treacle]
 vislevel=hide
@@ -29084,6 +30253,8 @@ recol1s=15855
 recol1d=8459
 recol2s=4228
 recol2d=16911
+wanderrange=30000
+maxrange=30000
 
 [vc_mittens]
 vislevel=hide
@@ -29103,6 +30274,8 @@ recol2s=4228
 recol2d=15855
 recol3s=15855
 recol3d=32767
+wanderrange=30000
+maxrange=30000
 
 [vc_debussi]
 vislevel=hide
@@ -29116,6 +30289,8 @@ resizev=40
 alwaysontop=yes
 model1=npc_2648
 model2=npc_2648i2
+wanderrange=30000
+maxrange=30000
 
 [vc_pizz]
 vislevel=hide
@@ -29133,6 +30308,8 @@ recol1s=15855
 recol1d=8459
 recol2s=4228
 recol2d=16911
+wanderrange=30000
+maxrange=30000
 
 [vc_dwarf_rich1]
 name=Rauborn
@@ -29152,6 +30329,7 @@ head1=dwarf_chat_model0
 head2=npc_2112_head
 recol1s=15855
 recol1d=24242
+wanderrange=2
 
 [vc_dwarf_rich2]
 name=Vaeringk
@@ -29173,6 +30351,7 @@ head1=dwarf_chat_model3
 head2=dwarf_chat_model6
 recol1s=15785
 recol1d=15855
+wanderrange=2
 
 [vc_dwarf_poor1]
 name=Oxi
@@ -29196,6 +30375,7 @@ recol1s=10532
 recol1d=16843
 recol2s=15855
 recol2d=14729
+wanderrange=2
 
 [vc_dwarf_poor2]
 name=Fior
@@ -29220,6 +30400,7 @@ recol2s=15855
 recol2d=14729
 recol3s=12646
 recol3d=6498
+wanderrange=2
 
 [vc_dwarf_poor3]
 name=Sagira
@@ -29247,6 +30428,7 @@ recol5s=24075
 recol5d=16743
 recol6s=7168
 recol6d=20042
+wanderrange=2
 
 [vc_dwarf_poor4]
 name=Anleif
@@ -29268,6 +30450,7 @@ recol2s=7168
 recol2d=2244
 recol3s=28537
 recol3d=12751
+wanderrange=2
 
 [vc_gertrudescat]
 name=Gertrude's cat
@@ -29310,6 +30493,7 @@ recol3s=30618
 recol3d=16940
 recol4s=24075
 recol4d=20872
+wanderrange=4
 
 [vc_gambler_rich2]
 name=Gambler
@@ -29340,6 +30524,7 @@ recol4s=3140
 recol4d=2114
 recol5s=7328
 recol5d=2114
+wanderrange=4
 
 [vc_gambler_rich3]
 name=Barman
@@ -29368,6 +30553,7 @@ recol3s=30618
 recol3d=16940
 recol4s=8386
 recol4d=14660
+wanderrange=4
 
 [vc_gambler_rich4]
 name=Gambler
@@ -29399,6 +30585,7 @@ recol4s=15649
 recol4d=9443
 recol5s=7298
 recol5d=2147
+wanderrange=4
 
 [vc_gambler_woman1]
 name=Gambler
@@ -29423,6 +30610,7 @@ recol3s=14801
 recol3d=24075
 recol4s=7329
 recol4d=5313
+wanderrange=8
 
 [vc_gambler_woman2]
 name=Gambler
@@ -29449,6 +30637,7 @@ recol4s=7329
 recol4d=5313
 recol5s=24075
 recol5d=16775
+wanderrange=8
 
 [vc_gambler_woman3]
 name=Gambler
@@ -29478,6 +30667,7 @@ recol5s=24075
 recol5d=11522
 recol6s=15360
 recol6d=20042
+wanderrange=8
 
 [vc_gambler_poor1]
 name=Gambler
@@ -29505,6 +30695,7 @@ recol4s=24075
 recol4d=17799
 recol5s=8386
 recol5d=14660
+wanderrange=8
 
 [vc_gambler_poor2]
 name=Gambler
@@ -29525,6 +30716,7 @@ recol1s=2340
 recol1d=5284
 recol2s=14801
 recol2d=24075
+wanderrange=8
 
 [pitrat_ardougne_def]
 name=Rat
@@ -29539,6 +30731,7 @@ walkanim=mouse_walk
 model1=npc_2682
 recol1s=14724
 recol1d=6342
+wanderrange=30
 
 [pitrat_ardougne_agr]
 name=Rat
@@ -29553,6 +30746,7 @@ walkanim=mouse_walk
 model1=npc_2682
 recol1s=14724
 recol1d=6342
+wanderrange=30
 
 [pitrat_ardougne_neu]
 name=Rat
@@ -29567,6 +30761,7 @@ walkanim=mouse_walk
 model1=npc_2682
 recol1s=14724
 recol1d=6342
+wanderrange=30
 
 [pitrat_keldagrim_def]
 name=Rat
@@ -29581,6 +30776,7 @@ walkanim=mouse_walk
 model1=npc_2682
 recol1s=14724
 recol1d=6342
+wanderrange=30
 
 [pitrat_keldagrim_agr]
 name=Rat
@@ -29595,6 +30791,7 @@ walkanim=mouse_walk
 model1=npc_2682
 recol1s=14724
 recol1d=6342
+wanderrange=30
 
 [pitrat_keldagrim_neu]
 name=Rat
@@ -29609,6 +30806,7 @@ walkanim=mouse_walk
 model1=npc_2682
 recol1s=14724
 recol1d=6342
+wanderrange=30
 
 [pitrat_sarim_def]
 name=Rat
@@ -29623,6 +30821,7 @@ walkanim=mouse_walk
 model1=npc_2682
 recol1s=14724
 recol1d=6342
+wanderrange=30
 
 [pitrat_sarim_agr]
 name=Rat
@@ -29637,6 +30836,7 @@ walkanim=mouse_walk
 model1=npc_2682
 recol1s=14724
 recol1d=6342
+wanderrange=30
 
 [pitrat_sarim_neu]
 name=Rat
@@ -29651,6 +30851,7 @@ walkanim=mouse_walk
 model1=npc_2682
 recol1s=14724
 recol1d=6342
+wanderrange=30
 
 [pitrat_varrock_def]
 name=Rat
@@ -29665,6 +30866,7 @@ walkanim=mouse_walk
 model1=npc_2682
 recol1s=14724
 recol1d=6342
+wanderrange=30
 
 [pitrat_varrock_agr]
 name=Rat
@@ -29679,6 +30881,7 @@ walkanim=mouse_walk
 model1=npc_2682
 recol1s=14724
 recol1d=6342
+wanderrange=30
 
 [pitrat_varrock_neu]
 name=Rat
@@ -29693,6 +30896,7 @@ walkanim=mouse_walk
 model1=npc_2682
 recol1s=14724
 recol1d=6342
+wanderrange=30
 
 [0_52_149_freshfish]
 vislevel=hide
@@ -29706,6 +30910,8 @@ op3=Bait
 op4=hidden
 op5=hidden
 model1=outdoorfurniture_loc_42
+wanderrange=0
+maxrange=50
 
 [magic_carpet_seller8]
 name=Rug Merchant
@@ -29736,6 +30942,8 @@ recol4s=6274
 recol4d=10502
 recol5s=24075
 recol5d=22985
+wanderrange=1
+maxrange=1
 
 [farming_tools_leprechaun]
 name=Tool Leprechaun
@@ -29748,6 +30956,7 @@ op3=Exchange
 model1=npc_3021
 head1=gnome_chat_model_24
 members=yes
+wanderrange=0
 
 [elid_genie]
 vislevel=hide
@@ -29779,6 +30988,8 @@ recol5s=0
 recol5d=29729
 recol6s=2340
 recol6d=15499
+maxrange=50
+wanderrange=0
 
 [elid_waterspirit]
 vislevel=hide
@@ -29793,6 +31004,7 @@ model1=npc_3023
 head1=npc_3023_head
 recol1s=17797
 recol1d=27343
+wanderrange=1
 
 [elid_waterspirit_sitting]
 vislevel=hide
@@ -29807,6 +31019,7 @@ turnspeed=0
 model1=npc_3024
 model2=npc_3024i2
 head1=npc_3023_head
+wanderrange=0
 
 [elid_waterspirit_male]
 vislevel=hide
@@ -29819,6 +31032,7 @@ op1=Talk-to
 ambient=20
 model1=npc_3025
 head1=npc_3025_head
+wanderrange=1
 
 [elid_golem_black]
 name=Black golem
@@ -29848,6 +31062,7 @@ recol5s=10534
 recol5d=8354
 recol6s=15855
 recol6d=10534
+maxrange=30
 
 [elid_golem_white]
 name=White golem
@@ -29875,6 +31090,7 @@ recol5s=10534
 recol5d=26323
 recol6s=15855
 recol6d=26291
+maxrange=30
 
 [elid_golem_grey]
 name=Grey golem
@@ -29902,6 +31118,7 @@ recol5s=10534
 recol5d=12615
 recol6s=15855
 recol6d=12615
+maxrange=30
 
 [elid_ghaslor]
 name=Ghaslor the Elder
@@ -29933,6 +31150,7 @@ recol5s=24075
 recol5d=11524
 recol6s=13472
 recol6d=16709
+wanderrange=2
 
 [ali_the_carter]
 name=Ali the Carter
@@ -30153,6 +31371,7 @@ recol5s=7183
 recol5d=11460
 recol6s=24075
 recol6d=15653
+wanderrange=2
 
 [elid_shield_seller]
 vislevel=hide
@@ -30184,6 +31403,7 @@ recol4s=2340
 recol4d=11592
 recol5s=24075
 recol5d=17733
+wanderrange=2
 
 [elid_general_seller]
 vislevel=hide
@@ -30214,6 +31434,7 @@ recol4s=2340
 recol4d=12620
 recol5s=24075
 recol5d=17733
+wanderrange=2
 
 [elid_mayor]
 vislevel=hide
@@ -30276,6 +31497,10 @@ recol5s=7328
 recol5d=10438
 recol6s=24075
 recol6d=11493
+// Accurate to RS3
+wanderrange=1
+wanderrange=2
+maxrange=4
 
 [elid_mayor_guard_2]
 name=Poltenip
@@ -30307,6 +31532,10 @@ recol5s=7328
 recol5d=10438
 recol6s=24075
 recol6d=11493
+// Accurate to RS3
+wanderrange=1
+wanderrange=2
+maxrange=4
 
 [elid_mayor_guard_3]
 name=Radat
@@ -30338,6 +31567,10 @@ recol5s=7328
 recol5d=10438
 recol6s=24075
 recol6d=11493
+// Accurate to RS3
+wanderrange=1
+wanderrange=2
+maxrange=4
 
 [elid_shiratti]
 vislevel=hide
@@ -30430,6 +31663,7 @@ recol5s=15855
 recol5d=20015
 recol6s=24075
 recol6d=15653
+wanderrange=0
 
 [elid_ranging_target]
 name=Target
@@ -30439,6 +31673,8 @@ op2=Shoot
 minimap=no
 vislevel=hide
 model1=npc_3047
+wanderrange=0
+maxrange=0
 
 [elid_ranging_target_done]
 name=Target
@@ -30447,6 +31683,8 @@ turnspeed=0
 minimap=no
 vislevel=hide
 model1=npc_3048
+wanderrange=0
+maxrange=0
 
 [elid_ranging_target_multinpc]
 name=elid_ranging_target_multinpc
@@ -30455,6 +31693,8 @@ vislevel=1
 multivar=elid_rangingchannel
 multinpc=0,elid_ranging_target
 multinpc=1,elid_ranging_target_done
+wanderrange=0
+maxrange=0
 
 [champions_doorman]
 name=Larxus
@@ -30608,8 +31848,8 @@ model2=npc_3057i2
 model3=npc_3057i3
 model4=npc_3057i4
 model5=npc_3057i5
-wanderrange=0
-moverestrict=nomove
+maxrange=30
+wanderrange=15
 
 [champions_giant]
 name=Giant Champion
@@ -30620,6 +31860,8 @@ walkanim=champions_giant_walk
 op2=Attack
 vislevel=56
 model1=npc_3058
+maxrange=30
+wanderrange=15
 
 [champions_ghoul]
 name=Ghoul Champion
@@ -30644,6 +31886,8 @@ recol4s=6144
 recol4d=7365
 recol5s=17441
 recol5d=22193
+maxrange=30
+wanderrange=15
 
 [champions_goblin]
 name=Goblin Champion
@@ -30655,6 +31899,8 @@ vislevel=24
 model1=npc_3060
 model2=npc_3060i2
 model3=npc_3060i3
+maxrange=30
+wanderrange=15
 
 [champions_hobgoblin]
 name=Hobgoblin Champion
@@ -30667,6 +31913,8 @@ op2=Attack
 vislevel=56
 model1=npc_3061
 model2=npc_3061i2
+maxrange=30
+wanderrange=15
 
 [champions_imp]
 name=Imp Champion
@@ -30676,6 +31924,8 @@ readyanim=champions_imp_ready
 op2=Attack
 vislevel=14
 model1=npc_3062
+maxrange=30
+wanderrange=15
 
 [champions_jogre]
 name=Jogre Champion
@@ -30688,6 +31938,8 @@ vislevel=107
 model1=npc_3063
 model2=npc_3063i2
 model3=npc_3063i3
+maxrange=30
+wanderrange=15
 
 [champions_lesserdemon]
 name=Lesser Demon Champion
@@ -30698,6 +31950,8 @@ readyanim=champions_lesserdemon_ready
 op2=Attack
 vislevel=162
 model1=npc_3064
+maxrange=30
+wanderrange=15
 
 [champions_skeleton]
 name=Skeleton Champion
@@ -30710,6 +31964,8 @@ model1=npc_3065
 model2=npc_3065i2
 model3=npc_3065i3
 model4=npc_3065i4
+maxrange=30
+wanderrange=15
 
 [champions_zombie]
 name=Zombies Champion
@@ -30721,6 +31977,8 @@ op2=Attack
 vislevel=51
 model1=npc_3066
 model2=npc_3066i2
+maxrange=30
+wanderrange=15
 
 [champions_human]
 name=Leon D'Cour
@@ -30753,6 +32011,8 @@ recol5s=7298
 recol5d=2149
 recol6s=6273
 recol6d=28497
+maxrange=30
+wanderrange=15
 
 [skeletal_wyvern1]
 name=Skeletal Wyvern
@@ -30775,6 +32035,8 @@ recol4s=10570
 recol4d=11665
 recol5s=0
 recol5d=9581
+wanderrange=8
+maxrange=25
 
 [skeletal_wyvern2]
 name=Skeletal Wyvern
@@ -30797,6 +32059,8 @@ recol4s=10570
 recol4d=11665
 recol5s=0
 recol5d=9581
+wanderrange=8
+maxrange=25
 
 [skeletal_wyvern3]
 name=Skeletal Wyvern
@@ -30819,6 +32083,8 @@ recol4s=10570
 recol4d=11665
 recol5s=0
 recol5d=9581
+wanderrange=8
+maxrange=25
 
 [skeletal_wyvern4]
 name=Skeletal Wyvern
@@ -30841,6 +32107,8 @@ recol4s=10570
 recol4d=11665
 recol5s=0
 recol5d=9581
+wanderrange=8
+maxrange=25
 
 [icegiant_low_wanderrange]
 size=2
@@ -30854,6 +32122,9 @@ model1=model_2870_npc
 model2=model_2868_npc
 recol1s=24075
 recol1d=22431
+// Accurate to RS3
+wanderrange=3
+wanderrange=5
 param=slayer_category,^slayer_icegiant
 
 [icewarrior_low_wanderrange]
@@ -30882,6 +32153,9 @@ recol5s=3171
 recol5d=9023
 recol6s=6342
 recol6d=9023
+// Accurate to RS3
+wanderrange=3
+wanderrange=5
 param=slayer_category,^slayer_icewarrior
 
 [devious_monk_hooded]
@@ -30976,6 +32250,7 @@ recol5s=14724
 recol5d=13539
 recol6s=10401
 recol6d=6274
+maxrange=20
 
 [devious_cutscene_monk]
 vislevel=hide
@@ -30996,6 +32271,7 @@ recol1s=2340
 recol1d=13539
 recol2s=14724
 recol2d=13539
+maxrange=20
 
 [devious_cutscene_monk_relic]
 vislevel=hide
@@ -31020,6 +32296,7 @@ recol2s=14724
 recol2d=13539
 recol3s=5120
 recol3d=11425
+maxrange=20
 
 [devious_cutscene_assassin]
 vislevel=hide
@@ -31039,6 +32316,7 @@ recol2s=15855
 recol2d=6346
 recol3s=4229
 recol3d=3172
+maxrange=20
 
 [win05_pixie_rosie]
 name=Rosie

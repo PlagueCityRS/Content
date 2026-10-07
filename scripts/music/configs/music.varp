@@ -65,3 +65,13 @@ protect=no
 transmit=yes
 scope=perm
 protect=no
+
+[musicmulti_10]
+transmit=yes
+scope=perm
+protect=no
+
+[musicmulti_11]
+transmit=yes
+scope=perm
+protect=no

@@ -1827,3 +1827,24 @@ data=name,Zealot
 data=playbutton,music:zealot
 data=unlock,6,12
 data=track,zealot
+
+[music_The_Cellar_Dwellers]
+table=music
+data=name,The Cellar Dwellers
+data=playbutton,music:com_98
+data=unlock,11,22
+data=track,the cellar dwellers
+
+[music_Wild_Side]
+table=music
+data=name,Wild Side
+data=playbutton,music:com_97
+data=unlock,11,20
+data=track,wild side
+
+[music_Dead_Can_Dance]
+table=music
+data=name,Dead Can Dance
+data=playbutton,music:com_96
+data=unlock,11,21
+data=track,dead can dance

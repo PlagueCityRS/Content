@@ -12423,7 +12423,7 @@
 12422=bookmacro_big:bookmacro_big_pic18
 12423=bookmacro_big:bookmacro_big_piclayer19
 12424=magic:com_458
-12425=magic:com_459
+12425=magic:teleother_lumbridge
 12426=magic:com_460
 12427=magic:com_461
 12428=magic:com_462
@@ -12433,7 +12433,7 @@
 12432=magic:com_466
 12433=magic:com_467
 12434=magic:com_468
-12435=magic:com_469
+12435=magic:teleother_falador
 12436=magic:com_470
 12437=magic:com_471
 12438=magic:com_472
@@ -12443,7 +12443,7 @@
 12442=magic:com_476
 12443=magic:com_477
 12444=magic:com_478
-12445=magic:com_479
+12445=magic:teleport_block
 12446=magic:com_480
 12447=magic:com_481
 12448=magic:com_482
@@ -12453,7 +12453,7 @@
 12452=magic:com_486
 12453=magic:com_487
 12454=magic:com_488
-12455=magic:com_489
+12455=magic:teleother_camelot
 12456=magic:com_490
 12457=magic:com_491
 12458=magic:com_492

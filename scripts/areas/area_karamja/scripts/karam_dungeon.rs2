@@ -339,3 +339,7 @@ p_delay(0);
 ~agility_exactmove(human_doublepipesqueeze, 30, 3, coord, movecoord(coord, 0, 0, multiply(3, $mod)), 30, 126, $dir, true);
 sound_synth(squeeze_in, 1, 0);
 stat_advance(agility, 85);
+
+[oploc1,dillo_tzhaar_wall_crack_tunnel_1_entrance]
+@mes_members_feature;
+

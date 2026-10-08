@@ -1,0 +1,406 @@
+[zogre_coffin_special_entity]
+name=zogre_coffin_special_entity
+width=2
+length=3
+hillskew=yes
+blockrange=no
+mapscene=34
+active=yes
+multivar=thzfe_prismsearch
+multiloc=0,zogre_coffin_special
+multiloc=1,zogre_coffin_special
+multiloc=2,zogre_coffin_special
+multiloc=3,zogre_coffin_special_searched
+multiloc=4,zogre_coffin_special_searched
+multiloc=5,zogre_coffin_special_searched
+
+[zogre_coffin_special]
+name=Ogre Coffin
+desc=An old crude tomb.
+model=loc_6844
+recol1s=12580
+recol1d=8353
+recol2s=16841
+recol2d=11524
+width=2
+length=3
+blockrange=no
+mapscene=34
+op1=Search
+
+[zogre_coffin_special_searched]
+name=Ogre Coffin
+desc=An old crude tomb.
+model=loc_6845
+recol1s=12580
+recol1d=8353
+recol2s=16841
+recol2d=11524
+width=2
+length=3
+op1=Search
+
+[zogre_lecturn]
+name=Broken Lecturn
+desc=It's damaged.
+model=loc_6846
+recol1s=12580
+recol1d=8353
+recol2s=16841
+recol2d=11524
+hillskew=yes
+mirror=yes
+sharelight=yes
+op1=Search
+
+[zogre_brentle_skeleton]
+name=Skeleton
+desc=I don't think he'd mind us checking for his wallet now...
+model=floor_corpse2
+recol1s=27413
+recol1d=6308
+blockrange=no
+op1=Search
+blockwalk=no
+
+[zogre_stand]
+name=Stand
+desc=A strange ogre plinth, this must be where the artifacts are stored.
+model=loc_6897
+blockrange=no
+op1=Search
+
+[zogre_signpost]
+name=Signpost
+desc='Leave da dead-uns boxes 'lone or else ya goes down da 'ole'
+model=outdoorfurniture_signpost2
+recol1s=28400
+recol1d=13634
+recol2s=8913
+recol2d=10240
+op1=Search
+
+[zogre_outdoor_bell]
+name=Bell
+desc=A note says, 'Please ring for attention.'
+model=loc_6847
+op1=Ring
+
+[sithiks_drawers]
+name=Drawers
+desc=These open and close!
+model=furniture_drawers2
+forceapproach=east
+op1=Search
+
+[sithiks_cupboard]
+name=Cupboard
+desc=This may be worth opening.
+model=furniture_cupboard
+recol1s=31297
+recol1d=11627
+recol2s=15616
+recol2d=8385
+recol3s=5184
+recol3d=11490
+length=2
+forceapproach=east
+op1=Search
+
+[sithiks_wardrobe]
+name=Wardrobe
+desc=I wonder what this item contains.
+model=spooky_wardrobe
+recol1s=6342
+recol1d=11627
+recol2s=5216
+recol2d=8385
+recol3s=8384
+recol3d=11490
+forceapproach=east
+op1=Search
+
+[zogre_sithik_bed_entity]
+name=zogre_sithik_bed_entity
+length=2
+anim=bedman_sleep
+active=yes
+multivar=thzfe_sithik_transformed
+multiloc=0,ogre_bedman_loc
+multiloc=1,ogre_bedogre_loc
+multiloc=2,ogre_bedman_loc
+
+[ogre_bedman_loc]
+name=Sithik Ints
+desc=A sick, frail old man.
+model=loc_6888
+recol1s=2340
+recol1d=7298
+recol2s=24075
+recol2d=28305
+recol3s=31649
+recol3d=2081
+recol4s=239
+recol4d=7434
+recol5s=8456
+recol5d=15720
+op1=Talk-to
+
+[ogre_bedogre_loc]
+name=Sithik Ints
+desc=A sick, frail old man - transformed into an ogre.
+model=loc_6889
+recol1s=2340
+recol1d=7298
+recol2s=24075
+recol2d=28305
+recol3s=31649
+recol3d=2081
+recol4s=239
+recol4d=7434
+recol5s=8456
+recol5d=15720
+op1=Talk-to
+
+[zogre_multi_blocking_barricade_l]
+name=Ogre barricade
+desc=A barricade made of skulls and bones.
+active=yes
+blockrange=no
+multivar=thzfe_blocking_barricade
+multiloc=0,ogre_barricade_blocking
+multiloc=1,ogre_barricade_collapsedl
+
+[zogre_multi_blocking_barricade_r]
+name=Ogre barricade
+desc=A barricade made of skulls and bones.
+active=yes
+blockrange=no
+multivar=thzfe_blocking_barricade
+multiloc=0,ogre_barricade_blocking
+multiloc=1,ogre_barricade_collapsedr
+
+[ogre_barricade_blocking]
+name=Ogre barricade
+desc=A barricade made of skulls and bones.
+model=loc_6856
+recol1s=25329
+recol1d=21068
+hillskew=yes
+blockrange=no
+
+[ogre_barricade_collapsedl]
+name=Crushed barricade
+desc=A barricade made of skulls and bones which has been crushed.
+model=loc_6881
+recol1s=25329
+recol1d=21068
+hillskew=yes
+mirror=yes
+op1=Climb-over
+blockrange=no
+
+[ogre_barricade_collapsedr]
+name=Crushed barricade
+desc=A barricade made of skulls and bones which has been crushed.
+model=loc_6881
+recol1s=25329
+recol1d=21068
+hillskew=yes
+op1=Climb-over
+blockrange=no
+
+[ogre_cavedoorr]
+name=Ogre stone door
+desc=A bulky door made from solid rock.
+model=loc_6871
+recol1s=15855
+recol1d=11524
+mirror=yes
+active=yes
+op1=Open
+category=double_door_open_and_close_right
+param=next_loc_stage,ogre_cavedoorr_inactive
+
+[ogre_cavedoorl]
+name=Ogre stone door
+desc=A bulky door made from solid rock.
+model=loc_6871
+recol1s=15855
+recol1d=11524
+active=yes
+op1=Open
+category=double_door_open_and_close_left
+param=next_loc_stage,ogre_cavedoorl_inactive
+
+[ogre_cavedoorr_inactive]
+model=loc_6871
+recol1s=15855
+recol1d=11524
+mirror=yes
+
+[ogre_cavedoorl_inactive]
+model=loc_6871
+recol1s=15855
+recol1d=11524
+
+[ogre_stairs]
+name=Stairs
+desc=Some crude stone steps.
+model=loc_6842
+hillskew=yes
+width=2
+length=3
+op1=Climb-up
+mapscene=7
+forceapproach=south
+
+[ogre_stairs_down]
+name=Stairs
+desc=Some crude stone steps.
+model=loc_6841
+hillskew=yes
+sharelight=yes
+width=2
+length=3
+op1=Climb-down
+forceapproach=north
+
+[ogre_coffin]
+name=Ogre Coffin
+desc=An old crude tomb.
+model=loc_6848
+recol1s=12580
+recol1d=8353
+recol2s=16841
+recol2d=11524
+width=2
+length=3
+hillskew=yes
+op1=Open
+op2=Pick-lock
+op4=hidden
+blockrange=no
+mapscene=34
+category=ogre_coffin
+param=next_loc_stage,zogre_coffin_open
+
+[ogre_dark_coffin]
+name=Ogre Coffin
+desc=An old crude tomb.
+model=loc_6848
+recol1s=12580
+recol1d=6308
+recol2s=16841
+recol2d=11524
+width=2
+length=3
+hillskew=yes
+op1=Open
+op2=Pick-lock
+op4=hidden
+mapscene=34
+category=ogre_coffin
+param=next_loc_stage,zogre_dark_coffin_open
+
+[ogre_wall_coffin]
+name=Ogre Coffin
+desc=An old crude tomb.
+model=loc_6850
+recol1s=6307
+recol1d=6240
+recol2s=7364
+recol2d=7296
+recol3s=8421
+recol3d=8353
+recol4s=9478
+recol4d=9410
+recol5s=10535
+recol5d=10467
+recol6s=11592
+recol6d=11524
+width=2
+length=3
+hillskew=yes
+op1=Open
+op2=Pick-lock
+op4=hidden
+blockrange=no
+mapscene=34
+category=ogre_coffin
+param=next_loc_stage,zogre_wall_coffin_open
+
+[ogre_wall_coffinl]
+name=Ogre Coffin
+desc=An old crude tomb.
+model=loc_6850
+recol1s=6307
+recol1d=6240
+recol2s=7364
+recol2d=7296
+recol3s=8421
+recol3d=8353
+recol4s=9478
+recol4d=9410
+recol5s=10535
+recol5d=10467
+recol6s=11592
+recol6d=11524
+width=2
+length=3
+hillskew=yes
+mirror=yes
+op1=Open
+op2=Pick-lock
+op4=hidden
+blockrange=no
+mapscene=34
+category=ogre_coffin
+param=next_loc_stage,zogre_wall_coffin_open
+
+[zogre_coffin_open]
+name=Ogre Coffin
+desc=An old crude tomb.
+model=loc_6890
+recol1s=12580
+recol1d=8353
+recol2s=16841
+recol2d=11524
+width=2
+length=3
+hillskew=yes
+op4=hidden
+
+[zogre_dark_coffin_open]
+name=Ogre Coffin
+desc=An old crude tomb.
+model=loc_6890
+recol1s=12580
+recol1d=6308
+recol2s=16841
+recol2d=11524
+width=2
+length=3
+hillskew=yes
+op4=hidden
+
+[zogre_wall_coffin_open]
+name=Ogre Coffin
+desc=An old crude tomb.
+model=loc_6892
+recol1s=6307
+recol1d=6240
+recol2s=7364
+recol2d=7296
+recol3s=8421
+recol3d=8353
+recol4s=9478
+recol4d=9410
+recol5s=10535
+recol5d=10467
+recol6s=11592
+recol6d=11524
+width=2
+length=3
+hillskew=yes
+op4=hidden

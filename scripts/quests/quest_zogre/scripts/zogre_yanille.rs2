@@ -1,0 +1,693 @@
+[label,zogre_bartender_item](obj $item)
+switch_obj ($item) {
+    case zogre_dragon_tankard :
+        ~objbox(zogre_dragon_tankard, "You show the tankard to the Inn Keeper.", 250, 0, 0);
+        if (%thzfe_innkeepermugshown = ^true) {
+            ~chatplayer("<p,quiz>Hello again. Can you tell me what you know about this tankard again please?");
+            ~chatnpc("<p,neutral>Oh yes, Brentle's tankard. Yeah, you've shown me this already. It belonged to Brentle Vahn, he was quite a common customer, though I've not seen him in a while.");
+            ~chatnpc("<p,neutral>He was talking to some shifty looking wizard the other day. I don't know his name, but I'd recognise him if I saw him.");
+            return;
+        }
+        ~chatplayer("<p,quiz>Hello there, I found this tankard in an ogre tomb cavern. It has the emblem of this Inn on it and I wondered if you knew anything about it?");
+        ~chatnpc("<p,neutral>Oh yes, this is Brentle's mug...I'm surprised he left it just lying around down some cave. He's quite protective of it.");
+        ~chatplayer("<p,quiz>Brentle you say? So you knew him then?");
+        ~chatnpc("<p,neutral>Yeah, this belongs to 'Brentle Vahn', he's quite a common customer, though I've not seen him in a while.");
+        ~chatnpc("<p,neutral>He was talking to some shifty looking wizard the other day. I don't know his name, but I'd recognise him if I saw him.");
+        ~chatplayer("<p,sad>Hmm, I'm sorry to tell you this, but Brentle Vahn is dead - I believe he was murdered.");
+        ~chatnpc("<p,shock>Noooo! I'm shocked...");
+        ~chatnpc("<p,sad>...but not surprised. He was a good customer...but I knew he would sell his sword arm and do many a dark deed if paid enough.");
+        %thzfe_innkeepermugshown = ^true;
+        if (%zogre < ^zogre_shown_tankard) {
+            %zogre = ^zogre_shown_tankard;
+            ~send_quest_progress(questlist:zogre, %zogre, ^zogre_complete);
+        }
+        ~chatnpc("<p,neutral>If you need help bringing the culprit to justice, you let me know.");
+    case zogre_necromantic_page :
+        ~objbox(zogre_necromantic_page, "You show the bar tender the torn page.", 250, 0, 0);
+        ~chatplayer("<p,quiz>Do you have any clue what this might be?");
+        ~chatnpc("<p,shock>Oooh, don't show me that sort of stuff, it's probably all magical and wizardy, probably turn me into a frog as soon as I look at it...");
+    case zogre_black_prism :
+        ~objbox(zogre_black_prism, "You show the bar tender the black prism.", 250, 0, 0);
+        ~chatplayer("<p,quiz>Hello there, I found this black prism, I wondered if you knew anything about it.");
+        ~chatnpc("<p,confused>Hmmm, it's not really familiar to me, sorry I don't know what it's for, looks magical to me...maybe someone else in Yanille can help you?");
+    case zogre_sithik_portrait_bad :
+        ~objbox(zogre_sithik_portrait_bad, "You show the sketch to the Inn keeper.", 250, 0, 0);
+        ~chatnpc("<p,confused>Who's that? I mean, I guess it's a picture of a person isn't it? Sorry...you've got me? And before you ask, you're not putting it up on my wall!");
+        ~chatplayer("<p,quiz>It's a portrait of Sithik Ints...don't you recognise him?");
+        ~chatnpc("<p,sad>I'm sorry, I really am, but I just don't see it...can you make a better picture?");
+        ~chatplayer("<p,neutral>I'll try...");
+    case zogre_sithik_portrait_good :
+        ~objbox(zogre_sithik_portrait_good, "You show the portrait to the Inn keeper.", 250, 0, 0);
+        ~chatnpc("<p,shock>Yeah, that's the guy who was talking to Brentle Vahn the other day! Look at those eyes, never a more shifty looking pair will you ever see!");
+        ~chatplayer("<p,neutral>Hmm, you've just identified the man who I think sent Brentle Vahn to his death.");
+        ~chatplayer("<p,neutral>I'm trying to bring him to justice with the Wizards' Guild grand secretary. Do you think you could sign this portrait to say that he was talking to Brentle Vahn.");
+        ~chatnpc("<p,happy>I can and I will!");
+        if (inv_total(inv, zogre_sithik_portrait_good) = 0) {
+            return;
+        }
+        inv_del(inv, zogre_sithik_portrait_good, 1);
+        inv_add(inv, zogre_sithik_portrait_signed, 1);
+        %thzfe_innkeeperportraitshown = ^true;
+        if (%zogre = ^zogre_searched_sithik) {
+            %zogre = ^zogre_portrait_signed;
+            ~send_quest_progress(questlist:zogre, %zogre, ^zogre_complete);
+        }
+        ~objbox(zogre_sithik_portrait_signed, "The Dragon Inn bartender signs the portrait.", 250, 0, 0);
+        ~chatplayer("<p,happy>Many thanks for your help, it's really very good of you.");
+        ~chatnpc("<p,happy>Not at all, just doing my part.");
+    case default : ~displaymessage(^dm_default);
+}
+
+[oploc1,zogre_outdoor_bell]
+anim(zogre_bell_ring, 0);
+p_delay(1);
+if (npc_find(^zogre_zavistic_bell_spawn, zogre_human_zavistic_rarve, 5, 0) = false) {
+    npc_add(^zogre_zavistic_bell_spawn, zogre_human_zavistic_rarve, 100);
+}
+npc_facesquare(coord);
+~chatnpc("<p,angry>What are you doing ringing that bell?! Don't you think some of us have work to do?");
+~chatplayer("<p,neutral>But I was told to ring the bell if I wanted some attention.");
+~chatnpc("<p,bored>Well...anyway...we're very busy here, hurry up what do you want?");
+@zavistic_main;
+
+[opnpc1,zogre_human_zavistic_rarve]
+if (%zogre >= ^zogre_sent_to_sithik) {
+    ~chatnpc("<p,shock>What are you doing...Oh, it's you...sorry...didn't realise...what can I do for you?");
+} else {
+    ~chatnpc("<p,angry>What are you doing bothering me? Don't you think some of us have work to do?");
+    ~chatplayer("<p,quiz>I thought you were here to help?");
+    ~chatnpc("<p,bored>Well... I am, I suppose, anyway... we're very busy here, hurry up, what do you want?");
+}
+@zavistic_main;
+
+[label,zavistic_main]
+if (%zogre >= ^zogre_sithik_transformed) {
+    ~chatnpc("<p,neutral>Don't you worry about Sithik, he's not likely to be moving from his bed for a long time. When he eventually does get better, he's going to be sent before a disciplinary tribunal, then we'll sort out what's what.");
+    ~chatplayer("<p,happy>Thanks for your help with all of this.");
+    ~chatnpc("<p,happy>Ooohh, no thanks required. It's I who should be thanking you my friend...your investigative mind has shown how vigilant we really should be for this type of evil use of the magical arts.");
+    return;
+}
+if (%zogre = ^zogre_given_potion) {
+    ~chatnpc("<p,quiz>Have you used that potion yet?");
+    if (~obj_gettotal(zogre_ogre_trans_potion) = 0) {
+        ~chatplayer("<p,sad>Well, actually, I've lost it, could I have another one please?");
+        ~chatnpc("<p,neutral>Sure, but don't lose it this time.");
+        ~zogre_give_or_drop(zogre_ogre_trans_potion, 1);
+        ~objbox(zogre_ogre_trans_potion, "Zavistic hands you a bottle of strange potion.", 250, 0, 0);
+        return;
+    }
+    ~chatplayer("<p,quiz>No, not yet, what was I supposed to do again?");
+    ~chatnpc("<p,neutral>Try to use the potion on Sithik somehow, he should undergo an interesting transformation, though you'll probably want to leave the house in case there are any side effects. Then go back and question Sithik and tell");
+    ~chatnpc("<p,neutral>him the effects won't wear off until he tells the truth. In fact, that's not exactly true, but I'm sure it'll be an extra incentive to get him to be honest.");
+    return;
+}
+if (%zogre >= ^zogre_sent_to_sithik) {
+    @zavistic_zogre_menu;
+}
+if (%zogre < ^zogre_started) {
+    return;
+}
+@zavistic_show_clues;
+
+[label,zavistic_show_clues]
+def_boolean $prism = false;
+def_boolean $page = false;
+if (inv_total(inv, zogre_black_prism) > 0) {
+    $prism = true;
+}
+if (inv_total(inv, zogre_necromantic_page) > 0) {
+    $page = true;
+}
+if ($prism = true & $page = true) {
+    ~chatplayer("<p,neutral>There's some undead ogre activity over at Jiggig, I've found some clues, I wondered if you'd have a look at them.");
+    ~doubleobjbox(zogre_black_prism, zogre_necromantic_page, "You show the prism and the necromantic half page to the aged wizard.", 250);
+    ~chatnpc("<p,shock>Hmmm, now this is interesting! Where did you get these from?");
+    ~chatplayer("<p,neutral>I got them from a nearby Ogre tomb, it's recently been infested with zombie ogres and I'm trying to work out what happened there.");
+    ~chatnpc("<p,sad>This is very troubling <displayname>, very troubling indeed. While it's permitted for learned members of our order to research the 'dark arts', it's absolutely forbidden to make use of such magic.");
+    ~chatplayer("<p,quiz>Do you have any leads on people that I might talk to regarding this?");
+    ~chatnpc("<p,neutral>Well a wizard by the name of 'Sithik Ints' was doing some research in this area. He may know something about it. He's lodged at that guest house to the North, though he's ill and isn't able to leave his room.");
+    %zogre = ^zogre_sent_to_sithik;
+    ~send_quest_progress(questlist:zogre, %zogre, ^zogre_complete);
+    ~chatnpc("<p,neutral>Why not go and talk to him, poke around a bit and see if anything comes up. Let me know how you get on. However, I doubt that 'Sithik' had anything to do with it.");
+    ~chatnpc("<p,neutral>Hmm, that black prism seems to have some magical protection. Once you've finished with this item, bring it back to me would you. I may have a reward for you.");
+    return;
+}
+if ($prism = true) {
+    ~chatplayer("<p,neutral>There's some undead ogre activity over at 'Jiggig', and the ogres have asked me to look into it. I think I've found a clue and I wonder if you could take a look at it for me?");
+    ~objbox(zogre_black_prism, "You show the black prism to the aged wizard.", 250, 0, 0);
+    ~chatnpc("<p,neutral>Hmmm, well this is an uncommon spell component. On its own it's useless, but with certain necromantic spells it can be very powerful. Did you find anything else there?");
+    ~zavistic_tankard_not_related;
+    ~chatplayer("<p,neutral>Not really.");
+    ~chatnpc("<p,neutral>I don't know what to say then, there isn't enough to go on with the clues you've shown me so far. I'd suggest going back to search a bit more, but you may just be wasting your time?");
+    ~chatnpc("<p,neutral>Hmm, but this prism does seem to have some magical protection. Once you've finished with this item, bring it back to me would you? I may have a reward for you!");
+    ~chatplayer("<p,neutral>Sure...I mean, I'll try if I remember.");
+    return;
+}
+if ($page = true) {
+    ~chatplayer("<p,neutral>There's some undead ogre activity over at Jiggig, I've found a clue that you may be able to help with.");
+    ~objbox(zogre_necromantic_page, "You show the necromantic half page to the aged wizard.", 250, 0, 0);
+    ~chatnpc("<p,neutral>Hmm, this is a half torn spell page, it requires another spell component to be effective. Did you find anything else there?");
+    ~zavistic_tankard_not_related;
+    ~chatplayer("<p,neutral>Not really.");
+    ~chatnpc("<p,neutral>I don't know what to say then, there isn't enough to go on with the clues you've shown me so far. I'd suggest going back to search a bit more, but you may just be wasting your time?");
+}
+
+[proc,zavistic_tankard_not_related]
+if (inv_total(inv, zogre_dragon_tankard) = 0) {
+    return;
+}
+~objbox(zogre_dragon_tankard, "You show the tankard to Zavistic.", 250, 0, 0);
+~chatplayer("<p,neutral>Well, I found this...");
+~chatnpc("<p,neutral>Hmmm, no, that's not really associated with this to be honest. Did you find anything else there?");
+
+[label,zavistic_zogre_menu]
+def_int $items = 0;
+if (inv_total(inv, zogre_necrobook) > 0) {
+    $items = add($items, 1);
+}
+if (inv_total(inv, zogre_hambook) > 0) {
+    $items = add($items, 1);
+}
+if (inv_total(inv, zogre_dragon_tankard) > 0) {
+    $items = add($items, 1);
+}
+if (inv_total(inv, zogre_sithik_portrait_signed) > 0) {
+    $items = add($items, 1);
+}
+def_int $choice;
+if ($items = 0) {
+    $choice = ~p_choice3("What did you say I should do?", 1, "Where is Sithik?", 2, "Sorry, I have to go.", 4);
+} else if ($items = 1) {
+    $choice = ~p_choice4("What did you say I should do?", 1, "Where is Sithik?", 2, "I have an item that I'd like you to look at.", 3, "Sorry, I have to go.", 4);
+} else {
+    $choice = ~p_choice4("What did you say I should do?", 1, "Where is Sithik?", 2, "I have some items that I'd like you to look at.", 3, "Sorry, I have to go.", 4);
+}
+switch_int ($choice) {
+    case 1 :
+        ~chatplayer("<p,quiz>What did you say I should do?");
+        ~chatnpc("<p,neutral>You should go and have a chat with Sithik Ints, he's in that house just to the north. He's a lodger and has a room upstairs. Just tell him that I sent you to see him. He should be fine once you've mentioned my name.");
+        @zavistic_zogre_menu;
+    case 2 :
+        ~chatplayer("<p,quiz>Where is Sithik?");
+        ~chatnpc("<p,neutral>He's in that house just to the north, less than a few seconds walk away. He's a lodger and has a room upstairs...he's not very well though.");
+        @zavistic_zogre_menu;
+    case 3 :
+        if ($items = 1) {
+            ~chatplayer("<p,neutral>I have an item that I'd like you to look at.");
+        } else {
+            ~chatplayer("<p,neutral>I have some items that I'd like you to look at.");
+        }
+        @zavistic_evidence;
+    case 4 : ~chatplayer("<p,neutral>Sorry, I have to go.");
+}
+
+[label,zavistic_evidence]
+if (inv_total(inv, zogre_necrobook) > 0) {
+    ~objbox(zogre_necrobook, "You show the Necromancy book to Zavistic.", 250, 0, 0);
+    ~chatplayer("<p,neutral>I have this necromancy book as evidence that Sithik is involved with the undead ogres at Jiggig.");
+    ~zavistic_shown_before(%thzfe_shownnecrobook);
+    ~chatnpc("<p,neutral>Ok, so he's researching necromancy...it doesn't mean anything in itself.");
+    ~chatplayer("<p,neutral>Yes, but if you look, you can see that there is a half torn page which matches the page I found at Jiggig.");
+    ~chatnpc("<p,neutral>Hmm, yes, but someone could have stolen that from him and then gone and cast it without his permission or to try and deliberately implicate him.");
+    %thzfe_shownnecrobook = ^true;
+}
+if (inv_total(inv, zogre_hambook) > 0) {
+    ~objbox(zogre_hambook, "You show the HAM book to Zavistic.", 250, 0, 0);
+    ~chatplayer("<p,neutral>Look, this book proves that Sithik hates all monsters and most likely Ogres with a passion.");
+    ~zavistic_shown_before(%thzfe_shownhambook);
+    ~chatnpc("<p,neutral>So what, hating monsters isn't a crime in itself...although I suppose that it does give a motive if Sithik was involved. On its own, it's not enough evidence though.");
+    %thzfe_shownhambook = ^true;
+}
+if (inv_total(inv, zogre_dragon_tankard) > 0) {
+    ~objbox(zogre_dragon_tankard, "You show the dragon Inn Tankard to Zavistic.", 250, 0, 0);
+    ~chatplayer("<p,neutral>This is the tankard I found on the remains of Brentle Vahn!");
+    ~zavistic_shown_before(%thzfe_showntankard);
+    ~chatnpc("<p,neutral>That doesn't mean anything in itself, you could have gotten that from anywhere. Even from the Dragon Inn tavern! There isn't anything to link Brentle Vahn with Sithik Ints.");
+    %thzfe_showntankard = ^true;
+}
+if (inv_total(inv, zogre_sithik_portrait_signed) > 0) {
+    ~objbox(zogre_sithik_portrait_signed, "You show the signed portrait of Sithik to Zavistic.", 250, 0, 0);
+    ~chatplayer("<p,neutral>This is a portrait of Sithik, signed by the landlord of the Dragon Inn saying that he saw Sithik and Brentle Vahn together.");
+    ~zavistic_shown_before(%thzfe_shownsignedportrait);
+    ~chatnpc("<p,neutral>Hmmm, well that is interesting.");
+    %thzfe_shownsignedportrait = ^true;
+}
+if (%thzfe_shownnecrobook = ^false | %thzfe_shownhambook = ^false | %thzfe_showntankard = ^false | %thzfe_shownsignedportrait = ^false) {
+    ~chatnpc("<p,neutral>However, there isn't enough evidence for me to take the issue further at this point. If you find any further evidence bring it to me.");
+    return;
+}
+~chatnpc("<p,neutral>And I'm starting to think that Sithik may be involved. Here, take this potion and give some to Sithik. It'll bring on a change which should solicit some answers - tell him the effects won't revert until he's told the truth.");
+inv_del(inv, zogre_necrobook, inv_total(inv, zogre_necrobook));
+inv_del(inv, zogre_hambook, inv_total(inv, zogre_hambook));
+inv_del(inv, zogre_dragon_tankard, inv_total(inv, zogre_dragon_tankard));
+inv_del(inv, zogre_sithik_portrait_signed, inv_total(inv, zogre_sithik_portrait_signed));
+%zogre = ^zogre_given_potion;
+~send_quest_progress(questlist:zogre, %zogre, ^zogre_complete);
+~zogre_give_or_drop(zogre_ogre_trans_potion, 1);
+~objbox(zogre_ogre_trans_potion, "Zavistic hands you a strange looking potion bottle and takes all the evidence you've accumulated so far.", 250, 0, 0);
+
+[proc,zavistic_shown_before](int $shown)
+if ($shown = ^false) {
+    return;
+}
+~chatnpc("<p,bored>Yeah, you've shown me this before...if this is all the evidence you have?");
+~chatplayer("<p,sad>Please just look at it again...");
+~chatnpc("<p,neutral>Ok, let me look then.");
+
+[opnpcu,zogre_human_zavistic_rarve]
+switch_obj (last_useitem) {
+    case zogre_black_prism :
+        if (%zogre = ^zogre_complete) {
+            ~chatplayer("<p,neutral>I've finished with this black prism, you said you might have a reward for me?");
+            ~chatnpc("<p,happy>Ah yes, I'll take that off your hands. Here's something for your trouble.");
+            inv_del(inv, zogre_black_prism, 1);
+            inv_add(inv, coins, 2000);
+            %thzfe_prismsold = ^true;
+            ~doubleobjbox(zogre_black_prism, coins, "You hand over the black prism and receive 2000 coins.", 250);
+            return;
+        }
+        ~chatplayer("<p,neutral>I found this black prism at Jiggig where the undead ogre activity was happening?");
+        ~objbox(zogre_black_prism, "You show the black prism to the aged wizard.", 250, 0, 0);
+        if (%zogre >= ^zogre_sent_to_sithik) {
+            ~chatnpc("<p,neutral>Yes, you've already showed me that, bring it to me when you've resolved the problems at Jiggig and I'll see what I can do.");
+            return;
+        }
+        @zavistic_show_clues;
+    case zogre_necromantic_page :
+        if (%zogre >= ^zogre_sent_to_sithik) {
+            ~displaymessage(^dm_default);
+            return;
+        }
+        ~chatplayer("<p,neutral>I think I've found a clue from the Jiggig area where the undead ogre activity is happening.");
+        ~objbox(zogre_necromantic_page, "You show the necromantic half page to the aged wizard.", 250, 0, 0);
+        ~chatnpc("<p,neutral>Hmm, this is a half torn spell page, it requires another spell component to be effective. Did you find anything else there?");
+        ~chatplayer("<p,neutral>Not really.");
+        ~chatnpc("<p,neutral>I don't know what to say then really, there isn't enough to go on here as it is. I'd suggest going back to search a bit more, but you may just be wasting your time.");
+    case zogre_sithik_portrait_bad :
+        ~chatplayer("<p,happy>Look, I made a portrait of Sithik.");
+        ~objbox(zogre_sithik_portrait_bad, "You show the sketch...", 250, 0, 0);
+        ~chatnpc("<p,confused>Who the demonikin is that? Is it meant to be a portrait of Sithik, it doesn't look anything like him!");
+    case zogre_sithik_portrait_good :
+        ~chatplayer("<p,happy>Look, I made a portrait of Sithik.");
+        ~objbox(zogre_sithik_portrait_good, "You show the portrait of Sithik to Zavistic.", 250, 0, 0);
+        ~chatnpc("<p,bored>Hmm, great...but I already know what he looks like!");
+    case zogre_necrobook, zogre_hambook, zogre_dragon_tankard, zogre_sithik_portrait_signed :
+        if (%zogre < ^zogre_sent_to_sithik | %zogre >= ^zogre_given_potion) {
+            ~displaymessage(^dm_default);
+            return;
+        }
+        @zavistic_evidence;
+    case default : ~displaymessage(^dm_default);
+}
+
+[oploc1,zogre_sithik_bed_entity]
+if (%thzfe_sithik_transformed = ^zogre_sithik_ogre) {
+    @sithik_ogre_talk;
+}
+if (%zogre = ^zogre_sithik_transformed & %thzfe_sithik_transformed = ^zogre_sithik_human & gettimer(zogre_sithik_potion) < 1) {
+    settimer(zogre_sithik_potion, 5);
+}
+if (%zogre >= ^zogre_sithik_confessed) {
+    ~sithik_say("<p,angry>What do you want now?");
+    @sithik_human_questions;
+}
+if (%zogre < ^zogre_sent_to_sithik) {
+    ~sithik_say("<p,angry>Hey...who gave you permission to come in here! Get out, get out I say.");
+    ~chatplayer("<p,neutral>Alright, alright...keep your night cap on.");
+    return;
+}
+if (%zogre >= ^zogre_given_potion) {
+    ~sithik_say("<p,angry>What do you want now?");
+    ~chatplayer("<p,angry>Hey there's no need to be rude!");
+    ~sithik_say("<p,angry>What do you expect when you just go snooping around a person's place against their express permission.");
+    @sithik_after_potion_menu;
+}
+~sithik_say("<p,angry>Hey...who gave you permission to come in here!");
+~chatplayer("<p,neutral>Zavistic Rarve said that I could come and talk to you and ask you a few questions.");
+~sithik_say("<p,shock>Oh, Zavistic...why...why would he send you to me?");
+@sithik_menu;
+
+[proc,sithik_say](string $text)
+~chatnpc_specific("Sithik Ints", zogre_sithik_man, $text);
+
+[proc,sithik_ogre_say](string $text)
+~chatnpc_specific("Sithik Ints", zogre_sithik_ogre, $text);
+
+[label,sithik_menu]
+switch_int (~p_choice4("Do you know anything about the undead ogres at Jiggig?", 1, "What do you do?", 2, "Do you mind if I look around?", 3, "Ok, thanks.", 4)) {
+    case 1 :
+        ~chatplayer("<p,quiz>Do you know anything about the undead ogres at Jiggig?");
+        ~sithik_say("<p,shock>Er...undead ogres...no, sorry, no idea what you're talking about there.");
+        ~chatplayer("<p,shifty>Hmm, is that right...");
+        ~sithik_say("<p,neutral>Well, yes, yes it is. If I knew something, I'd tell you.");
+        ~sithik_say("<p,neutral>Anyway, dead ogres you say? How strange? That must be a strange sight?");
+        ~chatplayer("<p,neutral>Very well, if you don't know anything about it, you won't mind if I look around then?");
+        @sithik_look_around_first;
+    case 2 : @sithik_what_do_you_do(sithik_menu);
+    case 3 :
+        ~chatplayer("<p,quiz>Do you mind if I look around?");
+        if (%zogre >= ^zogre_searched_sithik) {
+            ~sithik_say("<p,angry>I've already told you that I do! But you'll probably just ignore me again!");
+            ~chatplayer("<p,happy>Quite right!");
+            return;
+        }
+        @sithik_look_around_first;
+    case 4 : ~chatplayer("<p,neutral>Ok, thanks.");
+}
+
+[label,sithik_look_around_first]
+~sithik_say("<p,angry>Well, err....well, actually yes I do mind...it's my place and I don't want strangers going through my things.");
+~chatplayer("<p,neutral>Well, I'm going to have a look around anyway, if you're not involved in this whole thing, you won't have anything to hide.");
+~sithik_say("<p,angry>Why, if I was a few years younger I'd give you a good hiding!");
+if (%zogre = ^zogre_sent_to_sithik) {
+    %zogre = ^zogre_searched_sithik;
+    ~send_quest_progress(questlist:zogre, %zogre, ^zogre_complete);
+}
+~chatplayer("<p,happy>I'm sure!");
+@sithik_menu;
+
+[label,sithik_what_do_you_do](label $return)
+~chatplayer("<p,quiz>What do you do?");
+~sithik_say("<p,neutral>I'm a scholarly student of the magical arts. When I was younger I used to be an adventurer, probably just like yourself. But I lost interest in the constant fighting, looting and gaining abilities.");
+~sithik_say("<p,neutral>Instead I decided to focus my attention and time to study the purer form of the lost arts.");
+~chatplayer("<p,quiz>The lost arts? What are they?");
+~sithik_say("<p,happy>Ignorant people call them the 'dark arts'. I'm talking about Necromancy, the power to bring the dead back to life - the power of the gods! Surely the most awesome power known to man.");
+~chatplayer("<p,neutral>Hmm, well I guess I must be an ignorant person then, because bringing the dead back to life sounds very unnatural.");
+jump($return);
+
+[label,sithik_after_potion_menu]
+switch_int (~p_choice3("What do you do?", 1, "Why do you spend most of your time in bed?", 2, "Ok, thanks.", 3)) {
+    case 1 : @sithik_what_do_you_do(sithik_after_potion_menu);
+    case 2 :
+        ~chatplayer("<p,quiz>Why do you spend most of your time in bed?");
+        ~sithik_say("<p,sad>I'm actually quite old and not so very well and I'd like to get over this illness I have, then I'll return to my very serious and important studies.");
+        @sithik_after_potion_menu;
+    case 3 : ~chatplayer("<p,neutral>Ok, thanks.");
+}
+
+[label,sithik_ogre_talk]
+if (%zogre = ^zogre_sithik_transformed & %thzfe_makebrutalarrow = ^false & %thzfe_makecuredisease = ^false) {
+    ~sithik_ogre_say("<p,angry>Arghhhh..what's happened to me...you beast!");
+    ~chatplayer("<p,angry>It's your own fault, you shouldn't have lied about your involvement with the undead Ogres at Jiggig. The potion will wear off once you've told the truth!");
+    ~sithik_ogre_say("<p,sad>Ok, ok, I admit it, I got Brentle Vahn to cast the spell to put an end to those awful Ogres...they're just disgusting creatures...");
+    ~chatplayer("<p,neutral>Ok, that's a start...now I want some answers.");
+} else {
+    ~sithik_ogre_say("<p,angry>Arghhhh..what do you want now...you've turned me into a beast!");
+    ~chatplayer("<p,angry>I've got some questions for you...and you'd better answer them well or else!");
+    ~sithik_ogre_say("<p,sad>Ok, ok, I'll tell you anything, just turn me back into a human again!");
+}
+@sithik_ogre_menu;
+
+[label,sithik_ogre_menu]
+switch_int (~p_choice4("How do I remove the effects of the spell from the area?", 1, "How do I get rid of the undead ogres?", 2, "How do I get rid of the disease?", 3, "Sorry, I have to go.", 4)) {
+    case 1 :
+        ~chatplayer("<p,quiz>How do I remove the effects of the spell from the area? The ogres want to get their ceremonial dance area back and can't do that with undead walking all over it.");
+        if (%zogre >= ^zogre_sithik_confessed) {
+            ~sithik_ogre_say("<p,neutral>Haven't I told you this already? You can't remove the spell, it's permanent, it will last forever, the only option you have is to move the ceremonial area.");
+        } else {
+            ~sithik_ogre_say("<p,neutral>Unfortunately you can't. The spell is permanent, it will last forever, the only option you have is to move the ceremonial area.");
+            %zogre = ^zogre_sithik_confessed;
+            ~send_quest_progress(questlist:zogre, %zogre, ^zogre_complete);
+        }
+        ~chatplayer("<p,angry>You're an evil man and I'm going to make you pay for this...you can stay like that forever as far as I'm concerned.");
+        ~sithik_ogre_say("<p,sad>No...no, let me try to make amends...please I can help you. Just don't leave me like this.");
+        ~sithik_check_cured;
+        @sithik_ogre_menu;
+    case 2 :
+        ~chatplayer("<p,quiz>How do I get rid of the undead ogres?");
+        if (%thzfe_makebrutalarrow = ^true) {
+            ~sithik_ogre_say("<p,neutral>Haven't I already explained this to you once before?");
+            ~chatplayer("<p,angry>Humour me!");
+        }
+        ~sithik_brutal_arrows(true);
+        ~sithik_check_cured;
+        @sithik_ogre_menu;
+    case 3 :
+        ~chatplayer("<p,quiz>How do I get rid of the disease?");
+        if (%thzfe_makecuredisease = ^true) {
+            ~sithik_ogre_say("<p,neutral>Haven't I already explained this disease thing to you once before?");
+            ~chatplayer("<p,angry>Just tell me again or else I'll never turn you back into a human!");
+            ~sithik_ogre_say("<p,scared>No...noo...please, I'll tell you.");
+        }
+        ~sithik_cure_disease(true);
+        ~sithik_check_cured;
+        @sithik_ogre_menu;
+    case 4 :
+        ~chatplayer("<p,neutral>Sorry, I have to go.");
+        ~sithik_ogre_say("<p,sad>But...you can't just leave me here like this!");
+}
+
+[label,sithik_human_questions]
+switch_int (~p_choice4("How do I remove the effects of the spell from the area?", 1, "How do I get rid of the undead ogres?", 2, "How do I get rid of the disease?", 3, "Sorry, I have to go.", 4)) {
+    case 1 :
+        ~chatplayer("<p,quiz>How do I remove the effects of the spell from the area? The ogres want to get their ceremonial dance area back and can't do that with undead walking all over it.");
+        ~sithik_say("<p,neutral>Haven't I told you this already? You can't remove the spell, it's permanent, it will last forever, the only option you have is to move the ceremonial area.");
+        @sithik_human_questions;
+    case 2 :
+        ~chatplayer("<p,quiz>How do I get rid of the undead ogres?");
+        ~sithik_say("<p,neutral>Haven't I already explained this to you once before?");
+        ~chatplayer("<p,angry>Humour me!");
+        ~sithik_brutal_arrows(false);
+        @sithik_human_questions;
+    case 3 :
+        ~chatplayer("<p,quiz>How do I get rid of the disease?");
+        ~sithik_say("<p,neutral>Haven't I already explained this disease thing to you once before?");
+        ~chatplayer("<p,angry>Just tell me again or I'll turn you back into an ogre.");
+        ~sithik_say("<p,scared>No...noo...please, I'll tell you.");
+        ~sithik_cure_disease(false);
+        @sithik_human_questions;
+    case 4 : ~chatplayer("<p,neutral>Sorry, I have to go.");
+}
+
+[proc,sithik_brutal_arrows](boolean $ogre)
+def_npc $head = zogre_sithik_man;
+if ($ogre = true) {
+    $head = zogre_sithik_ogre;
+}
+~chatnpc_specific("Sithik Ints", $head, "<p,neutral>Ok, similar spells have been cast before and the only way to deal with the resulting creatures is to cordon off the area and not go in there again.");
+~chatnpc_specific("Sithik Ints", $head, "<p,neutral>The undead creatures usually manifest some sort of disease so it's best to attack them from a distance with a ranged weapon.");
+~chatnpc_specific("Sithik Ints", $head, "<p,neutral>Normal missiles like arrows and darts do very little damage to them because they're designed to destroy internal organs. This is a waste of time with undead creatures like undead ogres.");
+~chatplayer("<p,quiz>Yeah, clearly so what should we use?");
+~chatnpc_specific("Sithik Ints", $head, "<p,neutral>From my research it looks like a flat ended arrow was designed called a 'Brutal arrow'. This does large amounts of crushing damage to the creature. You can make them by using larger arrows.");
+%thzfe_makebrutalarrow = ^true;
+~chatnpc_specific("Sithik Ints", $head, "<p,neutral>I think some Ogre hunters make them. But instead of adding an arrow tip, you hammer a large nail into the end of the shaft.");
+
+[proc,sithik_cure_disease](boolean $ogre)
+def_npc $head = zogre_sithik_man;
+if ($ogre = true) {
+    $head = zogre_sithik_ogre;
+}
+~chatnpc_specific("Sithik Ints", $head, "<p,neutral>My research shows that two jungle based herbs can be used, one is found near river tributaries and looks like a vine, the other is found in caves and grows on the wall.");
+%thzfe_makecuredisease = ^true;
+~chatnpc_specific("Sithik Ints", $head, "<p,neutral>It's quite well camouflaged so it's unlikely that you'll find it.");
+~chatplayer("<p,happy>We'll see about that!");
+
+[proc,sithik_check_cured]
+if (%zogre >= ^zogre_sithik_confessed & %thzfe_makebrutalarrow = ^true & %thzfe_makecuredisease = ^true) {
+    %thzfe_sithik_transformed = ^zogre_sithik_cured;
+}
+
+[oplocu,zogre_sithik_bed_entity]
+if (%thzfe_sithik_transformed = ^zogre_sithik_ogre) {
+    ~displaymessage(^dm_default);
+    return;
+}
+switch_obj (last_useitem) {
+    case zogre_black_prism :
+        ~chatplayer("<p,angry>Hey, what's this then, can you explain it?!");
+        ~objbox(zogre_black_prism, "You show the black prism to Sithik.", 250, 0, 0);
+        ~sithik_say("<p,shifty>Err..it looks sort of familiar, did you steal it from me? Come to think of it, you have the appearance of a common thief!");
+        ~chatplayer("<p,neutral>I found it in a place called Jiggig where some undead ogres happen to be wandering around.");
+        ~sithik_say("<p,shifty>Oh, nothing to do with me then, never seen it in my life before!");
+    case zogre_necromantic_page :
+        ~chatplayer("<p,quiz>Have you ever seen anything like this before?");
+        ~objbox(zogre_necromantic_page, "You show the torn page to Sithik.", 250, 0, 0);
+        ~sithik_say("<p,shifty>It's probably a piece of rubbish someone threw away...what does it say, I can't read it?");
+        ~chatplayer("<p,neutral>You should be able to read it, it's been torn from a book on necromancy and you're meant to be a specialist in the subject.");
+        ~sithik_say("<p,shifty>Oh, no..., not really a specialist, just a hobby of mine really. Hardly know anything about it, but it does seem interesting...");
+    case zogre_dragon_tankard :
+        ~chatplayer("<p,quiz>What about this then? Guess where I found this?");
+        ~objbox(zogre_dragon_tankard, "You show the tankard to Sithik.", 250, 0, 0);
+        ~sithik_say("<p,bored>You probably found it at the local brewhouse! It doesn't take a genius to figure that one out.");
+        ~chatplayer("<p,happy>Aha! But I found this in an old ogre tomb! I suspect it's a clue which will lead me to the suspect.");
+        ~sithik_say("<p,bored>Hmmm, well that eliminates all the local people who don't actually drink at the 'Dragon Inn'. When do you think you'll start questioning the remaining population of Yanille?");
+    case zogre_hambook :
+        ~chatplayer("<p,quiz>What's this then?");
+        ~objbox(zogre_hambook, "You show the HAM book to Sithik.", 250, 0, 0);
+        ~sithik_say("<p,neutral>What do you mean? It's a book by the respected HAM leader Johanhus Ulsbrecht, that man speaks for a lot of people who are unhappy with the current state of affairs.");
+        ~sithik_say("<p,neutral>Can you honestly tell me that you've not had to fight for your life against the odd monster or two?");
+        ~chatplayer("<p,neutral>Hmm, that may be true, but I don't universally hate all monsters, whereas I have a sneaking suspicion that you do...and ogres in particular!");
+        ~sithik_say("<p,shifty>Hmm, that's an interesting theory, care to back it up with any facts?");
+    case zogre_necrobook :
+        ~chatplayer("<p,happy>Aha! A necromantic book! What's this doing here then?");
+        ~objbox(zogre_necrobook, "You show the Necromantic book to Sithik.", 250, 0, 0);
+        ~sithik_say("<p,shifty>Oh..I'm not quite sure actually...where did you find that then?");
+        ~chatplayer("<p,angry>I found it in this cupboard! What do you have to say for yourself?");
+        ~sithik_say("<p,shifty>Oh yes, that's right...I remember now. It's for my research, there's nothing really dangerous about it, unless it falls into the wrong hands. I'm sure it's pretty safe with me.");
+        ~chatplayer("<p,shifty>Hmmm, likely story!");
+    case zogre_portrait_book :
+        ~chatplayer("<p,quiz>Oh, so explain this then?");
+        ~objbox(zogre_portrait_book, "You show the book on portraiture to Sithik.", 250, 0, 0);
+        ~sithik_say("<p,happy>It's my hobby...I'm interested in portraiture, but all art in general. It's fun, you should try it.");
+        ~chatplayer("<p,quiz>How do I do it...");
+        ~sithik_say("<p,bored>Well...you could start by reading the book!");
+    case papyrus : @sithik_draw_portrait;
+    case zogre_sithik_portrait_bad :
+        ~chatplayer("<p,quiz>Here you go, what do you think?");
+        ~objbox(zogre_sithik_portrait_bad, "You show the sketch...", 250, 0, 0);
+        ~sithik_say("<p,neutral>Hmmm, well it's an interesting interpretation, but not really classic realist representation is it? It's not my favourite, but I like the 'truth' of the work...well done.");
+    case zogre_sithik_portrait_good :
+        ~chatplayer("<p,quiz>Here you go, what do you think?");
+        ~objbox(zogre_sithik_portrait_good, "You show the portrait to Sithik.", 250, 0, 0);
+        ~sithik_say("<p,neutral>Hmmm, well it's not the most flattering of portraits, but I like the 'honesty' of the work...well done.");
+    case zogre_sithik_portrait_signed :
+        ~chatplayer("<p,angry>Hey, what do you think of this? I'm going to show it to Zavistic and you're going to be in trouble!");
+        ~objbox(zogre_sithik_portrait_signed, "You show the portrait to Sithik.", 250, 0, 0);
+        ~sithik_say("<p,shifty>Hmmm, well, I've got quite a common looking face, I'm often mistaken for other wizards, you know, when I'm wearing my wizard's hat, robes and staff. There's a lot of us around here you know.");
+        ~chatplayer("<p,angry>I don't think so! This is a signed picture of you, someone recognised you, you're in deep trouble!");
+        ~sithik_say("<p,shifty>Ok, I'll pay you to keep this secret - how much do you want for the picture?");
+        ~chatplayer("<p,angry>You can't buy me Sithik!");
+        ~sithik_say("<p,shifty>Ok, let's say two million...two million to keep quiet and give me the picture.");
+        ~doubleobjbox(coins, coins, "Sithik shows you a chest brimming over with coins...", 250);
+        ~chatplayer("<p,confused>Oh...erm...well, that is a lot of money actually...er....");
+        ~sithik_say("<p,happy>Yes, and you deserve it, you're very clever! Now, take the money...");
+        if (~p_choice2_header("No, I won't take the money, I'm going to bring you to justice!", 1, "Ok, I'll shut up for two million!", 2, "Be bribed by Sithik for 2 million?") = 1) {
+            ~chatplayer("<p,angry>No, I won't take the money, I'm going to bring you to justice!");
+            ~sithik_say("<p,laugh>Oh well, suit yourself! I wasn't going to give you the money anyway! No one will believe some crazy adventurer and an Inn keep.");
+            return;
+        }
+        ~chatplayer("<p,happy>Ok, I'll shut up for two million!");
+        ~sithik_say("<p,laugh>Ha! Ha! You believed me! I'm not going to give you all my money! No one will believe a crazy adventurer and a local Inn keep!");
+        ~chatplayer("<p,angry>You're a mean and cruel man Sithik, a mean and cruel man!");
+    case zogre_ogre_trans_potion :
+        ~chatplayer("<p,happy>Here, try some of this potion, it'll make you feel better!");
+        ~sithik_say("<p,angry>Err, yuck....no way am I taking any potions or medication off you...I don't trust you!");
+    case default : ~displaymessage(^dm_default);
+}
+
+[label,sithik_draw_portrait]
+if (inv_total(inv, charcoal) = 0) {
+    ~mesbox("You have no charcoal with which to sketch this subject.");
+    return;
+}
+~sithik_say("<p,happy>Oh lovely! You're making my portrait! Let me see it afterwards!");
+~mesbox("You begin sketching the irritable Sithik.");
+sound_synth(zogre_writing, 1, 0);
+p_delay(2);
+if (inv_total(inv, papyrus) = 0) {
+    return;
+}
+inv_del(inv, papyrus, 1);
+if (stat_random(crafting, 64, 384) = true) {
+    inv_add(inv, zogre_sithik_portrait_good, 1);
+    ~objbox(zogre_sithik_portrait_good, "You get a portrait of Sithik.", 250, 0, 0);
+    return;
+}
+inv_add(inv, zogre_sithik_portrait_bad, 1);
+~objbox(zogre_sithik_portrait_bad, "You get a portrait of Sithik.", 250, 0, 0);
+
+[oploc1,sithiks_drawers]
+if (~zogre_sithik_search_check = false) {
+    return;
+}
+if (~obj_gettotal(zogre_portrait_book) > 0 & inv_total(inv, papyrus) > 0 & inv_total(inv, charcoal) > 0) {
+    mes("You search but find nothing of significance.");
+    return;
+}
+if (inv_freespace(inv) < 3) {
+    ~mesbox("You see some items in the drawer, but you need 3 free inventory spaces to take them.");
+    return;
+}
+if (inv_total(inv, papyrus) > 0 & inv_total(inv, charcoal) = 0) {
+    inv_add(inv, charcoal, 1);
+    ~objbox(charcoal, "You find some charcoal.", 250, 0, 0);
+} else if (inv_total(inv, charcoal) > 0 & inv_total(inv, papyrus) = 0) {
+    inv_add(inv, papyrus, 1);
+    ~objbox(papyrus, "You find some papyrus.", 250, 0, 0);
+} else if (inv_total(inv, charcoal) = 0 & inv_total(inv, papyrus) = 0) {
+    inv_add(inv, charcoal, 1);
+    inv_add(inv, papyrus, 1);
+    ~doubleobjbox(charcoal, papyrus, "You find some charcoal and papyrus.", 250);
+}
+if (~obj_gettotal(zogre_portrait_book) = 0) {
+    inv_add(inv, zogre_portrait_book, 1);
+    ~objbox(zogre_portrait_book, "You also find a book on portaiture.", 250, 0, 0);
+}
+
+[oploc1,sithiks_cupboard]
+if (~zogre_sithik_search_check = false) {
+    return;
+}
+if (~obj_gettotal(zogre_necrobook) > 0 | %thzfe_shownnecrobook = ^true & %zogre >= ^zogre_given_potion) {
+    mes("You search but find nothing of significance.");
+    return;
+}
+if (inv_freespace(inv) < 1) {
+    ~mesbox("You see an item in the cupboard, but you don't have space to put it in your inventory.");
+    return;
+}
+inv_add(inv, zogre_necrobook, 1);
+~objbox(zogre_necrobook, "You find a book on Necromancy.", 250, 0, 0);
+
+[oploc1,sithiks_wardrobe]
+if (~zogre_sithik_search_check = false) {
+    return;
+}
+if (~obj_gettotal(zogre_hambook) > 0) {
+    mes("You search but find nothing of significance.");
+    return;
+}
+if (inv_freespace(inv) < 1) {
+    ~mesbox("You see an item in the wardrobe, but you don't have space to put it in your inventory.");
+    return;
+}
+inv_add(inv, zogre_hambook, 1);
+~objbox(zogre_hambook, "You find a book on Philosophy written by the 'Human's Against Monsters' leader, Johanhus Albrect.", 250, 0, 0);
+
+[proc,zogre_sithik_search_check]()(boolean)
+if (%zogre >= ^zogre_given_potion) {
+    mes("You search but find nothing of significance.");
+    return(false);
+}
+if (%zogre < ^zogre_searched_sithik) {
+    ~sithik_say("<p,angry>Hey! What do you think you're doing?");
+    ~chatplayer("<p,shock>Erk! I'd better not start rifling through peoples things without permission.");
+    return(false);
+}
+return(true);
+
+[opheld1,zogre_hambook]
+~mesbox("You read this book for a while, it seems to be some sort of political manifesto about how the king doesn't do enough to safeguard the citizens of the realm from the monsters that still thrive within the borders. It sends out a rallying cry to all people who would want to stop monsters, to join the HAM movement.");
+~chatplayer("<p,shifty>Hmmm, Sithik must really hate monsters then, I wonder if he hates ogres in particular?");
+
+[opheld1,zogre_necrobook]
+~objbox(zogre_necrobook, "This book uses very strange language and some incomprehensible symbols. It has a very dark feeling to it. As you're loooking through the book, you notice that one of the pages has been torn and half of it is missing.", 250, 0, 0);
+
+[opheld1,zogre_portrait_book]
+~mesbox("All interested artisans should really consider taking up the hobby of portraiture. To do so, one uses a piece of papyrus on the intended subject to initiate a likeness drawing activity.");
+
+[opheld1,zogre_sithik_portrait_signed]
+~objbox(zogre_sithik_portrait_signed, "You see an image of Sithik with a message underneath '@blu@I, the bartender of the Dragon Inn, do swear that this is a true likeness of the wizzy who was talking to Brentle Vahn, my customer the other day.@bla@'", 250, 0, 0);
+
+[opobj3,zogre_cup_of_tea_sithix]
+~sithik_say("<p,angry>Hey! What do you think you're doing? Leave my tea alone!");
+
+[opobju,zogre_cup_of_tea_sithix]
+if (last_useitem ! zogre_ogre_trans_potion | %zogre ! ^zogre_given_potion) {
+    ~displaymessage(^dm_default);
+    return;
+}
+inv_del(inv, zogre_ogre_trans_potion, 1);
+~objbox(zogre_ogre_trans_potion, "You pour some of the potion into the cup. Zavistic said it may take some time to have an effect.", 250, 0, 0);
+%zogre = ^zogre_sithik_transformed;
+~send_quest_progress(questlist:zogre, %zogre, ^zogre_complete);
+settimer(zogre_sithik_potion, 5);
+
+[timer,zogre_sithik_potion]
+if (inzone(^zogre_sithik_room_lower_bound, ^zogre_sithik_room_upper_bound, coord) = true) {
+    return;
+}
+cleartimer(zogre_sithik_potion);
+if (%thzfe_sithik_transformed = ^zogre_sithik_human) {
+    %thzfe_sithik_transformed = ^zogre_sithik_ogre;
+}

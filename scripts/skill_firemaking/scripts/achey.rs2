@@ -1,6 +1,12 @@
 [opheldu,achey_tree_logs]
 switch_obj(last_useitem) {
-    case knife : @make_ogre_shafts;
+    case knife :
+        if (%thzfe_makecompozogrebow = ^true & inv_total(inv, wolf_bones) > 0) {
+            if (~p_choice2_header("Ogre arrow shafts.", 1, "Unstrung composite ogre bow.", 2, "What would you like to make?") = 2) {
+                @make_comp_ogre_bow;
+            }
+        }
+        @make_ogre_shafts;
     case tinderbox : @light_achey_inv(last_slot);
     case default : ~displaymessage(^dm_default);
 }

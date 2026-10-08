@@ -1,0 +1,95 @@
+[rogues_purse_sol]
+name=Unfinished potion
+recol1s=15855
+recol1d=29460
+desc=I need another ingredient to finish this Rogues purse potion.
+cost=5
+model=inv_vial3dose
+2dyof=-1
+2dzoom=550
+2dyan=1996
+2dxan=84
+members=yes
+iop4=Empty
+weight=2oz
+category=potion
+
+[relicyms_balm4]
+name=Relicym's balm(4)
+recol1s=15855
+recol1d=24075
+desc=4 doses of Relicym's balm, which helps cure disease.
+cost=225
+model=inv_vial
+2dyof=-1
+2dzoom=550
+2dyan=1996
+2dxan=84
+members=yes
+iop1=Drink
+iop4=Empty
+weight=35g
+category=potion
+param=dose_count,4
+param=decant_potion_enum,potion_relicyms_balm
+param=next_obj_stage,relicyms_balm3
+
+[relicyms_balm3]
+name=Relicym's balm(3)
+recol1s=15855
+recol1d=24075
+desc=3 doses of Relicym's balm, which helps cure disease.
+cost=200
+model=inv_vial3dose
+2dyof=-1
+2dzoom=550
+2dyan=1996
+2dxan=84
+members=yes
+iop1=Drink
+iop4=Empty
+weight=35g
+category=potion
+param=dose_count,3
+param=decant_potion_enum,potion_relicyms_balm
+param=next_obj_stage,relicyms_balm2
+
+[relicyms_balm2]
+name=Relicym's balm(2)
+recol1s=15855
+recol1d=24075
+desc=2 doses of Relicym's balm, which helps cure disease.
+cost=150
+model=inv_vial2dose
+2dyof=-1
+2dzoom=550
+2dyan=1996
+2dxan=84
+members=yes
+iop1=Drink
+iop4=Empty
+weight=25g
+category=potion
+param=dose_count,2
+param=decant_potion_enum,potion_relicyms_balm
+param=next_obj_stage,relicyms_balm1
+
+[relicyms_balm1]
+name=Relicym's balm(1)
+recol1s=15855
+recol1d=24075
+desc=1 dose of Relicym's balm, which helps cure disease.
+cost=75
+model=inv_vial1dose
+2dyof=-1
+2dzoom=550
+2dyan=1996
+2dxan=84
+members=yes
+iop1=Drink
+iop4=Empty
+weight=25g
+category=potion
+param=dose_count,1
+param=decant_potion_enum,potion_relicyms_balm
+param=next_obj_stage,vial_empty

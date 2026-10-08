@@ -1,0 +1,696 @@
+[opnpc1,secret_ghost1] @zaros_ghost(^zaros_valdez, 0);
+[opnpc1,secret_ghost2] @zaros_ghost(^zaros_rennard, 1);
+[opnpc1,secret_ghost3] @zaros_ghost(^zaros_rennard, 2);
+[opnpc1,secret_ghost4] @zaros_ghost(^zaros_rennard, 3);
+[opnpc1,secret_ghost5] @zaros_ghost(^zaros_dhalak, 1);
+[opnpc1,secret_ghost6] @zaros_ghost(^zaros_dhalak, 2);
+[opnpc1,secret_ghost7] @zaros_ghost(^zaros_dhalak, 3);
+[opnpc1,secret_ghost8] @zaros_ghost(^zaros_kharrim, 1);
+[opnpc1,secret_ghost9] @zaros_ghost(^zaros_kharrim, 2);
+[opnpc1,secret_ghost10] @zaros_ghost(^zaros_kharrim, 3);
+[opnpc1,secret_ghost11] @zaros_ghost(^zaros_lennissa, 1);
+[opnpc1,secret_ghost12] @zaros_ghost(^zaros_lennissa, 2);
+[opnpc1,secret_ghost13] @zaros_ghost(^zaros_lennissa, 3);
+[opnpc1,secret_ghost14] @zaros_ghost(^zaros_viggora, 1);
+[opnpc1,secret_ghost15] @zaros_ghost(^zaros_viggora, 2);
+[opnpc1,secret_ghost16] @zaros_ghost(^zaros_viggora, 3);
+
+[proc,zaros_ghost_told](int $ghost)(boolean)
+switch_int ($ghost) {
+    case ^zaros_valdez : return(~bool_from_int(%secret_ghost1_backstory));
+    case ^zaros_rennard : return(~bool_from_int(%secret_ghost2_backstory));
+    case ^zaros_kharrim : return(~bool_from_int(%secret_ghost3_backstory));
+    case ^zaros_lennissa : return(~bool_from_int(%secret_ghost4_backstory));
+    case ^zaros_dhalak : return(~bool_from_int(%secret_ghost5_backstory));
+    case ^zaros_viggora : return(~bool_from_int(%secret_ghost6_backstory));
+}
+return(false);
+
+[proc,bool_from_int](int $value)(boolean)
+if ($value = 0) {
+    return(false);
+}
+return(true);
+
+[proc,zaros_ghost_set_told](int $ghost)
+switch_int ($ghost) {
+    case ^zaros_valdez : %secret_ghost1_backstory = ^true;
+    case ^zaros_rennard : %secret_ghost2_backstory = ^true;
+    case ^zaros_kharrim : %secret_ghost3_backstory = ^true;
+    case ^zaros_lennissa : %secret_ghost4_backstory = ^true;
+    case ^zaros_dhalak : %secret_ghost5_backstory = ^true;
+    case ^zaros_viggora : %secret_ghost6_backstory = ^true;
+}
+
+[proc,zaros_ghost_robe](int $ghost)(namedobj)
+switch_int ($ghost) {
+    case ^zaros_valdez : return(secret_ghost_top);
+    case ^zaros_rennard : return(secret_ghost_gloves);
+    case ^zaros_kharrim : return(secret_ghost_boots);
+    case ^zaros_lennissa : return(secret_ghost_bottom);
+    case ^zaros_dhalak : return(secret_ghost_hat);
+}
+return(secret_ghost_cloak);
+
+[proc,zaros_give_robe](int $ghost)
+def_namedobj $robe = ~zaros_ghost_robe($ghost);
+~zogre_give_or_drop($robe, 1);
+~objbox($robe, "The ghost hands you <~add_article(lowercase(oc_name($robe)))>.", 250, 0, 0);
+
+[label,zaros_ghost](int $ghost, int $seq)
+if (inv_total(worn, amulet_of_ghostspeak) = 0) {
+    @zaros_ghost_woo;
+}
+if ($ghost ! ^zaros_valdez) {
+    if ($seq ! %secret_ghost_randomiser | ~zaros_ghost_told(sub($ghost, 1)) = false) {
+        @zaros_ghost_wrong;
+    }
+}
+if (~zaros_ghost_told($ghost) = true) {
+    @zaros_ghost_again($ghost);
+}
+switch_int ($ghost) {
+    case ^zaros_valdez : @zaros_valdez;
+    case ^zaros_rennard : @zaros_rennard;
+    case ^zaros_kharrim : @zaros_kharrim;
+    case ^zaros_lennissa : @zaros_lennissa;
+    case ^zaros_dhalak : @zaros_dhalak;
+    case default : @zaros_viggora;
+}
+
+[label,zaros_ghost_woo]
+~chatplayer("<p,neutral>Hello there.");
+~chatnpc("<p,neutral>Wooo? Woooo woo woooooo wooooo woooowooo wooo woooooo woo!");
+switch_int (random(8)) {
+    case 0 :
+        ~chatplayer("<p,laugh>Yeah, I heard about that, ha-ha-ha!");
+        ~chatnpc("<p,neutral>Woo! WOO WOOOOO WOOWOOWOO WOO WOOOOO!");
+        ~chatplayer("<p,shock>With a MACKEREL? Ouch!");
+        ~chatnpc("<p,neutral>Wooowoowoooooo.... Woowoowoo? Woooo, wooowoo wooowooowooo!");
+        ~chatplayer("<p,happy>Well, it was fun. Let's do it again sometime.");
+    case 1 :
+        ~chatplayer("<p,angry>Hey, don't think you can talk to me like that!");
+        ~chatnpc("<p,neutral>Woo! WOO WOOOOO WOOWOOWOO WOO WOOOOO!");
+        ~chatplayer("<p,angry>Are you threatening me?");
+        ~chatnpc("<p,neutral>Wooowoowoooooo.... Woowoowoo? Woooo, wooowoo wooowooowooo!");
+        ~chatplayer("<p,angry>Just because you're already dead, doesn't mean I can't find a way to hurt you ghosty!");
+    case 2 :
+        ~chatplayer("<p,happy>Why, thank you very much!");
+        ~chatnpc("<p,neutral>Woo! WOO WOOOOO WOOWOOWOO WOO WOOOOO!");
+        ~chatplayer("<p,neutral>I know, but what are you going to do?");
+        ~chatnpc("<p,neutral>Wooowoowoooooo.... Woowoowoo? Woooo, wooowoo wooowooowooo!");
+        ~chatplayer("<p,neutral>Well, I guess that's always true in the long run. See you around, weird invisible dead person!");
+    case 3 :
+        ~chatplayer("<p,neutral>We get signal!");
+        ~chatnpc("<p,neutral>Woo! WOO WOOOOO WOOWOOWOO WOO WOOOOO!");
+        ~chatplayer("<p,shock>Somebody set up us the bomb!");
+        ~chatnpc("<p,neutral>Wooowoowoooooo.... Woowoowoo? Woooo, wooowoo wooowooowooo!");
+        ~chatplayer("<p,neutral>You have no chance to survive make your time.");
+        ~chatnpc("<p,confused>Woo?");
+        ~chatplayer("<p,laugh>All your base are belong to us.");
+    case 4 :
+        ~chatplayer("<p,shifty>No, I've never been there in my life and CERTAINLY didn't steal anything when I was!");
+        ~chatnpc("<p,neutral>Woo! WOO WOOOOO WOOWOOWOO WOO WOOOOO!");
+        ~chatplayer("<p,angry>Are you calling me a liar?!?! I have never stolen a thing in my life, and I resent the implication that I am the kind of morally depraved individual that would steal someone else's hard earned");
+        ~chatplayer("<p,angry>money from their very pockets!");
+        ~chatplayer("<p,shifty>Or cakes. Or fur. Repeatedly. For long periods at a time.");
+        ~chatnpc("<p,neutral>Wooowoowoooooo.... Woowoowoo? Woooo, wooowoo wooowooowooo!");
+        ~chatplayer("<p,angry>Well if you are going to take that attitude, then I have nothing further to say on the matter, and bid you good day!");
+    case 5 :
+        ~chatplayer("<p,happy>Yeah, I don't want to brag, but seriously: I am SOOOO rich....");
+        ~chatnpc("<p,neutral>Woo! WOO WOOOOO WOOWOOWOO WOO WOOOOO!");
+        ~chatplayer("<p,happy>Yeah, I know they say money doesn't bring you happiness, but sometimes I just like to open my bank account and look at all of the stuff I own and just think to myself:");
+        ~chatplayer("<p,happy>Wow. I am soooooo rich.");
+        ~chatnpc("<p,neutral>Wooowoowoooooo.... Woowoowoo? Woooo, wooowoo wooowooowooo!");
+        ~chatplayer("<p,happy>Well, us rich alive people don't want to waste all day spending time with you poor dead people, because I'm just sooooo rich I have to go now, and very possibly make myself even richer.");
+        ~chatplayer("<p,happy>See ya around ghosty!");
+    case 6 :
+        ~chatplayer("<p,quiz>You don't say?");
+        ~chatnpc("<p,neutral>Woo! WOO WOOOOO WOOWOOWOO WOO WOOOOO!");
+        ~chatplayer("<p,shock>You don't say!");
+        ~chatnpc("<p,neutral>Wooowoowoooooo.... Woowoowoo? Woooo, wooowoo wooowooowooo!");
+        ~chatplayer("<p,neutral>Well, I guess you didn't say.");
+    case default :
+        ~chatplayer("<p,neutral>Yeah it's not bad, but I prefer cooked chicken.");
+        ~chatnpc("<p,neutral>Woo! WOO WOOOOO WOOWOOWOO WOO WOOOOO!");
+        ~chatplayer("<p,happy>Maybe, but nothing beats a home cooked pie!");
+        ~chatplayer("<p,happy>Man, I love pie!");
+        ~chatnpc("<p,neutral>Wooowoowoooooo.... Woowoowoo? Woooo, wooowoo wooowooowooo!");
+        ~chatplayer("<p,neutral>You don't say? I never knew that. Well, I must be going, see you around.");
+}
+
+[label,zaros_ghost_wrong]
+switch_int (random(8)) {
+    case 0 :
+        ~chatplayer("<p,neutral>Hello there.");
+        ~chatnpc("<p,neutral>Hello.");
+        ~chatplayer("<p,quiz>So you're a ghost, huh?");
+        ~chatnpc("<p,neutral>Apparently.");
+        ~chatplayer("<p,neutral>In which case I only have one thing to say to you:");
+        ~chatplayer("<p,laugh>Woooo! Woowooooowoo, wooo WOOOOOOOOOOO woowoo woowoowoo woo!");
+        ~chatnpc("<p,confused>...what?");
+        ~chatplayer("<p,laugh>Guess you don't have the amulet of humanspeak, huh?");
+        ~chatnpc("<p,confused>...huh?");
+        ~chatplayer("<p,laugh>Yeah, that's right. WOO! WOOOWOOO WOO WOOOOWOO! Got no comeback for that, have you?");
+        ~chatnpc("<p,confused>You are very strange...");
+    case 1 :
+        ~chatplayer("<p,neutral>Hello there.");
+        ~chatnpc("<p,sad>Mortal... Take heed of my example, and waste not your life, lest you may suffer the same fate as myself...");
+        ~chatplayer("<p,quiz>Huh? You mean someone did this to you?");
+        ~chatnpc("<p,sad>You have ascertained the truth in my words...");
+        ~chatplayer("<p,quiz>So who did it to you? And why?");
+        ~chatnpc("<p,sad>Events of moons past, I remember not clearly...");
+        ~chatplayer("<p,bored>Fine help you are then.");
+    case 2 :
+        ~chatplayer("<p,neutral>Hello there.");
+        ~chatnpc("<p,sad>Please... Leave me to my fate. I have been here so long that I scarce remember aught else...");
+        ~chatplayer("<p,confused>Uh.... huh.");
+    case 3 :
+        ~chatplayer("<p,neutral>Hello there.");
+        ~chatnpc("<p,shock>You can see me?");
+        ~chatplayer("<p,confused>Uh... yes?");
+        ~chatnpc("<p,shock>And you understand my words?");
+        ~chatplayer("<p,neutral>Well, most of them...");
+        ~chatnpc("<p,shock>This is incredible! How can such a thing have come to pass?");
+        ~chatplayer("<p,happy>What can I say? I'm a professional.");
+    case 4 :
+        ~chatplayer("<p,neutral>Hello there.");
+        ~chatnpc("<p,neutral>Hello back at you.");
+        ~chatplayer("<p,happy>So what's a nice ghost like you doing in a place like this?");
+        ~chatnpc("<p,angry>I suppose you think that's funny?");
+        ~chatplayer("<p,neutral>Well... Mildly amusing I guess.");
+        ~chatnpc("<p,angry>I don't think I want to talk to you anymore.");
+    case 5 :
+        ~chatplayer("<p,neutral>Hello there.");
+        ~chatnpc("<p,neutral>Hello stranger.");
+        ~chatplayer("<p,neutral>So.... Invisible ghost haunting the same place for thousands of years, huh?");
+        ~chatplayer("<p,neutral>That's got to be a pretty rubbish way to spend your life. Er, death.");
+        ~chatnpc("<p,sad>You have no idea...");
+        ~chatplayer("<p,neutral>Well, bad luck and all that. See ya around!");
+    case 6 :
+        ~chatplayer("<p,neutral>Hello there.");
+        ~chatnpc("<p,neutral>Hello stranger. It is rare indeed that I meet one who can see my presence, let alone one who can understand my words.");
+        ~chatplayer("<p,quiz>Soooo.... Is it fun being a ghost?");
+        ~chatnpc("<p,angry>Does it look like fun to you?");
+        ~chatplayer("<p,neutral>Erm... Well, yes actually.");
+        ~chatnpc("<p,angry>Then you are a fool, and I will waste no more words upon you.");
+        ~chatplayer("<p,quiz>What, not even 'goodbye'?");
+        ~chatplayer("<p,bored>Sheesh, what a grouch. You'd think you'd have more of a sense of humour being dead and all.");
+    case default :
+        ~chatplayer("<p,neutral>Hello there.");
+        ~chatnpc("<p,sad>The endless tragedy of fate... Why must you torment me so?");
+        ~chatplayer("<p,shock>Alright, alright, calm down, calm down. All I said was 'hello'!");
+}
+
+[label,zaros_ghost_again](int $ghost)
+def_namedobj $robe = ~zaros_ghost_robe($ghost);
+switch_int ($ghost) {
+    case ^zaros_valdez :
+        ~chatnpc("<p,sad>Thank you for hearing my tale... It has been so lonely here...");
+        ~chatplayer("<p,quiz>Can you remind me where to find the thief Rennard who caused this curse to befall you again?");
+        ~chatnpc("<p,neutral>Of course...");
+        ~zaros_hint_rennard;
+    case ^zaros_rennard :
+        ~chatplayer("<p,neutral>Hello again Rennard.");
+        ~chatnpc("<p,happy>Ah, it be you again! What can I do fer ya?");
+        ~chatplayer("<p,quiz>Can you tell me where I can find Kharrim again?");
+        ~zaros_hint_kharrim;
+    case ^zaros_kharrim :
+        ~chatplayer("<p,neutral>Hello again Kharrim.");
+        ~chatplayer("<p,quiz>Can you remind me where to find Lennissa?");
+        ~zaros_hint_lennissa;
+    case ^zaros_lennissa :
+        ~chatplayer("<p,quiz>Hello Lennissa. Can you remind me where to find Dhalak?");
+        ~zaros_hint_dhalak;
+    case ^zaros_dhalak :
+        ~chatplayer("<p,quiz>Dhalak, where can I find the swordsman Viggora?");
+        ~zaros_hint_viggora;
+    case default :
+        ~chatplayer("<p,neutral>Hello.");
+        ~chatnpc("<p,neutral>Hello yourself.");
+        ~chatplayer("<p,happy>I really liked your little story. Can you tell me another one?");
+        ~chatplayer("<p,happy>Preferably something with a big fight and lots of explosions!");
+        ~chatnpc("<p,confused>...You are a very strange young <~zaros_man_woman>.");
+}
+if (~obj_gettotal($robe) > 0) {
+    return;
+}
+~chatplayer("<p,quiz>Could I have more of those ghostly robes you gave me?");
+~chatnpc("<p,neutral>It seems as though the curse that keeps me here extends to my very clothing...");
+~zaros_give_robe($ghost);
+~chatnpc("<p,neutral>Here you go.");
+
+[proc,zaros_man_woman]()(string)
+if (gender() = 1) {
+    return("woman");
+}
+return("man");
+
+[proc,zaros_lad_lass]()(string)
+if (gender() = 1) {
+    return("lass");
+}
+return("lad");
+
+[proc,zaros_hint_rennard]
+switch_int (%secret_ghost_randomiser) {
+    case 1 :
+        ~chatnpc("<p,neutral>Ah, the infamous Rennard... The last I had heard of him, he had sought passage on a ship crewed by none but the most dastardly lowly pirates...");
+        ~chatnpc("<p,neutral>I also heard that this ship had been caught in a violent storm, and stranded upon rocks, where the pirates then made their home...");
+    case 2 :
+        ~chatnpc("<p,neutral>Ah, the infamous Rennard... The last I had heard of that vile thief, he had joined a group of bandits in an evil land to the North-east of here, where they had made their home living outside of");
+        ~chatnpc("<p,neutral>the reach of the authorities that pursued them...");
+    case default :
+        ~chatnpc("<p,neutral>Ah, the infamous Rennard... The last I had heard of that vile thief, he had joined a group of bandits in a barren land to the South-east of here, where they prey upon the unsuspecting visitors to");
+        ~chatnpc("<p,neutral>the desert awaiting the return of their dark master...");
+}
+~chatplayer("<p,neutral>Okay, well I'll try and find him for you then.");
+
+[proc,zaros_hint_kharrim]
+switch_int (%secret_ghost_randomiser) {
+    case 1 :
+        ~chatnpc("<p,neutral>Kharrim the messenger... Well, he was always a devoted follower of old General Zamorak, and if I remember rightly Zamorak set up a small base in an old temple near Dareeyak...");
+        ~chatnpc("<p,neutral>You might want to check around there.");
+    case 2 : ~chatnpc("<p,neutral>Kharrim the messenger... Last I'd heard of him, he'd headed off to Carrallangar to seek his fortune. Ya might want to check around there somewhere.");
+    case default :
+        ~chatnpc("<p,neutral>Kharrim the messenger... The last I'd heard of that weasel he was claiming he'd found some underground deposit of runite ore guarded by demons and dragons.");
+        ~chatnpc("<p,neutral>I suspect he was pulling some scam or other, but if you know of such a place, that might be a good place to start checking.");
+}
+~chatplayer("<p,neutral>Okay, well I'll try and find him for you then.");
+
+[proc,zaros_hint_lennissa]
+~chatnpc("<p,neutral>Ah yes, the whereabouts of the treacherous Lennissa...");
+switch_int (%secret_ghost_randomiser) {
+    case 1 : ~chatnpc("<p,neutral>Well, she was always sickeningly obedient to Saradomin, so I would expect her to have run to some great place of worship of him if she was affected by the curse to try and gain his blessing.");
+    case 2 :
+        ~chatnpc("<p,neutral>According to Lucien's intelligence report, she had been uncovered as a spy by her constant use of ships to ferry information...");
+        ~chatnpc("<p,neutral>It is entirely possible she would be located somewhere coastal to this day!");
+    case default : ~chatnpc("<p,neutral>Well, we knew little about her or she would have been caught and exposed as a traitor and a spy, but Lucien did mention that he had evidence that she was a great fan of ball games...");
+}
+~chatplayer("<p,neutral>Okay, well I'll try and find her for you then.");
+
+[proc,zaros_hint_dhalak]
+switch_int (%secret_ghost_randomiser) {
+    case 1 :
+        ~chatnpc("<p,neutral>Dhalak? Well, he was always a knowlegeable mage, so if this curse has befallen him as well, I would suspect he would be researching how to free himself of it.");
+        ~chatnpc("<p,neutral>I would look for a library to find him if I were you.");
+    case 2 : ~chatnpc("<p,neutral>Dhalak? He was always a loyal follower of Saradomin... I think he would have found an altar to Saradomin so that he may pray for this curse to be lifted.");
+    case default : ~chatnpc("<p,neutral>Dhalak? I know not where, but he would try and make the most of his situation if he has been cursed, and find a place to lift his spirits!");
+}
+~chatplayer("<p,neutral>Okay, well I'll try and find him for you then.");
+
+[proc,zaros_hint_viggora]
+switch_int (%secret_ghost_randomiser) {
+    case 1 : ~chatnpc("<p,neutral>Ah, the evil swordsman Viggora... A rogue like him would probably flock to his own kind.");
+    case 2 : ~chatnpc("<p,neutral>Ah, the evil swordsman Viggora... Perhaps he has returned to his castle in the dark lands?");
+    case default : ~chatnpc("<p,neutral>Ah, the evil swordsman Viggora... Paddewwa was where he fought many battles, perhaps he has returned to one of his old haunts?");
+}
+~chatplayer("<p,neutral>Okay, well I'll try and find him for you then.");
+
+[proc,zaros_story_choice]()(boolean)
+if (~p_choice2("Tell me your story", 1, "Goodbye then", 2) = 1) {
+    return(true);
+}
+~chatplayer("<p,bored>Well, that's all fascinating, but I just don't particularly care. Bye-bye.");
+return(false);
+
+[label,zaros_valdez]
+~chatplayer("<p,neutral>Hello.");
+~chatnpc("<p,shock>H-hello!");
+~chatplayer("<p,quiz>So what's up?");
+~chatnpc("<p,shock>I cannot believe it! You can see me? You understand my words?");
+~chatplayer("<p,quiz>Sure can. So why are you hanging around here?");
+~chatnpc("<p,sad>My tale is one of woe... No doubt you will have little interest in hearing it...");
+~chatnpc("<p,sad>Though it has been so many moons since last I had company in this endless non-life...");
+if (~zaros_story_choice = false) {
+    return;
+}
+~chatplayer("<p,neutral>Well, actually I would like to know what happened to you to turn you into an invisible ghost.");
+~chatplayer("<p,neutral>If only so I can make sure it doesn't happen to me...");
+~chatnpc("<p,neutral>My name is Valdez. I served my Lord Saradomin faithfully for many years, as an explorer of this strange land we had been brought to.");
+~chatnpc("<p,neutral>I remember the day this curse fell upon me clearly... I had just discovered a huge temple, hidden below the ground, of one of Saradomin's compatriots.");
+~chatnpc("<p,neutral>I am unsure who had built it, or why they had left it seemingly abandoned, but inside I located a great treasure...");
+~chatnpc("<p,sad>It was the godstaff of Armadyl. Oh, how I rue my choice that day!");
+~chatplayer("<p,quiz>Choice?");
+~chatnpc("<p,neutral>Aye, stranger. I chose that day to take it so that my Lord Saradomin's power and prestige could be increased by its possession.");
+~chatnpc("<p,neutral>A god-weapon! Do you have any comprehension of the difficulty and rarity in obtaining such a thing?");
+~chatnpc("<p,neutral>To find such an artefact of power just lying around, it is almost incomprehensible...");
+~chatnpc("<p,neutral>So it was there in that deserted temple that I made my choice. I took the staff, and left that temple for Entrana immediately.");
+~chatnpc("<p,sad>This was the cause of my cursed state.");
+~chatplayer("<p,shock>What, you mean you gave it to Saradomin and in return he cursed you???");
+~chatplayer("<p,neutral>Seems kind of ungrateful if you ask me...");
+~chatnpc("<p,angry>No stranger, you misunderstand completely... Firstly my gracious Lord would never treat anyone in such a manner; If he felt it was beyond my bounds as a mere mortal");
+~chatnpc("<p,neutral>to hold such an artefact, he would simply have commanded me to return it to whence I had claimed it, and I being eternally loyal would have obeyed without question...");
+~chatplayer("<p,quiz>And secondly?");
+~chatnpc("<p,sad>And secondly, I never managed to pass the artefact on to my Lord...");
+~chatnpc("<p,angry>The vile thief Rennard accosted me as I made my way to Entrana, and after defeating me with a sneak attack, plundered the staff from my person, and left me for dead...");
+~chatnpc("<p,sad>I do not know what became of the staff, but I can feel in my very bones that whatever its final fate was, it is somehow related to this curse upon me...");
+~chatplayer("<p,neutral>Wow. Tough break.");
+~chatnpc("<p,neutral>I am sorry to bore you with my tale stranger, please allow me to compound my rudeness by asking you for one favour, small to perform?");
+~chatplayer("<p,neutral>Eh, I won't make any promises, but if it's nothing too annoying I guess I can help you out.");
+~chatnpc("<p,sad>Many thanks stranger, this existence tortures me...");
+~chatnpc("<p,neutral>I need you to find Rennard and if he has the staff yet reclaim it, or find out what hideous deed he performed to curse me so!");
+~chatnpc("<p,neutral>I have nothing I may offer you save this piece of clothing, please take it as payment...");
+if (%secret_ghost_randomiser = 0) {
+    %secret_ghost_randomiser = add(random(3), 1);
+}
+~zaros_ghost_set_told(^zaros_valdez);
+~zaros_give_robe(^zaros_valdez);
+~chatplayer("<p,quiz>Where can I find this Rennard then?");
+~zaros_hint_rennard;
+
+[label,zaros_rennard]
+~chatplayer("<p,neutral>Hello. You must be Rennard.");
+~chatnpc("<p,angry>What be this? You both see me and hear me, and also know my name?");
+~chatnpc("<p,angry>Tell me what devilry brings you here, and be quick about it afore I gut you like a fish!");
+~chatplayer("<p,neutral>Well, apart from the fact I ain't scared of no ghost, I am here because I have spoken to Valdez.");
+~chatnpc("<p,confused>Valdez? Who be that? Some foul necromancer?");
+~chatplayer("<p,neutral>No, he was a ghost I met near Glarial's tomb.");
+~chatplayer("<p,neutral>He seems convinced that the artefact you stole from him is responsible for him becoming cursed to be an invisible ghost.");
+~chatplayer("<p,neutral>Seems like he might be onto something too, given the state of you.");
+~chatnpc("<p,neutral>A curse ye say... Aye, that makes sense...");
+~chatnpc("<p,neutral>And there was I thinking my fate be the fault of the thieving and murdering I spent me life a-doing...");
+~chatnpc("<p,neutral>So it all began the day I stole that staff, ye say? Aye, that be a story I have never told another soul...");
+if (~zaros_story_choice = false) {
+    return;
+}
+~chatplayer("<p,neutral>Why don't you tell me what happened? I might be able to help...");
+~chatnpc("<p,happy>Well, I was making me merry way along, having just pulled off a glorious jewellery heist from a bunch of stinking dwarves...");
+~chatplayer("<p,angry>Hey, that's no way to talk about dwarves! Some of my best friends are short!");
+~chatnpc("<p,neutral>Ah, yer misunderstand me <~zaros_lad_lass>, I wasn't generalising about the whole dwarf species, I had just stolen a bundle of jewels from a very specific group of dwarves who happened to have an odious stench about them!");
+~chatplayer("<p,neutral>Oh. Well I guess that's okay then. Please continue.");
+~chatnpc("<p,neutral>Well, as I headed on me merry way, hoping the foul odours that lingered in me nostrils would soon pass, I see in front of me this explorer fella, all decked out in in his fine clothing, and carrying some long package");
+~chatnpc("<p,neutral>bundled in rags.");
+~chatnpc("<p,neutral>So I says to meself, 'Rennard', I says, 'Rennard, why would some fella all dressed in his finery be carrying something wrapped in dirty rags?'.");
+~chatnpc("<p,neutral>So I thinks to meself a little more, 'Rennard', I thinks, 'Rennard, maybe that fella has something valuable in there, and he covered it in dirty rags so it don't look so valuable'.");
+~chatnpc("<p,happy>So I coshed this fella round the back of his head with me bag of jewels, picked up his package and was on me merry way afore he comes to.");
+~chatplayer("<p,quiz>So what happened then?");
+~chatnpc("<p,neutral>Well, I makes me way to the closest tavern I knew of that catered to my sort of people...");
+~chatplayer("<p,quiz>You mean thieves?");
+~chatnpc("<p,neutral>Right ye are, so I makes me way to the nearest friendly tavern, and unwraps the bundle to see what it had inside.");
+~chatplayer("<p,quiz>The Staff of Armadyl?");
+~chatnpc("<p,confused>Was it? Ah, I never knew that...");
+~chatnpc("<p,neutral>Anysways, I unwraps this staff, and sees it be a god- weapon; I may be just a common thief, but I recognises a weapon not made by mortal hands when I sees one.");
+~chatplayer("<p,quiz>So what did you do then?");
+~chatnpc("<p,neutral>Well, I knew such a weapon would be of great value to...");
+~chatnpc("<p,confused>Now that's funny. Can't remember his name, now. The powerful god, lived in the North-east. Took the Mahjarrat away from under Icthlarin's");
+~chatnpc("<p,confused>control.");
+~chatnpc("<p,neutral>Anyway, I hired me a messenger to go off and let him know I had something I was prepared to sell that I thought he'd be interested in...");
+~chatnpc("<p,confused>Now WHY can't I remember his name? Very odd that...");
+~chatplayer("<p,quiz>So you sold the staff to this god you can't remember?");
+~chatnpc("<p,neutral>Well, that's the other funny thing... He never showed up, he sent some General or other instead.");
+~chatnpc("<p,neutral>Hmmm... You know... Thinking back on that, I'm getting the feeling that messenger did a little doublecross of his own, and took");
+~chatnpc("<p,angry>me message to the wrong fella.");
+~chatplayer("<p,quiz>So what was this General's name?");
+~chatnpc("<p,neutral>His name was Zamorak. I remember thinking at the time it was odd, because the fella was a mighty powerful warrior, but was never fully trusted by...");
+~chatnpc("<p,angry>WHY can't I remember his name???");
+~chatplayer("<p,quiz>So you suspect the messenger might have taken the message to the wrong person? So you think it was an accident or deliberate?");
+~chatnpc("<p,neutral>Well that I can't tell ya, but if something happened to get me cursed, it's likely the messenger would know what more than me.");
+~chatnpc("<p,angry>His name was Kharrim, and if he caused me to be stuck like this, I'm gonna fillet him like a dog, ghost or no!");
+~chatnpc("<p,happy>I tell ye what, you've given me much to think about so I'd like to offer yer a gift; Here, take these, they were the gloves I stole me first cake with, they might bring yer some luck.");
+~zaros_ghost_set_told(^zaros_rennard);
+~zaros_give_robe(^zaros_rennard);
+~chatplayer("<p,quiz>Where can I find this Kharrim then?");
+~zaros_hint_kharrim;
+
+[label,zaros_kharrim]
+~chatplayer("<p,neutral>Hello. So you must be Kharrim the messenger.");
+~chatnpc("<p,quiz>How do you know my name, stranger?");
+~chatplayer("<p,neutral>Well now... I had a very interesting chat with Rennard the thief.");
+~chatplayer("<p,neutral>It seems you redirected his message regarding a certain god-weapon for your own ends.");
+~chatnpc("<p,sad>So THAT is what this is about... I should have known the deal was too good to have no repercussions...");
+~chatplayer("<p,neutral>It seems as though you might be responsible for this curse that has befallen you by not delivering Rennard's message to the correct person.");
+~chatnpc("<p,laugh>Ha! That is not a truthful assessment of the story... You might think differently if you had heard my side of events.");
+if (~zaros_story_choice = false) {
+    return;
+}
+~chatplayer("<p,neutral>Please let me hear your side of the story then...");
+~chatnpc("<p,neutral>Well, if you have spoken to Rennard, then you will know that he had somehow managed to obtain a very valuable weapon, and was looking for buyers.");
+~chatnpc("<p,neutral>What he probably didn't tell you, was that he met me in a drunken stupor in some smoke filled tavern, and I offered to arrange a purchaser for his item, in exchange for a small finders fee.");
+~chatplayer("<p,quiz>So you knew what the staff was?");
+~chatnpc("<p,neutral>The god-staff of Armadyl? Well, of course I did.");
+~chatnpc("<p,neutral>Honestly, you would have to be pretty slow-witted to not recognise a legendary artefact such as that.");
+~chatplayer("<p,confused>Wait, I don't understand, Rennard said that he had a buyer already in mind, and that you diverted his message to a General Zamorak instead?");
+~chatnpc("<p,laugh>Ha! Here is a word of advice for you adventurer; Never trust the words of a drunk.");
+~chatnpc("<p,neutral>Whatever he might have thought he was doing with it, in the end all that happened was he left me to arrange a purchaser for the item.");
+~chatplayer("<p,quiz>So you thought you would offer it to General Zamorak?");
+~chatnpc("<p,neutral>Ah yes, Lord Zamorak. He was merely a mortal back then, you know?");
+~chatnpc("<p,neutral>Yet I could see great things in store for him even then. He had a kind of brilliant ruthlessness... And that special kind of vicious streak you see so rarely...");
+~chatnpc("<p,neutral>Well anyway, when given the task of selling a weapon forged by the very gods themselves, I naturally thought of Zamorak as a potential buyer.");
+~chatnpc("<p,neutral>I was a messenger in his employ anyway, so it was a mere trifle to find him and deliver the news, and I knew of his particular interest in armour and weaponry of all kinds.");
+~chatnpc("<p,neutral>Yes, he was always quite the connoisseur when it came to weaponry...");
+~chatnpc("<p,neutral>But I digress. I let Lord Zamorak know that there was some drunken fool with an artefact of incredible power that could probably be bought off with a few jewels and trinkets,");
+~chatnpc("<p,neutral>and he escorted me to the tavern and made the purchase there and then.");
+~chatnpc("<p,happy>It was a satisfactory deal all around, I got a share of the sale price from Rennard, and I greatly increased my prestige amongst Zamorak and his followers.");
+~chatnpc("<p,sad>But maybe... Perhaps the events that followed were responsible for my cursed state...");
+~chatplayer("<p,quiz>Events that followed?");
+~chatnpc("<p,neutral>I can not tell you of them precisely, for I myself was not there to witness them.");
+~chatnpc("<p,neutral>I am after all, simply a messenger. When... 'it' happened, I was busy elsewhere delivering a message from Zamorak to the rest of his Mahjarrat ilk.");
+~chatplayer("<p,quiz>When 'it' happened? What was 'it'?");
+~chatnpc("<p,neutral>As I have explained, I was not there, and I do not know what Zamorak did with the staff, but whatever it was resulted in his banishment by the other gods for many years.");
+~chatnpc("<p,neutral>The very strange thing was that Saradomin must have known about it, whatever it was, before it even happened...");
+~chatplayer("<p,quiz>Really? Why do you say that?");
+~chatnpc("<p,neutral>Well, it was the contents of the message I was returning to Zamorak;");
+~chatnpc("<p,neutral>Lucien seemed quite certain that there was a spy for Saradomin somewhere amongst his followers named Lennissa.");
+~chatnpc("<p,neutral>If whatever happened to the staff caused this curse to befall me, then it is certain that she too would have been afflicted, because she would have been in the very heart of the action.");
+~chatnpc("<p,neutral>Hmmm....");
+~chatnpc("<p,neutral>You have given me much to think on adventurer. I would like to reward you with my sturdy messenger boots, may they aid you in your travels.");
+~zaros_ghost_set_told(^zaros_kharrim);
+~zaros_give_robe(^zaros_kharrim);
+~chatplayer("<p,quiz>But where can I find this Lennissa?");
+~zaros_hint_lennissa;
+
+[label,zaros_lennissa]
+~chatplayer("<p,neutral>Hello. You would be Lennissa, I take it?");
+~chatnpc("<p,shock>Who are you? Where did you hear that name? How comes it that you can see and speak to me?");
+~chatplayer("<p,neutral>Well, a ghost called Kharrim directed me towards you.");
+~chatnpc("<p,angry>So that weasel Kharrim has been blighted by this curse too?");
+~chatnpc("<p,laugh>Ha, a good thing too. If anybody deserved such a fate it would be one such as him.");
+~chatplayer("<p,quiz>I guess you didn't get along then?");
+~chatnpc("<p,angry>No, evil scum such as he should never have been allowed to walk this world.");
+~chatnpc("<p,angry>What lies has he told you to come here? Have you come to try and kill me?");
+~chatplayer("<p,neutral>Well, I'm not sure I could if I tried, but that is not why I have come to you.");
+~chatnpc("<p,angry>Then speak, and speak well, for I may yet be dead, but am still a danger to those who cross me.");
+~chatplayer("<p,neutral>Actually, I'm trying to work out why all of you invisible ghosts seem to have been cursed.");
+~chatplayer("<p,neutral>I'm not sure how exactly, but the trail seems to have led me to you...");
+~chatnpc("<p,confused>That makes no sense... I served Saradomin faithfully my entire life, then all of a sudden I find myself reduced to this state!");
+~chatplayer("<p,neutral>Well, it seems as though that may have been the cause...");
+~chatnpc("<p,angry>What? Explain yourself.");
+~chatplayer("<p,neutral>As I understand it, it was something to do with the Staff of Armadyl, and your refusal to tell Saradomin that it had been stolen...");
+~chatnpc("<p,shock>What? But... But that is not how it happened at all!");
+if (~zaros_story_choice = false) {
+    return;
+}
+~chatplayer("<p,neutral>Then please, go ahead and tell me the events of that day in your own words...");
+~chatnpc("<p,neutral>Let me see... I had been working as a spy for my Lord Saradomin, amongst the forces of... the Empty Lord.");
+~chatplayer("<p,quiz>'The Empty Lord'? Who is that?");
+~chatnpc("<p,neutral>I will not give you his name, for to do so would give him power here.");
+~chatnpc("<p,neutral>Let us just say that he was a fearsome deity, whose strength was greater than all the gods we knew of on this realm at the time.");
+~chatnpc("<p,neutral>It is probably worth mentioning that at this time we had no knowledge of the mysterious nature god Guthix.");
+~chatplayer("<p,quiz>So he was stronger than Saradomin?");
+~chatnpc("<p,neutral>As Saradomin was, yes. As Saradomin is now? Who can say?");
+~chatplayer("<p,neutral>I see... Please, continue.");
+~chatnpc("<p,neutral>As I say, I was working as a spy within the very camp of my Lord's enemies.");
+~chatnpc("<p,neutral>I knew that should I have been caught, I risked being killed upon the spot, but my combat skills were always formidable, and if truth be told, there was a fair amount of dissent amongst... 'his' followers anyway.");
+~chatplayer("<p,quiz>How do you mean 'dissent'?");
+~chatnpc("<p,neutral>Ah, to not understand this, you must have led a sheltered life...");
+~chatnpc("<p,neutral>Let me tell you this: Evil will always breed more evil, and will never be satisfied with what it has.");
+~chatnpc("<p,neutral>The Empty Lord chose to ally himself with the dark creatures of this world, fully aware that their own natures would cause them to rally against his rule, and take every opportunity they could to betray him.");
+~chatnpc("<p,neutral>This has always been the nature of evil. Perhaps he thought his power could prevent such treachery?");
+~chatnpc("<p,neutral>This allowed me freedom amongst their camp, for it was always easy to point the finger of suspicion at some unsuspecting necromancer or foolish Mahjarrat if it seemed as though my activities had been discovered.");
+~chatnpc("<p,neutral>Similarly, should I ever be caught in the act of my sabotage, it was all too easy to bribe whoever found me or persuade them into believing it was just some minor treachery of my own, rather than my work for my");
+~chatnpc("<p,neutral>Lord Saradomin.");
+~chatplayer("<p,confused>Okay... Well, that makes sense, but I don't understand what the Staff of Armadyl had to do with this...?");
+~chatnpc("<p,neutral>As I have told you, the Empty Lord was extremely powerful, but not so powerful that he could rule over the other deities of this world without opposition.");
+~chatnpc("<p,neutral>Should he have made a move against any other god, then he could still have been easily brought down by the combined efforts of the others.");
+~chatnpc("<p,neutral>The theft of Armadyl's staff changed this however.");
+~chatnpc("<p,neutral>If he had taken possession of this god-weapon, then his power would have been so great that he could have overthrown all on this world, and made it into his own image!");
+~chatnpc("<p,angry>I could not allow such a thing to happen!");
+~chatnpc("<p,neutral>I went immediately to my comrade Dhalak, the mage, and told him that a message had come to the lair offering this weapon for sale!");
+~chatnpc("<p,neutral>I knew that as soon as my Lord Saradomin heard this, he would contact Armadyl to inform them of the theft, and the matter would have been resolved quickly and discreetly.");
+~chatplayer("<p,quiz>So you passed this information to Dhalak instead of taking it to Saradomin yourself?");
+~chatnpc("<p,sad>To my eternal shame, I indeed failed my Lord Saradomin...");
+~chatnpc("<p,sad>I could not risk taking the message directly, for I feared my disguise had been uncovered.");
+~chatnpc("<p,sad>Lucien particularly had been taking an unhealthy interest in my activities, and I had a gut feeling that to make any obvious moves against the Empty Lord would have been my undoing.");
+~chatnpc("<p,neutral>But Dhalak was a noble man! I cannot believe that he would not have taken my message immediately to Lord Saradomin!");
+~chatplayer("<p,neutral>Well, it seems like he didn't, but I don't know why not...");
+~chatnpc("<p,sad>Please adventurer, discover what foul fate must have befallen him for him to have neglected his duty!");
+~chatnpc("<p,neutral>I have not much to offer as reward, but for these spare robes I wore while on assignment...");
+~zaros_ghost_set_told(^zaros_lennissa);
+~zaros_give_robe(^zaros_lennissa);
+~chatnpc("<p,sad>Please find him and discover why I am cursed like this!");
+~chatplayer("<p,quiz>Where would I be able to find this Dhalak then?");
+~zaros_hint_dhalak;
+
+[label,zaros_dhalak]
+~chatplayer("<p,neutral>Hello Dhalak.");
+~chatnpc("<p,shock>You see my form, hear my words, and know my name, yet your face I recognise not...");
+~chatnpc("<p,shock>Be you some mighty sorcerer to bind me so?");
+if (stat_base(magic) >= 99) {
+    ~chatplayer("<p,happy>Well, I don't mean to brag, but I guess I am with my level 99 magic...");
+} else {
+    ~chatplayer("<p,confused>Um... Well, not really...");
+}
+~chatplayer("<p,neutral>But that is besides the point. It is not I who has trapped you here as a ghost.");
+~chatnpc("<p,quiz>Then how comes it to be that you know my name stranger?");
+~chatplayer("<p,neutral>Lennissa told me about you, and where to find you?");
+~chatnpc("<p,sad>Lennissa? Oh that poor sweet girl... Has my foolishness cursed her as well as myself???");
+~chatplayer("<p,quiz>Your foolishness?");
+~chatnpc("<p,sad>The story shames me stranger, I wouldst rather keep it unto myself.");
+if (~zaros_story_choice = false) {
+    return;
+}
+~chatplayer("<p,neutral>Look, I don't want to force you into telling me, but perhaps sharing it with someone might relieve your guilt?");
+~chatnpc("<p,sad>Aye... Perhaps it might at that.");
+~chatnpc("<p,quiz>So what has Lennissa told you of the events of the day this curse befell me?");
+~chatplayer("<p,neutral>Well, she told me that she was working as an undercover agent of Saradomin amongst the followers of some 'Empty Lord', and when news of the theft of a god-weapon reached her, she passed the message on to");
+~chatplayer("<p,neutral>you instead of taking it to Saradomin because she was scared her cover might be blown.");
+~chatnpc("<p,neutral>Aye, that is a fair account of events...");
+~chatplayer("<p,quiz>But I don't understand why you didn't take her message to Saradomin?");
+~chatnpc("<p,angry>Stranger, my foolishness was a result of my respect for Saradomin, not as a result of any attempted treachery!");
+~chatplayer("<p,quiz>So why didn't you pass on Lennissa's message? As I understand it something happened with that staff that could have been avoided if you had passed her message on!");
+~chatnpc("<p,sad>(sigh) I know not what occurred with that god-weapon, but I have my suspicions...");
+~chatnpc("<p,neutral>Let me explain myself. I was Lennissa's immediate superior, and I was often her contact for missions.");
+~chatnpc("<p,neutral>Because of this role, I had access to a larger picture of what was happening than she herself did, and I was not only well aware that her presence amongst the enemy camp had been detected, but I was also well aware that");
+~chatnpc("<p,neutral>there was a growing faction amongst them who were plotting to overthrow their master.");
+~chatplayer("<p,quiz>Their master being...?");
+~chatnpc("<p,neutral>That I will not tell you. I will tempt the fates no more than I already have done.");
+~chatnpc("<p,neutral>But anyway, it had come to my attention that the Mahjarrat who had been liberated from the control of Icthlarin did not much appreciate one form of slavery to another, and under the leadership of the mighty");
+~chatnpc("<p,neutral>Zamorak were making plans to overthrow their master and take his power for themselves.");
+~chatnpc("<p,neutral>Now, as powerful, long-lived and evil as they were, they were still just mortal, and I made the decision that it would be of benefit to my Lord Saradomin for his mightiest rival to be distracted by such internal conflicts.");
+~chatplayer("<p,quiz>So that is why you decided not to pass the report from Lennissa on?");
+~chatnpc("<p,sad>Yes, but my guilt is more than simply inaction...");
+~chatnpc("<p,sad>I knew that with such a weapon, Zamorak would be capable of launching an attack that could actually stand a chance of success, but I also knew that he would never be able to get a chance to use it in a battle for");
+~chatnpc("<p,sad>being a god-weapon its very presence would have sung out to their leader.");
+~chatplayer("<p,quiz>I'm guessing you did something about that, then?");
+~chatnpc("<p,sad>Indeed I did. To my eternal shame, I decided that I would assist Zamorak and his henchmen in their battle, by secretly casting a spell of concealment upon the staff so that");
+~chatnpc("<p,sad>they might use it secretly against their master.");
+~chatplayer("<p,quiz>So Zamorak knew about this?");
+~chatnpc("<p,neutral>No, nobody except myself, and now you, knew that I cast such a spell....");
+~chatnpc("<p,sad>Had I known what a threat to my Lord Saradomin Zamorak would later become, I wouldst have taken the message to Saradomin immediately! Alas, it is all too easy to see your mistakes after you");
+~chatnpc("<p,sad>have made them...");
+~chatplayer("<p,confused>I'm confused. What exactly happened with this staff anyway? And why have all these various random people been cursed because of it?");
+~chatnpc("<p,neutral>I cannot answer your question with anything other than my own suppositions, but I do know of one who might be able to, and if any man deserved to be cursed for their actions that day, it was he!");
+~chatplayer("<p,quiz>Who are you speaking of?");
+~chatnpc("<p,angry>His name was Viggora. He was an evil man, brutal and vicious, and deadly with a blade.");
+~chatnpc("<p,neutral>He was one of the few humans Zamorak allowed to rise to a position of power amongst his rebels, possibly because he imitated those same qualities of Zamorak.");
+~chatnpc("<p,neutral>If anyone knows what Zamorak did with that god- weapon to have caused this curse to have befallen us, it would have been he, for he would have been fighting on Zamorak's very right hand side in their rebellion.");
+~chatnpc("<p,sad>Please, if this curse can be lifted, find Viggora and find out what he has wrought upon us! I have no wealth nor magic to aid you, but take my hood as reward;");
+~zaros_ghost_set_told(^zaros_dhalak);
+~zaros_give_robe(^zaros_dhalak);
+~chatnpc("<p,neutral>it has served me well these centuries past, and may bring you luck.");
+~chatplayer("<p,quiz>Where would you suggest I look for Viggora?");
+~zaros_hint_viggora;
+
+[label,zaros_viggora]
+~chatplayer("<p,neutral>So... You must be the infamous Viggora.");
+~chatnpc("<p,angry>Hold thy tongue varlet! Speak fast, how come you to find me here, and how doth you understand mine speech?");
+~chatplayer("<p,confused>You want me to hold my tongue and tell you how I found you?");
+~chatnpc("<p,angry>Cease thy chatter and respond to my demand!");
+~chatplayer("<p,confused>Cease my chatter AND respond to your demand?");
+~chatnpc("<p,angry>I warn thee knave, this curse upon me hath not improved my temper, these centuries past...");
+~chatplayer("<p,neutral>Well, it's actually about that curse that I have come to speak to you.");
+~chatnpc("<p,neutral>Oh, be that so? Then forgive my swift anger, and speak to me of how you plan to break this curse.");
+~chatplayer("<p,neutral>Erm... I didn't actually mention anything about breaking the curse...");
+~chatnpc("<p,angry>Then what lets you dare speak to me?");
+~chatplayer("<p,neutral>Well, I heard of your name from a mage called Dhalak, and I'm trying to find out what exactly caused the curse to befall him, and you as well apparently.");
+~chatnpc("<p,laugh>Ha! So the weak-willed mage was cursed along with me?");
+~chatnpc("<p,neutral>Well now, that is an interesting turn of events... Then am I to assume that Valdez, Rennard, Kharrim and Lennissa were also cursed along with me?");
+~chatplayer("<p,shock>...How did you know that?");
+~chatnpc("<p,laugh>Ha ha ha! Oh, the curse cut deeper than I had previously thought!");
+~chatnpc("<p,happy>Stranger, this news has brought me a ray of sunshine in an otherwise dreary millennium! Please, ask any question you wish!");
+if (~zaros_story_choice = false) {
+    return;
+}
+~chatplayer("<p,neutral>Erm... Thanks, I think. So what exactly happened on that day you were all cursed?");
+~chatplayer("<p,neutral>I know that Valdez discovered the Staff of Armadyl, was robbed by Rennard, who then sent Kharrim to tell Zamorak of it.");
+~chatplayer("<p,neutral>Meanwhile Lennissa heard of the sale, and informed Dhalak who placed an enchantment upon it so that its power would be hidden.");
+~chatplayer("<p,neutral>I still don't know what happened with the staff to cause this curse, or what you had to do with it though...");
+~chatnpc("<p,neutral>Well stranger, rest yourself awhile, and I will recount a tale of the events of that day, for I was one of the few actually there when it happened...");
+~chatplayer("<p,quiz>When what happened?");
+~chatnpc("<p,happy>When my Lord Zamorak first got his taste of godhood!");
+~chatplayer("<p,bored>Wow. Sounds like quite the dinner party anecdote.");
+~chatnpc("<p,angry>You can take the snide venom out of your voice whelp, you came to me; 'twas not the other way round.");
+~chatplayer("<p,neutral>Okay, okay. Please continue.");
+~chatnpc("<p,neutral>Well now, let us see... As you may have heard tell, my affiliation lay with General Zamorak, a mighty warrior of the Mahjarrat tribe, and my skill on the battlefield had quickly brought");
+~chatnpc("<p,neutral>me to his attention.");
+~chatnpc("<p,happy>So pleased was he with my bloodlust that he promoted me on the battlefield once to serve in his honour guard, and let me tell you, this was a rare honour indeed, for I was the only human chosen to take such a position.");
+~chatplayer("<p,quiz>Really?");
+~chatnpc("<p,happy>Oh yes, the dragon riders, Mahjarrat, demons and vampyre warriors made up the bulk of the force, but I wager I was their equal in all ways of combat.");
+~chatnpc("<p,laugh>Ha, when I think of someone like Lucien struggling to lift a blade, in some ways I was even their better!");
+~chatplayer("<p,neutral>Please continue.");
+~chatnpc("<p,neutral>Well anyway... Myself and the rest of Zamoraks honour guard were formulating stratagems in our battle-tent, when that sneaky messenger Kharrim came in offering to sell us");
+~chatnpc("<p,neutral>the god-staff of Armadyl!");
+~chatnpc("<p,neutral>Naturally, we suspected that this was some trick by our Lord to test our loyalty...");
+~chatplayer("<p,quiz>Yes, who was your lord? Everyone has been very evasive about that...");
+~chatnpc("<p,angry>Quiet fool, all things in their course; You are disrupting my train of thought!");
+~chatplayer("<p,sad>Sorry...");
+~chatnpc("<p,neutral>Well anyway, we thought it was too good to be true, yet when we visited this scummy tavern we were amazed to discover there was no trick, no test of loyalty, no hidden trap:");
+~chatnpc("<p,shock>Somehow this fool had actually managed to obtain the god-staff of Armadyl!");
+~chatnpc("<p,happy>Its power was incredible, you could almost feel the energies crackling around it in the air!");
+~chatplayer("<p,quiz>So what happened then?");
+~chatnpc("<p,neutral>Well, with such a weapon, the plans we had been developing for a rebellion against our lord could finally be put into action, but we knew that we would have to act swiftly, before he heard that we had a weapon");
+~chatnpc("<p,neutral>capable of defeating him, and we would have to act decisively, for even amongst our group there were still those loyal to the lord - such as that pathetic fool Azzanadra.");
+~chatplayer("<p,angry>So JUST WHO WAS this lord you speak of?");
+~chatnpc("<p,angry>And I tell thee again, I will say when it is appropriate, now do not disrupt my tale!");
+~chatplayer("<p,neutral>Okay, carry on then...");
+~chatnpc("<p,neutral>So anyway, Lord Zamorak and his most trusted compatriots, namely myself, Hazeel, Drakan, Thammaron and Zemouregal made plans to overthrow our lord using the god-weapon, and by pledging");
+~chatnpc("<p,neutral>allegiance to Zamorak as our master, were each to be given a large piece of land as our own in return.");
+~chatnpc("<p,neutral>We decided to move immediately, before anyone got cold feet, or any other parties could interfere in our work, and made haste towards the castle where our Lord lived.");
+~chatnpc("<p,neutral>If Lucien had not been otherwise occupied, he would have probably accompanied us with his magicks, but it turned out the foolish Dhalak had made his involvement unnecessary with some spells of his own allowing us to");
+~chatnpc("<p,neutral>get close enough to the castle with the staff without the Empty Lord being able to sense its presence.");
+~chatplayer("<p,quiz>So your lord was the one that cursed you?");
+~chatnpc("<p,neutral>I am coming to that... So anyway, we made our way to the castle, under the pretense that we had war plans against Saradomin and the other deities to discuss.");
+~chatnpc("<p,neutral>As usual, our lord was guarded well, but this was why Zamorak had brought his most trusted fighters with him.");
+~chatnpc("<p,happy>While we distracted the Empty Lord with our feints and attacks, and kept his bodyguards busy, Lord Zamorak outflanked him, unsheathed the staff and plunged it into his back!");
+~chatnpc("<p,happy>Ah, it was a glorious sight... At that moment I was reminded for whom I fought, and why General Zamorak had earned his nickname 'the scourge' upon the battlefield...");
+~chatplayer("<p,quiz>And the next thing you know you were cursed?");
+~chatnpc("<p,neutral>No, it was not quite that simple... The Empty Lord turned away from our battle, eyes burning with hatred, and towards Zamorak instead. Seeing this, we all fought with extra vigour, so that");
+~chatnpc("<p,neutral>General Zamorak would not face our lord alone, but we were outnumbered by many hundreds of warriors and demons, and could not reach him to assist him!");
+~chatplayer("<p,quiz>So what then?");
+~chatnpc("<p,happy>Why, it was the Empty Lord versus Zamorak, in single combat! And the sight of the battle will be with me forever more...");
+~chatnpc("<p,neutral>The Empty Lord was a powerful god, stronger than any of the others awake at that time, possibly even as strong as Guthix is, and Zamorak was but a mortal: A Mahjarrat warrior all the same, with all of the");
+~chatnpc("<p,neutral>strength and power that that entails, but mortal nonetheless, but to see him fight, you would not think of him as a 'mere' anything...");
+~chatnpc("<p,happy>He was war itself! Flurry after flurry of blows he rained upon the Empty Lord, and the very castle walls shook and quivered with their power, but the Empty Lord would not fall!");
+~chatnpc("<p,neutral>Even with the weapon of a god embedded in his back, he fought on, and with each blow our victory seemed less and less certain...");
+~chatplayer("<p,quiz>So what then?");
+~chatnpc("<p,neutral>Well, then a miracle happened. Or luck. Or natural justice.");
+~chatnpc("<p,neutral>You can call it what you want, but as the Empty Lords hands wrapped tightly around Zamorak's throat, Lord Zamorak, kicking and screaming defiantly and radiant in his anger until the very last, plunged towards the");
+~chatnpc("<p,neutral>Empty Lord, who seemed to lose his footing slightly, and fell in such a way so that the staff plunged deeper into his body, but also impaled Lord Zamorak with it at the same time...");
+~chatnpc("<p,neutral>And then...");
+~chatplayer("<p,quiz>And then what?");
+~chatnpc("<p,neutral>And then nothing. There was a sudden flash of bright light, and then a sudden blink of cold darkness, and it was over.");
+~chatnpc("<p,neutral>Zamorak stood over the Empty Lord who was slowly... fading from existence... And as he faded, it seemed as though... It almost seemed as though Zamorak became more real,");
+~chatnpc("<p,neutral>more solid than he had been before...");
+~chatnpc("<p,sad>And as the Empty Lord faded from this world completely, I heard his voice, almost a whisper upon the wind, cursing all who had helped Zamorak in his victory, which as you now tell me seems to have been all who");
+~chatnpc("<p,sad>were responsible for the staff ending up in Zamorak's hands at the castle.");
+~chatnpc("<p,sad>As I heard it, I saw that I too was fading, just as the Empty Lord had, and I called to my brethren for their assistance, but they could no longer hear my words, nor see my form.");
+~chatnpc("<p,neutral>It was then that the other gods appeared and banished Zamorak from the world completely for daring to kill one of their kind, although as it turned out it didn't quite work out that way for them, when he returned");
+~chatnpc("<p,neutral>stronger than ever, a god himself.");
+~chatnpc("<p,neutral>But the god wars were another story entirely...");
+~chatplayer("<p,confused>But... I don't understand... If it was Zamorak who used the weapon, then why was it only you who were cursed?");
+~chatplayer("<p,confused>And the other people who were cursed, why them? Why not the other Mahjarrat for example?");
+~chatplayer("<p,quiz>And just who was this 'Empty Lord' you keep speaking of?");
+~chatnpc("<p,neutral>Well, in my life I was nothing but a warrior. I had no hidden knowledge, I didn't especially care about the gods or their magics, and I certainly didn't respect them.");
+~chatnpc("<p,neutral>Now in my... I suppose this is my death. I am but a shade on the wind, unnoticed by all who pass me, until today anyway, and the only answer I can give you is that the others who were with me, the");
+~chatnpc("<p,neutral>Mahjarrats and the Vampyre, they were beings of magic.");
+~chatnpc("<p,neutral>It runs through their very veins, and ebbs through their bones.");
+~chatnpc("<p,neutral>Who knows why the curse fell as it did? Perhaps as a mere human I was more susceptible to it, when they were not. Perhaps they too are cursed, but their life spans are so");
+~chatnpc("<p,neutral>long that it will be millennia before they feel it upon them. Perhaps because it did not affect them, it extended backwards through time, to the moment the staff was");
+~chatnpc("<p,neutral>taken from its rightful place, and all who had known of its theft were cursed too. Perhaps there are others also cursed, who played no part in this tale, and were merely unlucky enough to be");
+~chatnpc("<p,neutral>in the wrong place at the wrong time...");
+~chatnpc("<p,neutral>I don't know. Things do not always happen for a reason, just as tales do not always end with all of the loose ends neatly tied up and all answers supplied.");
+~chatnpc("<p,neutral>I have simply told you the events I was witness to, for I can do no more.");
+~chatnpc("<p,happy>You have cheered me no end to let me know that this curse that has afflicted me has not left me alone here, in this void between worlds.");
+~chatnpc("<p,neutral>Perhaps I will hunt down these others who have also been cursed as I was, but I feel I must reward you for your efforts; Here, take my cloak, it is drenched in the blood of a");
+~zaros_ghost_set_told(^zaros_viggora);
+~zaros_give_robe(^zaros_viggora);
+~chatnpc("<p,neutral>thousand foes, and may bring you luck in battle.");
+~chatplayer("<p,quiz>So how can I break this curse?");
+~chatnpc("<p,neutral>Who knows? If it was the death curse of the Empty Lord, there may be no way to break it.");
+~chatnpc("<p,neutral>If it was not his death curse, and he is still alive but not on this world, then the only way to break it may be to bring him back here;");
+~chatnpc("<p,angry>But I would rather stay cursed than suffer under his rule again...");
+~chatplayer("<p,angry>But WHO was this 'Empty Lord'? WHAT was his NAME?");
+~chatnpc("<p,shock>You do not know? You have not guessed yet?");
+~chatnpc("<p,neutral>He was Zaros.");
+mes("Congratulations! Miniquest complete!");

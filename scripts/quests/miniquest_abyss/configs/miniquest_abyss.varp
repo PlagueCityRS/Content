@@ -1,0 +1,8 @@
+[abyssal_miniquest]
+scope=perm
+
+[abyssal_warp]
+scope=perm
+
+[rcu_abyssal_layout]
+scope=perm

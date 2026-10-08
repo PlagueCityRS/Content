@@ -1,0 +1,205 @@
+[opheld1,_essence_pouch]
+def_int $level = ~essence_pouch_level(last_item);
+if (stat(runecraft) < $level) {
+    mes("You need level <tostring($level)> Runecrafting to use this pouch.");
+    return;
+}
+def_int $stored = ~essence_pouch_stored(last_item);
+def_int $capacity = ~essence_pouch_capacity(last_item);
+if ($stored >= $capacity) {
+    mes("Your pouch is full.");
+    return;
+}
+def_int $essence = inv_total(inv, blankrune);
+if ($essence = 0) {
+    mes("You do not have any essence to fill your pouch with.");
+    return;
+}
+def_int $count = min($essence, sub($capacity, $stored));
+inv_del(inv, blankrune, $count);
+~essence_pouch_set_stored(last_item, add($stored, $count));
+~essence_pouch_degrade(last_item, last_slot, $count);
+
+[opheld2,_essence_pouch]
+def_int $stored = ~essence_pouch_stored(last_item);
+if ($stored = 0) {
+    mes("Your pouch has no essence left in it.");
+    return;
+}
+def_int $count = min($stored, inv_freespace(inv));
+if ($count = 0) {
+    mes("You do not have any space in your inventory.");
+    return;
+}
+inv_add(inv, blankrune, $count);
+~essence_pouch_set_stored(last_item, sub($stored, $count));
+
+[opheld3,_essence_pouch]
+def_int $stored = ~essence_pouch_stored(last_item);
+if ($stored = 1) {
+    mes("There is 1 essence in this pouch.");
+    return;
+}
+mes("There are <tostring($stored)> essences in this pouch.");
+
+[proc,essence_pouch_level](obj $pouch)(int)
+switch_obj ($pouch) {
+    case rcu_pouch_medium, rcu_pouch_medium_degrade : return(25);
+    case rcu_pouch_large, rcu_pouch_large_degrade : return(50);
+    case rcu_pouch_giant, rcu_pouch_giant_degrade : return(75);
+}
+return(1);
+
+[proc,essence_pouch_stored](obj $pouch)(int)
+switch_obj ($pouch) {
+    case rcu_pouch_medium, rcu_pouch_medium_degrade : return(%medium_essence_pouch);
+    case rcu_pouch_large, rcu_pouch_large_degrade : return(%large_essence_pouch);
+    case rcu_pouch_giant, rcu_pouch_giant_degrade : return(%giant_essence_pouch);
+}
+return(%small_essence_pouch);
+
+[proc,essence_pouch_set_stored](obj $pouch, int $count)
+switch_obj ($pouch) {
+    case rcu_pouch_medium, rcu_pouch_medium_degrade : %medium_essence_pouch = $count;
+    case rcu_pouch_large, rcu_pouch_large_degrade : %large_essence_pouch = $count;
+    case rcu_pouch_giant, rcu_pouch_giant_degrade : %giant_essence_pouch = $count;
+    case default : %small_essence_pouch = $count;
+}
+
+[proc,essence_pouch_capacity](obj $pouch)(int)
+switch_obj ($pouch) {
+    case rcu_pouch_medium, rcu_pouch_medium_degrade :
+        if (%rcu_pouch_degradation_med >= 400) {
+            return(3);
+        }
+        return(6);
+    case rcu_pouch_large, rcu_pouch_large_degrade :
+        if (%rcu_pouch_degradation_large >= 800) {
+            return(3);
+        } else if (%rcu_pouch_degradation_large >= 600) {
+            return(5);
+        } else if (%rcu_pouch_degradation_large >= 400) {
+            return(7);
+        }
+        return(9);
+    case rcu_pouch_giant, rcu_pouch_giant_degrade :
+        if (%rcu_pouch_degradation_giant >= 1000) {
+            return(3);
+        } else if (%rcu_pouch_degradation_giant >= 800) {
+            return(5);
+        } else if (%rcu_pouch_degradation_giant >= 600) {
+            return(6);
+        } else if (%rcu_pouch_degradation_giant >= 400) {
+            return(7);
+        } else if (%rcu_pouch_degradation_giant >= 300) {
+            return(8);
+        } else if (%rcu_pouch_degradation_giant >= 200) {
+            return(9);
+        }
+        return(12);
+}
+return(3);
+
+[proc,essence_pouch_degrade](obj $pouch, int $slot, int $count)
+def_int $wear = 0;
+def_int $i = 0;
+while ($i < $count) {
+    $wear = add($wear, random(4));
+    $i = add($i, 1);
+}
+def_int $before = ~essence_pouch_capacity($pouch);
+switch_obj ($pouch) {
+    case rcu_pouch_medium, rcu_pouch_medium_degrade :
+        %rcu_pouch_degradation_med = add(%rcu_pouch_degradation_med, $wear);
+        if (%rcu_pouch_degradation_med >= 800) {
+            ~essence_pouch_destroyed($pouch, $slot);
+            return;
+        }
+        ~essence_pouch_decay_check($pouch, $slot, rcu_pouch_medium_degrade, $before);
+    case rcu_pouch_large, rcu_pouch_large_degrade :
+        %rcu_pouch_degradation_large = add(%rcu_pouch_degradation_large, $wear);
+        if (%rcu_pouch_degradation_large >= 1000) {
+            ~essence_pouch_destroyed($pouch, $slot);
+            return;
+        }
+        ~essence_pouch_decay_check($pouch, $slot, rcu_pouch_large_degrade, $before);
+    case rcu_pouch_giant, rcu_pouch_giant_degrade :
+        %rcu_pouch_degradation_giant = add(%rcu_pouch_degradation_giant, $wear);
+        if (%rcu_pouch_degradation_giant >= 1200) {
+            ~essence_pouch_destroyed($pouch, $slot);
+            return;
+        }
+        ~essence_pouch_decay_check($pouch, $slot, rcu_pouch_giant_degrade, $before);
+}
+
+[proc,essence_pouch_decay_check](obj $pouch, int $slot, namedobj $degraded, int $before)
+def_int $after = ~essence_pouch_capacity($pouch);
+if ($after >= $before) {
+    return;
+}
+if (inv_getobj(inv, $slot) ! $degraded) {
+    inv_setslot(inv, $slot, $degraded, 1);
+}
+mes("Your pouch has decayed through use.");
+def_int $stored = ~essence_pouch_stored($pouch);
+if ($stored <= $after) {
+    return;
+}
+def_int $excess = sub($stored, $after);
+~essence_pouch_set_stored($pouch, $after);
+inv_add(inv, blankrune, min($excess, inv_freespace(inv)));
+
+[proc,essence_pouch_destroyed](obj $pouch, int $slot)
+def_int $stored = ~essence_pouch_stored($pouch);
+inv_delslot(inv, $slot);
+~essence_pouch_set_stored($pouch, 0);
+inv_add(inv, blankrune, min($stored, inv_freespace(inv)));
+switch_obj ($pouch) {
+    case rcu_pouch_medium, rcu_pouch_medium_degrade : %rcu_pouch_degradation_med = 0;
+    case rcu_pouch_large, rcu_pouch_large_degrade : %rcu_pouch_degradation_large = 0;
+    case rcu_pouch_giant, rcu_pouch_giant_degrade : %rcu_pouch_degradation_giant = 0;
+}
+mes("Your pouch has decayed beyond repair.");
+
+[proc,essence_pouch_needs_repair]()(boolean)
+if (%rcu_pouch_degradation_med > 0 | %rcu_pouch_degradation_large > 0 | %rcu_pouch_degradation_giant > 0) {
+    return(true);
+}
+if (~obj_gettotal(rcu_pouch_medium_degrade) > 0 | ~obj_gettotal(rcu_pouch_large_degrade) > 0 | ~obj_gettotal(rcu_pouch_giant_degrade) > 0) {
+    return(true);
+}
+return(false);
+
+[proc,essence_pouch_repair]
+%rcu_pouch_degradation_med = 0;
+%rcu_pouch_degradation_large = 0;
+%rcu_pouch_degradation_giant = 0;
+~essence_pouch_swap(inv, rcu_pouch_medium_degrade, rcu_pouch_medium);
+~essence_pouch_swap(inv, rcu_pouch_large_degrade, rcu_pouch_large);
+~essence_pouch_swap(inv, rcu_pouch_giant_degrade, rcu_pouch_giant);
+~essence_pouch_swap(bank, rcu_pouch_medium_degrade, rcu_pouch_medium);
+~essence_pouch_swap(bank, rcu_pouch_large_degrade, rcu_pouch_large);
+~essence_pouch_swap(bank, rcu_pouch_giant_degrade, rcu_pouch_giant);
+
+[proc,essence_pouch_swap](inv $inv, namedobj $from, namedobj $to)
+def_int $count = inv_total($inv, $from);
+if ($count = 0) {
+    return;
+}
+inv_del($inv, $from, $count);
+inv_add($inv, $to, $count);
+
+[proc,essence_pouch_next_drop]()(namedobj)
+if (~obj_gettotal(rcu_pouch_small) = 0) {
+    return(rcu_pouch_small);
+}
+if (~obj_gettotal(rcu_pouch_medium) = 0 & ~obj_gettotal(rcu_pouch_medium_degrade) = 0) {
+    return(rcu_pouch_medium);
+}
+if (~obj_gettotal(rcu_pouch_large) = 0 & ~obj_gettotal(rcu_pouch_large_degrade) = 0) {
+    return(rcu_pouch_large);
+}
+if (~obj_gettotal(rcu_pouch_giant) = 0 & ~obj_gettotal(rcu_pouch_giant_degrade) = 0) {
+    return(rcu_pouch_giant);
+}
+return(null);

@@ -1,0 +1,303 @@
+[opnpc1,rcu_zammy_mage1]
+if (%abyssal_miniquest >= ^abyss_complete) {
+    if (~abyss_god_item_check = false) {
+        return;
+    }
+    ~chatnpc("<p,angry>This is no place to talk! If you need help getting out of my sight I can send you to the Abyss?");
+    if (~p_choice2("Yes, please.", 1, "No, thanks.", 2) = 1) {
+        ~chatplayer("<p,neutral>Yes, please.");
+        @abyss_teleport_in;
+    }
+    ~chatplayer("<p,neutral>No, thanks.");
+    return;
+}
+if (%abyssal_miniquest = ^abyss_not_started) {
+    if (%runemysteries < ^runemysteries_complete) {
+        ~chatnpc("<p,angry>This is no place to talk! Leave me be.");
+        return;
+    }
+    ~chatnpc("<p,neutral>Meet me in Varrock's Chaos Temple.|Here is not the place to talk.");
+    %abyssal_miniquest = ^abyss_told_varrock;
+    return;
+}
+~chatnpc("<p,angry>I already told you!|Meet me in the Varrock Chaos Temple!");
+
+[opnpc3,rcu_zammy_mage1] ~openshop_activenpc;
+
+[opnpc4,rcu_zammy_mage1]
+if (%abyssal_miniquest < ^abyss_complete) {
+    ~displaymessage(^dm_default);
+    return;
+}
+if (~abyss_god_item_check = false) {
+    return;
+}
+@abyss_teleport_in;
+
+[proc,abyss_god_item_check]()(boolean)
+if (inv_totalparam(worn, saradominitem) > 0) {
+    ~chatnpc("<p,angry>I don't speak to Saradominist filth.");
+    return(false);
+}
+if (inv_totalparam(worn, guthixitem) > 0) {
+    ~chatnpc("<p,angry>Pathetic Guthixian... Don't bother me.");
+    return(false);
+}
+return(true);
+
+[opnpc1,rcu_zammy_mage1_edge]
+if (%abyssal_miniquest < ^abyss_told_varrock) {
+    mes("He is ignoring you.");
+    return;
+}
+switch_int (%abyssal_miniquest) {
+    case ^abyss_told_varrock :
+        ~chatnpc("<p,neutral>Ah, you again.|What was it you wanted?|The Wilderness is hardly the appropriate place for a conversation now, is it?");
+        @abyss_mage_intro_menu;
+    case ^abyss_given_orb : @abyss_mage_orb;
+    case ^abyss_returned_orb : @abyss_mage_reward;
+    case default : @abyss_mage_post_menu;
+}
+
+[label,abyss_mage_intro_menu]
+switch_int (~p_choice4("I'd like to buy some runes!", 1, "Where do you get your runes from?", 2, "All hail Zamorak!", 3, "Nothing, thanks.", 4)) {
+    case 1 :
+        ~chatplayer("<p,happy>I'd really like to buy some runes!");
+        ~chatnpc("<p,angry>I do not conduct business in this pathetic city.|Speak to me in the wilderness if you desire to purchase runes from me.");
+        ~chatplayer("<p,sad>Oh, please!");
+        ~chatnpc("<p,angry>No.");
+        ~chatplayer("<p,sad>Please?");
+        ~chatnpc("<p,angry>No!");
+        ~chatplayer("<p,sad>Pretty please with sugar and cherries on top?");
+        ~chatnpc("<p,angry>NO!");
+        ~chatplayer("<p,sad>Pleeeeeeeeeease!");
+        ~chatnpc("<p,angry>Stranger, I warn you I have a low tolerance for idiocy.");
+        ~chatnpc("<p,angry>Now are you going to stand here all day annoying me, or was there something that you actually wanted?");
+        @abyss_mage_intro_menu;
+    case 2 : @abyss_mage_where_runes;
+    case 3 :
+        ~chatplayer("<p,happy>All hail Zamorak!|He's the man!|If he can't do it, maybe some other guy can!");
+        ~chatnpc("<p,confused>...Okay.|I appreciate your enthusiasm for Lord Zamorak stranger, but what exactly was it that you wanted?");
+        @abyss_mage_intro_menu;
+    case 4 :
+        ~chatplayer("<p,neutral>I didn't really want anything, thanks.|I just like talking to random people I meet around the world.");
+        ~chatnpc("<p,angry>...I see.|Well, in the future, do not waste my time, or you will feel the wrath of Zamorak upon you.");
+}
+
+[label,abyss_mage_where_runes]
+~chatplayer("<p,quiz>Where do you get your runes from?|No offence, but people around here don't exactly like 'your type'.");
+~chatnpc("<p,angry>My 'type'? Explain.");
+~chatplayer("<p,neutral>You know...|Scary bearded men in dark clothing with unhealthy obsessions with destruction and stuff.");
+~chatnpc("<p,neutral>Hmmm.|Well, you may be right, the foolish Saradominists that own this pathetic city don't appreciate loyal Zamorakians, it is true.");
+~chatplayer("<p,neutral>So you can't be getting your runes anywhere around here...");
+~chatnpc("<p,neutral>That is correct, stranger. The Zamorakian Brotherhood has a method of manufacturing runes that it keeps a closely guarded secret.");
+~chatplayer("<p,happy>Oh, you mean the whole teleporting to the rune essence mine, mining some essence, then using the talismans to locate the Rune Temples, then binding runes there? I know all about it...");
+~chatnpc("<p,shock>WHAT?|I... but... you...");
+~chatnpc("<p,shock>Tell me, this is important:|You have access to the rune essence mine? The Saradominist wizards will cast their teleport spell for you?");
+~chatplayer("<p,quiz>You mean they won't cast it for you?");
+~chatnpc("<p,angry>No, not at all. Ever since the Saradominist wizards betrayed us a hundred years ago and blamed us for the destruction of the Wizards' Tower, they have refused to share information with our order.");
+~chatnpc("<p,neutral>We occasionally manage to plunder small samples of rune essence but we have had to make do without a reliable supply. But if they trust you...this changes everything.");
+~chatplayer("<p,quiz>How do you mean?");
+~chatnpc("<p,neutral>For many years there has been a struggle for power on this world.|You may dispute the morality of each side as you wish, but the stalemate that exists between my Lord Zamorak");
+~chatnpc("<p,neutral>and that pathetic meddling fool Saradomin has meant that our struggles have become more secretive. We exist in a 'cold war' if you will, each side fearful of letting the other gain too much power, and each side");
+~chatnpc("<p,neutral>equally fearful of entering into open warfare for fear of bringing our struggles to the attention of... other beings.");
+~chatplayer("<p,quiz>You mean Guthix?");
+~chatnpc("<p,neutral>Indeed. Amongst others.");
+~chatnpc("<p,neutral>But since the destruction of the first Tower the Saradominist wizards have had exclusive access to the rune essence mine, which has shifted the balance of power dangerously towards one side.");
+~chatnpc("<p,neutral>I implore you adventurer, you may or may not agree with my aims, but you cannot allow such a shift in the balance of power to continue.");
+~chatnpc("<p,neutral>Will you help me and my fellow Zamorakians to access the essence mine? In return I will share with you the research we have gathered.");
+if (~p_choice2_header("Yes", 1, "No", 2, "Help the Zamorakian mage?") = 2) {
+    ~chatplayer("<p,angry>No, I don't want anything to do with you and trying to bribe me into helping isn't going to work on me.");
+    ~chatnpc("<p,neutral>As you wish, stranger.|I will achieve my goals elsewhere.");
+    return;
+}
+~chatplayer("<p,neutral>Okay, I'll help you.|What can I do?");
+~chatnpc("<p,neutral>All I need from you is the spell that will teleport me to this essence mine.|That should be sufficient for the armies of Zamorak to once more begin stockpiling magic for war.");
+~chatplayer("<p,confused>Oh.|Erm....|I don't actually know that spell.");
+~chatnpc("<p,shock>What?|Then how do you access this location?");
+~chatplayer("<p,neutral>Oh, well, people who do know the spell teleport me there directly.|Apparently they wouldn't teach it to me to try and keep the location secret.");
+~chatnpc("<p,neutral>Hmmm.|Yes, yes I see.|Very well then, you may still assist us in finding this mysterious essence mine.");
+~chatplayer("<p,quiz>How would I do that?");
+if (inv_freespace(inv) < 1) {
+    ~chatnpc("<p,angry>Come and speak to me again when you have some free space in your inventory.");
+    return;
+}
+inv_add(inv, scrying_orb_empty, 1);
+%abyssal_miniquest = ^abyss_given_orb;
+~chatnpc("<p,neutral>Here, take this scrying orb.|I have cast a standard cypher spell upon it, so that it will absorb mystical energies that it is exposed to.");
+~chatnpc("<p,neutral>Bring it with you and teleport to the rune essence location, and it will absorb the mechanics of the spell and allow us to reverse-engineer the magic behind it.");
+~chatnpc("<p,neutral>The important part is that you must teleport to the essence location from three entirely separate locations.");
+~chatnpc("<p,neutral>More than three may be helpful to us, but we need a minimum of three in order to triangulate the position of this essence mine.");
+~chatnpc("<p,quiz>Is that all clear, stranger?");
+~chatplayer("<p,neutral>Yeah, I think so.");
+~chatnpc("<p,neutral>Good.|If you encounter any difficulties speak to me again.");
+
+[label,abyss_mage_orb]
+~chatnpc("<p,quiz>Well?|Have you managed to use my scrying orb to obtain the information yet?");
+if (inv_total(inv, scrying_orb_full) > 0) {
+    ~chatplayer("<p,happy>Yes I have!|I've got it right here!");
+    inv_del(inv, scrying_orb_full, 1);
+    %abyssal_miniquest = ^abyss_returned_orb;
+    ~chatnpc("<p,happy>Excellent.|Give it here, and I shall examine the findings.|Speak to me in a small while.");
+    return;
+}
+if (~obj_gettotal(scrying_orb_full) > 0) {
+    ~chatplayer("<p,neutral>Yes I have, but the orb is in my bank.");
+    ~chatnpc("<p,angry>Then bring it here, fool!");
+    return;
+}
+if (~obj_gettotal(scrying_orb_empty) = 0) {
+    ~chatplayer("<p,sad>Uh...|No....|I kind of lost that orb thingy that you gave me...");
+    if (inv_freespace(inv) < 1) {
+        ~chatnpc("<p,angry>I can offer a replacement, but not if you have no room to accept it, fool.");
+        return;
+    }
+    inv_add(inv, scrying_orb_empty, 1);
+    ~chatnpc("<p,angry>What?|Incompetent fool.|Take this. And do not make me regret allying myself with you.");
+    ~chatplayer("<p,neutral>Actually, I had something I wanted to ask you...");
+} else {
+    ~chatplayer("<p,neutral>No...|Actually, I had something I wanted to ask you...");
+}
+~chatnpc("<p,bored>I assumed the task to be self-explanatory. What is it you wish to know?");
+@abyss_mage_task_menu;
+
+[label,abyss_mage_task_menu]
+switch_int (~p_choice4("What am I supposed to be doing again?", 1, "What's in this for me, anyway?", 2, "You're not going to use this for evil are you?", 3, "Can I have another crystal ball thing?", 4)) {
+    case 1 :
+        ~chatplayer("<p,confused>Please excuse me, I have a very bad short term memory. What exactly am I supposed to be doing again?");
+        ~chatnpc("<p,bored>I am slightly concerned about your capability for this mission, if you cannot even recall such a simple task...");
+        ~chatnpc("<p,neutral>All I wish for you to do is to teleport to this 'rune essence' location from three different locations while carrying the scrying orb I gave you.|It will collect the data as you teleport, and if you then");
+        ~chatnpc("<p,neutral>bring it to me I will be able to use it to further my own investigations.");
+        ~chatplayer("<p,quiz>So you want me to teleport to the rune essence mine while carrying the scrying ball?");
+        ~chatnpc("<p,neutral>That is correct.");
+        ~chatplayer("<p,quiz>And I need to teleport into the essence mine from three different locations?");
+        ~chatnpc("<p,neutral>That is also correct.");
+        ~chatplayer("<p,neutral>Okay...|I think I understand that...");
+        ~chatnpc("<p,neutral>That is good to know.|Is there something else you need clarifying?");
+        @abyss_mage_task_more;
+    case 2 :
+        ~chatplayer("<p,neutral>I just want to know one thing:|What's in this for me?");
+        ~chatnpc("<p,neutral>Well now, I can certainly understand that attitude.");
+        ~chatnpc("<p,neutral>From what you tell me, the Saradominist wizards have given you access to the rune essence mine, but your method of reaching the temples used to bind this essence is random and counter-productive.");
+        ~chatnpc("<p,neutral>I, on the other hand, have information on quickly accessing these temples, yet my methods of procuring essence are time consuming and useless as a means of mass production.");
+        ~chatnpc("<p,neutral>I think you can see for yourself how this may benefit both of us: you allow me the knowledge of finding plentiful essence, and I will in return show you the secret of these temples.");
+        ~chatplayer("<p,neutral>Yeah, okay, fair enough.");
+        ~chatnpc("<p,quiz>Was there anything else?");
+        @abyss_mage_task_more;
+    case 3 :
+        ~chatplayer("<p,neutral>If I help you with this...|I'd just like to keep my conscience clear and know that you're not going to use whatever information I give to you in the pursuit of evil and badness and stuff.");
+        ~chatnpc("<p,neutral>Very well, if it makes you feel any better;|I promise you that any knowledge you provide me with, absolutely will not be used in the service of anything more evil than what I was already planning on doing anyway.");
+        ~chatnpc("<p,neutral>I hope that sets your conscience at rest.");
+        ~chatplayer("<p,confused>You know...|In a weird way it actually does...");
+        @abyss_mage_task_more;
+    case 4 :
+        ~chatplayer("<p,happy>This crystal ball thingy is kind of nifty.|Can I have another one?");
+        ~chatnpc("<p,angry>It is not a 'crystal ball thingy'.|It is a precision made magical instrument called a scrying orb.|Do you have some particular need for another one?");
+        ~chatplayer("<p,neutral>Not really, I just like to fill up my bank with cool looking stuff.");
+        ~chatnpc("<p,angry>Then no, no you may not have another one. One will be sufficient for the task at hand.");
+        ~chatplayer("<p,sad>Erm...|But I lost the one you gave me...|Can I have another one then?");
+        if (inv_total(inv, scrying_orb_empty) > 0) {
+            ~chatnpc("<p,angry>No you haven't.|I can see that you have it there in your backpack.|Now quit your foolishness and get on with the task in hand!");
+        } else {
+            ~chatnpc("<p,angry>No you haven't.|You have it in your bank.|Now get on with it!");
+        }
+        @abyss_mage_task_more;
+}
+
+[label,abyss_mage_task_more]
+switch_int (~p_choice4("What am I supposed to be doing again?", 1, "What's in this for me, anyway?", 2, "You're not going to use this for evil are you?", 3, "Nope, that's it!", 4)) {
+    case 4 :
+        ~chatplayer("<p,neutral>No, I think I have everything clear in my head now.");
+        ~chatnpc("<p,neutral>That is good to hear, stranger.|Bring me my orb back when you have successfully made those teleports.");
+        ~chatplayer("<p,happy>Sure thing, boss.");
+        ~chatnpc("<p,angry>And don't call me 'boss'.");
+    case default : @abyss_mage_task_menu;
+}
+
+[label,abyss_mage_reward]
+~chatplayer("<p,neutral>So... that's my end of the deal upheld.|What do I get in return?");
+if (inv_freespace(inv) < 2) {
+    ~chatnpc("<p,neutral>You do not have the free space for your reward.|Go to the bank and free-up some space, I shall remain here until your return.");
+    return;
+}
+~chatnpc("<p,neutral>Indeed, a deal is always a deal.");
+~chatnpc("<p,neutral>I offer you three things as a reward for your efforts on behalf of my Lord Zamorak;");
+~chatnpc("<p,neutral>The first is knowledge.|I offer you my collected research on the abyss.|I also offer you 1000 points of experience in RuneCrafting for your trouble.");
+~chatnpc("<p,neutral>Your second gift is convenience.|Here, you may take this pouch I discovered amidst my research.|You will find it to have certain... interesting properties.");
+~chatnpc("<p,neutral>Your final gift is that of movement.|I will from now on offer you a teleport to the abyss whenever you should require it.");
+~chatplayer("<p,confused>Huh?|Abyss?|What are you talking about?|You told me that you would help me with RuneCrafting!");
+~chatnpc("<p,neutral>And so I have done.|Read my research notes, they may enlighten you somewhat.");
+queue(abyss_miniquest_complete, 0, 0);
+
+[queue,abyss_miniquest_complete]
+if (%abyssal_miniquest ! ^abyss_returned_orb) {
+    return;
+}
+%abyssal_miniquest = ^abyss_complete;
+stat_advance(runecraft, 10000);
+~zogre_give_or_drop(rcu_instruction_book, 1);
+~zogre_give_or_drop(rcu_pouch_small, 1);
+~doubleobjbox(rcu_instruction_book, rcu_pouch_small, "The Mage of Zamorak hands you a book and a pouch.", 250);
+mes("Congratulations! Miniquest complete!");
+
+[label,abyss_mage_post_menu]
+switch_int (~p_choice3("So what is this 'abyss' stuff?", 1, "Is this abyss dangerous?", 2, "Can you teleport me there now?", 3)) {
+    case 1 :
+        ~chatplayer("<p,confused>I really don't see how this talk about an 'abyss' relates to RuneCrafting in the slightest...");
+        ~chatnpc("<p,neutral>My primary research responsibility was not towards the manufacture of runes, this is true. Rather, I was investigating an error that occurred to one of our initiates in a routine teleportation experiment.");
+        ~chatnpc("<p,neutral>My discovery was this 'abyssal' space, and as a side effect, as documented in the research notes I have given you, I discovered the existence of these 'temples' used to create runes.");
+        ~chatnpc("<p,neutral>Fortunate for both of us, I would say. As I say, read my research notes, it should all become clear. My colleague inside the abyss may be of help to you as well.");
+        @abyss_mage_post_menu;
+    case 2 :
+        ~chatplayer("<p,quiz>This 'abyss' place... Is it dangerous?");
+        ~chatnpc("<p,neutral>Well, the creatures there ARE particularly offensive...");
+        ~chatplayer("<p,quiz>You mean they smell?");
+        ~chatnpc("<p,neutral>No, I mean they hunt and attack any visitors to their dimension on sight. This is not the danger however.");
+        ~chatplayer("<p,quiz>It's not?");
+        ~chatnpc("<p,neutral>No. Unfortunately the magic we have had to use to retain a portal to the abyss open and effective is derived from Lord Zamorak himself.");
+        ~chatplayer("<p,confused>And that's a bad thing somehow...?");
+        ~chatnpc("<p,neutral>Well, he has his occasional quirks. In this case it means that when you enter this dimension your prayer will be drained. This makes it somewhat more dangerous than other places you may be used to.");
+        ~chatplayer("<p,neutral>I see...");
+        ~chatnpc("<p,quiz>Was there anything else you wanted?");
+        @abyss_mage_post_menu;
+    case 3 :
+        ~chatplayer("<p,happy>Well, I reckon I'm prepared to go there now. Beam me there, or whatever it is that you do!");
+        ~chatnpc("<p,neutral>No, not from here. The use of my Lord Zamorak's magic in this land will draw too much attention to myself. Meet me in the wilderness where you spoke to me before, and right click to find the 'teleport' option.");
+        ~chatnpc("<p,neutral>I trust you do not wish to have too lengthy a conversation in such a dangerous place.");
+        ~chatplayer("<p,neutral>You're right, I don't!");
+        ~chatnpc("<p,neutral>I should be able to improve my stock of runes thanks to your assistance locating the essence site too, so feel free to stop by if you require any specific runes.");
+        ~chatplayer("<p,happy>Okay, thanks!");
+}
+
+[proc,abyss_scrying_orb_record](coord $teleporter)
+if (%abyssal_miniquest ! ^abyss_given_orb | inv_total(inv, scrying_orb_empty) = 0) {
+    return;
+}
+switch_coord ($teleporter) {
+    case ^essence_mine_to_aubury : %rcu_essencespot_aubury = ^true;
+    case ^essence_mine_to_sedridor : %rcu_essencespot_wizardstower = ^true;
+    case ^essence_mine_to_cromperty : %rcu_essencespot_cromperty = ^true;
+    case ^essence_mine_to_brimstail : %rcu_essencespot_brimstail = ^true;
+    case ^essence_mine_to_disentor : %rcu_essencespot_wizardsguild = ^true;
+}
+if (add(add(add(add(%rcu_essencespot_aubury, %rcu_essencespot_wizardstower), %rcu_essencespot_cromperty), %rcu_essencespot_brimstail), %rcu_essencespot_wizardsguild) < 3) {
+    return;
+}
+inv_del(inv, scrying_orb_empty, 1);
+inv_add(inv, scrying_orb_full, 1);
+mes("Your scrying orb has absorbed enough teleport information.");
+
+[opheld1,rcu_instruction_book]
+%book_page = 0;
+%open_book = rcu_instruction_book;
+@book_flip_page(0, 0, 5, abyssal_book);
+
+[proc,abyssal_book]
+switch_int (%book_page) {
+    case 0 : ~book("Abyssal Research", "A Compendium of Research Into Chaotic Space.||Author Unknown|||The strange dimension that we have named 'Abyssal Space' is something of an enigma.|It was first discovered during a routine teleportation experiment that seemingly went wrong.|We are still not sure as to what caused this teleportation failure, but the discovery of a previously unknown dimension led to a flurry of research from the Zamorakian Magical Institute (henceforth known within this document as the Z. M. I.).");
+    case 1 : ~book("Abyssal Research", "Under direct orders to examine this dimension, I feel I can accurately state the following conclusions.||Conclusion One||Abyssal Space is not a dimension in the way that we understand the term from examples such as Zanaris. Rather, it is the name we have given the dimension that exists between other more developed dimensions - the 'glue' that keeps each dimension together yet separate, if you will.");
+    case 2 : ~book("Abyssal Research", "The Abyssal space's existence at the 'fringe' of reality, means that it does not conform to the same guidelines of space and time as our world does; you may enter it and then leave it from an identical spot, yet reappear many hundreds of miles at your target destination (the 'teleportation' phenomenon that we use daily).|From this basic concept, I have extrapolated that all teleport magics in fact use Abyssal Space to make the passing of great distances occur in a very short space of time, from our perception.");
+    case 3 : ~book("Abyssal Research", "Conclusion Two||When we have accepted that Abyssal Space is somewhat of a tesseract or hypercube with a direct relation to our dimension, then the benefits of exploiting this resource become more obvious.|Certain creatures of the abyss contain unnecessary surplus organs that may be harvested to provide carrying pouches for various magically-unstable objects.|I ran some experiments with Sample XJ13 (also known as 'rune essence') and managed to place six parts in a space that would seemingly only hold one.");
+    case 4 : ~book("Abyssal Research", "Continued experimentation with these stolen samples showed that moving items between our dimension and abyssal space degraded the use of these pouches, but a simple transfiguration spell when cast within the abyss upon these pouches restored their usage back to the original results.||Conclusion Three||We took a large number of initiates, and gave them each supplies to cast a portal spell. Once one of our initiates had managed to 'fail' his teleport and appear in Abyssal Space, he was then charged with remaining there and holding a portal spell open.");
+    case 5 : ~book("Abyssal Research", "The only downside to this method of teleportation is that we are using magic provided to us by our Lord Zamorak himself, so anybody who uses this teleport will inevitably be marked by him - or become 'skulled' as the common folk put it.|An interesting side-effect of this portal, is that various teleports within Abyssal Space were opened up by its casting. These teleports seem to lead to mysterious temples dedicated to various magical elements.||Strength Through Chaos!");
+}

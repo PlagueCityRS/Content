@@ -1,0 +1,39 @@
+[scrying_orb_full]
+name=Scrying orb
+desc=This contains mystical teleport information...
+2dyof=-1
+2dzoom=540
+model=obj_5518
+members=yes
+weight=1kg
+tradeable=no
+
+[scrying_orb_empty]
+name=Scrying orb
+desc=This orb apparently contains a cypher spell.
+2dyof=-1
+2dzoom=540
+model=obj_5519
+members=yes
+weight=1kg
+tradeable=no
+
+[rcu_instruction_book]
+name=Abyssal book
+recol1s=29594
+recol1d=12704
+recol2s=31457
+recol2d=13378
+recol3s=22689
+recol3d=27747
+desc=Some research notes on abyssal space.
+cost=10
+model=obj_4705
+members=yes
+2dyof=26
+2dzoom=750
+2dyan=124
+2dxan=276
+iop1=Read
+weight=1lb
+tradeable=no

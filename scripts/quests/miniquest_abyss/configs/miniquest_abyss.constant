@@ -1,0 +1,5 @@
+^abyss_not_started = 0
+^abyss_told_varrock = 1
+^abyss_given_orb = 2
+^abyss_returned_orb = 3
+^abyss_complete = 4

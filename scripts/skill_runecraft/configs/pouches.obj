@@ -1,0 +1,128 @@
+[rcu_pouch_small]
+name=Small pouch
+cost=150
+desc=A small pouch used for storing essence.
+members=yes
+model=obj_5509
+2dzoom=520
+2dyan=108
+2dxan=216
+iop1=Fill
+iop2=Empty
+iop3=Check
+weight=1g
+category=essence_pouch
+
+[rcu_pouch_medium]
+name=Medium pouch
+cost=300
+desc=A medium-sized pouch used for storing essence.
+members=yes
+model=obj_5510
+2dzoom=650
+2dyan=64
+2dxan=188
+iop1=Fill
+iop2=Empty
+iop3=Check
+weight=1g
+category=essence_pouch
+
+[rcu_pouch_medium_degrade]
+name=Medium pouch
+recol1s=10501
+recol1d=6308
+recol2s=14727
+recol2d=11524
+recol3s=15820
+recol3d=11624
+recol4s=6273
+recol4d=4224
+cost=300
+desc=A damaged medium-sized pouch used for storing essence.
+members=yes
+model=obj_5510
+2dzoom=650
+2dyan=64
+2dxan=188
+iop1=Fill
+iop2=Empty
+iop3=Check
+weight=1g
+category=essence_pouch
+
+[rcu_pouch_large]
+name=Large pouch
+cost=600
+desc=A large pouch used for storing essence.
+members=yes
+model=obj_5512
+2dyof=2
+2dzoom=760
+2dyan=96
+2dxan=132
+iop1=Fill
+iop2=Empty
+iop3=Check
+weight=1g
+category=essence_pouch
+
+[rcu_pouch_large_degrade]
+name=Large pouch
+recol1s=10501
+recol1d=6308
+recol2s=14727
+recol2d=11524
+recol3s=15820
+recol3d=11624
+recol4s=6273
+recol4d=4224
+cost=600
+desc=A large damaged pouch used for storing essence.
+members=yes
+model=obj_5512
+2dyof=2
+2dzoom=760
+2dyan=96
+2dxan=132
+iop1=Fill
+iop2=Empty
+iop3=Check
+weight=1g
+category=essence_pouch
+
+[rcu_pouch_giant]
+name=Giant pouch
+cost=1200
+desc=A giant-sized pouch used for storing essence.
+members=yes
+model=obj_5514
+2dzoom=760
+2dxan=128
+iop1=Fill
+iop2=Empty
+iop3=Check
+weight=1g
+category=essence_pouch
+
+[rcu_pouch_giant_degrade]
+name=Giant pouch
+recol1s=10501
+recol1d=6308
+recol2s=14727
+recol2d=11524
+recol3s=15820
+recol3d=11624
+recol4s=6273
+recol4d=4224
+cost=1200
+desc=A damaged giant-sized pouch used for storing essence.
+members=yes
+model=obj_5514
+2dzoom=760
+2dxan=128
+iop1=Fill
+iop2=Empty
+iop3=Check
+weight=1g
+category=essence_pouch

@@ -1,0 +1,291 @@
+[label,abyss_teleport_in]
+if_close;
+npc_facesquare(coord);
+npc_anim(human_teleport_other_casting, 0);
+spotanim_npc(teleport_other_casting, 92, 0);
+npc_say("Veniens! Sallakar! Rinnesset!");
+p_delay(1);
+anim(human_teleport_other_impact, 0);
+spotanim_pl(teleport_other_impact, 0, 0);
+sound_synth(teleport_all, 1, 0);
+p_delay(2);
+def_int $layout = random(12);
+%rcu_abyssal_layout = $layout;
+%rcu_abyssal_generator = $layout;
+p_telejump(enum(int, coord, abyss_spawn_coords, add($layout, 1)));
+stat_sub(prayer, stat(prayer), 0);
+~pk_skull(^pk_skull_duration);
+
+[oploc1,rcu_outer_multi1] @abyss_obstacle;
+[oploc1,rcu_outer_multi2] @abyss_obstacle;
+[oploc1,rcu_outer_multi3] @abyss_obstacle;
+[oploc1,rcu_outer_multi4] @abyss_obstacle;
+[oploc1,rcu_outer_multi5] @abyss_obstacle;
+[oploc1,rcu_outer_multi6] @abyss_obstacle;
+[oploc1,rcu_outer_multi7] @abyss_obstacle;
+[oploc1,rcu_outer_multi8] @abyss_obstacle;
+[oploc1,rcu_outer_multi9] @abyss_obstacle;
+[oploc1,rcu_outer_multi10] @abyss_obstacle;
+[oploc1,rcu_outer_multi11] @abyss_obstacle;
+[oploc1,rcu_outer_multi12] @abyss_obstacle;
+
+[label,abyss_obstacle]
+if (%rcu_abyssal_generator ! %rcu_abyssal_layout) {
+    return;
+}
+def_int $index = loc_param(abyss_obstacle_index);
+def_loc $type = enum(int, loc, abyss_obstacle_types, add(multiply($index, 100), %rcu_abyssal_layout));
+def_coord $dest = enum(int, coord, abyss_inner_coords, $index);
+switch_loc ($type) {
+    case rcu_abyssal_barrier_teeth1 : @abyss_mine($dest);
+    case rcu_abyssal_barrier_tendrils1 : @abyss_chop($dest);
+    case rcu_abyssal_barrier_boil1 : @abyss_burn($dest);
+    case rcu_abyssal_barrier_eyes1 : @abyss_distract($dest);
+    case rcu_abyssal_barrier_agility : @abyss_squeeze($dest);
+    case rcu_blankmodel : @abyss_passage($dest);
+    case default : ~displaymessage(^dm_default);
+}
+
+[proc,abyss_obstacle_roll](stat $stat)(boolean)
+if (random(100) < add(stat($stat), 1)) {
+    return(true);
+}
+return(false);
+
+[label,abyss_mine](coord $dest)
+def_obj $pickaxe = ~pickaxe_checker;
+if ($pickaxe = null) {
+    mes("You need a pickaxe to mine your way through this rock.");
+    return;
+}
+mes("You attempt to mine your way through...");
+anim(oc_param($pickaxe, mining_animation), 0);
+sound_synth(mine_quick, 1, 0);
+%rcu_abyssal_generator = 12;
+p_delay(2);
+if (~abyss_obstacle_roll(mining) = false) {
+    anim(null, 0);
+    %rcu_abyssal_generator = %rcu_abyssal_layout;
+    mes("...but fail to break-up the rock.");
+    return;
+}
+%rcu_abyssal_generator = 13;
+mes("...and manage to break through the rock.");
+stat_advance(mining, 250);
+@abyss_pass_obstacle($dest);
+
+[label,abyss_chop](coord $dest)
+def_namedobj $axe = ~woodcutting_axe_checker(false);
+if ($axe = null) {
+    mes("You need an axe to chop your way through these tendrils.");
+    return;
+}
+mes("You attempt to chop your way through...");
+anim(oc_param($axe, woodcutting_anim), 0);
+sound_synth(woodchop, 1, 0);
+%rcu_abyssal_generator = 14;
+p_delay(2);
+if (~abyss_obstacle_roll(woodcutting) = false) {
+    anim(null, 0);
+    %rcu_abyssal_generator = %rcu_abyssal_layout;
+    mes("...but fail to cut through the tendrils.");
+    return;
+}
+%rcu_abyssal_generator = 15;
+mes("...and manage to cut a way through the tendrils.");
+stat_advance(woodcutting, 250);
+@abyss_pass_obstacle($dest);
+
+[label,abyss_burn](coord $dest)
+if (inv_total(inv, tinderbox) = 0) {
+    mes("You need a tinderbox to burn your way through this boil.");
+    return;
+}
+mes("You attempt to burn your way through...");
+anim(human_createfire, 0);
+sound_synth(tinderbox_strike, 1, 0);
+%rcu_abyssal_generator = 16;
+p_delay(2);
+if (~abyss_obstacle_roll(firemaking) = false) {
+    anim(null, 0);
+    %rcu_abyssal_generator = %rcu_abyssal_layout;
+    mes("...but fail to set it alight.");
+    return;
+}
+%rcu_abyssal_generator = 17;
+mes("...and manage to burn it down and get past.");
+stat_advance(firemaking, 250);
+@abyss_pass_obstacle($dest);
+
+[label,abyss_distract](coord $dest)
+mes("You use your thieving skills to misdirect the eyes...");
+anim(human_pickpocket, 0);
+%rcu_abyssal_generator = 18;
+p_delay(2);
+if (~abyss_obstacle_roll(thieving) = false) {
+    anim(null, 0);
+    %rcu_abyssal_generator = %rcu_abyssal_layout;
+    mes("...but fail to distract them enough to get past.");
+    return;
+}
+%rcu_abyssal_generator = 19;
+mes("...and sneak past while they're not looking.");
+stat_advance(thieving, 250);
+@abyss_pass_obstacle($dest);
+
+[label,abyss_squeeze](coord $dest)
+mes("You attempt to squeeze through the narrow gap...");
+anim(human_pipesqueeze, 0);
+sound_synth(abyssal_squeezethrough, 1, 0);
+p_delay(2);
+if (~abyss_obstacle_roll(agility) = false) {
+    anim(null, 0);
+    mes("...but you are not agile enough to get through the gap.");
+    return;
+}
+mes("...and you manage to crawl through.");
+stat_advance(agility, 250);
+@abyss_pass_obstacle($dest);
+
+[label,abyss_passage](coord $dest)
+@abyss_pass_obstacle($dest);
+
+[label,abyss_pass_obstacle](coord $dest)
+p_delay(1);
+anim(null, 0);
+p_telejump($dest);
+%rcu_abyssal_generator = %rcu_abyssal_layout;
+
+[oploc1,_abyss_rift]
+def_int $type = loc_param(rune_type);
+switch_int ($type) {
+    case 7 :
+        if (%zanaris < ^zanaris_complete) {
+            mes("You need to have completed the Lost City quest to use this rift.");
+            return;
+        }
+    case 11, 12, 13 :
+        mes("A strange power blocks your exit.");
+        return;
+}
+def_dbrow $data = ~get_runecraft_data($type);
+if ($data = null) {
+    ~displaymessage(^dm_default);
+    return;
+}
+anim(human_castteleport, 0);
+sound_synth(teleport_all, 1, 0);
+p_delay(1);
+p_telejump(map_findsquare(db_getfield($data, runecraft_table:enter_coord, random(db_getfieldcount($data, runecraft_table:enter_coord)))));
+
+[opnpc1,rcu_zammy_mage2]
+~chatplayer("<p,neutral>Hello there.");
+~chatnpc("<p,angry>Quiet! You must not break my concentration!");
+@dark_mage_menu;
+
+[label,dark_mage_menu]
+switch_int (~p_choice4("Why not?", 1, "What are you doing here?", 2, "Ok, Sorry", 3, "I need your help with something...", 4)) {
+    case 1 :
+        ~chatplayer("<p,quiz>Why not?");
+        ~chatnpc("<p,angry>Well, if my concentration is broken while keeping this gate open, then, if we are lucky, everyone within a one mile radius will either have their heads explode, or will be consumed internally by the creatures of the Abyss.");
+        ~chatplayer("<p,shock>Erm... And if we are unlucky?");
+        ~chatnpc("<p,angry>If we are unlucky, then the entire universe will begin to fold in upon itself, and all reality as we know it will be annihilated in a single stroke. So leave me alone!");
+        @dark_mage_menu;
+    case 2 :
+        ~chatplayer("<p,quiz>What are you doing here?");
+        ~chatnpc("<p,neutral>Do you mean what am I doing here in Abyssal space, or are you asking me what I consider my ultimate role to be in this voyage that we call life?");
+        ~chatplayer("<p,confused>Um... the first one.");
+        ~chatnpc("<p,neutral>By remaining here and holding this portal open, I am providing a permanent link between normal space and this strange dimension that we call Abyssal space. As long as this spell remains in effect, we have the capability to teleport into abyssal space at will. Now leave me be! I can afford no distraction in my task!");
+        @dark_mage_menu;
+    case 3 :
+        ~chatplayer("<p,sad>Ok, sorry.");
+        ~chatnpc("<p,angry>I am attempting to subdue the elemental mechanisms of the universe to my will. Inane chatter from random idiots is not helping me achieve this!");
+    case 4 :
+        ~chatplayer("<p,neutral>Sorry to disturb you, I just needed your help with something quickly.");
+        ~chatnpc("<p,bored>What? Oh... Very well. What did you want?");
+        @dark_mage_help;
+}
+
+[label,dark_mage_help]
+if (~obj_gettotal(rcu_instruction_book) = 0) {
+    switch_int (~p_choice3("Can I have another Abyssal book?", 1, "Can you repair my pouches?", 2, "Actually, I can't think of anything right now...", 3)) {
+        case 1 :
+            ~chatplayer("<p,quiz>Can I have another Abyssal book? I seem to have misplaced the one I was given.");
+            if (inv_freespace(inv) < 1) {
+                ~chatnpc("<p,angry>You have no room to carry it! Now leave me be, I must concentrate!");
+                return;
+            }
+            inv_add(inv, rcu_instruction_book, 1);
+            ~chatnpc("<p,neutral>Here, take it, it is important to pool our research. Now leave me be, I must concentrate!");
+        case 2 : @dark_mage_repair;
+        case 3 : @dark_mage_nevermind;
+    }
+    return;
+}
+switch_int (~p_choice2("Can you repair my pouches?", 1, "Actually, I can't think of anything right now...", 2)) {
+    case 1 : @dark_mage_repair;
+    case 2 : @dark_mage_nevermind;
+}
+
+[label,dark_mage_repair]
+if (~essence_pouch_needs_repair = false) {
+    mes("You do not appear to have any pouches that are in need of repair.");
+    return;
+}
+~chatplayer("<p,quiz>Can you repair my pouches? I think they might be degrading.");
+~essence_pouch_repair;
+~chatnpc("<p,neutral>A simple transfiguration spell should resolve that for you. Now leave me be!");
+
+[label,dark_mage_nevermind]
+~chatplayer("<p,neutral>Actually, I can't think of anything right now...");
+~chatnpc("<p,angry>THEN STOP DISTRACTING ME! Honestly, you have no idea of the pressure I am under attempting to keep this portal open!");
+
+[ai_queue3,_abyssal_creature]
+gosub(npc_death);
+if (npc_findhero = ^false) {
+    return;
+}
+obj_add(npc_coord, ashes, 1, ^lootdrop_duration);
+~trail_mediumcluedrop(256, npc_coord);
+def_int $pouch_chance = 42;
+if (npc_type = abyssal_pyramid) {
+    $pouch_chance = 8;
+} else if (npc_type = abyssal_walker) {
+    $pouch_chance = 5;
+}
+if (random($pouch_chance) = 0) {
+    def_namedobj $pouch = ~essence_pouch_next_drop;
+    if ($pouch ! null) {
+        obj_add(npc_coord, $pouch, 1, ^lootdrop_duration);
+    }
+}
+def_int $random = random(256);
+if ($random < 5) {
+    obj_add(npc_coord, air_talisman, 1, ^lootdrop_duration);
+} else if ($random < 10) {
+    obj_add(npc_coord, water_talisman, 1, ^lootdrop_duration);
+} else if ($random < 15) {
+    obj_add(npc_coord, earth_talisman, 1, ^lootdrop_duration);
+} else if ($random < 20) {
+    obj_add(npc_coord, fire_talisman, 1, ^lootdrop_duration);
+} else if ($random < 25) {
+    obj_add(npc_coord, mind_talisman, 1, ^lootdrop_duration);
+} else if ($random < 30) {
+    obj_add(npc_coord, body_talisman, 1, ^lootdrop_duration);
+} else if ($random < 32) {
+    obj_add(npc_coord, cosmic_talisman, 1, ^lootdrop_duration);
+} else if ($random < 34) {
+    obj_add(npc_coord, chaos_talisman, 1, ^lootdrop_duration);
+} else if ($random < 36) {
+    obj_add(npc_coord, nature_talisman, 1, ^lootdrop_duration);
+} else if ($random < 72) {
+    obj_add(npc_coord, cert_blankrune, 1, ^lootdrop_duration);
+} else if ($random < 106) {
+    obj_add(npc_coord, blankrune, 1, ^lootdrop_duration);
+} else if ($random < 110) {
+    obj_add(npc_coord, cert_blankrune, 5, ^lootdrop_duration);
+} else if ($random < 114) {
+    obj_add(npc_coord, cert_blankrune, 10, ^lootdrop_duration);
+} else if ($random < 118) {
+    obj_add(npc_coord, cert_blankrune, 15, ^lootdrop_duration);
+}

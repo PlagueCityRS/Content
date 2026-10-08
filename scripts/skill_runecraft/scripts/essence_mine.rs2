@@ -23,6 +23,7 @@ def_coord $coord = enum(int, coord, essence_mine_teleports, random(enum_getoutpu
 // select random coord at a radius of 1
 $coord = map_findsquare($coord, 0, 1, ^map_findsquare_lineofsight);
 p_telejump($coord);
+~abyss_scrying_orb_record($tele_back_coord);
 
 // portal
 [oploc1,blankrunestone_exit_portal]

@@ -1,0 +1,11 @@
+[abyssal_pouches1]
+scope=perm
+
+[rcu_pouch_degradation_med]
+scope=perm
+
+[rcu_pouch_degradation_large]
+scope=perm
+
+[rcu_pouch_degradation_giant]
+scope=perm

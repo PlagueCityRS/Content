@@ -26,6 +26,7 @@ stock1=bronze_med_helm,1
 stock2=bronze_full_helm,1
 stock3=bronze_sq_shield,1
 stock4=bronze_kiteshield,1
+stock5=nails_bronze,15
 
 [smithing_bronze5]
 size=5
@@ -62,6 +63,7 @@ stock1=iron_med_helm,1
 stock2=iron_full_helm,1
 stock3=iron_sq_shield,1
 stock4=iron_kiteshield,1
+stock5=nails_iron,15
 
 [smithing_iron5]
 size=5
@@ -97,14 +99,14 @@ stock1=steel_med_helm,1
 stock2=steel_full_helm,1
 stock3=steel_sq_shield,1
 stock4=steel_kiteshield,1
+stock5=nails,15
 
 [smithing_steel5]
 size=5
 stock1=steel_dart_tip,10
 stock2=steel_arrowheads,15
 stock3=steel_knife,5
-stock4=nails,2
-stock5=studs,1
+stock4=studs,1
 
 [smithing_mithril1]
 size=5
@@ -134,6 +136,7 @@ stock1=mithril_med_helm,1
 stock2=mithril_full_helm,1
 stock3=mithril_sq_shield,1
 stock4=mithril_kiteshield,1
+stock5=nails_mithril,15
 
 [smithing_mithril5]
 size=5
@@ -169,6 +172,7 @@ stock1=adamant_med_helm,1
 stock2=adamant_full_helm,1
 stock3=adamant_sq_shield,1
 stock4=adamant_kiteshield,1
+stock5=nails_adamant,15
 
 [smithing_adamant5]
 size=5
@@ -204,33 +208,10 @@ stock1=rune_med_helm,1
 stock2=rune_full_helm,1
 stock3=rune_sq_shield,1
 stock4=rune_kiteshield,1
+stock5=nails_rune,15
 
 [smithing_rune5]
 size=5
 stock1=rune_dart_tip,10
 stock2=rune_arrowheads,15
 stock3=rune_knife,5
-
-[smithing_bronze_claws]
-size=1
-stock1=bronze_claws,1
-
-[smithing_iron_claws]
-size=1
-stock1=iron_claws,1
-
-[smithing_steel_claws]
-size=1
-stock1=steel_claws,1
-
-[smithing_mithril_claws]
-size=1
-stock1=mithril_claws,1
-
-[smithing_adamant_claws]
-size=1
-stock1=adamant_claws,1
-
-[smithing_rune_claws]
-size=1
-stock1=rune_claws,1

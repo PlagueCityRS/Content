@@ -42,6 +42,9 @@ iop1=Extinguish
 weight=500g
 category=light_source_lit
 tradeable=no
+param=light_dim,1
+param=light_naked_flame,1
+param=extinguished,torch_unlit
 
 [cert_torch_lit]
 name=Torch

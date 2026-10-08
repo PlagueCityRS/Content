@@ -1,0 +1,65 @@
+[swamp_candle_guy]
+vislevel=hide
+name=Candle seller
+desc=Has an odd smell about him.
+walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
+readyanim=human_ready
+op1=Talk-to
+model1=man_head_dredlocks
+model2=man_jaw_long
+model3=man_torso_apronfat
+model4=man_arms_buff
+model5=man_hands_basic
+model6=man_legs_turnups
+model7=man_feet_boots
+head1=chat_male_head_mediumhair
+head2=chat_male_jaw_goaty
+recol1s=6273
+recol1d=4128
+recol2s=14801
+recol2d=24075
+recol3s=14724
+recol3d=21173
+recol4s=2340
+recol4d=2114
+recol5s=7298
+recol5d=2114
+wanderrange=2
+
+[swamp_wallbeast]
+name=Hole in the wall
+desc=What could be hiding in that crack in the wall?
+readyanim=wall_beast_ready
+minimap=no
+vislevel=hide
+turnspeed=0
+model1=obj_4519
+wanderrange=0
+moverestrict=nomove
+defaultmode=none
+
+[swamp_wallbeast_combat]
+name=Wall Beast
+desc=A big scary hand!
+readyanim=wall_beast_combat_ready
+op2=Attack
+turnspeed=0
+vislevel=49
+model1=obj_4519
+wanderrange=0
+moverestrict=nomove
+maxrange=1
+attackrange=1
+attack=30
+strength=30
+defence=16
+hitpoints=105
+param=attackrate,4
+param=damagetype,^crush_style
+param=attack_anim,wall_beast_specialattack_attack
+param=defend_anim,wall_beast_specialattack_defend
+param=death_anim,wall_beast_specialattack_death
+param=attack_sound,wall_beast_attack
+param=defend_sound,wall_beast_hit
+param=death_sound,wall_beast_death
+param=death_drop,bones

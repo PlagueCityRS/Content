@@ -56,7 +56,21 @@ switch_int(%biohazard) {
                 @multi2("I need some more touch paper for this plague sample.", chemist_touchpaperplague, "I just need some touch paper for a guy called Guidor.", chemist_touchpaperguidor);
         }
 }
-mes("The chemist is busy at the moment."); // RSC, unsure what dialogue would have been pre march 2005 (if not the same as this mes)
+switch_int (~p_choice2_header("Yes.", 1, "No.", 2, "Do you want to talk about lamps?")) {
+    case 1 :
+        ~chatplayer("<p,neutral>Hi, I need fuel for a lamp.");
+        ~chatnpc("<p,neutral>Hello there, the fuel you need is lamp oil, do you need help making it?");
+        ~chatplayer("<p,neutral>Yes, please.");
+        ~chatnpc("<p,neutral>It's really quite simple. You use the small still in here. It's all set up, so there's no fiddling around with dials...");
+        ~chatnpc("<p,neutral>Just put ordinary swamp tar in, and then use a lantern or lamp to get the oil out.");
+        ~chatplayer("<p,happy>Thanks.");
+    case 2 :
+        ~chatplayer("<p,neutral>Hello.");
+        ~chatnpc("<p,neutral>Oh.. hello, how's it going?");
+        ~chatplayer("<p,happy>Good thanks.");
+        ~chatnpc("<p,neutral>Good to hear, sorry but I have a few things to do now.");
+        ~chatplayer("<p,neutral>Well I'd better let you get on then.");
+}
 
 [label,chemist_touchpaperplague]
 ~chatplayer("<p,neutral>That's why I'm here. I need some more touch paper for this plague sample.");

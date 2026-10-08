@@ -58,19 +58,51 @@ if (map_members = ^false) {
     mes(^mes_members_feature);
     return;
 }
-def_namedobj $item;
-def_int $process_count;
-$item, $process_count = ~skill_multi3(
-    beer_glass, 0, 5, 200, "\\n\\n\\n\\nBeer Glass",
-    vial_empty, 2, 10, 180, "\\n\\n\\n\\nVial",
-    stafforb, 2, -10, 200, "\\n\\n\\n\\nOrb"
-);
-if ($item = null) {
-    ~displaymessage(^dm_default);
-    return;
-}
-if($process_count = 0) {
-    return;
+if_openmain(glass_crafting);
+
+[if_button,glass_crafting:shield] @craft_glass(vial_empty, 1);
+[if_button,glass_crafting:sword] @craft_glass(vial_empty, 5);
+[if_button,glass_crafting:legs] @craft_glass(vial_empty, 10);
+[if_button,glass_crafting:body] @craft_glass(vial_empty, 0);
+
+[if_button,glass_crafting:com_11] @craft_glass(stafforb, 1);
+[if_button,glass_crafting:com_10] @craft_glass(stafforb, 5);
+[if_button,glass_crafting:com_9] @craft_glass(stafforb, 10);
+[if_button,glass_crafting:manual] @craft_glass(stafforb, 0);
+
+[if_button,glass_crafting:com_15] @craft_glass(beer_glass, 1);
+[if_button,glass_crafting:com_14] @craft_glass(beer_glass, 5);
+[if_button,glass_crafting:com_13] @craft_glass(beer_glass, 10);
+[if_button,glass_crafting:com_12] @craft_glass(beer_glass, 0);
+
+[if_button,glass_crafting:com_19] @craft_glass(candle_lantern_empty, 1);
+[if_button,glass_crafting:com_18] @craft_glass(candle_lantern_empty, 5);
+[if_button,glass_crafting:com_17] @craft_glass(candle_lantern_empty, 10);
+[if_button,glass_crafting:com_16] @craft_glass(candle_lantern_empty, 0);
+
+[if_button,glass_crafting:com_23] @craft_glass(oil_lamp_empty, 1);
+[if_button,glass_crafting:com_22] @craft_glass(oil_lamp_empty, 5);
+[if_button,glass_crafting:com_21] @craft_glass(oil_lamp_empty, 10);
+[if_button,glass_crafting:com_20] @craft_glass(oil_lamp_empty, 0);
+
+[if_button,glass_crafting:com_27] @craft_glass(bullseye_lantern_lens, 1);
+[if_button,glass_crafting:com_26] @craft_glass(bullseye_lantern_lens, 5);
+[if_button,glass_crafting:com_25] @craft_glass(bullseye_lantern_lens, 10);
+[if_button,glass_crafting:com_24] @craft_glass(bullseye_lantern_lens, 0);
+
+[if_button,glass_crafting:com_31] @craft_glass(fishbowl_empty, 1);
+[if_button,glass_crafting:com_30] @craft_glass(fishbowl_empty, 5);
+[if_button,glass_crafting:com_29] @craft_glass(fishbowl_empty, 10);
+[if_button,glass_crafting:com_28] @craft_glass(fishbowl_empty, 0);
+
+[label,craft_glass](namedobj $item, int $process_count)
+if_close;
+if ($process_count = 0) {
+    p_countdialog;
+    if (last_int <= 0) {
+        return;
+    }
+    $process_count = last_int;
 }
 def_struct $struct = oc_param($item, crafting_glass_struct);
 def_string $name = struct_param($struct, productmessage);

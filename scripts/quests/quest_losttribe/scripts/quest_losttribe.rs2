@@ -1,0 +1,359 @@
+[oplocu,lost_tribe_cellar_wall]
+if (oc_category(last_useitem) ! weapon_pickaxe) {
+    ~displaymessage(^dm_default);
+    return;
+}
+if (%lost_tribe_quest < ^lost_tribe_started | %lost_tribe_quest >= ^lost_tribe_dug_tunnel) {
+    ~displaymessage(^dm_default);
+    return;
+}
+if (%lost_tribe_quest < ^lost_tribe_duke_permission) {
+    mes("You should get the Duke's permission before you start digging up his cellar.");
+    return;
+}
+if (stat(mining) < ^lost_tribe_mining_level) {
+    ~mesbox("You need a Mining level of <tostring(^lost_tribe_mining_level)> to dig through the rubble.");
+    return;
+}
+def_obj $pickaxe = ~pickaxe_checker;
+if ($pickaxe = null) {
+    ~mesbox("You need a Pickaxe to dig through the rubble. You do not have a Pickaxe which you have the Mining level to use.");
+    return;
+}
+anim(oc_param($pickaxe, mining_animation), 0);
+sound_synth(mine_quick, 1, 0);
+p_delay(2);
+anim(null, 0);
+%lost_tribe_quest = ^lost_tribe_dug_tunnel;
+~send_quest_progress(questlist:losttribe, %lost_tribe_quest, ^lost_tribe_complete);
+~objbox($pickaxe, "You dig a narrow tunnel through the rocks.", 250, 0, 0);
+
+[oploc1,lost_tribe_cellar_wall]
+if (%lost_tribe_quest < ^lost_tribe_dug_tunnel) {
+    ~displaymessage(^dm_default);
+    return;
+}
+@lost_tribe_squeeze_hole(^lost_tribe_cave_side, ^exact_east);
+
+[oploc1,lost_tribe_cellar_wall_back]
+if (%lost_tribe_quest < ^lost_tribe_dug_tunnel) {
+    ~displaymessage(^dm_default);
+    return;
+}
+@lost_tribe_squeeze_hole(^lost_tribe_cellar_side, ^exact_west);
+
+[label,lost_tribe_squeeze_hole](coord $dest, int $direction)
+if (stat(agility) < ^lost_tribe_agility_level) {
+    ~mesbox("You need an Agility level of <tostring(^lost_tribe_agility_level)> to squeeze through the hole.");
+    return;
+}
+facesquare($dest);
+p_delay(0);
+~agility_exactmove(human_pipesqueeze, 0, 2, coord, $dest, 0, 60, $direction, false);
+anim(null, 0);
+~dark_cave_start;
+
+[oploc1,lost_tribe_hole_2]
+if (%lost_tribe_hole_2_dug = ^false) {
+    mes("The hole is blocked by rubble.");
+    return;
+}
+if (stat(agility) < ^lost_tribe_agility_level) {
+    ~mesbox("You need an Agility level of <tostring(^lost_tribe_agility_level)> to squeeze through the hole.");
+    return;
+}
+def_coord $dest = ^lost_tribe_hole_2_south;
+def_int $direction = ^exact_south;
+if (coordz(coord) < coordz(loc_coord)) {
+    $dest = ^lost_tribe_hole_2_north;
+    $direction = ^exact_north;
+}
+p_delay(0);
+~agility_exactmove(human_pipesqueeze, 0, 3, coord, $dest, 0, 90, $direction, false);
+anim(null, 0);
+
+[oplocu,lost_tribe_hole_2]
+if (oc_category(last_useitem) ! weapon_pickaxe | %lost_tribe_hole_2_dug = ^true) {
+    ~displaymessage(^dm_default);
+    return;
+}
+if (stat(mining) < ^lost_tribe_mining_level) {
+    ~mesbox("You need a Mining level of <tostring(^lost_tribe_mining_level)> to dig through the rubble.");
+    return;
+}
+def_obj $pickaxe = ~pickaxe_checker;
+if ($pickaxe = null) {
+    ~mesbox("You need a Pickaxe to dig through the rubble. You do not have a Pickaxe which you have the Mining level to use.");
+    return;
+}
+anim(oc_param($pickaxe, mining_animation), 0);
+sound_synth(mine_quick, 1, 0);
+p_delay(2);
+anim(null, 0);
+%lost_tribe_hole_2_dug = ^true;
+~objbox($pickaxe, "You dig a narrow tunnel through the rocks.", 250, 0, 0);
+
+[opheld1,lost_tribe_brooch]
+if_openmain(brooch_closeup);
+
+[opobj3,lost_tribe_brooch]
+if (%lost_tribe_quest < ^lost_tribe_dug_tunnel) {
+    return;
+}
+@pickup_obj;
+
+[oploc1,lost_tribe_bookcase]
+p_arrivedelay;
+if (%lost_tribe_quest < ^lost_tribe_shown_brooch | ~obj_gettotal(lost_tribe_book) > 0) {
+    @search_bookcase;
+}
+if (inv_freespace(inv) < 1) {
+    ~mesbox("You don't have enough space in your inventory to take the book.");
+    return;
+}
+mes("You search the bookcase...");
+p_delay(1);
+if (%lost_tribe_quest = ^lost_tribe_shown_brooch) {
+    ~chatplayer("<p,happy>'A History of the Goblin Race'. This must be it.");
+}
+inv_add(inv, lost_tribe_book, 1);
+~objbox(lost_tribe_book, "You take the book from the bookcase.", 250, 0, 0);
+if (%lost_tribe_quest ! ^lost_tribe_shown_brooch) {
+    return;
+}
+%lost_tribe_bookmark = 3;
+~lost_tribe_book_open;
+p_delay(2);
+if_close;
+%lost_tribe_quest = ^lost_tribe_read_book;
+~send_quest_progress(questlist:losttribe, %lost_tribe_quest, ^lost_tribe_complete);
+~chatplayer("<p,shock>Hey... The symbol of the 'Dorgeshuun' tribe looks just like the symbol on the brooch I found.");
+
+[opheld1,lost_tribe_book]
+~lost_tribe_book_open;
+
+[proc,lost_tribe_book_open]
+~lost_tribe_book_page(%lost_tribe_bookmark);
+if_openmain(lost_tribe_symbol_book);
+
+[proc,lost_tribe_book_page](int $page)
+if_sethide(lost_tribe_symbol_book:com_41, true);
+if_sethide(lost_tribe_symbol_book:com_45, true);
+if_sethide(lost_tribe_symbol_book:com_49, true);
+if_sethide(lost_tribe_symbol_book:com_15, true);
+if_sethide(lost_tribe_symbol_book:com_16, true);
+if_sethide(lost_tribe_symbol_book:com_36, true);
+switch_int ($page) {
+    case 0 : if_sethide(lost_tribe_symbol_book:com_41, false);
+    case 1 : if_sethide(lost_tribe_symbol_book:com_45, false);
+    case 2 : if_sethide(lost_tribe_symbol_book:com_49, false);
+    case 3 : if_sethide(lost_tribe_symbol_book:com_15, false);
+    case 4 : if_sethide(lost_tribe_symbol_book:com_16, false);
+    case default : if_sethide(lost_tribe_symbol_book:com_36, false);
+}
+if ($page <= 0) {
+    if_sethide(lost_tribe_symbol_book:lost_tribe_l_arrow_layer, true);
+} else {
+    if_sethide(lost_tribe_symbol_book:lost_tribe_l_arrow_layer, false);
+}
+if ($page >= sub(^lost_tribe_book_pages, 1)) {
+    if_sethide(lost_tribe_symbol_book:lost_tribe_r_arrow_layer, true);
+} else {
+    if_sethide(lost_tribe_symbol_book:lost_tribe_r_arrow_layer, false);
+}
+
+[if_button,lost_tribe_symbol_book:lost_tribe_right_arrow]
+if (%lost_tribe_bookmark >= sub(^lost_tribe_book_pages, 1)) {
+    return;
+}
+%lost_tribe_bookmark = add(%lost_tribe_bookmark, 1);
+~lost_tribe_book_page(%lost_tribe_bookmark);
+
+[if_button,lost_tribe_symbol_book:lost_tribe_left_arrow]
+if (%lost_tribe_bookmark <= 0) {
+    return;
+}
+%lost_tribe_bookmark = sub(%lost_tribe_bookmark, 1);
+~lost_tribe_book_page(%lost_tribe_bookmark);
+
+[oploc1,_lost_tribe_marker]
+switch_loc (loc_type) {
+    case swamp_cavewall_northmarker : if_setmodel(cave_goblin_markers:com_1, 6891);
+    case swamp_cavewall_southmarker : if_setmodel(cave_goblin_markers:com_1, 6892);
+    case swamp_cavewall_eastmarker : if_setmodel(cave_goblin_markers:com_1, 6890);
+    case default : if_setmodel(cave_goblin_markers:com_1, 6893);
+}
+if_openmain(cave_goblin_markers);
+
+[oploc1,lost_tribe_chest]
+if (inv_total(inv, lost_tribe_chest_key) = 0) {
+    ~mesbox("You don't have the key to open this chest.");
+    return;
+}
+if (%lost_tribe_quest ! ^lost_tribe_silverware_missing | %lost_tribe_ham >= ^lost_tribe_ham_found_robes) {
+    mes("The chest is empty.");
+    return;
+}
+if (inv_freespace(inv) < 3) {
+    ~mesbox("You need three free inventory spaces to take what is in the chest.");
+    return;
+}
+anim(human_openchest, 0);
+sound_synth(chest_open, 1, 0);
+p_delay(1);
+inv_del(inv, lost_tribe_chest_key, 1);
+inv_add(inv, ham_hood, 1);
+inv_add(inv, ham_shirt, 1);
+inv_add(inv, ham_robe, 1);
+%lost_tribe_ham = ^lost_tribe_ham_found_robes;
+~objbox(ham_shirt, "In the chest you find a set of H.A.M. robes!", 250, 0, 0);
+~chatplayer("<p,shock>Sigmund must be a member of the Humans Against Monsters cult!");
+
+[oploc1,lost_tribe_crate]
+mes("You search the crate...");
+p_delay(1);
+if (%lost_tribe_quest ! ^lost_tribe_silverware_missing | %lost_tribe_ham < ^lost_tribe_ham_found_robes | ~obj_gettotal(lost_tribe_silverware) > 0) {
+    mes("You find nothing of interest.");
+    return;
+}
+if (inv_freespace(inv) < 1) {
+    ~mesbox("You don't have enough space in your inventory.");
+    return;
+}
+inv_add(inv, lost_tribe_silverware, 1);
+%lost_tribe_ham = ^lost_tribe_ham_found_silverware;
+~objbox(lost_tribe_silverware, "You find the Lumbridge Silverware!", 250, 0, 0);
+
+[proc,lost_tribe_trap_check]
+if (inzone(^lost_tribe_maze_lower_bound, ^lost_tribe_maze_upper_bound, coord) = false) {
+    return;
+}
+if (getqueue(lost_tribe_trap_floor) > 0 | getqueue(lost_tribe_trap_ceiling) > 0) {
+    return;
+}
+if (loc_find(coord, lost_tribe_trap_floor) = true) {
+    queue(lost_tribe_trap_floor, 0, 0);
+} else if (loc_find(coord, lost_tribe_trap_ceiling) = true) {
+    queue(lost_tribe_trap_ceiling, 0, loc_angle);
+}
+
+[queue,lost_tribe_trap_floor]
+p_stopaction;
+loc_add(coord, lost_tribe_collapsing_floor, 0, centrepiece_straight, 4);
+sound_synth(roof_collapse, 1, 0);
+mes("The floor gives way beneath your feet!");
+p_delay(1);
+p_teleport(^lost_tribe_trap_fall_coord);
+p_delay(0);
+mes("You fall into the caves below.");
+~damage_self(calc(random(3) + 2));
+
+[queue,lost_tribe_trap_ceiling](int $angle)
+p_stopaction;
+def_coord $back = movecoord(coord, 1, 0, 0);
+def_int $direction = ^exact_west;
+switch_int ($angle) {
+    case 1 :
+        $back = movecoord(coord, 0, 0, -1);
+        $direction = ^exact_north;
+    case 2 :
+        $back = movecoord(coord, -1, 0, 0);
+        $direction = ^exact_east;
+    case 3 :
+        $back = movecoord(coord, 0, 0, 1);
+        $direction = ^exact_south;
+}
+sound_synth(roof_collapse, 1, 0);
+spotanim_map(goblincaves_roofcollapse, coord, 0, 0);
+mes("Rocks fall from the ceiling!");
+~agility_exactmove(human_rockfall, 0, 1, coord, $back, 0, 30, $direction, false);
+anim(null, 0);
+~damage_self(calc(random(4) + 2));
+
+[if_button,questlist:losttribe]
+def_string $text;
+if (%lost_tribe_quest = ^lost_tribe_not_started) {
+    $text = append($text, "@dbl@I can start this quest by speaking to @dre@Sigmund@dbl@ in @dre@Lumbridge Castle@dbl@.|");
+    $text = append($text, "@dbl@To complete this quest I need:|");
+    $text = append($text, "<~quest_req_colour(stat_base(agility), ^lost_tribe_agility_level)>Level <tostring(^lost_tribe_agility_level)> Agility|");
+    $text = append($text, "<~quest_req_colour(stat_base(thieving), ^lost_tribe_thieving_level)>Level <tostring(^lost_tribe_thieving_level)> Thieving|");
+    $text = append($text, "<~quest_req_colour(stat_base(mining), ^lost_tribe_mining_level)>Level <tostring(^lost_tribe_mining_level)> Mining|");
+    $text = append($text, "<~quest_req_colour(%goblinquest, ^gobdip_complete)>Goblin Diplomacy|");
+    $text = append($text, "<~quest_req_colour(%runemysteries, ^runemysteries_complete)>Rune Mysteries");
+    ~quest_journal("The Lost Tribe", $text);
+    return;
+}
+if (%lost_tribe_quest = ^lost_tribe_complete) {
+    $text = append($text, "@str@Part of the wall in the Lumbridge Castle cellar collapsed.|@str@I found a tunnel and a brooch with the symbol of the|@str@Dorgeshuun, a lost goblin tribe. I made contact with the|@str@cave goblins, and found the missing silverware in the|@str@H.A.M. cave, proving Sigmund was behind the theft.|@str@Duke Horacio and Ur-tag signed a peace treaty.||");
+    $text = append($text, "@red@QUEST COMPLETE!");
+    ~quest_journal("The Lost Tribe", $text);
+    return;
+}
+$text = append($text, "@str@Sigmund asked me to investigate the damage to the|@str@Lumbridge Castle cellar.|");
+if (%lost_tribe_quest = ^lost_tribe_started) {
+    $text = append($text, "@dbl@I should ask @dre@people around Lumbridge@dbl@ if they saw anything.");
+    ~quest_journal("The Lost Tribe", $text);
+    return;
+}
+$text = append($text, "@str@Bob told me he saw a goblin-like creature in the cellar.|");
+if (%lost_tribe_quest = ^lost_tribe_spoken_bob) {
+    $text = append($text, "@dbl@I should tell @dre@Duke Horacio@dbl@ what Bob saw.");
+    ~quest_journal("The Lost Tribe", $text);
+    return;
+}
+$text = append($text, "@str@The Duke gave me permission to investigate the cellar.|");
+if (%lost_tribe_quest = ^lost_tribe_duke_permission) {
+    $text = append($text, "@dbl@I should use a @dre@pickaxe@dbl@ to clear the @dre@rubble@dbl@ in the cellar.");
+    ~quest_journal("The Lost Tribe", $text);
+    return;
+}
+$text = append($text, "@str@I dug through the rubble and found a tunnel.|");
+if (%lost_tribe_quest = ^lost_tribe_dug_tunnel) {
+    if (~obj_gettotal(lost_tribe_brooch) > 0) {
+        $text = append($text, "@dbl@I found a @dre@brooch@dbl@ in the tunnel. I should show it to the|@dre@Duke@dbl@.");
+    } else {
+        $text = append($text, "@dbl@I should explore the @dre@tunnel@dbl@ and tell the @dre@Duke@dbl@ what I find.");
+    }
+    ~quest_journal("The Lost Tribe", $text);
+    return;
+}
+$text = append($text, "@str@I showed the Duke a brooch I found in the tunnel.|");
+if (%lost_tribe_quest = ^lost_tribe_shown_brooch) {
+    $text = append($text, "@dbl@The Duke suggested that @dre@the librarian in Varrock@dbl@ might be|@dbl@able to identify the symbol on it.");
+    ~quest_journal("The Lost Tribe", $text);
+    return;
+}
+$text = append($text, "@str@I found a book that identified the symbol as that of the|@str@Dorgeshuun, an ancient goblin tribe.|");
+if (%lost_tribe_quest = ^lost_tribe_read_book) {
+    $text = append($text, "@dbl@I should find out more about this tribe. The @dre@goblin|@dre@generals@dbl@ might know something.");
+    ~quest_journal("The Lost Tribe", $text);
+    return;
+}
+$text = append($text, "@str@The goblin generals told me the legend of the Dorgeshuun|@str@and showed me how to greet them.|");
+if (%lost_tribe_quest = ^lost_tribe_spoken_generals) {
+    $text = append($text, "@dbl@I should explore the @dre@tunnel@dbl@ beneath the cellar and find the|@dbl@Dorgeshuun.");
+    ~quest_journal("The Lost Tribe", $text);
+    return;
+}
+$text = append($text, "@str@I found the cave goblins and greeted them with the|@str@ancient goblin bow. They want to make peace.|");
+if (%lost_tribe_quest = ^lost_tribe_made_contact) {
+    $text = append($text, "@dbl@I should tell the @dre@Duke@dbl@ that I have made contact with the|@dbl@cave goblins.");
+    ~quest_journal("The Lost Tribe", $text);
+    return;
+}
+$text = append($text, "@str@The Duke says some silverware has gone missing from the|@str@cellar, and will go to war unless it is returned.|");
+if (%lost_tribe_quest = ^lost_tribe_silverware_missing) {
+    if (%lost_tribe_ham = ^lost_tribe_ham_found_silverware) {
+        $text = append($text, "@str@I found H.A.M. robes in Sigmund's chest.|");
+        $text = append($text, "@dbl@I found the @dre@silverware@dbl@ in the H.A.M. cave. I should return it|@dbl@to the @dre@Duke@dbl@.");
+    } else if (%lost_tribe_ham = ^lost_tribe_ham_found_robes) {
+        $text = append($text, "@dbl@I found @dre@H.A.M. robes@dbl@ in Sigmund's chest. Sigmund must be a|@dbl@member of the Humans Against Monsters cult. Perhaps the|@dre@H.A.M. cave@dbl@ will hold some answers.");
+    } else {
+        $text = append($text, "@dbl@I should find out what really happened to the @dre@silverware@dbl@.");
+    }
+    ~quest_journal("The Lost Tribe", $text);
+    return;
+}
+$text = append($text, "@str@I found the silverware in the H.A.M. cave and returned it|@str@to the Duke, who dismissed Sigmund.|");
+$text = append($text, "@dbl@I should take the @dre@peace treaty@dbl@ to @dre@Mistag@dbl@ in the cave goblin|@dbl@mines.");
+~quest_journal("The Lost Tribe", $text);

@@ -180,6 +180,17 @@ if (p_finduid(uid) = true) {
                     ~send_quest_complete(questlist:horror, horror_casket, 225, ^horror_questpoints, "You have survived the\\nHorror From The Deep!");
                 case 63 : queue(trollromance_quest_complete, 0, 0);
                 case 64 : queue(misc_quest_complete, 0, 0);
+                case 65 : queue(tog_quest_complete, 0, 0);
+                case 66 :
+                    %lost_tribe_quest = ^lost_tribe_given_treaty;
+                    queue(lost_tribe_quest_complete, 0, 0);
+                case 67 :
+                    %zogre = ^zogre_killed_slash_bash;
+                    inv_add(inv, zogre_artifacts, 1);
+                    queue(zogre_quest_complete, 0, 0);
+                case 68 :
+                    %deserttreasure = ^deserttreasure_spoken_azzanadra;
+                    queue(deserttreasure_quest_complete, 0, 0);
                 case default : mes("Quest not found.");
             }
         } else if ($choice3 = 1) {
@@ -330,6 +341,18 @@ if (p_finduid(uid) = true) {
                     %misc_varbit_1 = null;
                     %misc_varbit_2 = null;
                     %misc_varbit_3 = null;
+                case 65 :
+                    %tog_minigame = 0;
+                    %tog_last_visit_day = 0;
+                case 66 : %lost_tribe = 0;
+                case 67 : %zombie_ogre = 0;
+                case 68 :
+                    %deserttreasuremain = 0;
+                    %deserttreasurevarbit = 0;
+                    %deserttreasurevarbit2 = 0;
+                    %fd_bloodwarrior_quest = 0;
+                    %zaros_spellbook = 0;
+                    ~settab_magic;
                 case default : mes("Quest not found.");
             }
             ~update_questlist;
@@ -452,6 +475,14 @@ queue(viking_quest_complete, 0, 0);
     ~send_quest_complete(questlist:horror, horror_casket, 225, ^horror_questpoints, "You have survived the\\nHorror From The Deep!");
 queue(trollromance_quest_complete, 0, 0);
 queue(misc_quest_complete, 0, 0);
+queue(tog_quest_complete, 0, 0);
+%lost_tribe_quest = ^lost_tribe_given_treaty;
+queue(lost_tribe_quest_complete, 0, 0);
+%zogre = ^zogre_killed_slash_bash;
+inv_add(inv, zogre_artifacts, 1);
+queue(zogre_quest_complete, 0, 0);
+%deserttreasure = ^deserttreasure_spoken_azzanadra;
+queue(deserttreasure_quest_complete, 0, 0);
 
 ~update_questlist;
 mes("All quests have been completed.");
@@ -578,6 +609,16 @@ return;
 %misc_varbit_1 = null;
 %misc_varbit_2 = null;
 %misc_varbit_3 = null;
+%tog_minigame = 0;
+%tog_last_visit_day = 0;
+%lost_tribe = 0;
+%zombie_ogre = 0;
+%deserttreasuremain = 0;
+%deserttreasurevarbit = 0;
+%deserttreasurevarbit2 = 0;
+%fd_bloodwarrior_quest = 0;
+%zaros_spellbook = 0;
+~settab_magic;
 ~update_questlist;
 mes("All quests have been reset.");
 return;

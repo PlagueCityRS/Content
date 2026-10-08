@@ -12,6 +12,10 @@ model=inv_candle-lit
 2dxan=168
 iop1=Extinguish
 tradeable=no
+category=light_source_lit
+param=light_dim,1
+param=light_naked_flame,1
+param=extinguished,unlit_black_candle
 
 [lit_candle]
 name=Lit candle
@@ -26,6 +30,9 @@ model=inv_candle-lit
 iop1=Extinguish
 category=light_source_lit
 tradeable=no
+param=light_dim,1
+param=light_naked_flame,1
+param=extinguished,unlit_candle
 
 [cert_lit_candle]
 name=Lit candle

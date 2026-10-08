@@ -1,0 +1,46 @@
+[opheldu,candle_lantern_empty]
+switch_obj (last_useitem) {
+    case unlit_candle : @craft_candle_lantern(candle_lantern_unlit);
+    case unlit_black_candle : @craft_candle_lantern(candle_lantern_black_unlit);
+    case lit_candle, lit_black_candle : mes("You need to extinguish the candle before putting it in the lantern.");
+    case default : ~displaymessage(^dm_default);
+}
+
+[label,craft_candle_lantern](namedobj $lantern)
+inv_del(inv, last_useitem, 1);
+inv_setslot(inv, last_slot, $lantern, 1);
+mes("You place the unlit candle inside the lantern.");
+
+[opheldu,oil_lantern_frame]
+switch_obj (last_useitem) {
+    case oil_lamp_empty : @craft_oil_lantern(oil_lantern_empty);
+    case oil_lamp_unlit : @craft_oil_lantern(oil_lantern_unlit);
+    case oil_lamp_lit : mes("You need to extinguish the oil lamp before putting it in the frame.");
+    case default : ~displaymessage(^dm_default);
+}
+
+[label,craft_oil_lantern](namedobj $lantern)
+if (stat(crafting) < 26) {
+    mes("You need a Crafting level of 26 to make an oil lantern.");
+    return;
+}
+inv_del(inv, last_useitem, 1);
+inv_setslot(inv, last_slot, $lantern, 1);
+mes("You place the oil lamp inside its metal frame.");
+
+[opheldu,bullseye_lantern_nolens]
+switch_obj (last_useitem) {
+    case bullseye_lantern_lens :
+        inv_del(inv, bullseye_lantern_lens, 1);
+        inv_setslot(inv, last_slot, bullseye_lantern_empty, 1);
+        mes("You fashion the lens onto the lantern.");
+    case sapphire :
+        if (stat(crafting) < 20) {
+            mes("You require a Crafting level of 20 to use a gem as a lens.");
+            return;
+        }
+        inv_del(inv, sapphire, 1);
+        inv_setslot(inv, last_slot, tog_sapphire_lantern_empty, 1);
+        mes("You fashion the gem into a lens and fit it onto the lantern.");
+    case default : ~displaymessage(^dm_default);
+}

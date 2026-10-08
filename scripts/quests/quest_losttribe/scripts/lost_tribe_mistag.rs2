@@ -1,0 +1,326 @@
+[opnpc1,lost_tribe_mistag]
+if (%lost_tribe_quest < ^lost_tribe_made_contact) {
+    ~chatnpc("<p,goblinchat>Who...who are you? How did you get in here?");
+    ~chatnpc("<p,goblinchat>Help! A surface-dweller this deep in our mines? We will all be destroyed!");
+    return;
+}
+~chatnpc("<p,goblinchat>Hello, friend?");
+switch_int (%lost_tribe_quest) {
+    case ^lost_tribe_made_contact :
+        @multi4("May I mine the rocks here?", mistag_mine_rocks, "Why do the Dorgeshuun live underground?", mistag_underground, "What happened to your arm?", mistag_arm, "Can you show me the way out of the mines?", mistag_way_out);
+    case ^lost_tribe_silverware_missing :
+        @multi3("Some silverware has gone missing from the castle cellar...", mistag_silverware_missing, "Where is the silverware you stole from the castle cellar?", mistag_silverware_stole, "Can you show me the way out of the mines?", mistag_way_out);
+    case ^lost_tribe_given_treaty :
+        if (inv_total(inv, lost_tribe_treaty) > 0) {
+            @mistag_treaty;
+        }
+        @multi4("May I mine the rocks here?", mistag_mine_rocks, "Why do the Dorgeshuun live underground?", mistag_underground, "What happened to your arm?", mistag_arm, "Can you show me the way out of the mines?", mistag_way_out);
+    case default :
+        @multi4("Can I sell you some ore?", mistag_sell_ore, "Why do the Dorgeshuun live underground?", mistag_underground, "What happened to your arm?", mistag_arm, "Can you show me the way out of the mines?", mistag_way_out);
+}
+
+[label,mistag_mine_rocks]
+~chatplayer("<p,quiz>May I mine the rocks here?");
+~chatnpc("<p,goblinchat>No offence, but we will not let you mine here until there is peace between the humans and the Dorgeshuun.");
+
+[label,mistag_underground]
+~chatplayer("<p,quiz>Why do the Dorgeshuun live underground?");
+~chatnpc("<p,goblinchat>Our ancient legends say that goblins were created by an evil god in order to fight in a huge war. This god sent the Dorgeshuun tribe to fight a battle where all would die.");
+~chatnpc("<p,goblinchat>But our ancestors escaped by hiding in a deep hole in the ground where our god could not find us. Eventually an earthquake sealed the hole and they were forever safe.");
+switch_int (~p_choice2("The war is over now, so you can return to the surface.", 1, "What was the name of your god?", 2)) {
+    case 1 :
+        ~chatplayer("<p,neutral>The war is over now, so you can return to the surface.");
+        ~chatnpc("<p,goblinchat>Even if the gods are no longer at war, I find it hard to believe that a tribe of peaceful goblins would be safe above. I have heard of humans coming down into the caves to slaughter our people!");
+        ~chatnpc("<p,goblinchat>But even if we could return, we would not want to. We are adapted to living underground, and we have built a home for ourselves that we do not want to leave.");
+    case 2 :
+        ~chatplayer("<p,quiz>What was the name of your god?");
+        ~chatnpc("<p,goblinchat>Our ancestors did not speak his name, thinking that to do so would attract his attention. His name has been unspoken for so long that it is now entirely forgotten.");
+        ~chatnpc("<p,goblinchat>That is for the best. We have survived perfectly well without gods, and we do not want a return to the old ways.");
+}
+
+[label,mistag_arm]
+~chatplayer("<p,quiz>What happened to your arm?");
+~chatnpc("<p,goblinchat>I lost it in a mining accident a few years ago.");
+~chatnpc("<p,goblinchat>This area is very unstable. That's why we put markers on the wall showing the safest path.");
+
+[label,mistag_way_out]
+~chatplayer("<p,quiz>Can you show me the way out of the mines?");
+if (%lost_tribe_quest < ^lost_tribe_complete) {
+    ~chatnpc("<p,goblinchat>Certainly. Please hurry, you must avert the war!");
+} else {
+    ~chatnpc("<p,goblinchat>Certainly. Come back soon!");
+}
+@lost_tribe_guide_travel("Mistag shows you the way through the tunnels.", ^lost_tribe_kazgar_arrival);
+
+[label,mistag_silverware_missing]
+~chatplayer("<p,sad>Some silverware has gone missing from the castle, and the Duke thinks you stole it!");
+~chatnpc("<p,goblinchat>Oh no! We would never do such a thing!");
+%lost_tribe_mistag_denial = ^true;
+~chatnpc("<p,goblinchat>I assure you we took nothing from the cellar. You must convince the Duke we are innocent!");
+
+[label,mistag_silverware_stole]
+~chatplayer("<p,angry>Where's the silverware you stole from the castle cellar?");
+~chatnpc("<p,goblinchat>What? We didn't take anything!");
+~chatplayer("<p,angry>You expect me to believe that? Perhaps Sigmund was right: you're just thieving little goblins!");
+~chatnpc("<p,goblinchat>Why would we want to steal silver? As you see we have much silver already in our mines!");
+~chatplayer("<p,neutral>Well, the Duke says he will attack you unless the silverware is returned.");
+%lost_tribe_mistag_denial = ^true;
+~chatnpc("<p,goblinchat>The last thing we want is war! If we had anything of yours, we would return it at once. But we don't!");
+
+[label,mistag_sell_ore]
+~chatplayer("<p,quiz>Can I sell you some ore?");
+def_int $iron = inv_total(inv, iron_ore);
+def_int $silver = inv_total(inv, silver_ore);
+if (add($iron, $silver) = 0) {
+    ~chatnpc("<p,goblinchat>Certainly. I will buy any iron or silver ore you mine. Speak to me again when you have some.");
+    return;
+}
+def_int $price = calc((($iron * oc_cost(iron_ore)) + ($silver * oc_cost(silver_ore))) * 80 / 100);
+~chatnpc("<p,goblinchat>I will give you <tostring($price)> gold pieces for the ore you are carrying.");
+if (~p_choice2("Okay.", 1, "No.", 2) = 2) {
+    ~chatplayer("<p,neutral>No.");
+    return;
+}
+~chatplayer("<p,neutral>Okay.");
+if (inv_total(inv, iron_ore) ! $iron | inv_total(inv, silver_ore) ! $silver) {
+    return;
+}
+inv_del(inv, iron_ore, $iron);
+inv_del(inv, silver_ore, $silver);
+inv_add(inv, coins, $price);
+
+[opnpcu,lost_tribe_mistag]
+if (last_useitem ! lost_tribe_brooch) {
+    ~displaymessage(^dm_default);
+    return;
+}
+~chatplayer("<p,quiz>Is this your brooch?");
+if (%lost_tribe_quest < ^lost_tribe_complete) {
+    ~chatnpc("<p,goblinchat>We have more important things to think about than a brooch right now. We must prevent a war!");
+    return;
+}
+if (%lost_tribe_returned_brooch = ^true) {
+    ~chatnpc("<p,goblinchat>You returned my brooch earlier.");
+    return;
+}
+~chatnpc("<p,goblinchat>Yes! I thought I'd lost it. Thank you.");
+inv_del(inv, lost_tribe_brooch, 1);
+inv_add(inv, cave_goblin_mining_helmet_unlit, 1);
+%lost_tribe_returned_brooch = ^true;
+~chatnpc("<p,goblinchat>Have one of these helmets. It will be useful if you want to work in the mine.");
+
+[opnpc1,lost_tribe_guide]
+~chatnpc("<p,goblinchat>Hello, surface-dweller.");
+switch_int (~p_choice3("Who are you?", 1, "Can you show me the way to the mines?", 2, "Good bye, cave-dweller.", 3)) {
+    case 1 :
+        ~chatplayer("<p,quiz>Who are you?");
+        ~chatnpc("<p,goblinchat>Mistag posted me here when surface-dwellers started visiting the mine. If you have business in the Dorgeshuun mines I will guide you through the tunnels.");
+        if (~p_choice2("Can you show me the way to the mines?", 1, "Maybe some other time.", 2) = 2) {
+            ~chatplayer("<p,neutral>Maybe some other time.");
+            return;
+        }
+        @kazgar_show_way;
+    case 2 : @kazgar_show_way;
+    case 3 : ~chatplayer("<p,neutral>Good bye, cave-dweller.");
+}
+
+[label,kazgar_show_way]
+~chatplayer("<p,quiz>Can you show me the way to the mines?");
+~chatnpc("<p,goblinchat>All right. Follow me.");
+@lost_tribe_guide_travel("Kazgar shows you the way through the tunnels.", ^lost_tribe_mistag_arrival);
+
+[label,lost_tribe_guide_travel](string $message, coord $dest)
+if_close;
+~fade_out;
+p_delay(2);
+p_teleport($dest);
+p_delay(0);
+~fade_in;
+mes($message);
+queue(fade_clear, 2, 0);
+
+[proc,lost_tribe_handle_emote](seq $anim)
+if (inzone(^dorgeshuun_mine_lower_bound, ^dorgeshuun_mine_upper_bound, coord) = false) {
+    return;
+}
+if (npc_find(coord, lost_tribe_mistag, 6, 0) = false) {
+    return;
+}
+if ($anim = human_cave_goblin_dance) {
+    npc_facesquare(coord);
+    ~chatnpc("<p,goblinchat>Eeek! The war-dance!");
+    return;
+}
+if ($anim ! human_cave_goblin_bow) {
+    return;
+}
+npc_facesquare(coord);
+npc_anim(cave_goblin_bow, 0);
+if (%lost_tribe_quest ! ^lost_tribe_spoken_generals) {
+    return;
+}
+p_delay(2);
+~chatnpc("<p,goblinchat>A human knows ancient greeting?");
+~chatnpc("<p,goblinchat>Perhaps you are friend after all!");
+%lost_tribe_quest = ^lost_tribe_made_contact;
+~send_quest_progress(questlist:losttribe, %lost_tribe_quest, ^lost_tribe_complete);
+~chatnpc("<p,goblinchat>Greetings, friend. I am sorry I panicked when I saw you.");
+~chatnpc("<p,goblinchat>Our legends tell of the surface as a place of horror and violence, where the gods forced us to fight in terrible battles.");
+~chatnpc("<p,goblinchat>When I saw a surface-dweller appear I was afraid it was a return to the old days!");
+~chatplayer("<p,quiz>Did you break in to the castle cellar?");
+~chatnpc("<p,goblinchat>It was an accident. We were following a seam of iron and suddenly we found ourselves in a room!");
+~chatnpc("<p,goblinchat>We blocked up our tunnel behind us and ran back here. Then we did what cave goblins always do when there is a problem: we hid and hoped it would go away.");
+~chatnpc("<p,goblinchat>We meant no harm! Please tell the ruler of the above-people that we want to make peace.");
+
+[opnpc1,_cave_goblin_miner]
+if (%lost_tribe_quest < ^lost_tribe_complete) {
+    ~chatnpc("<p,goblinchat>Help! An outsider!");
+    return;
+}
+~chatnpc("<p,goblinchat>Hello.");
+switch_int (~p_choice3("How's the mining going?", 1, "Where do you take all this ore?", 2, "Why do you use bones to build with?", 3)) {
+    case 1 :
+        ~chatplayer("<p,quiz>How's the mining going?");
+        switch_int (random(5)) {
+            case 0 :
+                ~chatnpc("<p,goblinchat>I nearly got caught in a rockfall earlier!");
+                ~chatnpc("<p,goblinchat>Still, since humans started coming down here, the proportion of miners killed in rockfalls has fallen dramatically!");
+            case 1 : ~chatnpc("<p,goblinchat>Oh, you know, can't complain.");
+            case 2 : ~chatnpc("<p,goblinchat>It's going well. I find repeatedly hitting a piece of rock very therapeutic.");
+            case 3 :
+                ~chatnpc("<p,goblinchat>Well, don't tell Mistag...");
+                ~chatnpc("<p,goblinchat>...but actually I wasn't working very hard!");
+            case default : ~chatnpc("<p,goblinchat>We're a bit behind schedule. If you lent us a hand, Mistag would pay you for your work.");
+        }
+    case 2 :
+        ~chatplayer("<p,quiz>Where do you take all this ore?");
+        ~chatnpc("<p,goblinchat>To the town of Dorgesh-Kaan, deep in the caves.");
+    case 3 :
+        ~chatplayer("<p,quiz>Why do you use bones to build with?");
+        ~chatnpc("<p,goblinchat>Well, our legends say that on the surface there was a substance called 'wood', which grew out of the ground in towers.");
+        ~chatnpc("<p,goblinchat>But we cannot get wood here, so we can only build with stone, bone, and iron.");
+}
+
+[opnpc1,_cave_goblin_guard]
+if (%lost_tribe_quest < ^lost_tribe_complete) {
+    ~chatnpc("<p,goblinchat>Surface-dweller! You should leave the mines now!");
+    return;
+}
+switch_int (random(3)) {
+    case 0 : ~chatnpc("<p,goblinchat>Have a nice day!");
+    case 1 : ~chatnpc("<p,goblinchat>I'm keeping an eye on you, surface-dweller.");
+    case default :
+        ~chatnpc("<p,goblinchat>Surface-dweller! You will never find your way into the city of Dorgesh-Kaan!");
+        ~chatplayer("<p,quiz>Isn't it through that big door?");
+        ~chatnpc("<p,goblinchat>Well, yes, but you'll never find your way in!");
+}
+
+[label,mistag_treaty]
+~chatplayer("<p,neutral>I have a peace treaty from the Duke of Lumbridge.");
+~chatnpc("<p,goblinchat>A peace treaty? Then you will not invade?");
+~chatplayer("<p,neutral>No. As long as you stick to the terms of this treaty there will be no conflict. The Duke of Lumbridge wants to meet your ruler to sign it.");
+~chatnpc("<p,goblinchat>I will summon Ur-tag, our headman, at once.");
+@lost_tribe_cutscene;
+
+[label,lost_tribe_cutscene]
+if_close;
+~fade_out;
+p_delay(2);
+~lost_tribe_cutscene_tabs;
+def_coord $sw = region_create(2, 2, 2);
+region_set(0, 0, 0, 0_50_50_0_16, 0);
+region_set(0, 1, 0, 0_50_50_8_16, 0);
+region_set(0, 0, 1, 0_50_50_0_24, 0);
+region_set(0, 1, 1, 0_50_50_8_24, 0);
+region_set(1, 0, 0, 1_50_50_0_16, 0);
+region_set(1, 1, 0, 1_50_50_8_16, 0);
+region_set(1, 0, 1, 1_50_50_0_24, 0);
+region_set(1, 1, 1, 1_50_50_8_24, 0);
+region_setexitcoord(^lost_tribe_mistag_arrival);
+def_coord $duke = region_getcoord(1, 12, 6);
+def_coord $urtag = region_getcoord(1, 12, 4);
+def_coord $mistag = region_getcoord(1, 11, 3);
+def_coord $sigmund = region_getcoord(1, 6, 6);
+def_coord $player = region_getcoord(1, 11, 4);
+def_coord $camera = region_getcoord(1, 9, 1);
+def_coord $sigmund_camera = region_getcoord(1, 9, 8);
+npc_add($duke, lost_tribe_cutscene_duke, 300);
+npc_facesquare($urtag);
+npc_add($urtag, lost_tribe_cutscene_urtag, 300);
+npc_facesquare($duke);
+npc_add($mistag, lost_tribe_cutscene_mistag, 300);
+npc_facesquare($duke);
+npc_add($sigmund, lost_tribe_cutscene_sigmund, 300);
+npc_facesquare(movecoord($sigmund, 2, 0, 0));
+p_teleport($player);
+walktrigger(lost_tribe_cutscene);
+p_delay(1);
+facesquare($duke);
+cam_moveto($camera, 700, 100, 100);
+cam_lookat($duke, 200, 100, 100);
+~fade_in;
+p_delay(2);
+if_openoverlay(null);
+~mesbox("@dre@~ The Signing of the Lumbridge-Dorgeshuun Treaty ~");
+~chatplayer("<p,neutral>Your grace, I present Ur-tag, headman of the Dorgeshuun.");
+~chatnpc_specific("Duke Horacio", lost_tribe_cutscene_duke, "<p,neutral>Welcome, Ur-tag. I am sorry that your race came under suspicion.");
+~chatnpc_specific("Duke Horacio", lost_tribe_cutscene_duke, "<p,neutral>I assure you that the warmongering element has been dealt with.");
+~chatnpc_specific("Ur-tag", lost_tribe_cutscene_urtag, "<p,goblinchat>I apologize for the damage to your cellar. I will send workers to repair the hole.");
+~chatnpc_specific("Duke Horacio", lost_tribe_cutscene_duke, "<p,neutral>No, let it stay. It can be a route of commerce between our lands.");
+~chatnpc_specific("Duke Horacio", lost_tribe_cutscene_duke, "<p,happy><displayname>, Lumbridge is in your debt. Please accept this ring as a token of my thanks.");
+~chatnpc_specific("Duke Horacio", lost_tribe_cutscene_duke, "<p,neutral>It is enchanted to save you in your hour of need.");
+~objbox(ring_of_life, "The Duke hands you a Ring of Life.", 250, 0, 0);
+~chatnpc_specific("Ur-tag", lost_tribe_cutscene_urtag, "<p,goblinchat>I too thank you. Accept the freedom of the Dorgeshuun mines.");
+~chatnpc_specific("Ur-tag", lost_tribe_cutscene_urtag, "<p,goblinchat>These are strange times. I never dreamed that I would see the surface, still less that I would be on friendly terms with its people.");
+if_close;
+cam_moveto($sigmund_camera, 900, 2, 2);
+cam_lookat($sigmund, 200, 2, 2);
+p_delay(4);
+~chatnpc_specific("Sigmund", lost_tribe_cutscene_sigmund, "<p,angry>Prattle on, goblin.");
+~chatnpc_specific("Sigmund", lost_tribe_cutscene_sigmund, "<p,evillaugh>Soon you will be destroyed!");
+if_close;
+~fade_out;
+p_delay(2);
+~lost_tribe_cutscene_leave;
+p_delay(0);
+~fade_in;
+queue(fade_clear, 2, 0);
+
+[walktrigger,lost_tribe_cutscene]
+if (%lost_tribe_quest ! ^lost_tribe_given_treaty) {
+    return;
+}
+~lost_tribe_cutscene_leave;
+
+[proc,lost_tribe_cutscene_tabs]
+if_settab(null, ^tab_combat_options);
+if_settab(null, ^tab_skills);
+if_settab(null, ^tab_quest_journal);
+if_settab(null, ^tab_inventory);
+if_settab(null, ^tab_wornitems);
+if_settab(null, ^tab_prayer);
+if_settab(null, ^tab_magic);
+if_settab(null, ^tab_friends);
+if_settab(null, ^tab_ignore);
+if_settab(null, ^tab_logout);
+if_settab(null, ^tab_game_options);
+if_settab(null, ^tab_player_controls);
+if_settab(null, ^tab_musicplayer);
+
+[proc,lost_tribe_cutscene_leave]
+if_openoverlay(null);
+cam_reset;
+~initalltabs;
+p_teleport(^lost_tribe_mistag_arrival);
+queue(lost_tribe_quest_complete, 1, 0);
+
+[queue,lost_tribe_quest_complete]
+if (%lost_tribe_quest ! ^lost_tribe_given_treaty) {
+    return;
+}
+inv_del(inv, lost_tribe_treaty, 1);
+inv_add(inv, ring_of_life, 1);
+stat_advance(mining, 30000);
+%lost_tribe_quest = ^lost_tribe_complete;
+session_log(^log_adventure, "Quest complete: The Lost Tribe");
+~send_quest_complete(questlist:losttribe, ring_of_life, 250, ^lost_tribe_questpoints, "You have completed\\nThe Lost Tribe Quest!");

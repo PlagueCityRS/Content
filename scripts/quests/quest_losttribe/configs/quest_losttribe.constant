@@ -1,0 +1,36 @@
+^lost_tribe_not_started = 0
+^lost_tribe_started = 1
+^lost_tribe_spoken_bob = 2
+^lost_tribe_duke_permission = 3
+^lost_tribe_dug_tunnel = 4
+^lost_tribe_shown_brooch = 5
+^lost_tribe_read_book = 6
+^lost_tribe_spoken_generals = 7
+^lost_tribe_made_contact = 8
+^lost_tribe_silverware_missing = 9
+^lost_tribe_given_treaty = 10
+^lost_tribe_complete = 11
+
+^lost_tribe_ham_found_robes = 1
+^lost_tribe_ham_found_silverware = 2
+
+^lost_tribe_mining_level = 17
+^lost_tribe_agility_level = 13
+^lost_tribe_thieving_level = 13
+
+^lost_tribe_book_pages = 6
+
+^lost_tribe_cellar_side = 0_50_150_19_18
+^lost_tribe_cave_side = 0_50_150_21_18
+^lost_tribe_hole_2_north = 0_50_150_24_4
+^lost_tribe_hole_2_south = 0_50_150_24_0
+^lost_tribe_kazgar_arrival = 0_50_150_30_11
+^lost_tribe_mistag_arrival = 0_51_150_54_14
+^lost_tribe_trap_fall_coord = 0_50_149_53_29
+^lost_tribe_ham_trapdoor_top = 0_49_50_30_51
+^lost_tribe_ham_ladder_bottom = 0_49_150_13_52
+
+^dorgeshuun_mine_lower_bound = 0_51_150_43_0
+^dorgeshuun_mine_upper_bound = 0_51_150_63_63
+^lost_tribe_maze_lower_bound = 0_50_150_22_0
+^lost_tribe_maze_upper_bound = 0_51_150_42_61

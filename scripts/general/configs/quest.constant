@@ -135,3 +135,7 @@
 ^horror_questpoints = 2
 ^mm_questpoints = 3
 ^routequest_questpoints = 2
+^deserttreasure_questpoints = 3
+^tog_questpoints = 1
+^zogre_questpoints = 1
+^lost_tribe_questpoints = 1

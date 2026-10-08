@@ -1,0 +1,96 @@
+[proc,dark_cave_start]
+if (~inzone_coord_pair_table(dark_cave_zones, coord) = false) {
+    return;
+}
+if (gettimer(dark_cave) = ^false) {
+    settimer(dark_cave, 1);
+}
+~dark_cave_update;
+
+[timer,dark_cave]
+~dark_cave_update;
+
+[proc,dark_cave_update]
+if (~inzone_coord_pair_table(dark_cave_zones, coord) = false) {
+    ~dark_cave_leave;
+    return;
+}
+def_int $light = ~light_level;
+~dark_cave_overlay($light);
+if ($light = 0) {
+    %dark_cave_ticks = add(%dark_cave_ticks, 1);
+    if (%dark_cave_ticks = 15) {
+        mes("You hear tiny insects skittering over the ground...");
+    } else if (%dark_cave_ticks = 30) {
+        mes("Tiny biting insects swarm all over you!");
+        sound_synth(insect_swarm, 1, 0);
+    }
+    if (%dark_cave_ticks >= 30) {
+        sound_synth(insect_bites, 1, 0);
+        ~damage_self(1);
+    }
+} else {
+    %dark_cave_ticks = 0;
+}
+~swamp_gas_update;
+~wallbeast_check;
+~lost_tribe_trap_check;
+
+[proc,dark_cave_overlay](int $light)
+if (%dark_cave_overlay = add($light, 1)) {
+    return;
+}
+%dark_cave_overlay = add($light, 1);
+%darkness_level = 1;
+switch_int ($light) {
+    case 0 :
+        if_openoverlay(total_blackness);
+        minimap_toggle(2);
+    case 1 :
+        if_openoverlay(darkness_dark);
+        minimap_toggle(0);
+    case 2 :
+        if_openoverlay(darkness_medium);
+        minimap_toggle(0);
+    case default :
+        if_openoverlay(darkness_light);
+        minimap_toggle(0);
+}
+
+[proc,dark_cave_leave]
+cleartimer(dark_cave);
+if (%dark_cave_overlay > 0) {
+    if_openoverlay(null);
+    minimap_toggle(0);
+}
+%dark_cave_overlay = 0;
+%dark_cave_ticks = 0;
+%darkness_level = 0;
+%swamp_gas_turns = 0;
+
+[proc,swamp_gas_update]
+if (~inzone_coord_pair_table(swamp_gas_zones, coord) = false) {
+    %swamp_gas_turns = 0;
+    return;
+}
+def_obj $flame = ~first_naked_flame;
+if ($flame = null) {
+    %swamp_gas_turns = 0;
+    return;
+}
+if (%swamp_gas_turns = 0) {
+    mes("Your <lowercase(oc_name($flame))> flares brightly!");
+    sound_synth(gas_hiss, 1, 0);
+}
+%swamp_gas_turns = add(%swamp_gas_turns, 1);
+if (%swamp_gas_turns < 7) {
+    return;
+}
+%swamp_gas_turns = 0;
+$flame = ~extinguish_naked_flames;
+sound_synth(gas_explosion, 1, 0);
+mes("The swamp gas explodes, and your <lowercase(oc_name($flame))> goes out!");
+~damage_self(12);
+
+[mapzone,0_50_148] ~tog_minigame_mapzone; ~dark_cave_start; @music_playbyregion(coord);
+[mapzone,0_51_150] ~dark_cave_start; @music_playbyregion(coord);

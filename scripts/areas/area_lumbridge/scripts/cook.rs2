@@ -12,9 +12,17 @@ if(%cookquest = 0) {
 } else if(%cookquest = ^cook_complete) {
     ~chatnpc("<p,happy>How is the adventuring going, my friend?");
 
-    def_int $option = ~p_choice4("I am getting strong and mighty.", 1, "I keep on dying.", 2, "Nice hat!", 3, "Can I use your range?", 4);
+    def_int $option;
+    if (%lost_tribe_quest >= ^lost_tribe_started & %lost_tribe_quest <= ^lost_tribe_duke_permission) {
+        $option = ~p_choice5("Do you know what happened in the castle cellar?", 5, "I am getting strong and mighty.", 1, "I keep on dying.", 2, "Nice hat!", 3, "Can I use your range?", 4);
+    } else {
+        $option = ~p_choice4("I am getting strong and mighty.", 1, "I keep on dying.", 2, "Nice hat!", 3, "Can I use your range?", 4);
+    }
 
-    if($option = 1) {
+    if ($option = 5) {
+        ~chatplayer("<p,quiz>Do you know what happened in the castle cellar?");
+        ~chatnpc("<p,sad>Oh no, it's terrible, isn't it? There was rock dust everywhere, it got on all my ingredients!");
+    } else if($option = 1) {
         ~chatplayer("<p,happy>I am getting strong and mighty.");
         ~chatnpc("<p,happy>Glad to hear it.");
     } else if($option = 2) {

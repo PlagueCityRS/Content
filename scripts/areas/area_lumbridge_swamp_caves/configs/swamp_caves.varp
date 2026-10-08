@@ -1,0 +1,9 @@
+[goblin_caves]
+scope=perm
+
+[dark_cave_overlay]
+
+[dark_cave_ticks]
+
+[wallbeast_coord]
+type=coord

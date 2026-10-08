@@ -2,7 +2,15 @@
 // This line isn't in OSRS (or launch? based on https://youtu.be/UJ94TeagEfE?si=MEO3k-HBgsEuKE2D&t=48), but exists in RSC
 // although RSC also wouldn't have the option for axe repairs
 ~chatnpc("<p,quiz>Hello. How can I help you?"); 
-def_int $option = ~p_choice3("Give me a quest!", 1, "Have you anything to sell?", 2, "Can you repair my items for me?", 3);
+def_int $option;
+if (%lost_tribe_quest >= ^lost_tribe_started & %lost_tribe_quest <= ^lost_tribe_duke_permission) {
+    $option = ~p_choice4("Do you know what happened in the castle cellar?", 4, "Give me a quest!", 1, "Have you anything to sell?", 2, "Can you repair my items for me?", 3);
+} else {
+    $option = ~p_choice3("Give me a quest!", 1, "Have you anything to sell?", 2, "Can you repair my items for me?", 3);
+}
+if ($option = 4) {
+    @bob_lost_tribe;
+}
 if($option = 1) {
     ~chatplayer("<p,happy>Give me a quest!");
     ~chatnpc("<p,angry>Get yer own!");
@@ -49,3 +57,17 @@ if (oc_param($item, to_be_fixed_by_bob) = ^true) {
 } else {
     ~chatnpc("<p,neutral>Sorry friend, but I can't do anything with that."); // osrs
 }
+
+[label,bob_lost_tribe]
+~chatplayer("<p,quiz>Do you know what happened in the castle cellar?");
+if (%lost_tribe_quest > ^lost_tribe_started) {
+    ~chatnpc("<p,neutral>I told you about the creature I saw. You should go and tell the Duke.");
+    return;
+}
+~chatnpc("<p,neutral>Last night I was in the kitchen and I heard a noise from the cellar. I opened the trapdoor and saw a creature dart into a hole in the wall.");
+~chatnpc("<p,neutral>It looked a bit like a goblin, but it had big bulging eyes. It wasn't wearing armour, but it had this odd helmet with a light on it.");
+~chatnpc("<p,sad>The tunnel was too dark for me to follow it, so I went to tell the Duke. But when we went down to the cellar the hole had been blocked up, and no one believes me.");
+~chatplayer("<p,neutral>I believe you.");
+%lost_tribe_quest = ^lost_tribe_spoken_bob;
+~send_quest_progress(questlist:losttribe, %lost_tribe_quest, ^lost_tribe_complete);
+~chatnpc("<p,happy>Thank you, <displayname>! If you can convince the Duke I'm telling the truth then we can get to the bottom of this mystery.");

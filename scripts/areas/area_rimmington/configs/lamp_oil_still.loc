@@ -1,0 +1,38 @@
+[lamp_oil_still]
+name=lamp_oil_still
+active=yes
+width=2
+forceapproach=south
+multivar=lamp_oil_still_state
+multiloc=0,lamp_oil_still_0
+multiloc=1,lamp_oil_still_1
+
+[lamp_oil_still_0]
+name=Lamp oil still
+desc=A still for making lamp oil.
+model=loc_5909
+model2=loc_5909i2
+recol1s=16809
+recol1d=15717
+recol2s=14695
+recol2d=14660
+recol3s=12615
+recol3d=13603
+recol4s=12581
+recol4d=12546
+width=2
+
+[lamp_oil_still_1]
+name=Lamp oil still
+desc=The still has oil in.
+model=loc_5909
+model2=loc_5909i2
+recol1s=16809
+recol1d=15717
+recol2s=14695
+recol2d=14660
+recol3s=12615
+recol3d=13603
+recol4s=12581
+recol4d=12546
+width=2

@@ -14,3 +14,27 @@ param=levelrequire,46
 param=productexp,525
 param=product,stafforb
 param=productmessage,an orb
+
+[candle_lantern_empty]
+param=levelrequire,4
+param=productexp,190
+param=product,candle_lantern_empty
+param=productmessage,a candle lantern
+
+[oil_lamp_empty]
+param=levelrequire,12
+param=productexp,250
+param=product,oil_lamp_empty
+param=productmessage,an oil lamp
+
+[fishbowl_empty]
+param=levelrequire,42
+param=productexp,425
+param=product,fishbowl_empty
+param=productmessage,a fishbowl
+
+[bullseye_lantern_lens]
+param=levelrequire,49
+param=productexp,550
+param=product,bullseye_lantern_lens
+param=productmessage,a lantern lens

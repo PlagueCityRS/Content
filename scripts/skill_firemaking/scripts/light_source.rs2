@@ -4,8 +4,101 @@ if($product = torch_lit & inzone(0_43_51_8_7, 1_43_51_52_63, coord) = true) {
     mes("Your tinderbox is damp from the sea crossing. It won't light here.");
     return;
 }
+def_int $level = oc_param($unlit_source, levelrequire);
+if (stat(firemaking) < $level) {
+    mes("You need a Firemaking level of at least <tostring($level)> to light this.");
+    return;
+}
 inv_del(inv, $unlit_source, 1);
 inv_add(inv, $product, 1);
 if($product ! lit_black_candle & $product ! lit_candle) {
     mes("You light the <lowercase(oc_name($product))>.");
 }
+
+[opheld1,lit_candle] @extinguish_light_source(last_slot);
+[opheld1,lit_black_candle] @extinguish_light_source(last_slot);
+[opheld1,torch_lit] @extinguish_light_source(last_slot);
+[opheld1,tog_sapphire_lantern_lit] @extinguish_light_source(last_slot);
+[opheld2,oil_lamp_lit] @extinguish_light_source(last_slot);
+[opheld2,candle_lantern_lit] @extinguish_light_source(last_slot);
+[opheld2,candle_lantern_black_lit] @extinguish_light_source(last_slot);
+[opheld2,oil_lantern_lit] @extinguish_light_source(last_slot);
+[opheld2,bullseye_lantern_lit] @extinguish_light_source(last_slot);
+[opheld3,cave_goblin_mining_helmet_lit] @extinguish_light_source(last_slot);
+
+[label,extinguish_light_source](int $slot)
+def_obj $lit = inv_getobj(inv, $slot);
+if ($lit = null) {
+    return;
+}
+if (~light_source_needed = true) {
+    mes("Extinguishing the <lowercase(oc_name($lit))> would leave you without a light source.");
+    return;
+}
+inv_setslot(inv, $slot, oc_param($lit, extinguished), 1);
+mes("You extinguish the flame.");
+
+[opheld5,_light_source_lit]
+def_obj $lit = inv_getobj(inv, last_slot);
+if (~light_source_needed = true) {
+    mes("Dropping the <lowercase(oc_name($lit))> would leave you without a light source.");
+    return;
+}
+if ($lit = cave_goblin_mining_helmet_lit) {
+    inv_setslot(inv, last_slot, cave_goblin_mining_helmet_unlit, 1);
+    mes("The helmet goes out as you drop it.");
+}
+~dropslot(last_slot);
+
+[proc,light_source_needed]()(boolean)
+if (~inzone_coord_pair_table(dark_cave_zones, coord) = false) {
+    return(false);
+}
+if (calc(inv_totalcat(inv, light_source_lit) + inv_totalcat(worn, light_source_lit)) > 1) {
+    return(false);
+}
+return(true);
+
+[proc,light_level]()(int)
+if (inv_totalparam(inv, light_bright) > 0 | inv_totalparam(worn, light_bright) > 0) {
+    return(3);
+}
+if (inv_totalparam(inv, light_medium) > 0 | inv_totalparam(worn, light_medium) > 0) {
+    return(2);
+}
+if (inv_totalparam(inv, light_dim) > 0 | inv_totalparam(worn, light_dim) > 0) {
+    return(1);
+}
+return(0);
+
+[proc,extinguish_naked_flames]()(obj)
+def_obj $first = null;
+def_obj $obj;
+def_int $slot = 0;
+while ($slot < inv_size(inv)) {
+    $obj = inv_getobj(inv, $slot);
+    if ($obj ! null) {
+        if (oc_param($obj, light_naked_flame) = 1) {
+            inv_setslot(inv, $slot, oc_param($obj, extinguished), 1);
+            if ($first = null) {
+                $first = $obj;
+            }
+        }
+    }
+    $slot = add($slot, 1);
+}
+return($first);
+
+[proc,first_naked_flame]()(obj)
+def_obj $obj;
+def_int $slot = 0;
+while ($slot < inv_size(inv)) {
+    $obj = inv_getobj(inv, $slot);
+    if ($obj ! null) {
+        if (oc_param($obj, light_naked_flame) = 1) {
+            return($obj);
+        }
+    }
+    $slot = add($slot, 1);
+}
+return(null);

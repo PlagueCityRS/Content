@@ -1,0 +1,27 @@
+[oplocu,lamp_oil_still]
+if (last_useitem = swamp_tar) {
+    if (%lamp_oil_still_state = 1) {
+        mes("The still is already full of lamp oil.");
+        return;
+    }
+    inv_del(inv, swamp_tar, 1);
+    anim(human_pickupfloor, 0);
+    sound_synth(liquid, 1, 0);
+    %lamp_oil_still_state = 1;
+    mes("You refine some swamp tar into lamp oil.");
+    return;
+}
+def_namedobj $filled = oc_param(last_useitem, oil_filled);
+if ($filled = null) {
+    ~displaymessage(^dm_default);
+    return;
+}
+if (%lamp_oil_still_state = 0) {
+    mes("There is no oil in the still.");
+    return;
+}
+inv_setslot(inv, last_useslot, $filled, 1);
+anim(human_pickupfloor, 0);
+sound_synth(liquid, 1, 0);
+%lamp_oil_still_state = 0;
+mes("You fill the <lowercase(oc_name($filled))> with lamp oil.");

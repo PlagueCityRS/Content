@@ -1,0 +1,146 @@
+[proc,lost_tribe_generals_choice]()(boolean)
+if (%goblinquest ! ^gobdip_complete | %lost_tribe_quest < ^lost_tribe_read_book) {
+    return(false);
+}
+if (~p_choice2("Have you ever heard of the Dorgeshuun?", 1, "So how is life for the goblins?", 2) = 1) {
+    return(true);
+}
+~chatplayer("<p,quiz>So how is life for the goblins?");
+return(false);
+
+[proc,lost_tribe_bentnoze](string $string)
+~chatnpc_specific("General Bentnoze", general_bentnoze, $string);
+
+[proc,lost_tribe_wartface](string $string)
+~chatnpc_specific("General Wartface", general_wartface, $string);
+
+[label,lost_tribe_generals_dorgeshuun]
+~chatplayer("<p,quiz>Have you ever heard of the Dorgeshuun?");
+~lost_tribe_bentnoze("<p,goblinchat>Dorgeshuun? That old goblin legend. Lost tribe.");
+~lost_tribe_wartface("<p,goblinchat>In time of much-war there many tribes. Big High War-God send Dorgesh tribe to fight beardy-short-people in mountains.");
+~lost_tribe_bentnoze("<p,goblinchat>No no, he send them to fight tall people with biting blades, that what I hear.");
+~lost_tribe_wartface("<p,goblinchat>It was beardy-short-people, that how legend go.");
+@lost_tribe_generals_menu1;
+
+[label,lost_tribe_generals_menu1]
+switch_int (~p_choice3("Make up your minds!", 1, "Do you want me to decide for you again?", 2, "It doesn't really matter.", 3)) {
+    case 1 :
+        ~chatplayer("<p,angry>Make up your minds!");
+        ~lost_tribe_bentnoze("<p,goblinchat>It was tall people! That what old storyteller say!");
+        ~lost_tribe_wartface("<p,goblinchat>No, beardy-short-people. That how legend always go, stupid.");
+        ~lost_tribe_bentnoze("<p,goblinchat>You stupid!");
+        @lost_tribe_generals_menu1;
+    case 2 :
+        ~chatplayer("<p,quiz>Do you want me to decide for you again?");
+        ~lost_tribe_bentnoze("<p,goblinchat>That most stupid idea yet. If it happen it either happen one way or the other. You can't just decide which.");
+        ~lost_tribe_wartface("<p,goblinchat>Yeah even goblins know that.");
+        @lost_tribe_generals_menu1;
+    case 3 :
+        ~chatplayer("<p,quiz>It doesn't really matter. What happened to them?");
+        ~lost_tribe_wartface("<p,goblinchat>Well, they say, 'We not want to fight,' so god punish them.");
+        ~lost_tribe_bentnoze("<p,goblinchat>That silly. No goblin ever say that.");
+        ~lost_tribe_wartface("<p,goblinchat>What happen then?");
+        ~lost_tribe_bentnoze("<p,goblinchat>They lose battle, that why god punish them.");
+        ~lost_tribe_wartface("<p,goblinchat>Ha ha! If they lost battle they all be dead!");
+        ~lost_tribe_bentnoze("<p,goblinchat>No no, they losing so they run away, and Big High War-God punish them for running away.");
+        @lost_tribe_generals_menu2;
+}
+
+[label,lost_tribe_generals_menu2]
+switch_int (~p_choice3("Who were they fighting again?", 1, "What kind of god would punish them for refusing to fight?", 2, "Well either way they refused to fight.", 3)) {
+    case 1 :
+        ~chatplayer("<p,quiz>Who were they fighting again?");
+        ~lost_tribe_wartface("<p,goblinchat>It was beardy-short-people in mountains.");
+        ~lost_tribe_bentnoze("<p,goblinchat>No no, it was tall people.");
+        @lost_tribe_generals_menu2;
+    case 2 :
+        ~chatplayer("<p,quiz>What kind of god would punish them for refusing to fight?");
+        ~lost_tribe_bentnoze("<p,goblinchat>Shh! Must not question Big High War-God!");
+        ~lost_tribe_wartface("<p,goblinchat>No, because he much bigger than us.");
+        @lost_tribe_generals_menu2;
+    case 3 :
+        ~chatplayer("<p,neutral>Well either way they refused to fight.");
+        ~lost_tribe_wartface("<p,goblinchat>Yeah I suppose so.");
+        ~lost_tribe_bentnoze("<p,goblinchat>Anyway then Big High War-God punish them. He turn their insides to stone.");
+        ~lost_tribe_wartface("<p,goblinchat>Ha ha ha! That silly!");
+        ~lost_tribe_bentnoze("<p,goblinchat>Not as silly as green armour! What happen then?");
+        ~lost_tribe_wartface("<p,goblinchat>He put them inside stone! Big hole open in ground and they all go into cave.");
+        ~lost_tribe_bentnoze("<p,goblinchat>That not punishment! Caves nice and cool.");
+        ~lost_tribe_wartface("<p,goblinchat>But then he close cave so they not get out! You not want to stay in cave all the time.");
+        @lost_tribe_generals_menu3;
+}
+
+[label,lost_tribe_generals_menu3]
+switch_int (~p_choice3("Why were they punished again?", 1, "So do goblins make their own tunnels?", 2, "Well I found a brooch underground...", 3)) {
+    case 1 :
+        ~chatplayer("<p,quiz>Why were they punished again?");
+        ~lost_tribe_wartface("<p,goblinchat>It because they run away from fight.");
+        ~lost_tribe_bentnoze("<p,goblinchat>No, it because they refuse to fight night before battle.");
+        @lost_tribe_generals_menu3;
+    case 2 :
+        ~chatplayer("<p,quiz>So do goblins make their own tunnels?");
+        ~lost_tribe_bentnoze("<p,goblinchat>What? Make our own tunnels?");
+        ~lost_tribe_wartface("<p,goblinchat>We hadn't thought of that.");
+        @lost_tribe_generals_menu3;
+    case 3 :
+        ~chatplayer("<p,neutral>Well I found a brooch underground, and I looked up the symbol and it was the symbol of the Dorgeshuun.");
+        ~lost_tribe_bentnoze("<p,goblinchat>That not look like goblin brooch.");
+        ~lost_tribe_wartface("<p,goblinchat>Goblins not wear jewellery.");
+        ~lost_tribe_bentnoze("<p,goblinchat>Well if it Dorgeshuun tribe they not know who won big wars. You should greet them with goblin victory dance!");
+        ~lost_tribe_wartface("<p,goblinchat>No no, you greet them with goblin tribal bow.");
+        ~lost_tribe_bentnoze("<p,goblinchat>Doing bow make you look like a wimp.");
+        ~lost_tribe_wartface("<p,goblinchat>It how tribes greet each other in old days.");
+        ~lost_tribe_bentnoze("<p,goblinchat>Only if they wimpy tribes! Goblin salute strong!");
+        @lost_tribe_generals_menu4;
+}
+
+[label,lost_tribe_generals_menu4]
+switch_int (~p_choice3("So why is the Dorgeshuun tribe underground?", 1, "Wait, you say YOU won the big wars?", 2, "Well why not show me both greetings?", 3)) {
+    case 1 :
+        @lost_tribe_generals_underground(lost_tribe_generals_menu4);
+    case 2 :
+        @lost_tribe_generals_won(lost_tribe_generals_menu4);
+    case 3 :
+        ~chatplayer("<p,quiz>Well why not show me both greetings?");
+        ~lost_tribe_wartface("<p,goblinchat>That good idea. Watch.");
+        if_close;
+        if (npc_find(coord, general_bentnoze, 10, 0) = true) {
+            npc_facesquare(coord);
+            npc_anim(goblin_dance, 0);
+        }
+        if (npc_find(coord, general_wartface, 10, 0) = true) {
+            npc_facesquare(coord);
+            npc_anim(goblin_bow, 0);
+        }
+        p_delay(3);
+        if (%lost_tribe_quest = ^lost_tribe_read_book) {
+            %lost_tribe_quest = ^lost_tribe_spoken_generals;
+            ~send_quest_progress(questlist:losttribe, %lost_tribe_quest, ^lost_tribe_complete);
+        }
+        ~mesbox("The goblins show you the Goblin Victory Salute and Goblin Bow.");
+        @lost_tribe_generals_menu5;
+}
+
+[label,lost_tribe_generals_menu5]
+switch_int (~p_choice3("Thanks.", 1, "Wait, you say YOU won the big wars?", 2, "So why is the Dorgeshuun tribe underground?", 3)) {
+    case 1 :
+        ~chatplayer("<p,happy>Thanks.");
+        ~lost_tribe_bentnoze("<p,goblinchat>Bye then.");
+        ~lost_tribe_wartface("<p,goblinchat>Bye.");
+    case 2 :
+        @lost_tribe_generals_won(lost_tribe_generals_menu5);
+    case 3 :
+        @lost_tribe_generals_underground(lost_tribe_generals_menu5);
+}
+
+[label,lost_tribe_generals_underground](label $return)
+~chatplayer("<p,quiz>So why is the Dorgeshuun tribe underground?");
+~lost_tribe_bentnoze("<p,goblinchat>They punished by Big High War-God.");
+jump($return);
+
+[label,lost_tribe_generals_won](label $return)
+~chatplayer("<p,confused>Wait, you say YOU won the big wars?");
+~lost_tribe_bentnoze("<p,goblinchat>Well we must have done! We goblins! Goblins always win!");
+~lost_tribe_wartface("<p,goblinchat>Actually we not know who won.");
+~lost_tribe_bentnoze("<p,goblinchat>It was goblins I say!");
+jump($return);

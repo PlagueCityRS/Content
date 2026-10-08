@@ -1,0 +1,35 @@
+[ham_multi_trapdoor]
+name=ham_multi_trapdoor
+active=yes
+multivar=ham_thief
+multiloc=0,osf_trapdoor_closed
+multiloc=1,osf_trapdoor_open
+multiloc=2,osf_trapdoor_closed
+multiloc=3,osf_trapdoor_closed
+
+[osf_trapdoor_closed]
+name=Trapdoor
+desc=I wonder what's under it?
+model=loc_5490
+active=yes
+op1=Open
+op4=hidden
+op5=Pick-Lock
+raiseobject=no
+
+[osf_trapdoor_open]
+name=Trapdoor
+desc=I wonder what's down there?
+model=loc_5491
+active=yes
+op1=Climb-down
+op2=Close
+raiseobject=no
+
+[osf_ham_ladder]
+name=Ladder
+desc=I can climb this.
+model=furniture_ladder
+active=yes
+op1=Climb-up
+mapscene=7

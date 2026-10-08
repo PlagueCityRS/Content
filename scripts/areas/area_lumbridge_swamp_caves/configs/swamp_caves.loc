@@ -1,0 +1,52 @@
+[goblin_cave_entrance]
+name=Dark hole
+desc=An entrance to the dark caves.
+model=loc_5947
+op1=Climb-down
+
+[swamp_cave_climbing_rope]
+name=Climbing rope
+desc=You see a circle of light at the top.
+model=outdoorfurniture_rope
+op1=Climb
+mapscene=7
+
+[swamp_cave_steppingstone_a]
+name=Stepping stone
+desc=I can jump from this stepping stone.
+model=floor_steppingstone
+recol1s=10570
+recol1d=5284
+op1=Jump-across
+active=yes
+forcedecor=yes
+
+[swamp_cave_steppingstone_b]
+name=Stepping stone
+desc=I can jump from this stepping stone.
+model=floor_steppingstone
+recol1s=10570
+recol1d=5284
+op1=Jump-across
+active=yes
+forcedecor=yes
+
+[tog_cave_up]
+name=Tunnel
+desc=A tunnel leading upwards.
+model=loc_6658
+length=3
+width=3
+hillskew=yes
+sharelight=yes
+op1=Enter
+
+[tog_cave_down]
+name=Tunnel
+desc=A tunnel leading into the depths of the earth.
+model=loc_6659
+length=3
+width=3
+hillskew=yes
+sharelight=yes
+op1=Enter

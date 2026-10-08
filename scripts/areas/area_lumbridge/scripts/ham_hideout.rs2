@@ -1,0 +1,55 @@
+[oploc1,ham_multi_trapdoor]
+if (%ham_thief = 1) {
+    %ham_thief = 0;
+    mes("You climb down through the trapdoor.");
+    ~climb_ladder(^lost_tribe_ham_ladder_bottom, false);
+    return;
+}
+mes("This trapdoor is locked.");
+
+[oploc2,ham_multi_trapdoor]
+if (%ham_thief ! 1) {
+    ~displaymessage(^dm_default);
+    return;
+}
+anim(human_pickupfloor, 0);
+%ham_thief = 0;
+mes("You close the trapdoor.");
+
+[oploc5,ham_multi_trapdoor]
+if (%ham_thief = 1) {
+    mes("The trapdoor is already unlocked.");
+    return;
+}
+if (map_members = ^false) {
+    mes(^mes_members_thieving);
+    return;
+}
+mes("You attempt to pick the lock on the trapdoor.");
+anim(human_pickupfloor, 0);
+p_delay(2);
+def_boolean $success = stat_random(thieving, 10, 250);
+if (inv_total(inv, lockpick) > 0) {
+    $success = stat_random(thieving, 60, 254);
+}
+if ($success = false) {
+    mes("You fail to pick the lock - your fingers get numb from fumbling with the lock.");
+    sound_synth(locked, 1, 0);
+    stat_drain(thieving, 1, 0);
+    return;
+}
+sound_synth(unlock, 1, 0);
+mes("You pick the lock on the trapdoor.");
+stat_advance(thieving, 38);
+%ham_thief = 1;
+
+[oplocu,ham_multi_trapdoor]
+if (last_useitem = lockpick) {
+    p_oploc(5);
+    return;
+}
+~displaymessage(^dm_default);
+
+[oploc1,osf_ham_ladder]
+p_arrivedelay;
+~climb_ladder(^lost_tribe_ham_trapdoor_top, true);

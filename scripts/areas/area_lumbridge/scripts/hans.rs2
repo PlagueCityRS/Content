@@ -16,8 +16,16 @@ if(map_members = ^true) {
 }
 
 ~chatnpc("<p,neutral>Hello. What are you doing here?");
-def_int $option = ~p_choice3("I'm looking for whoever is in charge of this place.", 1, "I have come to kill everyone in this castle!", 2, "I don't know. I'm lost. Where am I?", 3);
-if ($option = 1) {
+def_int $option;
+if (%lost_tribe_quest >= ^lost_tribe_started & %lost_tribe_quest <= ^lost_tribe_duke_permission) {
+    $option = ~p_choice4("Do you know what happened in the cellar?", 4, "I'm looking for whoever is in charge of this place.", 1, "I have come to kill everyone in this castle!", 2, "I don't know. I'm lost. Where am I?", 3);
+} else {
+    $option = ~p_choice3("I'm looking for whoever is in charge of this place.", 1, "I have come to kill everyone in this castle!", 2, "I don't know. I'm lost. Where am I?", 3);
+}
+if ($option = 4) {
+    ~chatplayer("<p,quiz>Do you know what happened in the castle cellar?");
+    ~chatnpc("<p,neutral>The wall collapsed. I had to spend all day clearing it up! The Duke says it was an earthquake.");
+} else if ($option = 1) {
     ~chatplayer("<p,neutral>I'm looking for whoever is in charge of this place.");
     ~chatnpc("<p,neutral>Who, the Duke? He's in his study, on the first floor.");
 } else if ($option = 2) {

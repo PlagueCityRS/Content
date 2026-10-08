@@ -1,0 +1,366 @@
+[oil_lamp_empty]
+name=Oil lamp
+desc=An oil lamp with no oil in it.
+model=obj_4525
+2dyof=-1
+2dzoom=1070
+2dyan=1900
+2dxan=176
+cost=25
+members=yes
+param=oil_filled,oil_lamp_unlit
+param=crafting_glass_struct,oil_lamp_empty
+
+[oil_lamp_unlit]
+name=Oil lamp
+desc=Not the genie sort.
+model=obj_4522
+2dyof=-1
+2dzoom=1070
+2dyan=1900
+2dxan=176
+cost=28
+members=yes
+category=light_source_unlit
+param=product,oil_lamp_lit
+param=levelrequire,12
+
+[oil_lamp_lit]
+name=Oil lamp
+desc=Not the genie sort.
+model=obj_4524
+iop2=Extinguish
+2dyof=-1
+2dzoom=1070
+2dyan=1900
+2dxan=176
+cost=28
+members=yes
+category=light_source_lit
+param=light_medium,1
+param=light_naked_flame,1
+param=extinguished,oil_lamp_unlit
+tradeable=no
+
+[candle_lantern_empty]
+name=Candle lantern
+desc=Put a candle in to complete it.
+model=obj_4527
+2dyof=-8
+2dzoom=1250
+2dyan=1904
+2dxan=140
+cost=10
+members=yes
+param=crafting_glass_struct,candle_lantern_empty
+
+[candle_lantern_unlit]
+name=Candle lantern
+desc=A candle in a glass cage.
+model=obj_4529
+2dyof=-8
+2dzoom=1250
+2dyan=1904
+2dxan=140
+cost=15
+members=yes
+category=light_source_unlit
+param=product,candle_lantern_lit
+param=levelrequire,4
+
+[candle_lantern_lit]
+name=Candle lantern
+desc=A flickering candle in a glass cage.
+model=obj_4531
+iop2=Extinguish
+2dyof=-8
+2dzoom=1250
+2dyan=1904
+2dxan=140
+cost=15
+members=yes
+category=light_source_lit
+param=light_dim,1
+param=extinguished,candle_lantern_unlit
+tradeable=no
+
+[candle_lantern_black_unlit]
+name=Candle lantern
+recol1s=29523
+recol1d=2114
+desc=A candle in a glass cage.
+model=obj_4529
+2dyof=-8
+2dzoom=1250
+2dyan=1904
+2dxan=140
+cost=15
+members=yes
+category=light_source_unlit
+param=product,candle_lantern_black_lit
+param=levelrequire,4
+tradeable=no
+
+[candle_lantern_black_lit]
+name=Candle lantern
+recol1s=29523
+recol1d=2114
+desc=A flickering candle in a glass cage.
+model=obj_4531
+iop2=Extinguish
+2dyof=-8
+2dzoom=1250
+2dyan=1904
+2dxan=140
+cost=15
+members=yes
+category=light_source_lit
+param=light_dim,1
+param=extinguished,candle_lantern_black_unlit
+tradeable=no
+
+[oil_lantern_frame]
+name=Oil lantern frame
+desc=Add the glass to complete.
+model=obj_4540
+2dyof=-1
+2dzoom=1210
+2dyan=96
+2dxan=88
+cost=90
+members=yes
+
+[oil_lantern_empty]
+name=Oil lantern
+desc=Put oil in to complete it.
+model=obj_4535
+2dyof=-1
+2dzoom=1210
+2dyan=96
+2dxan=88
+cost=120
+members=yes
+param=oil_filled,oil_lantern_unlit
+
+[oil_lantern_unlit]
+name=Oil lantern
+desc=An unlit oil lantern.
+model=obj_4537
+2dyof=-1
+2dzoom=1210
+2dyan=96
+2dxan=88
+cost=125
+members=yes
+category=light_source_unlit
+param=product,oil_lantern_lit
+param=levelrequire,26
+
+[oil_lantern_lit]
+name=Oil lantern
+desc=It lights your way through the dark places of the earth.
+model=obj_4539
+iop2=Extinguish
+2dyof=-1
+2dzoom=1210
+2dyan=96
+2dxan=88
+cost=125
+members=yes
+category=light_source_lit
+param=light_medium,1
+param=extinguished,oil_lantern_unlit
+tradeable=no
+
+[bullseye_lantern_lens]
+name=Lantern lens
+desc=A roughly circular disc of glass.
+model=obj_4542
+2dxof=-3
+2dyof=3
+2dzoom=610
+2dyan=568
+2dxan=436
+cost=70
+members=yes
+param=crafting_glass_struct,bullseye_lantern_lens
+
+[bullseye_lantern_nolens]
+name=Bullseye lantern
+desc=You need to add a lens before you can use it.
+model=obj_4544
+2dzoom=1190
+2dyan=120
+2dxan=28
+cost=300
+members=yes
+
+[bullseye_lantern_empty]
+name=Bullseye lantern
+desc=You need to add lamp oil before you can use it.
+model=obj_4546
+2dzoom=1190
+2dyan=120
+2dxan=28
+cost=400
+members=yes
+param=oil_filled,bullseye_lantern_unlit
+
+[bullseye_lantern_unlit]
+name=Bullseye lantern
+desc=A sturdy steel lantern.
+model=obj_4546
+2dzoom=1190
+2dyan=120
+2dxan=28
+cost=420
+members=yes
+category=light_source_unlit
+param=product,bullseye_lantern_lit
+param=levelrequire,49
+
+[bullseye_lantern_lit]
+name=Bullseye lantern
+desc=A sturdy steel lantern casting a bright beam.
+model=obj_4550
+iop2=Extinguish
+2dzoom=1190
+2dyan=120
+2dxan=28
+cost=420
+members=yes
+category=light_source_lit
+param=light_bright,1
+param=extinguished,bullseye_lantern_unlit
+tradeable=no
+
+[tog_sapphire_lantern_empty]
+name=Sapphire lantern
+recol1s=21215
+recol1d=23
+desc=You need to add lamp oil before you can use it.
+model=obj_4546
+2dzoom=1190
+2dyan=120
+2dxan=28
+cost=600
+members=yes
+param=oil_filled,tog_sapphire_lantern_unlit
+
+[tog_sapphire_lantern_unlit]
+name=Sapphire lantern
+recol1s=21215
+recol1d=23
+desc=A bullseye lantern with a sapphire for a lens.
+model=obj_4546
+2dzoom=1190
+2dyan=120
+2dxan=28
+cost=600
+members=yes
+category=light_source_unlit
+param=product,tog_sapphire_lantern_lit
+param=levelrequire,49
+
+[tog_sapphire_lantern_lit]
+name=Sapphire lantern
+recol1s=31498
+recol1d=9663
+recol2s=29524
+recol2d=9663
+desc=A lantern casting a bright blue beam.
+model=obj_4550
+2dzoom=1190
+2dyan=120
+2dxan=28
+cost=600
+members=yes
+iop1=Extinguish
+category=light_source_lit
+param=light_medium,1
+param=extinguished,tog_sapphire_lantern_unlit
+tradeable=no
+
+[cave_goblin_mining_helmet_unlit]
+name=Mining helmet
+model=obj_5014
+desc=A helmet with an unlit lamp on it.
+manwear=obj_5014_manwear,0
+womanwear=obj_5014_womanwear,0
+manhead=obj_5013_manhead
+womanhead=obj_5013_womanhead
+2dxof=-5
+2dyof=-2
+2dzoom=730
+2dyan=1880
+2dxan=4
+cost=600
+members=yes
+iop2=Wear
+wearpos=hat
+category=light_source_unlit
+param=product,cave_goblin_mining_helmet_lit
+param=levelrequire,65
+param=magicattack,-3
+param=rangeattack,-1
+param=stabdefence,4
+param=slashdefence,5
+param=crushdefence,3
+param=magicdefence,-1
+param=rangedefence,4
+
+[cave_goblin_mining_helmet_lit]
+name=Mining helmet
+model=obj_5013
+desc=A helmet with a lamp on it.
+manwear=obj_5013_manwear,0
+womanwear=obj_5013_womanwear,0
+manhead=obj_5013_manhead
+womanhead=obj_5013_womanhead
+2dxof=-5
+2dyof=-2
+2dzoom=730
+2dyan=1880
+2dxan=4
+cost=600
+members=yes
+iop2=Wear
+iop3=Extinguish
+wearpos=hat
+category=light_source_lit
+param=light_medium,1
+param=extinguished,cave_goblin_mining_helmet_unlit
+param=magicattack,-3
+param=rangeattack,-1
+param=stabdefence,4
+param=slashdefence,5
+param=crushdefence,3
+param=magicdefence,-1
+param=rangedefence,4
+tradeable=no
+
+[wallbeast_spike_helmet]
+name=Spiny helmet
+desc=You don't want to wear it inside-out.
+cost=650
+manwear=obj_4551_manwear,0
+womanwear=obj_4551_womanwear,0
+manhead=obj_4551_manhead
+womanhead=obj_4551_womanhead
+model=obj_4551
+2dxof=5
+2dyof=-3
+2dzoom=660
+2dyan=440
+2dxan=444
+members=yes
+iop2=Wear
+wearpos=hat
+wearpos2=head
+param=magicattack,-6
+param=rangeattack,-2
+param=stabdefence,9
+param=slashdefence,10
+param=crushdefence,7
+param=magicdefence,-1
+param=rangedefence,9

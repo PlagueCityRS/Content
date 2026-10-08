@@ -54,3 +54,17 @@ womanwear=human_weapons_glassblowingpipe,0
 2dyan=132
 2dxan=228
 weight=2oz
+
+[fishbowl_empty]
+name=Fishbowl
+desc=An empty fishbowl.
+model=obj_6667
+2dxof=1
+2dyof=27
+2dzoom=1000
+2dyan=1800
+2dxan=284
+members=yes
+ambient=40
+contrast=20
+param=crafting_glass_struct,fishbowl_empty

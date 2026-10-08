@@ -1,0 +1,129 @@
+[proc,duke_lost_tribe_option]()(string)
+switch_int (%lost_tribe_quest) {
+    case ^lost_tribe_spoken_bob : return("Bob says he saw something in the cellar.");
+    case ^lost_tribe_duke_permission, ^lost_tribe_shown_brooch, ^lost_tribe_given_treaty : return("What was I doing again?");
+    case ^lost_tribe_dug_tunnel : return("I dug through the rubble...");
+    case ^lost_tribe_read_book : return("I found out about the symbol...");
+    case ^lost_tribe_spoken_generals : return("I spoke to the generals in the goblin village...");
+    case ^lost_tribe_made_contact : return("I've made contact with the cave goblins...");
+    case ^lost_tribe_silverware_missing :
+        if (inv_total(inv, lost_tribe_silverware) > 0) {
+            return("I found the missing silverware in the HAM cave!");
+        }
+        if (%lost_tribe_ham >= ^lost_tribe_ham_found_robes) {
+            return("Did you know Sigmund is a member of HAM?");
+        }
+        return("What was I doing again?");
+}
+return("");
+
+[label,duke_lost_tribe]
+switch_int (%lost_tribe_quest) {
+    case ^lost_tribe_spoken_bob : @duke_lost_tribe_bob;
+    case ^lost_tribe_dug_tunnel : @duke_lost_tribe_tunnel;
+    case ^lost_tribe_read_book : @duke_lost_tribe_symbol;
+    case ^lost_tribe_spoken_generals : @duke_lost_tribe_generals;
+    case ^lost_tribe_made_contact : @duke_lost_tribe_contact;
+    case ^lost_tribe_silverware_missing :
+        if (inv_total(inv, lost_tribe_silverware) > 0) {
+            @duke_lost_tribe_silverware;
+        }
+        if (%lost_tribe_ham >= ^lost_tribe_ham_found_robes) {
+            @duke_lost_tribe_ham;
+        }
+        @duke_lost_tribe_doing_again;
+    case default : @duke_lost_tribe_doing_again;
+}
+
+[label,duke_lost_tribe_bob]
+~chatplayer("<p,neutral>Bob says he saw something in the cellar. Like a goblin with big eyes.");
+~chatnpc("<p,neutral>Yes, he mentioned that to me. But I think he was imagining things. Goblins live in natural caves but everyone knows they don't have the wit to make their own tunnels.");
+~chatnpc_specific("Sigmund", lost_tribe_sigmund_there, "<p,angry>Yes your grace, but if there is any possibility that this is a goblin incursion then we should take that possibility very seriously!");
+~chatplayer("<p,neutral>I think we should at least investigate.");
+def_string $him = "him";
+if (gender() = 1) {
+    $him = "her";
+}
+if (%dragonquest >= ^dragon_complete) {
+    ~chatnpc_specific("Sigmund", lost_tribe_sigmund_there, "<p,neutral>Your grace, this is the adventurer who defeated the dragon Elvarg. I think you should listen to <$him>.");
+} else if (%runemysteries >= ^runemysteries_complete) {
+    ~chatnpc_specific("Sigmund", lost_tribe_sigmund_there, "<p,neutral>Your grace, this adventurer took that talisman you discovered to Sedridor. I think you should listen to <$him>.");
+}
+%lost_tribe_quest = ^lost_tribe_duke_permission;
+~send_quest_progress(questlist:losttribe, %lost_tribe_quest, ^lost_tribe_complete);
+~chatnpc("<p,neutral>Hmm, very well. I give you permission to investigate this mystery. If there is a blocked tunnel then perhaps you should try to un-block it.");
+
+[label,duke_lost_tribe_doing_again]
+~chatplayer("<p,quiz>What was I doing again?");
+switch_int (%lost_tribe_quest) {
+    case ^lost_tribe_duke_permission : ~chatnpc("<p,neutral>You were helping to investigate what happened in the cellar. Come back when you've found something out.");
+    case ^lost_tribe_shown_brooch : ~chatnpc("<p,neutral><displayname>, please find out what you can about this brooch. The librarian in Varrock might be able to help identify the symbol.");
+    case ^lost_tribe_silverware_missing : ~chatnpc("<p,neutral>We are preparing to go to war with the underground goblins over the missing silverware. If you think the cave goblins are innocent you should present evidence quickly!");
+    case ^lost_tribe_given_treaty :
+        ~chatnpc("<p,neutral>You were taking the peace treaty to the cave goblins.");
+        if (~obj_gettotal(lost_tribe_treaty) = 0) {
+            ~chatplayer("<p,sad>I, er, lost the treaty.");
+            ~chatnpc("<p,neutral>*sigh* All right, here's another copy.");
+            inv_add(inv, lost_tribe_treaty, 1);
+        }
+}
+
+[label,duke_lost_tribe_tunnel]
+~chatplayer("<p,happy>I dug through the rubble in the cellar and found a tunnel!");
+if (inv_total(inv, lost_tribe_brooch) = 0) {
+    ~chatnpc_specific("Sigmund", lost_tribe_sigmund_there, "<p,angry>You see, your grace? It is a goblin attack!");
+    ~chatnpc("<p,neutral>That tunnel could have many origins. I suggest you investigate further.");
+    return;
+}
+~chatplayer("<p,neutral>On the ground I found this brooch.");
+~chatnpc("<p,confused>I've never seen anything like that before. It doesn't come from Lumbridge. What do you think, Sigmund?");
+~chatnpc_specific("Sigmund", lost_tribe_sigmund_there, "<p,neutral>It is unknown to me, your grace. But the fact it is there is enough to prove Bob's story. It must have been dropped by a goblin as it fled.");
+~chatnpc("<p,confused>I've never heard of a goblin wearing something so well-crafted.");
+~chatnpc_specific("Sigmund", lost_tribe_sigmund_there, "<p,angry>Then it must have been stolen!");
+~chatnpc("<p,confused>But it wasn't stolen from us. Where could it be from?");
+~chatnpc_specific("Sigmund", lost_tribe_sigmund_there, "<p,angry>That doesn't matter! You said yourself that goblins couldn't have made that, so they must have stolen it from somewhere.");
+~chatnpc_specific("Sigmund", lost_tribe_sigmund_there, "<p,angry>Horrible, thieving goblins have broken into our cellar! We must retaliate immediately!");
+~chatnpc_specific("Sigmund", lost_tribe_sigmund_there, "<p,angry>First we should wipe out the goblins east of the river, then we can march on the goblin village to the north-west...");
+~chatnpc("<p,neutral>I will not commit troops until I have proof that goblins are behind this.");
+%lost_tribe_quest = ^lost_tribe_shown_brooch;
+~send_quest_progress(questlist:losttribe, %lost_tribe_quest, ^lost_tribe_complete);
+~chatnpc("<p,neutral><displayname>, please find out what you can about this brooch. The librarian in Varrock might be able to help identify the symbol.");
+
+[label,duke_lost_tribe_symbol]
+~chatplayer("<p,neutral>I found out about the symbol. It was the symbol of one of the ancient goblin tribes!");
+~chatnpc_specific("Sigmund", lost_tribe_sigmund_there, "<p,angry>You see, your grace? I told you goblins were behind this!");
+~chatnpc("<p,confused>I still find it surprising that such a well-crafted brooch would have a goblin symbol on it. Perhaps you should find out more about this ancient tribe.");
+
+[label,duke_lost_tribe_generals]
+~chatplayer("<p,neutral>I spoke to the goblin generals in the goblin village. They told me about an ancient goblin tribe that went to live underground.");
+~chatnpc_specific("Sigmund", lost_tribe_sigmund_there, "<p,angry>What more proof do we need? Nasty, smelly goblins have been living under our feet all this time! We must crush them at once!");
+~chatnpc("<p,neutral>Hmm, perhaps you are right. I will send word to the army to prepare for an underground assault.");
+~chatnpc("<p,neutral><displayname>, I would still like you to find out more about this tribe. It cannot hurt to know one's enemy.");
+
+[label,duke_lost_tribe_contact]
+~chatplayer("<p,neutral>I've made contact with the cave goblins. They say they were following a seam and broke into the cellar by mistake.");
+~chatnpc_specific("Sigmund", lost_tribe_sigmund_there, "<p,angry>And I suppose you believe them, goblin-lover?");
+~chatplayer("<p,neutral>Well, they seemed friendlier than most goblins, and nothing was taken from the cellar.");
+~chatnpc("<p,neutral>Actually, something was taken. Sigmund has informed me that some of the castle silverware is missing from the cellar.");
+%lost_tribe_quest = ^lost_tribe_silverware_missing;
+~send_quest_progress(questlist:losttribe, %lost_tribe_quest, ^lost_tribe_complete);
+~chatnpc("<p,sad>Unless it is returned, I am afraid I will have no option but war.");
+
+[label,duke_lost_tribe_ham]
+~chatplayer("<p,quiz>Did you know Sigmund is a member of HAM?");
+~chatnpc("<p,neutral>Hmm, I had suspected it. But however much I disapprove of the HAM movement it's not actually illegal. I'll keep an eye on him though.");
+
+[label,duke_lost_tribe_silverware]
+~chatplayer("<p,happy>I found the missing silverware in the HAM cave!");
+~chatnpc("<p,angry>Sigmund! Is this your doing?");
+~chatnpc_specific("Sigmund", lost_tribe_sigmund_there, "<p,shock>Of...of course not! The goblins must have, um, dropped the silverware as they ran away.");
+~chatnpc("<p,angry>Don't lie to me! I knew you were a HAM member but I didn't think you would stoop to this. You are dismissed from my service.");
+~chatnpc_specific("Sigmund", lost_tribe_sigmund_there, "<p,angry>But don't you see it was for the best? For goblins to be living under our feet like this... ugh. It doesn't matter how civilized they are: all sub-human species must be wiped out!");
+~chatnpc("<p,angry>That's enough! Get out of my castle now!");
+inv_del(inv, lost_tribe_silverware, 1);
+%lost_tribe_quest = ^lost_tribe_given_treaty;
+~send_quest_progress(questlist:losttribe, %lost_tribe_quest, ^lost_tribe_complete);
+~chatnpc("<p,neutral>I see I was ill-advised. Unless there is an act of aggression by the cave goblins there is no need for war.");
+inv_add(inv, lost_tribe_treaty, 1);
+~objbox(lost_tribe_treaty, "The Duke writes a document and signs it.", 250, 0, 0);
+~chatnpc("<p,neutral>This peace treaty specifies the border between Lumbridge and the Cave Goblin realm. Please take it to the cave goblins and tell them I would like to meet with their leader to sign it.");

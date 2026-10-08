@@ -1,4 +1,7 @@
 [opnpc1,general_wartface]
+if (~lost_tribe_generals_choice = true) {
+    @lost_tribe_generals_dorgeshuun;
+}
 switch_int (%goblinquest) {
     case 6 : @goblin_diplomacy_completed;
     case default : @goblin_diplomacy_greet_general_wartface;

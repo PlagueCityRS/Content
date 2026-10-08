@@ -1,0 +1,230 @@
+[oploc1,goblin_cave_entrance]
+if (%swamp_caves_roped_entrance = ^false) {
+    ~mesbox("There is a sheer drop below the hole. You will need a rope.");
+    return;
+}
+anim(human_pickupfloor, 0);
+p_delay(1);
+p_telejump(0_49_149_32_36);
+
+[oplocu,goblin_cave_entrance]
+if (last_useitem ! rope) {
+    ~displaymessage(^dm_default);
+    return;
+}
+if (%swamp_caves_roped_entrance = ^true) {
+    ~mesbox("There is already a rope tied to the entrance.");
+    return;
+}
+inv_del(inv, rope, 1);
+%swamp_caves_roped_entrance = ^true;
+~objbox(rope, "You tie the rope to the top of the entrance and throw it down.", 250, 0, 0);
+
+[oploc1,swamp_cave_climbing_rope]
+anim(human_reachforladder, 0);
+p_delay(1);
+p_telejump(0_49_49_33_37);
+
+[oploc1,tog_cave_down]
+p_telejump(2_50_148_19_60);
+
+[oploc1,tog_cave_up]
+p_telejump(0_50_149_26_6);
+
+[oploc1,swamp_cave_steppingstone_a]
+if (coordx(coord) < coordx(loc_coord)) {
+    @swamp_cave_steppingstone(movecoord(loc_coord, 2, 0, 0), ^exact_east);
+}
+@swamp_cave_steppingstone(movecoord(loc_coord, -2, 0, 0), ^exact_west);
+
+[oploc1,swamp_cave_steppingstone_b]
+if (coordz(coord) < coordz(loc_coord)) {
+    @swamp_cave_steppingstone(movecoord(loc_coord, 0, 0, 2), ^exact_north);
+}
+@swamp_cave_steppingstone(movecoord(loc_coord, 0, 0, -2), ^exact_south);
+
+[label,swamp_cave_steppingstone](coord $dest, int $dir)
+if (map_members = ^false) {
+    mes(^mes_members_feature);
+    return;
+}
+def_coord $start = coord;
+def_coord $stone = loc_coord;
+sound_synth(jump_no_land, 1, 20);
+~agility_exactmove(human_steppingstonejump, 20, 2, $start, $stone, 48, 60, $dir, false);
+if (stat_random(agility, 52, 253) = false) {
+    mes("You slip and fall into the murky water...");
+    anim(human_wobbleandfall_l, 0);
+    sound_synth(pool_plop, 1, 0);
+    spotanim_map(watersplash, $stone, 0, 1);
+    p_delay(1);
+    p_telejump($start);
+    if (~extinguish_light_sources = true) {
+        mes("Your light source has been extinguished.");
+    }
+    stat_advance(agility, 10);
+    return;
+}
+sound_synth(jump_no_land, 1, 20);
+~agility_exactmove(human_steppingstonejump, 20, 2, $stone, $dest, 48, 60, $dir, false);
+mes("You leap across with a mighty leap!");
+stat_advance(agility, 30);
+
+[proc,extinguish_light_sources]()(boolean)
+def_boolean $extinguished = false;
+def_obj $obj;
+def_int $slot = 0;
+while ($slot < inv_size(inv)) {
+    $obj = inv_getobj(inv, $slot);
+    if ($obj ! null) {
+        if (oc_category($obj) = light_source_lit & oc_param($obj, light_bright) = 0) {
+            inv_setslot(inv, $slot, oc_param($obj, extinguished), 1);
+            $extinguished = true;
+        }
+    }
+    $slot = add($slot, 1);
+}
+return($extinguished);
+
+[proc,wallbeast_check]
+if (npc_find(movecoord(coord, 0, 0, 1), swamp_wallbeast, 0, 0) = false) {
+    %wallbeast_coord = null;
+    return;
+}
+if (%wallbeast_coord = coord) {
+    return;
+}
+%wallbeast_coord = coord;
+if (inv_total(worn, wallbeast_spike_helmet) > 0) {
+    npc_anim(wall_beast_specialattack_fail, 0);
+    sound_synth(wall_beast_foiled, 1, 0);
+    mes("Your helmet repels the wall beast!");
+    npc_changetype(swamp_wallbeast_combat, 500);
+    %npc_aggressive_player = uid;
+    npc_setmode(opplayer2);
+    return;
+}
+queue(wallbeast_grab, 0, 0);
+
+[queue,wallbeast_grab]
+if (npc_find(movecoord(coord, 0, 0, 1), swamp_wallbeast, 0, 0) = false) {
+    return;
+}
+p_stopaction;
+facesquare(npc_coord);
+npc_anim(wall_beast_specialattack_start, 0);
+anim(human_wall_beast_specialattack_start, 0);
+sound_synth(wall_beast_swipe, 1, 0);
+p_delay(1);
+npc_anim(wall_beast_specialattack_ready, 0);
+anim(human_wall_beast_specialattack_ready, 0);
+p_delay(3);
+npc_anim(wall_beast_specialattack_end, 0);
+anim(human_wall_beast_specialattack_end, 0);
+sound_synth(wall_beast_attack, 1, 0);
+~damage_self(~random_range(13, 18));
+
+[ai_queue3,swamp_wallbeast_combat]
+gosub(npc_death);
+if (npc_findhero = ^false) {
+    return;
+}
+obj_add(npc_coord, npc_param(death_drop), 1, ^lootdrop_duration);
+def_int $random = random(128);
+if ($random < 3) {
+    obj_add(npc_coord, airrune, 3, ^lootdrop_duration);
+} else if ($random < 6) {
+    obj_add(npc_coord, cosmicrune, 2, ^lootdrop_duration);
+} else if ($random < 8) {
+    obj_add(npc_coord, chaosrune, 3, ^lootdrop_duration);
+} else if ($random < 9) {
+    obj_add(npc_coord, chaosrune, 7, ^lootdrop_duration);
+} else if ($random < 11) {
+    obj_add(npc_coord, bronze_med_helm, 1, ^lootdrop_duration);
+} else if ($random < 13) {
+    obj_add(npc_coord, bronze_full_helm, 1, ^lootdrop_duration);
+} else if ($random < 21) {
+    obj_add(npc_coord, iron_med_helm, 1, ^lootdrop_duration);
+} else if ($random < 28) {
+    obj_add(npc_coord, steel_med_helm, 1, ^lootdrop_duration);
+} else if ($random < 32) {
+    obj_add(npc_coord, steel_full_helm, 1, ^lootdrop_duration);
+} else if ($random < 33) {
+    obj_add(npc_coord, mithril_med_helm, 1, ^lootdrop_duration);
+} else if ($random < 34) {
+    obj_add(npc_coord, mithril_full_helm, 1, ^lootdrop_duration);
+} else if ($random < 35) {
+    obj_add(npc_coord, adamant_med_helm, 1, ^lootdrop_duration);
+} else if ($random < 67) {
+    obj_add(npc_coord, unidentified_guam, 1, ^lootdrop_duration);
+} else if ($random < 77) {
+    obj_add(npc_coord, coins, 15, ^lootdrop_duration);
+} else if ($random < 98) {
+    obj_add(npc_coord, tinderbox, 1, ^lootdrop_duration);
+} else if ($random < 110) {
+    obj_add(npc_coord, bullseye_lantern_lens, 1, ^lootdrop_duration);
+} else if ($random < 119) {
+    obj_add(npc_coord, torch_unlit, 1, ^lootdrop_duration);
+} else if ($random < 120) {
+    obj_add(npc_coord, eye_of_newt, 1, ^lootdrop_duration);
+} else if ($random < 125) {
+    obj_add(npc_coord, bullseye_lantern_nolens, 1, ^lootdrop_duration);
+}
+
+[opnpc1,swamp_candle_guy]
+~chatnpc("<p,happy>Do you want a lit candle for 1000 gold?");
+switch_int (~p_choice3("Yes please.", 1, "One thousand gold?!", 2, "No thanks, I'd rather curse the darkness.", 3)) {
+    case 1 :
+        ~chatplayer("<p,happy>Yes please.");
+        @candle_seller_buy;
+    case 2 :
+        ~chatplayer("<p,shock>One thousand gold?!");
+        ~chatnpc("<p,neutral>Look, you're not going to be able to survive down that hole without a light source.");
+        ~chatnpc("<p,neutral>So you could go off to the candle shop to buy one more cheaply. You could even make your own lantern, which is a lot better.");
+        ~chatnpc("<p,happy>But I bet you want to find out what's down there right now, don't you? And you can pay me 1000 gold for the privilege!");
+        switch_int (~p_choice3("All right, you win, I'll buy a candle.", 1, "No way.", 2, "How do you make lanterns?", 3)) {
+            case 1 :
+                ~chatplayer("<p,sad>All right, you win, I'll buy a candle.");
+                @candle_seller_buy;
+            case 2 :
+                ~chatplayer("<p,angry>No way.");
+            case 3 :
+                ~chatplayer("<p,quiz>How do you make lanterns?");
+                @candle_seller_lanterns;
+        }
+    case 3 :
+        ~chatplayer("<p,shock>No thanks, I'd rather curse the darkness.");
+}
+
+[label,candle_seller_lanterns]
+~chatnpc("<p,happy>Out of glass. The more advanced lanterns have a metal component as well.");
+~chatnpc("<p,happy>Firstly you can make a simple candle lantern out of glass. It's just like a candle, but the flame isn't exposed, so it's safer.");
+~chatnpc("<p,happy>Then you can make an oil lamp, which is brighter but has an exposed flame. But if you make an iron frame for it you can turn it into an oil lantern.");
+~chatnpc("<p,happy>Finally there's a Bullseye lantern. You'll need to make a frame out of steel and add a glass lens.");
+~chatnpc("<p,happy>Once you've made your lamp or lantern, you'll need to make lamp oil for it. The chemist near Rimmington has a machine for that.");
+~chatnpc("<p,happy>For any light source, you'll need a tinderbox to light it. Keep your tinderbox handy in case it goes out!");
+%swamp_candle_guy_conversation = ^true;
+%know_how_to_make_lanterns = ^true;
+~chatnpc("<p,happy>But if all that's too complicated, you can buy a candle right here for 1000 gold!");
+switch_int (~p_choice2("All right, you win, I'll buy a candle.", 1, "No thanks, I'd rather curse the darkness.", 2)) {
+    case 1 :
+        ~chatplayer("<p,sad>All right, you win, I'll buy a candle.");
+        @candle_seller_buy;
+    case 2 :
+        ~chatplayer("<p,shock>No thanks, I'd rather curse the darkness.");
+}
+
+[label,candle_seller_buy]
+if (inv_freespace(inv) = 0) {
+    mes("You don't have enough inventory space to buy a candle.");
+    return;
+}
+if (inv_total(inv, coins) < 1000) {
+    ~chatplayer("<p,sad>Sorry, I don't seem to have enough coins.");
+    return;
+}
+inv_del(inv, coins, 1000);
+inv_add(inv, lit_candle, 1);
+~chatnpc("<p,happy>Here you go then.");
+~chatnpc("<p,neutral>I should warn you, though, it can be dangerous to take a naked flame down there. You'd be better off making a lantern.");
+~chatplayer("<p,happy>Okay, thanks.");

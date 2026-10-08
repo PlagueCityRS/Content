@@ -1,0 +1,5 @@
+[dark_cave_zones]
+table=coord_pair_table
+data=coord_pair,0_49_149_0_0,0_50_149_63_63
+data=coord_pair,2_50_148_0_0,2_50_148_52_63
+data=coord_pair,0_50_150_20_0,0_51_150_42_61

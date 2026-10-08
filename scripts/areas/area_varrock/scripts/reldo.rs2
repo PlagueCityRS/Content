@@ -3,6 +3,16 @@ if(%phoenixgang = ^phoenixgang_read_book) {
     @reldo_read_book;
 }
 ~chatnpc("<p,neutral>Hello stranger.");
+if (%lost_tribe_quest = ^lost_tribe_shown_brooch & inv_total(inv, lost_tribe_brooch) > 0) {
+    if (%squire = ^squire_started & %phoenixgang = ^phoenixgang_not_started) {
+        @multi5("What can you tell me about this brooch?", reldo_lost_tribe_brooch, "I'm in search of a quest.", reldo_phoenixstart, "Do you have anything to trade?", reldo_trade, "What do you do?", reldo_what_do, "What do you know about the Imcando dwarves?", reldo_imcando_dwaves);
+    } else if (%squire = ^squire_started) {
+        @multi4("What can you tell me about this brooch?", reldo_lost_tribe_brooch, "Do you have anything to trade?", reldo_trade, "What do you do?", reldo_what_do, "What do you know about the Imcando dwarves?", reldo_imcando_dwaves);
+    } else if (%phoenixgang = ^phoenixgang_not_started) {
+        @multi4("What can you tell me about this brooch?", reldo_lost_tribe_brooch, "I'm in search of a quest.", reldo_phoenixstart, "Do you have anything to trade?", reldo_trade, "What do you do?", reldo_what_do);
+    }
+    @multi3("What can you tell me about this brooch?", reldo_lost_tribe_brooch, "Do you have anything to trade?", reldo_trade, "What do you do?", reldo_what_do);
+}
 if(%squire = ^squire_started & %phoenixgang = ^phoenixgang_not_started) { // knights sword started and arrav not started
     @multi4("I'm in search of a quest.", reldo_phoenixstart, "Do you have anything to trade?", reldo_trade, "What do you do?", reldo_what_do, "What do you know about the Imcando dwarves?", reldo_imcando_dwaves);
 } else if(%squire = ^squire_started) { // knights sword started and arrav in progress
@@ -42,3 +52,12 @@ if(%squire = ^squire_started & %phoenixgang = ^phoenixgang_not_started) { // kni
 %phoenixgang = ^phoenixgang_spoken_reldo;
 ~chatnpc("<p,neutral>If I were you I would talk to|Baraek, the fur trader in the market place.|I've heard he has connections with the Phoenix Gang.");
 ~chatplayer("<p,happy>Thanks, I'll try that!");
+
+[label,reldo_lost_tribe_brooch]
+~chatplayer("<p,quiz>What can you tell me about this brooch?");
+~chatnpc("<p,confused>I've never seen that symbol before. Where did you find it?");
+~chatplayer("<p,neutral>In a cave beneath Lumbridge.");
+~chatnpc("<p,confused>Very odd. Have you any idea how it got there?");
+~chatplayer("<p,neutral>A goblin might have dropped it.");
+~chatnpc("<p,neutral>I've never heard of a goblin carrying a brooch like this. But just a minute...");
+~chatnpc("<p,happy>The other day I filed a book about ancient goblin tribes. It's somewhere at the west end of the library, I think. Maybe that will be of some use.");

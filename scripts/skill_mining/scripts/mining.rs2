@@ -37,6 +37,11 @@ if (inzone(^miscellania_lower_bound, ^miscellania_upper_bound, coord) = true) {
         return;
     }
 }
+if (inzone(^dorgeshuun_mine_lower_bound, ^dorgeshuun_mine_upper_bound, coord) = true & %lost_tribe_quest < ^lost_tribe_complete) {
+    anim(null, 0);
+    ~chatnpc_specific("Mistag", lost_tribe_mistag, "<p,goblinchat>We won't permit surface-dwellers to mine here until there is peace between our peoples.");
+    return;
+}
 
 if (inv_freespace(inv) < 1) {
     anim(null, 0);

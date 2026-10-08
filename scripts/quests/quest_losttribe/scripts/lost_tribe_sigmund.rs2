@@ -1,0 +1,127 @@
+[opnpc1,lost_tribe_sigmund]
+~chatnpc("<p,neutral>Can I help you?");
+switch_int (%lost_tribe_quest) {
+    case ^lost_tribe_not_started : @multi2("Do you have any quests for me?", sigmund_quest_start, "Who are you?", sigmund_who_are_you);
+    case ^lost_tribe_started, ^lost_tribe_duke_permission : @multi2("What was I doing again?", sigmund_doing_again, "Who are you?", sigmund_who_are_you);
+    case ^lost_tribe_spoken_bob : @multi2("Bob says he saw something in the cellar.", sigmund_bob_saw, "Who are you?", sigmund_who_are_you);
+    case ^lost_tribe_dug_tunnel, ^lost_tribe_shown_brooch : @multi2("I dug through the rubble...", sigmund_dug_rubble, "Who are you?", sigmund_who_are_you);
+    case ^lost_tribe_read_book : @multi2("I found out about the symbol...", sigmund_found_symbol, "Who are you?", sigmund_who_are_you);
+    case ^lost_tribe_spoken_generals, ^lost_tribe_made_contact : @multi2("I spoke to the generals in the Goblin Village...", sigmund_spoke_generals, "Who are you?", sigmund_who_are_you);
+    case ^lost_tribe_silverware_missing :
+        if (%lost_tribe_ham >= ^lost_tribe_ham_found_robes & %lost_tribe_sigmund_accused = ^false) {
+            @multi3("Tell me about the silverware that was stolen.", sigmund_silverware, "You're a H.A.M. member, aren't you?", sigmund_ham_member, "Who are you?", sigmund_who_are_you);
+        }
+        @multi2("Tell me about the silverware that was stolen.", sigmund_silverware, "Who are you?", sigmund_who_are_you);
+    case default : @sigmund_who_are_you;
+}
+
+[label,sigmund_quest_start]
+~chatplayer("<p,quiz>Do you have any quests for me?");
+if (%runemysteries < ^runemysteries_complete) {
+    ~chatnpc("<p,neutral>I hear the Duke has a task for an adventurer. Otherwise, if you want to make yourself useful, there are always evil monsters to slay.");
+    ~chatplayer("<p,neutral>Okay, I might just do that.");
+    return;
+}
+if (%goblinquest < ^gobdip_complete) {
+    ~chatnpc("<p,neutral>If you want to make yourself useful, there are always evil monsters to slay.");
+    ~chatplayer("<p,neutral>Okay, I might just do that.");
+    return;
+}
+~chatnpc("<p,neutral>There was recently some damage to the castle cellar. Part of the wall has collapsed.");
+~chatnpc("<p,angry>The Duke insists that it was an earthquake, but I think some kind of monsters are to blame.");
+if (~p_choice2_header("Yes.", 1, "No.", 2, "Start The Lost Tribe quest?") = 2) {
+    ~chatplayer("<p,neutral>Sorry, I'm not interested.");
+    return;
+}
+~chatplayer("<p,quiz>So what do you need me to do?");
+%lost_tribe_quest = ^lost_tribe_started;
+~send_quest_progress(questlist:losttribe, %lost_tribe_quest, ^lost_tribe_complete);
+~chatnpc("<p,neutral>You should ask people around the town about it. Maybe someone saw something.");
+
+[label,sigmund_who_are_you]
+~chatplayer("<p,quiz>Who are you?");
+~chatnpc("<p,neutral>I'm the Duke's advisor.");
+~chatplayer("<p,quiz>Can you give me any advice then?");
+~chatnpc("<p,neutral>I only advise the Duke. But if you want to make yourself useful, there are evil goblins to slay on the other side of the river.");
+
+[label,sigmund_doing_again]
+~chatplayer("<p,quiz>What was I doing again?");
+if (%lost_tribe_quest = ^lost_tribe_started) {
+    ~chatnpc("<p,neutral>I asked you to talk to people around Lumbridge to see if any of them know what happened in the cellar.");
+    return;
+}
+~chatnpc("<p,neutral>The Duke asked you to investigate the damage in the cellar. I hope you can find the monsters that are behind this!");
+
+[label,sigmund_bob_saw]
+~chatplayer("<p,neutral>Bob says he saw something in the cellar. Like a goblin with big eyes.");
+~chatnpc("<p,angry>A goblin? This validates my suspicion! We should tell the Duke!");
+
+[label,sigmund_dug_rubble]
+~chatplayer("<p,happy>I dug through the rubble in the cellar and found a tunnel!");
+~chatnpc("<p,angry>See, it was goblins! You should tell the Duke.");
+
+[label,sigmund_found_symbol]
+~chatplayer("<p,neutral>I found out about the symbol. It was the symbol of one of the ancient goblin tribes!");
+~chatnpc("<p,angry>At last, proof that goblins are behind this! You should tell the Duke at once!");
+
+[label,sigmund_spoke_generals]
+~chatplayer("<p,neutral>I spoke to the goblin generals in the Goblin Village. They told me about an ancient goblin tribe that went to live underground.");
+~chatnpc("<p,angry>I don't see how there can be any more doubt. You should tell the Duke at once!");
+
+[label,sigmund_silverware]
+~chatplayer("<p,quiz>Tell me about the silverware that was stolen.");
+~chatnpc("<p,neutral>The priceless Lumbridge Silverware! It comes out only on special occasions. It was kept in storage in the cellar, but now the goblins have stolen it.");
+~chatplayer("<p,quiz>So why did no one notice earlier?");
+~chatnpc("<p,angry>That doesn't matter. You'll never find it, because the goblins took it. So you can't stop the war!");
+if (%lost_tribe_ham = ^lost_tribe_ham_found_silverware) {
+    ~chatplayer("<p,angry>Actually I have found it! You put it in the H.A.M. cave!");
+    ~chatnpc("<p,shock>I... I... You're lying! I don't know what you're talking about.");
+}
+
+[label,sigmund_ham_member]
+~chatplayer("<p,angry>You're a H.A.M member, aren't you?");
+~chatnpc("<p,shock>What?");
+%lost_tribe_sigmund_accused = ^true;
+~chatnpc("<p,angry>Well, so what if I am? It's not a crime.");
+
+[opnpc3,lost_tribe_sigmund]
+if (stat(thieving) < ^lost_tribe_thieving_level) {
+    ~mesbox("You need level <tostring(^lost_tribe_thieving_level)> thieving to pick Sigmund's pocket.");
+    return;
+}
+if (add(%lastcombat, 8) > map_clock) {
+    mes("You can't pickpocket during combat.");
+    return;
+}
+if (%stunned > map_clock) {
+    return;
+}
+if (%action_delay > map_clock) {
+    p_opnpc(3);
+    return;
+}
+mes("You attempt to pick Sigmund's pocket.");
+p_delay(0);
+if (stat_random(thieving, 180, 240) = false) {
+    ~fail_pick_pocket(1, 8, "Sigmund's pocket");
+    return;
+}
+anim(human_pickpocket, 0);
+sound_synth(pick, 1, 0);
+if (%lost_tribe_quest ! ^lost_tribe_silverware_missing | %lost_tribe_ham >= ^lost_tribe_ham_found_robes | ~obj_gettotal(lost_tribe_chest_key) > 0) {
+    mes("You find nothing of interest.");
+    return;
+}
+if (inv_freespace(inv) < 1) {
+    ~mesbox("You don't have enough space in your inventory.");
+    return;
+}
+inv_add(inv, lost_tribe_chest_key, 1);
+~objbox(lost_tribe_chest_key, "You steal a little key.", 250, 0, 0);
+
+[opnpc1,lost_tribe_sigmund_ham]
+if (%lost_tribe_quest = ^lost_tribe_complete) {
+    ~chatnpc("<p,angry>...And I would have gotten away with it too, if it wasn't for that pesky adventurer!");
+    return;
+}
+mes("Sigmund is ignoring you.");

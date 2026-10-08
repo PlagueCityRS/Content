@@ -1,0 +1,218 @@
+[oploc1,tog_juna]
+if (%tog_ticks_left > 0) {
+    ~tog_juna_say("I will not permit you to be in the cave for long. Collect as many tears as you can.");
+    return;
+}
+switch_int (%tog_juna_bowl) {
+    case ^tog_not_started : @tog_juna_prequest;
+    case ^tog_need_bowl : @tog_juna_need_bowl;
+    case default : @tog_juna_postquest;
+}
+
+[oplocu,tog_juna]
+if (last_useitem = tog_stone) {
+    ~tog_juna_say("Perhaps you should use it with a chisel, rather than with my face.");
+    return;
+}
+if (last_useitem = tog_bowl & %tog_juna_bowl = ^tog_need_bowl) {
+    @tog_juna_need_bowl;
+}
+~tog_juna_say("I do not need that from you.");
+
+[proc,tog_juna_say](string $text)
+~chatnpc_specific(nc_name(tog_juna_dummy), tog_juna_dummy, "<p,neutral><$text>");
+
+[label,tog_juna_prequest]
+~tog_juna_say("Tell me... a story...");
+@tog_juna_prequest_options;
+
+[label,tog_juna_prequest_options]
+switch_int (~p_choice4("Okay...", 1, "A story?", 2, "You tell me a story.", 3, "Not now.", 4)) {
+    case 1 : @tog_juna_start_quest;
+    case 2 :
+        ~chatplayer("<p,quiz>A story?");
+        ~tog_juna_say("I have been waiting here three thousand years, guarding the Tears of Guthix. I serve my master faithfully, but I am bored.");
+        ~tog_juna_say("An adventurer such as yourself must have many tales to tell. If you can entertain me, I will let you into the cave for a time.");
+        ~tog_juna_say("The more I enjoy your story, the more time I will give you in the cave.");
+        ~tog_juna_say("Then you can drink of the power of balance, which will make you stronger in whatever area you are weakest.");
+        switch_int (~p_choice3("Okay...", 1, "What are the Tears of Guthix?", 2, "Not now", 3)) {
+            case 1 : @tog_juna_start_quest;
+            case 2 :
+                ~chatplayer("<p,quiz>What are the Tears of Guthix?");
+                ~tog_juna_tears_story;
+                ~tog_juna_say("Tell me... a story...");
+                @tog_juna_prequest_options;
+            case 3 : ~chatplayer("<p,neutral>Not now.");
+        }
+    case 3 :
+        ~chatplayer("<p,neutral>You tell me a story.");
+        switch_int (~p_choice2("Tell me about the Tears of Guthix", 1, "Tell me a new story.", 2)) {
+            case 1 :
+                ~chatplayer("<p,quiz>Tell me about the Tears of Guthix.");
+                ~tog_juna_tears_story;
+            case 2 :
+                ~chatplayer("<p,quiz>Tell me a new story.");
+                ~tog_juna_say("I have already told you my story, and you have not told me yours!");
+        }
+        ~tog_juna_say("Tell me... a story...");
+        @tog_juna_prequest_options;
+    case 4 : ~chatplayer("<p,neutral>Not now.");
+}
+
+[label,tog_juna_start_quest]
+~chatplayer("<p,neutral>Okay...");
+if (%qp < ^tog_required_questpoints) {
+    ~mesbox("You need <tostring(^tog_required_questpoints)> quest points to start this quest.");
+    return;
+}
+switch_int (~p_choice2_header("Yes.", 1, "No.", 2, "Start the Tears of Guthix quest?")) {
+    case 1 :
+        ~mesbox("You tell Juna some stories of your adventures.");
+        ~tog_tell_story;
+        ~tog_juna_say("Your stories have entertained me. I will let you into the cave for a short time.");
+        ~tog_juna_say("But first you will need to make a bowl in which to collect the tears.");
+        %tog_juna_bowl = ^tog_need_bowl;
+        cam_moveto(2_50_148_36_37, 1000, 0, 100);
+        cam_lookat(2_50_148_24_22, 200, 0, 100);
+        ~tog_juna_say("There is a cave on the south side of the chasm that is similarly infused with the power of Guthix. The stone in that cave is the only substance that can catch the Tears of Guthix.");
+        cam_reset;
+        ~tog_juna_say("Mine some stone from that cave, make it into a bowl, and bring it to me, and then I will let you catch the Tears.");
+    case 2 :
+        ~chatplayer("<p,neutral>Actually, I don't really have one.");
+        ~tog_juna_say("Hmm. Maybe you should come back when you do.");
+}
+
+[label,tog_juna_need_bowl]
+~tog_juna_say("Before you can collect the Tears of Guthix you must make a bowl out of the stone in the cave on the south of the chasm.");
+if (inv_total(inv, tog_bowl) > 0) {
+    ~chatplayer("<p,happy>I have a bowl.");
+    inv_del(inv, tog_bowl, 1);
+    ~tog_juna_say("I will keep your bowl for you, so that you may collect the tears many times in the future.");
+    ~tog_juna_say("Now... tell me another story, and I will let you collect the tears for the first time.");
+    queue(tog_quest_complete, 0, 0);
+    return;
+}
+switch_int (~p_choice3("But I don't know how to reach the cave!", 1, "What are the Tears of Guthix?", 2, "Okay.", 3)) {
+    case 1 :
+        ~chatplayer("<p,confused>But I don't know how to reach the cave!");
+        ~tog_juna_lightcreature_story;
+    case 2 :
+        ~chatplayer("<p,quiz>What are the Tears of Guthix?");
+        ~tog_juna_tears_story;
+    case 3 : ~chatplayer("<p,neutral>Okay.");
+}
+
+[label,tog_juna_postquest]
+~tog_juna_say("Tell me... a story...");
+switch_int (~p_choice3("Okay...", 1, "You tell me a story.", 2, "Not now.", 3)) {
+    case 1 : @tog_juna_tell_for_tears;
+    case 2 : @tog_juna_tell_me_postquest;
+    case 3 : ~chatplayer("<p,neutral>Not now.");
+}
+
+[label,tog_juna_tell_for_tears]
+~chatplayer("<p,neutral>Okay...");
+if (inv_getobj(worn, ^wearpos_rhand) ! null | inv_getobj(worn, ^wearpos_lhand) ! null) {
+    ~tog_juna_say("Perhaps you should empty your hands before you begin.");
+    return;
+}
+~mesbox("You tell Juna some stories of your adventures.");
+~tog_tell_story;
+if (%tog_last_visit_day > 0) {
+    if (%qp <= %tog_qp_before_return) {
+        ~tog_juna_say("Your story has entertained me. But it is a poor sort of adventurer who only tells stories of the past and does not find new stories to tell. I will not let you into the cave again until you have had more adventures!");
+        ~mesbox("You cannot enter the cave again until you have gained one quest point.");
+        return;
+    }
+    def_int $days = sub(7, sub(calc(date_minutes / 1440), %tog_last_visit_day));
+    if ($days > 1) {
+        ~tog_juna_say("It has not been long since your last visit. Come back in <tostring($days)> days.");
+        return;
+    }
+    if ($days = 1) {
+        ~tog_juna_say("It has not been long since your last visit. Come back tomorrow.");
+        return;
+    }
+}
+~tog_juna_say("Your stories have entertained me. I will let you into the cave for a short time.");
+~tog_juna_say("Collect as much as you can from the blue streams. If you let in water from the green streams, it will take away from the blue. For Guthix is god of balance, and balance lies in the juxtaposition of opposites.");
+@tog_minigame_enter;
+
+[label,tog_juna_tell_me_postquest]
+~chatplayer("<p,neutral>You tell me a story.");
+switch_int (%tog_juna_stories) {
+    case 0 :
+        ~tog_juna_tears_story;
+        %tog_juna_stories = 1;
+    case 1 :
+        switch_int (~p_choice2("Tell me about the Tears of Guthix", 1, "Tell me a new story.", 2)) {
+            case 1 :
+                ~chatplayer("<p,quiz>Tell me about the Tears of Guthix.");
+                ~tog_juna_tears_story;
+            case 2 :
+                ~chatplayer("<p,quiz>Tell me a new story.");
+                ~tog_juna_lightcreature_story;
+                %tog_juna_stories = 2;
+        }
+    case 2 :
+        switch_int (~p_choice3("Tell me about the Tears of Guthix", 1, "Tell me about the light-creatures", 2, "Tell me a new story.", 3)) {
+            case 1 :
+                ~chatplayer("<p,quiz>Tell me about the Tears of Guthix.");
+                ~tog_juna_tears_story;
+            case 2 :
+                ~chatplayer("<p,quiz>Tell me about the light-creatures.");
+                ~tog_juna_lightcreature_story;
+            case 3 :
+                ~chatplayer("<p,quiz>Tell me a new story.");
+                ~tog_juna_goblin_story;
+                %tog_juna_stories = 3;
+        }
+    case default :
+        switch_int (~p_choice3("Tell me about the Tears of Guthix", 1, "Tell me about the light-creatures", 2, "Tell me about the Cave Goblins", 3)) {
+            case 1 :
+                ~chatplayer("<p,quiz>Tell me about the Tears of Guthix.");
+                ~tog_juna_tears_story;
+            case 2 :
+                ~chatplayer("<p,quiz>Tell me about the light-creatures.");
+                ~tog_juna_lightcreature_story;
+            case 3 :
+                ~chatplayer("<p,quiz>Tell me about the Cave Goblins.");
+                ~tog_juna_goblin_story;
+        }
+}
+
+[proc,tog_juna_tears_story]
+~tog_juna_say("The Third Age of the world was a time of great conflict, of destruction never seen before or since, when all the gods save Guthix warred for control.");
+~tog_juna_say("The colossal Wyrms, of whom today's dragons are a pale reflection, turned all the sky to fire, while on the ground armies of foot soldiers, goblins and trolls and humans, filled the valleys and plains with blood.");
+~tog_juna_say("In time the noise of the conflict woke Guthix from His deep slumber, and He rose and stood in the centre of the battlefield so that the splendour of His wrath filled the world, and He called for the conflict to cease!");
+~tog_juna_say("Silence fell, for the gods knew that none could challenge the power of the mighty Guthix -- for His power is that of nature itself, to which all other things are subject, in the end.");
+~tog_juna_say("Guthix reclaimed that which had been stolen from Him, and went back underground to return to His sleep and continue to draw the world's power into Himself.");
+~tog_juna_say("But on His way into the depths of the earth He sat and rested in this cave; and, thinking of the battle-scarred desert that now stretched from one side of His world to the other, He wept.");
+~tog_juna_say("And so great was His sorrow, and so great was His life-giving power, that the rocks themselves began to weep with Him.");
+~tog_juna_say("Later, Guthix noticed that the rocks continued to weep, and that their tears were infused with a small part of His power.");
+~tog_juna_say("So He set me, His servant, to guard the cave, and He entrusted to me the task of judging who was and was not worthy to access the tears.");
+
+[proc,tog_juna_lightcreature_story]
+~tog_juna_say("I will tell you the story of the light-creatures.");
+~tog_juna_say("Myriad and beautiful were the creatures and civilizations of the early ages of the world. Gielinor was a work of art, shaped lovingly over the millennia by the creative mind of Guthix.");
+~tog_juna_say("Only the sturdiest races survived the Godwars, and even then only by abandoning their high culture and gearing their societies towards war. Of the more delicate races there is now no trace, and almost no memory.");
+~tog_juna_say("One such race had bodies as fragile as snowflakes, yet they built crystal cities that stood for a thousand years.");
+~tog_juna_say("The wind would whisper through the spires and fill them with sweet harmonies, and the rising sun would shine through the precious gems that studded the towers and create inter plays of light as if rainbows were dancing.");
+~tog_juna_say("Indeed, so marvellous was this light-show at its height that the patterns of light themselves became alive, and great flocks of luminous creatures rode along the gem-cast beams, each drawn to its own colour.");
+~tog_juna_say("The creatures you see floating in this chasm are the last sorry remnants of that age. I do not know how they made their way here and survived to this time, but I am grateful for their company.");
+
+[proc,tog_juna_goblin_story]
+~tog_juna_say("Not long after the start of my vigil a party of goblins happened on my cave. These were the ugly brutes of the gods' armies, but their armour bore a faded patch where the symbol of a god had been removed.");
+~tog_juna_say("They looked around hesitantly, squinting in the light of crude torches, but as soon as they saw me they raised their spears and charged.");
+~tog_juna_say("No one may access the Tears of Guthix by force. I sent them tumbling into the chasm.");
+~tog_juna_say("Two hundred years later another goblin found me. This one was unarmed, and although she was very wary I succeeded in engaging her in conversation.");
+~tog_juna_say("Since then I have had many more visits from the descendants of those lost warriors, and over the centuries I have seen them change.");
+~tog_juna_say("They have become timid rather than aggressive, and I have seen the light of intelligence grow in their bulging eyes.");
+~tog_juna_say("Their stories are repetitive and grim, of scraping a living out of the harsh rock and through ingenuity and toil shaping it into a home.");
+~tog_juna_say("I have followed the progress of their race, but their individual stories hold little interest for me.");
+
+[queue,tog_quest_complete]
+%tog_juna_bowl = ^tog_complete;
+stat_advance(crafting, 10000);
+session_log(^log_adventure, "Quest complete: Tears of Guthix");
+~send_quest_complete(questlist:tog, tog_bowl, 250, ^tog_questpoints, "You have completed the\\nTears of Guthix Quest!");

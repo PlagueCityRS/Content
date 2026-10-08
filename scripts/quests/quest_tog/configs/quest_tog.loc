@@ -1,0 +1,134 @@
+[tog_juna]
+name=Juna
+desc=An ancient giant serpent.
+model=loc_6657
+anim=tog_snake_sleep
+width=2
+op1=Talk-to
+
+[tog_climbing_rocks_down]
+name=Rocks
+desc=They don't look too easy to climb.
+model=loc_6672
+hillskew=yes
+op1=Climb
+occlude=yes
+
+[tog_climbing_rocks_up]
+name=Rocks
+desc=I could climb these.
+model=loc_6672
+hillskew=yes
+op1=Climb
+occlude=yes
+
+[tog_weepingwall]
+name=Weeping wall
+desc=A rock wall infused with the power of Guthix.
+model=loc_6660
+active=yes
+op1=Collect-from
+forceapproach=west
+mapscene=51
+
+[tog_weeping_wall_good_r]
+name=Blue tears
+desc=The wall is weeping blue tears.
+model=loc_6661
+anim=tog_weeping_wall
+active=yes
+
+[tog_weeping_wall_bad_r]
+name=Green tears
+desc=The wall is weeping green tears.
+model=loc_6662
+recol1s=6679
+recol1d=3395
+anim=tog_weeping_wall
+active=yes
+
+[tog_weeping_wall_off_r]
+name=Absence of tears
+desc=The wall is not weeping at the moment.
+model=loc_6663
+active=yes
+
+[tog_weeping_wall_back_r]
+model=loc_6664
+sharelight=yes
+active=no
+
+[tog_weeping_wall_good_l]
+name=Blue tears
+desc=The wall is weeping blue tears.
+model=loc_6661
+anim=tog_weeping_wall
+mirror=yes
+active=yes
+
+[tog_weeping_wall_bad_l]
+name=Green tears
+desc=The wall is weeping green tears.
+model=loc_6662
+recol1s=6679
+recol1d=3395
+mirror=yes
+anim=tog_weeping_wall
+active=yes
+
+[tog_weeping_wall_off_l]
+name=Absence of tears
+desc=The wall is not weeping at the moment.
+model=loc_6663
+active=yes
+
+[tog_weeping_wall_back_l]
+model=loc_6664
+sharelight=yes
+mirror=yes
+active=no
+
+[tog_blue_stone_rocks1]
+name=Rocks
+desc=Stone with blue veins.
+model=elemental_workshop_rock
+recol1s=15854
+recol1d=5284
+recol2s=6342
+recol2d=14900
+op1=Mine
+op2=Prospect
+op3=hidden
+mapscene=12
+blockrange=no
+category=tog_magic_rocks
+
+[tog_blue_stone_rocks2]
+name=Rocks
+desc=Stone with blue veins.
+model=loc_4028
+recol1s=9513
+recol1d=5284
+recol2s=6342
+recol2d=14900
+op1=Mine
+op2=Prospect
+op3=hidden
+mapscene=12
+blockrange=no
+category=tog_magic_rocks
+
+[tog_blue_stone_rocks3]
+name=Rocks
+desc=Stone with blue veins.
+model=bluriterock
+recol1s=9513
+recol1d=5284
+recol2s=6342
+recol2d=14900
+op1=Mine
+op2=Prospect
+op3=hidden
+mapscene=12
+blockrange=no
+category=tog_magic_rocks

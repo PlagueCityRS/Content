@@ -1,0 +1,10 @@
+[tog_minigame]
+scope=perm
+
+[tog_last_visit_day]
+scope=perm
+
+[tog_ticks_left]
+
+[tog_collect_wall]
+type=coord

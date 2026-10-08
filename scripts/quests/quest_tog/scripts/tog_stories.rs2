@@ -1,0 +1,286 @@
+[proc,tog_story_available](int $story)(boolean)
+switch_int ($story) {
+    case 1 : if (%chompybird = ^chompybird_complete) return(true);
+    case 2 : if (%biohazard >= ^biohazard_complete) return(true);
+    case 3 : if (%spy = ^blackknight_complete) return(true);
+    case 4 : if (~get_cog_progress = ^quest_cog_complete) return(true);
+    case 5 : if (%cookquest = ^cook_complete) return(true);
+    case 6 : if (%death_equiproom = ^death_complete) return(true);
+    case 7 : if (%demonstart = ^demon_complete) return(true);
+    case 8 : if (%deserttreasure = ^deserttreasure_complete) return(true);
+    case 9 : if (%itexamlevel = ^itexam_complete) return(true);
+    case 10 : if (%doricquest = ^doric_complete) return(true);
+    case 11 : if (%dragonquest >= ^dragon_complete) return(true);
+    case 12 : if (%druidquest = ^druid_complete) return(true);
+    case 13 : if (%mcannon = ^mcannon_complete) return(true);
+    case 14 : if (%eadgar_quest = ^eadgar_complete) return(true);
+    case 15 : if (testbit(%elemental_workshop_bits, ^elemental_workshop_complete) = ^true) return(true);
+    case 16 : if (%haunted = ^haunted_complete) return(true);
+    case 17 : if (%crestquest = ^crest_complete) return(true);
+    case 18 : if (%arenaquest >= ^arena_complete) return(true);
+    case 19 : if (%fishingcompo = ^fishingcompo_complete) return(true);
+    case 20 : if (%viking = ^viking_complete) return(true);
+    case 21 : if (%fluffs = ^fluffs_complete) return(true);
+    case 22 : if (%goblinquest = ^gobdip_complete) return(true);
+    case 23 : if (%grandtree = ^grandtree_complete) return(true);
+    case 24 : if (%hazeelcultquest = ^hazeelcult_complete) return(true);
+    case 25 : if (%heroquest = ^hero_complete) return(true);
+    case 26 : if (%grail = ^grail_complete) return(true);
+    case 27 : if (%horrorquest = ^horror_complete) return(true);
+    case 28 : if (%imp = ^imp_complete) return(true);
+    case 29 : if (%routequest >= ^routequest_complete) return(true);
+    case 30 : if (%junglepotion >= ^junglepotion_complete) return(true);
+    case 31 : if (%squire = ^squire_complete) return(true);
+    case 32 : if (%legendsquest = ^legends_complete) return(true);
+    case 33 : if (%zanaris = ^zanaris_complete) return(true);
+    case 34 : if (%lost_tribe_quest = ^lost_tribe_complete) return(true);
+    case 35 : if (%arthur = ^arthur_complete) return(true);
+    case 36 : if (%drunkmonkquest = ^drunkmonk_complete) return(true);
+    case 37 : if (%mm_main >= ^mm_complete) return(true);
+    case 38 : if (%murderquest = ^murder_complete) return(true);
+    case 39 : if (%druidspirit = ^druidspirit_complete) return(true);
+    case 40 : if (%itgronigen >= ^itgronigen_complete) return(true);
+    case 41 : if (%hunt = ^hunt_complete) return(true);
+    case 42 : if (%elenaquest >= ^elena_complete) return(true);
+    case 43 : if (%priestperil >= ^priestperil_complete) return(true);
+    case 44 : if (%princequest = ^prince_complete) return(true);
+    case 45 : if (%regicide_quest = ^regicide_complete) return(true);
+    case 46 : if (%prieststart = ^priest_complete) return(true);
+    case 47 : if (%rjquest = ^romeojuliet_complete) return(true);
+    case 48 : if (%runemysteries = ^runemysteries_complete) return(true);
+    case 49 : if (%scorpcatcher = ^scorpcatcher_complete) return(true);
+    case 50 : if (%seaslugquest = ^seaslug_complete) return(true);
+    case 51 : if (%morttonquest = ^mortton_quest_complete) return(true);
+    case 52 : if (%sheepherderquest >= ^sheepherder_complete) return(true);
+    case 53 : if (%sheep = ^sheep_complete) return(true);
+    case 54 : if ((%blackarmgang = ^blackarmgang_complete | %phoenixgang = ^phoenixgang_complete)) return(true);
+    case 55 : if (%zombiequeen >= ^zombiequeen_complete) return(true);
+    case 56 : if (%tbwt_main = ^tbwt_complete) return(true);
+    case 57 : if (%tog_juna_bowl = ^tog_complete) return(true);
+    case 58 : if (%ikov >= ^ikov_completed_armadyl) return(true);
+    case 59 : if (%misc_quest >= ^misc_complete) return(true);
+    case 60 : if (%desertrescue = ^desertrescue_complete) return(true);
+    case 61 : if (%treequest = ^tree_complete) return(true);
+    case 62 : if (%totemquest = ^totem_complete) return(true);
+    case 63 : if (%troll_love = ^troll_love_complete) return(true);
+    case 64 : if (%troll_quest = ^troll_complete) return(true);
+    case 65 : if (%upass = ^upass_complete) return(true);
+    case 66 : if (%vampire = ^vampire_complete) return(true);
+    case 67 : if (%itwatchtower >= ^itwatchtower_complete) return(true);
+    case 68 : if (%waterfall_quest = ^waterfall_complete) return(true);
+    case 69 : if (%ballquest = ^ball_complete) return(true);
+    case 70 : if (%hetty = ^hetty_complete) return(true);
+    case 71 : if (%zogre = ^zogre_complete) return(true);
+}
+return(false);
+
+[proc,tog_tell_story]
+def_int $count = 0;
+def_int $i = 1;
+while ($i <= 71) {
+    if (~tog_story_available($i) = true) {
+        $count = add($count, 1);
+    }
+    $i = add($i, 1);
+}
+if ($count = 0) {
+    return;
+}
+def_int $pick = random($count);
+$i = 1;
+while ($i <= 71) {
+    if (~tog_story_available($i) = true) {
+        if ($pick = 0) {
+            ~tog_story($i);
+            return;
+        }
+        $pick = sub($pick, 1);
+    }
+    $i = add($i, 1);
+}
+
+[proc,tog_story](int $story)
+switch_int ($story) {
+    case 1 :
+        ~chatplayer("<p,neutral>... Poor Rantz was so clumsy he couldn't shoot anything! But I managed to kill the Chompy Bird.");
+    case 2 :
+        ~chatplayer("<p,neutral>... So it turned out there was no plague after all!");
+        ~chatnpc_specific(nc_name(tog_juna_dummy), tog_juna_dummy, "<p,neutral>Deception of the people by their rulers is a terrible thing.");
+    case 3 :
+        ~chatplayer("<p,neutral>... So in the end the Black Knights were defeated by cabbage!");
+        ~chatnpc_specific(nc_name(tog_juna_dummy), tog_juna_dummy, "<p,neutral>One should never underestimate the uses of the vegetables of Guthix.");
+    case 4 :
+        ~chatplayer("<p,neutral>... So it was I who repaired the clock tower.");
+    case 5 :
+        ~chatplayer("<p,neutral>... and in the end I found all the ingredients, so the Duke of Lumbridge had a birthday cake after all.");
+        ~chatnpc_specific(nc_name(tog_juna_dummy), tog_juna_dummy, "<p,neutral>Ah, a happy ending. It would not be good for such an anniversary to go unmarked.");
+    case 6 :
+        ~chatplayer("<p,neutral>... So from then on the Imperial Guard was able to access Death Plateau safely and take the trolls by surprise.");
+    case 7 :
+        ~chatplayer("<p,neutral>... So I destroyed the demon Delrith and saved Varrock!");
+        ~chatnpc_specific(nc_name(tog_juna_dummy), tog_juna_dummy, "<p,neutral>I remember Delrith. A most unpleasant character; I am glad he has been dispatched.");
+    case 8 :
+        ~chatplayer("<p,neutral>... In the pyramid I discovered a whole new set of magic spells!");
+        ~chatnpc_specific(nc_name(tog_juna_dummy), tog_juna_dummy, "<p,neutral>I suggest you think about the origin of those spells. Ancient magics are not to be toyed with.");
+    case 9 :
+        ~chatplayer("<p,neutral>... and the examiner was very impressed that I had discovered an ancient altar of Zaros.");
+        ~chatnpc_specific(nc_name(tog_juna_dummy), tog_juna_dummy, "<p,neutral>Zaros? I had not heard that name for a thousand years even before the start of my sojourn here.");
+    case 10 :
+        ~chatplayer("<p,neutral>... So once I had got all the ores he wanted, Doric let me use his anvils.");
+        ~chatnpc_specific(nc_name(tog_juna_dummy), tog_juna_dummy, "<p,neutral>Such a small task hardly seems worthy of the term 'quest'.");
+    case 11 :
+        ~chatplayer("<p,neutral>... So with Elvarg the dragon dead, the master of the Champions' Guild let me in, and I was able to wear Rune Plate!");
+    case 12 :
+        ~chatplayer("<p,neutral>... So Kaqemeex taught me how to use the Herblore skill.");
+        ~chatnpc_specific(nc_name(tog_juna_dummy), tog_juna_dummy, "<p,neutral>A generous reward indeed.");
+    case 13 :
+        ~chatplayer("<p,neutral>... and that was how I fixed the Dwarf multicannon.");
+        ~chatnpc_specific(nc_name(tog_juna_dummy), tog_juna_dummy, "<p,neutral>So war still rages in the world above? Will you never tire of creating machines of destruction?");
+    case 14 :
+        ~chatplayer("<p,neutral>... Eadgar's ruse was absurd, but it worked! The trolls ate a fake human, and I got the herb for the druids' ritual.");
+    case 15 :
+        ~chatplayer("<p,neutral>... and once I had repaired the Elemental Workshop I was able to make an Elemental Shield.");
+    case 16 :
+        ~chatplayer("<p,neutral>... So once I had found all the parts for the machine, poor Ernest could be himself once more.");
+        ~chatnpc_specific(nc_name(tog_juna_dummy), tog_juna_dummy, "<p,neutral>That was a good deed. It is a terrible thing to be locked out of one's natural form.");
+    case 17 :
+        ~chatplayer("<p,neutral>... So all three parts of the family crest were reunited.");
+    case 18 :
+        ~chatplayer("<p,neutral>... and I defeated General Khazard, and won the Servils their freedom!");
+    case 19 :
+        ~chatplayer("<p,neutral>... and after I had won the fishing contest, the Dwarves let me go under White Wolf Mountain.");
+        ~chatnpc_specific(nc_name(tog_juna_dummy), tog_juna_dummy, "<p,neutral>Fishing? A strange test of worthiness to pass through an underground tunnel!");
+    case 20 :
+        ~chatplayer("<p,neutral>... and that was how I became an honourary member the Fremennik, and was given my Fremennik name, <~get_viking_name>.");
+    case 21 :
+        ~chatplayer("<p,neutral>...I returned Fluffs safely to Gertrude, and then she gave me a cat of my own!");
+        ~chatnpc_specific(nc_name(tog_juna_dummy), tog_juna_dummy, "<p,neutral>Cats are one of the most mysterious creatures of Guthix. I hope you take your responsibility seriously.");
+    case 22 :
+        ~chatplayer("<p,neutral>... So the goblins ended up wearing the armour colour they had to start off with!");
+        ~chatnpc_specific(nc_name(tog_juna_dummy), tog_juna_dummy, "<p,neutral>Poor silly goblins! Their race had such potential, if only they could rise above their petty squabbles.");
+    case 23 :
+        ~chatplayer("<p,neutral>... Glough fled like the coward he really is, and the Grand Tree was saved!");
+    case 24 :
+        if (%hazeelcult_side = ^hazeelcult_goodside) {
+            ~chatplayer("<p,neutral>... So that was how I foiled the cultists in their plan to resurrect Hazeel.");
+        }
+        if (%hazeelcult_side = ^hazeelcult_evilside) {
+            ~chatplayer("<p,neutral>... So that was how I helped return Hazeel to his followers.");
+        }
+        ~chatnpc_specific(nc_name(tog_juna_dummy), tog_juna_dummy, "<p,neutral>So the vile Mahjarrat still walk the earth above? Then Zamorak's defeat was not as thorough as I had thought.");
+    case 25 :
+        ~chatplayer("<p,neutral>... So after I had retrieved all the items, I became a member of the Heroes' Guild!");
+    case 26 :
+        ~chatplayer("<p,neutral>... and out of all the Knights of the Round Table, it was I who found the Holy Grail.");
+    case 27 :
+        ~chatplayer("<p,neutral>... and that was the end of the horror from the deep!");
+    case 28 :
+        ~chatplayer("<p,neutral>... It took some time, but I finally got all four beads back, and Mizgog gave me my reward.");
+        ~chatnpc_specific(nc_name(tog_juna_dummy), tog_juna_dummy, "<p,neutral>Imps! I remember the age of great war, when armies of Zamorak's imps bloodied the ankles of the other gods' creatures.");
+    case 29 :
+        ~chatplayer("<p,neutral>... So I suppose it was my fault that the young members of the Myreque were killed by Vanstrom.");
+    case 30 :
+        ~chatplayer("<p,neutral>... and once I had gathered all the herbs, Trufitus Shakaya was able to commune with his gods.");
+    case 31 :
+        ~chatplayer("<p,neutral>... So that was how I found the Imcando Dwarves and got the Knight a new sword.");
+    case 32 :
+        ~chatplayer("<p,neutral>... and when I had completed all the tasks, I became a member of the Legends' Guild!");
+    case 33 :
+        ~chatplayer("<p,neutral>... and when I entered the door carrying the Dramen Staff, I was transported to a whole new world -- a world populated by magical fairies!");
+    case 34 :
+        ~chatplayer("<p,neutral>... So Sigmund was dismissed, and the duke and ruler of the cave goblins signed a peace treaty.");
+        ~chatnpc_specific(nc_name(tog_juna_dummy), tog_juna_dummy, "<p,neutral>The Dorgeshuun goblins have been good neighbors during my vigil here. They are a timid race, but not cowardly, and I am glad they have the peace they desire.");
+    case 35 :
+        ~chatplayer("<p,neutral>... and when I told King Arthur that I had single-handedly freed Merlin from his crystal prison, he made me a Knight of the Round Table!");
+    case 36 :
+        ~chatplayer("<p,neutral>... and the monks threw a big birthday party for the child, with lots of wine.");
+        ~chatnpc_specific(nc_name(tog_juna_dummy), tog_juna_dummy, "<p,neutral>I hope they supplied something more suitable for the child to drink.");
+    case 37 :
+        ~chatplayer("<p,neutral>... so I defeated the Jungle Demon and stopped the Monkeys' plot to take over Karamja.");
+        ~chatnpc_specific(nc_name(tog_juna_dummy), tog_juna_dummy, "<p,neutral>I see they couldn't make a monkey out of you!");
+        ~chatplayer("<p,neutral>Well, actually, I was a monkey for a bit.");
+    case 38 :
+        ~chatplayer("<p,neutral>... and that's how I solved the murder of Lord Sinclair.");
+    case 39 :
+        ~chatplayer("<p,neutral>... thus Filliman Tarlock became a Nature Spirit!");
+        ~chatnpc_specific(nc_name(tog_juna_dummy), tog_juna_dummy, "<p,neutral>That is a fitting reward for a dedicated servant of Guthix. Thank you for helping him.");
+    case 40 :
+        ~chatplayer("<p,neutral>... and when I had fixed the telescope, I looked through and saw the stars.");
+        ~chatnpc_specific(nc_name(tog_juna_dummy), tog_juna_dummy, "<p,neutral>It is long since I have seen the stars...");
+    case 41 :
+        ~chatplayer("<p,neutral>... and when I dug in the middle of the park in Falador, I found the pirate's treasure!");
+        ~chatnpc_specific(nc_name(tog_juna_dummy), tog_juna_dummy, "<p,neutral>Such is ever the folly of pirates, the bury their loot in the ground so that another can dig it up.");
+    case 42 :
+        ~chatplayer("<p,neutral>... and that was how I rescued Elena from West Ardougne.");
+    case 43 :
+        ~chatplayer("<p,neutral>... But with Drezel's help I was able to purify the Salve.");
+    case 44 :
+        ~chatplayer("<p,neutral>... and I had to disguise Prince Ali in order to smuggle him out!");
+    case 45 :
+        ~chatplayer("<p,neutral>... I returned to tell King Lathas that the assassination was successful, and he rewarded me.");
+    case 46 :
+        ~chatplayer("<p,neutral>... and once I returned the skull, the ghost was able to rest.");
+        ~chatnpc_specific(nc_name(tog_juna_dummy), tog_juna_dummy, "<p,neutral>A strange attachment to an item that has no use after one's death.");
+    case 47 :
+        ~chatplayer("<p,neutral>... I gave the message to Romeo, but he misunderstood, so they never were together.");
+        ~chatnpc_specific(nc_name(tog_juna_dummy), tog_juna_dummy, "<p,neutral>Never was a story of more woe That this of Juliet and her Romeo.");
+    case 48 :
+        ~chatplayer("<p,neutral>... So I brought Aubury's notes to Sedridor, and from then on I was able to mine Rune Essence.");
+        ~chatnpc_specific(nc_name(tog_juna_dummy), tog_juna_dummy, "<p,neutral>So the Order of Wizards have discovered the Rune Essence Mine once more? Very interesting.");
+    case 49 :
+        ~chatplayer("<p,neutral>... I would never have thought that three scorpions would take that long to find!");
+    case 50 :
+        ~chatplayer("<p,neutral>... and that was how I rescued Caroline's family from the Sea Slugs.");
+    case 51 :
+        ~chatplayer("<p,neutral>... So Mort'ton returned pretty much to normal, and I was able to put the shades to rest.");
+    case 52 :
+        ~chatplayer("<p,neutral>... and I incinerated the bones of the sheep in the furnace.");
+    case 53 :
+        ~chatplayer("<p,neutral>... Shearing all those sheep was hard work, but the pay was good!");
+        ~chatnpc_specific(nc_name(tog_juna_dummy), tog_juna_dummy, "<p,neutral>Nature gave sheep their wool for a reason, you know. I hope they were not too cold.");
+    case 54 :
+        ~chatplayer("<p,neutral>... So that's how I helped return the Shield of Arrav.");
+    case 55 :
+        ~chatplayer("<p,neutral>... So what Rashiliyia wanted all along was to be reunited with her son in the afterlife.");
+    case 56 :
+        ~chatplayer("<p,neutral>... So that was how I helped the people of Tai Bwo Wannai village return.");
+    case 57 :
+        ~chatplayer("<p,neutral>... so you said you'd look after my bowl for me, and let me access the Tears if I kept telling you stories.");
+        ~chatnpc_specific(nc_name(tog_juna_dummy), tog_juna_dummy, "<p,neutral>I knew that story already, in fact, but I suppose your own perspective of the events is a valid tale in itself.");
+    case 58 :
+        if (%ikov = ^ikov_completed_armadyl) {
+            ~chatplayer("<p,neutral>... I killed Lucien and banished him from the world!");
+        }
+        if (%ikov = ^ikov_completed_lucien) {
+            ~chatplayer("<p,neutral>... Lucien said that the Staff of Armadyl I gave him had made him more powerful.");
+        }
+    case 59 :
+        ~chatplayer("<p,neutral>... So that was how I became <text_gender("King", "Queen")> of Miscellania!");
+    case 60 :
+        ~chatplayer("<p,neutral>... Ana wasn't too happy to be cooped up in that barrel! But at least I got her out of the mining camp.");
+    case 61 :
+        ~chatplayer("<p,neutral>... and King Bolren thanked me for defeating the warlord and returning the orbs to the gnome people.");
+    case 62 :
+        ~chatplayer("<p,neutral>... So I returned the totem, and the Rantuki tribe rewarded me for my help.");
+    case 63 :
+        ~chatplayer("<p,neutral>... So Ug and Aga lived happily ever after.");
+    case 64 :
+        ~chatplayer("<p,neutral>... and after I had rescued Godric, Dunstan gave me the Law Talisman as a reward!");
+    case 65 :
+        ~chatplayer("<p,neutral>... I don't know who put all those traps in the underground pass!");
+    case 66 :
+        ~chatplayer("<p,neutral>... and once the vampyre was dead, the people of Draynor no longer lived in fear.");
+    case 67 :
+        ~chatplayer("<p,neutral>... and with the shield generator working, the ogres could never threaten Yanille again.");
+    case 68 :
+        ~chatplayer("<p,neutral>... and that was how I retrieved the treasure from the waterfall.");
+    case 69 :
+        ~chatplayer("<p,neutral>... All that trouble just to get a ball out of someone's garden!");
+        ~chatnpc_specific(nc_name(tog_juna_dummy), tog_juna_dummy, "<p,neutral>It is often hard to know how long a task will take when we begin it.");
+    case 70 :
+        ~chatplayer("<p,neutral>... and once I got her all the ingredients, Hetty's potion increased my magical power!");
+        ~chatnpc_specific(nc_name(tog_juna_dummy), tog_juna_dummy, "<p,neutral>I see you are on your way to becoming strong in the magical arts.");
+    case 71 :
+        ~chatplayer("<p,neutral>... Those Zogres were disgusting! But I learned how to fight them with brutal arrows and disease balm.");
+        ~chatnpc_specific(nc_name(tog_juna_dummy), tog_juna_dummy, "<p,neutral>Zombie Ogres!? Some of the foulest creatures of Zamorak. In the great wars the zogre armies could repel the forces of Saradomin with their stench alone!");
+}

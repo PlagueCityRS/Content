@@ -1,0 +1,38 @@
+[tog_stone]
+name=Magic stone
+recol1s=15855
+recol1d=14800
+desc=Doesn't look very special.
+model=inv_uncutgem
+2dxof=-5
+2dyof=7
+2dzoom=780
+2dyan=220
+2dzan=1860
+2dxan=368
+members=yes
+cost=1
+weight=1lb
+
+[tog_bowl]
+name=Stone bowl
+desc=A magic stone bowl for catching the tears of Guthix.
+model=quest_regicide_inv_limestone
+manwear=obj_4704_manwear,3
+womanwear=obj_4704_manwear,3
+members=yes
+2dxof=1
+2dzoom=660
+2dyan=68
+2dxan=184
+cost=1
+wearpos=righthand
+wearpos2=lefthand
+param=ready_baseanim,tog_ready_bowl
+param=turnonspot_baseanim,tog_ready_bowl
+param=walk_f_baseanim,tog_walk_bowl
+param=walk_b_baseanim,tog_walk_bowl
+param=walk_l_baseanim,tog_walk_bowl
+param=walk_r_baseanim,tog_walk_bowl
+param=running_baseanim,tog_run_bowl
+tradeable=no

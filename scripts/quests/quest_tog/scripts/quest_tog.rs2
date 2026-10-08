@@ -1,0 +1,193 @@
+[opnpcu,tog_light_creature]
+if (last_useitem ! tog_sapphire_lantern_lit) {
+    ~displaymessage(^dm_default);
+    return;
+}
+def_coord $dest = 2_50_148_28_55;
+def_int $dir = ^exact_north;
+if (coordz(coord) > coordz(npc_coord)) {
+    $dest = 2_50_148_29_32;
+    $dir = ^exact_south;
+}
+mes("The light-creature is attracted to your beam and comes towards you...");
+npc_walk(coord);
+p_delay(1);
+npc_tele(movecoord(coord, -1, 0, -1));
+npc_changetype(tog_light_creature_carrying, 50);
+npc_anim(light_creature_grow, 0);
+sound_synth(light_creature_up, 1, 0);
+anim(tog_player_float_up, 0);
+p_delay(1);
+def_int $distance = add(abs(sub(coordz($dest), coordz(coord))), 1);
+~set_readywalk_bas(tog_player_float_across, tog_player_float_across);
+sound_synth(light_creature_loop, 1, 0);
+npc_walk(movecoord($dest, -1, 0, -1));
+p_exactmove(coord, $dest, 0, multiply($distance, 30), $dir);
+p_delay($distance);
+~update_bas;
+anim(tog_player_float_down, 0);
+npc_anim(light_creature_shrink, 0);
+sound_synth(light_creature_down, 1, 0);
+p_delay(1);
+npc_changetype(tog_light_creature, 1);
+
+[oploc1,tog_climbing_rocks_down]
+if (coordx(coord) > coordx(loc_coord)) {
+    mes("You could climb down here, but it is too uneven to climb up.");
+    return;
+}
+~agility_exactmove(tog_climb_slope_down, 0, 2, coord, movecoord(coord, 2, 0, 0), 0, 60, ^exact_east, false);
+
+[oploc1,tog_climbing_rocks_up]
+if (coordx(coord) > coordx(loc_coord)) {
+    ~agility_exactmove(tog_climb_slope_up, 0, 2, coord, movecoord(coord, -2, 0, 0), 0, 60, ^exact_west, false);
+    return;
+}
+~agility_exactmove(tog_climb_slope_down, 0, 2, coord, movecoord(coord, 2, 0, 0), 0, 60, ^exact_east, false);
+
+[oploc1,_tog_magic_rocks]
+if (stat(mining) < 20) {
+    ~mesbox("You need a Mining level of 20 to mine this rock.");
+    return;
+}
+if (inv_total(inv, tog_stone) > 0) {
+    mes("You have already mined some stone. You don't need any more.");
+    return;
+}
+if (inv_freespace(inv) < 1) {
+    ~mesbox("Your inventory is too full to hold any more stone.");
+    return;
+}
+def_obj $pickaxe = ~pickaxe_checker;
+if ($pickaxe = null) {
+    ~mesbox("You need a Pickaxe to mine this rock. You do not have a Pickaxe which you have the Mining level to use.");
+    return;
+}
+anim(oc_param($pickaxe, mining_animation), 0);
+mes("You swing your pick at the rock.");
+sound_synth(mine_quick, 1, 0);
+p_delay(oc_param($pickaxe, mining_rate));
+anim(null, 0);
+inv_add(inv, tog_stone, 1);
+mes("You manage to mine some stone.");
+
+[oploc2,_tog_magic_rocks]
+mes("You examine the rock for ores...");
+p_delay(0);
+sound_synth(prospect, 1, 0);
+p_delay(1);
+mes("This rock contains a magical kind of stone.");
+
+[opheldu,tog_stone]
+if (last_useitem = chisel) {
+    @tog_make_bowl;
+}
+~displaymessage(^dm_default);
+
+[label,tog_make_bowl]
+if (%tog_juna_bowl = ^tog_not_started) {
+    ~displaymessage(^dm_default);
+    return;
+}
+inv_del(inv, tog_stone, 1);
+inv_add(inv, tog_bowl, 1);
+anim(human_limestonecutting, 0);
+mes("You make a stone bowl.");
+
+[opheldu,bullseye_lantern_unlit]
+if (last_useitem = sapphire) {
+    inv_del(inv, sapphire, 1);
+    inv_setslot(inv, last_slot, tog_sapphire_lantern_unlit, 1);
+    inv_add(inv, bullseye_lantern_lens, 1);
+    mes("You swap the lantern's lens for a sapphire.");
+    return;
+}
+~displaymessage(^dm_default);
+
+[opheldu,bullseye_lantern_empty]
+if (last_useitem = sapphire) {
+    inv_del(inv, sapphire, 1);
+    inv_setslot(inv, last_slot, tog_sapphire_lantern_empty, 1);
+    inv_add(inv, bullseye_lantern_lens, 1);
+    mes("You swap the lantern's lens for a sapphire.");
+    return;
+}
+~displaymessage(^dm_default);
+
+[opheldu,bullseye_lantern_lit]
+if (last_useitem = sapphire) {
+    mes("The lantern is too hot to do that while it is lit.");
+    return;
+}
+~displaymessage(^dm_default);
+
+[opheldu,tog_sapphire_lantern_unlit]
+if (last_useitem = bullseye_lantern_lens) {
+    inv_del(inv, bullseye_lantern_lens, 1);
+    inv_setslot(inv, last_slot, bullseye_lantern_unlit, 1);
+    inv_add(inv, sapphire, 1);
+    mes("You swap the lantern's sapphire for a lens.");
+    return;
+}
+~displaymessage(^dm_default);
+
+[opheldu,tog_sapphire_lantern_empty]
+if (last_useitem = bullseye_lantern_lens) {
+    inv_del(inv, bullseye_lantern_lens, 1);
+    inv_setslot(inv, last_slot, bullseye_lantern_empty, 1);
+    inv_add(inv, sapphire, 1);
+    mes("You swap the lantern's sapphire for a lens.");
+    return;
+}
+~displaymessage(^dm_default);
+
+[opheldu,tog_sapphire_lantern_lit]
+if (last_useitem = bullseye_lantern_lens) {
+    mes("The lantern is too hot to do that while it is lit.");
+    return;
+}
+~displaymessage(^dm_default);
+
+[if_button,questlist:tog]
+def_string $text;
+if (%tog_juna_bowl = ^tog_not_started) {
+    $text = append($text, "@dbl@I can start this quest by speaking to @dre@Juna the serpent@dbl@ who|lives deep in the @dre@Lumbridge Swamp Caves@dbl@.|");
+    $text = append($text, "@dbl@I will need to have:|");
+    $text = append($text, "<~quest_req_colour(stat_base(firemaking), 49)>Level 49 firemaking|");
+    $text = append($text, "<~quest_req_colour(stat_base(crafting), 20)>Level 20 crafting|");
+    $text = append($text, "<~quest_req_colour(stat_base(mining), 20)>Level 20 mining|");
+    $text = append($text, "<~quest_req_colour(%qp, 43)>43 quest points|");
+    $text = append($text, "<~quest_req_colour(stat_base(crafting), 49)>Level 49 crafting would be an advantage|");
+    $text = append($text, "<~quest_req_colour(stat_base(smithing), 49)>Level 49 smithing would be an advantage");
+    ~quest_journal("Tears of Guthix", $text);
+    return;
+}
+if (%tog_juna_bowl = ^tog_need_bowl) {
+    $text = append($text, "@str@I met Juna the serpent in a deep chasm beneath the|@str@Lumbridge Swamp Caves.|");
+    $text = append($text, "@dbl@I told her a story and she said she would let me into the|@dbl@Tears of Guthix cave if I brought her a @dre@bowl@dbl@ made from the|@dbl@stone in @dre@the cave on the South side of the chasm@dbl@.");
+    ~quest_journal("Tears of Guthix", $text);
+    return;
+}
+$text = append($text, "@str@I met Juna the serpent in a deep chasm beneath the|@str@Lumbridge Swamp Caves. I made a bowl out of magical|@str@stone in order to catch the Tears of Guthix.||");
+$text = append($text, "@red@QUEST COMPLETE!||");
+$text = append($text, "@dbl@Now Juna will let me into the cave to collect the Tears if I|@dre@tell her stories@dbl@ of my adventures.|");
+if (%tog_last_visit_day = 0) {
+    $text = append($text, "@dbl@I can visit Juna now.");
+    ~quest_journal("Tears of Guthix", $text);
+    return;
+}
+def_int $days = sub(7, sub(calc(date_minutes / 1440), %tog_last_visit_day));
+def_boolean $needs_qp = false;
+if (%qp <= %tog_qp_before_return) {
+    $needs_qp = true;
+}
+if ($days > 0 & $needs_qp = true) {
+    $text = append($text, "@dbl@I will be able to collect the Tears of Guthix @dre@in <tostring($days)> days@dbl@, as|@dbl@long as I gain @dre@1 Quest Point@dbl@.");
+} else if ($needs_qp = true) {
+    $text = append($text, "@dbl@I will be able to collect the Tears of Guthix, as long as I|@dbl@gain @dre@1 Quest Point@dbl@.");
+} else if ($days > 0) {
+    $text = append($text, "@dbl@I will be able to collect the Tears of Guthix @dre@in <tostring($days)> days@dbl@.");
+} else {
+    $text = append($text, "@dbl@I have had enough adventures to tell Juna more stories,|@dbl@and a week has passed since I last collected the Tears. I|@dbl@can visit Juna again now.");
+}
+~quest_journal("Tears of Guthix", $text);

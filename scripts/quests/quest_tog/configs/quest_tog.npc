@@ -1,0 +1,33 @@
+[tog_light_creature]
+name=Light creature
+desc=A shimmering creature of blue light.
+walkanim=light_creature_ready
+readyanim=light_creature_ready
+vislevel=hide
+model1=npc_2021
+moverestrict=blocked+normal
+wanderrange=4
+
+[tog_light_creature_carrying]
+name=Light creature
+desc=That one is carrying someone!
+readyanim=light_creature_ready
+walkanim=light_creature_ready
+size=3
+resizeh=220
+resizev=220
+vislevel=hide
+model1=npc_2021
+moverestrict=blocked+normal
+wanderrange=0
+defaultmode=none
+
+[tog_juna_dummy]
+name=Juna
+desc=An ancient giant serpent.
+vislevel=hide
+model1=loc_6663_q
+head1=npc_2023_head
+moverestrict=nomove
+wanderrange=0
+timer=1

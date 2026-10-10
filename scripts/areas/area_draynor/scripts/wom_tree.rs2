@@ -1,0 +1,95 @@
+[oploc1,wom_tree]
+if (getqueue(wom_tree_drop_bowl) > 0) {
+    ~chatplayer("<p,neutral>I think I should leave him in peace to finish his stew!");
+    return;
+}
+if (~woodcutting_axe_checker(true) = null) {
+    return;
+}
+switch_int (random(8)) {
+    case 0 : ~chatnpc_specific("Guard", wom_bankguard, "<p,angry>Ooooch!");
+    case 1 : ~chatnpc_specific("Guard", wom_bankguard, "<p,angry>Oi!");
+    case 2 : ~chatnpc_specific("Guard", wom_bankguard, "<p,angry>Watch what you're doing with that axe, you nit!");
+    case 3 : ~chatnpc_specific("Guard", wom_bankguard, "<p,angry>You'll blow my cover! I'm meant to be hidden!");
+    case 4 : ~chatnpc_specific("Guard", wom_bankguard, "<p,angry>Will you stop that?");
+    case 5 : ~chatnpc_specific("Guard", wom_bankguard, "<p,angry>Don't draw attention to me!");
+    case 6 : ~chatnpc_specific("Guard", wom_bankguard, "<p,angry>Hey - gerroff me!");
+    case default : ~chatnpc_specific("Guard", wom_bankguard, "<p,angry>Ow! That really hurt!");
+}
+
+[oploc2,wom_tree]
+if (getqueue(wom_tree_drop_bowl) > 0) {
+    ~chatplayer("<p,neutral>I think I should leave him in peace to finish his stew!");
+    return;
+}
+~chatplayer("<p,quiz>Hello?");
+if (inv_total(inv, stew) > 0) {
+    ~chatnpc_specific("Guard", wom_bankguard, "<p,quiz>Yes, what do you... I say, is that stew for me?");
+    switch_int (~p_choice2("Ok, take the stew!", 1, "No, I want to keep this stew!", 2)) {
+        case 1 :
+            ~chatplayer("<p,happy>Ok, take the stew!");
+            @wom_tree_give_stew;
+        case 2 :
+            ~chatplayer("<p,neutral>No, I want to keep this stew!");
+            ~chatnpc_specific("Guard", wom_bankguard, "<p,neutral>Fair enough. But if you change your mind, I'll probably still be here.");
+    }
+    return;
+}
+~chatnpc_specific("Guard", wom_bankguard, "<p,angry>Ssshhh! What do you want?");
+~chatplayer("<p,neutral>Well, it's not every day you see a man up a tree.");
+~chatnpc_specific("Guard", wom_bankguard, "<p,angry>I'm trying to observe a suspect. Leave me alone!");
+@wom_tree_options;
+
+[label,wom_tree_options]
+switch_int (~p_choice3("This is about the bank robbery, right?", 1, "You're not being very subtle up there.", 2, "Can I do anything to help?", 3)) {
+    case 1 :
+        ~chatplayer("<p,quiz>This is about the bank robbery, right?");
+        ~chatnpc_specific("Guard", wom_bankguard, "<p,neutral>Yes, that's right. We're keeping the suspect under tight observation for the moment.");
+        ~chatplayer("<p,quiz>Can't you just... I dunno... arrest him?");
+        ~chatnpc_specific("Guard", wom_bankguard, "<p,neutral>I'm not meant to discuss the case. You know what confidentiality rules are like.");
+        ~chatplayer("<p,neutral>Fair enough.");
+        @wom_tree_options;
+    case 2 :
+        ~chatplayer("<p,neutral>You're not being very subtle up there.");
+        ~chatnpc_specific("Guard", wom_bankguard, "<p,angry>I'd be doing a lot better if nits like you didn't come crowding around me all day!");
+        ~chatplayer("<p,laugh>But your legs are hanging down!");
+        ~chatnpc_specific("Guard", wom_bankguard, "<p,angry>Go away!");
+        ~chatplayer("<p,neutral>Please yourself!");
+    case 3 :
+        ~chatplayer("<p,quiz>Can I do anything to help?");
+        ~chatnpc_specific("Guard", wom_bankguard, "<p,happy>That's very kind of you. I'd rather like a nice bowl of stew, if you could fetch me one. I don't get many meal breaks.");
+        ~chatplayer("<p,quiz>You want a bowl of stew?");
+        ~chatnpc_specific("Guard", wom_bankguard, "<p,neutral>If you wouldn't mind...");
+        ~chatplayer("<p,neutral>I'll think about it!");
+}
+
+[oplocu,wom_tree]
+if (getqueue(wom_tree_drop_bowl) > 0) {
+    ~chatplayer("<p,neutral>I think I should leave him in peace to finish his stew!");
+    return;
+}
+switch_obj (last_useitem) {
+    case stew :
+        ~chatplayer("<p,happy>Here's some stew.");
+        @wom_tree_give_stew;
+    case bronze_axe, iron_axe, steel_axe, black_axe, mithril_axe, adamant_axe, rune_axe :
+        p_oploc(1);
+    case default :
+        ~chatnpc_specific("Guard", wom_bankguard, "<p,angry>Why the demoninikin are you waving THAT at me?");
+        ~chatplayer("<p,sad>Sorry, I thought you'd like it.");
+        ~chatnpc_specific("Guard", wom_bankguard, "<p,angry>Erm... No thanks! Now, if you don't mind, I'm trying to observe this suspect!");
+        ~chatplayer("<p,sad>Sorry!");
+}
+
+[label,wom_tree_give_stew]
+if (inv_total(inv, stew) < 1) {
+    return;
+}
+~chatnpc_specific("Guard", wom_bankguard, "<p,happy>Gosh, that's very kind of you! Here, have a few coins for your trouble...");
+inv_del(inv, stew, 1);
+inv_add(inv, coins, 30);
+mes("The guard drops the empty bowl out of the tree!");
+queue*(wom_tree_drop_bowl, 16)(coord);
+
+[queue,wom_tree_drop_bowl](coord $coord)
+obj_add($coord, bowl_empty, 1, ^lootdrop_duration);

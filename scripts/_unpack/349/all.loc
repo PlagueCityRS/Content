@@ -4638,19 +4638,6 @@ model=loc_5353
 length=2
 width=2
 
-[log_withaxe]
-name=Logs
-desc=Someone's been chopping logs.
-model=loc_5581
-recol1s=15855
-recol1d=8354
-op1=Take-axe
-
-[log_withoutaxe]
-name=Logs
-desc=Someone's been chopping logs.
-model=loc_5582
-
 [wheat_tall]
 name=Wheat
 desc=Baby bread.

@@ -1,3 +1,5 @@
+// https://www.youtube.com/watch?v=VMoOoolcMlw -- Jun 3, 2007
+// https://www.youtube.com/watch?v=9kuHkH-yZCg -- Mar 20, 2010
 [oploc1,wise_old_man_telescope]
 p_arrivedelay;
 facesquare(movecoord(coord, 0, 0, -1));

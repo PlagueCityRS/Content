@@ -14,6 +14,7 @@ stock5=needle,3,100
 stock6=thread,100,5
 stock7=holy_symbol_mould,3,100
 stock8=sickle_mould,6,15
+stock9=tiara_mould,10,10
 
 [generalshop6]
 // https://classic.runescape.wiki/w/Rimmington_General_Store
@@ -46,3 +47,19 @@ stock4=amulet_mould,2,100
 stock5=needle,3,100
 stock6=thread,100,5
 stock7=holy_symbol_mould,3,100
+stock8=tiara_mould,10,10
+
+[salesman_ranging]
+size=9
+stock1=steel_arrow,100
+stock2=mithril_arrow,30
+stock3=adamant_arrow,0
+stock4=oak_shortbow,10
+stock5=oak_longbow,10
+stock6=willow_shortbow,10
+stock7=willow_longbow,10
+stock8=maple_shortbow,10
+stock9=maple_longbow,10
+scope=shared
+restock=yes
+stackall=yes

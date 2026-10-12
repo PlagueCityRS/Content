@@ -56594,28 +56594,6 @@ recol4s=11456
 recol4d=3266
 active=no
 
-[poor_stairs]
-name=Staircase
-desc=I can climb these stairs.
-model=loc_9470
-width=2
-length=3
-op1=Climb-up
-forceapproach=south
-sharelight=yes
-mapscene=7
-
-[poor_stairstop]
-name=Staircase
-desc=They go down.
-model=loc_9471
-width=2
-length=2
-op1=Climb-down
-forceapproach=north
-sharelight=yes
-mapscene=7
-
 [fai_trapdoor]
 name=Trapdoor
 desc=What could be down here?
@@ -57174,6 +57152,7 @@ desc=A case. With books.
 model=loc_9523
 op1=Search
 forceapproach=east
+category=bookcase
 
 [sarim_ship_chain]
 name=Chain
@@ -57264,6 +57243,7 @@ recol6d=11491
 blockrange=no
 ambient=35
 op1=Search
+category=empty_crate
 
 [sarim_crate2]
 name=Crate
@@ -57284,6 +57264,7 @@ recol6d=8320
 blockrange=no
 ambient=35
 op1=Search
+category=empty_crate
 
 [sarim_crate3]
 name=Crates
@@ -57303,6 +57284,7 @@ recol6s=9410
 recol6d=8320
 ambient=35
 op1=Search
+category=empty_crate
 
 [sarim_boxes]
 name=Boxes
@@ -57322,6 +57304,7 @@ recol6s=8354
 recol6d=11491
 ambient=35
 op1=Search
+category=empty_crate
 
 [serim_fishingcrane_noscript]
 name=Crane
@@ -58078,6 +58061,7 @@ model=loc_9611
 length=2
 op1=Search
 forceapproach=east
+category=bookcase
 
 [rimmington_makeovermage_bed]
 name=Bed
@@ -58831,21 +58815,6 @@ model=loc_9661
 recol1s=4194
 recol1d=12548
 mapscene=6
-
-[rimmington_mining_spade]
-name=Spade
-desc=Popular with farmers and treasure hunters.
-model=loc_9662
-recol1s=15855
-recol1d=16878
-recol2s=14798
-recol2d=15821
-recol3s=17969
-recol3d=18992
-blockwalk=no
-blockrange=no
-op1=Take
-active=yes
 
 [fallentree_light]
 name=Fallen tree
@@ -69306,18 +69275,7 @@ recol3s=16897
 recol3d=8203
 forceapproach=north
 
-[rimmington_mining_no_spade]
-model=loc_10626
-recol1s=15855
-recol1d=16878
-recol2s=14798
-recol2d=15821
-recol3s=17969
-recol3d=18992
-blockrange=no
-blockwalk=no
-blockrange=no
-active=no
+
 
 [treasure_trail_destination]
 model=floor_invisableicon

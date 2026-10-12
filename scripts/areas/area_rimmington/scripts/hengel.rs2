@@ -1,0 +1,37 @@
+[opnpc1,rimmington_hengel]
+~chatplayer("<p,neutral>Hello.");
+~chatnpc("<p,quiz>What are you doing here?");
+def_int $choice = ~p_choice3(
+    "I'm just wandering around.", 1,
+    "I was hoping you'd give me some free stuff.", 2,
+    "I've come to kill you.", 3
+);
+
+switch_int($choice) {
+    case 1 : @hengel_just_wandering_around;
+    case 2 : @hengel_free_stuff;
+    case 3 : @hengel_come_to_kill;
+
+}
+
+[label,hengel_just_wandering_around]
+~chatplayer("<p,neutral>I'm just wandering around.");
+~chatnpc("<p,neutral>You do realise you're wandering around in my house?");
+~chatplayer("<p,neutral>Yep.");
+~chatnpc("<p,angry>Well please get out!");
+~chatplayer("<p,neutral>Sheesh, keep your wig on!");
+
+[label,hengel_free_stuff]
+~chatplayer("<p,neutral>I was hoping you'd give me some free stuff.");
+~chatnpc("<p,angry>No, I jolly well wouldn't!|Get out of my house!");
+~chatplayer("<p,sad>Meanie!");
+
+[label,hengel_come_to_kill]
+~chatplayer("<p,neutral>I've come to kill you.");
+if_close;
+npc_setmode(playerescape);
+npc_say("Aaaarrgh!!");
+if(npc_find(1_46_50_23_12, rimmington_anja, 10, 0) = true) {
+    npc_setmode(playerescape);
+    npc_say("Eeeek!");
+}

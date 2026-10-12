@@ -153,21 +153,6 @@ stock0=oil_lantern_frame,1
 size=1
 stock0=bullseye_lantern_nolens,1
 
-[salesman_ranging]
-size=9
-stock0=steel_arrow,100
-stock1=mithril_arrow,30
-stock2=adamant_arrow,0
-stock3=oak_shortbow,10
-stock4=oak_longbow,10
-stock5=willow_shortbow,10
-stock6=willow_longbow,10
-stock7=maple_shortbow,10
-stock8=maple_longbow,10
-scope=shared
-restock=yes
-stackall=yes
-
 [mm_scimitar_shop2]
 size=5
 stock0=bronze_scimitar,10

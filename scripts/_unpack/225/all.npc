@@ -1210,6 +1210,7 @@ vislevel=1
 model1=npc_2682
 recol1s=14724
 recol1d=6342
+category=rats
 wanderrange=15
 hitpoints=2
 respawnrate=4

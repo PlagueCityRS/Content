@@ -1,0 +1,82 @@
+[opnpc1,rimmington_anja]
+~chatplayer("<p,neutral>Hello.");
+~chatnpc("<p,quiz>Hello, sir. What are you doing in my house?");
+def_int $choice = ~p_choice3(
+    "I'm just wandering around.", 1,
+    "I was hoping you'd give me some free stuff.", 2,
+    "I've come to kill you.", 3
+);
+
+switch_int($choice) {
+    case 1 : @anja_just_wandering_around;
+    case 2 : @anja_free_stuff;
+    case 3 : @anja_come_to_kill;
+
+}
+
+[label,anja_just_wandering_around]
+~chatplayer("<p,neutral>I'm just wandering around.");
+~chatnpc("<p,confused>Oh dear, are you lost?");
+def_int $choice = ~p_choice2(
+    "Yes, I'm lost.", 1,
+    "No, I know where I am.", 2
+);
+
+switch_int($choice) {
+    case 1 : 
+        ~chatplayer("<p,neutral>Yes, I'm lost.");
+        ~chatnpc("<p,happy>Okay, just walk north-east when you leave this house,|and soon you'll reach the big city of Falador.");
+        ~chatplayer("<p,happy>Thanks a lot.");
+    case 2 :
+        ~chatplayer("<p,neutral>No, I know where I am.");
+        ~chatnpc("<p,confused>Oh? Well, would you mind wandering somewhere else? This is my house.");
+        ~chatplayer("<p,sad>Meh!");
+}
+
+[label,anja_free_stuff]
+~chatplayer("<p,neutral>I was hoping you'd give me some free stuff.");
+
+~anja_random_phrase;
+~anja_player_random_phrase;
+
+~anja_random_phrase;
+~anja_player_random_phrase;
+
+~anja_random_phrase;
+~anja_player_random_phrase;
+
+~chatnpc("<p,confused>Oh, alright. Here you go.");
+~objbox(coins_250, "Anja gives you some money.", 250, 0, divide(^objbox_height, 2));
+
+def_int $rand = random(2);
+inv_add(inv, coins, calc($rand + 1));
+
+[proc,anja_random_phrase]()
+def_int $rand = random(4);
+
+switch_int($rand) {
+    case 0 : ~chatnpc("<p,confused>I don't have much on me...");
+    case 1 : ~chatnpc("<p,confused>Er...");
+    case 2 : ~chatnpc("<p,confused>Do you REALLY need it?");
+    case 3 : ~chatnpc("<p,confused>I don't know...");
+}
+
+[proc,anja_player_random_phrase]
+def_int $rand = random(4);
+
+switch_int($rand) {
+    case 0 : ~chatplayer("<p,neutral>Pwetty pleathe wiv thugar on top!");
+    case 1 : ~chatplayer("<p,neutral>Pleeease!");
+    case 2 : ~chatplayer("<p,neutral>@dre@(beg beg beg beg beg beg)");
+    case 3 : ~chatplayer("<p,neutral>I promise I'll stop bothering you!");
+}
+
+[label,anja_come_to_kill]
+~chatplayer("<p,neutral>I've come to kill you.");
+if_close;
+npc_setmode(playerescape);
+npc_say("Eeeek!");
+if(npc_find(1_46_50_23_12, rimmington_hengel, 10, 0) = true) {
+    npc_setmode(playerescape);
+    npc_say("Aaaarrgh!!");
+}

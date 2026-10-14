@@ -3,7 +3,7 @@
 [oploc1,wise_old_man_telescope]
 p_arrivedelay;
 
-if (testbit(%wise_old_man_misc, ^has_spoken_to_wom) = ^true) {
+if (~has_spoken_to_wise_old_man = false) {
     ~chatnpc_specific("Wise Old Man", wise_old_man, "<p,angry>It'd be politer to come and talk to me before you start messing around with my possessions!");
     return;
 }
@@ -76,3 +76,10 @@ if(npc_findexact(0_48_50_16_55, wise_old_man) = true) {
         ~chatplayer("<p,neutral>Hmmm...");
     }
 }
+
+[proc,has_spoken_to_wise_old_man]()(boolean)
+if (testbit(%wise_old_man_misc, ^has_spoken_to_wom) = ^true) {
+    return (true);
+}
+return (false);
+

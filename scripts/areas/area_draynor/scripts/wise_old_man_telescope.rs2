@@ -2,14 +2,20 @@
 // https://www.youtube.com/watch?v=9kuHkH-yZCg -- Mar 20, 2010
 [oploc1,wise_old_man_telescope]
 p_arrivedelay;
+
+if (testbit(%wise_old_man_misc, ^has_spoken_to_wom) = ^true) {
+    ~chatnpc_specific("Wise Old Man", wise_old_man, "<p,angry>It'd be politer to come and talk to me before you start messing around with my possessions!");
+    return;
+}
+
 facesquare(movecoord(coord, 0, 0, -1));
 anim(human_use_wom_telecope, 0);
-// ~mesbox("You look through the telescope...");
 
 if_openchat(message_np1);
 if_settext(message_np1:com_0, "You look through the telescope...");
 
 // Tele to wizzy tower, block out minimap
+~fade_out();
 minimap_toggle(2);
 if_settab(null, 0);
 if_settab(null, 1);
@@ -20,8 +26,6 @@ if_settab(null, 5);
 if_settab(null, 6);
 if_settab(null, 11);
 if_settab(null, 12);
-
-~fade_out();
 p_delay(2);
 p_teleport(0_48_49_36_38);
 ~fade_in();
@@ -38,7 +42,10 @@ p_delay(4);
 cam_moveto(0_48_49_37_44, 1100, 2, 1);
 cam_lookat(0_48_49_37_31, 400, 1, 1);
 
-p_delay(18);
+p_delay(17);
+if_openoverlay(fade_to_black);
+if_setobject(fade_to_black:fade, fade_to_black_inv, 1000);
+p_delay(0);
 
 // Teleport back into house and reset everything
 p_teleport(0_48_50_16_52);
@@ -52,9 +59,20 @@ anim(null, 0);
 // Find and walk to WOM
 if(npc_findexact(0_48_50_16_55, wise_old_man) = true) {
     p_walk(0_48_50_16_54);
-    ~chatplayer("<p,quiz>I see you've got your telescope pointing at the Wizard's Tower.");
-    ~chatnpc("<p,quiz>Oh, do I? Well, why does that interest you?");
-    ~chatplayer("<p,shifty>Well, you robbed a bank, and I bet you're now planning something to do with that Tower!");
-    ~chatnpc("<p,neutral>No, no, I'm not planning anything like that again.");
-    ~chatplayer("<p,neutral>Well I'll be watching you...");
+    ~chatplayer("<p,quiz>I see you've got your telescope pointing|at the Wizard's Tower.");
+    ~chatnpc("<p,shifty>Oh, do I? Well, why does that interest you?");
+
+
+    // These messages change if you've watched the bank robbery
+    if (testbit(%wise_old_man_misc, ^has_seen_draynor_robbery) = ^true) {
+        ~chatplayer("<p,shifty>Well, you robbed a bank, and I bet you're now planning something to do with that Tower!");
+        ~chatnpc("<p,neutral>No, no, I'm not planning anything like that again.");
+        ~chatplayer("<p,neutral>Well I'll be watching you...");
+    } else {
+        ~chatplayer("<p,happy>It just seems a bit odd.");
+        ~chatnpc("<p,laugh>Odd? There's nothing odd about a fascination with the magical arts. Besides, the architecture of that Tower is truly remarkable, for one who studies such things.");
+        ~chatplayer("<p,shifty>So you're not planning to attack the Tower?");
+        ~chatnpc("<p,shifty>No, I wouldn't dream of doing anything of the sort!");
+        ~chatplayer("<p,neutral>Hmmm...");
+    }
 }

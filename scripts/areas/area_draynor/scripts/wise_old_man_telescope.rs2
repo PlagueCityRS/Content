@@ -27,6 +27,8 @@ if_settab(null, 6);
 if_settab(null, 11);
 if_settab(null, 12);
 p_delay(2);
+p_transmogrify(desert_treasure_invisible_npc);
+buildappearance(worn);
 p_teleport(0_48_49_36_38);
 ~fade_in();
 
@@ -49,6 +51,8 @@ p_delay(0);
 
 // Teleport back into house and reset everything
 p_teleport(0_48_50_16_52);
+p_transmogrify(null);
+buildappearance(worn);
 ~initalltabs;
 minimap_toggle(0);
 cam_reset;
@@ -56,6 +60,7 @@ if_close;
 if_openoverlay(null);
 anim(null, 0);
 
+p_delay(0);
 // Find and walk to WOM
 if(npc_findexact(0_48_50_16_55, wise_old_man) = true) {
     p_walk(0_48_50_16_54);
@@ -83,3 +88,8 @@ if (testbit(%wise_old_man_misc, ^has_spoken_to_wom) = ^true) {
 }
 return (false);
 
+[oploc1,narrowstairs_wooden_bottom]
+p_teleport(1_48_50_17_52);
+
+[oploc1,narrowstairs_wooden_top]
+p_teleport(0_48_50_17_51);

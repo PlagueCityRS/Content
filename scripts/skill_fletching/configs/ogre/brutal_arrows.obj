@@ -1,0 +1,709 @@
+[zogre_brutal_bronze]
+name=Bronze brutal
+recol1s=14595
+recol1d=11556
+recol2s=15360
+recol2d=32767
+recol3s=15855
+recol3d=8354
+model=obj_4773
+desc=Blunt bronze arrow...ouch
+2dyof=-9
+2dzoom=1700
+2dyan=116
+2dxan=324
+members=yes
+stackable=yes
+count1=zogre_brutal_bronze2,2
+count2=zogre_brutal_bronze3,3
+count3=zogre_brutal_bronze4,4
+count4=zogre_brutal_bronze5,5
+iop2=Wield
+cost=5
+wearpos=quiver
+weight=16g
+category=ogre_brutal
+param=rangebonus,11
+param=proj_launch,ogre_arrow_launch
+param=proj_travel,ogre_arrow_travel
+
+[zogre_brutal_bronze2]
+name=Bronze brutal
+recol1s=14595
+recol1d=11556
+recol2s=15360
+recol2d=32767
+recol3s=15855
+recol3d=8354
+model=obj_4774
+desc=Blunt bronze arrows...ouch
+2dyof=-9
+2dzoom=1700
+2dyan=116
+2dxan=324
+members=yes
+stackable=yes
+
+[zogre_brutal_bronze3]
+name=Bronze brutal
+recol1s=14595
+recol1d=11556
+recol2s=15360
+recol2d=32767
+recol3s=15855
+recol3d=8354
+model=obj_4775
+desc=Blunt bronze arrows...ouch
+2dyof=-9
+2dzoom=1700
+2dyan=116
+2dxan=324
+members=yes
+stackable=yes
+
+[zogre_brutal_bronze4]
+name=Bronze brutal
+recol1s=14595
+recol1d=11556
+recol2s=15360
+recol2d=32767
+recol3s=15855
+recol3d=8354
+model=obj_4776
+desc=Blunt bronze arrows...ouch
+2dyof=-9
+2dzoom=1700
+2dyan=116
+2dxan=324
+members=yes
+stackable=yes
+
+[zogre_brutal_bronze5]
+name=Bronze brutal
+recol1s=14595
+recol1d=11556
+recol2s=15360
+recol2d=32767
+recol3s=15855
+recol3d=8354
+model=obj_4777
+desc=Blunt bronze arrows...ouch
+2dyof=-9
+2dzoom=1700
+2dyan=116
+2dxan=324
+members=yes
+stackable=yes
+
+[zogre_brutal_iron]
+name=Iron brutal
+recol1s=14595
+recol1d=11556
+recol2s=15360
+recol2d=32767
+recol3s=15855
+recol3d=8456
+model=obj_4773
+desc=Blunt iron arrow...ouch
+2dyof=-9
+2dzoom=1700
+2dyan=116
+2dxan=324
+members=yes
+stackable=yes
+count1=zogre_brutal_iron2,2
+count2=zogre_brutal_iron3,3
+count3=zogre_brutal_iron4,4
+count4=zogre_brutal_iron5,5
+iop2=Wield
+cost=10
+wearpos=quiver
+weight=16g
+category=ogre_brutal
+param=rangebonus,13
+param=proj_launch,ogre_arrow_launch
+param=proj_travel,ogre_arrow_travel
+
+[zogre_brutal_iron2]
+name=Iron brutal
+recol1s=14595
+recol1d=11556
+recol2s=15360
+recol2d=32767
+recol3s=15855
+recol3d=8456
+model=obj_4774
+desc=Blunt iron arrows...ouch
+2dyof=-9
+2dzoom=1700
+2dyan=116
+2dxan=324
+members=yes
+stackable=yes
+stackable=yes
+
+[zogre_brutal_iron3]
+name=Iron brutal
+recol1s=14595
+recol1d=11556
+recol2s=15360
+recol2d=32767
+recol3s=15855
+recol3d=8456
+model=obj_4775
+desc=Blunt iron arrows...ouch
+2dyof=-9
+2dzoom=1700
+2dyan=116
+2dxan=324
+members=yes
+stackable=yes
+
+[zogre_brutal_iron4]
+name=Iron brutal
+recol1s=14595
+recol1d=11556
+recol2s=15360
+recol2d=32767
+recol3s=15855
+recol3d=8456
+model=obj_4776
+desc=Blunt iron arrows...ouch
+2dyof=-9
+2dzoom=1700
+2dyan=116
+2dxan=324
+members=yes
+stackable=yes
+
+[zogre_brutal_iron5]
+name=Iron brutal
+recol1s=14595
+recol1d=11556
+recol2s=15360
+recol2d=32767
+recol3s=15855
+recol3d=8456
+model=obj_4777
+desc=Blunt iron arrows...ouch
+2dyof=-9
+2dzoom=1700
+2dyan=116
+2dxan=324
+members=yes
+stackable=yes
+
+[zogre_brutal_steel]
+name=Steel brutal
+recol1s=14595
+recol1d=11556
+recol2s=15360
+recol2d=32767
+model=obj_4773
+desc=Blunt steel arrow...ouch
+2dyof=-9
+2dzoom=1700
+2dyan=116
+2dxan=324
+members=yes
+stackable=yes
+count1=zogre_brutal_steel2,2
+count2=zogre_brutal_steel3,3
+count3=zogre_brutal_steel4,4
+count4=zogre_brutal_steel5,5
+iop2=Wield
+cost=20
+wearpos=quiver
+weight=16g
+category=ogre_brutal
+param=rangebonus,19
+param=proj_launch,ogre_arrow_launch
+param=proj_travel,ogre_arrow_travel
+
+[zogre_brutal_steel2]
+name=Steel brutal
+recol1s=14595
+recol1d=11556
+recol2s=15360
+recol2d=32767
+model=obj_4774
+desc=Blunt steel arrows...ouch
+2dyof=-9
+2dzoom=1700
+2dyan=116
+2dxan=324
+members=yes
+stackable=yes
+
+[zogre_brutal_steel3]
+name=Steel brutal
+recol1s=14595
+recol1d=11556
+recol2s=15360
+recol2d=32767
+model=obj_4775
+desc=Blunt steel arrows...ouch
+2dyof=-9
+2dzoom=1700
+2dyan=116
+2dxan=324
+members=yes
+stackable=yes
+
+[zogre_brutal_steel4]
+name=Steel brutal
+recol1s=14595
+recol1d=11556
+recol2s=15360
+recol2d=32767
+model=obj_4776
+desc=Blunt steel arrows...ouch
+2dyof=-9
+2dzoom=1700
+2dyan=116
+2dxan=324
+members=yes
+stackable=yes
+
+[zogre_brutal_steel5]
+name=Steel brutal
+recol1s=14595
+recol1d=11556
+recol2s=15360
+recol2d=32767
+model=obj_4777
+desc=Blunt steel arrows...ouch
+2dyof=-9
+2dzoom=1700
+2dyan=116
+2dxan=324
+members=yes
+stackable=yes
+
+[zogre_brutal_black]
+name=Black brutal
+recol1s=14595
+recol1d=11556
+recol2s=15360
+recol2d=32767
+recol3s=15855
+recol3d=2147
+model=obj_4773
+desc=Blunt black arrow...ouch
+2dyof=-9
+2dzoom=1700
+2dyan=116
+2dxan=324
+members=yes
+stackable=yes
+count1=zogre_brutal_black2,2
+count2=zogre_brutal_black3,3
+count3=zogre_brutal_black4,4
+count4=zogre_brutal_black5,5
+iop2=Wield
+cost=35
+wearpos=quiver
+weight=16g
+category=ogre_brutal
+param=rangebonus,22
+param=proj_launch,ogre_arrow_launch
+param=proj_travel,ogre_arrow_travel
+
+[zogre_brutal_black2]
+name=Black brutal
+recol1s=14595
+recol1d=11556
+recol2s=15360
+recol2d=32767
+recol3s=15855
+recol3d=2147
+model=obj_4774
+desc=Blunt black arrows...ouch
+2dyof=-9
+2dzoom=1700
+2dyan=116
+2dxan=324
+members=yes
+stackable=yes
+
+[zogre_brutal_black3]
+name=Black brutal
+recol1s=14595
+recol1d=11556
+recol2s=15360
+recol2d=32767
+recol3s=15855
+recol3d=2147
+model=obj_4775
+desc=Blunt black arrows...ouch
+2dyof=-9
+2dzoom=1700
+2dyan=116
+2dxan=324
+members=yes
+stackable=yes
+
+[zogre_brutal_black4]
+name=Black brutal
+recol1s=14595
+recol1d=11556
+recol2s=15360
+recol2d=32767
+recol3s=15855
+recol3d=2147
+model=obj_4776
+desc=Blunt black arrows...ouch
+2dyof=-9
+2dzoom=1700
+2dyan=116
+2dxan=324
+members=yes
+stackable=yes
+
+[zogre_brutal_black5]
+name=Black brutal
+recol1s=14595
+recol1d=11556
+recol2s=15360
+recol2d=32767
+recol3s=15855
+recol3d=2147
+model=obj_4777
+desc=Blunt black arrows...ouch
+2dyof=-9
+2dzoom=1700
+2dyan=116
+2dxan=324
+members=yes
+stackable=yes
+
+[zogre_brutal_mithril]
+name=Mithril brutal
+recol1s=14595
+recol1d=11556
+recol2s=15360
+recol2d=32767
+recol3s=15855
+recol3d=6346
+model=obj_4773
+desc=Blunt mithril arrow...ouch
+2dyof=-9
+2dzoom=1700
+2dyan=116
+2dxan=324
+members=yes
+stackable=yes
+count1=zogre_brutal_mithril2,2
+count2=zogre_brutal_mithril3,3
+count3=zogre_brutal_mithril4,4
+count4=zogre_brutal_mithril5,5
+iop2=Wield
+cost=50
+wearpos=quiver
+weight=16g
+category=ogre_brutal
+param=rangebonus,34
+param=proj_launch,ogre_arrow_launch
+param=proj_travel,ogre_arrow_travel
+
+[zogre_brutal_mithril2]
+name=Mithril brutal
+recol1s=14595
+recol1d=11556
+recol2s=15360
+recol2d=32767
+recol3s=15855
+recol3d=6346
+model=obj_4774
+desc=Blunt mithril arrows...ouch
+2dyof=-9
+2dzoom=1700
+2dyan=116
+2dxan=324
+members=yes
+stackable=yes
+
+[zogre_brutal_mithril3]
+name=Mithril brutal
+recol1s=14595
+recol1d=11556
+recol2s=15360
+recol2d=32767
+recol3s=15855
+recol3d=6346
+model=obj_4775
+desc=Blunt mithril arrows...ouch
+2dyof=-9
+2dzoom=1700
+2dyan=116
+2dxan=324
+members=yes
+stackable=yes
+
+[zogre_brutal_mithril4]
+name=Mithril brutal
+recol1s=14595
+recol1d=11556
+recol2s=15360
+recol2d=32767
+recol3s=15855
+recol3d=6346
+model=obj_4776
+desc=Blunt mithril arrows...ouch
+2dyof=-9
+2dzoom=1700
+2dyan=116
+2dxan=324
+members=yes
+stackable=yes
+
+[zogre_brutal_mithril5]
+name=Mithril brutal
+recol1s=14595
+recol1d=11556
+recol2s=15360
+recol2d=32767
+recol3s=15855
+recol3d=6346
+model=obj_4777
+desc=Blunt mithril arrows...ouch
+2dyof=-9
+2dzoom=1700
+2dyan=116
+2dxan=324
+members=yes
+stackable=yes
+
+[zogre_brutal_adamant]
+name=Adamant brutal
+recol1s=14595
+recol1d=11556
+recol2s=15360
+recol2d=32767
+recol3s=15855
+recol3d=6438
+model=obj_4773
+desc=Blunt adamantite arrow...ouch
+2dyof=-9
+2dzoom=1700
+2dyan=116
+2dxan=324
+members=yes
+stackable=yes
+count1=zogre_brutal_adamant2,2
+count2=zogre_brutal_adamant3,3
+count3=zogre_brutal_adamant4,4
+count4=zogre_brutal_adamant5,5
+iop2=Wield
+cost=95
+wearpos=quiver
+weight=16g
+category=ogre_brutal
+param=rangebonus,45
+param=proj_launch,ogre_arrow_launch
+param=proj_travel,ogre_arrow_travel
+
+[zogre_brutal_adamant2]
+name=Adamantite arrows
+recol1s=14595
+recol1d=11556
+recol2s=15360
+recol2d=32767
+recol3s=15855
+recol3d=6438
+model=obj_4774
+desc=Blunt adamantite arrows...ouch
+2dyof=-9
+2dzoom=1700
+2dyan=116
+2dxan=324
+members=yes
+stackable=yes
+
+[zogre_brutal_adamant3]
+name=Adamantite arrows
+recol1s=14595
+recol1d=11556
+recol2s=15360
+recol2d=32767
+recol3s=15855
+recol3d=6438
+model=obj_4775
+desc=Blunt adamantite arrows...ouch
+2dyof=-9
+2dzoom=1700
+2dyan=116
+2dxan=324
+members=yes
+stackable=yes
+
+[zogre_brutal_adamant4]
+name=Adamantite arrows
+recol1s=14595
+recol1d=11556
+recol2s=15360
+recol2d=32767
+recol3s=15855
+recol3d=6438
+model=obj_4776
+desc=Blunt adamantite arrows...ouch
+2dyof=-9
+2dzoom=1700
+2dyan=116
+2dxan=324
+members=yes
+stackable=yes
+
+[zogre_brutal_adamant5]
+name=Adamantite arrows
+recol1s=14595
+recol1d=11556
+recol2s=15360
+recol2d=32767
+recol3s=15855
+recol3d=6438
+model=obj_4777
+desc=Blunt adamantite arrows...ouch
+2dyof=-9
+2dzoom=1700
+2dyan=116
+2dxan=324
+members=yes
+stackable=yes
+
+[zogre_brutal_rune]
+name=Rune brutal
+recol1s=14595
+recol1d=11556
+recol2s=15360
+recol2d=32767
+recol3s=15855
+recol3d=6476
+model=obj_4773
+desc=Blunt rune arrow...ouch
+2dyof=-9
+2dzoom=1700
+2dyan=116
+2dxan=324
+members=yes
+stackable=yes
+count1=zogre_brutal_rune2,2
+count2=zogre_brutal_rune3,3
+count3=zogre_brutal_rune4,4
+count4=zogre_brutal_rune5,5
+iop2=Wield
+cost=450
+wearpos=quiver
+weight=16g
+category=ogre_brutal
+param=rangebonus,60
+param=proj_launch,ogre_arrow_launch
+param=proj_travel,ogre_arrow_travel
+
+[zogre_brutal_rune2]
+name=Rune brutal
+recol1s=14595
+recol1d=11556
+recol2s=15360
+recol2d=32767
+recol3s=15855
+recol3d=6476
+model=obj_4774
+desc=Blunt rune arrows...ouch
+2dyof=-9
+2dzoom=1700
+2dyan=116
+2dxan=324
+members=yes
+stackable=yes
+
+[zogre_brutal_rune3]
+name=Rune brutal
+recol1s=14595
+recol1d=11556
+recol2s=15360
+recol2d=32767
+recol3s=15855
+recol3d=6476
+model=obj_4775
+desc=Blunt rune arrows...ouch
+2dyof=-9
+2dzoom=1700
+2dyan=116
+2dxan=324
+members=yes
+stackable=yes
+
+[zogre_brutal_rune4]
+name=Rune brutal
+recol1s=14595
+recol1d=11556
+recol2s=15360
+recol2d=32767
+recol3s=15855
+recol3d=6476
+model=obj_4776
+desc=Blunt rune arrows...ouch
+2dyof=-9
+2dzoom=1700
+2dyan=116
+2dxan=324
+members=yes
+stackable=yes
+
+[zogre_brutal_rune5]
+name=Rune brutal
+recol1s=14595
+recol1d=11556
+recol2s=15360
+recol2d=32767
+recol3s=15855
+recol3d=6476
+model=obj_4777
+desc=Blunt rune arrows...ouch
+2dyof=-9
+2dzoom=1700
+2dyan=116
+2dxan=324
+members=yes
+stackable=yes
+
+[unstrung_zogre_bow]
+name=Unstrung comp bow
+recol1s=21100
+recol1d=15855
+model=obj_4825
+cost=90
+desc=An unstrung composite ogre bow.
+2dzoom=2070
+2dyan=48
+2dxan=232
+members=yes
+weight=4lb
+category=unstrung_bow
+
+[zogre_bow]
+name=Comp ogre bow
+desc=A composite ogre bow.
+cost=180
+model=obj_4827
+2dzoom=2070
+2dyan=48
+2dxan=232
+members=yes
+manwear=obj_4827_manwear,0
+womanwear=obj_4827_manwear,6
+iop2=Wield
+iop3=Check kills
+wearpos=righthand
+wearpos2=lefthand
+weight=4lb
+category=weapon_bow
+param=rangeattack,38
+param=levelrequire,30
+param=attackrate,5
+param=attackrange,7
+param=rangeattack_anim,human_bow
+param=defend_anim,human_unarmedblock
+param=rangeattack_sound,arrowlaunch2
+param=damagetype,^ranged_style

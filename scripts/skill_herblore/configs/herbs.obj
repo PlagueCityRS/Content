@@ -258,6 +258,7 @@ param=identified_herb_level,3
 param=identified_herb_exp,25
 param=identified_herb_message,You identify the herb. It is Snake Weed.
 param=brew_potion_struct,snakeweed_mixture
+param=brew_potion_struct_secondary,relicyms_balm
 // https://youtu.be/maeY2TnTNVY?t=530
 tradeable=no
 
@@ -335,6 +336,7 @@ weight=7g
 param=identified_herb_level,3
 param=identified_herb_exp,25
 param=identified_herb_message,You identify the herb. It is Rogues Purse.
+param=brew_potion_struct,unf_rogues_purse_potion
 // https://youtu.be/maeY2TnTNVY?t=1493
 tradeable=no
 

@@ -85,9 +85,13 @@ if ($ammo = null) {
     return(null);
 }
 def_category $ammo_cat = oc_category($ammo);
-if (($rhand = ogre_bow & $ammo_cat ! ogre_arrows) | 
-    ($rhand ! ogre_bow & $weapon_cat = weapon_bow & $ammo_cat ! arrows)) {
+if ((($rhand = ogre_bow | $rhand = zogre_bow) & $ammo_cat ! ogre_arrows & $ammo_cat ! ogre_brutal) | 
+    ($rhand ! ogre_bow & $rhand ! zogre_bow & $weapon_cat = weapon_bow & $ammo_cat ! arrows)) {
     mes("You can't use that ammo with your bow."); // todo confirm this for 2004.
+    return(null);
+}
+if ($rhand = ogre_bow & ($ammo = zogre_brutal_adamant | $ammo = zogre_brutal_rune)) {
+    mes("Your bow isn't powerful enough for those arrows.");
     return(null);
 }
 if ($weapon_cat = weapon_crossbow & $ammo_cat ! bolts) {
@@ -102,7 +106,7 @@ if (oc_param($ammo, levelrequire) > oc_param($rhand, levelrequire)) { //todo con
 return($ammo);
 
 [proc,player_ranged_use_weapon](obj $rhand, obj $ammo)(int)
-if ($ammo = ogre_arrow) spotanim_pl(oc_param($ammo, proj_launch), 50, 0);
+if ($ammo = ogre_arrow | oc_category($ammo) = ogre_brutal) spotanim_pl(oc_param($ammo, proj_launch), 50, 0);
 else spotanim_pl(oc_param($ammo, proj_launch), 96, 0);
 def_int $delay = 30;
 switch_category(oc_category($rhand)) {

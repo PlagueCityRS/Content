@@ -314,3 +314,18 @@ param=brew_potion_exp,775
 param=brew_potion_message,You add the ground Troll Thistle to the potion.
 param=brew_potion_mixture,eadgar_ground_troll_thistle_potion
 
+
+[unf_rogues_purse_potion]
+param=brew_potion_ingredient,rogues_purse
+param=brew_potion_solvent,vial_water
+param=brew_potion_level,8
+param=brew_potion_message,You put the Rogue's Purse into the vial of water.
+param=brew_potion_mixture,rogues_purse_sol
+
+[relicyms_balm]
+param=brew_potion_ingredient,snake_weed
+param=brew_potion_solvent,rogues_purse_sol
+param=brew_potion_level,8
+param=brew_potion_exp,400
+param=brew_potion_message,You mix the snake weed into your potion.
+param=brew_potion_mixture,relicyms_balm3

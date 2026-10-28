@@ -1,0 +1,7 @@
+[label,consume_effect_relicyms_balm]
+sound_synth(liquid, 1, 0);
+anim(human_eat, 0);
+def_obj $consumable = last_item;
+~cure_disease(17);
+inv_setslot(inv, last_slot, oc_param($consumable, next_obj_stage), 1);
+~consume_effect_messages($consumable, stat(hitpoints), false);

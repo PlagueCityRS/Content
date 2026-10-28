@@ -27,3 +27,15 @@ weight=10g
 respawnrate=30
 param=grindable_ingredient_refined,dragon_scale_dust
 param=grindable_ingredient_message,You grind down the blue dragon scale.
+
+[garlic]
+name=Garlic
+desc=A clove of garlic.
+cost=3
+model=inv_garlic
+2dzoom=670
+2dyan=116
+2dxan=116
+weight=1oz
+param=grindable_ingredient_refined,fd_crushed_garlic
+param=grindable_ingredient_message,You grind the garlic into a powder.

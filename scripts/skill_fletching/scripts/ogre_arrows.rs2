@@ -13,6 +13,13 @@ switch_obj(last_useitem) {
 [opheldu,ogre_headless_arrow]
 switch_obj(last_useitem) {
     case wolfbone_arrowheads : @make_ogre_arrows;
+    case nails_bronze : @make_brutal_arrows(nails_bronze, zogre_brutal_bronze, "bronze", 7, 14);
+    case nails_iron : @make_brutal_arrows(nails_iron, zogre_brutal_iron, "iron", 18, 26);
+    case nails : @make_brutal_arrows(nails, zogre_brutal_steel, "steel", 33, 51);
+    case nails_black : @make_brutal_arrows(nails_black, zogre_brutal_black, "black", 38, 64);
+    case nails_mithril : @make_brutal_arrows(nails_mithril, zogre_brutal_mithril, "mithril", 49, 75);
+    case nails_adamant : @make_brutal_arrows(nails_adamant, zogre_brutal_adamant, "adamant", 62, 101);
+    case nails_rune : @make_brutal_arrows(nails_rune, zogre_brutal_rune, "rune", 77, 125);
     case default : ~displaymessage(^dm_default);
 }
 
@@ -142,3 +149,52 @@ if (%chompybird ! ^chompybird_complete) {
 }
 
 stat_advance(fletching, multiply($arrow_count, 10));
+
+[label,make_brutal_arrows](namedobj $nails, namedobj $product, string $metal, int $level, int $experience)
+if (map_members = ^false) {
+    mes(^mes_members_fletching);
+    return;
+}
+if (%thzfe_makebrutalarrow = ^false) {
+    mes("You're not sure what you would make with these.");
+    return;
+}
+if (stat(fletching) < $level) {
+    ~mesbox("You need a Fletching level of <tostring($level)> to make <$metal> brutal arrows.");
+    return;
+}
+if (inv_total(inv, hammer) = 0) {
+    mes("You need a hammer to force the nails into the arrows.");
+    return;
+}
+def_int $arrow_count = min(min(inv_total(inv, ogre_headless_arrow), inv_total(inv, $nails)), 6);
+if ($arrow_count < 1) {
+    return;
+}
+inv_del(inv, ogre_headless_arrow, $arrow_count);
+inv_del(inv, $nails, $arrow_count);
+inv_add(inv, $product, $arrow_count);
+if ($arrow_count > 1) {
+    mes("You attach nails to <tostring($arrow_count)> of your flighted ogre arrows.");
+} else {
+    mes("You attach a nail to a flighted ogre arrow.");
+}
+stat_advance(fletching, multiply($arrow_count, $experience));
+
+[label,make_comp_ogre_bow]
+if (map_members = ^false) {
+    mes(^mes_members_fletching);
+    return;
+}
+if (stat(fletching) < 30) {
+    ~mesbox("You need a Fletching level of 30 to make a composite ogre bow.");
+    return;
+}
+if (inv_total(inv, wolf_bones) = 0 | inv_total(inv, achey_tree_logs) = 0) {
+    return;
+}
+inv_del(inv, achey_tree_logs, 1);
+inv_del(inv, wolf_bones, 1);
+inv_add(inv, unstrung_zogre_bow, 1);
+mes("You carefully cut the wood and bones into an unstrung composite ogre bow.");
+stat_advance(fletching, 450);

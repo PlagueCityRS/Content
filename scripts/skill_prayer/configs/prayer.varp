@@ -61,14 +61,11 @@ protect=no
 transmit=yes
 protect=no
 
-[prayer15]
-transmit=yes
+[prayer_drain_counter]
 protect=no
 
-[prayer16]
-transmit=yes
+[prayer_drain_effect]
 protect=no
 
-[prayer17]
-transmit=yes
+[prayer_drain_resistance]
 protect=no

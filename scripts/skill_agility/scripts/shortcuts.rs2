@@ -195,7 +195,10 @@ anim(human_monkeybars_off, 0);
 sound_synth(monkeybars_off, 1, 0);
 p_delay(0);
 
-[oploc1,fullstyle]
+[oploc1,fullstyle] @climb_stile;
+[oploc1,farming_style] @climb_stile;
+
+[label,climb_stile]
 def_coord $start_coord = loc_coord;
 def_int $mod = 1;
 def_int $dir = ^exact_north;
@@ -269,3 +272,349 @@ if(stat_random(agility, 50, 253) = false) {
 }
 stat_advance(agility, 30);
 mes("You manage to make the jump.");
+
+[proc,shortcut_members]()(boolean)
+if (map_members = ^false) {
+    mes(^mes_members_feature);
+    return(false);
+}
+return(true);
+
+[proc,shortcut_level](int $level)(boolean)
+if (stat(agility) < $level) {
+    ~mesbox("You need an Agility level of at least <tostring($level)> to negotiate this obstacle.");
+    return(false);
+}
+return(true);
+
+[proc,shortcut_dir](coord $from, coord $to)(int)
+if (coordx($to) > coordx($from)) {
+    return(^exact_east);
+}
+if (coordx($to) < coordx($from)) {
+    return(^exact_west);
+}
+if (coordz($to) < coordz($from)) {
+    return(^exact_south);
+}
+return(^exact_north);
+
+[proc,shortcut_wall_across](coord $loc, int $angle)(coord)
+switch_int ($angle) {
+    case ^loc_west : return(movecoord($loc, -1, 0, 0));
+    case ^loc_north : return(movecoord($loc, 0, 0, 1));
+    case ^loc_east : return(movecoord($loc, 1, 0, 0));
+    case default : return(movecoord($loc, 0, 0, -1));
+}
+
+[proc,shortcut_tunnel](coord $start, coord $enter, coord $exit, coord $dest)
+~forcewalk2($start);
+def_int $dir = ~shortcut_dir($start, $dest);
+~agility_exactmove(agilty_shortcut_enter_hole, 0, 1, coord, $enter, 0, 30, $dir, false);
+anim(agilty_shortcut_tunnel_walk, 0);
+p_teleport($exit);
+p_delay(1);
+~agility_exactmove(agilty_shortcut_exit_hole, 0, 1, coord, $dest, 0, 30, $dir, false);
+anim(null, 0);
+
+[proc,shortcut_squeeze](seq $seq, coord $start, coord $mid, coord $dest, int $xp)
+~forcewalk2($start);
+def_int $dir = ~shortcut_dir($start, $dest);
+sound_synth(squeeze_in, 1, 0);
+~agility_exactmove($seq, 0, 1, coord, $mid, 0, 60, $dir, false);
+~agility_exactmove($seq, 0, 1, coord, $dest, 0, 60, $dir, false);
+sound_synth(squeeze_out, 1, 0);
+anim(null, 0);
+stat_advance(agility, $xp);
+
+[proc,shortcut_jump](coord $start, coord $dest, int $xp)
+~forcewalk2($start);
+sound_synth(jump, 1, 0);
+~agility_exactmove(human_jump_hurdle, 0, 1, coord, $dest, 30, 60, ~shortcut_dir($start, $dest), false);
+stat_advance(agility, $xp);
+
+[proc,shortcut_log_balance](coord $start, coord $dest, int $xp)
+p_teleport($start);
+p_arrivedelay;
+mes("You walk carefully across the slippery log...");
+sound_synth(log_balance, 2, 0);
+~agility_force_move(0, human_walk_logbalance, $dest);
+~update_bas;
+stat_advance(agility, $xp);
+mes("...You make it safely to the other side.");
+
+[oploc1,alkharid_mine_sc_top]
+if (~shortcut_members = false | ~shortcut_level(38) = false) {
+    return;
+}
+~forcewalk2(0_51_51_42_51);
+~agility_exactmove(death_human_climbing_down, 0, 2, coord, 0_51_51_38_51, 0, 120, ^exact_east, false);
+anim(null, 0);
+
+[oploc1,alkharid_mine_sc_bottom]
+if (~shortcut_members = false | ~shortcut_level(38) = false) {
+    return;
+}
+~forcewalk2(0_51_51_38_51);
+~agility_exactmove(human_climbing_down, 0, 2, coord, 0_51_51_42_51, 0, 120, ^exact_east, false);
+anim(null, 0);
+
+[oploc1,falador_sc_castlewall_south] @shortcut_falador_tunnel;
+[oploc1,falador_sc_castlewall_north] @shortcut_falador_tunnel;
+
+[label,shortcut_falador_tunnel]
+if (~shortcut_members = false | ~shortcut_level(26) = false) {
+    return;
+}
+if (coordz(coord) < 3311) {
+    ~shortcut_tunnel(0_46_51_4_45, 0_46_51_4_46, 0_46_51_4_48, 0_46_51_4_49);
+    return;
+}
+~shortcut_tunnel(0_46_51_4_49, 0_46_51_4_48, 0_46_51_4_46, 0_46_51_4_45);
+
+[oploc1,varrock_sc_tunnel_west] @shortcut_varrock_tunnel;
+[oploc1,varrock_sc_tunnel_east] @shortcut_varrock_tunnel;
+
+[label,shortcut_varrock_tunnel]
+if (~shortcut_members = false | ~shortcut_level(21) = false) {
+    return;
+}
+if (coordx(coord) < 3190) {
+    ~shortcut_tunnel(0_49_54_52_37, 0_49_54_53_37, 0_49_54_56_37, 0_49_54_57_37);
+    return;
+}
+~shortcut_tunnel(0_49_54_57_37, 0_49_54_56_37, 0_49_54_53_37, 0_49_54_52_37);
+
+[oploc1,lumbridge_sc_fencejump]
+if (~shortcut_members = false | ~shortcut_level(13) = false) {
+    return;
+}
+if (coordz(coord) > coordz(loc_coord)) {
+    ~shortcut_jump(movecoord(loc_coord, 0, 0, 1), movecoord(loc_coord, 0, 0, -1), 0);
+    return;
+}
+~shortcut_jump(movecoord(loc_coord, 0, 0, -1), movecoord(loc_coord, 0, 0, 1), 0);
+
+[oploc1,lumbridge_sc_stepstone]
+if (~shortcut_members = false | ~shortcut_level(31) = false) {
+    return;
+}
+def_int $dx = 1;
+def_coord $start = 0_49_52_13_35;
+if (coordx(coord) > 3151) {
+    $dx = -1;
+    $start = 0_49_52_18_35;
+}
+~forcewalk2($start);
+def_int $dir = ~shortcut_dir($start, movecoord($start, $dx, 0, 0));
+def_int $hop = 0;
+while ($hop < 5) {
+    sound_synth(jump_no_land, 1, 0);
+    ~agility_exactmove(human_steppingstonejump, 20, 1, coord, movecoord(coord, $dx, 0, 0), 48, 60, $dir, false);
+    $hop = calc($hop + 1);
+}
+stat_advance(agility, 30);
+
+[oploc1,loc_9299]
+if (~shortcut_members = false) {
+    return;
+}
+def_coord $across = ~shortcut_wall_across(loc_coord, loc_angle);
+def_coord $start = loc_coord;
+def_coord $dest = $across;
+if (coord = $across) {
+    $start = $across;
+    $dest = loc_coord;
+}
+~forcewalk2($start);
+sound_synth(squeeze_in, 1, 0);
+~agility_exactmove(human_doublepipesqueeze, 0, 1, coord, $dest, 0, 60, ~shortcut_dir($start, $dest), false);
+anim(null, 0);
+
+[oploc1,loc_9295]
+if (~shortcut_members = false | ~shortcut_level(51) = false) {
+    return;
+}
+if (coordx(coord) < 3152) {
+    ~shortcut_squeeze(human_doublepipesqueeze, 0_49_154_13_50, 0_49_154_16_50, 0_49_154_19_50, 100);
+    return;
+}
+~shortcut_squeeze(human_doublepipesqueeze, 0_49_154_19_50, 0_49_154_16_50, 0_49_154_13_50, 100);
+
+[oploc1,loc_9325]
+if (~shortcut_members = false | ~shortcut_level(42) = false) {
+    return;
+}
+if (coordx(coord) < 3031) {
+    ~shortcut_squeeze(roguesden_contortion, 0_47_153_20_14, 0_47_153_24_14, 0_47_153_27_14, 0);
+    return;
+}
+~shortcut_squeeze(roguesden_contortion, 0_47_153_27_14, 0_47_153_23_14, 0_47_153_20_14, 0);
+
+[oploc1,yanille_castlewall_sc] @shortcut_yanille_tunnel;
+[oploc1,yanille_castlehole_sc] @shortcut_yanille_tunnel;
+
+[label,shortcut_yanille_tunnel]
+if (~shortcut_level(16) = false) {
+    return;
+}
+if (coordz(coord) < 3110) {
+    ~shortcut_tunnel(0_40_48_15_35, 0_40_48_15_36, 0_40_48_15_39, 0_40_48_15_40);
+    return;
+}
+~shortcut_tunnel(0_40_48_15_40, 0_40_48_15_39, 0_40_48_15_36, 0_40_48_15_35);
+
+[oploc1,ics_wall_crack]
+if (~shortcut_level(21) = false) {
+    return;
+}
+if (coordx(coord) < coordx(loc_coord)) {
+    ~shortcut_tunnel(0_51_43_56_44, 0_51_43_57_44, 0_51_43_59_44, 0_51_43_60_44);
+    return;
+}
+~shortcut_tunnel(0_51_43_60_44, 0_51_43_59_44, 0_51_43_57_44, 0_51_43_56_44);
+
+[oploc1,morytania_railing_sc_fence_1] @shortcut_morytania_railing;
+[oploc1,morytania_railing_sc_fence_2] @shortcut_morytania_railing;
+
+[label,shortcut_morytania_railing]
+if (%priestperil < ^priestperil_complete) {
+    ~mesbox("You need to have completed Priest in Peril in order to do this.");
+    return;
+}
+if (~shortcut_level(65) = false) {
+    return;
+}
+def_coord $across = ~shortcut_wall_across(loc_coord, loc_angle);
+def_coord $start = $across;
+def_coord $dest = loc_coord;
+if (coord = loc_coord) {
+    $start = loc_coord;
+    $dest = $across;
+}
+~forcewalk2($start);
+~agility_exactmove(roguesden_contortion, 0, 1, coord, $dest, 0, 60, ~shortcut_dir($start, $dest), false);
+anim(null, 0);
+
+[oploc1,morytania_climbingrocks_sc_top]
+~agility_exactmove(human_climbing_down, 0, 2, coord, 0_53_54_35_22, 0, 120, ^exact_west, false);
+anim(null, 0);
+
+[oploc1,morytania_climbingrocks_sc_bottom]
+~agility_exactmove(death_human_climbing_down, 0, 2, coord, 0_53_54_32_20, 0, 120, ^exact_west, false);
+anim(null, 0);
+
+[oploc1,loc_9297] @shortcut_arandar_rocks(true);
+[oploc1,loc_9296] @shortcut_arandar_rocks(false);
+
+[label,shortcut_arandar_rocks](boolean $up)
+def_int $level = 68;
+def_coord $dest = 0_36_50_34_53;
+if ($up = true) {
+    $dest = 0_36_50_28_52;
+}
+if (distance(coord, 0_36_51_41_33) < 8) {
+    $level = 59;
+    $dest = 0_36_51_40_30;
+    if ($up = true) {
+        $dest = 0_36_51_42_36;
+    }
+} else if (distance(coord, 0_36_51_34_19) < 8) {
+    $level = 85;
+    $dest = 0_36_51_34_22;
+    if ($up = true) {
+        $dest = 0_36_51_34_17;
+    }
+}
+if (~shortcut_level($level) = false) {
+    return;
+}
+if ($up = true) {
+    ~agility_exactmove(human_climbing_down, 0, 2, coord, $dest, 0, 120, ~shortcut_dir(coord, $dest), false);
+} else {
+    ~agility_exactmove(death_human_climbing_down, 0, 2, coord, $dest, 0, 120, ~shortcut_dir(coord, $dest), false);
+}
+anim(null, 0);
+
+[oploc1,slayer_dungeon_2_sc_wall_crack]
+if (~shortcut_level(62) = false) {
+    return;
+}
+if (coordx(coord) < 2733) {
+    ~shortcut_squeeze(roguesden_contortion, 0_42_156_42_24, 0_42_156_45_24, 0_42_156_47_24, 0);
+    return;
+}
+~shortcut_squeeze(roguesden_contortion, 0_42_156_47_24, 0_42_156_44_24, 0_42_156_42_24, 0);
+
+[oploc1,loc_9326]
+if (~shortcut_level(43) = false) {
+    return;
+}
+if (coordx(coord) < coordx(loc_coord)) {
+    ~shortcut_jump(movecoord(loc_coord, -1, 0, 0), movecoord(loc_coord, 1, 0, 0), 50);
+    return;
+}
+~shortcut_jump(movecoord(loc_coord, 1, 0, 0), movecoord(loc_coord, -1, 0, 0), 50);
+
+[oploc1,taverly_dungeon_floor_spikes_sc]
+if (~shortcut_level(80) = false) {
+    return;
+}
+if (coordx(coord) < 2879) {
+    ~shortcut_jump(0_44_153_61_21, 0_45_153_1_21, 125);
+    return;
+}
+~shortcut_jump(0_45_153_1_21, 0_44_153_61_21, 125);
+
+[oploc1,taverly_dungeon_pipe_sc]
+if (~shortcut_level(70) = false) {
+    return;
+}
+if (coordx(coord) < 2888) {
+    ~shortcut_squeeze(human_doublepipesqueeze, 0_45_153_6_7, 0_45_153_9_7, 0_45_153_12_7, 100);
+    return;
+}
+~shortcut_squeeze(human_doublepipesqueeze, 0_45_153_12_7, 0_45_153_9_7, 0_45_153_6_7, 100);
+
+[oploc1,loc_9328] @shortcut_ardougne_log;
+[oploc1,loc_9329] @shortcut_ardougne_log;
+[oploc1,loc_9330] @shortcut_ardougne_log;
+
+[label,shortcut_ardougne_log]
+if (~shortcut_level(33) = false) {
+    return;
+}
+if (coordx(coord) < 2600) {
+    ~shortcut_log_balance(0_40_52_38_8, 0_40_52_42_8, 40);
+    return;
+}
+~shortcut_log_balance(0_40_52_42_8, 0_40_52_38_8, 40);
+
+[oploc1,slayer_river_sc_logbalance_1] @shortcut_river_log;
+[oploc1,slayer_river_sc_logbalance_2] @shortcut_river_log;
+[oploc1,slayer_river_sc_logbalance_3] @shortcut_river_log;
+
+[label,shortcut_river_log]
+if (~shortcut_level(48) = false) {
+    return;
+}
+if (coordz(coord) < 3594) {
+    ~shortcut_log_balance(0_42_56_34_8, 0_42_56_34_12, 40);
+    return;
+}
+~shortcut_log_balance(0_42_56_34_12, 0_42_56_34_8, 40);
+
+[oploc1,loc_9314]
+def_int $level = 46;
+if (loc_coord = 0_37_68_40_43 | loc_coord = 0_37_68_47_50) {
+    $level = 66;
+}
+if (~shortcut_level($level) = false) {
+    return;
+}
+def_coord $dest = movecoord(loc_coord, 0, 0, -1);
+if (coordz(coord) < coordz(loc_coord)) {
+    $dest = movecoord(loc_coord, 0, 0, 1);
+}
+~agility_exactmove(roguesden_contortion, 0, 1, coord, $dest, 0, 60, ~shortcut_dir(coord, $dest), false);
+anim(null, 0);

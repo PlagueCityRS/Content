@@ -1046,7 +1046,8 @@ model=inv_trail_scroll
 iop1=Read
 weight=20g
 category=trail_clue_medium
-param=trail_desc,In a village made of bamboo,|look for some crates|under one of the houses.
+// https://youtu.be/yH6YaavzuMc?si=SnEug_1we6hikdHu&t=206
+param=trail_desc,In a village made of bamboo|look for some crates|under one of the houses.
 param=trail_coord,0_43_48_48_2
 param=trail_loc,^true
 tradeable=no

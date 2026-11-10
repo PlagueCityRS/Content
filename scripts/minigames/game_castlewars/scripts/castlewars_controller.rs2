@@ -100,7 +100,8 @@ else %castlewars_saradomin_flag = 0;
 %castlewars_saradomin_score = max(getbit_range(%castlewars_saradomin_bits, ^castlewars_score_startbit, ^castlewars_score_endbit), 0);
 %castlewars_timer = sub(25, divide(%npc_int, 20));
 if (%npc_int = 500) { // game is over
-    queue(castlewars_end, 0, 0);
+    // todo: confirm strongqueue vs if_close+queue
+    strongqueue(castlewars_end, 0, 0);
     return;
 }
 
@@ -158,10 +159,10 @@ if ($team = ^castlewars_team_saradomin) {
 ~castlewars_exit_tele;
 
 if ($winner = ^castlewars_team_guthix) {
-    inv_add(inv, castlewars_ticket, 2);
+    inv_add(inv, castlewars_ticket, 1);
     ~objbox(castlewars_ticket, "It was a draw!|You captured the enemy's standard <tostring($caps)> times.|Enemies killed: <tostring($kills)>.", 250, 0, divide(^objbox_height, 2));
 } else if ($winner = $team) {
-    inv_add(inv, castlewars_ticket, 3);
+    inv_add(inv, castlewars_ticket, 2);
     ~objbox(castlewars_ticket, "You won!|You captured the enemy's standard <tostring($caps)> times.|Enemies killed: <tostring($kills)>.", 250, 0, divide(^objbox_height, 2));
 } else {
     // no tickets https://oldschool.runescape.wiki/w/Update:Architectural_Alliance

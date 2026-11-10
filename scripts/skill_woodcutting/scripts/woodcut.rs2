@@ -68,11 +68,24 @@ if ($axe = null) {
 
 // after axe
 if (inzone(^miscellania_lower_bound, ^miscellania_upper_bound, coord) = true) {
-    if(%misc_quest < ^misc_king_signed_treaty) {
-        if (npc_find(0_39_60_54_29, misc_lumberjack, 2, 0) = true) {
-            ~chatnpc("<p,angry>Hey! This is the Queen's forest. You'll need her approval to make use of it.");
+    if($product = maple_logs) {
+        ~manage_misc_daily_update;
+        if(%misc_quest < ^misc_king_signed_treaty) {
+            if (npc_find(0_39_60_54_29, misc_lumberjack, 2, 0) = true) {
+                ~chatnpc("<p,angry>Hey! This is the Queen's forest. You'll need her approval to make use of it.");
+            }
+            return;
         }
-        return;
+        if(%misc_approval >= ^MISC_APPROVAL_100_PERCENT) {
+            if (npc_find(0_39_60_54_29, misc_lumberjack, 2, 0) = true) {
+                if(%misc_quest = ^misc_complete) {
+                    ~chatnpcnoturn("<p,happy>Don't trouble yourself further, Your Highness, you've already done so much!");
+                } else {
+                    ~chatnpcnoturn("<p,happy>Don't trouble yourself further, <text_gender("Sir", "Madam")>, you've already done so much!");
+                }
+            }
+            return;
+        }
     }
 }
 
@@ -99,6 +112,28 @@ def_dbrow $data = db_findnext;
 if ($data = null) {
     ~displaymessage(^dm_default);
     return;
+}
+// after axe
+def_namedobj $product = db_getfield($data, woodcutting_trees:product, 0);
+if (inzone(^miscellania_lower_bound, ^miscellania_upper_bound, coord) = true) {
+    if($product = maple_logs) {
+        if(%misc_quest < ^misc_king_signed_treaty) {
+            if (npc_find(0_39_60_54_29, misc_lumberjack, 2, 0) = true) {
+                ~chatnpc("<p,angry>Hey! This is the Queen's forest. You'll need her approval to make use of it.");
+            }
+            return;
+        }
+        if(%misc_approval >= ^MISC_APPROVAL_100_PERCENT) {
+            if (npc_find(0_39_60_54_29, misc_lumberjack, 2, 0) = true) {
+                if(%misc_quest = ^misc_complete) {
+                    ~chatnpcnoturn("<p,happy>Don't trouble yourself further, Your Highness, you've already done so much!");
+                } else {
+                    ~chatnpcnoturn("<p,happy>Don't trouble yourself further, <text_gender("Sir", "Madam")>, you've already done so much!");
+                }
+            }
+            return;
+        }
+    }
 }
 // i think it checks level here? thats the case with fishing at least
 def_int $level = db_getfield($data, woodcutting_trees:levelrequired, 0);
@@ -139,7 +174,7 @@ if ($respawnrate = 0) {
 }
 if (stat_random(woodcutting, $tree_chance_low, $tree_chance_high) = true) {
     def_namedobj $product = db_getfield($data, woodcutting_trees:product, 0);
-    if (~leif_intercept_wood("You get some <lowercase(oc_name($product))>.", db_getfield($data, woodcutting_trees:productexp, 0)) = true) {
+    if (~leif_intercept_wood($product) = true) {
         // Intercept for Miscellania, you don't get the wood.
     } else {
         mes("You get some <lowercase(oc_name($product))>.");

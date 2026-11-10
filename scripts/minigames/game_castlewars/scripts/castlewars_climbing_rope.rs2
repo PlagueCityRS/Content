@@ -5,6 +5,11 @@
 if (last_useitem ! rope) {
     return; // no NIH
 }
+if ((loc_type = castlewars_battlements_saradomin_climbable & %castlewars_team = ^castlewars_team_saradomin) |
+    (loc_type = castlewars_battlements_zamorak_climbable & %castlewars_team = ^castlewars_team_zamorak)) {
+    // todo: message
+    return;
+}
 if (~check_axis_locactive(coord) = true) {
     mes("You cant use the rope from here."); // osrs
     return;

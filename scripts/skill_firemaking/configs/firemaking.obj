@@ -41,6 +41,7 @@ members=yes
 iop1=Extinguish
 weight=500g
 category=light_source_lit
+param=next_obj_stage,torch_unlit
 tradeable=no
 
 [cert_torch_lit]

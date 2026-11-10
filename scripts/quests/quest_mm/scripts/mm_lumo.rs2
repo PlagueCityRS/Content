@@ -156,7 +156,7 @@ switch_int(%mm_lumo) {
     case ^mm_not_started :
         ~chatplayer("<p,quiz>Hello?");
         ~chatnpc("<p,neutral>Hello - Who are you?");
-        ~chatplayer("<p,neutral>I am in the service of King Narnode Shareen. I have been sent here to locate the missing 10th squad of the Royal Guard.");
+        ~chatplayer("<p,neutral>I am in the service of King Narnode Shareen.|I have been sent here to locate the missing|10th squad of the Royal Guard.");
         ~chatnpc("<p,laugh>Well we're certainly missing home, I'll give you that.");
         ~chatplayer("<p,neutral>How long have you been here?");
         ~chatnpc("<p,neutral>Oh, not for too long ... The jail guards keep us entertained every now and then too.");

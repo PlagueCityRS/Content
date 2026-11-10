@@ -218,8 +218,8 @@ timer=1
 [hauntedmine_boss_ghost_faded]
 name=Ghost
 desc=Eeek! A ghost!
-walkanim=seq_1436
-readyanim=seq_1436
+walkanim=ghost_mine_boss_run
+readyanim=ghost_mine_boss_run
 vislevel=99
 model1=npc_1540
 model2=npc_1540i2

@@ -389,8 +389,8 @@ param=death_drop,null
 [hauntedmine_suprise_ghost_hidden]
 name=Haze
 desc=A strange disturbance in the air.
-walkanim=seq_1436
-readyanim=seq_1436
+walkanim=ghost_mine_boss_run
+readyanim=ghost_mine_boss_run
 vislevel=hide
 minimap=no
 model1=model_2961_npc

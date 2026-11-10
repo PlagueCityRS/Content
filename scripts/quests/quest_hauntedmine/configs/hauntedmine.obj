@@ -28,6 +28,16 @@ members=yes
 tradeable=no
 
 [crystalshard_dagger]
+name=Nezikchened's mum
+recol1s=2340
+recol1d=25073
+desc=She wasn't pleased to see what her son did.
+iop1=Wear
+cost=1
+model=inv_robebottoms
+2dyof=1
+2dzoom=1940
+2dxan=572
 dummyitem=inv_only
 
 [hauntedmine_reward_key]

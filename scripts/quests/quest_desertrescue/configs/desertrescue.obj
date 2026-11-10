@@ -77,24 +77,24 @@ recol1d=10432
 tradeable=no
 
 [slave_shirt]
-name=Slaves' shirt
+name=Slave shirt
+recol1s=14724
+recol1d=14725
 desc=A filthy, smelly, flea infested shirt.
 cost=40
 model=inv_robetop
-recol1s=14724
-recol1d=14725
 2dyof=7
 2dzoom=1370
 2dxan=536
-wearpos=torso
-wearpos2=arms
 iop2=Wear
-weight=2lb
 manwear=man_torso_basic,0
 manwear2=man_arms_longsleeves
 womanwear=woman_torso_basic,0
 womanwear2=woman_arms_longsleeves
 members=yes
+wearpos=torso
+wearpos2=arms
+weight=2lb
 tradeable=no
 
 [slave_robe]
@@ -208,38 +208,36 @@ tradeable=no
 name=Tenti pineapple
 desc=The most delicious of pineapples.
 cost=1
+members=yes
+model=model_7277
+2dyof=1
+2dzoom=1290
+2dyan=100
+2dxan=172
 category=category_120
 weight=2lb
-members=yes
-model=inv_pineapple
-members=yes
-2dxof=1
-2dzoom=1740
-2dyan=48
-2dxan=228
 tradeable=no
 
 [thbedobinkey]
-name=Bedobin key
-desc=A key to the chest in Captain Siad's room.
-cost=1
-weight=10g
-model=inv_key
+name=Bedabin key
 recol1s=31393
 recol1d=20801
+desc=A key to the chest in Captain Siad's room.
+cost=1
+model=inv_key
 members=yes
 2dxof=-3
 2dyof=5
 2dzoom=700
 2dyan=20
 2dxan=328
+weight=10g
 tradeable=no
 
 [thprotodarttip]
 name=Prototype dart tip
-desc=A protoype dart tip - it looks deadly.
+desc=A prototype dart tip - it looks deadly.
 cost=1
-weight=8g
 model=inv_darttip
 2dxof=5
 2dzoom=720
@@ -247,4 +245,5 @@ model=inv_darttip
 2dxan=344
 members=yes
 stackable=yes
+weight=8g
 tradeable=no

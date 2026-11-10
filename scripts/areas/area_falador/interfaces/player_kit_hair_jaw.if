@@ -600,27 +600,27 @@ graphic=miscgraphics,3
 
 [com_75]
 type=text
-x=190
+x=201
 y=30
 width=130
 height=14
 center=yes
 font=b12_full
 shadowed=yes
-text=Hairdressers' Salon
-colour=0xFFFF00
+text=Hairdresser's Salon
+colour=0xC9800D
 
 [com_76]
 type=text
-x=420
-y=29
+x=419
+y=32
 buttontype=close
 width=68
 height=11
 font=p11_full
 shadowed=yes
 text=Close Window
-colour=0xFF0000
+colour=0xA1A1A1
 overcolour=0xFFFFFF
 
 [com_77]
@@ -879,8 +879,8 @@ yan=200
 
 [com_105]
 type=text
-x=390
-y=290
+x=223
+y=292
 buttontype=normal
 width=55
 height=14
@@ -1026,7 +1026,7 @@ width=25
 height=25
 script1op1=pushvar,if1
 script1=eq,1
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
 [com_121]
 type=graphic
@@ -1036,7 +1036,7 @@ width=25
 height=25
 script1op1=pushvar,if1
 script1=eq,2
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
 [com_122]
 type=graphic
@@ -1046,7 +1046,7 @@ width=25
 height=25
 script1op1=pushvar,if1
 script1=eq,3
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
 [com_123]
 type=graphic
@@ -1056,7 +1056,7 @@ width=25
 height=25
 script1op1=pushvar,if1
 script1=eq,4
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
 [com_124]
 type=graphic
@@ -1066,7 +1066,7 @@ width=25
 height=25
 script1op1=pushvar,if1
 script1=eq,5
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
 [com_125]
 type=graphic
@@ -1076,7 +1076,7 @@ width=25
 height=25
 script1op1=pushvar,if1
 script1=eq,6
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
 [com_126]
 type=graphic
@@ -1086,7 +1086,7 @@ width=25
 height=25
 script1op1=pushvar,if1
 script1=eq,7
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
 [com_127]
 type=graphic
@@ -1096,7 +1096,7 @@ width=25
 height=25
 script1op1=pushvar,if1
 script1=eq,8
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
 [com_128]
 type=graphic
@@ -1107,7 +1107,7 @@ width=20
 height=20
 script1op1=pushvar,if2
 script1=eq,1
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
 [com_129]
 type=graphic
@@ -1118,7 +1118,7 @@ width=20
 height=20
 script1op1=pushvar,if2
 script1=eq,2
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
 [com_130]
 type=graphic
@@ -1129,7 +1129,7 @@ width=20
 height=20
 script1op1=pushvar,if2
 script1=eq,3
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
 [com_131]
 type=graphic
@@ -1140,7 +1140,7 @@ width=20
 height=20
 script1op1=pushvar,if2
 script1=eq,4
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
 [com_132]
 type=graphic
@@ -1151,7 +1151,7 @@ width=20
 height=20
 script1op1=pushvar,if2
 script1=eq,5
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
 [com_133]
 type=graphic
@@ -1162,7 +1162,7 @@ width=20
 height=20
 script1op1=pushvar,if2
 script1=eq,6
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
 [com_134]
 type=graphic
@@ -1173,7 +1173,7 @@ width=20
 height=20
 script1op1=pushvar,if2
 script1=eq,7
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
 [com_135]
 type=graphic
@@ -1184,7 +1184,7 @@ width=20
 height=20
 script1op1=pushvar,if2
 script1=eq,8
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
 [com_136]
 type=graphic
@@ -1195,7 +1195,7 @@ width=20
 height=20
 script1op1=pushvar,if2
 script1=eq,9
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
 [com_137]
 type=graphic
@@ -1206,7 +1206,7 @@ width=20
 height=20
 script1op1=pushvar,if2
 script1=eq,10
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
 [com_138]
 type=graphic
@@ -1217,7 +1217,7 @@ width=20
 height=20
 script1op1=pushvar,if2
 script1=eq,11
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
 [com_139]
 type=graphic
@@ -1228,7 +1228,7 @@ width=20
 height=20
 script1op1=pushvar,if2
 script1=eq,12
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
 [com_140]
 type=graphic

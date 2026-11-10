@@ -189,7 +189,7 @@ ambient=60
 [loc_2416]
 name=Lever
 desc=Pull me!
-model=model_loc_2416
+model=loc_2416
 active=yes
 op1=Pull
 forceapproach=south

@@ -28,68 +28,67 @@ weight=7lb
 
 //green
 [dragon_leather]
-cost=50
-name=Dragon leather
-desc=It's a piece of prepared dragonhide.
-model=inv_cowhide
+name=Green d-leather
 recol1s=32767
 recol1d=256
+cost=50
+desc=It's a piece of prepared green dragonhide.
+model=inv_cowhide
 2dxof=-1
 2dyof=-2
 2dzoom=1190
 2dyan=116
 2dxan=440
-weight=7lb
 members=yes
 param=color,green
 
 //blue
 [dragon_leather_blue]
-cost=70
-name=Dragon leather
-desc=It's a piece of prepared dragonhide.
-model=inv_cowhide
+name=Blue d-leather
 recol1s=32767
 recol1d=11
+cost=70
+desc=It's a piece of prepared blue dragonhide.
+model=inv_cowhide
 2dxof=-1
 2dyof=-2
 2dzoom=1190
 2dyan=116
 2dxan=440
-weight=7lb
 members=yes
+weight=7lb
 param=color,blue
 
 //red
 [dragon_leather_red]
-cost=90
-name=Dragon leather
-desc=It's a piece of prepared dragonhide.
-model=inv_cowhide
+name=Red dragon leather
 recol1s=32767
 recol1d=8192
+cost=90
+desc=It's a piece of prepared red dragonhide.
+model=inv_cowhide
 2dxof=-1
 2dyof=-2
 2dzoom=1190
 2dyan=116
 2dxan=440
-weight=7lb
 members=yes
+weight=7lb
 param=color,red
 
 //black
 [dragon_leather_black]
-cost=110
-name=Dragon leather
-desc=It's a piece of prepared dragonhide.
-model=inv_cowhide
+name=Black d-leather
 recol1s=32767
 recol1d=3171
+cost=110
+desc=It's a piece of prepared black dragonhide.
+model=inv_cowhide
 2dxof=-1
 2dyof=-2
 2dzoom=1190
 2dyan=116
 2dxan=440
-weight=7lb
 members=yes
+weight=7lb
 param=color,black

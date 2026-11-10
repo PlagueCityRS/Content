@@ -51,14 +51,17 @@ weight=1300g
 
 [potato]
 name=Potato
+recol1s=10464
+recol1d=16805
 desc=This could be used to make a good stew.
 cost=1
 model=inv_potato
-2dxof=2
-2dyof=1
-2dzoom=940
-2dyan=1860
-2dxan=156
+2dxof=1
+2dyof=-6
+2dzoom=860
+2dyan=1856
+2dxan=208
+iop1=Eat
 weight=500g
 category=category_131
 param=gnome_cooking_ingredient,^true

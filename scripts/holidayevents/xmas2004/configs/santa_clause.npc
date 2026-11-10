@@ -32,6 +32,6 @@ recol5d=29594
 recol6s=8388
 recol6d=0
 wanderrange=0
+timer=10
 moverestrict=nomove
 defaultmode=none
-timer=10

@@ -1,12 +1,12 @@
 [yewtree]
 name=Yew
 desc=A splendid tree.
-model=plants_loc_1309
+model=yewtree
 width=3
 length=3
 op1=Chop down
 op3=hidden
 mapscene=3
+ambient=25
 category=tree
 param=next_loc_stage,yewtree_stump
-param=ent,macro_ent_yew

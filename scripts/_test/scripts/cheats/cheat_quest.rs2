@@ -314,9 +314,9 @@ if (p_finduid(uid) = true) {
                     %regicide_bits = null;
                 case 59 :
                     %eadgar_quest = 0;
-                    %eadgar_bits = null;
-                    %eadgar_grain = 0;
-                    %eadgar_chickens = 0;
+                    %eadgar_varbit = null;
+                    %varp_337 = 0; // todo rework
+                    %varp_338 = 0;
                 case 60 :
                     %morttonquest = 0;
                     %morttonmulti = null;
@@ -565,9 +565,9 @@ return;
 %regicide_quest = 0;
 %regicide_bits = null;
 %eadgar_quest = 0;
-%eadgar_bits = null;
-%eadgar_grain = 0;
-%eadgar_chickens = 0;
+%eadgar_varbit = null;
+%varp_337 = 0;
+%varp_338 = 0;
 %morttonquest = 0;
 %morttonmulti = null;
 %viking = 0;

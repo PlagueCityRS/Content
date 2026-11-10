@@ -1,4 +1,4 @@
-[com_0]
+[chat3head]
 type=model
 x=414
 y=34
@@ -8,7 +8,7 @@ zoom=796
 xan=40
 yan=166
 
-[com_1]
+[chat3name]
 type=text
 x=20
 y=0
@@ -19,7 +19,7 @@ font=q8_full
 text=Name
 colour=0x800000
 
-[com_2]
+[chat3a]
 type=text
 x=20
 y=20
@@ -29,7 +29,7 @@ center=yes
 font=q8_full
 text=Line1
 
-[com_3]
+[chat3b]
 type=text
 x=20
 y=40
@@ -39,7 +39,7 @@ center=yes
 font=q8_full
 text=Line2
 
-[com_4]
+[chat3c]
 type=text
 x=20
 y=60
@@ -49,7 +49,7 @@ center=yes
 font=q8_full
 text=Line3
 
-[com_5]
+[chat3next]
 type=text
 x=20
 y=80

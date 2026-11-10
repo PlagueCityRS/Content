@@ -25,16 +25,16 @@ weight=600g
 
 [pitta_bread]
 name=Pitta bread
-desc=Mmmm, I need to add some other ingredients yet.
-cost=10
-model=inv_pizzabase
 recol1s=21135
 recol1d=30547
+desc=Nicely baked pitta bread. Needs more ingredients to make a kebab.
+cost=10
+model=inv_pizzabase
 2dzoom=980
 2dyan=108
 2dxan=248
-weight=100g
 members=yes
+weight=100g
 
 [bread]
 cost=12

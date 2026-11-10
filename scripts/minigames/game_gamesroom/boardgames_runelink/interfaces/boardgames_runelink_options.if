@@ -536,7 +536,7 @@ height=31
 fill=yes
 option=Challenge player
 
-[com_68]
+[com_67]
 layer=com_65
 type=text
 x=12
@@ -549,7 +549,7 @@ text=Challenge
 colour=0x008000
 overcolour=0x00FF00
 
-[com_69]
+[com_68]
 layer=com_65
 type=graphic
 x=21
@@ -558,7 +558,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_70]
+[com_69]
 layer=com_65
 type=graphic
 x=0
@@ -567,7 +567,7 @@ width=25
 height=30
 graphic=steelborder,0
 
-[com_71]
+[com_70]
 layer=com_65
 type=graphic
 x=53
@@ -576,7 +576,7 @@ width=25
 height=30
 graphic=steelborder,1
 
-[com_72]
+[com_71]
 layer=com_65
 type=graphic
 x=0
@@ -585,7 +585,7 @@ width=25
 height=30
 graphic=steelborder,2
 
-[com_73]
+[com_72]
 layer=com_65
 type=graphic
 x=53
@@ -594,7 +594,7 @@ width=25
 height=30
 graphic=steelborder,3
 
-[com_74]
+[com_73]
 layer=com_65
 type=graphic
 x=21
@@ -614,7 +614,7 @@ shadowed=yes
 text=Runelink: Options
 colour=0xFFAA44
 
-[com_75]
+[com_74]
 type=text
 x=338
 y=66
@@ -627,7 +627,7 @@ text=Close Window
 colour=0x808080
 overcolour=0xFFFFFF
 
-[com_78]
+[com_75]
 type=layer
 x=296
 y=94
@@ -635,7 +635,7 @@ width=99
 height=95
 
 [30seconds_text]
-layer=com_78
+layer=com_75
 type=text
 x=32
 y=40
@@ -649,7 +649,7 @@ colour=0xAA8822
 option=Select option
 
 [30seconds_radio]
-layer=com_78
+layer=com_75
 type=graphic
 x=10
 y=40
@@ -663,7 +663,7 @@ activegraphic=miscgraphics,11
 option=Select option
 
 [1minute_radio]
-layer=com_78
+layer=com_75
 type=graphic
 x=10
 y=60
@@ -677,7 +677,7 @@ activegraphic=miscgraphics,11
 option=Select option
 
 [2minutes_radio]
-layer=com_78
+layer=com_75
 type=graphic
 x=10
 y=80
@@ -691,7 +691,7 @@ activegraphic=miscgraphics,11
 option=Select option
 
 [15seconds_radio]
-layer=com_78
+layer=com_75
 type=graphic
 x=10
 y=20
@@ -705,7 +705,7 @@ activegraphic=miscgraphics,11
 option=Select option
 
 [1minute_text]
-layer=com_78
+layer=com_75
 type=text
 x=32
 y=60
@@ -719,7 +719,7 @@ colour=0xAA8822
 option=Select option
 
 [2minutes_text]
-layer=com_78
+layer=com_75
 type=text
 x=32
 y=80
@@ -733,7 +733,7 @@ colour=0xAA8822
 option=Select option
 
 [15seconds_text]
-layer=com_78
+layer=com_75
 type=text
 x=32
 y=20
@@ -746,8 +746,8 @@ text=15 seconds
 colour=0xAA8822
 option=Select option
 
-[com_85]
-layer=com_78
+[com_76]
+layer=com_75
 type=text
 x=11
 y=1
@@ -758,7 +758,7 @@ shadowed=yes
 text=Time per move:
 colour=0xAA8822
 
-[com_86]
+[com_77]
 type=layer
 x=97
 y=89
@@ -766,7 +766,7 @@ width=191
 height=179
 
 [firerune_radio]
-layer=com_86
+layer=com_77
 type=graphic
 x=10
 y=34
@@ -780,7 +780,7 @@ activegraphic=miscgraphics,11
 option=Select piece
 
 [firerune_model]
-layer=com_86
+layer=com_77
 type=model
 x=29
 y=25
@@ -790,10 +790,11 @@ height=32
 model=inv_firerune
 zoom=622
 xan=452
+yan=1024
 option=Select piece
 
-[com_89]
-layer=com_86
+[com_78]
+layer=com_77
 type=text
 x=10
 y=3
@@ -805,7 +806,7 @@ text=Choose piece:
 colour=0xAA8822
 
 [waterrune_model]
-layer=com_86
+layer=com_77
 type=model
 x=29
 y=65
@@ -815,10 +816,11 @@ height=32
 model=inv_waterrune
 zoom=622
 xan=452
+yan=1024
 option=Select piece
 
 [earthrune_model]
-layer=com_86
+layer=com_77
 type=model
 x=29
 y=105
@@ -828,10 +830,11 @@ height=32
 model=inv_earthrune
 zoom=622
 xan=452
+yan=1024
 option=Select piece
 
 [airrune_model]
-layer=com_86
+layer=com_77
 type=model
 x=29
 y=145
@@ -841,10 +844,11 @@ height=32
 model=inv_airrune
 zoom=622
 xan=452
+yan=1024
 option=Select piece
 
 [mindrune_model]
-layer=com_86
+layer=com_77
 type=model
 x=92
 y=25
@@ -854,10 +858,11 @@ height=32
 model=inv_mindrune
 zoom=622
 xan=452
+yan=1024
 option=Select piece
 
 [bodyrune_model]
-layer=com_86
+layer=com_77
 type=model
 x=92
 y=65
@@ -867,10 +872,11 @@ height=32
 model=inv_bodyrune
 zoom=622
 xan=452
+yan=1024
 option=Select piece
 
 [naturerune_model]
-layer=com_86
+layer=com_77
 type=model
 x=92
 y=105
@@ -880,10 +886,11 @@ height=32
 model=inv_naturerune
 zoom=622
 xan=452
+yan=1024
 option=Select piece
 
 [chaosrune_model]
-layer=com_86
+layer=com_77
 type=model
 x=92
 y=145
@@ -893,10 +900,11 @@ height=32
 model=inv_chaosrune
 zoom=622
 xan=452
+yan=1024
 option=Select piece
 
 [lawrune_model]
-layer=com_86
+layer=com_77
 type=model
 x=155
 y=24
@@ -906,10 +914,11 @@ height=32
 model=inv_lawrune
 zoom=622
 xan=452
+yan=1024
 option=Select piece
 
 [cosmicrune_model]
-layer=com_86
+layer=com_77
 type=model
 x=155
 y=65
@@ -919,10 +928,11 @@ height=31
 model=inv_cosmicrune
 zoom=622
 xan=452
+yan=1024
 option=Select piece
 
 [bloodrune_model]
-layer=com_86
+layer=com_77
 type=model
 x=155
 y=105
@@ -932,10 +942,11 @@ height=32
 model=inv_bloodrune
 zoom=622
 xan=452
+yan=1024
 option=Select piece
 
 [soulrune_model]
-layer=com_86
+layer=com_77
 type=model
 x=155
 y=145
@@ -945,10 +956,11 @@ height=32
 model=inv_soulrune
 zoom=622
 xan=452
+yan=1024
 option=Select piece
 
 [waterrune_radio]
-layer=com_86
+layer=com_77
 type=graphic
 x=10
 y=74
@@ -962,7 +974,7 @@ activegraphic=miscgraphics,11
 option=Select piece
 
 [earthrune_radio]
-layer=com_86
+layer=com_77
 type=graphic
 x=10
 y=114
@@ -976,7 +988,7 @@ activegraphic=miscgraphics,11
 option=Select piece
 
 [airrune_radio]
-layer=com_86
+layer=com_77
 type=graphic
 x=10
 y=154
@@ -990,7 +1002,7 @@ activegraphic=miscgraphics,11
 option=Select piece
 
 [mindrune_radio]
-layer=com_86
+layer=com_77
 type=graphic
 x=73
 y=34
@@ -1004,7 +1016,7 @@ activegraphic=miscgraphics,11
 option=Select piece
 
 [bodyrune_radio]
-layer=com_86
+layer=com_77
 type=graphic
 x=73
 y=74
@@ -1018,7 +1030,7 @@ activegraphic=miscgraphics,11
 option=Select piece
 
 [naturerune_radio]
-layer=com_86
+layer=com_77
 type=graphic
 x=73
 y=114
@@ -1032,7 +1044,7 @@ activegraphic=miscgraphics,11
 option=Select piece
 
 [chaosrune_radio]
-layer=com_86
+layer=com_77
 type=graphic
 x=73
 y=154
@@ -1046,7 +1058,7 @@ activegraphic=miscgraphics,11
 option=Select piece
 
 [lawrune_radio]
-layer=com_86
+layer=com_77
 type=graphic
 x=136
 y=34
@@ -1060,7 +1072,7 @@ activegraphic=miscgraphics,11
 option=Select piece
 
 [cosmicrune_radio]
-layer=com_86
+layer=com_77
 type=graphic
 x=136
 y=74
@@ -1074,7 +1086,7 @@ activegraphic=miscgraphics,11
 option=Select piece
 
 [bloodrune_radio]
-layer=com_86
+layer=com_77
 type=graphic
 x=136
 y=114
@@ -1088,7 +1100,7 @@ activegraphic=miscgraphics,11
 option=Select piece
 
 [soulrune_radio]
-layer=com_86
+layer=com_77
 type=graphic
 x=136
 y=154

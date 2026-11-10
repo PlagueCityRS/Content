@@ -39,15 +39,15 @@ members=yes
 cost=5
 
 [nulodions_notes]
-name=Nulodion's notes.
+name=Nulodion's notes
 desc=Construction notes for Dwarf cannon ammo.
 model=inv_scroll
-2dyof=49
-2dzoom=750
-2dyan=1380
-2dxan=304
+2dxof=2
+2dyof=3
+2dzoom=1100
+2dyan=48
+2dxan=528
 iop1=Read
-weight=1oz
 members=yes
 tradeable=no
 

@@ -56,9 +56,9 @@ weight=10g
 tradeable=no
 
 [rubber_tube]
-cost=3
 name=Rubber tube
-desc=Its slightly charred.
+cost=3
+desc=It's slightly charred.
 model=inv_rubbertube
 2dyof=-2
 2dzoom=860

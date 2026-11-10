@@ -1,6 +1,6 @@
 [mappart1]
 name=Map part
-desc=An incomplete map piece.
+desc=A piece of a map.
 model=inv_treasuremap-1
 2dxof=44
 2dyof=-21
@@ -13,7 +13,7 @@ tradeable=no
 
 [mappart2]
 name=Map part
-desc=An incomplete map piece.
+desc=A piece of a map.
 model=inv_treasuremap-2
 2dxof=6
 2dyof=2
@@ -26,7 +26,7 @@ tradeable=no
 
 [mappart3]
 name=Map part
-desc=An incomplete map piece.
+desc=A piece of a map.
 model=inv_treasuremap-3
 2dxof=-41
 2dyof=37
@@ -39,7 +39,7 @@ tradeable=no
 
 [dragonmap]
 name=Crandor map
-desc=A map to Crandor.
+desc=A map of the route to Crandor.
 model=inv_treasuremap
 2dyof=-1
 2dzoom=2090
@@ -50,7 +50,7 @@ weight=15g
 tradeable=no
 
 [nails]
-name=Nails
+name=Steel nails
 desc=Keeps things in place fairly permanently.
 cost=3
 model=inv_nails
@@ -65,11 +65,11 @@ category=category_74
 
 [melzarkey]
 name=Maze key
-desc=A key to Melzars' Maze.
-cost=1
-model=inv_key
 recol1s=31393
 recol1d=15855
+desc=A key to Melzar's Maze.
+cost=1
+model=inv_key
 2dxof=-3
 2dyof=5
 2dzoom=700

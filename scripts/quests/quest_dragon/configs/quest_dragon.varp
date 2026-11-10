@@ -5,6 +5,27 @@ scope=perm
 type=int
 scope=perm
 
+// todo: All of these should probably be bit manip on dragonquestvar instead of their own varps... 
+
+// 10410	dragonslayer_secret_told
+// 10411	dragonslayer_crandor_found_secret_door
+// 10412	dragonslayer_preliminary_statdown
+// 10413	dragonslayer_ship_onethird_fixed
+// 10414	dragonslayer_ship_twothird_fixed
+// 10415	dragonslayer_ship_fullyfixed
+// 10416	dragonslayer_instructions_melzar
+// 10417	dragonslayer_instructions_oracle
+// 10418	dragonslayer_instructions_wormbrain
+// 10419	dragonslayer_instructions_ship
+// 10420	dragonslayer_instructions_shield
+// 10421	dragonslayer_used_silk
+// 10422	dragonslayer_used_bowl_unfired
+// 10423	dragonslayer_used_lobster_pot
+// 10424	dragonslayer_used_wizards_mind_bomb
+// 10425	dragonslayer_asked_ned
+// 10426	dragonslayer_ned_knows_ship_is_fixed
+// 10427	dragonslayer_asked_generals
+
 [dragon_ned_hired]
 type=int
 scope=perm

@@ -1,8 +1,8 @@
 [human_spinningwheel]
 replaceheldleft=hide
 replaceheldright=hide
-duplicatebehaviour=reset_loop
 postanim_move=abortanim
+reachforward=yes
 frame1=anim_2240
 frame2=anim_522
 frame3=anim_821

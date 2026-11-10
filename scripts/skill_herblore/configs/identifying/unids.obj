@@ -136,14 +136,13 @@ model=inv_herb
 weight=7g
 
 [unidentified_snake_weed]
-name=Unidentified herb
-desc=An unidentified herb.
-category=category_90
-model=inv_snapegrass
+name=Herb
 recol1s=615
 recol1d=21347
 recol2s=455
 recol2d=3714
+desc=An unidentified herb.
+model=inv_snapegrass
 members=yes
 2dxof=-1
 2dyof=2
@@ -151,32 +150,18 @@ members=yes
 2dyan=48
 2dxan=484
 iop1=Identify
+category=category_90
 weight=7g
 tradeable=no
 
 [unidentified_ardrigal]
-name=Unidentified herb
-desc=An unidentified herb.
-category=category_90
-cost=1
-model=inv_herb
+name=Herb
 recol1s=288
 recol1d=13600
 recol2s=448
 recol2d=20865
-members=yes
-2dxof=4
-2dzoom=700
-2dyan=1588
-2dxan=376
-weight=7g
-iop1=Identify
-tradeable=no
-
-[unidentified_sito_foil]
-name=Unidentified herb
 desc=An unidentified herb.
-category=category_90
+cost=1
 model=inv_herb
 members=yes
 2dxof=4
@@ -184,13 +169,27 @@ members=yes
 2dyan=1588
 2dxan=376
 iop1=Identify
+category=category_90
+weight=7g
+tradeable=no
+
+[unidentified_sito_foil]
+name=Herb
+desc=An unidentified herb.
+model=inv_herb
+members=yes
+2dxof=4
+2dzoom=700
+2dyan=1588
+2dxan=376
+iop1=Identify
+category=category_90
 weight=7g
 tradeable=no
 
 [unidentified_volencia_moss]
-name=Unidentified herb
+name=Herb
 desc=An unidentified herb.
-category=category_90
 model=inv_herb
 members=yes
 2dxof=4
@@ -198,13 +197,13 @@ members=yes
 2dyan=1588
 2dxan=376
 iop1=Identify
+category=category_90
 weight=7g
 tradeable=no
 
 [unidentified_rogues_purse]
-name=Unidentified herb
+name=Herb
 desc=An unidentified herb.
-category=category_90
 model=inv_herb
 members=yes
 2dxof=4
@@ -212,6 +211,7 @@ members=yes
 2dyan=1588
 2dxan=376
 iop1=Identify
+category=category_90
 weight=7g
 tradeable=no
 

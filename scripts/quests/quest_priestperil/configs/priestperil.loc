@@ -263,11 +263,17 @@ model=loc_3465
 active=no
 
 [hangingmeat1]
+name=Hanging meat
+desc=Dead animal parts dangling!
 model=transilvania_area_priestperil_walldecor_hangingmeat1
+active=yes
 ambient=10
 
 [hangingmeat2]
+name=Hanging meat
+desc=So how long has this been dead, then?
 model=transilvania_area_priestperil_walldecor_hangingmeat2
+active=yes
 ambient=10
 
 [temple_window]
@@ -337,6 +343,7 @@ active=no
 name=Statue
 desc=A statue honouring Saradomin.
 model=loc_3479
+model2=priestperil_statue
 width=4
 length=4
 
@@ -384,6 +391,7 @@ active=no
 model=transilvania_area_priestperil_table
 active=no
 width=2
+blockrange=no
 
 [priestperil_chair]
 model=transilvania_area_priestperil_chair

@@ -290,9 +290,9 @@ if (map_clock > add(%musicstart, %musiclength)) {
 [if_button,music:waterfall] @music_playbybutton(music:waterfall);
 [if_button,music:waterlogged] @music_playbybutton(music:waterlogged);
 [if_button,music:well_of_voyage] @music_playbybutton(music:well_of_voyage);
+[if_button,music:wilderness] @music_playbybutton(music:wilderness);
 [if_button,music:wilderness2] @music_playbybutton(music:wilderness2);
 [if_button,music:wilderness3] @music_playbybutton(music:wilderness3);
-[if_button,music:wilderness4] @music_playbybutton(music:wilderness4);
 [if_button,music:wildwood] @music_playbybutton(music:wildwood);
 [if_button,music:witching] @music_playbybutton(music:witching);
 [if_button,music:wolf_mountain] @music_playbybutton(music:wolf_mountain);

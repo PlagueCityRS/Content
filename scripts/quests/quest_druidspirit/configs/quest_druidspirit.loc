@@ -51,7 +51,7 @@ param=next_loc_stage,loc_1563
 
 [log_druidicspirit]
 name=Rotting log
-desc=Not sure if i should sit on that.
+desc=Not sure if I should sit on that.
 model=loc_3508
 recol1s=13604
 recol1d=4322
@@ -64,7 +64,7 @@ param=open_sound,bloom_mushroom
 
 [log_druidicspirit2]
 name=Fungi on log
-desc=Not sure if i should sit on that.
+desc=Not sure if I should sit on that.
 model=loc_3509
 recol1s=13604
 recol1d=6305
@@ -109,7 +109,7 @@ anim=pears_growing
 
 [peartree_druidicspirit_trunk]
 name=Rotting tree
-desc=Not sure if i should stand under that..
+desc=Not sure if I should stand under that.
 model=quest_naturespirit_peartree_druidicspirit_trunk
 
 [peartree_druidicspirit_crown]
@@ -186,6 +186,7 @@ blockrange=no
 
 [oldfencing]
 model=quest_naturespirit_walls_oldfencing
+model2=oldfencing
 sharelight=yes
 hillskew=yes
 active=no

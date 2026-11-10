@@ -1,11 +1,11 @@
 [shipfloor]
 forcedecor=yes
-model=model_loc_3387
+model=shipfloor
 
 [shiprope_withfloor]
 forcedecor=yes
 sharelight=yes
-model=model_loc_3388
+model=shiprope_withfloor
 
 [elemental_workshop_bookcase]
 length=2
@@ -16,20 +16,20 @@ name=Bookcase
 desc=A good source of books!
 
 [elemental_workshop_oddwall_r]
-active=yes
-op1=Push
-model=basic_oddwall_closedr
 name=Odd looking wall
 desc=A strange crack cuts into the wall.
+model=basic_oddwall_closedr
+active=yes
+op1=Open
 category=double_door_open_and_close_right
 param=next_loc_stage,elemental_workshop_oddwall_r_open
 
 [elemental_workshop_oddwall_l]
-active=yes
-op1=Push
-model=basic_oddwall_closedl
 name=Odd looking wall
 desc=A strange crack cuts into the wall.
+model=basic_oddwall_closedl
+active=yes
+op1=Open
 category=double_door_open_and_close_left
 param=next_loc_stage,elemental_workshop_oddwall_l_open
 
@@ -107,7 +107,7 @@ desc=A wooden crate for storage.
 width=3
 recol1s=15855
 recol1d=5250
-model=model_loc_3402
+model=elemental_workshop_workbench
 name=Workbench
 desc=Used for fashioning metal items.
 
@@ -117,7 +117,7 @@ recol1s=15854
 recol1d=12580
 recol2s=6342
 recol2d=10259
-model=model_3184
+model=elemental_workshop_rock
 name=Pile of Rock
 desc=A pile of Elemental rock.
 
@@ -144,23 +144,23 @@ name=Lever
 desc=This lever can be operated.
 
 [elemental_wheel]
-length=3
+name=Water wheel
+desc=It spins.
+model=quest_elementalworkshop_wheel_emental
 recol1s=17833
 recol1d=10467
 recol2s=15855
 recol2d=5250
-model=quest_elementalworkshop_wheel_emental
-name=Water wheel
-desc=It spins
+length=3
 
 [elemental_wheel_base]
+name=Water wheel
+desc=It spins.
+model=quest_elementalworkshop_wheel_base
 recol1s=17833
 recol1d=10467
 recol2s=15855
 recol2d=5250
-model=quest_elementalworkshop_wheel_base
-name=Water wheel
-desc=It spins
 
 [elemental_workshop_air_lever]
 op1=Pull
@@ -169,29 +169,29 @@ name=Lever
 desc=This lever can be operated.
 
 [elemental_workshop_bellows_l]
-width=2
-length=5
-op1=Fix
+name=Bellows
+desc=Big bellows.
+model=quest_elementalworkshop_bellow
 recol1s=17833
 recol1d=10467
 recol2s=15855
 recol2d=5250
-model=quest_elementalworkshop_bellow
-name=Bellows
-desc=Big bellows
+width=2
+length=5
+op1=Fix
 
 [elemental_workshop_bellows_r]
+name=Bellows
+desc=Big bellows.
+model=quest_elementalworkshop_bellow
+recol1s=17833
+recol1d=10467
+recol2s=15855
+recol2d=5250
 width=2
 length=5
 op1=Fix
 mirror=yes
-recol1s=17833
-recol1d=10467
-recol2s=15855
-recol2d=5250
-model=quest_elementalworkshop_bellow
-name=Bellows
-desc=Big bellows
 
 [elemental_piping_centered]
 width=2
@@ -218,14 +218,14 @@ name=Furnace
 desc=A furnace with an air blast pipe.
 
 [elemental_workshop_trough]
-length=5
+name=Lava trough
+desc=A small trough full of lava.
+model=elemental_workshop_trough
 recol1s=17833
 recol1d=10467
 recol2s=15855
 recol2d=5250
-model=model_345
-name=Lava trough
-desc=A small trough full of lava
+length=5
 
 [elemental_workshop_spiralstairstop]
 op1=Climb-down
@@ -358,7 +358,7 @@ ambient=15
 contrast=15
 active=no
 wallwidth=32
-model=model_loc_3430
+model=loc_3430
 
 [newbierocks1]
 op1=Mine

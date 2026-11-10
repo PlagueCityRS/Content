@@ -152,7 +152,7 @@ recol1d=4264
 [grandtree_rootdoor]
 name=Roots
 desc=There's something behind these roots.
-model=model_loc_2451
+model=grandtree_rootdoor
 width=4
 hillskew=yes
 op1=Push

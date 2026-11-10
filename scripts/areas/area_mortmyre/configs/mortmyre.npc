@@ -440,7 +440,7 @@ param=retreat,10
 
 [vampire_leech]
 name=Leech
-desc=Yuck! It's all slimey!
+desc=Yuck! It's all slimy!
 walkanim=leechwalk
 readyanim=leechready
 op2=Attack
@@ -620,7 +620,7 @@ param=death_sound,vampire_death
 [nasty_tree_swamp]
 vislevel=hide
 name=Tree
-desc=It's bark is worse than its swipe.
+desc=Its bark is worse than its swipe.
 minimap=no
 model1=npc_deadtree
 recol1s=7296

@@ -17,11 +17,12 @@ mapscene=7
 
 [merlins_crystal]
 name=Giant crystal
-desc=Can I see something inside...?
+desc=Is there something in there?
 model=quest_giantcrystal
 active=yes
 width=2
 length=2
+op1=Smash
 
 [merlincrate_empty]
 name=Crate

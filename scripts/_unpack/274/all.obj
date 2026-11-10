@@ -917,7 +917,7 @@ weight=2oz
 
 [snail_corpse1]
 name=Thin snail
-desc=The thin, slimey corpse of a deceased giant snail.
+desc=The thin, slimy corpse of a deceased giant snail.
 cost=5
 members=yes
 model=quest_routethrough_inv_snail_corpse
@@ -942,7 +942,7 @@ recol4s=13768
 recol4d=14819
 recol5s=15849
 recol5d=15780
-desc=The lean, slimey corpse of a deceased giant snail.
+desc=The lean, slimy corpse of a deceased giant snail.
 cost=10
 members=yes
 model=quest_routethrough_inv_snail_corpse
@@ -967,7 +967,7 @@ recol4s=13768
 recol4d=9572
 recol5s=15849
 recol5d=11716
-desc=The fat, slimey corpse of a deceased giant snail.
+desc=The fat, slimy corpse of a deceased giant snail.
 cost=15
 members=yes
 model=quest_routethrough_inv_snail_corpse
@@ -992,7 +992,7 @@ recol4s=13768
 recol4d=9472
 recol5s=15849
 recol5d=9472
-desc=A succulently slimey slice of sumptuous snail.
+desc=A succulently slimy slice of sumptuous snail.
 cost=10
 members=yes
 model=quest_routethrough_inv_snail_corpse
@@ -1016,7 +1016,7 @@ recol4s=13768
 recol4d=7361
 recol5s=15849
 recol5d=14432
-desc=A succulently slimey slice of sumptuous snail.
+desc=A succulently slimy slice of sumptuous snail.
 cost=20
 members=yes
 model=quest_routethrough_inv_snail_corpse
@@ -1040,7 +1040,7 @@ recol4s=13768
 recol4d=16577
 recol5s=15849
 recol5d=20801
-desc=A succulently slimey slice of sumptuous snail.
+desc=A succulently slimy slice of sumptuous snail.
 cost=30
 members=yes
 model=quest_routethrough_inv_snail_corpse
@@ -1223,6 +1223,16 @@ members=yes
 weight=1kg
 
 [viking_toyship]
+name=Lifeboat
+recol1s=2340
+recol1d=25073
+desc=Do not use except in case of emergency.
+iop1=Wear
+cost=1
+model=inv_robebottoms
+2dyof=1
+2dzoom=1940
+2dxan=572
 dummyitem=inv_only
 
 [flamtaer_hammer]
@@ -1239,9 +1249,10 @@ members=yes
 weight=3lb
 
 [dummy_shoe1]
-name=Dummy shoe1
+name=Shoe
 recol1s=7298
 recol1d=11525
+desc=A shoe.
 model=inv_boots
 2dxof=1
 2dyof=-6
@@ -1253,9 +1264,10 @@ weight=0g
 dummyitem=inv_only
 
 [dummy_shoe2]
-name=Dummy shoe2
+name=Shoe
 recol1s=7298
 recol1d=8448
+desc=A shoe.
 model=inv_boots
 2dxof=1
 2dyof=-6
@@ -1267,9 +1279,10 @@ weight=0g
 dummyitem=inv_only
 
 [dummy_shoe3]
-name=Dummy shoe3
+name=Shoe
 recol1s=7298
 recol1d=13705
+desc=A shoe.
 model=inv_boots
 2dxof=1
 2dyof=-6
@@ -1281,9 +1294,10 @@ weight=0g
 dummyitem=inv_only
 
 [dummy_shoe4]
-name=Dummy shoe4
+name=Shoe
 recol1s=7298
 recol1d=6309
+desc=A shoe.
 model=inv_boots
 2dxof=1
 2dyof=-6
@@ -1295,9 +1309,10 @@ weight=0g
 dummyitem=inv_only
 
 [dummy_shoe5]
-name=Dummy shoe5
+name=Shoe
 recol1s=7298
 recol1d=13604
+desc=A shoe.
 model=inv_boots
 2dxof=1
 2dyof=-6
@@ -1309,9 +1324,10 @@ weight=0g
 dummyitem=inv_only
 
 [dummy_shoe6]
-name=Dummy shoe6
+name=Shoe.
 recol1s=7298
 recol1d=11626
+desc=A shoe.
 model=inv_boots
 2dxof=1
 2dyof=-6
@@ -1449,16 +1465,14 @@ dummyitem=inv_only
 
 [opal_bolt2]
 name=Opal bolt2
-recol1s=15855
-recol1d=3205
-recol2s=21140
-recol2d=3205
-recol3s=14798
-recol3d=3206
-recol4s=10570
-recol4d=3206
-recol5s=5285
-recol5d=21140
+recol1s=14797
+recol1d=29587
+recol2s=14798
+recol2d=29587
+recol3s=15855
+recol3d=32767
+recol4s=28539
+recol4d=29587
 stackable=yes
 model=inv_crossbowbolts2
 2dxof=-1
@@ -1470,16 +1484,14 @@ dummyitem=inv_only
 
 [opal_bolt3]
 name=Opal bolt3
-recol1s=15855
-recol1d=3205
-recol2s=21140
-recol2d=3205
-recol3s=14798
-recol3d=3206
-recol4s=10570
-recol4d=3206
-recol5s=5285
-recol5d=21140
+recol1s=14797
+recol1d=29587
+recol2s=14798
+recol2d=29587
+recol3s=15855
+recol3d=32767
+recol4s=28539
+recol4d=29587
 stackable=yes
 model=inv_crossbowbolts3
 2dxof=-1
@@ -1491,16 +1503,14 @@ dummyitem=inv_only
 
 [opal_bolt4]
 name=Opal bolt4
-recol1s=15855
-recol1d=3205
-recol2s=21140
-recol2d=3205
-recol3s=14798
-recol3d=3206
-recol4s=10570
-recol4d=3206
-recol5s=5285
-recol5d=21140
+recol1s=14797
+recol1d=29587
+recol2s=14798
+recol2d=29587
+recol3s=15855
+recol3d=32767
+recol4s=28539
+recol4d=29587
 stackable=yes
 model=inv_crossbowbolts4
 2dxof=-1
@@ -1512,16 +1522,14 @@ dummyitem=inv_only
 
 [opal_bolts]
 name=Opal bolts
-recol1s=15855
-recol1d=3205
-recol2s=21140
-recol2d=3205
-recol3s=14798
-recol3d=3206
-recol4s=10570
-recol4d=3206
-recol5s=5285
-recol5d=21140
+recol1s=14797
+recol1d=29587
+recol2s=14798
+recol2d=29587
+recol3s=15855
+recol3d=32767
+recol4s=28539
+recol4d=29587
 stackable=yes
 model=inv_crossbowbolts
 2dxof=-1
@@ -1533,14 +1541,14 @@ dummyitem=inv_only
 
 [pearl_bolt2]
 name=Pearl bolt2
-recol1s=15855
-recol1d=22161
-recol2s=21140
-recol2d=22162
-recol3s=14798
-recol3d=22161
-recol4s=10570
-recol4d=22161
+recol1s=14797
+recol1d=20159
+recol2s=14798
+recol2d=20159
+recol3s=15855
+recol3d=32767
+recol4s=28539
+recol4d=20159
 stackable=yes
 model=inv_crossbowbolts2
 2dxof=-1
@@ -1552,14 +1560,14 @@ dummyitem=inv_only
 
 [pearl_bolt3]
 name=Pearl bolt3
-recol1s=15855
-recol1d=22161
-recol2s=21140
-recol2d=22162
-recol3s=14798
-recol3d=22161
-recol4s=10570
-recol4d=22161
+recol1s=14797
+recol1d=20159
+recol2s=14798
+recol2d=20159
+recol3s=15855
+recol3d=32767
+recol4s=28539
+recol4d=20159
 stackable=yes
 model=inv_crossbowbolts3
 2dxof=-1
@@ -1571,14 +1579,14 @@ dummyitem=inv_only
 
 [pearl_bolt4]
 name=Pearl bolt4
-recol1s=15855
-recol1d=22161
-recol2s=21140
-recol2d=22162
-recol3s=14798
-recol3d=22161
-recol4s=10570
-recol4d=22161
+recol1s=14797
+recol1d=20159
+recol2s=14798
+recol2d=20159
+recol3s=15855
+recol3d=32767
+recol4s=28539
+recol4d=20159
 stackable=yes
 model=inv_crossbowbolts4
 2dxof=-1
@@ -1590,14 +1598,14 @@ dummyitem=inv_only
 
 [pearl_bolts]
 name=Pearl bolts
-recol1s=15855
-recol1d=22161
-recol2s=21140
-recol2d=22162
-recol3s=14798
-recol3d=22161
-recol4s=10570
-recol4d=22161
+recol1s=14797
+recol1d=20159
+recol2s=14798
+recol2d=20159
+recol3s=15855
+recol3d=32767
+recol4s=28539
+recol4d=20159
 stackable=yes
 model=inv_crossbowbolts
 2dxof=-1

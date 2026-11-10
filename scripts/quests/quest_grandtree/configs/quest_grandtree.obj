@@ -162,7 +162,7 @@ tradeable=no
 
 [grandtree_invasionplans]
 name=Invasion plans
-desc=This is plans for an invasion!
+desc=These are plans for an invasion!
 members=yes
 cost=2
 model=inv_scroll

@@ -541,7 +541,7 @@ y=74
 width=400
 height=66
 
-[com_67]
+[com_66]
 layer=ring_mould
 type=model
 x=184
@@ -553,7 +553,7 @@ zoom=571
 xan=300
 yan=302
 
-[com_68]
+[com_67]
 layer=ring_mould
 type=text
 x=0
@@ -590,9 +590,9 @@ layer=rings_layer
 type=inv
 x=66
 y=3
-width=6
+width=7
 height=1
-margin=15,0
+margin=8,0
 option1=Make
 option2=Make 5
 option3=Make 10
@@ -600,7 +600,7 @@ option3=Make 10
 [rings1]
 layer=rings_layer
 type=model
-x=115
+x=107
 y=6
 width=32
 height=32
@@ -609,7 +609,7 @@ zoom=100
 [rings2]
 layer=rings_layer
 type=model
-x=162
+x=147
 y=6
 width=32
 height=32
@@ -618,7 +618,7 @@ zoom=100
 [rings3]
 layer=rings_layer
 type=model
-x=209
+x=187
 y=6
 width=32
 height=32
@@ -627,7 +627,7 @@ zoom=100
 [rings4]
 layer=rings_layer
 type=model
-x=256
+x=227
 y=6
 width=32
 height=32
@@ -636,7 +636,16 @@ zoom=100
 [rings5]
 layer=rings_layer
 type=model
-x=303
+x=267
+y=6
+width=32
+height=32
+zoom=100
+
+[com_72]
+layer=rings_layer
+type=model
+x=307
 y=6
 width=32
 height=32
@@ -649,7 +658,7 @@ y=162
 width=400
 height=66
 
-[com_73]
+[com_68]
 layer=necklace_mould
 type=model
 x=184
@@ -661,7 +670,7 @@ zoom=571
 xan=300
 yan=302
 
-[com_74]
+[com_69]
 layer=necklace_mould
 type=text
 x=0
@@ -698,9 +707,9 @@ layer=necklaces_layer
 type=inv
 x=66
 y=3
-width=6
+width=7
 height=1
-margin=15,0
+margin=8,0
 option1=Make
 option2=Make 5
 option3=Make 10
@@ -708,7 +717,7 @@ option3=Make 10
 [necklaces1]
 layer=necklaces_layer
 type=model
-x=119
+x=111
 y=-4
 width=32
 height=32
@@ -717,7 +726,7 @@ zoom=400
 [necklaces2]
 layer=necklaces_layer
 type=model
-x=165
+x=151
 y=-4
 width=32
 height=32
@@ -726,7 +735,7 @@ zoom=200
 [necklaces3]
 layer=necklaces_layer
 type=model
-x=212
+x=191
 y=-4
 width=32
 height=32
@@ -735,7 +744,7 @@ zoom=400
 [necklaces4]
 layer=necklaces_layer
 type=model
-x=259
+x=231
 y=-4
 width=32
 height=32
@@ -744,7 +753,16 @@ zoom=400
 [necklaces5]
 layer=necklaces_layer
 type=model
-x=306
+x=271
+y=-4
+width=32
+height=32
+zoom=400
+
+[com_73]
+layer=necklaces_layer
+type=model
+x=311
 y=-4
 width=32
 height=32
@@ -757,7 +775,7 @@ y=250
 width=400
 height=66
 
-[com_79]
+[com_70]
 layer=amulet_mould
 type=model
 x=184
@@ -769,7 +787,7 @@ zoom=571
 xan=300
 yan=302
 
-[com_80]
+[com_71]
 layer=amulet_mould
 type=text
 x=0
@@ -806,9 +824,9 @@ layer=amulets_layer
 type=inv
 x=66
 y=3
-width=6
+width=7
 height=1
-margin=15,0
+margin=8,0
 option1=Make
 option2=Make 5
 option3=Make 10
@@ -816,7 +834,7 @@ option3=Make 10
 [amulets1]
 layer=amulets_layer
 type=model
-x=123
+x=116
 y=-19
 width=32
 height=32
@@ -825,7 +843,7 @@ zoom=400
 [amulets2]
 layer=amulets_layer
 type=model
-x=169
+x=156
 y=-19
 width=32
 height=32
@@ -834,7 +852,7 @@ zoom=400
 [amulets3]
 layer=amulets_layer
 type=model
-x=216
+x=196
 y=-19
 width=32
 height=32
@@ -843,7 +861,7 @@ zoom=400
 [amulets4]
 layer=amulets_layer
 type=model
-x=263
+x=236
 y=-19
 width=32
 height=32
@@ -852,7 +870,16 @@ zoom=400
 [amulets5]
 layer=amulets_layer
 type=model
-x=309
+x=276
+y=-19
+width=32
+height=32
+zoom=400
+
+[com_74]
+layer=amulets_layer
+type=model
+x=316
 y=-19
 width=32
 height=32

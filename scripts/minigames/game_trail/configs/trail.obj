@@ -1091,9 +1091,8 @@ tradeable=no
 
 [trail_clue_medium_riddle005_key]
 name=Key
-desc=A key to some drawers.
+desc=A key to a chest.
 members=yes
-weight=10g
 cost=1
 model=inv_key
 2dxof=-3
@@ -1101,6 +1100,7 @@ model=inv_key
 2dzoom=700
 2dyan=20
 2dxan=328
+weight=10g
 tradeable=no
 
 [trail_slidingpuzzlec01]

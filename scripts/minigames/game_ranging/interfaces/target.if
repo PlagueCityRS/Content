@@ -708,12 +708,11 @@ x=244
 y=296
 width=32
 height=32
-model=outdoorfurniture_target
+model=com_i3
 zoom=360
-xan=100
-yan=1000
+xan=97
 
-[com_89]
+[dart_bull]
 type=model
 x=253
 y=172
@@ -722,7 +721,7 @@ height=25
 script1op1=pushvar,targethit
 script1=eq,0
 model=floor_invisableicon_0
-activemodel=inv_dart
+activemodel=com_i4
 zoom=400
 xan=100
 yan=150
@@ -736,7 +735,7 @@ height=14
 font=b12_full
 shadowed=yes
 text=Target View.
-colour=0xFFFF00
+colour=0xFFAA44
 
 [com_91]
 type=model
@@ -746,12 +745,12 @@ width=25
 height=25
 script1op1=pushvar,targetcount
 script1=lt,11
-activemodel=proj_arrowlaunch
+activemodel=com_i5
 zoom=800
 xan=150
 yan=1200
 
-[com_92]
+[dart_1]
 type=model
 x=256
 y=131
@@ -760,12 +759,12 @@ height=25
 script1op1=pushvar,targethit
 script1=eq,1
 model=floor_invisableicon_0
-activemodel=inv_dart
+activemodel=com_i4
 zoom=400
 xan=100
 yan=150
 
-[com_93]
+[dart_4]
 type=model
 x=290
 y=193
@@ -774,12 +773,12 @@ height=25
 script1op1=pushvar,targethit
 script1=eq,4
 model=floor_invisableicon_0
-activemodel=inv_dart
+activemodel=com_i4
 zoom=400
 xan=100
 yan=150
 
-[com_94]
+[dart_6]
 type=model
 x=247
 y=233
@@ -788,12 +787,12 @@ height=25
 script1op1=pushvar,targethit
 script1=eq,6
 model=floor_invisableicon_0
-activemodel=inv_dart
+activemodel=com_i4
 zoom=400
 xan=100
 yan=150
 
-[com_95]
+[dart_5]
 type=model
 x=193
 y=189
@@ -802,12 +801,12 @@ height=25
 script1op1=pushvar,targethit
 script1=eq,5
 model=floor_invisableicon_0
-activemodel=inv_dart
+activemodel=com_i4
 zoom=400
 xan=100
 yan=150
 
-[com_96]
+[dart_9]
 type=model
 x=191
 y=90
@@ -816,12 +815,12 @@ height=25
 script1op1=pushvar,targethit
 script1=eq,9
 model=floor_invisableicon_0
-activemodel=inv_dart
+activemodel=com_i4
 zoom=400
 xan=100
 yan=150
 
-[com_97]
+[dart_3]
 type=model
 x=215
 y=126
@@ -830,12 +829,12 @@ height=25
 script1op1=pushvar,targethit
 script1=eq,3
 model=floor_invisableicon_0
-activemodel=inv_dart
+activemodel=com_i4
 zoom=400
 xan=100
 yan=150
 
-[com_98]
+[dart_8]
 type=model
 x=298
 y=101
@@ -844,12 +843,12 @@ height=25
 script1op1=pushvar,targethit
 script1=eq,8
 model=floor_invisableicon_0
-activemodel=inv_dart
+activemodel=com_i4
 zoom=400
 xan=100
 yan=150
 
-[com_99]
+[dart_2]
 type=model
 x=294
 y=144
@@ -858,12 +857,12 @@ height=25
 script1op1=pushvar,targethit
 script1=eq,2
 model=floor_invisableicon_0
-activemodel=inv_dart
+activemodel=com_i4
 zoom=400
 xan=100
 yan=150
 
-[com_100]
+[dart_7]
 type=model
 x=328
 y=163
@@ -872,12 +871,12 @@ height=25
 script1op1=pushvar,targethit
 script1=eq,7
 model=floor_invisableicon_0
-activemodel=inv_dart
+activemodel=com_i4
 zoom=400
 xan=100
 yan=150
 
-[com_101]
+[dart_10]
 type=model
 x=275
 y=61
@@ -886,7 +885,7 @@ height=25
 script1op1=pushvar,targethit
 script1=eq,10
 model=floor_invisableicon_0
-activemodel=inv_dart
+activemodel=com_i4
 zoom=400
 xan=100
 yan=150
@@ -900,7 +899,7 @@ height=14
 font=p12_full
 shadowed=yes
 text=Shots
-colour=0xFFFF00
+colour=0xFFAA44
 
 [com_103]
 type=text
@@ -911,9 +910,9 @@ height=14
 font=p12_full
 shadowed=yes
 text=Score:
-colour=0xFFFF00
+colour=0xFFAA44
 
-[com_104]
+[score_text]
 type=text
 x=420
 y=169
@@ -935,7 +934,7 @@ height=14
 font=p12_full
 shadowed=yes
 text=Left:
-colour=0xFFFF00
+colour=0xFFAA44
 
 [com_106]
 type=text
@@ -989,7 +988,7 @@ width=25
 height=25
 script1op1=pushvar,targetcount
 script1=lt,10
-activemodel=proj_arrowlaunch
+activemodel=com_i5
 zoom=800
 xan=150
 yan=1200
@@ -1013,7 +1012,7 @@ width=25
 height=25
 script1op1=pushvar,targetcount
 script1=lt,9
-activemodel=proj_arrowlaunch
+activemodel=com_i5
 zoom=800
 xan=150
 yan=1200
@@ -1026,7 +1025,7 @@ width=25
 height=25
 script1op1=pushvar,targetcount
 script1=lt,8
-activemodel=proj_arrowlaunch
+activemodel=com_i5
 zoom=800
 xan=150
 yan=1200
@@ -1039,7 +1038,7 @@ width=25
 height=25
 script1op1=pushvar,targetcount
 script1=lt,7
-activemodel=proj_arrowlaunch
+activemodel=com_i5
 zoom=800
 xan=150
 yan=1200
@@ -1052,7 +1051,7 @@ width=25
 height=25
 script1op1=pushvar,targetcount
 script1=lt,6
-activemodel=proj_arrowlaunch
+activemodel=com_i5
 zoom=800
 xan=150
 yan=1200
@@ -1065,7 +1064,7 @@ width=25
 height=25
 script1op1=pushvar,targetcount
 script1=lt,5
-activemodel=proj_arrowlaunch
+activemodel=com_i5
 zoom=800
 xan=150
 yan=1200
@@ -1078,7 +1077,7 @@ width=25
 height=25
 script1op1=pushvar,targetcount
 script1=lt,4
-activemodel=proj_arrowlaunch
+activemodel=com_i5
 zoom=800
 xan=150
 yan=1200
@@ -1091,7 +1090,7 @@ width=25
 height=25
 script1op1=pushvar,targetcount
 script1=lt,3
-activemodel=proj_arrowlaunch
+activemodel=com_i5
 zoom=800
 xan=150
 yan=1200
@@ -1104,12 +1103,12 @@ width=25
 height=25
 script1op1=pushvar,targetcount
 script1=lt,2
-activemodel=proj_arrowlaunch
+activemodel=com_i5
 zoom=800
 xan=150
 yan=1200
 
-[com_120]
+[dart_hitmiss]
 type=text
 x=241
 y=114
@@ -1121,7 +1120,7 @@ shadowed=yes
 text=Missed!
 colour=0xFFFF00
 
-[com_121]
+[dart_close_button]
 type=text
 x=420
 y=29
@@ -1131,5 +1130,5 @@ height=11
 font=p11_full
 shadowed=yes
 text=Close Window
-colour=0xFF0000
+colour=0x808080
 overcolour=0xFFFFFF

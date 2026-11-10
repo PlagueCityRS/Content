@@ -121,8 +121,9 @@ sharelight=yes
 
 [dungeon_tree_open]
 name=Dungeon entrance
-desc=An over grown dungeon entrance.
+desc=An overgrown dungeon entrance.
 model=loc_5082
+forceapproach=south
 hillskew=yes
 resizex=95
 resizey=110
@@ -133,9 +134,10 @@ op1=Enter
 
 [dungeon_tree_closed]
 name=Dungeon entrance
-desc=A closed over grown dungeon entrance.
+desc=A closed overgrown dungeon entrance.
 model=loc_5082
 model2=loc_5083
+forceapproach=south
 hillskew=yes
 resizex=95
 resizey=110
@@ -150,7 +152,7 @@ desc=The way to go when I get scared.
 model=loc_5084
 sharelight=yes
 hillskew=yes
-op1=leave
+op1=Leave
 
 [loc_5085]
 model=loc_5085
@@ -184,7 +186,7 @@ active=yes
 sharelight=yes
 op1=Walk-across
 
-[loc_5091]
+[karam_cavewall_face1]
 model=skill_slayer_wall_cave
 recol1s=6307
 recol1d=7296
@@ -328,7 +330,7 @@ sharelight=yes
 hillskew=yes
 
 [karam_dungeon_vineblocking1]
-name=vines
+name=Vines
 desc=Thick vines blocking your way.
 model=loc_5103
 hillskew=yes
@@ -367,7 +369,7 @@ hillskew=yes
 op1=Chop-down
 op3=hidden
 
-[loc_5108]
+[karam_cavewall_vine]
 model=skill_slayer_wall_cave_vine
 recol1s=6307
 recol1d=7296
@@ -384,7 +386,7 @@ recol6d=12580
 sharelight=yes
 hillskew=yes
 
-[loc_5109]
+[karam_cavewall_vine_lev2]
 model=skill_slayer_wall_cave_lev2_vine
 recol1s=11592
 recol1d=12580
@@ -446,6 +448,7 @@ recol2d=9442
 recol3s=30347
 recol3d=8385
 blockrange=no
+blockwalk=no
 
 [loc_5115]
 name=Fungus
@@ -457,3 +460,5 @@ recol2s=30415
 recol2d=9442
 recol3s=30347
 recol3d=8385
+blockrange=no
+blockwalk=no

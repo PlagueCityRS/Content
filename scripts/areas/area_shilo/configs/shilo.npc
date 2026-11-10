@@ -27,7 +27,7 @@ wanderrange=3
 [shilofurnaceowner]
 vislevel=hide
 name=Yohnus
-desc=This is Yohnus - he runs the local blacksmiths.
+desc=This is Yohnus - he runs the local smithery.
 walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
 readyanim=human_ready
 op1=Talk-to
@@ -57,7 +57,7 @@ wanderrange=1
 [shilogeneralstore]
 vislevel=hide
 name=Obli
-desc=An intelligent looking shop owner.
+desc=An intelligent-looking shop owner.
 walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
 readyanim=human_ready
 op1=Talk-to

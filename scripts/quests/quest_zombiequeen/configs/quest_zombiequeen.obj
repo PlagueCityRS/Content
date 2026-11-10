@@ -79,7 +79,7 @@ tradeable=no
 param=destroy_drop,^true
 
 [zqcorpse]
-name=Rashiliya corpse
+name=Rashiliyia corpse
 desc=The remains of the Zombie Queen.
 model=inv_corpse
 2dxof=-4
@@ -87,8 +87,8 @@ model=inv_corpse
 2dzoom=1780
 2dyan=436
 2dxan=320
-weight=300g
 members=yes
+weight=300g
 tradeable=no
 param=destroy_drop,^true
 

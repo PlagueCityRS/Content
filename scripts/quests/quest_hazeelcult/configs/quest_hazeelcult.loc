@@ -130,13 +130,13 @@ op1=Search
 
 [carnilleanrange]
 name=Range
-desc=Used for cooking.
+desc=A hot range, where some soup is bubbling nicely.
 model=furniture_range
 active=yes
 length=2
 
 [hazeelcoffin]
-name=Hazeels' coffin
+name=Hazeel's coffin
 desc=Very ominous.
 model=quest_loc_2860
 width=3

@@ -1,6 +1,6 @@
 [fat_tony]
 vislevel=hide
-name=Fat tony
+name=Fat Tony
 desc=An expert on Pizzas. Both making and eating.
 walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
 readyanim=human_ready
@@ -13,6 +13,7 @@ model4=man_arms_fat
 model5=man_hands_basic
 model6=man_legs_basic
 model7=man_hat_chefs
+model8=man_feet_basic
 head1=chat_male_head_bald
 head2=chat_male_jaw_moustache
 head3=chat_male_hat_chefs

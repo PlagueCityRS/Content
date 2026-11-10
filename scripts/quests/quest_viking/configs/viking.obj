@@ -46,7 +46,7 @@ weight=4lb
 tradeable=no
 
 [magic_strung_lyre]
-name=Enchanted lyre
+name=Enchanted lyre(1)
 desc=This will teleport me to Rellekka when I play it.
 model=quest_viking_inv_lyre
 iop1=Play
@@ -461,9 +461,10 @@ weight=1g
 tradeable=no
 
 [viking_dummy_lid]
-name=Viking dummy lid
+name=Viking lid
 model=floor_invisableicon_0
 members=yes
+2dxof=1
 tradeable=no
 
 [viking_pointless_magnet]
@@ -526,7 +527,7 @@ tradeable=no
 
 [viking_bucket_5]
 name=Full bucket
-desc=This bucket is completely full. It has a 5 painted on it's side.
+desc=This bucket is completely full. It has a 5 painted on its side.
 model=inv_bucket-full
 2dyof=-18
 2dzoom=1020
@@ -538,7 +539,7 @@ tradeable=no
 
 [viking_bucket_4]
 name=4/5ths full bucket
-desc=This bucket is eighty percent full. It has a 5 painted on it's side.
+desc=This bucket is eighty percent full. It has a 5 painted on its side.
 model=inv_bucket-full
 2dyof=-18
 2dzoom=1020
@@ -550,7 +551,7 @@ tradeable=no
 
 [viking_bucket_3]
 name=3/5ths full bucket
-desc=This bucket is sixty percent full. It has a 5 painted on it's side.
+desc=This bucket is sixty percent full. It has a 5 painted on its side.
 model=inv_bucket-full
 2dyof=-18
 2dzoom=1020
@@ -562,7 +563,7 @@ tradeable=no
 
 [viking_bucket_2]
 name=2/5ths full bucket
-desc=This bucket is forty percent full. It has a 5 painted on it's side.
+desc=This bucket is forty percent full. It has a 5 painted on its side.
 model=inv_bucket-empty
 2dyof=-18
 2dzoom=1020
@@ -574,7 +575,7 @@ tradeable=no
 
 [viking_bucket_1]
 name=1/5ths full bucket
-desc=This bucket is twenty percent full. It has a 5 painted on it's side.
+desc=This bucket is twenty percent full. It has a 5 painted on its side.
 model=inv_bucket-empty
 2dyof=-18
 2dzoom=1020
@@ -586,7 +587,7 @@ tradeable=no
 
 [viking_bucket_empty]
 name=Empty bucket
-desc=This bucket is completely empty. It has a 5 painted on it's side.
+desc=This bucket is completely empty. It has a 5 painted on its side.
 model=inv_bucket-empty
 2dyof=-18
 2dzoom=1020
@@ -612,7 +613,7 @@ tradeable=no
 name=Full jug
 recol1s=32767
 recol1d=10645
-desc=This jug is completely full. It has a 3 painted on it's side.
+desc=This jug is completely full. It has a 3 painted on its side.
 model=inv_jug
 2dxof=1
 2dyof=100
@@ -628,7 +629,7 @@ param=destroy_death,^true
 name=2/3rds full jug
 recol1s=32767
 recol1d=15855
-desc=This jug is two thirds full. It has a 3 painted on it's side.
+desc=This jug is two thirds full. It has a 3 painted on its side.
 model=inv_jug
 2dxof=1
 2dyof=100
@@ -644,7 +645,7 @@ param=destroy_death,^true
 name=1/3rds full jug
 recol1s=32767
 recol1d=15855
-desc=This jug is one thirds full. It has a 3 painted on it's side.
+desc=This jug is one thirds full. It has a 3 painted on its side.
 model=inv_jug
 2dxof=1
 2dyof=100
@@ -660,7 +661,7 @@ param=destroy_death,^true
 name=Empty jug
 recol1s=32767
 recol1d=15855
-desc=This jug is completely empty. It has a 3 painted on it's side.
+desc=This jug is completely empty. It has a 3 painted on its side.
 model=inv_jug
 2dxof=1
 2dyof=100
@@ -865,7 +866,7 @@ param=destroy_death,^true
 name=Seers' key
 recol1s=31393
 recol1d=17799
-desc=The key to leave the Seers' house.
+desc=The key to leave the Seer's house.
 model=inv_key
 2dxof=-3
 2dyof=5

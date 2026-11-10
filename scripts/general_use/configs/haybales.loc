@@ -1,5 +1,5 @@
 [haystack]
-name=Hay Bails
+name=Hay Bales
 desc=I bet there's a needle in it somewhere.
 model=outdoorfurniture_haystack
 width=2
@@ -7,7 +7,7 @@ op1=Search
 blockrange=no
 
 [haystack2]
-name=Hay Bails
+name=Hay Bales
 desc=I bet there's a needle in it somewhere.
 model=outdoorfurniture_haystack2
 width=2
@@ -24,7 +24,7 @@ op1=Search
 blockrange=no
 
 [haybail]
-name=Hay bail
+name=Hay bale
 desc=I bet there's a needle in it somewhere.
 model=outdoorfurniture_haybail
 op1=Search

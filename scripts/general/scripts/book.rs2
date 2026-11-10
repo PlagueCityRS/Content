@@ -1,59 +1,59 @@
 [if_button,book:close]
 if_close();
 
-[if_button,book:com_84]
-switch_obj (%open_book) {
-    case baxtorian_book_waterfall_quest : @book_flip_page(^book_direction_backward, 0, 4, book_on_baxtorian_page);
-    case witches_diary : @book_flip_page(^book_direction_backward, 0, 3, witches_diary);
-    case ardougne_book : @book_flip_page(^book_direction_backward, 0, 3, guide_ardougne);
-    case the_shield_of_arrav : @book_flip_page(^book_direction_backward, 0, 2, shieldofarrav_book);
-    case book_of_astrology : @book_flip_page(^book_direction_backward, 0, 3, astrology_book);
-    case grandtree_translationbook : @book_flip_page(^book_direction_backward, 0, 4, translation_book);
-    case grandtree_journal : @book_flip_page(^book_direction_backward, 0, 3, glough_book);
-    case mcannonbook : @book_flip_page(^book_direction_backward, 0, 3, cannon_instructions);
-    case upass_journal : @book_flip_page(^book_direction_backward, 0, 1, journal_of_randas);
-    case old_journal : @book_flip_page(^book_direction_backward, 0, 2, ibanhistory);
-    case ibansshadow : @book_flip_page(^book_direction_backward, 0, 1, ibanshadow);
-    case ibansdove : @book_flip_page(^book_direction_backward, 0, 2, ibanconscience);
-    case digsitebook : @book_flip_page(^book_direction_backward, 0, 1, book_on_chemicals);
-    case book_of_binding : @book_flip_page(^book_direction_backward, 0, 4, book_of_binding_page);
-    case elemental_workshop_shield_book : @book_flip_page(^book_direction_backward, 0, 1, elemental_shield_book);
-    case serum_book : @book_flip_page(^book_direction_backward, 0, 12, serum_book);
-    case regicide_alchemy : @book_flip_page(^book_direction_backward, 0, 3, regicide_alchemy);
-    case misc_ghrimbook : @book_flip_page(^book_direction_backward, 0, 5, ghrims_book);
-    case horror_diary1 : @book_flip_page(^book_direction_backward, 0, 13, horror_diary1);
-    case horror_diary2 : @book_flip_page(^book_direction_backward, 0, 13, horror_diary2);
-    case horror_diary3 : @book_flip_page(^book_direction_backward, 0, 10, horror_diary3);
-    case castlewars_manual : @book_flip_page(^book_direction_backward, 0, 9, castlewars_manual);
-}
-p_delay(0);
+// [if_button,book:com_84]
+// switch_obj (%open_book) {
+//     case baxtorian_book_waterfall_quest : @book_flip_page(^book_direction_backward, 0, 4, book_on_baxtorian_page);
+//     case witches_diary : @book_flip_page(^book_direction_backward, 0, 3, witches_diary);
+//     case ardougne_book : @book_flip_page(^book_direction_backward, 0, 3, guide_ardougne);
+//     case the_shield_of_arrav : @book_flip_page(^book_direction_backward, 0, 2, shieldofarrav_book);
+//     case book_of_astrology : @book_flip_page(^book_direction_backward, 0, 3, astrology_book);
+//     case grandtree_translationbook : @book_flip_page(^book_direction_backward, 0, 4, translation_book);
+//     case grandtree_journal : @book_flip_page(^book_direction_backward, 0, 3, glough_book);
+//     case mcannonbook : @book_flip_page(^book_direction_backward, 0, 3, cannon_instructions);
+//     case upass_journal : @book_flip_page(^book_direction_backward, 0, 1, journal_of_randas);
+//     case old_journal : @book_flip_page(^book_direction_backward, 0, 2, ibanhistory);
+//     case ibansshadow : @book_flip_page(^book_direction_backward, 0, 1, ibanshadow);
+//     case ibansdove : @book_flip_page(^book_direction_backward, 0, 2, ibanconscience);
+//     case digsitebook : @book_flip_page(^book_direction_backward, 0, 1, book_on_chemicals);
+//     case book_of_binding : @book_flip_page(^book_direction_backward, 0, 4, book_of_binding_page);
+//     case elemental_workshop_shield_book : @book_flip_page(^book_direction_backward, 0, 1, elemental_shield_book);
+//     case serum_book : @book_flip_page(^book_direction_backward, 0, 12, serum_book);
+//     case regicide_alchemy : @book_flip_page(^book_direction_backward, 0, 3, regicide_alchemy);
+//     case misc_ghrimbook : @book_flip_page(^book_direction_backward, 0, 5, ghrims_book);
+//     case horror_diary1 : @book_flip_page(^book_direction_backward, 0, 13, horror_diary1);
+//     case horror_diary2 : @book_flip_page(^book_direction_backward, 0, 13, horror_diary2);
+//     case horror_diary3 : @book_flip_page(^book_direction_backward, 0, 10, horror_diary3);
+//     case castlewars_manual : @book_flip_page(^book_direction_backward, 0, 9, castlewars_manual);
+// }
+// p_delay(0);
 
-[if_button,book:com_86]
-switch_obj (%open_book) {
-    case baxtorian_book_waterfall_quest : @book_flip_page(^book_direction_forward, 0, 4, book_on_baxtorian_page);
-    case witches_diary : @book_flip_page(^book_direction_forward, 0, 3, witches_diary);
-    case ardougne_book : @book_flip_page(^book_direction_forward, 0, 3, guide_ardougne);
-    case the_shield_of_arrav : @book_flip_page(^book_direction_forward, 0, 2, shieldofarrav_book);
-    case book_of_astrology : @book_flip_page(^book_direction_forward, 0, 3, astrology_book);
-    case grandtree_translationbook : @book_flip_page(^book_direction_forward, 0, 4, translation_book);
-    case grandtree_journal : @book_flip_page(^book_direction_forward, 0, 3, glough_book);
-    case mcannonbook : @book_flip_page(^book_direction_forward, 0, 3, cannon_instructions);
-    case upass_journal : @book_flip_page(^book_direction_forward, 0, 1, journal_of_randas);
-    case old_journal : @book_flip_page(^book_direction_forward, 0, 2, ibanhistory);
-    case ibansshadow : @book_flip_page(^book_direction_forward, 0, 1, ibanshadow);
-    case ibansdove : @book_flip_page(^book_direction_forward, 0, 2, ibanconscience);
-    case digsitebook : @book_flip_page(^book_direction_forward, 0, 1, book_on_chemicals);
-    case book_of_binding : @book_flip_page(^book_direction_forward, 0, 4, book_of_binding_page);
-    case elemental_workshop_shield_book : @book_flip_page(^book_direction_forward, 0, 1, elemental_shield_book);
-    case serum_book : @book_flip_page(^book_direction_forward, 0, 12, serum_book);
-    case regicide_alchemy : @book_flip_page(^book_direction_forward, 0, 3, regicide_alchemy);
-    case misc_ghrimbook : @book_flip_page(^book_direction_forward, 0, 5, ghrims_book);
-    case horror_diary1 : @book_flip_page(^book_direction_forward, 0, 13, horror_diary1);
-    case horror_diary2 : @book_flip_page(^book_direction_forward, 0, 13, horror_diary2);
-    case horror_diary3 : @book_flip_page(^book_direction_forward, 0, 10, horror_diary3);
-    case castlewars_manual : @book_flip_page(^book_direction_forward, 0, 9, castlewars_manual);
-}
-p_delay(0);
+// [if_button,book:com_86]
+// switch_obj (%open_book) {
+//     case baxtorian_book_waterfall_quest : @book_flip_page(^book_direction_forward, 0, 4, book_on_baxtorian_page);
+//     case witches_diary : @book_flip_page(^book_direction_forward, 0, 3, witches_diary);
+//     case ardougne_book : @book_flip_page(^book_direction_forward, 0, 3, guide_ardougne);
+//     case the_shield_of_arrav : @book_flip_page(^book_direction_forward, 0, 2, shieldofarrav_book);
+//     case book_of_astrology : @book_flip_page(^book_direction_forward, 0, 3, astrology_book);
+//     case grandtree_translationbook : @book_flip_page(^book_direction_forward, 0, 4, translation_book);
+//     case grandtree_journal : @book_flip_page(^book_direction_forward, 0, 3, glough_book);
+//     case mcannonbook : @book_flip_page(^book_direction_forward, 0, 3, cannon_instructions);
+//     case upass_journal : @book_flip_page(^book_direction_forward, 0, 1, journal_of_randas);
+//     case old_journal : @book_flip_page(^book_direction_forward, 0, 2, ibanhistory);
+//     case ibansshadow : @book_flip_page(^book_direction_forward, 0, 1, ibanshadow);
+//     case ibansdove : @book_flip_page(^book_direction_forward, 0, 2, ibanconscience);
+//     case digsitebook : @book_flip_page(^book_direction_forward, 0, 1, book_on_chemicals);
+//     case book_of_binding : @book_flip_page(^book_direction_forward, 0, 4, book_of_binding_page);
+//     case elemental_workshop_shield_book : @book_flip_page(^book_direction_forward, 0, 1, elemental_shield_book);
+//     case serum_book : @book_flip_page(^book_direction_forward, 0, 12, serum_book);
+//     case regicide_alchemy : @book_flip_page(^book_direction_forward, 0, 3, regicide_alchemy);
+//     case misc_ghrimbook : @book_flip_page(^book_direction_forward, 0, 5, ghrims_book);
+//     case horror_diary1 : @book_flip_page(^book_direction_forward, 0, 13, horror_diary1);
+//     case horror_diary2 : @book_flip_page(^book_direction_forward, 0, 13, horror_diary2);
+//     case horror_diary3 : @book_flip_page(^book_direction_forward, 0, 10, horror_diary3);
+//     case castlewars_manual : @book_flip_page(^book_direction_forward, 0, 9, castlewars_manual);
+// }
+// p_delay(0);
 
 [proc,book](string $title, string $string)
 split_init($string, 175, 22, q8_full);

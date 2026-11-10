@@ -58,10 +58,11 @@ if ($quest_progress = ^eadgar_needs_items) {
     // from my run of the quest in OSRS, capitalization differs from RS3! ("Troll Cook" in OSRS versus "troll cook" in RS3)
     $new_text = "||@dbl@Eadgar wants to make a @dre@fake human @dbl@to give the Troll Cook.|I still need to bring him:";
 
-    def_int $chickens_needed = calc(5 - %eadgar_chickens);
-    def_int $grain_needed = calc(10 - %eadgar_grain);
+    // todo rework
+    def_int $chickens_needed = calc(5 - %varp_338);
+    def_int $grain_needed = calc(10 - %varp_337);
     def_string $items_remaining = "@dre@";
-    if(testbit(%eadgar_bits, ^eadgar_given_logs) ! 1) {
+    if(testbit(%eadgar_varbit, ^eadgar_given_logs) ! 1) {
         $items_remaining = append($items_remaining, "|Logs");
     }
     if($chickens_needed > 0) {
@@ -78,7 +79,7 @@ if ($quest_progress = ^eadgar_needs_items) {
             $items_remaining = append($items_remaining, "|<tostring($grain_needed)> sheaf of grain");
         }
     }
-    if(testbit(%eadgar_bits, ^eadgar_given_clothes) ! 1) {
+    if(testbit(%eadgar_varbit, ^eadgar_given_clothes) ! 1) {
         $items_remaining = append($items_remaining, "|Some Dirty Clothes");
     }
 

@@ -133,7 +133,7 @@ model=basic_force_barrier
 
 [zq_tribal_statue]
 name=Tribal Statue
-desc=A statue to mark Taie Bwo Wannai sacred grounds.
+desc=A statue to mark Tai Bwo Wannai sacred grounds.
 model=outdoorfurniture_tribalstatue
 width=2
 length=2

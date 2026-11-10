@@ -16,7 +16,19 @@ forceapproach=north
 [shiphole]
 name=Hole
 desc=This ship's not getting far with that.
-model=ship_loc_281
+model=shiphull_broken
+recol1s=10598
+recol1d=17799
+recol2s=9541
+recol2d=17799
+recol3s=8484
+recol3d=17799
+recol4s=7427
+recol4d=17799
+recol5s=6370
+recol5d=15685
+recol6s=5313
+recol6d=13571
 active=yes
 op1=Repair
 sharelight=yes
@@ -24,7 +36,15 @@ sharelight=yes
 [dragonshipladdertop]
 name=Ladder
 desc=Takes me into the ship.
-model=model_loc_273
+model=ship_laddertop
+recol1s=10598
+recol1d=12548
+recol2s=9541
+recol2d=11491
+recol3s=8484
+recol3d=10434
+recol4s=7427
+recol4d=10434
 active=yes
 op1=Climb-down
 mapscene=7
@@ -48,6 +68,7 @@ mapscene=7
 name=Gangplank
 desc=Handy for boarding the ship.
 model=ship_gangplank
+sharelight=yes
 active=yes
 op1=Cross
 
@@ -55,6 +76,7 @@ op1=Cross
 name=Gangplank
 desc=Handy for boarding the ship.
 model=ship_gangplank
+sharelight=yes
 active=yes
 op1=Cross
 
@@ -70,81 +92,101 @@ recol2s=6342
 recol2d=11458
 
 [reddoor]
-name=Door
-desc=It's closed.
-model=basic_wall
+name=Red door
+desc=A blood-red door.
+model=loc_1530
+recol1s=14626
+recol1d=13443
+recol2s=13569
+recol2d=12386
+recol3s=12512
+recol3d=11329
+recol4s=11456
+recol4d=10272
 active=yes
 op1=Open
-retex1s=wall
-retex1d=door2
-recol2s=6342
-recol2d=30753
 
 [orangedoor]
-name=Door
-desc=It's closed.
-model=basic_wall
+name=Orange door
+desc=A lurid orange door.
+model=loc_1530
+recol1s=14626
+recol1d=27041
+recol2s=13569
+recol2d=24961
+recol3s=12512
+recol3d=23937
+recol4s=11456
+recol4d=22881
 active=yes
 op1=Open
-retex1s=wall
-retex1d=door2
-recol2s=6342
-recol2d=31201
 
 [yellowdoor]
-name=Door
-desc=It's closed.
-model=basic_wall
+name=Yellow door
+desc=A sickly yellow door.
+model=loc_1530
+recol1s=14626
+recol1d=23243
+recol2s=13569
+recol2d=23241
+recol3s=12512
+recol3d=21129
+recol4s=11456
+recol4d=20072
 active=yes
 op1=Open
-retex1s=wall
-retex1d=door2
-recol2s=6342
-recol2d=31649
 
 [bluedoor]
-name=Door
-desc=It's closed.
-model=basic_wall
+name=Blue door
+desc=A gloomy blue door.
+model=loc_1530
+recol1s=14626
+recol1d=10640
+recol2s=13569
+recol2d=9583
+recol3s=12512
+recol3d=8526
+recol4s=11456
+recol4d=7469
 active=yes
 op1=Open
-retex1s=wall
-retex1d=door2
-recol2s=6342
-recol2d=31
 
 [magentadoor]
-name=Door
-desc=It's closed.
-model=basic_wall
+name=Magenta door
+desc=A groovy magenta door.
+model=loc_1530
+recol1s=14626
+recol1d=15695
+recol2s=13569
+recol2d=13645
+recol3s=12512
+recol3d=12588
+recol4s=11456
+recol4d=12524
 active=yes
 op1=Open
-retex1s=wall
-retex1d=door2
-recol2s=6342
-recol2d=30781
 
 [greendoor]
-name=Door
-desc=It's closed.
-model=basic_wall
+name=Green door
+desc=A putrid green door.
+model=loc_1530
+recol1s=14626
+recol1d=6437
+recol2s=13569
+recol2d=5380
+recol3s=12512
+recol3d=4323
+recol4s=11456
+recol4d=3266
 active=yes
 op1=Open
-retex1s=wall
-retex1d=door2
-recol2s=6342
-recol2d=2626
 
 [funexit]
-name=Door
-desc=It's closed.
-model=basic_wall
+name=Exit door
+desc=Probably the nicest door in this ghastly place.
+model=loc_1530
 active=yes
 op1=Open
-retex1s=wall
-retex1d=door2
-recol2s=6342
-recol2d=11458
 
 [funchestshut]
 name=Chest

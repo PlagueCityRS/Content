@@ -710,7 +710,7 @@ width=5
 height=6
 margin=10,1
 
-[com_89]
+[com_88]
 type=model
 x=52
 y=280
@@ -721,15 +721,15 @@ zoom=1031
 xan=105
 yan=312
 
-[com_90]
+[com_89]
 type=layer
 x=359
 y=264
 width=78
 height=42
 
-[com_92]
-layer=com_90
+[com_91]
+layer=com_89
 type=rect
 x=6
 y=6
@@ -738,8 +738,8 @@ width=66
 height=31
 fill=yes
 
-[com_93]
-layer=com_90
+[com_92]
+layer=com_89
 type=text
 x=23
 y=14
@@ -751,8 +751,8 @@ text=Claim!
 colour=0x008000
 overcolour=0x00FF00
 
-[com_94]
-layer=com_90
+[com_93]
+layer=com_89
 type=graphic
 x=21
 y=-15
@@ -760,8 +760,8 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_95]
-layer=com_90
+[com_94]
+layer=com_89
 type=graphic
 x=0
 y=0
@@ -769,8 +769,8 @@ width=25
 height=30
 graphic=steelborder,0
 
-[com_96]
-layer=com_90
+[com_95]
+layer=com_89
 type=graphic
 x=53
 y=0
@@ -778,8 +778,8 @@ width=25
 height=30
 graphic=steelborder,1
 
-[com_97]
-layer=com_90
+[com_96]
+layer=com_89
 type=graphic
 x=0
 y=13
@@ -787,8 +787,8 @@ width=25
 height=30
 graphic=steelborder,2
 
-[com_98]
-layer=com_90
+[com_97]
+layer=com_89
 type=graphic
 x=53
 y=13
@@ -796,8 +796,8 @@ width=25
 height=30
 graphic=steelborder,3
 
-[com_99]
-layer=com_90
+[com_98]
+layer=com_89
 type=graphic
 x=21
 y=22
@@ -805,7 +805,7 @@ width=36
 height=36
 graphic=miscgraphics,3
 
-[com_91]
+[com_90]
 type=text
 x=21
 y=29
@@ -816,7 +816,7 @@ shadowed=yes
 text=You are victorious!
 colour=0xFFAA44
 
-[com_100]
+[com_99]
 type=text
 x=423
 y=29
@@ -829,7 +829,7 @@ text=Close Window
 colour=0x808080
 overcolour=0xFFFFFF
 
-[com_101]
+[com_100]
 type=text
 x=110
 y=71
@@ -840,7 +840,7 @@ shadowed=yes
 text=The Spoils:
 colour=0xAA8822
 
-[com_102]
+[com_101]
 type=text
 x=323
 y=71
@@ -851,7 +851,7 @@ shadowed=yes
 text=The Defeated:
 colour=0xAA8822
 
-[com_103]
+[com_102]
 type=text
 x=323
 y=97
@@ -862,7 +862,7 @@ shadowed=yes
 text=Name:
 colour=0xAA8822
 
-[com_104]
+[com_103]
 type=text
 x=323
 y=121
@@ -895,7 +895,7 @@ shadowed=yes
 text=Crunchy
 colour=0xAAAAAA
 
-[com_107]
+[com_104]
 type=model
 x=381
 y=210

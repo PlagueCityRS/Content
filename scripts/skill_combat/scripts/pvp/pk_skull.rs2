@@ -30,13 +30,11 @@ if (~deserves_pk_skull = true) {
 
 // requires active_player
 [proc,pk_skull](int $duration)
-~headicon_add(^headicon_skull);
 %pk_skull = add(map_clock, $duration);
 clearsofttimer(pk_skull_timer);
 softtimer(pk_skull_timer, $duration);
 
 [proc,clear_pk_skull]
-~headicon_del(^headicon_skull);
 clearsofttimer(pk_skull_timer);
 %pk_skull = 0;
 

@@ -91,6 +91,7 @@ model=furniture_cupboard-high
 length=2
 op1=Open
 forceapproach=east
+blockwalk=no
 category=cupboard_closed
 param=cupboard_other,garliccupboardopen
 
@@ -102,5 +103,6 @@ length=2
 op1=Search
 op2=Close
 forceapproach=east
+raiseobject=no
 category=cupboard_opened
 param=cupboard_other,garliccupboardshut

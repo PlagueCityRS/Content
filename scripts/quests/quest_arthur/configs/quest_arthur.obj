@@ -1,11 +1,11 @@
 [lit_black_candle]
 name=Lit black candle
+recol1s=32767
+recol1d=2114
 desc=A lit spooky candle.
 members=yes
 cost=3
 model=inv_candle-lit
-recol1s=32767
-recol1d=2114
 2dyof=-2
 2dzoom=570
 2dyan=1864
@@ -13,6 +13,7 @@ recol1d=2114
 weight=1oz
 category=light_source_lit
 param=next_obj_stage,unlit_black_candle
+iop1=Extinguish
 tradeable=no
 
 [lit_candle]
@@ -25,9 +26,23 @@ model=inv_candle-lit
 2dzoom=570
 2dyan=1864
 2dxan=168
-weight=1oz
+iop1=Extinguish
 category=light_source_lit
 param=next_obj_stage,unlit_candle
+tradeable=no
+
+[cert_lit_candle]
+name=Lit candle
+desc=A lit candle.
+members=yes
+cost=3
+model=inv_candle-lit
+2dyof=-2
+2dzoom=570
+2dyan=1864
+2dxan=168
+iop1=Extinguish
+stackable=yes
 
 [excalibur]
 name=Excalibur

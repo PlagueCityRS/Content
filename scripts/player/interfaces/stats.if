@@ -1,5 +1,3 @@
-type=overlay
-
 [com_0]
 type=layer
 x=0
@@ -88,7 +86,7 @@ width=25
 height=25
 graphic=staticons,12
 
-[com_86]
+[com_68]
 layer=com_0
 type=text
 x=32
@@ -102,7 +100,7 @@ shadowed=yes
 text=%1
 colour=0xFFFF00
 
-[com_87]
+[com_69]
 layer=com_0
 type=text
 x=44
@@ -117,7 +115,7 @@ shadowed=yes
 text=%1
 colour=0xFFFF00
 
-[com_98]
+[com_80]
 layer=com_0
 type=text
 x=96
@@ -131,7 +129,7 @@ shadowed=yes
 text=%1
 colour=0xFFFF00
 
-[com_99]
+[com_81]
 layer=com_0
 type=text
 x=108
@@ -145,7 +143,7 @@ shadowed=yes
 text=%1
 colour=0xFFFF00
 
-[com_110]
+[com_92]
 layer=com_0
 type=text
 x=160
@@ -159,7 +157,7 @@ shadowed=yes
 text=%1
 colour=0xFFFF00
 
-[com_111]
+[com_93]
 layer=com_0
 type=text
 x=172
@@ -261,7 +259,7 @@ width=25
 height=25
 graphic=staticons,13
 
-[com_88]
+[com_70]
 layer=com_7
 type=text
 x=32
@@ -275,7 +273,7 @@ shadowed=yes
 text=%1
 colour=0xFFFF00
 
-[com_89]
+[com_71]
 layer=com_7
 type=text
 x=44
@@ -290,7 +288,7 @@ shadowed=yes
 text=%1
 colour=0xFFFF00
 
-[com_100]
+[com_82]
 layer=com_7
 type=text
 x=96
@@ -304,7 +302,7 @@ shadowed=yes
 text=%1
 colour=0xFFFF00
 
-[com_101]
+[com_83]
 layer=com_7
 type=text
 x=108
@@ -318,7 +316,7 @@ shadowed=yes
 text=%1
 colour=0xFFFF00
 
-[com_112]
+[com_94]
 layer=com_7
 type=text
 x=160
@@ -332,7 +330,7 @@ shadowed=yes
 text=%1
 colour=0xFFFF00
 
-[com_113]
+[com_95]
 layer=com_7
 type=text
 x=172
@@ -425,7 +423,7 @@ width=25
 height=25
 graphic=staticons,14
 
-[com_90]
+[com_72]
 layer=com_14
 type=text
 x=32
@@ -439,7 +437,7 @@ shadowed=yes
 text=%1
 colour=0xFFFF00
 
-[com_91]
+[com_73]
 layer=com_14
 type=text
 x=44
@@ -454,7 +452,7 @@ shadowed=yes
 text=%1
 colour=0xFFFF00
 
-[com_102]
+[com_84]
 layer=com_14
 type=text
 x=96
@@ -468,7 +466,7 @@ shadowed=yes
 text=%1
 colour=0xFFFF00
 
-[com_103]
+[com_85]
 layer=com_14
 type=text
 x=108
@@ -482,7 +480,7 @@ shadowed=yes
 text=%1
 colour=0xFFFF00
 
-[com_114]
+[com_96]
 layer=com_14
 type=text
 x=160
@@ -496,7 +494,7 @@ shadowed=yes
 text=%1
 colour=0xFFFF00
 
-[com_115]
+[com_97]
 layer=com_14
 type=text
 x=172
@@ -512,7 +510,7 @@ colour=0xFFFF00
 
 [com_21]
 type=layer
-x=-1
+x=0
 y=93
 width=190
 height=36
@@ -598,7 +596,7 @@ width=25
 height=25
 graphic=staticons,15
 
-[com_92]
+[com_74]
 layer=com_21
 type=text
 x=33
@@ -612,7 +610,7 @@ shadowed=yes
 text=%1
 colour=0xFFFF00
 
-[com_93]
+[com_75]
 layer=com_21
 type=text
 x=45
@@ -626,7 +624,7 @@ shadowed=yes
 text=%1
 colour=0xFFFF00
 
-[com_104]
+[com_86]
 layer=com_21
 type=text
 x=97
@@ -640,7 +638,7 @@ shadowed=yes
 text=%1
 colour=0xFFFF00
 
-[com_105]
+[com_87]
 layer=com_21
 type=text
 x=109
@@ -654,10 +652,10 @@ shadowed=yes
 text=%1
 colour=0xFFFF00
 
-[com_116]
+[com_98]
 layer=com_21
 type=text
-x=161
+x=160
 y=5
 width=15
 height=12
@@ -668,10 +666,10 @@ shadowed=yes
 text=%1
 colour=0xFFFF00
 
-[com_117]
+[com_99]
 layer=com_21
 type=text
-x=173
+x=172
 y=17
 width=15
 height=12
@@ -684,7 +682,7 @@ colour=0xFFFF00
 
 [com_28]
 type=layer
-x=-1
+x=0
 y=124
 width=190
 height=36
@@ -770,7 +768,7 @@ width=25
 height=25
 graphic=staticons,16
 
-[com_94]
+[com_76]
 layer=com_28
 type=text
 x=33
@@ -784,7 +782,7 @@ shadowed=yes
 text=%1
 colour=0xFFFF00
 
-[com_95]
+[com_77]
 layer=com_28
 type=text
 x=45
@@ -798,7 +796,7 @@ shadowed=yes
 text=%1
 colour=0xFFFF00
 
-[com_106]
+[com_88]
 layer=com_28
 type=text
 x=96
@@ -812,7 +810,7 @@ shadowed=yes
 text=%1
 colour=0xFFFF00
 
-[com_107]
+[com_89]
 layer=com_28
 type=text
 x=109
@@ -826,7 +824,7 @@ shadowed=yes
 text=%1
 colour=0xFFFF00
 
-[com_118]
+[com_100]
 layer=com_28
 type=text
 x=161
@@ -840,10 +838,10 @@ shadowed=yes
 text=%1
 colour=0xFFFF00
 
-[com_119]
+[com_101]
 layer=com_28
 type=text
-x=173
+x=172
 y=17
 width=15
 height=12
@@ -856,7 +854,7 @@ colour=0xFFFF00
 
 [com_35]
 type=layer
-x=-1
+x=0
 y=155
 width=190
 height=36
@@ -942,7 +940,7 @@ width=25
 height=25
 graphic=staticons,17
 
-[com_96]
+[com_78]
 layer=com_35
 type=text
 x=33
@@ -956,7 +954,7 @@ shadowed=yes
 text=%1
 colour=0xFFFF00
 
-[com_97]
+[com_79]
 layer=com_35
 type=text
 x=45
@@ -970,7 +968,7 @@ shadowed=yes
 text=%1
 colour=0xFFFF00
 
-[com_108]
+[com_90]
 layer=com_35
 type=text
 x=97
@@ -984,7 +982,7 @@ shadowed=yes
 text=%1
 colour=0xFFFF00
 
-[com_109]
+[com_91]
 layer=com_35
 type=text
 x=109
@@ -998,7 +996,7 @@ shadowed=yes
 text=%1
 colour=0xFFFF00
 
-[com_120]
+[com_102]
 layer=com_35
 type=text
 x=161
@@ -1012,10 +1010,10 @@ shadowed=yes
 text=%1
 colour=0xFFFF00
 
-[com_121]
+[com_103]
 layer=com_35
 type=text
-x=173
+x=172
 y=17
 width=15
 height=12
@@ -1123,10 +1121,10 @@ y=2
 buttontype=normal
 width=64
 height=31
-overlayer=com_122
+overlayer=com_104
 font=p12_full
 shadowed=yes
-option=View @lre@Combat@whi@ advancements
+option=View @or1@Combat @whi@guide
 
 [hitpoints]
 type=text
@@ -1135,10 +1133,10 @@ y=2
 buttontype=normal
 width=64
 height=31
-overlayer=com_158
+overlayer=com_140
 font=p12_full
 shadowed=yes
-option=View @lre@Combat@whi@ advancements
+option=View @or1@Combat @whi@guide
 
 [mining]
 type=text
@@ -1147,10 +1145,10 @@ y=2
 buttontype=normal
 width=64
 height=31
-overlayer=com_194
+overlayer=com_176
 font=p12_full
 shadowed=yes
-option=View @lre@Mining@whi@ advancements
+option=View @or1@Mining @whi@guide
 
 [strength]
 type=text
@@ -1159,10 +1157,10 @@ y=33
 buttontype=normal
 width=64
 height=31
-overlayer=com_128
+overlayer=com_110
 font=p12_full
 shadowed=yes
-option=View @lre@Combat@whi@ advancements
+option=View @or1@Combat @whi@guide
 
 [agility]
 type=text
@@ -1171,10 +1169,10 @@ y=33
 buttontype=normal
 width=64
 height=31
-overlayer=com_164
+overlayer=com_146
 font=p12_full
 shadowed=yes
-option=View @lre@Agility@whi@ advancements
+option=View @or1@Agility @whi@guide
 
 [smithing]
 type=text
@@ -1183,10 +1181,10 @@ y=33
 buttontype=normal
 width=64
 height=31
-overlayer=com_200
+overlayer=com_182
 font=p12_full
 shadowed=yes
-option=View @lre@Smithing@whi@ advancements
+option=View @or1@Smithing @whi@guide
 
 [defence]
 type=text
@@ -1195,10 +1193,10 @@ y=64
 buttontype=normal
 width=64
 height=31
-overlayer=com_134
+overlayer=com_116
 font=p12_full
 shadowed=yes
-option=View @lre@Combat@whi@ advancements
+option=View @or1@Combat @whi@guide
 
 [herblore]
 type=text
@@ -1207,10 +1205,10 @@ y=64
 buttontype=normal
 width=64
 height=31
-overlayer=com_170
+overlayer=com_152
 font=p12_full
 shadowed=yes
-option=View @lre@Herblore@whi@ advancements
+option=View @or1@Herblore @whi@guide
 
 [fishing]
 type=text
@@ -1219,10 +1217,10 @@ y=64
 buttontype=normal
 width=64
 height=31
-overlayer=com_206
+overlayer=com_188
 font=p12_full
 shadowed=yes
-option=View @lre@Fishing@whi@ advancements
+option=View @or1@Fishing @whi@guide
 
 [ranged]
 type=text
@@ -1231,10 +1229,10 @@ y=95
 buttontype=normal
 width=64
 height=31
-overlayer=com_140
+overlayer=com_122
 font=p12_full
 shadowed=yes
-option=View @lre@Ranged@whi@ advancements
+option=View @or1@Ranged @whi@guide
 
 [thieving]
 type=text
@@ -1243,10 +1241,10 @@ y=95
 buttontype=normal
 width=64
 height=31
-overlayer=com_176
+overlayer=com_158
 font=p12_full
 shadowed=yes
-option=View @lre@Thieving@whi@ advancements
+option=View @or1@Thieving @whi@guide
 
 [cooking]
 type=text
@@ -1255,10 +1253,10 @@ y=95
 buttontype=normal
 width=64
 height=31
-overlayer=com_212
+overlayer=com_194
 font=p12_full
 shadowed=yes
-option=View @lre@Cooking@whi@ advancements
+option=View @or1@Cooking @whi@guide
 
 [prayer]
 type=text
@@ -1267,10 +1265,10 @@ y=126
 buttontype=normal
 width=64
 height=31
-overlayer=com_146
+overlayer=com_128
 font=p12_full
 shadowed=yes
-option=View @lre@Prayer@whi@ advancements
+option=View @or1@Prayer @whi@guide
 
 [crafting]
 type=text
@@ -1279,10 +1277,10 @@ y=126
 buttontype=normal
 width=64
 height=31
-overlayer=com_182
+overlayer=com_164
 font=p12_full
 shadowed=yes
-option=View @lre@Crafting@whi@ advancements
+option=View @or1@Crafting @whi@guide
 
 [firemaking]
 type=text
@@ -1291,10 +1289,10 @@ y=126
 buttontype=normal
 width=64
 height=31
-overlayer=com_218
+overlayer=com_200
 font=p12_full
 shadowed=yes
-option=View @lre@Firemaking@whi@ advancements
+option=View @or1@Firemaking @whi@guide
 
 [magic]
 type=text
@@ -1303,10 +1301,10 @@ y=157
 buttontype=normal
 width=64
 height=31
-overlayer=com_152
+overlayer=com_134
 font=p12_full
 shadowed=yes
-option=View @lre@Magic@whi@ advancements
+option=View @or1@Magic @whi@guide
 
 [fletching]
 type=text
@@ -1315,10 +1313,10 @@ y=157
 buttontype=normal
 width=64
 height=31
-overlayer=com_188
+overlayer=com_170
 font=p12_full
 shadowed=yes
-option=View @lre@Fletching@whi@ advancements
+option=View @or1@Fletching @whi@guide
 
 [woodcutting]
 type=text
@@ -1327,10 +1325,211 @@ y=157
 buttontype=normal
 width=64
 height=31
-overlayer=com_224
+overlayer=com_206
 font=p12_full
 shadowed=yes
-option=View @lre@Woodcutting@whi@ advancements
+option=View @or1@Woodcutting @whi@guide
+
+[com_104]
+type=layer
+x=2
+y=216
+width=183
+height=43
+hide=yes
+
+[com_105]
+layer=com_104
+type=rect
+x=4
+y=7
+width=174
+height=32
+fill=yes
+
+[com_106]
+layer=com_104
+type=text
+x=6
+y=7
+width=56
+height=14
+font=p12_full
+shadowed=yes
+text=Attack XP:
+colour=0xFFFF00
+
+[com_107]
+layer=com_104
+type=text
+x=6
+y=23
+width=74
+height=14
+font=p12_full
+shadowed=yes
+text=Next Level At:
+colour=0xFFFF00
+
+[com_108]
+layer=com_104
+type=text
+x=66
+y=7
+width=15
+height=14
+script1op1=stat_xp,attack
+font=p12_full
+shadowed=yes
+text=%1
+colour=0xFFFF00
+
+[com_109]
+layer=com_104
+type=text
+x=84
+y=23
+width=15
+height=14
+script1op1=stat_xp_remaining,attack
+font=p12_full
+shadowed=yes
+text=%1
+colour=0xFFFF00
+
+[com_110]
+type=layer
+x=2
+y=216
+width=183
+height=43
+hide=yes
+
+[com_111]
+layer=com_110
+type=rect
+x=4
+y=7
+width=174
+height=32
+fill=yes
+
+[com_112]
+layer=com_110
+type=text
+x=6
+y=7
+width=70
+height=14
+font=p12_full
+shadowed=yes
+text=Strength XP:
+colour=0xFFFF00
+
+[com_113]
+layer=com_110
+type=text
+x=6
+y=23
+width=74
+height=14
+font=p12_full
+shadowed=yes
+text=Next Level At:
+colour=0xFFFF00
+
+[com_114]
+layer=com_110
+type=text
+x=77
+y=7
+width=15
+height=14
+script1op1=stat_xp,strength
+font=p12_full
+shadowed=yes
+text=%1
+colour=0xFFFF00
+
+[com_115]
+layer=com_110
+type=text
+x=84
+y=23
+width=15
+height=14
+script1op1=stat_xp_remaining,strength
+font=p12_full
+shadowed=yes
+text=%1
+colour=0xFFFF00
+
+[com_116]
+type=layer
+x=2
+y=216
+width=183
+height=43
+hide=yes
+
+[com_117]
+layer=com_116
+type=rect
+x=4
+y=7
+width=174
+height=32
+fill=yes
+
+[com_118]
+layer=com_116
+type=text
+x=6
+y=7
+width=66
+height=14
+font=p12_full
+shadowed=yes
+text=Defence XP:
+colour=0xFFFF00
+
+[com_119]
+layer=com_116
+type=text
+x=6
+y=23
+width=74
+height=14
+font=p12_full
+shadowed=yes
+text=Next Level At:
+colour=0xFFFF00
+
+[com_120]
+layer=com_116
+type=text
+x=76
+y=7
+width=15
+height=14
+script1op1=stat_xp,defence
+font=p12_full
+shadowed=yes
+text=%1
+colour=0xFFFF00
+
+[com_121]
+layer=com_116
+type=text
+x=84
+y=23
+width=15
+height=14
+script1op1=stat_xp_remaining,defence
+font=p12_full
+shadowed=yes
+text=%1
+colour=0xFFFF00
 
 [com_122]
 type=layer
@@ -1354,11 +1553,11 @@ layer=com_122
 type=text
 x=6
 y=7
-width=56
+width=63
 height=14
 font=p12_full
 shadowed=yes
-text=Attack XP:
+text=Ranged XP:
 colour=0xFFFF00
 
 [com_125]
@@ -1376,11 +1575,11 @@ colour=0xFFFF00
 [com_126]
 layer=com_122
 type=text
-x=66
+x=73
 y=7
 width=15
 height=14
-script1op1=stat_xp,attack
+script1op1=stat_xp,ranged
 font=p12_full
 shadowed=yes
 text=%1
@@ -1389,11 +1588,11 @@ colour=0xFFFF00
 [com_127]
 layer=com_122
 type=text
-x=86
+x=84
 y=23
 width=15
 height=14
-script1op1=stat_xp_remaining,attack
+script1op1=stat_xp_remaining,ranged
 font=p12_full
 shadowed=yes
 text=%1
@@ -1421,11 +1620,11 @@ layer=com_128
 type=text
 x=6
 y=7
-width=70
+width=54
 height=14
 font=p12_full
 shadowed=yes
-text=Strength XP:
+text=Prayer XP:
 colour=0xFFFF00
 
 [com_131]
@@ -1443,11 +1642,11 @@ colour=0xFFFF00
 [com_132]
 layer=com_128
 type=text
-x=77
+x=64
 y=7
 width=15
 height=14
-script1op1=stat_xp,strength
+script1op1=stat_xp,prayer
 font=p12_full
 shadowed=yes
 text=%1
@@ -1460,7 +1659,7 @@ x=84
 y=23
 width=15
 height=14
-script1op1=stat_xp_remaining,strength
+script1op1=stat_xp_remaining,prayer
 font=p12_full
 shadowed=yes
 text=%1
@@ -1488,11 +1687,11 @@ layer=com_134
 type=text
 x=6
 y=7
-width=66
+width=51
 height=14
 font=p12_full
 shadowed=yes
-text=Defence XP:
+text=Magic XP:
 colour=0xFFFF00
 
 [com_137]
@@ -1510,11 +1709,11 @@ colour=0xFFFF00
 [com_138]
 layer=com_134
 type=text
-x=76
+x=60
 y=7
 width=15
 height=14
-script1op1=stat_xp,defence
+script1op1=stat_xp,magic
 font=p12_full
 shadowed=yes
 text=%1
@@ -1527,7 +1726,7 @@ x=84
 y=23
 width=15
 height=14
-script1op1=stat_xp_remaining,defence
+script1op1=stat_xp_remaining,magic
 font=p12_full
 shadowed=yes
 text=%1
@@ -1555,11 +1754,11 @@ layer=com_140
 type=text
 x=6
 y=7
-width=63
+width=70
 height=14
 font=p12_full
 shadowed=yes
-text=Ranged XP:
+text=Hitpoints XP:
 colour=0xFFFF00
 
 [com_143]
@@ -1577,11 +1776,11 @@ colour=0xFFFF00
 [com_144]
 layer=com_140
 type=text
-x=73
+x=80
 y=7
 width=15
 height=14
-script1op1=stat_xp,ranged
+script1op1=stat_xp,hitpoints
 font=p12_full
 shadowed=yes
 text=%1
@@ -1594,7 +1793,7 @@ x=84
 y=23
 width=15
 height=14
-script1op1=stat_xp_remaining,ranged
+script1op1=stat_xp_remaining,hitpoints
 font=p12_full
 shadowed=yes
 text=%1
@@ -1622,11 +1821,11 @@ layer=com_146
 type=text
 x=6
 y=7
-width=54
+width=53
 height=14
 font=p12_full
 shadowed=yes
-text=Prayer XP:
+text=Agility XP:
 colour=0xFFFF00
 
 [com_149]
@@ -1648,7 +1847,7 @@ x=64
 y=7
 width=15
 height=14
-script1op1=stat_xp,prayer
+script1op1=stat_xp,agility
 font=p12_full
 shadowed=yes
 text=%1
@@ -1661,7 +1860,7 @@ x=84
 y=23
 width=15
 height=14
-script1op1=stat_xp_remaining,prayer
+script1op1=stat_xp_remaining,agility
 font=p12_full
 shadowed=yes
 text=%1
@@ -1689,11 +1888,11 @@ layer=com_152
 type=text
 x=6
 y=7
-width=51
+width=67
 height=14
 font=p12_full
 shadowed=yes
-text=Magic XP:
+text=Herblore XP:
 colour=0xFFFF00
 
 [com_155]
@@ -1711,11 +1910,11 @@ colour=0xFFFF00
 [com_156]
 layer=com_152
 type=text
-x=60
+x=76
 y=7
 width=15
 height=14
-script1op1=stat_xp,magic
+script1op1=stat_xp,herblore
 font=p12_full
 shadowed=yes
 text=%1
@@ -1728,7 +1927,7 @@ x=84
 y=23
 width=15
 height=14
-script1op1=stat_xp_remaining,magic
+script1op1=stat_xp_remaining,herblore
 font=p12_full
 shadowed=yes
 text=%1
@@ -1756,11 +1955,11 @@ layer=com_158
 type=text
 x=6
 y=7
-width=70
+width=65
 height=14
 font=p12_full
 shadowed=yes
-text=Hitpoints XP:
+text=Thieving XP:
 colour=0xFFFF00
 
 [com_161]
@@ -1778,11 +1977,11 @@ colour=0xFFFF00
 [com_162]
 layer=com_158
 type=text
-x=80
+x=76
 y=7
 width=15
 height=14
-script1op1=stat_xp,hitpoints
+script1op1=stat_xp,thieving
 font=p12_full
 shadowed=yes
 text=%1
@@ -1795,7 +1994,7 @@ x=84
 y=23
 width=15
 height=14
-script1op1=stat_xp_remaining,hitpoints
+script1op1=stat_xp_remaining,thieving
 font=p12_full
 shadowed=yes
 text=%1
@@ -1823,11 +2022,11 @@ layer=com_164
 type=text
 x=6
 y=7
-width=53
+width=64
 height=14
 font=p12_full
 shadowed=yes
-text=Agility XP:
+text=Crafting XP:
 colour=0xFFFF00
 
 [com_167]
@@ -1845,11 +2044,11 @@ colour=0xFFFF00
 [com_168]
 layer=com_164
 type=text
-x=64
+x=72
 y=7
 width=15
 height=14
-script1op1=stat_xp,agility
+script1op1=stat_xp,crafting
 font=p12_full
 shadowed=yes
 text=%1
@@ -1862,7 +2061,7 @@ x=84
 y=23
 width=15
 height=14
-script1op1=stat_xp_remaining,agility
+script1op1=stat_xp_remaining,crafting
 font=p12_full
 shadowed=yes
 text=%1
@@ -1890,11 +2089,11 @@ layer=com_170
 type=text
 x=6
 y=7
-width=67
+width=69
 height=14
 font=p12_full
 shadowed=yes
-text=Herblore XP:
+text=Fletching XP:
 colour=0xFFFF00
 
 [com_173]
@@ -1912,11 +2111,11 @@ colour=0xFFFF00
 [com_174]
 layer=com_170
 type=text
-x=76
+x=80
 y=7
 width=15
 height=14
-script1op1=stat_xp,herblore
+script1op1=stat_xp,fletching
 font=p12_full
 shadowed=yes
 text=%1
@@ -1929,7 +2128,7 @@ x=84
 y=23
 width=15
 height=14
-script1op1=stat_xp_remaining,herblore
+script1op1=stat_xp_remaining,fletching
 font=p12_full
 shadowed=yes
 text=%1
@@ -1957,11 +2156,11 @@ layer=com_176
 type=text
 x=6
 y=7
-width=65
+width=55
 height=14
 font=p12_full
 shadowed=yes
-text=Thieving XP:
+text=Mining XP:
 colour=0xFFFF00
 
 [com_179]
@@ -1979,11 +2178,11 @@ colour=0xFFFF00
 [com_180]
 layer=com_176
 type=text
-x=76
+x=64
 y=7
 width=15
 height=14
-script1op1=stat_xp,thieving
+script1op1=stat_xp,mining
 font=p12_full
 shadowed=yes
 text=%1
@@ -1996,7 +2195,7 @@ x=84
 y=23
 width=15
 height=14
-script1op1=stat_xp_remaining,thieving
+script1op1=stat_xp_remaining,mining
 font=p12_full
 shadowed=yes
 text=%1
@@ -2024,11 +2223,11 @@ layer=com_182
 type=text
 x=6
 y=7
-width=64
+width=69
 height=14
 font=p12_full
 shadowed=yes
-text=Crafting XP:
+text=Smithing XP:
 colour=0xFFFF00
 
 [com_185]
@@ -2046,11 +2245,11 @@ colour=0xFFFF00
 [com_186]
 layer=com_182
 type=text
-x=72
+x=80
 y=7
 width=15
 height=14
-script1op1=stat_xp,crafting
+script1op1=stat_xp,smithing
 font=p12_full
 shadowed=yes
 text=%1
@@ -2063,7 +2262,7 @@ x=84
 y=23
 width=15
 height=14
-script1op1=stat_xp_remaining,crafting
+script1op1=stat_xp_remaining,smithing
 font=p12_full
 shadowed=yes
 text=%1
@@ -2091,11 +2290,11 @@ layer=com_188
 type=text
 x=6
 y=7
-width=69
+width=59
 height=14
 font=p12_full
 shadowed=yes
-text=Fletching XP:
+text=Fishing XP:
 colour=0xFFFF00
 
 [com_191]
@@ -2113,11 +2312,11 @@ colour=0xFFFF00
 [com_192]
 layer=com_188
 type=text
-x=80
+x=68
 y=7
 width=15
 height=14
-script1op1=stat_xp,fletching
+script1op1=stat_xp,fishing
 font=p12_full
 shadowed=yes
 text=%1
@@ -2130,7 +2329,7 @@ x=84
 y=23
 width=15
 height=14
-script1op1=stat_xp_remaining,fletching
+script1op1=stat_xp_remaining,fishing
 font=p12_full
 shadowed=yes
 text=%1
@@ -2158,11 +2357,11 @@ layer=com_194
 type=text
 x=6
 y=7
-width=55
+width=66
 height=14
 font=p12_full
 shadowed=yes
-text=Mining XP:
+text=Cooking XP:
 colour=0xFFFF00
 
 [com_197]
@@ -2180,11 +2379,11 @@ colour=0xFFFF00
 [com_198]
 layer=com_194
 type=text
-x=64
+x=76
 y=7
 width=15
 height=14
-script1op1=stat_xp,mining
+script1op1=stat_xp,cooking
 font=p12_full
 shadowed=yes
 text=%1
@@ -2197,7 +2396,7 @@ x=84
 y=23
 width=15
 height=14
-script1op1=stat_xp_remaining,mining
+script1op1=stat_xp_remaining,cooking
 font=p12_full
 shadowed=yes
 text=%1
@@ -2225,11 +2424,11 @@ layer=com_200
 type=text
 x=6
 y=7
-width=69
+width=81
 height=14
 font=p12_full
 shadowed=yes
-text=Smithing XP:
+text=Firemaking XP:
 colour=0xFFFF00
 
 [com_203]
@@ -2247,11 +2446,11 @@ colour=0xFFFF00
 [com_204]
 layer=com_200
 type=text
-x=80
+x=92
 y=7
 width=15
 height=14
-script1op1=stat_xp,smithing
+script1op1=stat_xp,firemaking
 font=p12_full
 shadowed=yes
 text=%1
@@ -2264,7 +2463,7 @@ x=84
 y=23
 width=15
 height=14
-script1op1=stat_xp_remaining,smithing
+script1op1=stat_xp_remaining,firemaking
 font=p12_full
 shadowed=yes
 text=%1
@@ -2292,11 +2491,11 @@ layer=com_206
 type=text
 x=6
 y=7
-width=59
+width=90
 height=14
 font=p12_full
 shadowed=yes
-text=Fishing XP:
+text=Woodcutting XP:
 colour=0xFFFF00
 
 [com_209]
@@ -2314,11 +2513,11 @@ colour=0xFFFF00
 [com_210]
 layer=com_206
 type=text
-x=68
+x=100
 y=7
 width=15
 height=14
-script1op1=stat_xp,fishing
+script1op1=stat_xp,woodcutting
 font=p12_full
 shadowed=yes
 text=%1
@@ -2331,7 +2530,7 @@ x=84
 y=23
 width=15
 height=14
-script1op1=stat_xp_remaining,fishing
+script1op1=stat_xp_remaining,woodcutting
 font=p12_full
 shadowed=yes
 text=%1
@@ -2339,214 +2538,13 @@ colour=0xFFFF00
 
 [com_212]
 type=layer
-x=2
-y=216
-width=183
-height=43
-hide=yes
-
-[com_213]
-layer=com_212
-type=rect
-x=4
-y=7
-width=174
-height=32
-fill=yes
-
-[com_214]
-layer=com_212
-type=text
-x=6
-y=7
-width=66
-height=14
-font=p12_full
-shadowed=yes
-text=Cooking XP:
-colour=0xFFFF00
-
-[com_215]
-layer=com_212
-type=text
-x=6
-y=23
-width=74
-height=14
-font=p12_full
-shadowed=yes
-text=Next Level At:
-colour=0xFFFF00
-
-[com_216]
-layer=com_212
-type=text
-x=76
-y=7
-width=15
-height=14
-script1op1=stat_xp,cooking
-font=p12_full
-shadowed=yes
-text=%1
-colour=0xFFFF00
-
-[com_217]
-layer=com_212
-type=text
-x=84
-y=23
-width=15
-height=14
-script1op1=stat_xp_remaining,cooking
-font=p12_full
-shadowed=yes
-text=%1
-colour=0xFFFF00
-
-[com_218]
-type=layer
-x=2
-y=216
-width=183
-height=43
-hide=yes
-
-[com_219]
-layer=com_218
-type=rect
-x=4
-y=7
-width=174
-height=32
-fill=yes
-
-[com_220]
-layer=com_218
-type=text
-x=6
-y=7
-width=81
-height=14
-font=p12_full
-shadowed=yes
-text=Firemaking XP:
-colour=0xFFFF00
-
-[com_221]
-layer=com_218
-type=text
-x=6
-y=23
-width=74
-height=14
-font=p12_full
-shadowed=yes
-text=Next Level At:
-colour=0xFFFF00
-
-[com_222]
-layer=com_218
-type=text
-x=92
-y=7
-width=15
-height=14
-script1op1=stat_xp,firemaking
-font=p12_full
-shadowed=yes
-text=%1
-colour=0xFFFF00
-
-[com_223]
-layer=com_218
-type=text
-x=84
-y=23
-width=15
-height=14
-script1op1=stat_xp_remaining,firemaking
-font=p12_full
-shadowed=yes
-text=%1
-colour=0xFFFF00
-
-[com_224]
-type=layer
-x=2
-y=216
-width=183
-height=43
-hide=yes
-
-[com_225]
-layer=com_224
-type=rect
-x=4
-y=7
-width=174
-height=32
-fill=yes
-
-[com_226]
-layer=com_224
-type=text
-x=6
-y=7
-width=90
-height=14
-font=p12_full
-shadowed=yes
-text=Woodcutting XP:
-colour=0xFFFF00
-
-[com_227]
-layer=com_224
-type=text
-x=6
-y=23
-width=74
-height=14
-font=p12_full
-shadowed=yes
-text=Next Level At:
-colour=0xFFFF00
-
-[com_228]
-layer=com_224
-type=text
-x=100
-y=7
-width=15
-height=14
-script1op1=stat_xp,woodcutting
-font=p12_full
-shadowed=yes
-text=%1
-colour=0xFFFF00
-
-[com_229]
-layer=com_224
-type=text
-x=84
-y=23
-width=15
-height=14
-script1op1=stat_xp_remaining,woodcutting
-font=p12_full
-shadowed=yes
-text=%1
-colour=0xFFFF00
-
-[com_230]
-type=layer
 x=0
 y=186
 width=193
 height=36
 
-[com_231]
-layer=com_230
+[com_213]
+layer=com_212
 type=graphic
 x=-1
 y=0
@@ -2554,8 +2552,8 @@ width=30
 height=36
 graphic=miscgraphics,4
 
-[com_232]
-layer=com_230
+[com_214]
+layer=com_212
 type=graphic
 x=29
 y=0
@@ -2563,8 +2561,8 @@ width=33
 height=36
 graphic=miscgraphics,5
 
-[com_233]
-layer=com_230
+[com_215]
+layer=com_212
 type=graphic
 x=5
 y=5
@@ -2572,8 +2570,8 @@ width=25
 height=25
 graphic=staticons2,0
 
-[com_234]
-layer=com_230
+[com_216]
+layer=com_212
 type=text
 x=33
 y=5
@@ -2586,14 +2584,124 @@ shadowed=yes
 text=%1
 colour=0xFFFF00
 
-[com_235]
-layer=com_230
+[com_217]
+layer=com_212
 type=text
 x=45
 y=17
 width=15
 height=12
 script1op1=stat_base_level,runecraft
+center=yes
+font=p11_full
+shadowed=yes
+text=%1
+colour=0xFFFF00
+
+[com_226]
+layer=com_212
+type=graphic
+x=62
+y=0
+width=30
+height=36
+graphic=miscgraphics,4
+
+[com_227]
+layer=com_212
+type=graphic
+x=92
+y=0
+width=33
+height=36
+graphic=miscgraphics,5
+
+[com_228]
+layer=com_212
+type=graphic
+x=66
+y=5
+width=25
+height=25
+graphic=staticons2,1
+
+[com_229]
+layer=com_212
+type=text
+x=97
+y=5
+width=15
+height=11
+script1op1=stat_level,slayer
+center=yes
+font=p11_full
+shadowed=yes
+text=%1
+colour=0xFFFF00
+
+[com_230]
+layer=com_212
+type=text
+x=109
+y=16
+width=15
+height=11
+script1op1=stat_base_level,slayer
+center=yes
+font=p11_full
+shadowed=yes
+text=%1
+colour=0xFFFF00
+
+[com_242]
+layer=com_212
+type=graphic
+x=125
+y=0
+width=30
+height=36
+graphic=miscgraphics,4
+
+[com_243]
+layer=com_212
+type=graphic
+x=155
+y=0
+width=33
+height=36
+graphic=miscgraphics,5
+
+[com_244]
+layer=com_212
+type=graphic
+x=131
+y=5
+width=25
+height=25
+graphic=staticons2,2
+
+[com_245]
+layer=com_212
+type=text
+x=161
+y=6
+width=15
+height=11
+script1op1=stat_level,farming
+center=yes
+font=p11_full
+shadowed=yes
+text=%1
+colour=0xFFFF00
+
+[com_246]
+layer=com_212
+type=text
+x=172
+y=18
+width=15
+height=11
+script1op1=stat_base_level,farming
 center=yes
 font=p11_full
 shadowed=yes
@@ -2607,12 +2715,12 @@ y=188
 buttontype=normal
 width=64
 height=31
-overlayer=com_242
+overlayer=com_223
 font=p12_full
 shadowed=yes
-option=View @lre@Runecrafting@whi@ advancements
+option=View @or1@Runecrafting @whi@guide
 
-[com_242]
+[com_223]
 type=layer
 x=2
 y=216
@@ -2620,8 +2728,8 @@ width=183
 height=43
 hide=yes
 
-[com_236]
-layer=com_242
+[com_218]
+layer=com_223
 type=rect
 x=4
 y=7
@@ -2629,8 +2737,8 @@ width=174
 height=32
 fill=yes
 
-[com_237]
-layer=com_242
+[com_219]
+layer=com_223
 type=text
 x=6
 y=7
@@ -2641,8 +2749,8 @@ shadowed=yes
 text=Runecraft XP:
 colour=0xFFFF00
 
-[com_238]
-layer=com_242
+[com_220]
+layer=com_223
 type=text
 x=6
 y=23
@@ -2653,8 +2761,8 @@ shadowed=yes
 text=Next Level At:
 colour=0xFFFF00
 
-[com_239]
-layer=com_242
+[com_221]
+layer=com_223
 type=text
 x=85
 y=7
@@ -2666,10 +2774,10 @@ shadowed=yes
 text=%1
 colour=0xFFFF00
 
-[com_241]
-layer=com_242
+[com_222]
+layer=com_223
 type=text
-x=88
+x=84
 y=23
 width=15
 height=14
@@ -2678,3 +2786,161 @@ font=p12_full
 shadowed=yes
 text=%1
 colour=0xFFFF00
+
+[com_224]
+type=layer
+x=2
+y=216
+width=183
+height=43
+hide=yes
+
+[com_231]
+layer=com_224
+type=rect
+x=4
+y=7
+width=174
+height=32
+fill=yes
+
+[com_232]
+layer=com_224
+type=text
+x=6
+y=7
+width=56
+height=14
+font=p12_full
+shadowed=yes
+text=Slayer XP:
+colour=0xFFFF00
+
+[com_233]
+layer=com_224
+type=text
+x=6
+y=23
+width=74
+height=14
+font=p12_full
+shadowed=yes
+text=Next Level At:
+colour=0xFFFF00
+
+[com_234]
+layer=com_224
+type=text
+x=64
+y=7
+width=15
+height=14
+script1op1=stat_xp,slayer
+font=p12_full
+shadowed=yes
+text=%1
+colour=0xFFFF00
+
+[com_235]
+layer=com_224
+type=text
+x=84
+y=23
+width=15
+height=14
+script1op1=stat_xp_remaining,slayer
+font=p12_full
+shadowed=yes
+text=%1
+colour=0xFFFF00
+
+[com_225]
+type=text
+x=64
+y=188
+buttontype=normal
+width=64
+height=31
+overlayer=com_224
+font=p12_full
+shadowed=yes
+option=View @or1@Slayer @whi@guide
+
+[com_236]
+type=layer
+x=2
+y=216
+width=183
+height=43
+hide=yes
+
+[com_237]
+layer=com_236
+type=rect
+x=4
+y=7
+width=174
+height=32
+fill=yes
+
+[com_238]
+layer=com_236
+type=text
+x=6
+y=7
+width=64
+height=14
+font=p12_full
+shadowed=yes
+text=Farming XP:
+colour=0xFFFF00
+
+[com_239]
+layer=com_236
+type=text
+x=6
+y=23
+width=74
+height=14
+font=p12_full
+shadowed=yes
+text=Next Level At:
+colour=0xFFFF00
+
+[com_240]
+layer=com_236
+type=text
+x=75
+y=6
+width=15
+height=14
+script1op1=stat_xp,farming
+font=p12_full
+shadowed=yes
+text=%1
+colour=0xFFFF00
+
+[com_241]
+layer=com_236
+type=text
+x=84
+y=23
+width=15
+height=14
+script1op1=stat_xp_remaining,farming
+font=p12_full
+shadowed=yes
+text=%1
+colour=0xFFFF00
+
+[com_247]
+type=text
+x=128
+y=188
+buttontype=normal
+width=64
+height=31
+overlayer=com_236
+font=p12_full
+shadowed=yes
+option=View @or1@Farming@whi@ guide

@@ -715,7 +715,7 @@ x=240
 y=168
 width=32
 height=32
-model=model_3056
+model=com_i86
 zoom=500
 xan=500
 
@@ -749,6 +749,6 @@ x=240
 y=168
 width=32
 height=32
-model=model_3052
+model=com_i87
 zoom=400
 xan=500

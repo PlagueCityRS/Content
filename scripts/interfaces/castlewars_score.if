@@ -9,7 +9,7 @@ font=q8_full
 text=Total Wins This Season!
 colour=0x800000
 
-[com_1]
+[castlewars_saradomin_totalscore]
 type=text
 x=184
 y=24
@@ -19,7 +19,7 @@ height=17
 font=q8_full
 text=Saradomin: 0
 
-[com_2]
+[castlewars_zamorak_totalscore]
 type=text
 x=184
 y=56
@@ -29,7 +29,7 @@ height=17
 font=q8_full
 text=Zamorak: 0
 
-[com_3]
+[castlewars_score_close_button]
 type=text
 x=70
 y=81

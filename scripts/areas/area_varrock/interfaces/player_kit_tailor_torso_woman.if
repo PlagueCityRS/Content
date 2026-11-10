@@ -704,28 +704,28 @@ graphic=steelborder2,0
 
 [com_88]
 type=text
-x=420
-y=29
+x=422
+y=32
 buttontype=close
 width=68
 height=11
 font=p11_full
 shadowed=yes
 text=Close Window
-colour=0xFF0000
+colour=0xA1A1A1
 overcolour=0xFFFFFF
 
 [com_89]
 type=text
-x=154
-y=30
+x=166
+y=31
 width=199
 height=14
 center=yes
 font=b12_full
 shadowed=yes
-text=Thessalias' Makeovers (Torso)
-colour=0xFFFF00
+text=Thessalia's Makeovers (Torso)
+colour=0xC9800D
 
 [com_90]
 type=rect
@@ -956,7 +956,7 @@ text=CONFIRM (500 gold)
 colour=0x00FF00
 overcolour=0xFF0000
 
-[com_108]
+[com_107]
 type=graphic
 x=59
 y=250
@@ -964,9 +964,9 @@ width=25
 height=25
 script1op1=pushvar,if3
 script1=eq,1
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
-[com_109]
+[com_108]
 type=graphic
 x=84
 y=250
@@ -974,9 +974,9 @@ width=25
 height=25
 script1op1=pushvar,if3
 script1=eq,2
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
-[com_110]
+[com_109]
 type=graphic
 x=109
 y=250
@@ -984,9 +984,9 @@ width=25
 height=25
 script1op1=pushvar,if3
 script1=eq,3
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
-[com_111]
+[com_110]
 type=graphic
 x=134
 y=250
@@ -994,9 +994,9 @@ width=25
 height=25
 script1op1=pushvar,if3
 script1=eq,4
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
-[com_112]
+[com_111]
 type=graphic
 x=160
 y=250
@@ -1004,9 +1004,9 @@ width=25
 height=25
 script1op1=pushvar,if3
 script1=eq,5
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
-[com_113]
+[com_112]
 type=graphic
 x=185
 y=250
@@ -1014,9 +1014,9 @@ width=25
 height=25
 script1op1=pushvar,if3
 script1=eq,6
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
-[com_114]
+[com_113]
 type=graphic
 x=210
 y=250
@@ -1024,9 +1024,9 @@ width=25
 height=25
 script1op1=pushvar,if3
 script1=eq,7
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
-[com_115]
+[com_114]
 type=graphic
 x=235
 y=250
@@ -1034,9 +1034,9 @@ width=25
 height=25
 script1op1=pushvar,if3
 script1=eq,8
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
-[com_116]
+[com_115]
 type=graphic
 x=260
 y=250
@@ -1044,9 +1044,9 @@ width=25
 height=25
 script1op1=pushvar,if3
 script1=eq,9
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
-[com_117]
+[com_116]
 type=graphic
 x=285
 y=250
@@ -1054,9 +1054,9 @@ width=25
 height=25
 script1op1=pushvar,if3
 script1=eq,10
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
-[com_118]
+[com_117]
 type=graphic
 x=310
 y=250
@@ -1064,9 +1064,9 @@ width=25
 height=25
 script1op1=pushvar,if3
 script1=eq,11
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
-[com_119]
+[com_118]
 type=graphic
 x=335
 y=250
@@ -1074,9 +1074,9 @@ width=25
 height=25
 script1op1=pushvar,if3
 script1=eq,12
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
-[com_120]
+[com_119]
 type=graphic
 x=360
 y=250
@@ -1084,9 +1084,9 @@ width=25
 height=25
 script1op1=pushvar,if3
 script1=eq,13
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
-[com_121]
+[com_120]
 type=graphic
 x=385
 y=250
@@ -1094,9 +1094,9 @@ width=25
 height=25
 script1op1=pushvar,if3
 script1=eq,14
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
-[com_122]
+[com_121]
 type=graphic
 x=410
 y=250
@@ -1104,9 +1104,9 @@ width=25
 height=25
 script1op1=pushvar,if3
 script1=eq,15
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
-[com_123]
+[com_122]
 type=graphic
 x=435
 y=250
@@ -1114,9 +1114,9 @@ width=25
 height=25
 script1op1=pushvar,if3
 script1=eq,16
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
-[com_124]
+[com_123]
 type=text
 x=208
 y=64
@@ -1127,7 +1127,7 @@ shadowed=yes
 text=Select body style
 colour=0xFFFF00
 
-[com_125]
+[com_124]
 type=text
 x=207
 y=148
@@ -1138,7 +1138,7 @@ shadowed=yes
 text=Select arms style
 colour=0xFFFF00
 
-[com_126]
+[com_125]
 type=text
 x=220
 y=225
@@ -1149,7 +1149,7 @@ shadowed=yes
 text=Select colour
 colour=0xFFFF00
 
-[com_127]
+[com_126]
 type=model
 x=50
 y=180
@@ -1158,7 +1158,7 @@ height=32
 model=woman_torso_basic
 zoom=800
 
-[com_128]
+[com_127]
 type=model
 x=145
 y=180
@@ -1167,7 +1167,7 @@ height=32
 model=woman_torso_basic2
 zoom=800
 
-[com_129]
+[com_128]
 type=model
 x=240
 y=180
@@ -1176,7 +1176,7 @@ height=32
 model=woman_torso_basic3
 zoom=800
 
-[com_130]
+[com_129]
 type=model
 x=325
 y=180
@@ -1185,7 +1185,7 @@ height=32
 model=woman_torso_basic4
 zoom=800
 
-[com_131]
+[com_130]
 type=model
 x=420
 y=180
@@ -1194,9 +1194,18 @@ height=32
 model=woman_torso_tatty
 zoom=800
 
-[com_132]
+[com_131]
 type=model
 x=50
+y=260
+width=32
+height=32
+model=woman_torso_basic
+zoom=800
+
+[com_132]
+type=model
+x=145
 y=260
 width=32
 height=32
@@ -1205,7 +1214,7 @@ zoom=800
 
 [com_133]
 type=model
-x=145
+x=240
 y=260
 width=32
 height=32
@@ -1214,7 +1223,7 @@ zoom=800
 
 [com_134]
 type=model
-x=240
+x=325
 y=260
 width=32
 height=32
@@ -1223,7 +1232,7 @@ zoom=800
 
 [com_135]
 type=model
-x=325
+x=420
 y=260
 width=32
 height=32
@@ -1232,16 +1241,16 @@ zoom=800
 
 [com_136]
 type=model
-x=420
-y=260
+x=50
+y=180
 width=32
 height=32
-model=woman_torso_basic
+model=woman_arms_basic
 zoom=800
 
 [com_137]
 type=model
-x=50
+x=145
 y=180
 width=32
 height=32
@@ -1250,7 +1259,7 @@ zoom=800
 
 [com_138]
 type=model
-x=145
+x=240
 y=180
 width=32
 height=32
@@ -1259,7 +1268,7 @@ zoom=800
 
 [com_139]
 type=model
-x=240
+x=325
 y=180
 width=32
 height=32
@@ -1268,7 +1277,7 @@ zoom=800
 
 [com_140]
 type=model
-x=325
+x=420
 y=180
 width=32
 height=32
@@ -1277,15 +1286,6 @@ zoom=800
 
 [com_141]
 type=model
-x=420
-y=180
-width=32
-height=32
-model=woman_arms_basic
-zoom=800
-
-[com_142]
-type=model
 x=50
 y=260
 width=32
@@ -1293,7 +1293,7 @@ height=32
 model=woman_arms_basic
 zoom=800
 
-[com_143]
+[com_142]
 type=model
 x=145
 y=260
@@ -1302,7 +1302,7 @@ height=32
 model=woman_arms_bare
 zoom=800
 
-[com_144]
+[com_143]
 type=model
 x=240
 y=260
@@ -1311,7 +1311,7 @@ height=32
 model=woman_arms_buff
 zoom=800
 
-[com_145]
+[com_144]
 type=model
 x=325
 y=260
@@ -1320,7 +1320,7 @@ height=32
 model=woman_arms_longsleeves
 zoom=800
 
-[com_146]
+[com_145]
 type=model
 x=420
 y=260
@@ -1338,7 +1338,7 @@ width=25
 height=25
 script1op1=pushvar,if1
 script1=eq,1
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 option=Plain
 
 [crop_top]
@@ -1350,7 +1350,7 @@ width=25
 height=25
 script1op1=pushvar,if1
 script1=eq,2
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 option=Crop-top
 
 [polo_neck]
@@ -1362,7 +1362,7 @@ width=25
 height=25
 script1op1=pushvar,if1
 script1=eq,3
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 option=Polo-neck
 
 [simple]
@@ -1374,7 +1374,7 @@ width=25
 height=25
 script1op1=pushvar,if1
 script1=eq,4
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 option=Simple
 
 [torn]
@@ -1386,7 +1386,7 @@ width=25
 height=25
 script1op1=pushvar,if1
 script1=eq,5
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 option=Torn
 
 [short_sleeves]
@@ -1398,7 +1398,7 @@ width=25
 height=25
 script1op1=pushvar,if2
 script1=eq,1
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 option=Short sleeves
 
 [bare_arms]
@@ -1410,7 +1410,7 @@ width=25
 height=25
 script1op1=pushvar,if2
 script1=eq,2
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 option=Bare arms
 
 [muscley]
@@ -1422,7 +1422,7 @@ width=25
 height=25
 script1op1=pushvar,if2
 script1=eq,3
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 option=Muscley
 
 [long_sleeved]
@@ -1434,7 +1434,7 @@ width=25
 height=25
 script1op1=pushvar,if2
 script1=eq,4
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 option=Long sleeved
 
 [large_cuffs]
@@ -1446,5 +1446,5 @@ width=25
 height=25
 script1op1=pushvar,if2
 script1=eq,5
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 option=Large cuffs

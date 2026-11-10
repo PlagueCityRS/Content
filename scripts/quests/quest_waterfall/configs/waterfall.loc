@@ -35,15 +35,15 @@ active=yes
 blockrange=no
 
 [glarials_tombstone_waterfall_quest]
-name=Tombstone of glarial
-desc=There is an indent the size of a pebble in the stone's center.
+name=Glarial's tombstone
+desc=There is an indent the size of a pebble in the stone's centre.
 model=graveyard_largegrave
 width=2
 length=2
 op1=Read
 
 [glarials_tomb_waterfall_quest]
-name=Tomb of glarial
+name=Glarial's tomb
 desc=A stone tomb surrounded by flowers.
 model=graveyard_loc_402
 width=2
@@ -70,7 +70,7 @@ recol1d=17921
 
 [crossing_rock_waterfall_quest]
 name=Rock
-desc=Looks rock solid.
+desc=I should be safe if I can reach this.
 model=quest_rock_for_rope
 op1=Swim to
 shadow=no
@@ -78,7 +78,7 @@ blockwalk=no
 
 [crossing_rock_roped_waterfall_quest]
 name=Rock
-desc=Looks rock solid.
+desc=I should be safe if I can reach this.
 model=quest_rock_with_rope
 op1=Swim to
 shadow=no
@@ -86,7 +86,7 @@ blockwalk=no
 
 [crossing_rope_waterfall_quest]
 name=Rope
-desc=Rope
+desc=Rope.
 model=quest_loc_1998
 shadow=no
 blockwalk=no
@@ -133,6 +133,7 @@ recol2d=11458
 
 [stonepillar_small_waterfall_quest]
 name=Pillar
+desc=The pillar has a rune shaped dent in it.
 model=outdoorfurniture_stonepillar
 resizex=50
 resizey=50

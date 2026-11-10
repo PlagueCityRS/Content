@@ -784,7 +784,7 @@ center=yes
 font=q8_full
 text=Saradomin\n\nlights my way\n\nthrough\n\nthe darkness of life
 
-[com_96]
+[com_94]
 type=rect
 x=12
 y=-12
@@ -792,7 +792,7 @@ width=488
 height=32
 fill=yes
 
-[com_97]
+[com_95]
 type=rect
 x=12
 y=319

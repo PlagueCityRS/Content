@@ -328,15 +328,15 @@ center=yes
 font=q8_full
 text=Vegetable Batta
 
-[com_29]
+[com_1]
 type=layer
 x=12
 y=20
 width=488
 height=36
 
-[com_30]
-layer=com_29
+[com_2]
+layer=com_1
 type=graphic
 x=94
 y=-3
@@ -344,8 +344,8 @@ width=88
 height=60
 graphic=tradebacking,0
 
-[com_31]
-layer=com_29
+[com_3]
+layer=com_1
 type=graphic
 x=182
 y=6
@@ -353,8 +353,8 @@ width=88
 height=60
 graphic=tradebacking,0
 
-[com_32]
-layer=com_29
+[com_4]
+layer=com_1
 type=graphic
 x=270
 y=6
@@ -362,8 +362,8 @@ width=88
 height=60
 graphic=tradebacking,0
 
-[com_33]
-layer=com_29
+[com_5]
+layer=com_1
 type=graphic
 x=358
 y=6
@@ -371,8 +371,8 @@ width=88
 height=60
 graphic=tradebacking,0
 
-[com_34]
-layer=com_29
+[com_6]
+layer=com_1
 type=graphic
 x=394
 y=6
@@ -380,8 +380,8 @@ width=88
 height=60
 graphic=tradebacking,0
 
-[com_35]
-layer=com_29
+[com_7]
+layer=com_1
 type=graphic
 x=6
 y=-1
@@ -389,8 +389,8 @@ width=88
 height=60
 graphic=tradebacking,0
 
-[com_36]
-layer=com_29
+[com_8]
+layer=com_1
 type=graphic
 x=60
 y=16
@@ -398,8 +398,8 @@ width=36
 height=36
 graphic=miscgraphics,3
 
-[com_37]
-layer=com_29
+[com_9]
+layer=com_1
 type=graphic
 x=96
 y=16
@@ -407,8 +407,8 @@ width=36
 height=36
 graphic=miscgraphics,3
 
-[com_38]
-layer=com_29
+[com_10]
+layer=com_1
 type=graphic
 x=132
 y=16
@@ -416,8 +416,8 @@ width=36
 height=36
 graphic=miscgraphics,3
 
-[com_39]
-layer=com_29
+[com_11]
+layer=com_1
 type=graphic
 x=168
 y=16
@@ -425,8 +425,8 @@ width=36
 height=36
 graphic=miscgraphics,3
 
-[com_40]
-layer=com_29
+[com_12]
+layer=com_1
 type=graphic
 x=204
 y=16
@@ -434,8 +434,8 @@ width=36
 height=36
 graphic=miscgraphics,3
 
-[com_41]
-layer=com_29
+[com_13]
+layer=com_1
 type=graphic
 x=240
 y=16
@@ -443,8 +443,8 @@ width=36
 height=36
 graphic=miscgraphics,3
 
-[com_42]
-layer=com_29
+[com_14]
+layer=com_1
 type=graphic
 x=276
 y=16
@@ -452,8 +452,8 @@ width=36
 height=36
 graphic=miscgraphics,3
 
-[com_43]
-layer=com_29
+[com_15]
+layer=com_1
 type=graphic
 x=312
 y=16
@@ -461,8 +461,8 @@ width=36
 height=36
 graphic=miscgraphics,3
 
-[com_44]
-layer=com_29
+[com_16]
+layer=com_1
 type=graphic
 x=348
 y=16
@@ -470,8 +470,8 @@ width=36
 height=36
 graphic=miscgraphics,3
 
-[com_45]
-layer=com_29
+[com_17]
+layer=com_1
 type=graphic
 x=384
 y=16
@@ -479,8 +479,8 @@ width=36
 height=36
 graphic=miscgraphics,3
 
-[com_46]
-layer=com_29
+[com_18]
+layer=com_1
 type=graphic
 x=420
 y=16
@@ -488,8 +488,8 @@ width=36
 height=36
 graphic=miscgraphics,3
 
-[com_47]
-layer=com_29
+[com_19]
+layer=com_1
 type=graphic
 x=428
 y=16
@@ -497,8 +497,8 @@ width=36
 height=36
 graphic=miscgraphics,3
 
-[com_48]
-layer=com_29
+[com_20]
+layer=com_1
 type=graphic
 x=0
 y=0
@@ -506,8 +506,8 @@ width=25
 height=30
 graphic=steelborder,0
 
-[com_49]
-layer=com_29
+[com_21]
+layer=com_1
 type=graphic
 x=60
 y=-15
@@ -515,8 +515,8 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_50]
-layer=com_29
+[com_22]
+layer=com_1
 type=graphic
 x=96
 y=-15
@@ -524,8 +524,8 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_51]
-layer=com_29
+[com_23]
+layer=com_1
 type=graphic
 x=132
 y=-15
@@ -533,8 +533,8 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_52]
-layer=com_29
+[com_24]
+layer=com_1
 type=graphic
 x=168
 y=-15
@@ -542,8 +542,8 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_53]
-layer=com_29
+[com_25]
+layer=com_1
 type=graphic
 x=204
 y=-15
@@ -551,8 +551,8 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_54]
-layer=com_29
+[com_26]
+layer=com_1
 type=graphic
 x=240
 y=-15
@@ -560,8 +560,8 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_55]
-layer=com_29
+[com_27]
+layer=com_1
 type=graphic
 x=276
 y=-15
@@ -569,8 +569,8 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_56]
-layer=com_29
+[com_28]
+layer=com_1
 type=graphic
 x=312
 y=-15
@@ -578,8 +578,8 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_57]
-layer=com_29
+[com_29]
+layer=com_1
 type=graphic
 x=348
 y=-15
@@ -587,8 +587,8 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_58]
-layer=com_29
+[com_30]
+layer=com_1
 type=graphic
 x=384
 y=-15
@@ -596,8 +596,8 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_59]
-layer=com_29
+[com_31]
+layer=com_1
 type=graphic
 x=420
 y=-15
@@ -605,8 +605,8 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_60]
-layer=com_29
+[com_32]
+layer=com_1
 type=graphic
 x=25
 y=-15
@@ -614,8 +614,8 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_61]
-layer=com_29
+[com_33]
+layer=com_1
 type=graphic
 x=463
 y=0
@@ -623,8 +623,8 @@ width=25
 height=30
 graphic=steelborder,1
 
-[com_62]
-layer=com_29
+[com_34]
+layer=com_1
 type=graphic
 x=427
 y=-15
@@ -632,8 +632,8 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_63]
-layer=com_29
+[com_35]
+layer=com_1
 type=graphic
 x=463
 y=7
@@ -641,8 +641,8 @@ width=25
 height=30
 graphic=steelborder,3
 
-[com_64]
-layer=com_29
+[com_36]
+layer=com_1
 type=graphic
 x=25
 y=16
@@ -650,8 +650,8 @@ width=36
 height=36
 graphic=miscgraphics,3
 
-[com_65]
-layer=com_29
+[com_37]
+layer=com_1
 type=graphic
 x=0
 y=7
@@ -671,7 +671,7 @@ shadowed=yes
 text=The Blurberry Cocktail Guide
 colour=0xFFFF00
 
-[com_67]
+[com_38]
 type=text
 x=424
 y=28

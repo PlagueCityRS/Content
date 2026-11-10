@@ -636,7 +636,7 @@ recol3d=27207
 wanderrange=3
 
 [willothewisp]
-name=Willow the wisp
+name=Will o' the wisp
 desc=Mysterious swamp lights...
 vislevel=hide
 walkanim=willowthewisp

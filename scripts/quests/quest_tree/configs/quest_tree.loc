@@ -8,7 +8,7 @@ op2=Fire
 
 [chestopen_khazard]
 name=Open chest
-desc=It can't hurt to just have a look, can it?.
+desc=It can't hurt to just have a look, can it?
 model=furniture_chestopen
 op1=Search
 op2=Close

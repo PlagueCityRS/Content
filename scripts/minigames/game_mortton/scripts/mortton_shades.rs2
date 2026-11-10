@@ -18,7 +18,7 @@ if(%morttonquest >= ^mortton_kill_shades & %morttonquest < ^mortton_killed_5_sha
 }
 
 if(~inzone_coord_pair_table(mortton_temple_zones, coord) = true & %morttonquest > ^mortton_shades_to_ulsquire) {
-    if_openoverlay(flamtaer_status);
+    if_openoverlay(temple_screen);
     if(%temple_sanctity_p < 100) {
         %temple_sanctity = add(%temple_sanctity, 60);
     }

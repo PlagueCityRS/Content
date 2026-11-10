@@ -714,7 +714,7 @@ shadowed=yes
 colour=0xFFFFFF
 margin=0,2
 
-[com_89]
+[com_88]
 type=text
 x=60
 y=62
@@ -725,7 +725,7 @@ shadowed=yes
 text=You are about to give:
 colour=0xFFFF00
 
-[com_90]
+[com_89]
 type=text
 x=290
 y=62
@@ -736,7 +736,7 @@ shadowed=yes
 text=In return you will receive:
 colour=0xFFFF00
 
-[com_91]
+[com_90]
 type=text
 x=139
 y=27
@@ -748,7 +748,7 @@ shadowed=yes
 text=Are you sure you want to make this trade?
 colour=0x00FFFF
 
-[com_92]
+[com_91]
 type=text
 x=107
 y=43
@@ -759,7 +759,7 @@ shadowed=yes
 text=There is NO WAY to reverse a trade if you change your mind
 colour=0xFFFFFF
 
-[com_93]
+[com_92]
 type=graphic
 x=239
 y=243
@@ -791,7 +791,7 @@ shadowed=yes
 colour=0xFFFFFF
 margin=0,2
 
-[com_96]
+[com_93]
 type=graphic
 x=239
 y=278
@@ -799,7 +799,7 @@ width=36
 height=36
 graphic=miscgraphics,2
 
-[com_97]
+[com_94]
 type=graphic
 x=241
 y=275
@@ -819,7 +819,7 @@ shadowed=yes
 colour=0xFFFFFF
 margin=0,2
 
-[com_99]
+[com_95]
 type=text
 x=425
 y=27
@@ -832,7 +832,7 @@ text=Close Window
 colour=0xFF0000
 overcolour=0xFFFFFF
 
-[com_100]
+[com_96]
 type=graphic
 x=307
 y=290
@@ -840,7 +840,7 @@ width=25
 height=30
 graphic=steelborder,1
 
-[com_101]
+[com_97]
 type=graphic
 x=325
 y=299
@@ -857,7 +857,7 @@ width=66
 height=18
 fill=yes
 
-[com_103]
+[com_98]
 type=text
 x=203
 y=297
@@ -877,7 +877,7 @@ width=66
 height=18
 fill=yes
 
-[com_105]
+[com_99]
 type=text
 x=274
 y=297
@@ -888,7 +888,7 @@ shadowed=yes
 text=Decline
 colour=0xC00000
 
-[com_106]
+[com_100]
 type=graphic
 x=239
 y=99
@@ -896,7 +896,7 @@ width=36
 height=36
 graphic=miscgraphics,2
 
-[com_107]
+[com_101]
 type=graphic
 x=239
 y=63
@@ -904,7 +904,7 @@ width=36
 height=36
 graphic=miscgraphics,2
 
-[com_108]
+[com_102]
 type=graphic
 x=239
 y=171
@@ -912,7 +912,7 @@ width=36
 height=36
 graphic=miscgraphics,2
 
-[com_109]
+[com_103]
 type=graphic
 x=207
 y=275
@@ -920,7 +920,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_110]
+[com_104]
 type=graphic
 x=239
 y=207
@@ -928,7 +928,7 @@ width=36
 height=36
 graphic=miscgraphics,2
 
-[com_111]
+[com_105]
 type=graphic
 x=239
 y=135
@@ -936,7 +936,7 @@ width=36
 height=36
 graphic=miscgraphics,2
 
-[com_112]
+[com_106]
 type=graphic
 x=271
 y=275

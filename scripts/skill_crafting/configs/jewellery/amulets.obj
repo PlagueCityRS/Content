@@ -103,54 +103,64 @@ dummyitem=inv_only
 [invis_amulet1]
 name=Sapphire amulet
 model=floor_invisableicon_0
+2dyan=4
+2dxan=20
 param=crafting_jewelry_struct,unstrung_sapphire_amulet
 dummyitem=inv_only
 
 [invis_amulet2]
 name=Emerald amulet
-desc=It's an Emerald amulet
+desc=It's an Emerald amulet.
 model=floor_invisableicon_0
+2dyan=4
+2dxan=20
 param=crafting_jewelry_struct,unstrung_emerald_amulet
 dummyitem=inv_only
 
 [invis_amulet3]
 name=Ruby amulet
 model=floor_invisableicon_0
+2dyan=4
+2dxan=20
 param=crafting_jewelry_struct,unstrung_ruby_amulet
 dummyitem=inv_only
 
 [invis_amulet4]
 name=Diamond amulet
 model=floor_invisableicon_0
+2dyan=4
+2dxan=20
 param=crafting_jewelry_struct,unstrung_diamond_amulet
 dummyitem=inv_only
 
 [invis_amulet5]
 name=Dragonstoneamulet
 model=floor_invisableicon_0
+2dyan=4
+2dxan=20
 param=crafting_jewelry_struct,unstrung_dragonstone_amulet
 dummyitem=inv_only
 
 [strung_gold_amulet]
-cost=350
 name=Gold amulet
-desc=I wonder if I can get this enchanted.
-model=inv_amulet
 recol1s=32767
 recol1d=22241
 recol2s=13537
 recol2d=32767
 recol3s=8321
 recol3d=32767
+cost=350
+desc=A plain gold amulet.
+model=inv_amulet
 2dxof=1
 2dyof=16
 2dzoom=620
 2dyan=68
 2dxan=424
 iop2=Wear
-wearpos=front
 manwear=man_necklaces_amulet,0
 womanwear=woman_necklaces_amulet,0
+wearpos=front
 weight=7g
 
 [strung_sapphire_amulet]

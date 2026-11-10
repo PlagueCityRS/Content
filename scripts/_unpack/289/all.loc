@@ -31,12 +31,13 @@ param=next_loc_stage,misc_ulby_throneroomdoor
 [misc_dummy_mapletree]
 name=Maple tree
 desc=I bet this makes good syrup!
-model=plants_loc_1307
+model=mapletree
 width=2
 mapscene=2
 length=2
 op1=Chop down
 op3=hidden
+ambient=25
 
 [misc_dummy_heather_normal]
 name=Herbs
@@ -436,8 +437,8 @@ mapscene=29
 [castlewars_catapult_zamorak_burning]
 name=Catapult
 desc=It's on fire!
-model=model_4448
-model2=model_4449
+model=castlewars_catapult_zamorak_burning
+model2=castlewars_catapult_zamorak_burningi2
 recol1s=9513
 recol1d=6342
 recol2s=8386
@@ -458,8 +459,8 @@ mapscene=30
 [castlewars_catapult_saradomin_burning]
 name=Catapult
 desc=It's on fire!
-model=model_4448
-model2=model_4449
+model=castlewars_catapult_zamorak_burning
+model2=castlewars_catapult_zamorak_burningi2
 recol1s=9513
 recol1d=6342
 recol2s=8386
@@ -504,7 +505,7 @@ retex1d=mossybricks
 sharelight=yes
 blockrange=no
 
-[loc_4909]
+[inviswall_no_blockrange]
 model=blank
 model2=loc_4909
 shadow=no
@@ -544,7 +545,7 @@ raiseobject=no
 
 [swamp_bridge1]
 name=Rope bridge
-desc=Useful for passing over inaccesible areas.
+desc=Useful for passing over inaccessible areas.
 model=wooden_bamboo_bridge
 recol1s=15685
 recol1d=7428
@@ -559,7 +560,7 @@ active=yes
 
 [spooky_tree_base_forbridge]
 name=Broken rope bridge
-desc=It's old and pretty broken
+desc=It's old and pretty broken.
 model=loc_5003
 recol1s=15685
 recol1d=7428
@@ -1030,21 +1031,27 @@ sharelight=yes
 forcedecor=yes
 
 [icegate_left]
+name=Ice gate
+desc=A huge ice gate.
 model=quest_trollrescue_icegate10
 length=3
 sharelight=yes
-active=no
+active=yes
+op1=Go-through
 
 [icegate_right]
+name=Ice gate
+desc=A huge ice gate.
 model=quest_trollrescue_icegate10
 mirror=yes
 length=3
 sharelight=yes
-active=no
+active=yes
+op1=Go-through
 
 [hollowtree_entrance]
 name=Tree
-desc=An interesting looking tree.
+desc=An interesting-looking tree.
 model=loc_5045
 length=2
 width=2
@@ -1069,7 +1076,7 @@ recol1d=12580
 hillskew=yes
 
 [route_stalagtite_twin]
-name=Stalagtite
+name=Stalactite
 desc=A limestone ceiling growth.
 model=cave_stalagtite_twin
 recol1s=13537
@@ -1099,7 +1106,6 @@ desc=A dirty little swamp boat.
 model=loc_5051
 width=3
 length=3
-op1=Board
 
 [thrttavernbasementfalsewall]
 name=Wall

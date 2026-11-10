@@ -1,6 +1,6 @@
 [viking_doublebed]
 name=Bed
-desc=A wooden double bed.  For sleeping in...
+desc=A wooden double bed.
 model=quest_misc_viking_bigbed
 width=3
 length=3
@@ -75,7 +75,7 @@ active=no
 
 [viking_trollcave_entrance]
 name=Cave Entrance
-desc=This must be Lallis' home.
+desc=This must be Lalli's home.
 model=cave_entrance3
 recol1s=10400
 recol1d=11592
@@ -509,6 +509,7 @@ resizez=80
 resizex=80
 resizey=80
 active=no
+forcedecor=yes
 
 [viking_longhall_wall]
 model=quest_viking_longhall_wall
@@ -1174,7 +1175,8 @@ active=yes
 [viking_fur_market]
 name=Fur stall
 desc=Around here, this is where you buy new doors.
-model=outdoorfurniture_furmarket
+model=outdoorfurniture_market
+model2=outdoorfurniture_furmarket
 recol1s=32767
 recol1d=18956
 recol2s=15890
@@ -1271,7 +1273,7 @@ width=2
 hillskew=yes
 sharelight=yes
 active=no
-mapscene=21
+mapscene=51
 
 [viking_pike_defence_terminator_right]
 model=loc_4290
@@ -1279,7 +1281,7 @@ width=2
 hillskew=yes
 sharelight=yes
 active=no
-mapscene=21
+mapscene=51
 
 [viking_pike_defence_terminator_left]
 model=loc_4290
@@ -1287,7 +1289,7 @@ width=2
 hillskew=yes
 sharelight=yes
 active=no
-mapscene=21
+mapscene=51
 mirror=yes
 
 [viking_pike_defence_bend]
@@ -1297,7 +1299,7 @@ length=2
 hillskew=yes
 sharelight=yes
 active=no
-mapscene=21
+mapscene=51
 
 [viking_pike_defence_bend_mirror]
 model=loc_4292
@@ -1307,7 +1309,7 @@ hillskew=yes
 sharelight=yes
 mirror=yes
 active=no
-mapscene=21
+mapscene=51
 
 [viking_pike_defence_corner]
 model=loc_4294
@@ -1316,7 +1318,7 @@ length=2
 hillskew=yes
 sharelight=yes
 active=no
-mapscene=21
+mapscene=51
 
 [viking_ladder_ground]
 model=quest_viking_ladder_ground
@@ -1987,7 +1989,7 @@ active=yes
 
 [viking_shelf_books]
 name=Shelf
-desc=There's a few books on this shelf.
+desc=There are a few books on this shelf.
 model=quest_viking_shelf_books
 active=yes
 

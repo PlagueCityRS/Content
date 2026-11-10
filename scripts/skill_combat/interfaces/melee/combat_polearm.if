@@ -1,5 +1,3 @@
-type=overlay
-
 [preview]
 type=model
 x=135
@@ -11,7 +9,7 @@ zoom=624
 xan=521
 yan=1288
 
-[com_1]
+[com_0]
 type=text
 x=4
 y=2
@@ -33,7 +31,7 @@ shadowed=yes
 text=%1
 colour=0xFFFF00
 
-[com_3]
+[com_1]
 type=text
 x=4
 y=18
@@ -90,7 +88,7 @@ script1=eq,1
 graphic=combatboxes,0
 activegraphic=combatboxes,1
 
-[com_8]
+[com_2]
 layer=polearm101
 type=graphic
 x=22
@@ -99,7 +97,7 @@ width=34
 height=24
 graphic=combaticons3,11
 
-[com_9]
+[com_3]
 layer=polearm101
 type=graphic
 x=21
@@ -108,7 +106,7 @@ width=34
 height=24
 graphic=combaticons3,12
 
-[com_10]
+[com_4]
 layer=polearm101
 type=graphic
 x=23
@@ -117,7 +115,7 @@ width=34
 height=24
 graphic=combaticons3,10
 
-[com_11]
+[com_5]
 layer=polearm101
 type=text
 x=78
@@ -129,7 +127,7 @@ shadowed=yes
 text=Jab
 colour=0xFFFF00
 
-[com_12]
+[com_6]
 layer=polearm101
 type=text
 x=78
@@ -141,7 +139,7 @@ shadowed=yes
 text=Swipe
 colour=0xFFFF00
 
-[com_13]
+[com_7]
 layer=polearm101
 type=text
 x=78
@@ -153,7 +151,7 @@ shadowed=yes
 text=Fend
 colour=0xFFFF00
 
-[com_14]
+[com_8]
 layer=polearm101
 type=text
 x=78
@@ -164,7 +162,7 @@ font=p11_full
 text=(Controlled)
 colour=0xFFFF00
 
-[com_15]
+[com_9]
 layer=polearm101
 type=text
 x=78
@@ -175,7 +173,7 @@ font=p11_full
 text=(Defensive)
 colour=0xFFFF00
 
-[com_16]
+[com_10]
 layer=polearm101
 type=text
 x=78
@@ -186,7 +184,7 @@ font=p11_full
 text=(Aggressive)
 colour=0xFFFF00
 
-[com_17]
+[com_11]
 type=text
 x=82
 y=86
@@ -196,7 +194,7 @@ font=p11_full
 text=(Stab)
 colour=0xFFFF00
 
-[com_18]
+[com_12]
 type=text
 x=82
 y=126
@@ -206,7 +204,7 @@ font=p11_full
 text=(Slash)
 colour=0xFFFF00
 
-[com_19]
+[com_13]
 type=text
 x=82
 y=169
@@ -235,7 +233,7 @@ height=23
 colour=0xFFFF00
 option=Use @gre@Special Attack
 
-[com_21]
+[com_14]
 layer=specbar_layer
 type=graphic
 x=131
@@ -244,7 +242,7 @@ width=25
 height=30
 graphic=steelborder,1
 
-[com_22]
+[com_15]
 layer=specbar_layer
 type=graphic
 x=0
@@ -253,7 +251,7 @@ width=25
 height=30
 graphic=steelborder,0
 
-[com_23]
+[com_16]
 layer=specbar_layer
 type=graphic
 x=6
@@ -262,7 +260,7 @@ width=36
 height=36
 graphic=miscgraphics,3
 
-[com_24]
+[com_17]
 layer=specbar_layer
 type=graphic
 x=42
@@ -271,7 +269,7 @@ width=36
 height=36
 graphic=miscgraphics,3
 
-[com_25]
+[com_18]
 layer=specbar_layer
 type=graphic
 x=78
@@ -280,7 +278,7 @@ width=36
 height=36
 graphic=miscgraphics,3
 
-[com_26]
+[com_19]
 layer=specbar_layer
 type=graphic
 x=114
@@ -289,7 +287,7 @@ width=36
 height=36
 graphic=miscgraphics,3
 
-[com_27]
+[com_20]
 layer=specbar_layer
 type=graphic
 x=5
@@ -298,7 +296,7 @@ width=36
 height=36
 graphic=miscgraphics,3
 
-[com_28]
+[com_21]
 layer=specbar_layer
 type=graphic
 x=41
@@ -307,7 +305,7 @@ width=36
 height=36
 graphic=miscgraphics,3
 
-[com_29]
+[com_22]
 layer=specbar_layer
 type=graphic
 x=77
@@ -316,7 +314,7 @@ width=36
 height=36
 graphic=miscgraphics,3
 
-[com_30]
+[com_23]
 layer=specbar_layer
 type=graphic
 x=112
@@ -325,7 +323,7 @@ width=36
 height=36
 graphic=miscgraphics,3
 
-[com_31]
+[com_24]
 layer=specbar_layer
 type=graphic
 x=115
@@ -334,18 +332,18 @@ width=36
 height=36
 graphic=miscgraphics,3
 
-[com_33]
+[com_25]
 layer=specbar_layer
 type=model
 x=5
 y=8
 width=146
 height=9
-model=model_com_3476
+model=com_i1
 zoom=1153
 xan=500
 
-[com_34]
+[com_26]
 layer=specbar_layer
 type=model
 x=3
@@ -354,11 +352,11 @@ width=146
 height=9
 script1op1=pushvar,sa_energy
 script1=gt,99
-model=model_com_3475
+model=com_i2
 zoom=1153
 xan=500
 
-[com_35]
+[com_27]
 layer=specbar_layer
 type=model
 x=18
@@ -367,11 +365,11 @@ width=146
 height=9
 script1op1=pushvar,sa_energy
 script1=gt,199
-model=model_com_3475
+model=com_i2
 zoom=1153
 xan=500
 
-[com_36]
+[com_28]
 layer=specbar_layer
 type=model
 x=33
@@ -380,11 +378,11 @@ width=146
 height=9
 script1op1=pushvar,sa_energy
 script1=gt,299
-model=model_com_3475
+model=com_i2
 zoom=1153
 xan=500
 
-[com_37]
+[com_29]
 layer=specbar_layer
 type=model
 x=47
@@ -393,11 +391,11 @@ width=146
 height=9
 script1op1=pushvar,sa_energy
 script1=gt,399
-model=model_com_3475
+model=com_i2
 zoom=1153
 xan=500
 
-[com_38]
+[com_30]
 layer=specbar_layer
 type=model
 x=61
@@ -406,11 +404,11 @@ width=146
 height=9
 script1op1=pushvar,sa_energy
 script1=gt,499
-model=model_com_3475
+model=com_i2
 zoom=1153
 xan=500
 
-[com_39]
+[com_31]
 layer=specbar_layer
 type=model
 x=75
@@ -419,11 +417,11 @@ width=146
 height=9
 script1op1=pushvar,sa_energy
 script1=gt,599
-model=model_com_3475
+model=com_i2
 zoom=1153
 xan=500
 
-[com_40]
+[com_32]
 layer=specbar_layer
 type=model
 x=90
@@ -432,11 +430,11 @@ width=146
 height=9
 script1op1=pushvar,sa_energy
 script1=gt,699
-model=model_com_3475
+model=com_i2
 zoom=1153
 xan=500
 
-[com_41]
+[com_33]
 layer=specbar_layer
 type=model
 x=104
@@ -445,11 +443,11 @@ width=146
 height=9
 script1op1=pushvar,sa_energy
 script1=gt,799
-model=model_com_3475
+model=com_i2
 zoom=1153
 xan=500
 
-[com_42]
+[com_34]
 layer=specbar_layer
 type=model
 x=118
@@ -458,11 +456,11 @@ width=146
 height=9
 script1op1=pushvar,sa_energy
 script1=gt,899
-model=model_com_3475
+model=com_i2
 zoom=1153
 xan=500
 
-[com_43]
+[com_35]
 layer=specbar_layer
 type=model
 x=132
@@ -471,11 +469,11 @@ width=146
 height=9
 script1op1=pushvar,sa_energy
 script1=gt,999
-model=model_com_3475
+model=com_i2
 zoom=1153
 xan=500
 
-[com_44]
+[com_36]
 layer=specbar_layer
 type=text
 x=20

@@ -494,10 +494,10 @@ wanderrange=1
 [ranging_guild_ticket_exchange]
 vislevel=hide
 name=Ticket Merchant
-desc=Exchanges your tickets for equipment.
+desc=Sells equipment in exchange for archery tickets.
 walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
 readyanim=human_ready
-op1=Talk-to
+op1=Trade
 model1=man_head_rangershood
 model2=man_feet_boots
 model3=man_jaw_none

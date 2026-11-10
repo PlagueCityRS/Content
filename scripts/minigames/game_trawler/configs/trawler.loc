@@ -19,13 +19,13 @@ op1=Climb-on
 [game_trawler_net1]
 name=Trawler net
 desc=Smells like fish.
-model=model_loc_2162
+model=game_trawler_net1
 length=2
 
 [game_trawler_net2]
 name=Trawler net
 desc=Smells like fish.
-model=model_loc_2162
+model=game_trawler_net1
 length=2
 mirror=yes
 
@@ -58,6 +58,18 @@ op1=Inspect
 name=Leak
 desc=Water is pouring in through the hole.
 model=ship_hull_leak_ing
+recol1s=10598
+recol1d=17799
+recol2s=9541
+recol2d=17799
+recol3s=8484
+recol3d=17799
+recol4s=7427
+recol4d=17799
+recol5s=6370
+recol5d=15685
+recol6s=5313
+recol6d=13571
 width=2
 anim=shiphull_leaking
 op1=Fill
@@ -68,6 +80,18 @@ forceapproach=south
 name=Repaired leak
 desc=A patch of swamp tar has bunged up the hole.
 model=ship_hull_fixed_fortrawler
+recol1s=10598
+recol1d=17799
+recol2s=9541
+recol2d=17799
+recol3s=8484
+recol3d=17799
+recol4s=7427
+recol4d=17799
+recol5s=6370
+recol5d=15685
+recol6s=5313
+recol6d=13571
 width=2
 blockwalk=no
 
@@ -105,14 +129,31 @@ op1=Inspect
 [trawler_ladder]
 name=Ship's ladder
 desc=The upper deck can be accessed with this ladder.
-model=ship_ladder
+model=ship_ladder_8
+recol1s=10598
+recol1d=12548
+recol2s=9541
+recol2d=11491
+recol3s=8484
+recol3d=10434
+recol4s=7427
+recol4d=10434
+forceapproach=south
 op1=Climb-up
 sharelight=yes
 
 [trawler_laddertop]
 name=Ship's ladder
 desc=Back down to the main deck.
-model=model_loc_273
+model=ship_laddertop
+recol1s=10598
+recol1d=12548
+recol2s=9541
+recol2d=11491
+recol3s=8484
+recol3d=10434
+recol4s=7427
+recol4d=10434
 op1=Climb-down
 sharelight=yes
 
@@ -126,7 +167,17 @@ active=yes
 [shiphull_trawler]
 name=Hull
 desc=This old trawler has seen better days.
-model=model_loc_2177
+model=shiphull_trawler
+recol1s=10598
+recol1d=17799
+recol2s=9541
+recol2d=17799
+recol3s=8484
+recol3d=17799
+recol4s=7427
+recol4d=17799
+recol5s=6370
+recol5d=15685
 width=2
 active=yes
 blockwalk=no

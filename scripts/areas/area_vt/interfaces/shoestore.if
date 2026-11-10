@@ -704,15 +704,15 @@ graphic=steelborder2,0
 
 [com_88]
 type=text
-x=420
-y=29
+x=418
+y=32
 buttontype=close
 width=68
 height=11
 font=p11_full
 shadowed=yes
 text=Close Window
-colour=0x808080
+colour=0xA1A1A1
 overcolour=0xFFFFFF
 
 [com_89]
@@ -725,7 +725,7 @@ center=yes
 font=b12_full
 shadowed=yes
 text=Yrsa's Shoe Store
-colour=0xFFAA44
+colour=0xC9800D
 
 [confirm]
 type=text
@@ -803,7 +803,7 @@ width=25
 height=25
 script1op1=pushvar,if1
 script1=eq,1
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 option=Brown
 
 [khaki]
@@ -815,7 +815,7 @@ width=25
 height=25
 script1op1=pushvar,if1
 script1=eq,2
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 option=Khaki
 
 [ashen]
@@ -827,7 +827,7 @@ width=25
 height=25
 script1op1=pushvar,if1
 script1=eq,3
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 option=Ashen
 
 [dark]
@@ -839,7 +839,7 @@ width=25
 height=25
 script1op1=pushvar,if1
 script1=eq,4
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 option=Dark
 
 [terracotta]
@@ -851,7 +851,7 @@ width=25
 height=25
 script1op1=pushvar,if1
 script1=eq,5
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 option=Terracotta
 
 [grey]
@@ -863,5 +863,5 @@ width=25
 height=25
 script1op1=pushvar,if1
 script1=eq,6
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 option=Grey

@@ -178,16 +178,16 @@ param=rangedefence,9
 param=defend_sound,leather_hit
 
 [hardleather_body]
-cost=170
 name=Hardleather body
+cost=170
 desc=Harder than normal leather.
 model=inv_hardleatherarmour
 2dzoom=920
 2dxan=628
 iop2=Wear
-wearpos=torso
 manwear=man_torso_leather_hard,0
-womanwear=man_torso_leather_hard,0
+womanwear=model_5734,0
+wearpos=torso
 category=armour_body
 weight=8lb
 param=magicattack,-4

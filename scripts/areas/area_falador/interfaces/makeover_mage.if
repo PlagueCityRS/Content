@@ -704,21 +704,21 @@ graphic=steelborder2,0
 
 [com_88]
 type=text
-x=420
-y=29
+x=421
+y=32
 buttontype=close
 width=68
 height=11
 font=p11_full
 shadowed=yes
 text=Close Window
-colour=0xFF0000
+colour=0xA1A1A1
 overcolour=0xFFFFFF
 
 [com_89]
 type=text
-x=182
-y=274
+x=176
+y=281
 buttontype=normal
 width=137
 height=14
@@ -878,14 +878,14 @@ activecolour=0x00FF00
 
 [com_103]
 type=text
-x=167
-y=29
-width=166
+x=154
+y=30
+width=195
 height=14
-font=p12_full
+font=b12_full
 shadowed=yes
 text=Select skin colour and gender
-colour=0xFFFF00
+colour=0xC9800D
 
 [com_104]
 type=text
@@ -909,7 +909,7 @@ width=25
 height=25
 script1op1=pushvar,if2
 script1=eq,8
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
 [com_106]
 type=graphic
@@ -919,7 +919,7 @@ width=25
 height=25
 script1op1=pushvar,if2
 script1=eq,1
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
 [com_107]
 type=graphic
@@ -929,7 +929,7 @@ width=25
 height=25
 script1op1=pushvar,if2
 script1=eq,2
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
 [com_108]
 type=graphic
@@ -939,7 +939,7 @@ width=25
 height=25
 script1op1=pushvar,if2
 script1=eq,3
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
 [com_109]
 type=graphic
@@ -949,7 +949,7 @@ width=25
 height=25
 script1op1=pushvar,if2
 script1=eq,4
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
 [com_110]
 type=graphic
@@ -959,7 +959,7 @@ width=25
 height=25
 script1op1=pushvar,if2
 script1=eq,5
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
 [com_111]
 type=graphic
@@ -969,7 +969,7 @@ width=25
 height=25
 script1op1=pushvar,if2
 script1=eq,6
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
 [com_112]
 type=graphic
@@ -979,7 +979,7 @@ width=25
 height=25
 script1op1=pushvar,if2
 script1=eq,7
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
 [com_113]
 type=graphic

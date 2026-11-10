@@ -321,9 +321,8 @@ param=identified_herb_message,You identify the herb. It is Volencia Moss.
 tradeable=no
 
 [rogues_purse]
-name=Rogues purse
-desc=This herb is Rogues Purse.
-category=category_90
+name=Rogue's purse
+desc=This herb is Rogue's Purse.
 cost=5
 model=inv_herb
 members=yes
@@ -331,6 +330,7 @@ members=yes
 2dzoom=700
 2dyan=1588
 2dxan=376
+category=category_90
 weight=7g
 param=identified_herb_level,3
 param=identified_herb_exp,25
@@ -339,9 +339,13 @@ param=identified_herb_message,You identify the herb. It is Rogues Purse.
 tradeable=no
 
 [lantadyme]
+name=Lantadyme
+recol1s=448
+recol1d=455
+recol2s=288
+recol2d=295
 cost=68
 members=yes
-name=Lantadyme
 desc=A powerful herb.
 model=inv_herb
 2dxof=4

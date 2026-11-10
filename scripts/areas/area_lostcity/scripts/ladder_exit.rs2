@@ -1,0 +1,5 @@
+[oploc1,zanarisladderout2]
+if_close;
+anim(human_reachforladder, 0);
+p_delay(1);
+p_telejump(0_50_49_1_33);

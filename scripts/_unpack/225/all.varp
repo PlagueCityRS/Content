@@ -79,7 +79,7 @@ protect=no
 
 [action_delay]
 
-[autocast_spell]
+[varp_59]
 scope=perm
 
 [goblinquest]
@@ -198,13 +198,11 @@ scope=perm
 [marketthief]
 scope=perm
 
-[varp_189]
-
-[varp_190]
+[varp_82]
 
 [varp_191]
 
-[desert]
+[varp_196]
 
 [varp_199]
 
@@ -285,12 +283,6 @@ type=player_uid
 
 [varp_252]
 
-[varp_253]
-
-[varp_254]
-
-[varp_255]
-
 [thread_used]
 scope=perm
 
@@ -307,6 +299,15 @@ transmit=yes
 transmit=yes
 
 [if3]
+transmit=yes
+
+[if4]
+transmit=yes
+
+[if5]
+transmit=yes
+
+[if6]
 transmit=yes
 
 [magearena]
@@ -332,7 +333,7 @@ scope=perm
 
 [varp_278]
 
-[varp_279]
+[awarded_points]
 
 [varp_280]
 

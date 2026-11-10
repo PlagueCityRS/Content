@@ -1,4 +1,4 @@
-[prayer_guild]
+[prayguild]
 scope=perm
 
 [prayer0]
@@ -61,11 +61,14 @@ protect=no
 transmit=yes
 protect=no
 
-[prayer_drain_counter]
+[prayer15]
+transmit=yes
 protect=no
 
-[prayer_drain_effect]
+[prayer16]
+transmit=yes
 protect=no
 
-[prayer_drain_resistance]
+[prayer17]
+transmit=yes
 protect=no

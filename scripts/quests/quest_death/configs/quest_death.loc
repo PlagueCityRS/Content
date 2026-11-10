@@ -94,7 +94,8 @@ blockrange=no
 active=no
 
 [death_troll_spearwall_straight]
-model=castle_spearwall_row
+model=biowatchtower
+model2=castle_spearwall_row
 recol1s=15649
 recol1d=14729
 recol2s=12513
@@ -328,7 +329,7 @@ active=no
 
 [death_suitofarmour]
 name=Suit of armour
-desc=The Imperial Guard's cerimonial armour.
+desc=The Imperial Guard's ceremonial armour.
 model=furniture_suitofarmour
 recol1s=15360
 recol1d=8456
@@ -664,6 +665,8 @@ recol1s=10400
 recol1d=10502
 recol2s=10401
 recol2d=10502
+recol3s=11456
+recol3d=10502
 sharelight=yes
 hillskew=yes
 blockrange=no
@@ -714,7 +717,7 @@ blockrange=no
 
 [death_hermitcave_entrance]
 name=Cave Entrance
-desc=Looks like small cave.
+desc=Looks like a small cave.
 model=cave_entrance3
 recol1s=10400
 recol1d=11592

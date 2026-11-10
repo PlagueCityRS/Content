@@ -1,10 +1,10 @@
 
 [proc,start_desertheat_timer]
 // calculated each time the timer resets
-if(~inzone_coord_pair_table(desert_zones, coord) = false | %desert = ^true) { // don't start another timer if already in desert
+if(~inzone_coord_pair_table(desert_zones, coord) = false | %varp_196 = ^true) { // don't start another timer if already in desert
     return;
 }
-%desert = ^true;
+%varp_196 = ^true;
 ~calculate_desertheat_timer;
 
 [proc,calculate_desertheat_timer]
@@ -56,8 +56,8 @@ if ($hands ! null) {
 settimer(desert_heat, $time);
 
 [proc,clear_desertheat_timer]
-if(~inzone_coord_pair_table(desert_zones, coord) = false & %desert = ^true) {
-    %desert = ^false;
+if(~inzone_coord_pair_table(desert_zones, coord) = false & %varp_196 = ^true) {
+    %varp_196 = ^false;
     cleartimer(desert_heat);
     mes("Desert effect is now over."); // found in 2004-2005 images
     return;
@@ -65,7 +65,7 @@ if(~inzone_coord_pair_table(desert_zones, coord) = false & %desert = ^true) {
 
 [timer,desert_heat]
 if(~inzone_coord_pair_table(desert_zones, coord) = false) { // shouldnt ever happen but failsafe
-    %desert = ^false;
+    %varp_196 = ^false;
     cleartimer(desert_heat);
     return;
 }

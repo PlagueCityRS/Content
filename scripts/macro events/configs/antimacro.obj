@@ -221,37 +221,37 @@ param=to_be_fixed_by_nurmof,^true
 param=fixed,rune_pickaxe
 
 [macro_bronze_pickaxehead]
-name=Pickaxe head
-desc=It's missing a handle.
-model=inv_pickaxe_head
+name=Bronze pick head
 recol1s=15855
 recol1d=8354
+desc=It's missing a handle.
+model=inv_pickaxe_head
 2dxof=-2
 2dyof=-19
 2dzoom=1070
 2dyan=1056
 2dxan=224
-weight=4lb
 cost=1
+weight=4lb
 param=fixed,bronze_pickaxe
 
 [macro_iron_pickaxehead]
-name=Pickaxe head
-desc=It's missing a handle.
-model=inv_pickaxe_head
+name=Iron pick head
 recol1s=15855
 recol1d=8456
+desc=It's missing a handle.
+model=inv_pickaxe_head
 2dxof=-2
 2dyof=-19
 2dzoom=1070
 2dyan=1056
 2dxan=224
-weight=4lb
 cost=139
+weight=4lb
 param=fixed,iron_pickaxe
 
 [macro_steel_pickaxehead]
-name=Pickaxe head
+name=Steel pick head
 desc=It's missing a handle.
 model=inv_pickaxe_head
 2dxof=-2
@@ -259,53 +259,53 @@ model=inv_pickaxe_head
 2dzoom=1070
 2dyan=1056
 2dxan=224
-weight=4lb
 cost=499
+weight=4lb
 param=fixed,steel_pickaxe
 
 [macro_mithril_pickaxehead]
-name=Pickaxe head
-desc=It's missing a handle.
-model=inv_pickaxe_head
+name=Mithril pick head
 recol1s=15855
 recol1d=6346
+desc=It's missing a handle.
+model=inv_pickaxe_head
 2dxof=-2
 2dyof=-19
 2dzoom=1070
 2dyan=1056
 2dxan=224
-weight=4lb
 cost=1299
+weight=4lb
 param=fixed,mithril_pickaxe
 
 [macro_adamant_pickaxehead]
-name=Pickaxe head
-desc=It's missing a handle.
-model=inv_pickaxe_head
+name=Adamant pick head
 recol1s=15855
 recol1d=6438
+desc=It's missing a handle.
+model=inv_pickaxe_head
 2dxof=-2
 2dyof=-19
 2dzoom=1070
 2dyan=1056
 2dxan=224
-weight=4lb
 cost=3199
+weight=4lb
 param=fixed,adamant_pickaxe
 
 [macro_rune_pickaxehead]
-name=Pickaxe head
-desc=It's missing a handle.
-model=inv_pickaxe_head
+name=Rune pick head
 recol1s=15855
 recol1d=6476
+desc=It's missing a handle.
+model=inv_pickaxe_head
 2dxof=-2
 2dyof=-19
 2dzoom=1070
 2dyan=1056
 2dxan=224
-weight=4lb
 cost=31999
+weight=4lb
 param=fixed,rune_pickaxe
 
 [macro_hatchethandle]
@@ -544,99 +544,99 @@ param=to_be_fixed_by_bob,^true
 param=fixed,rune_axe
 
 [macro_bronze_hatchethead]
-name=Axe head
-desc=It's missing a handle.
-model=inv_hatchet_head
+name=Bronze axe head
 recol1s=15855
 recol1d=8354
+desc=It's missing a handle.
+model=inv_hatchet_head
 2dxof=-15
 2dzoom=1060
 2dyan=1196
 2dxan=520
-weight=2lb
 cost=15
+weight=2lb
 param=fixed,bronze_axe
 
 [macro_iron_hatchethead]
-name=Axe head
-desc=It's missing a handle.
-model=inv_hatchet_head
+name=Iron axe head
 recol1s=15855
 recol1d=8456
+desc=It's missing a handle.
+model=inv_hatchet_head
 2dxof=-15
 2dzoom=1060
 2dyan=1196
 2dxan=520
-weight=2lb
 cost=55
+weight=2lb
 param=fixed,iron_axe
 
 [macro_steel_hatchethead]
-name=Axe head
+name=Steel axe head
 desc=It's missing a handle.
 model=inv_hatchet_head
 2dxof=-15
 2dzoom=1060
 2dyan=1196
 2dxan=520
-weight=2lb
 cost=199
+weight=2lb
 param=fixed,steel_axe
 
 [macro_black_hatchethead]
-name=Axe head
-desc=It's missing a handle.
-model=inv_hatchet_head
+name=Black axe head
 recol1s=15855
 recol1d=0
+desc=It's missing a handle.
+model=inv_hatchet_head
 2dxof=-15
 2dzoom=1060
 2dyan=1196
 2dxan=520
-weight=2lb
 cost=383
+weight=2lb
 param=fixed,black_axe
 
 [macro_mithril_hatchethead]
-name=Axe head
-desc=It's missing a handle.
-model=inv_hatchet_head
+name=Mithril axe head
 recol1s=15855
 recol1d=6346
+desc=It's missing a handle.
+model=inv_hatchet_head
 2dxof=-15
 2dzoom=1060
 2dyan=1196
 2dxan=520
-weight=24oz
 cost=519
+weight=24oz
 param=fixed,mithril_axe
 
 [macro_adamant_hatchethead]
-name=Axe head
-desc=It's missing a handle.
-model=inv_hatchet_head
+name=Adamant axe head
 recol1s=15855
 recol1d=6438
+desc=It's missing a handle.
+model=inv_hatchet_head
 2dxof=-15
 2dzoom=1060
 2dyan=1196
 2dxan=520
-weight=40oz
 cost=1279
+weight=40oz
 param=fixed,adamant_axe
 
 [macro_rune_hatchethead]
-name=Axe head
-desc=It's missing a handle.
-model=inv_hatchet_head
+name=Rune axe head
 recol1s=15855
 recol1d=6476
+desc=It's missing a handle.
+model=inv_hatchet_head
 2dxof=-15
 2dzoom=1060
 2dyan=1196
 2dxan=520
-weight=2lb
 cost=12799
+weight=2lb
 param=fixed,rune_axe
 
 [macro_mime_mask]

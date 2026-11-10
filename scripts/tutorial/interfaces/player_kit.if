@@ -741,7 +741,7 @@ height=31
 fill=yes
 option=Accept
 
-[com_92]
+[com_91]
 type=text
 x=237
 y=274
@@ -752,7 +752,7 @@ shadowed=yes
 text=Accept
 colour=0x00C000
 
-[com_93]
+[com_92]
 type=graphic
 x=217
 y=260
@@ -760,7 +760,7 @@ width=25
 height=30
 graphic=steelborder,0
 
-[com_94]
+[com_93]
 type=graphic
 x=270
 y=260
@@ -768,7 +768,7 @@ width=25
 height=30
 graphic=steelborder,1
 
-[com_95]
+[com_94]
 type=graphic
 x=217
 y=273
@@ -776,7 +776,7 @@ width=25
 height=30
 graphic=steelborder,2
 
-[com_96]
+[com_95]
 type=graphic
 x=270
 y=273
@@ -784,7 +784,7 @@ width=25
 height=30
 graphic=steelborder,3
 
-[com_97]
+[com_96]
 type=graphic
 x=326
 y=74
@@ -795,7 +795,7 @@ height=36
 graphic=leftarrow,0
 option=Recolour hair
 
-[com_98]
+[com_97]
 type=text
 x=90
 y=151
@@ -806,7 +806,7 @@ shadowed=yes
 text=Torso
 colour=0xFFFF00
 
-[com_99]
+[com_98]
 type=graphic
 x=27
 y=68
@@ -817,7 +817,7 @@ height=36
 graphic=leftarrow,0
 option=Change head
 
-[com_100]
+[com_99]
 type=graphic
 x=27
 y=103
@@ -828,7 +828,7 @@ height=36
 graphic=leftarrow,0
 option=Change jaw
 
-[com_101]
+[com_100]
 type=graphic
 x=27
 y=138
@@ -839,7 +839,7 @@ height=36
 graphic=leftarrow,0
 option=Change torso
 
-[com_102]
+[com_101]
 type=graphic
 x=27
 y=173
@@ -850,7 +850,7 @@ height=36
 graphic=leftarrow,0
 option=Change arms
 
-[com_103]
+[com_102]
 type=graphic
 x=27
 y=208
@@ -861,7 +861,7 @@ height=36
 graphic=leftarrow,0
 option=Change hands
 
-[com_104]
+[com_103]
 type=graphic
 x=27
 y=243
@@ -872,7 +872,7 @@ height=36
 graphic=leftarrow,0
 option=Change legs
 
-[com_105]
+[com_104]
 type=graphic
 x=27
 y=278
@@ -883,7 +883,7 @@ height=36
 graphic=leftarrow,0
 option=Change feet
 
-[com_106]
+[com_105]
 type=graphic
 x=140
 y=68
@@ -894,7 +894,7 @@ height=36
 graphic=rightarrow,0
 option=Change head
 
-[com_107]
+[com_106]
 type=graphic
 x=140
 y=103
@@ -905,7 +905,7 @@ height=36
 graphic=rightarrow,0
 option=Change jaw
 
-[com_108]
+[com_107]
 type=graphic
 x=140
 y=138
@@ -916,7 +916,7 @@ height=36
 graphic=rightarrow,0
 option=Change torso
 
-[com_109]
+[com_108]
 type=graphic
 x=140
 y=173
@@ -927,7 +927,7 @@ height=36
 graphic=rightarrow,0
 option=Change arms
 
-[com_110]
+[com_109]
 type=graphic
 x=140
 y=208
@@ -938,7 +938,7 @@ height=36
 graphic=rightarrow,0
 option=Change hands
 
-[com_111]
+[com_110]
 type=graphic
 x=140
 y=243
@@ -949,7 +949,7 @@ height=36
 graphic=rightarrow,0
 option=Change legs
 
-[com_112]
+[com_111]
 type=graphic
 x=140
 y=278
@@ -960,7 +960,7 @@ height=36
 graphic=rightarrow,0
 option=Change feet
 
-[com_113]
+[com_112]
 type=text
 x=90
 y=184
@@ -971,7 +971,7 @@ shadowed=yes
 text=Arms
 colour=0xFFFF00
 
-[com_114]
+[com_113]
 type=text
 x=91
 y=254
@@ -982,7 +982,7 @@ shadowed=yes
 text=Legs
 colour=0xFFFF00
 
-[com_115]
+[com_114]
 type=text
 x=91
 y=79
@@ -993,7 +993,7 @@ shadowed=yes
 text=Head
 colour=0xFFFF00
 
-[com_116]
+[com_115]
 type=text
 x=88
 y=219
@@ -1004,7 +1004,7 @@ shadowed=yes
 text=Hands
 colour=0xFFFF00
 
-[com_117]
+[com_116]
 type=text
 x=91
 y=288
@@ -1015,7 +1015,7 @@ shadowed=yes
 text=Feet
 colour=0xFFFF00
 
-[com_118]
+[com_117]
 type=text
 x=94
 y=114
@@ -1026,7 +1026,7 @@ shadowed=yes
 text=Jaw
 colour=0xFFFF00
 
-[com_119]
+[com_118]
 type=graphic
 x=440
 y=74
@@ -1037,7 +1037,7 @@ height=36
 graphic=rightarrow,0
 option=Recolour hair
 
-[com_120]
+[com_119]
 type=graphic
 x=326
 y=144
@@ -1048,7 +1048,7 @@ height=36
 graphic=leftarrow,0
 option=Recolour legs
 
-[com_121]
+[com_120]
 type=graphic
 x=326
 y=109
@@ -1059,7 +1059,7 @@ height=36
 graphic=leftarrow,0
 option=Recolour torso
 
-[com_122]
+[com_121]
 type=graphic
 x=326
 y=179
@@ -1070,7 +1070,7 @@ height=36
 graphic=leftarrow,0
 option=Recolour feet
 
-[com_123]
+[com_122]
 type=graphic
 x=326
 y=214
@@ -1081,7 +1081,7 @@ height=36
 graphic=leftarrow,0
 option=Recolour skin
 
-[com_124]
+[com_123]
 type=text
 x=87
 y=55
@@ -1092,7 +1092,7 @@ shadowed=yes
 text=Design
 colour=0xFFFFFF
 
-[com_125]
+[com_124]
 type=graphic
 x=440
 y=109
@@ -1103,7 +1103,7 @@ height=36
 graphic=rightarrow,0
 option=Recolour torso
 
-[com_126]
+[com_125]
 type=text
 x=391
 y=55
@@ -1114,7 +1114,7 @@ shadowed=yes
 text=Colour
 colour=0xFFFFFF
 
-[com_127]
+[com_126]
 type=graphic
 x=440
 y=144
@@ -1125,7 +1125,7 @@ height=36
 graphic=rightarrow,0
 option=Recolour legs
 
-[com_128]
+[com_127]
 type=graphic
 x=440
 y=179
@@ -1136,7 +1136,7 @@ height=36
 graphic=rightarrow,0
 option=Recolour feet
 
-[com_129]
+[com_128]
 type=graphic
 x=440
 y=214
@@ -1147,7 +1147,7 @@ height=36
 graphic=rightarrow,0
 option=Recolour skin
 
-[com_130]
+[com_129]
 type=text
 x=394
 y=86
@@ -1158,7 +1158,7 @@ shadowed=yes
 text=Hair
 colour=0xFFFF00
 
-[com_131]
+[com_130]
 type=text
 x=390
 y=121
@@ -1169,7 +1169,7 @@ shadowed=yes
 text=Torso
 colour=0xFFFF00
 
-[com_132]
+[com_131]
 type=text
 x=392
 y=155
@@ -1180,7 +1180,7 @@ shadowed=yes
 text=Legs
 colour=0xFFFF00
 
-[com_133]
+[com_132]
 type=text
 x=393
 y=225
@@ -1191,7 +1191,7 @@ shadowed=yes
 text=Skin
 colour=0xFFFF00
 
-[com_134]
+[com_133]
 type=text
 x=393
 y=191
@@ -1202,7 +1202,7 @@ shadowed=yes
 text=Feet
 colour=0xFFFF00
 
-[com_135]
+[com_134]
 type=graphic
 x=235
 y=245
@@ -1210,7 +1210,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_136]
+[com_135]
 type=graphic
 x=236
 y=282
@@ -1218,7 +1218,7 @@ width=36
 height=36
 graphic=miscgraphics,3
 
-[com_137]
+[com_136]
 type=text
 x=390
 y=258
@@ -1229,7 +1229,7 @@ shadowed=yes
 text=Gender
 colour=0xFFFFFF
 
-[com_138]
+[com_137]
 type=graphic
 x=325
 y=271
@@ -1241,7 +1241,7 @@ graphic=combatboxes,0
 activegraphic=combatboxes,1
 option=Male
 
-[com_139]
+[com_138]
 type=graphic
 x=417
 y=271
@@ -1253,7 +1253,7 @@ graphic=combatboxes,0
 activegraphic=combatboxes,1
 option=Female
 
-[com_140]
+[com_139]
 type=text
 x=348
 y=281
@@ -1264,7 +1264,7 @@ shadowed=yes
 text=Male
 colour=0xFFFF00
 
-[com_141]
+[com_140]
 type=text
 x=435
 y=281

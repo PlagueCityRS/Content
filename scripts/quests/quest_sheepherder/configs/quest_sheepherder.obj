@@ -1,6 +1,6 @@
 [cattleprod]
-name=Prod
-desc=An old cattle prod.
+name=Cattleprod
+desc=A sharp cattleprod.
 members=yes
 cost=3
 model=inv_cattleprod
@@ -9,9 +9,9 @@ model=inv_cattleprod
 2dyan=1844
 2dxan=264
 iop2=Equip
-wearpos=righthand
 manwear=human_weapons_cattleprod,0
 womanwear=human_weapons_cattleprod,6
+wearpos=righthand
 weight=1lb
 category=weapon_stab
 param=stabattack,4
@@ -28,8 +28,8 @@ param=slash_sound,stabsword_slash
 tradeable=no
 
 [poisoned_feed]
-name=Feed
-desc=This looks nasty.
+name=Sheep feed
+desc=Councillor Halgrive gave me this to kill some sheep.
 cost=3
 model=inv_sheeppoison
 members=yes
@@ -41,8 +41,8 @@ weight=5lb
 tradeable=no
 
 [sheepbonesa]
-name=Bones
-desc=These sheep remains are infected.
+name=Sheep bones (1)
+desc=The suspicious-looking remains of a suspicious-looking sheep.
 members=yes
 model=inv_bones
 2dxof=2
@@ -53,8 +53,8 @@ weight=3lb
 tradeable=no
 
 [sheepbonesb]
-name=Bones
-desc=These sheep remains are infected.
+name=Sheep bones (2)
+desc=The suspicious-looking remains of a suspicious-looking sheep.
 members=yes
 model=inv_bones
 2dxof=2
@@ -65,8 +65,8 @@ weight=3lb
 tradeable=no
 
 [sheepbonesc]
-name=Bones
-desc=These sheep remains are infected.
+name=Sheep bones (3)
+desc=The suspicious-looking remains of a suspicious-looking sheep.
 members=yes
 model=inv_bones
 2dxof=2
@@ -77,8 +77,8 @@ weight=3lb
 tradeable=no
 
 [sheepbonesd]
-name=Bones
-desc=These sheep remains are infected.
+name=Sheep bones (4)
+desc=The suspicious-looking remains of a suspicious-looking sheep.
 members=yes
 model=inv_bones
 2dxof=2
@@ -90,7 +90,7 @@ tradeable=no
 
 [plague_jacket]
 name=Plague jacket
-desc=A thick heavy leather top.
+desc=This should protect me from the plague, I hope!
 members=yes
 cost=50
 model=inv_plaguesuittorso
@@ -100,19 +100,19 @@ model=inv_plaguesuittorso
 2dzan=1932
 2dxan=416
 iop2=Wear
-wearpos=torso
-wearpos2=arms
-wearpos3=hands
 manwear=man_torso_plaguesuit,0
 manwear2=man_arms_plaguesuit
 womanwear=woman_torso_plaguesuit,0
 womanwear2=woman_arms_plaguesuit
+wearpos=torso
+wearpos2=arms
+wearpos3=hands
 weight=6lb
 tradeable=no
 
 [plague_trousers]
 name=Plague trousers
-desc=A thick pair of leather trousers.
+desc=These should protect me from the plague, I hope!
 members=yes
 cost=50
 model=inv_plaguesuitlegs
@@ -122,9 +122,9 @@ model=inv_plaguesuitlegs
 2dzan=104
 2dxan=596
 iop2=Wear
-wearpos=legs
-wearpos2=feet
 manwear=man_legs_plaguesuit,0
 womanwear=woman_legs_plaguesuit,0
+wearpos=legs
+wearpos2=feet
 weight=5lb
 tradeable=no

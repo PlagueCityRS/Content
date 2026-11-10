@@ -25,11 +25,11 @@ param=death_sound,bat_death
 param=death_drop,bat_bones
 
 [macro_mime]
+vislevel=hide
 name=Mime
 desc=A mute performer.
 readyanim=human_ready
 alwaysontop=yes
-vislevel=1
 model1=man_headextra_mime_mask
 model2=man_torsoextra_stripes
 model3=man_torso_basic

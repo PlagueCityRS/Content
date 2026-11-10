@@ -1,11 +1,11 @@
 [unstrung_longbow]
-name=Longbow
+name=Longbow (u)
+recol1s=7330
+recol1d=15617
 desc=I need to find a string for this.
 cost=60
 members=yes
 model=inv_longbowunstrung
-recol1s=7330
-recol1d=15617
 2dxof=2
 2dyof=15
 2dzoom=1820
@@ -15,13 +15,13 @@ weight=47oz
 category=unstrung_bow
 
 [unstrung_shortbow]
-name=Shortbow
+name=Shortbow (u)
+recol1s=7330
+recol1d=15617
 desc=I need to find a string for this.
 cost=23
 members=yes
 model=inv_shortbowunstrung
-recol1s=7330
-recol1d=15617
 2dxof=7
 2dyof=2
 2dzoom=1200
@@ -31,13 +31,13 @@ weight=35oz
 category=unstrung_bow
 
 [unstrung_oak_shortbow]
-cost=50
-members=yes
-name=Oak shortbow
-desc=An unstrung oak shortbow, I need a bowstring for this.
-model=inv_shortbowunstrung
+name=Oak shortbow (u)
 recol1s=7330
 recol1d=23009
+cost=50
+members=yes
+desc=An unstrung oak shortbow, I need a bowstring for this.
+model=inv_shortbowunstrung
 2dxof=7
 2dyof=2
 2dzoom=1200
@@ -47,13 +47,13 @@ weight=35oz
 category=unstrung_bow
 
 [unstrung_oak_longbow]
-cost=80
-members=yes
-name=Oak longbow
-desc=An unstrung oak longbow, I need a bowstring for this.
-model=inv_longbowunstrung
+name=Oak longbow (u)
 recol1s=7330
 recol1d=23009
+cost=80
+members=yes
+desc=An unstrung oak longbow, I need a bowstring for this.
+model=inv_longbowunstrung
 2dxof=2
 2dyof=15
 2dzoom=1820
@@ -63,13 +63,13 @@ weight=47oz
 category=unstrung_bow
 
 [unstrung_willow_longbow]
-cost=160
-members=yes
-name=Willow longbow
-desc=An unstrung willow longbow, I need a bowstring for this.
-model=inv_longbowunstrung
+name=Willow longbow (u)
 recol1s=7330
 recol1d=20004
+cost=160
+members=yes
+desc=An unstrung willow longbow, I need a bowstring for this.
+model=inv_longbowunstrung
 2dxof=2
 2dyof=15
 2dzoom=1820
@@ -79,13 +79,13 @@ weight=47oz
 category=unstrung_bow
 
 [unstrung_willow_shortbow]
-cost=100
-members=yes
-name=Willow shortbow
-desc=An unstrung willow shortbow, I need a bowstring for this.
-model=inv_shortbowunstrung
+name=Willow shortbow (u)
 recol1s=7330
 recol1d=20004
+cost=100
+members=yes
+desc=An unstrung willow shortbow, I need a bowstring for this.
+model=inv_shortbowunstrung
 2dxof=7
 2dyof=2
 2dzoom=1200
@@ -95,13 +95,13 @@ weight=35oz
 category=unstrung_bow
 
 [unstrung_maple_longbow]
-cost=320
-members=yes
-name=Maple longbow
-desc=An unstrung maple longbow, I need a bowstring for this.
-model=inv_longbowunstrung
+name=Maple longbow (u)
 recol1s=7330
 recol1d=21040
+cost=320
+members=yes
+desc=An unstrung maple longbow, I need a bowstring for this.
+model=inv_longbowunstrung
 2dxof=2
 2dyof=15
 2dzoom=1820
@@ -111,13 +111,13 @@ weight=47oz
 category=unstrung_bow
 
 [unstrung_maple_shortbow]
-cost=200
-members=yes
-name=Maple shortbow
-desc=An unstrung maple shortbow, I need a bowstring for this.
-model=inv_shortbowunstrung
+name=Maple shortbow (u)
 recol1s=7330
 recol1d=21040
+cost=200
+members=yes
+desc=An unstrung maple shortbow, I need a bowstring for this.
+model=inv_shortbowunstrung
 2dxof=7
 2dyof=2
 2dzoom=1200
@@ -127,13 +127,13 @@ weight=35oz
 category=unstrung_bow
 
 [unstrung_yew_longbow]
-cost=640
-members=yes
-name=Yew longbow
-desc=An unstrung yew longbow, I need a bowstring for this.
-model=inv_longbowunstrung
+name=Yew longbow (u)
 recol1s=7330
 recol1d=23073
+cost=640
+members=yes
+desc=An unstrung yew longbow, I need a bowstring for this.
+model=inv_longbowunstrung
 2dxof=2
 2dyof=15
 2dzoom=1820
@@ -143,13 +143,13 @@ weight=47oz
 category=unstrung_bow
 
 [unstrung_yew_shortbow]
-cost=400
-members=yes
-name=Yew shortbow
-desc=An unstrung yew shortbow, I need a bowstring for this.
-model=inv_shortbowunstrung
+name=Yew shortbow (u)
 recol1s=7330
 recol1d=23073
+cost=400
+members=yes
+desc=An unstrung yew shortbow, I need a bowstring for this.
+model=inv_shortbowunstrung
 2dxof=7
 2dyof=2
 2dzoom=1200
@@ -159,13 +159,13 @@ weight=35oz
 category=unstrung_bow
 
 [unstrung_magic_longbow]
-cost=1280
-members=yes
-name=Magic longbow
-desc=An unstrung magic longbow, I need a bowstring for this.
-model=inv_longbowunstrung
+name=Magic longbow (u)
 recol1s=7330
 recol1d=1451
+cost=1280
+members=yes
+desc=An unstrung magic longbow, I need a bowstring for this.
+model=inv_longbowunstrung
 2dxof=2
 2dyof=15
 2dzoom=1820
@@ -175,13 +175,13 @@ weight=47oz
 category=unstrung_bow
 
 [unstrung_magic_shortbow]
-cost=800
-members=yes
-name=Magic shortbow
-desc=An unstrung magic shortbow, I need a bowstring for this.
-model=inv_shortbowunstrung
+name=Magic shortbow (u)
 recol1s=7330
 recol1d=1451
+cost=800
+members=yes
+desc=An unstrung magic shortbow, I need a bowstring for this.
+model=inv_shortbowunstrung
 2dxof=7
 2dyof=2
 2dzoom=1200

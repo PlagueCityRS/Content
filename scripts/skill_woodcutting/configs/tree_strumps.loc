@@ -10,11 +10,13 @@ recol1d=5218
 name=Tree stump
 desc=This tree has been cut down.
 model=plants_treestump2
+recol1s=4194
+recol1d=5218
+recol2s=5218
+recol2d=12548
 width=2
 length=2
 mapscene=6
-recol1s=4194
-recol1d=5218
 
 // i think this is ardougne zoo
 [treestump2_light]
@@ -125,6 +127,10 @@ recol1d=4194
 name=Tree stump
 desc=This tree has been cut down.
 model=plants_deadtree2_stump
+recol1s=6240
+recol1d=5218
+recol2s=7296
+recol2d=5218
 mapscene=6
 
 //green
@@ -160,13 +166,16 @@ length=2
 name=Tree stump
 desc=This tree has been cut down.
 model=plants_loc_1355
+recol1s=5218
+recol1d=12548
 width=3
 length=3
 
 [oaktree_stump]
 name=Tree stump
 desc=This tree has been cut down.
-model=plants_loc_1356
+model=oaktree_stump
+ambient=25
 width=3
 length=3
 
@@ -182,6 +191,8 @@ length=3
 name=Tree stump
 desc=This tree has been cut down.
 model=plants_deadtree4_stump
+recol1s=4193
+recol1d=5218
 
 // black 1x1
 [deadtree_burnt_stump]

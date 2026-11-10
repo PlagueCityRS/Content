@@ -132,145 +132,159 @@ active=yes
 op1=Climb
 
 [loc_4729]
-name=Crack
-desc=It's a large crack in the wall.
-model=cavern_loc_1418
-active=yes
-sharelight=yes
-hillskew=yes
-op1=Enter
+name=Bush
+desc=A dried up bush, void of life.
+model=loc_4729
+width=2
+length=2
+mapscene=6
+blockrange=no
 
 [loc_4730]
-name=Crack
-desc=It's a large crack in the wall.
-model=cavern_loc_1418
-active=yes
+model=floor_dugupsoil1
+recol1s=13505
+recol1d=13669
+recol2s=14594
+recol2d=13669
+recol3s=15586
+recol3d=13669
 hillskew=yes
-sharelight=yes
-op1=Enter
 
 [loc_4731]
-name=Crack
-desc=It's a large crack in the wall.
-model=cavern_loc_1418
-active=yes
+model=floor_dugupsoil2
+recol1s=13505
+recol1d=13669
+recol2s=14594
+recol2d=13669
+recol3s=15586
+recol3d=13669
 hillskew=yes
-sharelight=yes
-op1=Enter
 
 [loc_4732]
-name=Crack
-desc=It's a large crack in the wall.
-model=cavern_loc_1418
-active=yes
+model=floor_dugupsoil3
+recol1s=13505
+recol1d=13669
+recol2s=14594
+recol2d=13669
+recol3s=15586
+recol3d=13669
 hillskew=yes
-sharelight=yes
-op1=Enter
 
 [loc_4733]
-name=Crack
-desc=It's a large crack in the wall.
-model=cavern_loc_1418
-active=yes
+model=floor_dugupsoil4
+recol1s=13505
+recol1d=13669
+recol2s=14594
+recol2d=13669
+recol3s=15586
+recol3d=13669
 hillskew=yes
-sharelight=yes
-op1=Enter
 
 [loc_4734]
-name=Crack
-desc=It's a large crack in the wall.
-model=cavern_loc_1418
+model=floor_dugupsoil5
+recol1s=13505
+recol1d=13669
+recol2s=14594
+recol2d=13669
+recol3s=15586
+recol3d=13669
 hillskew=yes
-sharelight=yes
-op1=Enter
 
 [loc_4735]
-name=Trapdoor
-desc=It's a trapdoor.
-model=furniture_trapdoor
-active=yes
-forceapproach=west
-op1=Open
-raiseobject=no
-blockwalk=no
-blockrange=no
+model=floor_new_grass1
+recol1s=21140
+recol1d=11712
+recol2s=15855
+recol2d=11715
+recol3s=10570
+recol3d=10659
+hillskew=yes
+active=no
+ambient=20
 
 [loc_4736]
-name=Trapdoor
-desc=It's a trapdoor.
-model=furniture_trapdoor
-active=yes
-forceapproach=west
-op1=Open
-raiseobject=no
-blockwalk=no
-blockrange=no
+model=floor_new_grass2
+recol1s=21140
+recol1d=11712
+recol2s=15855
+recol2d=11715
+recol3s=10570
+recol3d=10659
+hillskew=yes
+active=no
+ambient=20
 
 [loc_4737]
-name=Trapdoor
-desc=It's a trapdoor.
-model=furniture_trapdoor
-active=yes
-forceapproach=west
-op1=Open
-raiseobject=no
-blockwalk=no
-blockrange=no
+model=floor_new_grass3
+recol1s=21140
+recol1d=11712
+recol2s=15855
+recol2d=11715
+recol3s=10570
+recol3d=10659
+hillskew=yes
+active=no
+ambient=20
 
 [loc_4738]
-name=Trapdoor
-desc=It's a trapdoor.
-model=furniture_trapdoor
-active=yes
-forceapproach=west
-op1=Open
-raiseobject=no
-blockwalk=no
-blockrange=no
+model=floor_new_grass4
+recol1s=21140
+recol1d=11712
+recol2s=15855
+recol2d=11715
+recol3s=10570
+recol3d=10659
+hillskew=yes
+active=no
+ambient=20
 
 [loc_4739]
-name=Trapdoor
-desc=It's an open trapdoor.
-model=furniture_trapdoor_open
-active=yes
-forceapproach=west
-op1=Open
-raiseobject=no
-blockwalk=no
-blockrange=no
+model=floor_new_grass3_castle_edge
+recol1s=21140
+recol1d=11712
+recol2s=15855
+recol2d=11715
+recol3s=10570
+recol3d=10659
+hillskew=yes
+active=no
+ambient=20
 
 [loc_4740]
-name=Trapdoor
-desc=It's an open trapdoor.
-model=furniture_trapdoor_open
-active=yes
-forceapproach=west
-op1=Open
-raiseobject=no
-blockwalk=no
-blockrange=no
+model=floor_new_grass4_castle_edge
+recol1s=21140
+recol1d=11712
+recol2s=15855
+recol2d=11715
+recol3s=10570
+recol3d=10659
+hillskew=yes
+active=no
+ambient=20
 
 [loc_4741]
-name=Trapdoor
-desc=It's an open trapdoor.
-model=furniture_trapdoor_open
-active=yes
-forceapproach=west
-op1=Open
-raiseobject=no
-blockwalk=no
-blockrange=no
+model=floor_new_grass4_castle_edge2
+recol1s=21140
+recol1d=11712
+recol2s=15855
+recol2d=11715
+recol3s=10570
+recol3d=10659
+hillskew=yes
+active=no
+ambient=20
 
 [loc_4742]
-name=Trapdoor
-desc=It's an open trapdoor.
-model=furniture_trapdoor_open
-active=yes
-forceapproach=west
-op1=Open
-raiseobject=no
-blockwalk=no
-blockrange=no
+model=floor_new_grass4_castle_corner
+recol1s=21140
+recol1d=11712
+recol2s=15855
+recol2d=11715
+recol3s=10570
+recol3d=10659
+hillskew=yes
+active=no
+ambient=20
 
 [mm_bridge_ladder]
 name=Bamboo Ladder
@@ -1110,7 +1124,7 @@ blockrange=no
 
 [mm_pineapple_plant_one]
 name=Pineapple Plant
-desc=Looks spikey.
+desc=Looks spiky.
 model=plants_loc_1408
 width=2
 length=2
@@ -1128,7 +1142,17 @@ blockrange=no
 [mm_jungleplant2]
 name=Jungle Plant
 desc=A type of jungle fern.
-model=plants_jungleplant2
+model=plants_plant1
+recol1s=15855
+recol1d=6754
+recol2s=12684
+recol2d=6690
+recol3s=10570
+recol3d=6754
+recol4s=9513
+recol4d=6275
+recol5s=8456
+recol5d=5218
 width=2
 length=2
 blockrange=no
@@ -1414,7 +1438,7 @@ blockrange=no
 
 [mm_gorillastatue_large]
 name=Gorilla Statue
-desc=It's an absolutely collosal statue of some kind of gorilla.
+desc=It's an absolutely colossal statue of some kind of gorilla.
 model=quest_mm_gorillastatue_large
 width=4
 length=4
@@ -1596,7 +1620,7 @@ op1=Climb
 [mm_speartrap]
 name=Slight indentations
 desc=Looks suspicious.
-model=model_loc_3234
+model=upass_speartrap
 recol1s=7329
 recol1d=12580
 width=2
@@ -1627,7 +1651,7 @@ active=yes
 [mm_double_springtrap]
 name=Stalagmites
 desc=Formed over many years.
-model=model_loc_3232
+model=upass_double_springtrap
 width=3
 hillskew=yes
 blockwalk=no

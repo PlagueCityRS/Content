@@ -174,13 +174,13 @@ recol1d=6272
 [upass_springtrap]
 name=Trap
 desc=Best avoided.
-model=model_loc_3228
+model=upass_springtrap
 length=3
 
 [upass_springtrap_inactive]
 name=Trap
 desc=Best avoided.
-model=model_loc_3229
+model=upass_springtrap_inactive
 length=2
 
 [upass_double_springtrap_trigger]
@@ -206,7 +206,7 @@ active=yes
 [upass_double_springtrap]
 name=Stalagmites
 desc=Formed over many years.
-model=model_loc_3232
+model=upass_double_springtrap
 width=3
 hillskew=yes
 blockwalk=no
@@ -215,12 +215,12 @@ blockrange=no
 [upass_snaptrap_inactive]
 name=Trap
 desc=Best avoided.
-model=model_loc_3233
+model=upass_snaptrap_inactive
 
 [upass_speartrap]
 name=Odd markings
 desc=Looks suspicious.
-model=model_loc_3234
+model=upass_speartrap
 width=2
 hillskew=yes
 blockwalk=no
@@ -267,7 +267,7 @@ hillskew=yes
 [old_bridge_up]
 name=Bridge
 desc=It looks like only the guide ropes are holding the bridge up.
-model=model_loc_3239
+model=old_bridge_up
 length=2
 width=2
 active=yes
@@ -275,7 +275,7 @@ blockrange=no
 
 [old_bridge_animated]
 name=Bridge
-model=model_loc_3240
+model=old_bridge_animated
 length=4
 width=2
 anim=oldbridge
@@ -570,7 +570,7 @@ model=furniture_chestclosed
 op1=Open
 
 [walkway_upass_narrow_mid]
-model=model_loc_3275
+model=walkway_upass_narrow_mid
 sharelight=yes
 blockrange=no
 active=no
@@ -590,7 +590,7 @@ recol1s=12580
 recol1d=7329
 
 [walkway_upass_narrow_end]
-model=model_loc_3277
+model=walkway_upass_narrow_end
 sharelight=yes
 blockrange=no
 active=no
@@ -764,7 +764,7 @@ op1=Read
 [portcullis_upass]
 name=Portcullis
 desc=You won't be able to lift that.
-model=model_loc_3303
+model=portcullis_upass
 width=2
 
 [portcullis_support_upass]
@@ -971,7 +971,7 @@ length=4
 [upass_templedoor_closed_right]
 name=Door
 desc=A very big door.
-model=model_loc_3333
+model=upass_templedoor_closed_right
 length=2
 op1=Open
 param=next_loc_stage,upass_templedoor_open_right
@@ -979,7 +979,7 @@ param=next_loc_stage,upass_templedoor_open_right
 [upass_templedoor_closed_left]
 name=Door
 desc=A very big door.
-model=model_loc_3333
+model=upass_templedoor_closed_right
 length=2
 mirror=yes
 op1=Open
@@ -1007,7 +1007,7 @@ op1=Pull
 [upass_logtrap]
 name=Hanging log
 desc=Why would a log be hung up there?
-model=model_loc_3338
+model=upass_logtrap
 width=3
 length=5
 blockwalk=no
@@ -1204,7 +1204,7 @@ recol6s=21131
 recol6d=14798
 
 [iban_firewall_straight]
-model=model_loc_715
+model=firewall_straight
 anim=firewall
 ambient=100
 contrast=100
@@ -1212,7 +1212,7 @@ resizey=512
 mapscene=22
 
 [iban_firewall_diagonal]
-model=model_loc_716
+model=firewall_diagonal
 anim=firewall
 ambient=100
 contrast=100
@@ -1257,12 +1257,12 @@ ambient=50
 op1=Search
 
 [upass_walkway_spikes]
-model=model_loc_3363
+model=upass_walkway_spikes
 
 [obstical_rockswing_middle_for_clipping]
 name=Rock
-desc=A odd looking rock formation.
-model=model_loc_2275
+desc=An odd looking rock formation.
+model=obstical_rockswing_middle
 length=6
 blockwalk=no
 

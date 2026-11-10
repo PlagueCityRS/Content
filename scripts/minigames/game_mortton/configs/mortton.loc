@@ -129,7 +129,7 @@ param=prev_loc_stage,templewall_9
 
 [templewallcorner_base]
 name=Broken Wall
-desc=The broken wall of a desicrated temple.
+desc=The broken wall of a desecrated temple.
 model=quest_shades_temple_build_wall2_foundation
 op1=Repair
 op3=hidden
@@ -139,7 +139,7 @@ param=temple_wall_level,0
 
 [templewallcorner_1]
 name=Temple wall
-desc=The partially repaired wall of a desicrated temple.
+desc=The partially repaired wall of a desecrated temple.
 model=quest_shades_temple_build_wall2
 anim=temple_build1
 op1=Repair
@@ -151,7 +151,7 @@ param=temple_wall_level,1
 
 [templewallcorner_2]
 name=Temple wall
-desc=The partially repaired wall of a desicrated temple.
+desc=The partially repaired wall of a desecrated temple.
 model=quest_shades_temple_build_wall2
 anim=temple_build2
 op1=Repair
@@ -163,7 +163,7 @@ param=temple_wall_level,2
 
 [templewallcorner_3]
 name=Temple wall
-desc=The partially repaired wall of a desicrated temple.
+desc=The partially repaired wall of a desecrated temple.
 model=quest_shades_temple_build_wall2
 anim=temple_build3
 op1=Repair
@@ -175,7 +175,7 @@ param=temple_wall_level,3
 
 [templewallcorner_4]
 name=Temple wall
-desc=The partially repaired wall of a desicrated temple.
+desc=The partially repaired wall of a desecrated temple.
 model=quest_shades_temple_build_wall2
 anim=temple_build4
 op1=Repair
@@ -187,7 +187,7 @@ param=temple_wall_level,4
 
 [templewallcorner_5]
 name=Temple wall
-desc=The partially repaired wall of a desicrated temple.
+desc=The partially repaired wall of a desecrated temple.
 model=quest_shades_temple_build_wall2
 anim=temple_build5
 op1=Repair
@@ -199,7 +199,7 @@ param=temple_wall_level,5
 
 [templewallcorner_6]
 name=Temple wall
-desc=The partially repaired wall of a desicrated temple.
+desc=The partially repaired wall of a desecrated temple.
 model=quest_shades_temple_build_wall2
 anim=temple_build6
 op1=Repair
@@ -211,7 +211,7 @@ param=temple_wall_level,6
 
 [templewallcorner_7]
 name=Temple wall
-desc=The partially repaired wall of a desicrated temple.
+desc=The partially repaired wall of a desecrated temple.
 model=quest_shades_temple_build_wall2
 anim=temple_build7
 op1=Repair
@@ -223,7 +223,7 @@ param=temple_wall_level,7
 
 [templewallcorner_8]
 name=Temple wall
-desc=The partially repaired wall of a desicrated temple.
+desc=The partially repaired wall of a desecrated temple.
 model=quest_shades_temple_build_wall2
 anim=temple_build8
 op1=Repair
@@ -235,7 +235,7 @@ param=temple_wall_level,8
 
 [templewallcorner_9]
 name=Temple wall
-desc=The nearly repaired wall of a desicrated temple.
+desc=The nearly repaired wall of a desecrated temple.
 model=quest_shades_temple_build_wall2
 anim=temple_build9
 op1=Repair
@@ -258,7 +258,7 @@ param=temple_wall_level,10
 
 [templefire_altar]
 name=Flaming Fire altar
-desc=A flaming fire altar.
+desc=A flaming Fire altar.
 model=outdoorfurniture_fire_temple_altar
 recol1s=9513
 recol1d=15855
@@ -266,14 +266,14 @@ anim=fire
 
 [templefire_altar_nofire]
 name=Fire altar
-desc=An ancient fire altar.
+desc=An ancient Fire altar.
 model=outdoorfurniture_fire_temple_altar_unlit
 op1=Light
 op3=hidden
 
 [templefire_altar_nofire_broken]
-name=Broken fire altar
-desc=An ancient, totally desicrated broken down  fire altar.
+name=Broken Fire altar
+desc=An ancient, totally desecrated, broken down fire altar.
 model=outdoorfurniture_fire_temple_altar_ruined
 
 [temple_pyre]

@@ -216,7 +216,7 @@ weight=4oz
 
 [sickle_mould]
 name=Sickle mould
-desc=Used to make sickles
+desc=Used to make sickles.
 cost=10
 model=quest_naturespirit_inv_silver_sickle_mould
 2dzoom=1330

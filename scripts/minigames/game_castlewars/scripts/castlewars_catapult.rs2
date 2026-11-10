@@ -130,19 +130,19 @@ if (last_useitem ! castlewars_toolkit) {
 
 
 
-[if_button,castlewars_catapult:com_151] // z north
+[if_button,castlewars_catapult:castlewars_z_up] // z north
 if (%castlewars_team = ^castlewars_team_saradomin) ~castlewars_catapult_add_z(1);
 else ~castlewars_catapult_add_z(-1);
 
-[if_button,castlewars_catapult:com_152] // z south
+[if_button,castlewars_catapult:castlewars_z_down] // z south
 if (%castlewars_team = ^castlewars_team_saradomin) ~castlewars_catapult_add_z(-1);
 else ~castlewars_catapult_add_z(1);
 
-[if_button,castlewars_catapult:com_153] // x east
+[if_button,castlewars_catapult:castlewars_x_up] // x east
 if (%castlewars_team = ^castlewars_team_saradomin) ~castlewars_catapult_add_x(-1);
 else ~castlewars_catapult_add_x(1);
 
-[if_button,castlewars_catapult:com_154] // x west
+[if_button,castlewars_catapult:castlewars_x_down] // x west
 if (%castlewars_team = ^castlewars_team_saradomin) ~castlewars_catapult_add_x(1);
 else ~castlewars_catapult_add_x(-1);
 
@@ -168,7 +168,7 @@ def_int $z = multiply(%castlewars_catapultz, 2);
 if (%castlewars_team = ^castlewars_team_saradomin) return(movecoord(^castlewars_saradomin_catapult_fire_coord, %castlewars_catapultx, 0, %castlewars_catapultz));
 else return(movecoord(^castlewars_zamorak_catapult_fire_coord, %castlewars_catapultx, 0, %castlewars_catapultz));
 
-[if_button,castlewars_catapult:com_159] // fire !
+[if_button,castlewars_catapult:castlewars_catapult_fire] // fire !
 if_close;
 if (%castlewars_team = ^castlewars_team_saradomin) {
     if (loc_find(^castlewars_saradomin_catapult_coord, castlewars_catapult_saradomin) = false) {

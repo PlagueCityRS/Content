@@ -13,7 +13,7 @@ resizey=95
 resizez=95
 
 [lantern_glows]
-model=model_4616
+model=lantern_glows
 anim=lantern_glow
 ambient=30
 contrast=10

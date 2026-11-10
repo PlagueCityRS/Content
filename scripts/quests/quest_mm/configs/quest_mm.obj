@@ -659,10 +659,30 @@ iop5=Move
 category=mm_reinit_inactive
 
 [mm_helper]
+name=Iodine
+recol1s=2340
+recol1d=25073
+desc=Slightly archaic, but effective.
+iop1=Wear
+cost=1
+model=inv_robebottoms
+2dyof=1
+2dzoom=1940
+2dxan=572
 dummyitem=inv_only
 
 // todo: "cert_mm_helper"
 [obj_4001]
+name=Shrine
+recol1s=2340
+recol1d=25073
+desc=Sanctity in your pocket.
+iop1=Wear
+cost=1
+model=inv_robebottoms
+2dyof=1
+2dzoom=1940
+2dxan=572
 dummyitem=inv_only
 
 [mm_reinitialisation_hint]
@@ -682,30 +702,30 @@ tradeable=no
 
 [mm_gnome_royal_seal]
 name=Gnome royal seal
-desc=It's the official Royal Gnome Seal, signed by King Narnode Shareem.
+desc=It's the official Gnome Royal Seal, signed by King Narnode Shareen.
 members=yes
-weight=20g
 model=inv_scrollwithseal
 2dxof=1
 2dyof=7
 2dzoom=1040
 2dyan=120
 2dxan=380
+weight=20g
 tradeable=no
 
 [mm_narnode_orders]
 name=Narnode's orders
 recol1s=29594
 recol1d=29398
-desc=Unreadable orders handwritten by King Narnode Shareem.
+desc=Unreadable orders handwritten by King Narnode Shareen.
 members=yes
-weight=20g
 model=inv_scroll
 2dxof=1
 2dyof=7
 2dzoom=1040
 2dyan=120
 2dxan=380
+weight=20g
 tradeable=no
 
 [mm_monkey_dentures]
@@ -741,16 +761,16 @@ tradeable=no
 
 [mm_eye_of_gnome]
 name=Eye of gnome
-desc=It's ... the eye of a gnome! Now what an earth could one do with this?
+desc=It's ... the eye of a gnome! Now what on earth could one do with this?
 members=yes
 cost=3
-weight=7g
 model=inv_newtseye
 2dxof=1
 2dyof=-2
 2dzoom=690
 2dyan=256
 2dxan=364
+weight=7g
 
 [mm_monkey_magic]
 name=Monkey magic

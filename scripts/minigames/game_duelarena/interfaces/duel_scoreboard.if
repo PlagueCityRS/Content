@@ -702,7 +702,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_89]
+[com_88]
 type=model
 x=52
 y=280
@@ -713,7 +713,7 @@ zoom=1031
 xan=105
 yan=312
 
-[com_90]
+[com_89]
 type=text
 x=192
 y=60
@@ -724,7 +724,7 @@ shadowed=yes
 text=Last fifty duels on this server:
 colour=0xAA8822
 
-[com_91]
+[com_90]
 type=text
 x=21
 y=29
@@ -735,7 +735,7 @@ shadowed=yes
 text=Scoreboard
 colour=0xFFAA44
 
-[com_92]
+[com_91]
 type=text
 x=423
 y=29
@@ -748,7 +748,7 @@ text=Close Window
 colour=0x808080
 overcolour=0xFFFFFF
 
-[com_93]
+[com_92]
 type=layer
 x=92
 y=80
@@ -757,7 +757,7 @@ height=227
 scroll=752
 
 [duel2]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=15
@@ -770,7 +770,7 @@ text=Crunchy (126) beat Crunchy2 (126)
 colour=0xAAAAAA
 
 [duel1]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=0
@@ -783,7 +783,7 @@ text=Crunchy (126) beat Crunchy2 (126)
 colour=0xAAAAAA
 
 [duel3]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=30
@@ -796,7 +796,7 @@ text=Crunchy (126) beat Crunchy2 (126)
 colour=0xAAAAAA
 
 [duel4]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=45
@@ -809,7 +809,7 @@ text=Crunchy (126) beat Crunchy2 (126)
 colour=0xAAAAAA
 
 [duel5]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=60
@@ -822,7 +822,7 @@ text=Crunchy (126) beat Crunchy2 (126)
 colour=0xAAAAAA
 
 [duel6]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=75
@@ -835,7 +835,7 @@ text=Crunchy (126) beat Crunchy2 (126)
 colour=0xAAAAAA
 
 [duel7]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=90
@@ -848,7 +848,7 @@ text=Crunchy (126) beat Crunchy2 (126)
 colour=0xAAAAAA
 
 [duel8]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=105
@@ -861,7 +861,7 @@ text=Crunchy (126) beat Crunchy2 (126)
 colour=0xAAAAAA
 
 [duel9]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=120
@@ -874,7 +874,7 @@ text=Crunchy (126) beat Crunchy2 (126)
 colour=0xAAAAAA
 
 [duel10]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=135
@@ -887,7 +887,7 @@ text=Crunchy (126) beat Crunchy2 (126)
 colour=0xAAAAAA
 
 [duel11]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=150
@@ -900,7 +900,7 @@ text=Crunchy (126) beat Crunchy2 (126)
 colour=0xAAAAAA
 
 [duel12]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=165
@@ -913,7 +913,7 @@ text=Crunchy (126) beat Crunchy2 (126)
 colour=0xAAAAAA
 
 [duel13]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=180
@@ -926,7 +926,7 @@ text=Crunchy (126) beat Crunchy2 (126)
 colour=0xAAAAAA
 
 [duel14]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=195
@@ -939,7 +939,7 @@ text=Crunchy (126) beat Crunchy2 (126)
 colour=0xAAAAAA
 
 [duel15]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=210
@@ -952,7 +952,7 @@ text=Crunchy (126) beat Crunchy2 (126)
 colour=0xAAAAAA
 
 [duel16]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=225
@@ -965,7 +965,7 @@ text=Crunchy (126) beat Crunchy2 (126)
 colour=0xAAAAAA
 
 [duel17]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=240
@@ -978,7 +978,7 @@ text=Crunchy (126) beat Crunchy2 (126)
 colour=0xAAAAAA
 
 [duel18]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=255
@@ -991,7 +991,7 @@ text=Crunchy (126) beat Crunchy2 (126)
 colour=0xAAAAAA
 
 [duel19]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=270
@@ -1004,7 +1004,7 @@ text=Crunchy (126) beat Crunchy2 (126)
 colour=0xAAAAAA
 
 [duel20]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=285
@@ -1017,7 +1017,7 @@ text=Crunchy (126) beat Crunchy2 (126)
 colour=0xAAAAAA
 
 [duel21]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=300
@@ -1030,7 +1030,7 @@ text=Crunchy (126) beat Crunchy2 (126)
 colour=0xAAAAAA
 
 [duel22]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=315
@@ -1043,7 +1043,7 @@ text=Crunchy (126) beat Crunchy2 (126)
 colour=0xAAAAAA
 
 [duel23]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=330
@@ -1056,7 +1056,7 @@ text=Crunchy (126) beat Crunchy2 (126)
 colour=0xAAAAAA
 
 [duel24]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=345
@@ -1069,7 +1069,7 @@ text=Crunchy (126) beat Crunchy2 (126)
 colour=0xAAAAAA
 
 [duel25]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=360
@@ -1082,7 +1082,7 @@ text=Crunchy (126) beat Crunchy2 (126)
 colour=0xAAAAAA
 
 [duel26]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=375
@@ -1095,7 +1095,7 @@ text=Crunchy (126) beat Crunchy2 (126)
 colour=0xAAAAAA
 
 [duel27]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=390
@@ -1108,7 +1108,7 @@ text=Crunchy (126) beat Crunchy2 (126)
 colour=0xAAAAAA
 
 [duel28]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=405
@@ -1121,7 +1121,7 @@ text=Crunchy (126) beat Crunchy2 (126)
 colour=0xAAAAAA
 
 [duel29]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=420
@@ -1134,7 +1134,7 @@ text=Crunchy (126) beat Crunchy2 (126)
 colour=0xAAAAAA
 
 [duel30]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=435
@@ -1147,7 +1147,7 @@ text=Crunchy (126) beat Crunchy2 (126)
 colour=0xAAAAAA
 
 [duel31]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=450
@@ -1160,7 +1160,7 @@ text=Crunchy (126) beat Crunchy2 (126)
 colour=0xAAAAAA
 
 [duel32]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=465
@@ -1173,7 +1173,7 @@ text=Crunchy (126) beat Crunchy2 (126)
 colour=0xAAAAAA
 
 [duel33]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=480
@@ -1186,7 +1186,7 @@ text=Crunchy (126) beat Crunchy2 (126)
 colour=0xAAAAAA
 
 [duel34]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=495
@@ -1199,7 +1199,7 @@ text=Crunchy (126) beat Crunchy2 (126)
 colour=0xAAAAAA
 
 [duel35]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=510
@@ -1212,7 +1212,7 @@ text=Crunchy (126) beat Crunchy2 (126)
 colour=0xAAAAAA
 
 [duel36]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=525
@@ -1225,7 +1225,7 @@ text=Crunchy (126) beat Crunchy2 (126)
 colour=0xAAAAAA
 
 [duel37]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=540
@@ -1238,7 +1238,7 @@ text=Crunchy (126) beat Crunchy2 (126)
 colour=0xAAAAAA
 
 [duel38]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=555
@@ -1251,7 +1251,7 @@ text=Crunchy (126) beat Crunchy2 (126)
 colour=0xAAAAAA
 
 [duel39]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=570
@@ -1264,7 +1264,7 @@ text=Crunchy (126) beat Crunchy2 (126)
 colour=0xAAAAAA
 
 [duel40]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=585
@@ -1277,7 +1277,7 @@ text=Crunchy (126) beat Crunchy2 (126)
 colour=0xAAAAAA
 
 [duel41]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=600
@@ -1290,7 +1290,7 @@ text=Crunchy (126) beat Crunchy2 (126)
 colour=0xAAAAAA
 
 [duel42]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=615
@@ -1303,7 +1303,7 @@ text=Crunchy (126) beat Crunchy2 (126)
 colour=0xAAAAAA
 
 [duel43]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=630
@@ -1316,7 +1316,7 @@ text=Crunchy (126) beat Crunchy2 (126)
 colour=0xAAAAAA
 
 [duel44]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=645
@@ -1329,7 +1329,7 @@ text=Crunchy (126) beat Crunchy2 (126)
 colour=0xAAAAAA
 
 [duel45]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=660
@@ -1342,7 +1342,7 @@ text=Crunchy (126) beat Crunchy2 (126)
 colour=0xAAAAAA
 
 [duel46]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=675
@@ -1355,7 +1355,7 @@ text=Crunchy (126) beat Crunchy2 (126)
 colour=0xAAAAAA
 
 [duel47]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=690
@@ -1368,7 +1368,7 @@ text=Crunchy (126) beat Crunchy2 (126)
 colour=0xAAAAAA
 
 [duel48]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=705
@@ -1381,7 +1381,7 @@ text=Crunchy (126) beat Crunchy2 (126)
 colour=0xAAAAAA
 
 [duel49]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=720
@@ -1394,7 +1394,7 @@ text=Crunchy (126) beat Crunchy2 (126)
 colour=0xAAAAAA
 
 [duel50]
-layer=com_93
+layer=com_92
 type=text
 x=90
 y=735

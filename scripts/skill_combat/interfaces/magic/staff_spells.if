@@ -1,5 +1,3 @@
-type=overlay
-
 [ssb0]
 type=graphic
 x=24
@@ -7,11 +5,14 @@ y=12
 buttontype=normal
 width=20
 height=20
-overlayer=com_22
+overlayer=com_6
 script1op1=inv_count,inventory:inv,airrune
-script1op2=inv_contains,wornitems:wear,staff_of_air
-script1op3=inv_contains,wornitems:wear,air_battlestaff
-script1op4=inv_contains,wornitems:wear,mystic_air_staff
+script1op2=inv_count,inventory:inv,smokerune
+script1op3=inv_count,inventory:inv,mistrune
+script1op4=inv_count,inventory:inv,dustrune
+script1op5=inv_contains,wornitems:wear,staff_of_air
+script1op6=inv_contains,wornitems:wear,air_battlestaff
+script1op7=inv_contains,wornitems:wear,mystic_air_staff
 script2op1=inv_count,inventory:inv,mindrune
 script3op1=stat_level,magic
 script1=gt,0
@@ -27,15 +28,23 @@ y=12
 buttontype=normal
 width=20
 height=20
-overlayer=com_30
+overlayer=com_14
 script1op1=inv_count,inventory:inv,waterrune
-script1op2=inv_contains,wornitems:wear,staff_of_water
-script1op3=inv_contains,wornitems:wear,water_battlestaff
-script1op4=inv_contains,wornitems:wear,mystic_water_staff
+script1op2=inv_count,inventory:inv,steamrune
+script1op3=inv_count,inventory:inv,mistrune
+script1op4=inv_count,inventory:inv,mudrune
+script1op5=inv_contains,wornitems:wear,staff_of_water
+script1op6=inv_contains,wornitems:wear,water_battlestaff
+script1op7=inv_contains,wornitems:wear,mystic_water_staff
+script1op8=inv_contains,wornitems:wear,mud_battlestaff
+script1op9=inv_contains,wornitems:wear,mystic_mud_staff
 script2op1=inv_count,inventory:inv,airrune
-script2op2=inv_contains,wornitems:wear,staff_of_air
-script2op3=inv_contains,wornitems:wear,air_battlestaff
-script2op4=inv_contains,wornitems:wear,mystic_air_staff
+script2op2=inv_count,inventory:inv,smokerune
+script2op3=inv_count,inventory:inv,mistrune
+script2op4=inv_count,inventory:inv,dustrune
+script2op5=inv_contains,wornitems:wear,staff_of_air
+script2op6=inv_contains,wornitems:wear,air_battlestaff
+script2op7=inv_contains,wornitems:wear,mystic_air_staff
 script3op1=inv_count,inventory:inv,mindrune
 script4op1=stat_level,magic
 script1=gt,0
@@ -52,17 +61,25 @@ y=12
 buttontype=normal
 width=20
 height=20
-overlayer=com_40
+overlayer=com_24
 script1op1=inv_count,inventory:inv,earthrune
-script1op2=inv_contains,wornitems:wear,staff_of_earth
-script1op3=inv_contains,wornitems:wear,earth_battlestaff
-script1op4=inv_contains,wornitems:wear,mystic_earth_staff
-script1op5=inv_contains,wornitems:wear,lava_battlestaff
-script1op6=inv_contains,wornitems:wear,mystic_lava_staff
+script1op2=inv_count,inventory:inv,dustrune
+script1op3=inv_count,inventory:inv,lavarune
+script1op4=inv_count,inventory:inv,mudrune
+script1op5=inv_contains,wornitems:wear,staff_of_earth
+script1op6=inv_contains,wornitems:wear,earth_battlestaff
+script1op7=inv_contains,wornitems:wear,mystic_earth_staff
+script1op8=inv_contains,wornitems:wear,lava_battlestaff
+script1op9=inv_contains,wornitems:wear,mystic_lava_staff
+script1op10=inv_contains,wornitems:wear,mud_battlestaff
+script1op11=inv_contains,wornitems:wear,mystic_mud_staff
 script2op1=inv_count,inventory:inv,airrune
-script2op2=inv_contains,wornitems:wear,staff_of_air
-script2op3=inv_contains,wornitems:wear,air_battlestaff
-script2op4=inv_contains,wornitems:wear,mystic_air_staff
+script2op2=inv_count,inventory:inv,smokerune
+script2op3=inv_count,inventory:inv,mistrune
+script2op4=inv_count,inventory:inv,dustrune
+script2op5=inv_contains,wornitems:wear,staff_of_air
+script2op6=inv_contains,wornitems:wear,air_battlestaff
+script2op7=inv_contains,wornitems:wear,mystic_air_staff
 script3op1=inv_count,inventory:inv,mindrune
 script4op1=stat_level,magic
 script1=gt,1
@@ -79,17 +96,23 @@ y=12
 buttontype=normal
 width=20
 height=20
-overlayer=com_50
+overlayer=com_34
 script1op1=inv_count,inventory:inv,firerune
-script1op2=inv_contains,wornitems:wear,staff_of_fire
-script1op3=inv_contains,wornitems:wear,fire_battlestaff
-script1op4=inv_contains,wornitems:wear,mystic_fire_staff
-script1op5=inv_contains,wornitems:wear,lava_battlestaff
-script1op6=inv_contains,wornitems:wear,mystic_lava_staff
+script1op2=inv_count,inventory:inv,steamrune
+script1op3=inv_count,inventory:inv,smokerune
+script1op4=inv_count,inventory:inv,lavarune
+script1op5=inv_contains,wornitems:wear,staff_of_fire
+script1op6=inv_contains,wornitems:wear,fire_battlestaff
+script1op7=inv_contains,wornitems:wear,mystic_fire_staff
+script1op8=inv_contains,wornitems:wear,lava_battlestaff
+script1op9=inv_contains,wornitems:wear,mystic_lava_staff
 script2op1=inv_count,inventory:inv,airrune
-script2op2=inv_contains,wornitems:wear,staff_of_air
-script2op3=inv_contains,wornitems:wear,air_battlestaff
-script2op4=inv_contains,wornitems:wear,mystic_air_staff
+script2op2=inv_count,inventory:inv,smokerune
+script2op3=inv_count,inventory:inv,mistrune
+script2op4=inv_count,inventory:inv,dustrune
+script2op5=inv_contains,wornitems:wear,staff_of_air
+script2op6=inv_contains,wornitems:wear,air_battlestaff
+script2op7=inv_contains,wornitems:wear,mystic_air_staff
 script3op1=inv_count,inventory:inv,mindrune
 script4op1=stat_level,magic
 script1=gt,2
@@ -106,11 +129,14 @@ y=54
 buttontype=normal
 width=20
 height=20
-overlayer=com_60
+overlayer=com_44
 script1op1=inv_count,inventory:inv,airrune
-script1op2=inv_contains,wornitems:wear,staff_of_air
-script1op3=inv_contains,wornitems:wear,air_battlestaff
-script1op4=inv_contains,wornitems:wear,mystic_air_staff
+script1op2=inv_count,inventory:inv,smokerune
+script1op3=inv_count,inventory:inv,mistrune
+script1op4=inv_count,inventory:inv,dustrune
+script1op5=inv_contains,wornitems:wear,staff_of_air
+script1op6=inv_contains,wornitems:wear,air_battlestaff
+script1op7=inv_contains,wornitems:wear,mystic_air_staff
 script2op1=inv_count,inventory:inv,chaosrune
 script3op1=stat_level,magic
 script1=gt,1
@@ -126,15 +152,23 @@ y=54
 buttontype=normal
 width=20
 height=20
-overlayer=com_68
+overlayer=com_52
 script1op1=inv_count,inventory:inv,waterrune
-script1op2=inv_contains,wornitems:wear,staff_of_water
-script1op3=inv_contains,wornitems:wear,water_battlestaff
-script1op4=inv_contains,wornitems:wear,mystic_water_staff
+script1op2=inv_count,inventory:inv,steamrune
+script1op3=inv_count,inventory:inv,mistrune
+script1op4=inv_count,inventory:inv,mudrune
+script1op5=inv_contains,wornitems:wear,staff_of_water
+script1op6=inv_contains,wornitems:wear,water_battlestaff
+script1op7=inv_contains,wornitems:wear,mystic_water_staff
+script1op8=inv_contains,wornitems:wear,mud_battlestaff
+script1op9=inv_contains,wornitems:wear,mystic_mud_staff
 script2op1=inv_count,inventory:inv,airrune
-script2op2=inv_contains,wornitems:wear,staff_of_air
-script2op3=inv_contains,wornitems:wear,air_battlestaff
-script2op4=inv_contains,wornitems:wear,mystic_air_staff
+script2op2=inv_count,inventory:inv,smokerune
+script2op3=inv_count,inventory:inv,mistrune
+script2op4=inv_count,inventory:inv,dustrune
+script2op5=inv_contains,wornitems:wear,staff_of_air
+script2op6=inv_contains,wornitems:wear,air_battlestaff
+script2op7=inv_contains,wornitems:wear,mystic_air_staff
 script3op1=inv_count,inventory:inv,chaosrune
 script4op1=stat_level,magic
 script1=gt,1
@@ -151,17 +185,25 @@ y=54
 buttontype=normal
 width=20
 height=20
-overlayer=com_78
+overlayer=com_62
 script1op1=inv_count,inventory:inv,earthrune
-script1op2=inv_contains,wornitems:wear,staff_of_earth
-script1op3=inv_contains,wornitems:wear,earth_battlestaff
-script1op4=inv_contains,wornitems:wear,mystic_earth_staff
-script1op5=inv_contains,wornitems:wear,lava_battlestaff
-script1op6=inv_contains,wornitems:wear,mystic_lava_staff
+script1op2=inv_count,inventory:inv,dustrune
+script1op3=inv_count,inventory:inv,lavarune
+script1op4=inv_count,inventory:inv,mudrune
+script1op5=inv_contains,wornitems:wear,staff_of_earth
+script1op6=inv_contains,wornitems:wear,earth_battlestaff
+script1op7=inv_contains,wornitems:wear,mystic_earth_staff
+script1op8=inv_contains,wornitems:wear,lava_battlestaff
+script1op9=inv_contains,wornitems:wear,mystic_lava_staff
+script1op10=inv_contains,wornitems:wear,mud_battlestaff
+script1op11=inv_contains,wornitems:wear,mystic_mud_staff
 script2op1=inv_count,inventory:inv,airrune
-script2op2=inv_contains,wornitems:wear,staff_of_air
-script2op3=inv_contains,wornitems:wear,air_battlestaff
-script2op4=inv_contains,wornitems:wear,mystic_air_staff
+script2op2=inv_count,inventory:inv,smokerune
+script2op3=inv_count,inventory:inv,mistrune
+script2op4=inv_count,inventory:inv,dustrune
+script2op5=inv_contains,wornitems:wear,staff_of_air
+script2op6=inv_contains,wornitems:wear,air_battlestaff
+script2op7=inv_contains,wornitems:wear,mystic_air_staff
 script3op1=inv_count,inventory:inv,chaosrune
 script4op1=stat_level,magic
 script1=gt,2
@@ -178,17 +220,23 @@ y=54
 buttontype=normal
 width=20
 height=20
-overlayer=com_88
+overlayer=com_72
 script1op1=inv_count,inventory:inv,firerune
-script1op2=inv_contains,wornitems:wear,staff_of_fire
-script1op3=inv_contains,wornitems:wear,fire_battlestaff
-script1op4=inv_contains,wornitems:wear,mystic_fire_staff
-script1op5=inv_contains,wornitems:wear,lava_battlestaff
-script1op6=inv_contains,wornitems:wear,mystic_lava_staff
+script1op2=inv_count,inventory:inv,steamrune
+script1op3=inv_count,inventory:inv,smokerune
+script1op4=inv_count,inventory:inv,lavarune
+script1op5=inv_contains,wornitems:wear,staff_of_fire
+script1op6=inv_contains,wornitems:wear,fire_battlestaff
+script1op7=inv_contains,wornitems:wear,mystic_fire_staff
+script1op8=inv_contains,wornitems:wear,lava_battlestaff
+script1op9=inv_contains,wornitems:wear,mystic_lava_staff
 script2op1=inv_count,inventory:inv,airrune
-script2op2=inv_contains,wornitems:wear,staff_of_air
-script2op3=inv_contains,wornitems:wear,air_battlestaff
-script2op4=inv_contains,wornitems:wear,mystic_air_staff
+script2op2=inv_count,inventory:inv,smokerune
+script2op3=inv_count,inventory:inv,mistrune
+script2op4=inv_count,inventory:inv,dustrune
+script2op5=inv_contains,wornitems:wear,staff_of_air
+script2op6=inv_contains,wornitems:wear,air_battlestaff
+script2op7=inv_contains,wornitems:wear,mystic_air_staff
 script3op1=inv_count,inventory:inv,chaosrune
 script4op1=stat_level,magic
 script1=gt,3
@@ -205,11 +253,14 @@ y=96
 buttontype=normal
 width=20
 height=20
-overlayer=com_98
+overlayer=com_82
 script1op1=inv_count,inventory:inv,airrune
-script1op2=inv_contains,wornitems:wear,staff_of_air
-script1op3=inv_contains,wornitems:wear,air_battlestaff
-script1op4=inv_contains,wornitems:wear,mystic_air_staff
+script1op2=inv_count,inventory:inv,smokerune
+script1op3=inv_count,inventory:inv,mistrune
+script1op4=inv_count,inventory:inv,dustrune
+script1op5=inv_contains,wornitems:wear,staff_of_air
+script1op6=inv_contains,wornitems:wear,air_battlestaff
+script1op7=inv_contains,wornitems:wear,mystic_air_staff
 script2op1=inv_count,inventory:inv,deathrune
 script3op1=stat_level,magic
 script1=gt,2
@@ -225,15 +276,23 @@ y=96
 buttontype=normal
 width=20
 height=20
-overlayer=com_106
+overlayer=com_90
 script1op1=inv_count,inventory:inv,waterrune
-script1op2=inv_contains,wornitems:wear,staff_of_water
-script1op3=inv_contains,wornitems:wear,water_battlestaff
-script1op4=inv_contains,wornitems:wear,mystic_water_staff
+script1op2=inv_count,inventory:inv,steamrune
+script1op3=inv_count,inventory:inv,mistrune
+script1op4=inv_count,inventory:inv,mudrune
+script1op5=inv_contains,wornitems:wear,staff_of_water
+script1op6=inv_contains,wornitems:wear,water_battlestaff
+script1op7=inv_contains,wornitems:wear,mystic_water_staff
+script1op8=inv_contains,wornitems:wear,mud_battlestaff
+script1op9=inv_contains,wornitems:wear,mystic_mud_staff
 script2op1=inv_count,inventory:inv,airrune
-script2op2=inv_contains,wornitems:wear,staff_of_air
-script2op3=inv_contains,wornitems:wear,air_battlestaff
-script2op4=inv_contains,wornitems:wear,mystic_air_staff
+script2op2=inv_count,inventory:inv,smokerune
+script2op3=inv_count,inventory:inv,mistrune
+script2op4=inv_count,inventory:inv,dustrune
+script2op5=inv_contains,wornitems:wear,staff_of_air
+script2op6=inv_contains,wornitems:wear,air_battlestaff
+script2op7=inv_contains,wornitems:wear,mystic_air_staff
 script3op1=inv_count,inventory:inv,deathrune
 script4op1=stat_level,magic
 script1=gt,2
@@ -250,17 +309,25 @@ y=96
 buttontype=normal
 width=20
 height=20
-overlayer=com_116
+overlayer=com_100
 script1op1=inv_count,inventory:inv,earthrune
-script1op2=inv_contains,wornitems:wear,staff_of_earth
-script1op3=inv_contains,wornitems:wear,earth_battlestaff
-script1op4=inv_contains,wornitems:wear,mystic_earth_staff
-script1op5=inv_contains,wornitems:wear,lava_battlestaff
-script1op6=inv_contains,wornitems:wear,mystic_lava_staff
+script1op2=inv_count,inventory:inv,dustrune
+script1op3=inv_count,inventory:inv,lavarune
+script1op4=inv_count,inventory:inv,mudrune
+script1op5=inv_contains,wornitems:wear,staff_of_earth
+script1op6=inv_contains,wornitems:wear,earth_battlestaff
+script1op7=inv_contains,wornitems:wear,mystic_earth_staff
+script1op8=inv_contains,wornitems:wear,lava_battlestaff
+script1op9=inv_contains,wornitems:wear,mystic_lava_staff
+script1op10=inv_contains,wornitems:wear,mud_battlestaff
+script1op11=inv_contains,wornitems:wear,mystic_mud_staff
 script2op1=inv_count,inventory:inv,airrune
-script2op2=inv_contains,wornitems:wear,staff_of_air
-script2op3=inv_contains,wornitems:wear,air_battlestaff
-script2op4=inv_contains,wornitems:wear,mystic_air_staff
+script2op2=inv_count,inventory:inv,smokerune
+script2op3=inv_count,inventory:inv,mistrune
+script2op4=inv_count,inventory:inv,dustrune
+script2op5=inv_contains,wornitems:wear,staff_of_air
+script2op6=inv_contains,wornitems:wear,air_battlestaff
+script2op7=inv_contains,wornitems:wear,mystic_air_staff
 script3op1=inv_count,inventory:inv,deathrune
 script4op1=stat_level,magic
 script1=gt,3
@@ -277,17 +344,23 @@ y=96
 buttontype=normal
 width=20
 height=20
-overlayer=com_126
+overlayer=com_110
 script1op1=inv_count,inventory:inv,firerune
-script1op2=inv_contains,wornitems:wear,staff_of_fire
-script1op3=inv_contains,wornitems:wear,fire_battlestaff
-script1op4=inv_contains,wornitems:wear,mystic_fire_staff
-script1op5=inv_contains,wornitems:wear,lava_battlestaff
-script1op6=inv_contains,wornitems:wear,mystic_lava_staff
+script1op2=inv_count,inventory:inv,steamrune
+script1op3=inv_count,inventory:inv,smokerune
+script1op4=inv_count,inventory:inv,lavarune
+script1op5=inv_contains,wornitems:wear,staff_of_fire
+script1op6=inv_contains,wornitems:wear,fire_battlestaff
+script1op7=inv_contains,wornitems:wear,mystic_fire_staff
+script1op8=inv_contains,wornitems:wear,lava_battlestaff
+script1op9=inv_contains,wornitems:wear,mystic_lava_staff
 script2op1=inv_count,inventory:inv,airrune
-script2op2=inv_contains,wornitems:wear,staff_of_air
-script2op3=inv_contains,wornitems:wear,air_battlestaff
-script2op4=inv_contains,wornitems:wear,mystic_air_staff
+script2op2=inv_count,inventory:inv,smokerune
+script2op3=inv_count,inventory:inv,mistrune
+script2op4=inv_count,inventory:inv,dustrune
+script2op5=inv_contains,wornitems:wear,staff_of_air
+script2op6=inv_contains,wornitems:wear,air_battlestaff
+script2op7=inv_contains,wornitems:wear,mystic_air_staff
 script3op1=inv_count,inventory:inv,deathrune
 script4op1=stat_level,magic
 script1=gt,4
@@ -304,11 +377,14 @@ y=138
 buttontype=normal
 width=20
 height=20
-overlayer=com_136
+overlayer=com_120
 script1op1=inv_count,inventory:inv,airrune
-script1op2=inv_contains,wornitems:wear,staff_of_air
-script1op3=inv_contains,wornitems:wear,air_battlestaff
-script1op4=inv_contains,wornitems:wear,mystic_air_staff
+script1op2=inv_count,inventory:inv,smokerune
+script1op3=inv_count,inventory:inv,mistrune
+script1op4=inv_count,inventory:inv,dustrune
+script1op5=inv_contains,wornitems:wear,staff_of_air
+script1op6=inv_contains,wornitems:wear,air_battlestaff
+script1op7=inv_contains,wornitems:wear,mystic_air_staff
 script2op1=inv_count,inventory:inv,bloodrune
 script3op1=stat_level,magic
 script1=gt,4
@@ -324,15 +400,23 @@ y=138
 buttontype=normal
 width=20
 height=20
-overlayer=com_144
+overlayer=com_128
 script1op1=inv_count,inventory:inv,waterrune
-script1op2=inv_contains,wornitems:wear,staff_of_water
-script1op3=inv_contains,wornitems:wear,water_battlestaff
-script1op4=inv_contains,wornitems:wear,mystic_water_staff
+script1op2=inv_count,inventory:inv,steamrune
+script1op3=inv_count,inventory:inv,mistrune
+script1op4=inv_count,inventory:inv,mudrune
+script1op5=inv_contains,wornitems:wear,staff_of_water
+script1op6=inv_contains,wornitems:wear,water_battlestaff
+script1op7=inv_contains,wornitems:wear,mystic_water_staff
+script1op8=inv_contains,wornitems:wear,mud_battlestaff
+script1op9=inv_contains,wornitems:wear,mystic_mud_staff
 script2op1=inv_count,inventory:inv,airrune
-script2op2=inv_contains,wornitems:wear,staff_of_air
-script2op3=inv_contains,wornitems:wear,air_battlestaff
-script2op4=inv_contains,wornitems:wear,mystic_air_staff
+script2op2=inv_count,inventory:inv,smokerune
+script2op3=inv_count,inventory:inv,mistrune
+script2op4=inv_count,inventory:inv,dustrune
+script2op5=inv_contains,wornitems:wear,staff_of_air
+script2op6=inv_contains,wornitems:wear,air_battlestaff
+script2op7=inv_contains,wornitems:wear,mystic_air_staff
 script3op1=inv_count,inventory:inv,bloodrune
 script4op1=stat_level,magic
 script1=gt,6
@@ -349,17 +433,25 @@ y=138
 buttontype=normal
 width=20
 height=20
-overlayer=com_154
+overlayer=com_138
 script1op1=inv_count,inventory:inv,earthrune
-script1op2=inv_contains,wornitems:wear,staff_of_earth
-script1op3=inv_contains,wornitems:wear,earth_battlestaff
-script1op4=inv_contains,wornitems:wear,mystic_earth_staff
-script1op5=inv_contains,wornitems:wear,lava_battlestaff
-script1op6=inv_contains,wornitems:wear,mystic_lava_staff
+script1op2=inv_count,inventory:inv,dustrune
+script1op3=inv_count,inventory:inv,lavarune
+script1op4=inv_count,inventory:inv,mudrune
+script1op5=inv_contains,wornitems:wear,staff_of_earth
+script1op6=inv_contains,wornitems:wear,earth_battlestaff
+script1op7=inv_contains,wornitems:wear,mystic_earth_staff
+script1op8=inv_contains,wornitems:wear,lava_battlestaff
+script1op9=inv_contains,wornitems:wear,mystic_lava_staff
+script1op10=inv_contains,wornitems:wear,mud_battlestaff
+script1op11=inv_contains,wornitems:wear,mystic_mud_staff
 script2op1=inv_count,inventory:inv,airrune
-script2op2=inv_contains,wornitems:wear,staff_of_air
-script2op3=inv_contains,wornitems:wear,air_battlestaff
-script2op4=inv_contains,wornitems:wear,mystic_air_staff
+script2op2=inv_count,inventory:inv,smokerune
+script2op3=inv_count,inventory:inv,mistrune
+script2op4=inv_count,inventory:inv,dustrune
+script2op5=inv_contains,wornitems:wear,staff_of_air
+script2op6=inv_contains,wornitems:wear,air_battlestaff
+script2op7=inv_contains,wornitems:wear,mystic_air_staff
 script3op1=inv_count,inventory:inv,bloodrune
 script4op1=stat_level,magic
 script1=gt,6
@@ -376,17 +468,23 @@ y=138
 buttontype=normal
 width=20
 height=20
-overlayer=com_164
+overlayer=com_148
 script1op1=inv_count,inventory:inv,firerune
-script1op2=inv_contains,wornitems:wear,staff_of_fire
-script1op3=inv_contains,wornitems:wear,fire_battlestaff
-script1op4=inv_contains,wornitems:wear,mystic_fire_staff
-script1op5=inv_contains,wornitems:wear,lava_battlestaff
-script1op6=inv_contains,wornitems:wear,mystic_lava_staff
+script1op2=inv_count,inventory:inv,steamrune
+script1op3=inv_count,inventory:inv,smokerune
+script1op4=inv_count,inventory:inv,lavarune
+script1op5=inv_contains,wornitems:wear,staff_of_fire
+script1op6=inv_contains,wornitems:wear,fire_battlestaff
+script1op7=inv_contains,wornitems:wear,mystic_fire_staff
+script1op8=inv_contains,wornitems:wear,lava_battlestaff
+script1op9=inv_contains,wornitems:wear,mystic_lava_staff
 script2op1=inv_count,inventory:inv,airrune
-script2op2=inv_contains,wornitems:wear,staff_of_air
-script2op3=inv_contains,wornitems:wear,air_battlestaff
-script2op4=inv_contains,wornitems:wear,mystic_air_staff
+script2op2=inv_count,inventory:inv,smokerune
+script2op3=inv_count,inventory:inv,mistrune
+script2op4=inv_count,inventory:inv,dustrune
+script2op5=inv_contains,wornitems:wear,staff_of_air
+script2op6=inv_contains,wornitems:wear,air_battlestaff
+script2op7=inv_contains,wornitems:wear,mystic_air_staff
 script3op1=inv_count,inventory:inv,bloodrune
 script4op1=stat_level,magic
 script1=gt,6
@@ -396,15 +494,15 @@ script4=gt,74
 graphic=magicoff,37
 activegraphic=magicon,37
 
-[com_16]
+[com_0]
 type=layer
 x=3
 y=178
 width=186
 height=85
 
-[com_18]
-layer=com_16
+[com_2]
+layer=com_0
 type=rect
 x=3
 y=9
@@ -412,8 +510,8 @@ width=178
 height=72
 colour=0x726451
 
-[com_19]
-layer=com_16
+[com_3]
+layer=com_0
 type=rect
 x=4
 y=10
@@ -421,8 +519,8 @@ width=176
 height=70
 colour=0x726451
 
-[com_20]
-layer=com_16
+[com_4]
+layer=com_0
 type=rect
 x=4
 y=10
@@ -430,8 +528,8 @@ width=177
 height=71
 colour=0x2E2B23
 
-[com_21]
-layer=com_16
+[com_5]
+layer=com_0
 type=rect
 x=5
 y=11
@@ -439,7 +537,7 @@ width=174
 height=68
 fill=yes
 
-[com_17]
+[com_1]
 type=text
 x=34
 y=213
@@ -451,7 +549,7 @@ shadowed=yes
 text=Select a Combat Spell
 colour=0xB0A392
 
-[com_22]
+[com_6]
 type=layer
 x=5
 y=184
@@ -459,8 +557,8 @@ width=182
 height=76
 hide=yes
 
-[com_23]
-layer=com_22
+[com_7]
+layer=com_6
 type=rect
 x=3
 y=5
@@ -468,8 +566,8 @@ width=174
 height=68
 fill=yes
 
-[com_24]
-layer=com_22
+[com_8]
+layer=com_6
 type=text
 x=3
 y=4
@@ -481,8 +579,8 @@ shadowed=yes
 text=Level 1 : Wind Strike
 colour=0xFFF000
 
-[com_25]
-layer=com_22
+[com_9]
+layer=com_6
 type=text
 x=3
 y=17
@@ -494,8 +592,8 @@ shadowed=yes
 text=A basic Air missile
 colour=0x6B6F33
 
-[com_26]
-layer=com_22
+[com_10]
+layer=com_6
 type=model
 x=38
 y=35
@@ -504,9 +602,10 @@ height=28
 model=inv_airrune
 zoom=900
 xan=512
+yan=1024
 
-[com_27]
-layer=com_22
+[com_11]
+layer=com_6
 type=model
 x=114
 y=35
@@ -515,18 +614,22 @@ height=28
 model=inv_mindrune
 zoom=900
 xan=512
+yan=1024
 
-[com_28]
-layer=com_22
+[com_12]
+layer=com_6
 type=text
 x=40
 y=62
 width=23
 height=11
 script1op1=inv_count,inventory:inv,airrune
-script1op2=inv_contains,wornitems:wear,staff_of_air
-script1op3=inv_contains,wornitems:wear,air_battlestaff
-script1op4=inv_contains,wornitems:wear,mystic_air_staff
+script1op2=inv_count,inventory:inv,smokerune
+script1op3=inv_count,inventory:inv,mistrune
+script1op4=inv_count,inventory:inv,dustrune
+script1op5=inv_contains,wornitems:wear,staff_of_air
+script1op6=inv_contains,wornitems:wear,air_battlestaff
+script1op7=inv_contains,wornitems:wear,mystic_air_staff
 script1=gt,0
 center=yes
 font=p11_full
@@ -535,8 +638,8 @@ text=%1/1
 colour=0xC00000
 activecolour=0x00C000
 
-[com_29]
-layer=com_22
+[com_13]
+layer=com_6
 type=text
 x=116
 y=62
@@ -551,7 +654,7 @@ text=%1/1
 colour=0xC00000
 activecolour=0x00C000
 
-[com_30]
+[com_14]
 type=layer
 x=5
 y=184
@@ -559,8 +662,8 @@ width=182
 height=76
 hide=yes
 
-[com_31]
-layer=com_30
+[com_15]
+layer=com_14
 type=rect
 x=3
 y=5
@@ -568,8 +671,8 @@ width=174
 height=68
 fill=yes
 
-[com_32]
-layer=com_30
+[com_16]
+layer=com_14
 type=text
 x=3
 y=4
@@ -581,8 +684,8 @@ shadowed=yes
 text=Level 5 : Water Strike
 colour=0xFFF000
 
-[com_33]
-layer=com_30
+[com_17]
+layer=com_14
 type=text
 x=3
 y=17
@@ -594,8 +697,8 @@ shadowed=yes
 text=A basic Water missile
 colour=0x6B6F33
 
-[com_34]
-layer=com_30
+[com_18]
+layer=com_14
 type=model
 x=25
 y=35
@@ -604,9 +707,10 @@ height=28
 model=inv_waterrune
 zoom=900
 xan=512
+yan=1024
 
-[com_35]
-layer=com_30
+[com_19]
+layer=com_14
 type=model
 x=78
 y=35
@@ -615,9 +719,10 @@ height=28
 model=inv_airrune
 zoom=900
 xan=512
+yan=1024
 
-[com_36]
-layer=com_30
+[com_20]
+layer=com_14
 type=model
 x=130
 y=35
@@ -626,18 +731,24 @@ height=28
 model=inv_mindrune
 zoom=900
 xan=512
+yan=1024
 
-[com_37]
-layer=com_30
+[com_21]
+layer=com_14
 type=text
 x=27
 y=62
 width=23
 height=11
 script1op1=inv_count,inventory:inv,waterrune
-script1op2=inv_contains,wornitems:wear,staff_of_water
-script1op3=inv_contains,wornitems:wear,water_battlestaff
-script1op4=inv_contains,wornitems:wear,mystic_water_staff
+script1op2=inv_count,inventory:inv,steamrune
+script1op3=inv_count,inventory:inv,mistrune
+script1op4=inv_count,inventory:inv,mudrune
+script1op5=inv_contains,wornitems:wear,staff_of_water
+script1op6=inv_contains,wornitems:wear,water_battlestaff
+script1op7=inv_contains,wornitems:wear,mystic_water_staff
+script1op8=inv_contains,wornitems:wear,mud_battlestaff
+script1op9=inv_contains,wornitems:wear,mystic_mud_staff
 script1=gt,0
 center=yes
 font=p11_full
@@ -646,17 +757,20 @@ text=%1/1
 colour=0xC00000
 activecolour=0x00C000
 
-[com_38]
-layer=com_30
+[com_22]
+layer=com_14
 type=text
 x=80
 y=62
 width=23
 height=11
 script1op1=inv_count,inventory:inv,airrune
-script1op2=inv_contains,wornitems:wear,staff_of_air
-script1op3=inv_contains,wornitems:wear,air_battlestaff
-script1op4=inv_contains,wornitems:wear,mystic_air_staff
+script1op2=inv_count,inventory:inv,smokerune
+script1op3=inv_count,inventory:inv,mistrune
+script1op4=inv_count,inventory:inv,dustrune
+script1op5=inv_contains,wornitems:wear,staff_of_air
+script1op6=inv_contains,wornitems:wear,air_battlestaff
+script1op7=inv_contains,wornitems:wear,mystic_air_staff
 script1=gt,0
 center=yes
 font=p11_full
@@ -665,8 +779,8 @@ text=%1/1
 colour=0xC00000
 activecolour=0x00C000
 
-[com_39]
-layer=com_30
+[com_23]
+layer=com_14
 type=text
 x=132
 y=62
@@ -681,7 +795,7 @@ text=%1/1
 colour=0xC00000
 activecolour=0x00C000
 
-[com_40]
+[com_24]
 type=layer
 x=5
 y=184
@@ -689,8 +803,8 @@ width=182
 height=76
 hide=yes
 
-[com_41]
-layer=com_40
+[com_25]
+layer=com_24
 type=rect
 x=3
 y=5
@@ -698,8 +812,8 @@ width=174
 height=68
 fill=yes
 
-[com_42]
-layer=com_40
+[com_26]
+layer=com_24
 type=text
 x=3
 y=4
@@ -711,8 +825,8 @@ shadowed=yes
 text=Level 9 : Earth Strike
 colour=0xFFF000
 
-[com_43]
-layer=com_40
+[com_27]
+layer=com_24
 type=text
 x=3
 y=17
@@ -724,8 +838,8 @@ shadowed=yes
 text=A basic Earth missile
 colour=0x6B6F33
 
-[com_44]
-layer=com_40
+[com_28]
+layer=com_24
 type=model
 x=26
 y=35
@@ -734,9 +848,10 @@ height=28
 model=inv_earthrune
 zoom=900
 xan=512
+yan=1024
 
-[com_45]
-layer=com_40
+[com_29]
+layer=com_24
 type=model
 x=78
 y=35
@@ -745,9 +860,10 @@ height=28
 model=inv_airrune
 zoom=900
 xan=512
+yan=1024
 
-[com_46]
-layer=com_40
+[com_30]
+layer=com_24
 type=model
 x=130
 y=35
@@ -756,20 +872,26 @@ height=28
 model=inv_mindrune
 zoom=900
 xan=512
+yan=1024
 
-[com_47]
-layer=com_40
+[com_31]
+layer=com_24
 type=text
 x=27
 y=62
 width=26
 height=11
 script1op1=inv_count,inventory:inv,earthrune
-script1op2=inv_contains,wornitems:wear,staff_of_earth
-script1op3=inv_contains,wornitems:wear,earth_battlestaff
-script1op4=inv_contains,wornitems:wear,mystic_earth_staff
-script1op5=inv_contains,wornitems:wear,lava_battlestaff
-script1op6=inv_contains,wornitems:wear,mystic_lava_staff
+script1op2=inv_count,inventory:inv,dustrune
+script1op3=inv_count,inventory:inv,lavarune
+script1op4=inv_count,inventory:inv,mudrune
+script1op5=inv_contains,wornitems:wear,staff_of_earth
+script1op6=inv_contains,wornitems:wear,earth_battlestaff
+script1op7=inv_contains,wornitems:wear,mystic_earth_staff
+script1op8=inv_contains,wornitems:wear,lava_battlestaff
+script1op9=inv_contains,wornitems:wear,mystic_lava_staff
+script1op10=inv_contains,wornitems:wear,mud_battlestaff
+script1op11=inv_contains,wornitems:wear,mystic_mud_staff
 script1=gt,1
 center=yes
 font=p11_full
@@ -778,17 +900,20 @@ text=%1/2
 colour=0xC00000
 activecolour=0x00C000
 
-[com_48]
-layer=com_40
+[com_32]
+layer=com_24
 type=text
 x=80
 y=62
 width=23
 height=11
 script1op1=inv_count,inventory:inv,airrune
-script1op2=inv_contains,wornitems:wear,staff_of_air
-script1op3=inv_contains,wornitems:wear,air_battlestaff
-script1op4=inv_contains,wornitems:wear,mystic_air_staff
+script1op2=inv_count,inventory:inv,smokerune
+script1op3=inv_count,inventory:inv,mistrune
+script1op4=inv_count,inventory:inv,dustrune
+script1op5=inv_contains,wornitems:wear,staff_of_air
+script1op6=inv_contains,wornitems:wear,air_battlestaff
+script1op7=inv_contains,wornitems:wear,mystic_air_staff
 script1=gt,0
 center=yes
 font=p11_full
@@ -797,8 +922,8 @@ text=%1/1
 colour=0xC00000
 activecolour=0x00C000
 
-[com_49]
-layer=com_40
+[com_33]
+layer=com_24
 type=text
 x=132
 y=62
@@ -813,7 +938,7 @@ text=%1/1
 colour=0xC00000
 activecolour=0x00C000
 
-[com_50]
+[com_34]
 type=layer
 x=5
 y=184
@@ -821,8 +946,8 @@ width=182
 height=76
 hide=yes
 
-[com_51]
-layer=com_50
+[com_35]
+layer=com_34
 type=rect
 x=3
 y=5
@@ -830,8 +955,8 @@ width=174
 height=68
 fill=yes
 
-[com_52]
-layer=com_50
+[com_36]
+layer=com_34
 type=text
 x=3
 y=4
@@ -843,8 +968,8 @@ shadowed=yes
 text=Level 13 : Fire Strike
 colour=0xFFF000
 
-[com_53]
-layer=com_50
+[com_37]
+layer=com_34
 type=text
 x=3
 y=17
@@ -856,8 +981,8 @@ shadowed=yes
 text=A basic Fire missile
 colour=0x6B6F33
 
-[com_54]
-layer=com_50
+[com_38]
+layer=com_34
 type=model
 x=26
 y=35
@@ -866,9 +991,10 @@ height=28
 model=inv_firerune
 zoom=900
 xan=512
+yan=1024
 
-[com_55]
-layer=com_50
+[com_39]
+layer=com_34
 type=model
 x=78
 y=35
@@ -877,9 +1003,10 @@ height=28
 model=inv_airrune
 zoom=900
 xan=512
+yan=1024
 
-[com_56]
-layer=com_50
+[com_40]
+layer=com_34
 type=model
 x=130
 y=35
@@ -888,20 +1015,24 @@ height=28
 model=inv_mindrune
 zoom=900
 xan=512
+yan=1024
 
-[com_57]
-layer=com_50
+[com_41]
+layer=com_34
 type=text
 x=27
 y=62
 width=25
 height=11
 script1op1=inv_count,inventory:inv,firerune
-script1op2=inv_contains,wornitems:wear,staff_of_fire
-script1op3=inv_contains,wornitems:wear,fire_battlestaff
-script1op4=inv_contains,wornitems:wear,mystic_fire_staff
-script1op5=inv_contains,wornitems:wear,lava_battlestaff
-script1op6=inv_contains,wornitems:wear,mystic_lava_staff
+script1op2=inv_count,inventory:inv,steamrune
+script1op3=inv_count,inventory:inv,smokerune
+script1op4=inv_count,inventory:inv,lavarune
+script1op5=inv_contains,wornitems:wear,staff_of_fire
+script1op6=inv_contains,wornitems:wear,fire_battlestaff
+script1op7=inv_contains,wornitems:wear,mystic_fire_staff
+script1op8=inv_contains,wornitems:wear,lava_battlestaff
+script1op9=inv_contains,wornitems:wear,mystic_lava_staff
 script1=gt,2
 center=yes
 font=p11_full
@@ -910,17 +1041,20 @@ text=%1/3
 colour=0xC00000
 activecolour=0x00C000
 
-[com_58]
-layer=com_50
+[com_42]
+layer=com_34
 type=text
 x=79
 y=62
 width=26
 height=11
 script1op1=inv_count,inventory:inv,airrune
-script1op2=inv_contains,wornitems:wear,staff_of_air
-script1op3=inv_contains,wornitems:wear,air_battlestaff
-script1op4=inv_contains,wornitems:wear,mystic_air_staff
+script1op2=inv_count,inventory:inv,smokerune
+script1op3=inv_count,inventory:inv,mistrune
+script1op4=inv_count,inventory:inv,dustrune
+script1op5=inv_contains,wornitems:wear,staff_of_air
+script1op6=inv_contains,wornitems:wear,air_battlestaff
+script1op7=inv_contains,wornitems:wear,mystic_air_staff
 script1=gt,1
 center=yes
 font=p11_full
@@ -929,8 +1063,8 @@ text=%1/2
 colour=0xC00000
 activecolour=0x00C000
 
-[com_59]
-layer=com_50
+[com_43]
+layer=com_34
 type=text
 x=132
 y=62
@@ -945,7 +1079,7 @@ text=%1/1
 colour=0xC00000
 activecolour=0x00C000
 
-[com_60]
+[com_44]
 type=layer
 x=5
 y=184
@@ -953,8 +1087,8 @@ width=182
 height=76
 hide=yes
 
-[com_61]
-layer=com_60
+[com_45]
+layer=com_44
 type=rect
 x=3
 y=5
@@ -962,8 +1096,8 @@ width=174
 height=68
 fill=yes
 
-[com_62]
-layer=com_60
+[com_46]
+layer=com_44
 type=text
 x=3
 y=4
@@ -975,8 +1109,8 @@ shadowed=yes
 text=Level 17 : Wind Bolt
 colour=0xFFF000
 
-[com_63]
-layer=com_60
+[com_47]
+layer=com_44
 type=text
 x=3
 y=17
@@ -988,8 +1122,8 @@ shadowed=yes
 text=A low level Air missile
 colour=0x6B6F33
 
-[com_64]
-layer=com_60
+[com_48]
+layer=com_44
 type=model
 x=38
 y=35
@@ -998,9 +1132,10 @@ height=28
 model=inv_airrune
 zoom=900
 xan=512
+yan=1024
 
-[com_65]
-layer=com_60
+[com_49]
+layer=com_44
 type=model
 x=114
 y=35
@@ -1009,18 +1144,22 @@ height=28
 model=inv_chaosrune
 zoom=900
 xan=512
+yan=1024
 
-[com_66]
-layer=com_60
+[com_50]
+layer=com_44
 type=text
 x=40
 y=62
 width=26
 height=11
 script1op1=inv_count,inventory:inv,airrune
-script1op2=inv_contains,wornitems:wear,staff_of_air
-script1op3=inv_contains,wornitems:wear,air_battlestaff
-script1op4=inv_contains,wornitems:wear,mystic_air_staff
+script1op2=inv_count,inventory:inv,smokerune
+script1op3=inv_count,inventory:inv,mistrune
+script1op4=inv_count,inventory:inv,dustrune
+script1op5=inv_contains,wornitems:wear,staff_of_air
+script1op6=inv_contains,wornitems:wear,air_battlestaff
+script1op7=inv_contains,wornitems:wear,mystic_air_staff
 script1=gt,1
 center=yes
 font=p11_full
@@ -1029,8 +1168,8 @@ text=%1/2
 colour=0xC00000
 activecolour=0x00C000
 
-[com_67]
-layer=com_60
+[com_51]
+layer=com_44
 type=text
 x=116
 y=62
@@ -1045,7 +1184,7 @@ text=%1/1
 colour=0xC00000
 activecolour=0x00C000
 
-[com_68]
+[com_52]
 type=layer
 x=5
 y=184
@@ -1053,8 +1192,8 @@ width=182
 height=76
 hide=yes
 
-[com_69]
-layer=com_68
+[com_53]
+layer=com_52
 type=rect
 x=3
 y=5
@@ -1062,8 +1201,8 @@ width=174
 height=68
 fill=yes
 
-[com_70]
-layer=com_68
+[com_54]
+layer=com_52
 type=text
 x=3
 y=4
@@ -1075,8 +1214,8 @@ shadowed=yes
 text=Level 23 : Water Bolt
 colour=0xFFF000
 
-[com_71]
-layer=com_68
+[com_55]
+layer=com_52
 type=text
 x=3
 y=17
@@ -1088,8 +1227,8 @@ shadowed=yes
 text=A low level Water missile
 colour=0x6B6F33
 
-[com_72]
-layer=com_68
+[com_56]
+layer=com_52
 type=model
 x=26
 y=35
@@ -1098,9 +1237,10 @@ height=28
 model=inv_waterrune
 zoom=900
 xan=512
+yan=1024
 
-[com_73]
-layer=com_68
+[com_57]
+layer=com_52
 type=model
 x=78
 y=35
@@ -1109,9 +1249,10 @@ height=28
 model=inv_airrune
 zoom=900
 xan=512
+yan=1024
 
-[com_74]
-layer=com_68
+[com_58]
+layer=com_52
 type=model
 x=130
 y=35
@@ -1120,18 +1261,24 @@ height=28
 model=inv_chaosrune
 zoom=900
 xan=512
+yan=1024
 
-[com_75]
-layer=com_68
+[com_59]
+layer=com_52
 type=text
 x=27
 y=62
 width=26
 height=11
 script1op1=inv_count,inventory:inv,waterrune
-script1op2=inv_contains,wornitems:wear,staff_of_water
-script1op3=inv_contains,wornitems:wear,water_battlestaff
-script1op4=inv_contains,wornitems:wear,mystic_water_staff
+script1op2=inv_count,inventory:inv,steamrune
+script1op3=inv_count,inventory:inv,mistrune
+script1op4=inv_count,inventory:inv,mudrune
+script1op5=inv_contains,wornitems:wear,staff_of_water
+script1op6=inv_contains,wornitems:wear,water_battlestaff
+script1op7=inv_contains,wornitems:wear,mystic_water_staff
+script1op8=inv_contains,wornitems:wear,mud_battlestaff
+script1op9=inv_contains,wornitems:wear,mystic_mud_staff
 script1=gt,1
 center=yes
 font=p11_full
@@ -1140,17 +1287,20 @@ text=%1/2
 colour=0xC00000
 activecolour=0x00C000
 
-[com_76]
-layer=com_68
+[com_60]
+layer=com_52
 type=text
 x=80
 y=62
 width=26
 height=11
 script1op1=inv_count,inventory:inv,airrune
-script1op2=inv_contains,wornitems:wear,staff_of_air
-script1op3=inv_contains,wornitems:wear,air_battlestaff
-script1op4=inv_contains,wornitems:wear,mystic_air_staff
+script1op2=inv_count,inventory:inv,smokerune
+script1op3=inv_count,inventory:inv,mistrune
+script1op4=inv_count,inventory:inv,dustrune
+script1op5=inv_contains,wornitems:wear,staff_of_air
+script1op6=inv_contains,wornitems:wear,air_battlestaff
+script1op7=inv_contains,wornitems:wear,mystic_air_staff
 script1=gt,1
 center=yes
 font=p11_full
@@ -1159,8 +1309,8 @@ text=%1/2
 colour=0xC00000
 activecolour=0x00C000
 
-[com_77]
-layer=com_68
+[com_61]
+layer=com_52
 type=text
 x=132
 y=62
@@ -1175,7 +1325,7 @@ text=%1/1
 colour=0xC00000
 activecolour=0x00C000
 
-[com_78]
+[com_62]
 type=layer
 x=5
 y=184
@@ -1183,8 +1333,8 @@ width=182
 height=76
 hide=yes
 
-[com_79]
-layer=com_78
+[com_63]
+layer=com_62
 type=rect
 x=3
 y=5
@@ -1192,8 +1342,8 @@ width=174
 height=68
 fill=yes
 
-[com_80]
-layer=com_78
+[com_64]
+layer=com_62
 type=text
 x=3
 y=4
@@ -1205,8 +1355,8 @@ shadowed=yes
 text=Level 29 : Earth Bolt
 colour=0xFFF000
 
-[com_81]
-layer=com_78
+[com_65]
+layer=com_62
 type=text
 x=3
 y=17
@@ -1218,8 +1368,8 @@ shadowed=yes
 text=A low level Earth missile
 colour=0x6B6F33
 
-[com_82]
-layer=com_78
+[com_66]
+layer=com_62
 type=model
 x=26
 y=35
@@ -1228,9 +1378,10 @@ height=28
 model=inv_earthrune
 zoom=900
 xan=512
+yan=1024
 
-[com_83]
-layer=com_78
+[com_67]
+layer=com_62
 type=model
 x=78
 y=35
@@ -1239,9 +1390,10 @@ height=28
 model=inv_airrune
 zoom=900
 xan=512
+yan=1024
 
-[com_84]
-layer=com_78
+[com_68]
+layer=com_62
 type=model
 x=130
 y=35
@@ -1250,21 +1402,27 @@ height=28
 model=inv_chaosrune
 zoom=900
 xan=512
+yan=1024
 
-[com_85]
-layer=com_78
+[com_69]
+layer=com_62
 type=text
 x=27
 y=62
 width=25
 height=11
 script1op1=inv_count,inventory:inv,earthrune
-script1op2=inv_contains,wornitems:wear,staff_of_earth
-script1op3=inv_contains,wornitems:wear,earth_battlestaff
-script1op4=inv_contains,wornitems:wear,mystic_earth_staff
-script1op5=inv_contains,wornitems:wear,lava_battlestaff
-script1op6=inv_contains,wornitems:wear,mystic_lava_staff
-script1=gt,0
+script1op2=inv_count,inventory:inv,dustrune
+script1op3=inv_count,inventory:inv,lavarune
+script1op4=inv_count,inventory:inv,mudrune
+script1op5=inv_contains,wornitems:wear,staff_of_earth
+script1op6=inv_contains,wornitems:wear,earth_battlestaff
+script1op7=inv_contains,wornitems:wear,mystic_earth_staff
+script1op8=inv_contains,wornitems:wear,lava_battlestaff
+script1op9=inv_contains,wornitems:wear,mystic_lava_staff
+script1op10=inv_contains,wornitems:wear,mud_battlestaff
+script1op11=inv_contains,wornitems:wear,mystic_mud_staff
+script1=gt,2
 center=yes
 font=p11_full
 shadowed=yes
@@ -1272,18 +1430,21 @@ text=%1/3
 colour=0xC00000
 activecolour=0x00C000
 
-[com_86]
-layer=com_78
+[com_70]
+layer=com_62
 type=text
 x=80
 y=62
 width=26
 height=11
 script1op1=inv_count,inventory:inv,airrune
-script1op2=inv_contains,wornitems:wear,staff_of_air
-script1op3=inv_contains,wornitems:wear,air_battlestaff
-script1op4=inv_contains,wornitems:wear,mystic_air_staff
-script1=gt,2
+script1op2=inv_count,inventory:inv,smokerune
+script1op3=inv_count,inventory:inv,mistrune
+script1op4=inv_count,inventory:inv,dustrune
+script1op5=inv_contains,wornitems:wear,staff_of_air
+script1op6=inv_contains,wornitems:wear,air_battlestaff
+script1op7=inv_contains,wornitems:wear,mystic_air_staff
+script1=gt,1
 center=yes
 font=p11_full
 shadowed=yes
@@ -1291,8 +1452,8 @@ text=%1/2
 colour=0xC00000
 activecolour=0x00C000
 
-[com_87]
-layer=com_78
+[com_71]
+layer=com_62
 type=text
 x=132
 y=62
@@ -1307,7 +1468,7 @@ text=%1/1
 colour=0xC00000
 activecolour=0x00C000
 
-[com_88]
+[com_72]
 type=layer
 x=5
 y=184
@@ -1315,8 +1476,8 @@ width=182
 height=76
 hide=yes
 
-[com_89]
-layer=com_88
+[com_73]
+layer=com_72
 type=rect
 x=3
 y=5
@@ -1324,8 +1485,8 @@ width=174
 height=68
 fill=yes
 
-[com_90]
-layer=com_88
+[com_74]
+layer=com_72
 type=text
 x=3
 y=4
@@ -1337,8 +1498,8 @@ shadowed=yes
 text=Level 35 : Fire Bolt
 colour=0xFFF000
 
-[com_91]
-layer=com_88
+[com_75]
+layer=com_72
 type=text
 x=3
 y=17
@@ -1350,8 +1511,8 @@ shadowed=yes
 text=A low level Fire missile
 colour=0x6B6F33
 
-[com_92]
-layer=com_88
+[com_76]
+layer=com_72
 type=model
 x=26
 y=35
@@ -1360,9 +1521,10 @@ height=28
 model=inv_firerune
 zoom=900
 xan=512
+yan=1024
 
-[com_93]
-layer=com_88
+[com_77]
+layer=com_72
 type=model
 x=78
 y=35
@@ -1371,9 +1533,10 @@ height=28
 model=inv_airrune
 zoom=900
 xan=512
+yan=1024
 
-[com_94]
-layer=com_88
+[com_78]
+layer=com_72
 type=model
 x=130
 y=35
@@ -1382,20 +1545,24 @@ height=28
 model=inv_chaosrune
 zoom=900
 xan=512
+yan=1024
 
-[com_95]
-layer=com_88
+[com_79]
+layer=com_72
 type=text
 x=27
 y=62
 width=24
 height=11
 script1op1=inv_count,inventory:inv,firerune
-script1op2=inv_contains,wornitems:wear,staff_of_fire
-script1op3=inv_contains,wornitems:wear,fire_battlestaff
-script1op4=inv_contains,wornitems:wear,mystic_fire_staff
-script1op5=inv_contains,wornitems:wear,lava_battlestaff
-script1op6=inv_contains,wornitems:wear,mystic_lava_staff
+script1op2=inv_count,inventory:inv,steamrune
+script1op3=inv_count,inventory:inv,smokerune
+script1op4=inv_count,inventory:inv,lavarune
+script1op5=inv_contains,wornitems:wear,staff_of_fire
+script1op6=inv_contains,wornitems:wear,fire_battlestaff
+script1op7=inv_contains,wornitems:wear,mystic_fire_staff
+script1op8=inv_contains,wornitems:wear,lava_battlestaff
+script1op9=inv_contains,wornitems:wear,mystic_lava_staff
 script1=gt,3
 center=yes
 font=p11_full
@@ -1404,17 +1571,20 @@ text=%1/4
 colour=0xC00000
 activecolour=0x00C000
 
-[com_96]
-layer=com_88
+[com_80]
+layer=com_72
 type=text
 x=80
 y=62
 width=25
 height=11
 script1op1=inv_count,inventory:inv,airrune
-script1op2=inv_contains,wornitems:wear,staff_of_air
-script1op3=inv_contains,wornitems:wear,air_battlestaff
-script1op4=inv_contains,wornitems:wear,mystic_air_staff
+script1op2=inv_count,inventory:inv,smokerune
+script1op3=inv_count,inventory:inv,mistrune
+script1op4=inv_count,inventory:inv,dustrune
+script1op5=inv_contains,wornitems:wear,staff_of_air
+script1op6=inv_contains,wornitems:wear,air_battlestaff
+script1op7=inv_contains,wornitems:wear,mystic_air_staff
 script1=gt,2
 center=yes
 font=p11_full
@@ -1423,8 +1593,8 @@ text=%1/3
 colour=0xC00000
 activecolour=0x00C000
 
-[com_97]
-layer=com_88
+[com_81]
+layer=com_72
 type=text
 x=132
 y=62
@@ -1439,7 +1609,7 @@ text=%1/1
 colour=0xC00000
 activecolour=0x00C000
 
-[com_98]
+[com_82]
 type=layer
 x=5
 y=184
@@ -1447,8 +1617,8 @@ width=182
 height=76
 hide=yes
 
-[com_99]
-layer=com_98
+[com_83]
+layer=com_82
 type=rect
 x=3
 y=5
@@ -1456,8 +1626,8 @@ width=174
 height=68
 fill=yes
 
-[com_100]
-layer=com_98
+[com_84]
+layer=com_82
 type=text
 x=3
 y=4
@@ -1469,8 +1639,8 @@ shadowed=yes
 text=Level 41 : Wind Blast
 colour=0xFFF000
 
-[com_101]
-layer=com_98
+[com_85]
+layer=com_82
 type=text
 x=3
 y=17
@@ -1482,8 +1652,8 @@ shadowed=yes
 text=A medium level Air missile
 colour=0x6B6F33
 
-[com_102]
-layer=com_98
+[com_86]
+layer=com_82
 type=model
 x=38
 y=35
@@ -1492,9 +1662,10 @@ height=28
 model=inv_airrune
 zoom=900
 xan=512
+yan=1024
 
-[com_103]
-layer=com_98
+[com_87]
+layer=com_82
 type=model
 x=114
 y=35
@@ -1503,18 +1674,22 @@ height=28
 model=inv_deathrune
 zoom=900
 xan=512
+yan=1024
 
-[com_104]
-layer=com_98
+[com_88]
+layer=com_82
 type=text
 x=40
 y=62
 width=25
 height=11
 script1op1=inv_count,inventory:inv,airrune
-script1op2=inv_contains,wornitems:wear,staff_of_air
-script1op3=inv_contains,wornitems:wear,air_battlestaff
-script1op4=inv_contains,wornitems:wear,mystic_air_staff
+script1op2=inv_count,inventory:inv,smokerune
+script1op3=inv_count,inventory:inv,mistrune
+script1op4=inv_count,inventory:inv,dustrune
+script1op5=inv_contains,wornitems:wear,staff_of_air
+script1op6=inv_contains,wornitems:wear,air_battlestaff
+script1op7=inv_contains,wornitems:wear,mystic_air_staff
 script1=gt,2
 center=yes
 font=p11_full
@@ -1523,8 +1698,8 @@ text=%1/3
 colour=0xC00000
 activecolour=0x00C000
 
-[com_105]
-layer=com_98
+[com_89]
+layer=com_82
 type=text
 x=116
 y=62
@@ -1539,7 +1714,7 @@ text=%1/1
 colour=0xC00000
 activecolour=0x00C000
 
-[com_106]
+[com_90]
 type=layer
 x=5
 y=184
@@ -1547,8 +1722,8 @@ width=182
 height=76
 hide=yes
 
-[com_107]
-layer=com_106
+[com_91]
+layer=com_90
 type=rect
 x=3
 y=5
@@ -1556,8 +1731,8 @@ width=174
 height=68
 fill=yes
 
-[com_108]
-layer=com_106
+[com_92]
+layer=com_90
 type=text
 x=3
 y=4
@@ -1569,8 +1744,8 @@ shadowed=yes
 text=Level 47 : Water Blast
 colour=0xFFF000
 
-[com_109]
-layer=com_106
+[com_93]
+layer=com_90
 type=text
 x=3
 y=17
@@ -1582,8 +1757,8 @@ shadowed=yes
 text=A medium level Water missile
 colour=0x6B6F33
 
-[com_110]
-layer=com_106
+[com_94]
+layer=com_90
 type=model
 x=26
 y=35
@@ -1592,9 +1767,10 @@ height=28
 model=inv_waterrune
 zoom=900
 xan=512
+yan=1024
 
-[com_111]
-layer=com_106
+[com_95]
+layer=com_90
 type=model
 x=78
 y=35
@@ -1603,9 +1779,10 @@ height=28
 model=inv_airrune
 zoom=900
 xan=512
+yan=1024
 
-[com_112]
-layer=com_106
+[com_96]
+layer=com_90
 type=model
 x=130
 y=35
@@ -1614,18 +1791,24 @@ height=28
 model=inv_deathrune
 zoom=900
 xan=512
+yan=1024
 
-[com_113]
-layer=com_106
+[com_97]
+layer=com_90
 type=text
 x=28
 y=62
 width=25
 height=11
 script1op1=inv_count,inventory:inv,waterrune
-script1op2=inv_contains,wornitems:wear,staff_of_water
-script1op3=inv_contains,wornitems:wear,water_battlestaff
-script1op4=inv_contains,wornitems:wear,mystic_water_staff
+script1op2=inv_count,inventory:inv,steamrune
+script1op3=inv_count,inventory:inv,mistrune
+script1op4=inv_count,inventory:inv,mudrune
+script1op5=inv_contains,wornitems:wear,staff_of_water
+script1op6=inv_contains,wornitems:wear,water_battlestaff
+script1op7=inv_contains,wornitems:wear,mystic_water_staff
+script1op8=inv_contains,wornitems:wear,mud_battlestaff
+script1op9=inv_contains,wornitems:wear,mystic_mud_staff
 script1=gt,2
 center=yes
 font=p11_full
@@ -1634,17 +1817,20 @@ text=%1/3
 colour=0xC00000
 activecolour=0x00C000
 
-[com_114]
-layer=com_106
+[com_98]
+layer=com_90
 type=text
 x=80
 y=62
 width=25
 height=11
 script1op1=inv_count,inventory:inv,airrune
-script1op2=inv_contains,wornitems:wear,staff_of_air
-script1op3=inv_contains,wornitems:wear,air_battlestaff
-script1op4=inv_contains,wornitems:wear,mystic_air_staff
+script1op2=inv_count,inventory:inv,smokerune
+script1op3=inv_count,inventory:inv,mistrune
+script1op4=inv_count,inventory:inv,dustrune
+script1op5=inv_contains,wornitems:wear,staff_of_air
+script1op6=inv_contains,wornitems:wear,air_battlestaff
+script1op7=inv_contains,wornitems:wear,mystic_air_staff
 script1=gt,2
 center=yes
 font=p11_full
@@ -1653,8 +1839,8 @@ text=%1/3
 colour=0xC00000
 activecolour=0x00C000
 
-[com_115]
-layer=com_106
+[com_99]
+layer=com_90
 type=text
 x=132
 y=62
@@ -1669,7 +1855,7 @@ text=%1/1
 colour=0xC00000
 activecolour=0x00C000
 
-[com_116]
+[com_100]
 type=layer
 x=5
 y=184
@@ -1677,8 +1863,8 @@ width=182
 height=76
 hide=yes
 
-[com_117]
-layer=com_116
+[com_101]
+layer=com_100
 type=rect
 x=3
 y=5
@@ -1686,8 +1872,8 @@ width=174
 height=68
 fill=yes
 
-[com_118]
-layer=com_116
+[com_102]
+layer=com_100
 type=text
 x=3
 y=4
@@ -1699,8 +1885,8 @@ shadowed=yes
 text=Level 53 : Earth Blast
 colour=0xFFF000
 
-[com_119]
-layer=com_116
+[com_103]
+layer=com_100
 type=text
 x=3
 y=17
@@ -1712,8 +1898,8 @@ shadowed=yes
 text=A medium level Earth missile
 colour=0x6B6F33
 
-[com_120]
-layer=com_116
+[com_104]
+layer=com_100
 type=model
 x=26
 y=35
@@ -1722,9 +1908,10 @@ height=28
 model=inv_earthrune
 zoom=900
 xan=512
+yan=1024
 
-[com_121]
-layer=com_116
+[com_105]
+layer=com_100
 type=model
 x=78
 y=35
@@ -1733,9 +1920,10 @@ height=28
 model=inv_airrune
 zoom=900
 xan=512
+yan=1024
 
-[com_122]
-layer=com_116
+[com_106]
+layer=com_100
 type=model
 x=130
 y=35
@@ -1744,20 +1932,26 @@ height=28
 model=inv_deathrune
 zoom=900
 xan=512
+yan=1024
 
-[com_123]
-layer=com_116
+[com_107]
+layer=com_100
 type=text
 x=28
 y=62
 width=24
 height=11
 script1op1=inv_count,inventory:inv,earthrune
-script1op2=inv_contains,wornitems:wear,staff_of_earth
-script1op3=inv_contains,wornitems:wear,earth_battlestaff
-script1op4=inv_contains,wornitems:wear,mystic_earth_staff
-script1op5=inv_contains,wornitems:wear,lava_battlestaff
-script1op6=inv_contains,wornitems:wear,mystic_lava_staff
+script1op2=inv_count,inventory:inv,dustrune
+script1op3=inv_count,inventory:inv,lavarune
+script1op4=inv_count,inventory:inv,mudrune
+script1op5=inv_contains,wornitems:wear,staff_of_earth
+script1op6=inv_contains,wornitems:wear,earth_battlestaff
+script1op7=inv_contains,wornitems:wear,mystic_earth_staff
+script1op8=inv_contains,wornitems:wear,lava_battlestaff
+script1op9=inv_contains,wornitems:wear,mystic_lava_staff
+script1op10=inv_contains,wornitems:wear,mud_battlestaff
+script1op11=inv_contains,wornitems:wear,mystic_mud_staff
 script1=gt,3
 center=yes
 font=p11_full
@@ -1766,17 +1960,20 @@ text=%1/4
 colour=0xC00000
 activecolour=0x00C000
 
-[com_124]
-layer=com_116
+[com_108]
+layer=com_100
 type=text
 x=80
 y=62
 width=25
 height=11
 script1op1=inv_count,inventory:inv,airrune
-script1op2=inv_contains,wornitems:wear,staff_of_air
-script1op3=inv_contains,wornitems:wear,air_battlestaff
-script1op4=inv_contains,wornitems:wear,mystic_air_staff
+script1op2=inv_count,inventory:inv,smokerune
+script1op3=inv_count,inventory:inv,mistrune
+script1op4=inv_count,inventory:inv,dustrune
+script1op5=inv_contains,wornitems:wear,staff_of_air
+script1op6=inv_contains,wornitems:wear,air_battlestaff
+script1op7=inv_contains,wornitems:wear,mystic_air_staff
 script1=gt,2
 center=yes
 font=p11_full
@@ -1785,8 +1982,8 @@ text=%1/3
 colour=0xC00000
 activecolour=0x00C000
 
-[com_125]
-layer=com_116
+[com_109]
+layer=com_100
 type=text
 x=132
 y=62
@@ -1801,7 +1998,7 @@ text=%1/1
 colour=0xC00000
 activecolour=0x00C000
 
-[com_126]
+[com_110]
 type=layer
 x=5
 y=184
@@ -1809,8 +2006,8 @@ width=182
 height=76
 hide=yes
 
-[com_127]
-layer=com_126
+[com_111]
+layer=com_110
 type=rect
 x=3
 y=5
@@ -1818,8 +2015,8 @@ width=174
 height=68
 fill=yes
 
-[com_128]
-layer=com_126
+[com_112]
+layer=com_110
 type=text
 x=3
 y=4
@@ -1831,8 +2028,8 @@ shadowed=yes
 text=Level 59 : Fire Blast
 colour=0xFFF000
 
-[com_129]
-layer=com_126
+[com_113]
+layer=com_110
 type=text
 x=3
 y=17
@@ -1844,8 +2041,8 @@ shadowed=yes
 text=A medium level Fire missile
 colour=0x6B6F33
 
-[com_130]
-layer=com_126
+[com_114]
+layer=com_110
 type=model
 x=26
 y=35
@@ -1854,9 +2051,10 @@ height=28
 model=inv_firerune
 zoom=900
 xan=512
+yan=1024
 
-[com_131]
-layer=com_126
+[com_115]
+layer=com_110
 type=model
 x=78
 y=35
@@ -1865,9 +2063,10 @@ height=28
 model=inv_airrune
 zoom=900
 xan=512
+yan=1024
 
-[com_132]
-layer=com_126
+[com_116]
+layer=com_110
 type=model
 x=130
 y=35
@@ -1876,20 +2075,24 @@ height=28
 model=inv_deathrune
 zoom=900
 xan=512
+yan=1024
 
-[com_133]
-layer=com_126
+[com_117]
+layer=com_110
 type=text
 x=27
 y=62
 width=25
 height=11
 script1op1=inv_count,inventory:inv,firerune
-script1op2=inv_contains,wornitems:wear,staff_of_fire
-script1op3=inv_contains,wornitems:wear,fire_battlestaff
-script1op4=inv_contains,wornitems:wear,mystic_fire_staff
-script1op5=inv_contains,wornitems:wear,lava_battlestaff
-script1op6=inv_contains,wornitems:wear,mystic_lava_staff
+script1op2=inv_count,inventory:inv,steamrune
+script1op3=inv_count,inventory:inv,smokerune
+script1op4=inv_count,inventory:inv,lavarune
+script1op5=inv_contains,wornitems:wear,staff_of_fire
+script1op6=inv_contains,wornitems:wear,fire_battlestaff
+script1op7=inv_contains,wornitems:wear,mystic_fire_staff
+script1op8=inv_contains,wornitems:wear,lava_battlestaff
+script1op9=inv_contains,wornitems:wear,mystic_lava_staff
 script1=gt,4
 center=yes
 font=p11_full
@@ -1898,17 +2101,20 @@ text=%1/5
 colour=0xC00000
 activecolour=0x00C000
 
-[com_134]
-layer=com_126
+[com_118]
+layer=com_110
 type=text
 x=80
 y=62
 width=24
 height=11
 script1op1=inv_count,inventory:inv,airrune
-script1op2=inv_contains,wornitems:wear,staff_of_air
-script1op3=inv_contains,wornitems:wear,air_battlestaff
-script1op4=inv_contains,wornitems:wear,mystic_air_staff
+script1op2=inv_count,inventory:inv,smokerune
+script1op3=inv_count,inventory:inv,mistrune
+script1op4=inv_count,inventory:inv,dustrune
+script1op5=inv_contains,wornitems:wear,staff_of_air
+script1op6=inv_contains,wornitems:wear,air_battlestaff
+script1op7=inv_contains,wornitems:wear,mystic_air_staff
 script1=gt,3
 center=yes
 font=p11_full
@@ -1917,8 +2123,8 @@ text=%1/4
 colour=0xC00000
 activecolour=0x00C000
 
-[com_135]
-layer=com_126
+[com_119]
+layer=com_110
 type=text
 x=132
 y=62
@@ -1933,7 +2139,7 @@ text=%1/1
 colour=0xC00000
 activecolour=0x00C000
 
-[com_136]
+[com_120]
 type=layer
 x=5
 y=184
@@ -1941,8 +2147,8 @@ width=182
 height=76
 hide=yes
 
-[com_137]
-layer=com_136
+[com_121]
+layer=com_120
 type=rect
 x=3
 y=5
@@ -1950,8 +2156,8 @@ width=174
 height=68
 fill=yes
 
-[com_138]
-layer=com_136
+[com_122]
+layer=com_120
 type=text
 x=3
 y=4
@@ -1963,8 +2169,8 @@ shadowed=yes
 text=Level 62 : Wind Wave
 colour=0xFFF000
 
-[com_139]
-layer=com_136
+[com_123]
+layer=com_120
 type=text
 x=3
 y=17
@@ -1976,8 +2182,8 @@ shadowed=yes
 text=A high level Air missile
 colour=0x6B6F33
 
-[com_140]
-layer=com_136
+[com_124]
+layer=com_120
 type=model
 x=38
 y=35
@@ -1986,9 +2192,10 @@ height=28
 model=inv_airrune
 zoom=900
 xan=512
+yan=1024
 
-[com_141]
-layer=com_136
+[com_125]
+layer=com_120
 type=model
 x=114
 y=35
@@ -1997,18 +2204,22 @@ height=28
 model=inv_bloodrune
 zoom=900
 xan=512
+yan=1024
 
-[com_142]
-layer=com_136
+[com_126]
+layer=com_120
 type=text
 x=40
 y=62
 width=25
 height=11
 script1op1=inv_count,inventory:inv,airrune
-script1op2=inv_contains,wornitems:wear,staff_of_air
-script1op3=inv_contains,wornitems:wear,air_battlestaff
-script1op4=inv_contains,wornitems:wear,mystic_air_staff
+script1op2=inv_count,inventory:inv,smokerune
+script1op3=inv_count,inventory:inv,mistrune
+script1op4=inv_count,inventory:inv,dustrune
+script1op5=inv_contains,wornitems:wear,staff_of_air
+script1op6=inv_contains,wornitems:wear,air_battlestaff
+script1op7=inv_contains,wornitems:wear,mystic_air_staff
 script1=gt,4
 center=yes
 font=p11_full
@@ -2017,8 +2228,8 @@ text=%1/5
 colour=0xC00000
 activecolour=0x00C000
 
-[com_143]
-layer=com_136
+[com_127]
+layer=com_120
 type=text
 x=116
 y=62
@@ -2033,7 +2244,7 @@ text=%1/1
 colour=0xC00000
 activecolour=0x00C000
 
-[com_144]
+[com_128]
 type=layer
 x=5
 y=184
@@ -2041,8 +2252,8 @@ width=182
 height=76
 hide=yes
 
-[com_145]
-layer=com_144
+[com_129]
+layer=com_128
 type=rect
 x=3
 y=5
@@ -2050,8 +2261,8 @@ width=174
 height=68
 fill=yes
 
-[com_146]
-layer=com_144
+[com_130]
+layer=com_128
 type=text
 x=3
 y=4
@@ -2063,8 +2274,8 @@ shadowed=yes
 text=Level 65 : Water Wave
 colour=0xFFF000
 
-[com_147]
-layer=com_144
+[com_131]
+layer=com_128
 type=text
 x=3
 y=17
@@ -2076,8 +2287,8 @@ shadowed=yes
 text=A high level Water missile
 colour=0x6B6F33
 
-[com_148]
-layer=com_144
+[com_132]
+layer=com_128
 type=model
 x=26
 y=35
@@ -2086,9 +2297,10 @@ height=28
 model=inv_waterrune
 zoom=900
 xan=512
+yan=1024
 
-[com_149]
-layer=com_144
+[com_133]
+layer=com_128
 type=model
 x=78
 y=35
@@ -2097,9 +2309,10 @@ height=28
 model=inv_airrune
 zoom=900
 xan=512
+yan=1024
 
-[com_150]
-layer=com_144
+[com_134]
+layer=com_128
 type=model
 x=130
 y=35
@@ -2108,18 +2321,24 @@ height=28
 model=inv_bloodrune
 zoom=900
 xan=512
+yan=1024
 
-[com_151]
-layer=com_144
+[com_135]
+layer=com_128
 type=text
 x=28
 y=62
 width=24
 height=11
 script1op1=inv_count,inventory:inv,waterrune
-script1op2=inv_contains,wornitems:wear,staff_of_water
-script1op3=inv_contains,wornitems:wear,water_battlestaff
-script1op4=inv_contains,wornitems:wear,mystic_water_staff
+script1op2=inv_count,inventory:inv,steamrune
+script1op3=inv_count,inventory:inv,mistrune
+script1op4=inv_count,inventory:inv,mudrune
+script1op5=inv_contains,wornitems:wear,staff_of_water
+script1op6=inv_contains,wornitems:wear,water_battlestaff
+script1op7=inv_contains,wornitems:wear,mystic_water_staff
+script1op8=inv_contains,wornitems:wear,mud_battlestaff
+script1op9=inv_contains,wornitems:wear,mystic_mud_staff
 script1=gt,6
 center=yes
 font=p11_full
@@ -2128,17 +2347,20 @@ text=%1/7
 colour=0xC00000
 activecolour=0x00C000
 
-[com_152]
-layer=com_144
+[com_136]
+layer=com_128
 type=text
 x=80
 y=62
 width=25
 height=11
 script1op1=inv_count,inventory:inv,airrune
-script1op2=inv_contains,wornitems:wear,staff_of_air
-script1op3=inv_contains,wornitems:wear,air_battlestaff
-script1op4=inv_contains,wornitems:wear,mystic_air_staff
+script1op2=inv_count,inventory:inv,smokerune
+script1op3=inv_count,inventory:inv,mistrune
+script1op4=inv_count,inventory:inv,dustrune
+script1op5=inv_contains,wornitems:wear,staff_of_air
+script1op6=inv_contains,wornitems:wear,air_battlestaff
+script1op7=inv_contains,wornitems:wear,mystic_air_staff
 script1=gt,4
 center=yes
 font=p11_full
@@ -2147,8 +2369,8 @@ text=%1/5
 colour=0xC00000
 activecolour=0x00C000
 
-[com_153]
-layer=com_144
+[com_137]
+layer=com_128
 type=text
 x=132
 y=62
@@ -2163,7 +2385,7 @@ text=%1/1
 colour=0xC00000
 activecolour=0x00C000
 
-[com_154]
+[com_138]
 type=layer
 x=5
 y=184
@@ -2171,8 +2393,8 @@ width=182
 height=76
 hide=yes
 
-[com_155]
-layer=com_154
+[com_139]
+layer=com_138
 type=rect
 x=3
 y=5
@@ -2180,8 +2402,8 @@ width=174
 height=68
 fill=yes
 
-[com_156]
-layer=com_154
+[com_140]
+layer=com_138
 type=text
 x=2
 y=4
@@ -2193,8 +2415,8 @@ shadowed=yes
 text=Level 70 : Earth Wave
 colour=0xFFF000
 
-[com_157]
-layer=com_154
+[com_141]
+layer=com_138
 type=text
 x=3
 y=17
@@ -2206,8 +2428,8 @@ shadowed=yes
 text=A high level Earth missile
 colour=0x6B6F33
 
-[com_158]
-layer=com_154
+[com_142]
+layer=com_138
 type=model
 x=26
 y=35
@@ -2216,9 +2438,10 @@ height=28
 model=inv_earthrune
 zoom=900
 xan=512
+yan=1024
 
-[com_159]
-layer=com_154
+[com_143]
+layer=com_138
 type=model
 x=78
 y=35
@@ -2227,9 +2450,10 @@ height=28
 model=inv_airrune
 zoom=900
 xan=512
+yan=1024
 
-[com_160]
-layer=com_154
+[com_144]
+layer=com_138
 type=model
 x=130
 y=35
@@ -2238,20 +2462,26 @@ height=28
 model=inv_bloodrune
 zoom=900
 xan=512
+yan=1024
 
-[com_161]
-layer=com_154
+[com_145]
+layer=com_138
 type=text
 x=28
 y=62
 width=24
 height=11
 script1op1=inv_count,inventory:inv,earthrune
-script1op2=inv_contains,wornitems:wear,staff_of_earth
-script1op3=inv_contains,wornitems:wear,earth_battlestaff
-script1op4=inv_contains,wornitems:wear,mystic_earth_staff
-script1op5=inv_contains,wornitems:wear,lava_battlestaff
-script1op6=inv_contains,wornitems:wear,mystic_lava_staff
+script1op2=inv_count,inventory:inv,dustrune
+script1op3=inv_count,inventory:inv,lavarune
+script1op4=inv_count,inventory:inv,mudrune
+script1op5=inv_contains,wornitems:wear,staff_of_earth
+script1op6=inv_contains,wornitems:wear,earth_battlestaff
+script1op7=inv_contains,wornitems:wear,mystic_earth_staff
+script1op8=inv_contains,wornitems:wear,lava_battlestaff
+script1op9=inv_contains,wornitems:wear,mystic_lava_staff
+script1op10=inv_contains,wornitems:wear,mud_battlestaff
+script1op11=inv_contains,wornitems:wear,mystic_mud_staff
 script1=gt,6
 center=yes
 font=p11_full
@@ -2260,17 +2490,20 @@ text=%1/7
 colour=0xC00000
 activecolour=0x00C000
 
-[com_162]
-layer=com_154
+[com_146]
+layer=com_138
 type=text
 x=80
 y=62
 width=25
 height=11
 script1op1=inv_count,inventory:inv,airrune
-script1op2=inv_contains,wornitems:wear,staff_of_air
-script1op3=inv_contains,wornitems:wear,air_battlestaff
-script1op4=inv_contains,wornitems:wear,mystic_air_staff
+script1op2=inv_count,inventory:inv,smokerune
+script1op3=inv_count,inventory:inv,mistrune
+script1op4=inv_count,inventory:inv,dustrune
+script1op5=inv_contains,wornitems:wear,staff_of_air
+script1op6=inv_contains,wornitems:wear,air_battlestaff
+script1op7=inv_contains,wornitems:wear,mystic_air_staff
 script1=gt,4
 center=yes
 font=p11_full
@@ -2279,8 +2512,8 @@ text=%1/5
 colour=0xC00000
 activecolour=0x00C000
 
-[com_163]
-layer=com_154
+[com_147]
+layer=com_138
 type=text
 x=132
 y=62
@@ -2295,7 +2528,7 @@ text=%1/1
 colour=0xC00000
 activecolour=0x00C000
 
-[com_164]
+[com_148]
 type=layer
 x=5
 y=184
@@ -2303,8 +2536,8 @@ width=182
 height=76
 hide=yes
 
-[com_165]
-layer=com_164
+[com_149]
+layer=com_148
 type=rect
 x=3
 y=5
@@ -2312,8 +2545,8 @@ width=174
 height=68
 fill=yes
 
-[com_166]
-layer=com_164
+[com_150]
+layer=com_148
 type=text
 x=2
 y=4
@@ -2325,8 +2558,8 @@ shadowed=yes
 text=Level 75 : Fire Wave
 colour=0xFFF000
 
-[com_167]
-layer=com_164
+[com_151]
+layer=com_148
 type=text
 x=3
 y=17
@@ -2338,8 +2571,8 @@ shadowed=yes
 text=A high level Fire missile
 colour=0x6B6F33
 
-[com_168]
-layer=com_164
+[com_152]
+layer=com_148
 type=model
 x=26
 y=35
@@ -2348,9 +2581,10 @@ height=28
 model=inv_firerune
 zoom=900
 xan=512
+yan=1024
 
-[com_169]
-layer=com_164
+[com_153]
+layer=com_148
 type=model
 x=78
 y=35
@@ -2359,9 +2593,10 @@ height=28
 model=inv_airrune
 zoom=900
 xan=512
+yan=1024
 
-[com_170]
-layer=com_164
+[com_154]
+layer=com_148
 type=model
 x=130
 y=35
@@ -2370,20 +2605,24 @@ height=28
 model=inv_bloodrune
 zoom=900
 xan=512
+yan=1024
 
-[com_171]
-layer=com_164
+[com_155]
+layer=com_148
 type=text
 x=28
 y=62
 width=24
 height=11
 script1op1=inv_count,inventory:inv,firerune
-script1op2=inv_contains,wornitems:wear,staff_of_fire
-script1op3=inv_contains,wornitems:wear,fire_battlestaff
-script1op4=inv_contains,wornitems:wear,mystic_fire_staff
-script1op5=inv_contains,wornitems:wear,lava_battlestaff
-script1op6=inv_contains,wornitems:wear,mystic_lava_staff
+script1op2=inv_count,inventory:inv,steamrune
+script1op3=inv_count,inventory:inv,smokerune
+script1op4=inv_count,inventory:inv,lavarune
+script1op5=inv_contains,wornitems:wear,staff_of_fire
+script1op6=inv_contains,wornitems:wear,fire_battlestaff
+script1op7=inv_contains,wornitems:wear,mystic_fire_staff
+script1op8=inv_contains,wornitems:wear,lava_battlestaff
+script1op9=inv_contains,wornitems:wear,mystic_lava_staff
 script1=gt,6
 center=yes
 font=p11_full
@@ -2392,17 +2631,20 @@ text=%1/7
 colour=0xC00000
 activecolour=0x00C000
 
-[com_172]
-layer=com_164
+[com_156]
+layer=com_148
 type=text
 x=80
 y=62
 width=25
 height=11
 script1op1=inv_count,inventory:inv,airrune
-script1op2=inv_contains,wornitems:wear,staff_of_air
-script1op3=inv_contains,wornitems:wear,air_battlestaff
-script1op4=inv_contains,wornitems:wear,mystic_air_staff
+script1op2=inv_count,inventory:inv,smokerune
+script1op3=inv_count,inventory:inv,mistrune
+script1op4=inv_count,inventory:inv,dustrune
+script1op5=inv_contains,wornitems:wear,staff_of_air
+script1op6=inv_contains,wornitems:wear,air_battlestaff
+script1op7=inv_contains,wornitems:wear,mystic_air_staff
 script1=gt,4
 center=yes
 font=p11_full
@@ -2411,8 +2653,8 @@ text=%1/5
 colour=0xC00000
 activecolour=0x00C000
 
-[com_173]
-layer=com_164
+[com_157]
+layer=com_148
 type=text
 x=132
 y=62

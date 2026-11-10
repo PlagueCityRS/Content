@@ -15,13 +15,13 @@ active=no
 
 [horror_ladder_down]
 name=Iron ladder
-desc=I could climb this if I wanted
+desc=I could climb this if I wanted.
 model=quest_horror_ladder_iron_down
 sharelight=yes
 
 [horror_ladder_top]
 name=Iron ladder
-desc=I could climb this if I wanted
+desc=I could climb this if I wanted.
 model=quest_horror_ladder_iron_top
 forceapproach=north
 sharelight=yes
@@ -35,7 +35,7 @@ active=no
 
 [horror_ladder_base]
 name=Iron ladder
-desc=I could climb this if I wanted
+desc=I could climb this if I wanted.
 model=quest_horror_ladder_iron_base
 sharelight=yes
 active=yes
@@ -43,7 +43,7 @@ op1=Climb
 
 [horror_ladder_base2]
 name=Iron ladder
-desc=I could climb this if I wanted
+desc=I could climb this if I wanted.
 model=quest_horror_ladder_iron_base
 sharelight=yes
 active=yes
@@ -51,7 +51,7 @@ op1=Climb
 
 [horror_ladder_top2]
 name=Iron ladder
-desc=I could climb this if I wanted
+desc=I could climb this if I wanted.
 model=quest_horror_ladder_iron_top
 sharelight=yes
 active=yes
@@ -389,7 +389,7 @@ contrast=0
 
 [horror_lighthouse_doorway]
 name=Doorway
-desc=Let's you walk through walls!
+desc=Lets you walk through walls!
 model=quest_horror_lighthousedoorway
 occlude=yes
 resizex=128
@@ -479,7 +479,7 @@ mirror=yes
 
 [horror_lighthouse_cog]
 name=Lighting mechanism
-desc=It turns the light around
+desc=It turns the light around.
 model=loc_4587
 model2=loc_4587i2
 model3=loc_4587i3
@@ -491,7 +491,7 @@ anim=horror_lighthouse_working
 
 [horror_lighthouse_cog_broken]
 name=Lighting mechanism
-desc=It looks broken
+desc=It looks broken.
 model=loc_4587
 model2=quest_horror_lightingmechanism_broken
 active=yes
@@ -501,7 +501,7 @@ ambient=20
 
 [horror_lighthouse_shaft]
 name=Lighting mechanism
-desc=Part of the lighthouse Light mechanism.
+desc=Part of the Lighthouse's lighting mechanism.
 model=quest_horror_lightingmechanism_divider
 width=2
 length=2
@@ -697,7 +697,7 @@ active=yes
 
 [horror_rubble_1]
 name=Bowl
-desc=It is a buried Bowl.
+desc=It is a buried bowl.
 model=floor_rubble_ground_detail_1
 recol1s=17969
 recol1d=10534

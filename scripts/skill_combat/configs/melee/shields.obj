@@ -242,8 +242,8 @@ param=defend_anim,human_shield_defence
 param=defend_sound,swordclash6
 
 [antidragonbreathshield]
-name=Dragonfire shield
-desc=This shield is said to have magical properties against dragon flames.
+name=Anti-dragon shield
+desc=This provides partial protection from dragon-breath attacks.
 model=inv_antidragonbreathshield
 cost=20
 2dxof=3
@@ -252,9 +252,9 @@ cost=20
 2dyan=64
 2dxan=336
 iop2=Wear
-wearpos=lefthand
 manwear=human_weapons_model_526,0
 womanwear=human_weapons_model_526,6
+wearpos=lefthand
 category=armour_shield
 weight=12lb
 param=stabdefence,7

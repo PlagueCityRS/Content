@@ -47,46 +47,43 @@ tradeable=no
 
 [regicide_sulphar]
 name=Sulphur
-desc=A piece of Sulphur formation.
+desc=A piece of sulphur formation.
 model=inv_regicide_sulphar
 2dxof=5
 2dyof=-24
 2dzoom=1340
 2dyan=1960
 2dxan=196
+members=yes
 weight=10g
 tradeable=no
-members=yes
 param=grindable_ingredient_refined,regicide_sulphar_dust
 // https://youtu.be/1QO8LtDwwMg?si=lB0GpSFgMOnLVtPP&t=2126
 param=grindable_ingredient_message,You grind the sulphur to dust
 
 [limestone]
 name=Limestone
-recol1s=11488
-recol1d=14797
 cost=10
 desc=Some limestone.
-model=quest_regicide_inv_limestone
+model=model_6504
+members=yes
 2dxof=-7
 2dyof=-41
 2dyan=164
 2dxan=220
-members=yes
 weight=5lb
 
 [regicide_quicklime]
 name=Quicklime
-recol1s=11488
+recol1s=14797
 recol1d=32735
 cost=4
 desc=Some quicklime.
-model=inv_ore
-2dxof=1
-2dyof=15
-2dzoom=1400
-2dyan=1576
-2dxan=368
+model=model_6504
+2dxof=-7
+2dyof=-41
+2dyan=164
+2dxan=220
 members=yes
 weight=5lb
 tradeable=no
@@ -111,7 +108,7 @@ tradeable=no
 name=Ground sulphur
 recol1s=21140
 recol1d=31649
-desc=A pile of ground Sulphur.
+desc=A pile of ground sulphur.
 cost=5
 model=inv_ash
 2dxof=-6
@@ -233,7 +230,7 @@ tradeable=no
 
 [raw_rabbit]
 name=Raw rabbit
-desc=I need to cook this first.
+desc=Might taste better cooked.
 model=inv_meat
 2dxof=1
 2dyof=3

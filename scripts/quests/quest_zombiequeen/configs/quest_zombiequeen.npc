@@ -1,7 +1,7 @@
 [mosol_rei]
 vislevel=hide
 name=Mosol Rei
-desc=Slightly under dressed.
+desc=A warrior from Shilo Village.
 walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
 readyanim=human_staffready
 op1=Talk-to
@@ -27,8 +27,8 @@ patrol2=0_45_46_0_10,1
 
 [zadimus_ghost]
 vislevel=hide
-name=Zadimus' spirit.
-desc=The animated spirit of a soul not at rest.
+name=Spirit of Zadimus
+desc=An unquiet soul.
 walkanim=ghost_walk
 readyanim=ghost_ready
 op1=Talk-to
@@ -45,7 +45,7 @@ param=undead,^true
 
 [zqskeleton_unarmed]
 name=Undead One
-desc=It rattles when it walks.
+desc=A minion of Rashiliyia.
 walkanim=skeleton_walk
 readyanim=skeleton_ready
 op2=Attack
@@ -115,7 +115,7 @@ param=undead,^true
 
 [zqzombie_unarmed]
 name=Undead One
-desc=The animated dead, one of Rashiliyias' minions.
+desc=The animated dead, one of Rashiliyia's minions.
 walkanim=zombie_walk
 readyanim=zombie_ready
 op2=Attack
@@ -153,7 +153,7 @@ param=death_drop,null
 
 [zqzombie_armed]
 name=Undead One
-desc=The animated dead, one of Rashiliyias' minions.
+desc=The animated dead, one of Rashiliyia's minions.
 walkanim=zombie_walk
 readyanim=zombie_ready
 op2=Attack

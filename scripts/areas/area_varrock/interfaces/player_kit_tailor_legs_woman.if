@@ -705,27 +705,27 @@ graphic=steelborder2,0
 [com_88]
 type=text
 x=420
-y=29
+y=32
 buttontype=close
 width=68
 height=11
 font=p11_full
 shadowed=yes
 text=Close Window
-colour=0xFF0000
+colour=0xA1A1A1
 overcolour=0xFFFFFF
 
 [com_89]
 type=text
-x=154
+x=162
 y=30
 width=194
 height=14
 center=yes
 font=b12_full
 shadowed=yes
-text=Thessalias' Makeovers (Legs)
-colour=0xFFFF00
+text=Thessalia's Makeovers (Legs)
+colour=0xC9800D
 
 [com_90]
 type=rect
@@ -956,7 +956,7 @@ text=CONFIRM (500 gold)
 colour=0x00FF00
 overcolour=0xFF0000
 
-[com_108]
+[com_107]
 type=graphic
 x=59
 y=250
@@ -964,9 +964,9 @@ width=25
 height=25
 script1op1=pushvar,if3
 script1=eq,1
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
-[com_109]
+[com_108]
 type=graphic
 x=84
 y=250
@@ -974,9 +974,9 @@ width=25
 height=25
 script1op1=pushvar,if3
 script1=eq,2
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
-[com_110]
+[com_109]
 type=graphic
 x=109
 y=250
@@ -984,9 +984,9 @@ width=25
 height=25
 script1op1=pushvar,if3
 script1=eq,3
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
-[com_111]
+[com_110]
 type=graphic
 x=134
 y=250
@@ -994,9 +994,9 @@ width=25
 height=25
 script1op1=pushvar,if3
 script1=eq,4
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
-[com_112]
+[com_111]
 type=graphic
 x=160
 y=250
@@ -1004,9 +1004,9 @@ width=25
 height=25
 script1op1=pushvar,if3
 script1=eq,5
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
-[com_113]
+[com_112]
 type=graphic
 x=185
 y=250
@@ -1014,9 +1014,9 @@ width=25
 height=25
 script1op1=pushvar,if3
 script1=eq,6
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
-[com_114]
+[com_113]
 type=graphic
 x=210
 y=250
@@ -1024,9 +1024,9 @@ width=25
 height=25
 script1op1=pushvar,if3
 script1=eq,7
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
-[com_115]
+[com_114]
 type=graphic
 x=235
 y=250
@@ -1034,9 +1034,9 @@ width=25
 height=25
 script1op1=pushvar,if3
 script1=eq,8
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
-[com_116]
+[com_115]
 type=graphic
 x=260
 y=250
@@ -1044,9 +1044,9 @@ width=25
 height=25
 script1op1=pushvar,if3
 script1=eq,9
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
-[com_117]
+[com_116]
 type=graphic
 x=285
 y=250
@@ -1054,9 +1054,9 @@ width=25
 height=25
 script1op1=pushvar,if3
 script1=eq,10
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
-[com_118]
+[com_117]
 type=graphic
 x=310
 y=250
@@ -1064,9 +1064,9 @@ width=25
 height=25
 script1op1=pushvar,if3
 script1=eq,11
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
-[com_119]
+[com_118]
 type=graphic
 x=335
 y=250
@@ -1074,9 +1074,9 @@ width=25
 height=25
 script1op1=pushvar,if3
 script1=eq,12
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
-[com_120]
+[com_119]
 type=graphic
 x=360
 y=250
@@ -1084,9 +1084,9 @@ width=25
 height=25
 script1op1=pushvar,if3
 script1=eq,13
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
-[com_121]
+[com_120]
 type=graphic
 x=385
 y=250
@@ -1094,9 +1094,9 @@ width=25
 height=25
 script1op1=pushvar,if3
 script1=eq,14
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
-[com_122]
+[com_121]
 type=graphic
 x=410
 y=250
@@ -1104,9 +1104,9 @@ width=25
 height=25
 script1op1=pushvar,if3
 script1=eq,15
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
-[com_123]
+[com_122]
 type=graphic
 x=435
 y=250
@@ -1114,9 +1114,9 @@ width=25
 height=25
 script1op1=pushvar,if3
 script1=eq,16
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
-[com_124]
+[com_123]
 type=text
 x=220
 y=225
@@ -1127,7 +1127,7 @@ shadowed=yes
 text=Select colour
 colour=0xFFFF00
 
-[com_125]
+[com_124]
 type=model
 x=90
 y=180
@@ -1136,7 +1136,7 @@ height=32
 model=woman_legs_basic
 zoom=600
 
-[com_126]
+[com_125]
 type=model
 x=142
 y=180
@@ -1145,7 +1145,7 @@ height=32
 model=woman_legs_basic2
 zoom=600
 
-[com_127]
+[com_126]
 type=model
 x=195
 y=180
@@ -1154,7 +1154,7 @@ height=32
 model=woman_legs_flares
 zoom=600
 
-[com_128]
+[com_127]
 type=model
 x=248
 y=180
@@ -1163,7 +1163,7 @@ height=32
 model=woman_legs_longskirt_narrow
 zoom=600
 
-[com_129]
+[com_128]
 type=model
 x=300
 y=180
@@ -1172,7 +1172,7 @@ height=32
 model=woman_legs_longskirt
 zoom=600
 
-[com_130]
+[com_129]
 type=model
 x=350
 y=180
@@ -1181,7 +1181,7 @@ height=32
 model=woman_legs_turnups
 zoom=600
 
-[com_131]
+[com_130]
 type=model
 x=400
 y=180
@@ -1190,7 +1190,7 @@ height=32
 model=woman_legs_shortskirt
 zoom=600
 
-[com_132]
+[com_131]
 type=graphic
 x=90
 y=90
@@ -1201,7 +1201,7 @@ script1op1=pushvar,if1
 script1=eq,1
 option=Plain
 
-[com_133]
+[com_132]
 type=graphic
 x=142
 y=90
@@ -1212,7 +1212,7 @@ script1op1=pushvar,if1
 script1=eq,2
 option=Shorts
 
-[com_134]
+[com_133]
 type=graphic
 x=195
 y=90
@@ -1223,7 +1223,7 @@ script1op1=pushvar,if1
 script1=eq,3
 option=Flares
 
-[com_135]
+[com_134]
 type=graphic
 x=248
 y=90
@@ -1234,7 +1234,7 @@ script1op1=pushvar,if1
 script1=eq,4
 option=Long Narrow Skirt
 
-[com_136]
+[com_135]
 type=graphic
 x=300
 y=90
@@ -1245,7 +1245,7 @@ script1op1=pushvar,if1
 script1=eq,5
 option=Long Skirt
 
-[com_137]
+[com_136]
 type=graphic
 x=350
 y=90
@@ -1256,7 +1256,7 @@ script1op1=pushvar,if1
 script1=eq,7
 option=Turn-ups
 
-[com_138]
+[com_137]
 type=graphic
 x=400
 y=90
@@ -1267,7 +1267,7 @@ script1op1=pushvar,if1
 script1=eq,8
 option=Short Skirt
 
-[com_139]
+[com_138]
 type=graphic
 x=90
 y=100
@@ -1275,9 +1275,9 @@ width=25
 height=25
 script1op1=pushvar,if1
 script1=eq,1
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
-[com_140]
+[com_139]
 type=graphic
 x=142
 y=100
@@ -1285,9 +1285,9 @@ width=25
 height=25
 script1op1=pushvar,if1
 script1=eq,2
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
-[com_141]
+[com_140]
 type=graphic
 x=195
 y=100
@@ -1295,9 +1295,9 @@ width=25
 height=25
 script1op1=pushvar,if1
 script1=eq,3
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
-[com_142]
+[com_141]
 type=graphic
 x=300
 y=100
@@ -1305,9 +1305,9 @@ width=25
 height=25
 script1op1=pushvar,if1
 script1=eq,5
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
-[com_143]
+[com_142]
 type=graphic
 x=248
 y=100
@@ -1315,9 +1315,9 @@ width=25
 height=25
 script1op1=pushvar,if1
 script1=eq,4
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
-[com_144]
+[com_143]
 type=graphic
 x=350
 y=100
@@ -1325,9 +1325,9 @@ width=25
 height=25
 script1op1=pushvar,if1
 script1=eq,7
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
-[com_145]
+[com_144]
 type=graphic
 x=400
 y=100
@@ -1335,9 +1335,9 @@ width=25
 height=25
 script1op1=pushvar,if1
 script1=eq,8
-activegraphic=headicons,1
+activegraphic=overlay_multiway,0
 
-[com_146]
+[com_145]
 type=text
 x=211
 y=62

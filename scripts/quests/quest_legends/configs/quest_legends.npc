@@ -64,7 +64,7 @@ param=death_drop,wolf_bones
 vislevel=hide
 name=Gujuo
 desc=A dark, charismatic jungle native.
-walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
+walkanim=human_halberdwalk_f,human_halberdwalk_b,human_halberdwalk_l,human_halberdwalk_r
 readyanim=human_staffready
 op1=Talk-to
 op2=Hidden
@@ -96,7 +96,7 @@ huntmode=gujuo
 
 [ungadulu_good]
 name=Ungadulu
-desc=The Kharazi tribes elusive Shaman.
+desc=The Kharazi tribe's elusive Shaman.
 walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
 readyanim=human_ready
 op1=Talk-to
@@ -139,7 +139,7 @@ param=attack_sound,staff_double
 
 [ungadulu_bad]
 name=Ungadulu
-desc=The Kharazi tribes elusive Shaman - something doesn't look quite right with him.
+desc=The Kharazi tribe's elusive Shaman - something doesn't look quite right with him.
 walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
 readyanim=human_ready
 resizeh=150
@@ -185,8 +185,8 @@ param=attack_sound,staff_double
 
 [jungle_savage]
 name=Jungle Savage
-desc=An aggresive native of the Kharazi jungle.
-walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
+desc=An aggressive native of the Kharazi Jungle.
+walkanim=human_halberdwalk_f,human_halberdwalk_b,human_halberdwalk_l,human_halberdwalk_r
 readyanim=human_staffready
 op2=Attack
 vislevel=90
@@ -266,7 +266,7 @@ param=death_drop,null
 
 [viyeldi]
 name=Viyeldi
-desc=The spirit of a long dead wizard.
+desc=The spirit of a long-dead wizard.
 readyanim=human_ready
 op1=Talk-to
 op2=Attack

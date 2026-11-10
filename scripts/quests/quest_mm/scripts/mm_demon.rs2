@@ -81,7 +81,7 @@ p_delay(5); // 6t
 ~fade_out;
 ~tele_checks;
 ~music_setvar(8, 21);
-if_settext(music:com_177, "Showdown");
+if_settext(music:com_30, "Showdown");
 midi_song("showdown");
 cam_reset;
 sound_synth(teleport_all, 1, 0);

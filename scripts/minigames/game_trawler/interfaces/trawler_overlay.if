@@ -1,12 +1,12 @@
-[com_20]
+[trawler_layer]
 type=layer
 x=20
 y=0
 width=475
 height=62
 
-[com_0]
-layer=com_20
+[trawler_waterlevel0]
+layer=trawler_layer
 type=rect
 x=49
 y=23
@@ -18,8 +18,8 @@ script1=gt,0
 fill=yes
 activecolour=0x8080FF
 
-[com_1]
-layer=com_20
+[trawler_waterlevel1]
+layer=trawler_layer
 type=rect
 x=70
 y=23
@@ -31,8 +31,8 @@ script1=gt,4
 fill=yes
 activecolour=0x8080FF
 
-[com_2]
-layer=com_20
+[trawler_waterlevel2]
+layer=trawler_layer
 type=rect
 x=91
 y=23
@@ -44,8 +44,8 @@ script1=gt,9
 fill=yes
 activecolour=0x8080FF
 
-[com_3]
-layer=com_20
+[trawler_waterlevel3]
+layer=trawler_layer
 type=rect
 x=112
 y=23
@@ -57,8 +57,8 @@ script1=gt,14
 fill=yes
 activecolour=0x8080FF
 
-[com_4]
-layer=com_20
+[trawler_waterlevel4]
+layer=trawler_layer
 type=rect
 x=133
 y=23
@@ -70,8 +70,8 @@ script1=gt,19
 fill=yes
 activecolour=0x8080FF
 
-[com_5]
-layer=com_20
+[trawler_waterlevel5]
+layer=trawler_layer
 type=rect
 x=154
 y=23
@@ -83,8 +83,8 @@ script1=gt,24
 fill=yes
 activecolour=0x8080FF
 
-[com_6]
-layer=com_20
+[trawler_waterlevel6]
+layer=trawler_layer
 type=rect
 x=175
 y=23
@@ -96,8 +96,8 @@ script1=gt,29
 fill=yes
 activecolour=0x8080FF
 
-[com_7]
-layer=com_20
+[trawler_waterlevel7]
+layer=trawler_layer
 type=rect
 x=196
 y=23
@@ -109,8 +109,8 @@ script1=gt,34
 fill=yes
 activecolour=0x8080FF
 
-[com_8]
-layer=com_20
+[trawler_waterlevel8]
+layer=trawler_layer
 type=rect
 x=217
 y=23
@@ -122,8 +122,8 @@ script1=gt,39
 fill=yes
 activecolour=0x8080FF
 
-[com_9]
-layer=com_20
+[trawler_waterlevel9]
+layer=trawler_layer
 type=rect
 x=238
 y=23
@@ -135,8 +135,8 @@ script1=gt,44
 fill=yes
 activecolour=0x8080FF
 
-[com_10]
-layer=com_20
+[trawler_waterlevel10]
+layer=trawler_layer
 type=rect
 x=259
 y=23
@@ -148,8 +148,8 @@ script1=gt,49
 fill=yes
 activecolour=0x8080FF
 
-[com_11]
-layer=com_20
+[trawler_waterlevel11]
+layer=trawler_layer
 type=rect
 x=280
 y=23
@@ -161,8 +161,8 @@ script1=gt,54
 fill=yes
 activecolour=0x8080FF
 
-[com_12]
-layer=com_20
+[trawler_waterlevel12]
+layer=trawler_layer
 type=rect
 x=301
 y=23
@@ -174,8 +174,8 @@ script1=gt,59
 fill=yes
 activecolour=0x8080FF
 
-[com_13]
-layer=com_20
+[trawler_waterlevel13]
+layer=trawler_layer
 type=rect
 x=322
 y=23
@@ -187,8 +187,8 @@ script1=gt,64
 fill=yes
 activecolour=0x8080FF
 
-[com_14]
-layer=com_20
+[trawler_waterlevel14]
+layer=trawler_layer
 type=rect
 x=343
 y=23
@@ -200,8 +200,8 @@ script1=gt,69
 fill=yes
 activecolour=0x8080FF
 
-[com_15]
-layer=com_20
+[trawler_waterlevel15]
+layer=trawler_layer
 type=rect
 x=364
 y=23
@@ -213,8 +213,8 @@ script1=gt,74
 fill=yes
 activecolour=0x8080FF
 
-[com_16]
-layer=com_20
+[trawler_waterlevel16]
+layer=trawler_layer
 type=rect
 x=385
 y=23
@@ -226,8 +226,8 @@ script1=gt,79
 fill=yes
 activecolour=0x8080FF
 
-[com_17]
-layer=com_20
+[trawler_waterlevel17]
+layer=trawler_layer
 type=rect
 x=406
 y=23
@@ -239,8 +239,8 @@ script1=gt,84
 fill=yes
 activecolour=0x8080FF
 
-[com_18]
-layer=com_20
+[trawler_waterlevel18]
+layer=trawler_layer
 type=rect
 x=427
 y=23
@@ -252,8 +252,8 @@ script1=gt,89
 fill=yes
 activecolour=0x8080FF
 
-[com_19]
-layer=com_20
+[trawler_waterlevel19]
+layer=trawler_layer
 type=rect
 x=448
 y=23
@@ -266,7 +266,7 @@ fill=yes
 activecolour=0x8080FF
 
 [com_21]
-layer=com_20
+layer=trawler_layer
 type=text
 x=0
 y=20
@@ -278,7 +278,7 @@ text=Water:
 colour=0xFFFFFF
 
 [com_22]
-layer=com_20
+layer=trawler_layer
 type=text
 x=0
 y=42
@@ -290,7 +290,7 @@ text=Net:
 colour=0xFFFFFF
 
 [com_23]
-layer=com_20
+layer=trawler_layer
 type=text
 x=183
 y=42
@@ -302,7 +302,7 @@ text=Catch:
 colour=0xFFFFFF
 
 [com_24]
-layer=com_20
+layer=trawler_layer
 type=text
 x=372
 y=42
@@ -314,7 +314,7 @@ text=Time left:
 colour=0xFFFFFF
 
 [com_25]
-layer=com_20
+layer=trawler_layer
 type=rect
 x=49
 y=23
@@ -323,8 +323,8 @@ height=10
 trans=128
 colour=0x808080
 
-[com_26]
-layer=com_20
+[trawler_nettextok]
+layer=trawler_layer
 type=text
 x=31
 y=42
@@ -335,8 +335,8 @@ shadowed=yes
 text=Okay
 colour=0x00FF24
 
-[com_27]
-layer=com_20
+[trawler_nettextripped]
+layer=trawler_layer
 type=text
 x=31
 y=42
@@ -347,8 +347,8 @@ shadowed=yes
 text=Ripped!
 colour=0xFF0000
 
-[com_28]
-layer=com_20
+[trawler_catchtext]
+layer=trawler_layer
 type=text
 x=225
 y=42
@@ -359,8 +359,8 @@ shadowed=yes
 text=Nothing
 colour=0xFFFFFF
 
-[com_29]
-layer=com_20
+[trawler_timetext]
+layer=trawler_layer
 type=text
 x=429
 y=42

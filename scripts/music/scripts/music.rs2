@@ -77,7 +77,7 @@ if ($unlock ! null) {
 
 %musicplay = 0; // switch to manual mode
 
-if_settext(music:com_177, db_getfield($song, music:name, 0));
+if_settext(music:com_30, db_getfield($song, music:name, 0));
 @music_play(db_getfield($song, music:track, 0));
 
 [label,music_playbyregion](coord $coord)
@@ -104,6 +104,6 @@ if ($unlock ! null) {
 }
 
 if (%musicplay ! 0) {
-    if_settext(music:com_177, db_getfield($song, music:name, 0));
+    if_settext(music:com_30, db_getfield($song, music:name, 0));
     @music_play(db_getfield($song, music:track, 0));
 }

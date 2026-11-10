@@ -87,10 +87,10 @@ model3=model_2919_npc
 head1=gnome_chat_model_22
 recol1s=10570
 recol1d=17441
-blockwalk=none
 wanderrange=10
 maxrange=40
 timer=9
+blockwalk=none
 
 [mm_lumo]
 name=Lumo
@@ -128,10 +128,10 @@ recol2s=24075
 recol2d=17830
 recol3s=352
 recol3d=14724
-blockwalk=none
 wanderrange=10
 maxrange=40
 timer=9
+blockwalk=none
 
 [mm_bunkdo]
 name=Bunkdo
@@ -165,10 +165,10 @@ recol1s=416
 recol1d=14887
 recol2s=352
 recol2d=14724
-blockwalk=none
 wanderrange=10
 maxrange=40
 timer=9
+blockwalk=none
 
 [mm_carado]
 name=Carado
@@ -195,18 +195,18 @@ walkanim=midget_walk
 readyanim=midget_ready
 vislevel=hide
 model1=model_2914_npc
-model2=npc_1414
+model2=model_2890_npc
 model3=model_2919_npc
 head1=gnome_chat_head
 recol1s=416
 recol1d=13798
 recol2s=352
 recol2d=14952
-blockwalk=none
 wanderrange=10
 maxrange=40
-attackrange=5
 timer=9
+attackrange=5
+blockwalk=none
 
 [mm_lumdo]
 name=Lumdo
@@ -251,10 +251,10 @@ model1=npc_1420
 model2=npc_1420i2
 model3=npc_1420i3
 head1=npc_1420_head
-blockwalk=none
 wanderrange=10
 maxrange=40
 timer=9
+blockwalk=none
 
 [mm_karam_talker]
 name=Karam
@@ -285,11 +285,11 @@ recol1s=384
 recol1d=12581
 recol2s=416
 recol2d=9603
-defaultmode=none
 wanderrange=0
-timer=40
 maxrange=0
+timer=40
 moverestrict=nomove
+defaultmode=none
 
 [mm_waymottin]
 name=Waymottin
@@ -306,11 +306,11 @@ recol1s=384
 recol1d=12581
 recol2s=416
 recol2d=9603
-defaultmode=none
 wanderrange=0
-timer=40
 maxrange=0
+timer=40
 moverestrict=nomove
+defaultmode=none
 
 [mm_zooknock]
 name=Zooknock
@@ -333,7 +333,6 @@ recol4s=416
 recol4d=9618
 wanderrange=2
 maxrange=2
-// based off this video: https://www.youtube.com/watch?v=Qr9nNWqN6Y8&t=828s
 timer=40
 
 [mm_zooknock_final_battle]
@@ -355,11 +354,11 @@ recol3s=32767
 recol3d=9618
 recol4s=416
 recol4d=9618
-blockwalk=none
-attackrange=5
 wanderrange=10
 maxrange=40
 timer=9
+attackrange=5
+blockwalk=none
 
 [mm_caranock]
 name=G.L.O. Caranock
@@ -412,10 +411,10 @@ model2=npc_1429i2
 model3=npc_1429i3
 head1=npc_1429_head
 maxrange=10
-attackrange=10
-timer=1
-huntmode=mm_guard
 huntrange=10
+timer=1
+attackrange=10
+huntmode=mm_guard
 
 [mm_salenab]
 name=Salenab
@@ -437,14 +436,14 @@ vislevel=hide
 model1=quest_mm_npc_gorilla_body_basic
 model2=quest_mm_npc_gorilla_head_basic
 head1=chat_main_gorilla_basic
-maxrange=30
-param=damagetype,^crush_style
-huntrange=1
-attackrange=1
 wanderrange=2
-moverestrict=indoors
+maxrange=30
+huntrange=1
 timer=2
+moverestrict=indoors
+attackrange=1
 blockwalk=all
+param=damagetype,^crush_style
 param=next_npc_type,mm_aberab
 
 [mm_aberab]
@@ -458,15 +457,15 @@ vislevel=hide
 model1=quest_mm_npc_gorilla_body_basic
 model2=quest_mm_npc_gorilla_head_basic
 head1=chat_main_gorilla_basic
+wanderrange=2
 maxrange=30
+huntrange=1
+timer=2
+moverestrict=indoors
+attackrange=1
+blockwalk=all
 param=damagetype,^crush_style
 param=death_drop,mm_medium_ninja_monkey_bones
-huntrange=1
-attackrange=1
-wanderrange=2
-moverestrict=indoors
-timer=2
-blockwalk=all
 param=next_npc_type,mm_trefaji
 
 [mm_solihib]
@@ -496,7 +495,7 @@ param=shop_title,Solihib's Food Stall
 
 [mm_daga]
 name=Daga
-desc=A shrewd looking monkey swordsmith.
+desc=A shrewd-looking monkey swordsmith.
 walkanim=m_monkey_walk
 readyanim=m_monkey_ready
 resizeh=160
@@ -592,7 +591,7 @@ param=shop_title,Hamab's Crafting Emporium
 
 [mm_hafuba]
 name=Hafuba
-desc=A huge and well-dressed gorilla. He looks like the head priest.
+desc=A huge gorilla, head priest of this temple.
 size=2
 walkanim=m_gorilla_walk
 readyanim=m_gorilla_ready
@@ -607,7 +606,7 @@ head1=npc_1438_head
 
 [mm_denadu]
 name=Denadu
-desc=A small well dressed monkey clasping a mace. He looks like a priest.
+desc=A small, well dressed monkey clasping a mace. He looks like a priest.
 walkanim=m_monkey_walk
 readyanim=m_monkey_acolyte_ready
 resizeh=180
@@ -621,7 +620,7 @@ head1=chat_main_monkey_basic
 
 [mm_lofu]
 name=Lofu
-desc=A small well dressed monkey clasping a mace. He looks like a priest.
+desc=A small, well dressed monkey clasping a mace. He looks like a priest.
 walkanim=m_monkey_walk
 readyanim=m_monkey_acolyte_ready
 resizeh=180
@@ -836,17 +835,8 @@ defence=130
 strength=130
 hitpoints=130
 magic=130
-respawnrate=100
-param=attackbonus,50
-param=damagetype,^slash_style
-param=attack_anim,m_monkey_attack_scimitar
-param=defend_anim,m_monkey_block_scimitar
-param=death_anim,m_monkey_death
-param=attack_sound,stabsword_slash
-param=defend_sound,monkey_hit
-param=death_sound,monkey_death
-param=death_drop,mm_medium_ninja_monkey_bones
 huntrange=10
+respawnrate=100
 huntmode=aa_aggressive_melee
 defaultmode=patrol
 patrol1=0_43_43_9_33,15
@@ -861,6 +851,15 @@ patrol9=0_43_43_2_34,15
 patrol10=0_43_43_5_36,15
 patrol11=0_43_43_6_36,15
 patrol12=0_43_43_7_35,0
+param=attackbonus,50
+param=damagetype,^slash_style
+param=attack_anim,m_monkey_attack_scimitar
+param=defend_anim,m_monkey_block_scimitar
+param=death_anim,m_monkey_death
+param=attack_sound,stabsword_slash
+param=defend_sound,monkey_hit
+param=death_sound,monkey_death
+param=death_drop,mm_medium_ninja_monkey_bones
 
 [mm_awowogei_cutscene]
 name=Awowogei
@@ -1022,8 +1021,10 @@ defence=80
 strength=80
 hitpoints=50
 ranged=110
-attackrange=10
+huntrange=6
 respawnrate=100
+attackrange=10
+huntmode=aa_aggressive_ranged
 param=attackrate,4
 param=damagetype,^crush_style
 param=attack_anim,m_monkey_attack_bow
@@ -1037,8 +1038,6 @@ param=rangeattack_sound,arrowlaunch2
 param=proj_launch,iron_arrow_launch
 param=proj_height,24
 param=proj_travel,iron_arrow_travel
-huntmode=aa_aggressive_ranged
-huntrange=6
 
 [mm_ravine_archer]
 name=Monkey Archer
@@ -1058,8 +1057,10 @@ defence=80
 strength=80
 hitpoints=50
 ranged=110
-attackrange=15
+huntrange=15
 respawnrate=100
+attackrange=15
+huntmode=aa_aggressive_ranged
 param=damagetype,^crush_style
 param=attack_anim,m_monkey_attack_bow
 param=defend_anim,m_monkey_block_bow
@@ -1072,8 +1073,6 @@ param=rangeattack_sound,arrowlaunch2
 param=proj_launch,iron_arrow_launch
 param=proj_height,24
 param=proj_travel,iron_arrow_travel
-huntmode=aa_aggressive_ranged
-huntrange=15
 
 [mm_posted_archer]
 name=Monkey Archer
@@ -1093,9 +1092,11 @@ defence=80
 strength=80
 hitpoints=50
 ranged=110
+huntrange=6
 respawnrate=100
 moverestrict=nomove
 attackrange=6
+huntmode=aa_aggressive_ranged
 defaultmode=none
 param=attackrate,4
 param=damagetype,^crush_style
@@ -1110,8 +1111,6 @@ param=rangeattack_sound,arrowlaunch2
 param=proj_launch,iron_arrow_launch
 param=proj_height,24
 param=proj_travel,iron_arrow_travel
-huntmode=aa_aggressive_ranged
-huntrange=6
 
 [mm_religious_guard]
 name=Monkey Guard
@@ -1131,7 +1130,9 @@ defence=200
 strength=130
 hitpoints=130
 magic=130
+huntrange=5
 respawnrate=100
+huntmode=aa_aggressive_melee
 param=attackrate,4
 param=attackbonus,50
 param=damagetype,^crush_style
@@ -1142,8 +1143,6 @@ param=attack_sound,gorilla_attack
 param=defend_sound,gorilla_hit
 param=death_sound,gorilla_death
 param=death_drop,mm_normal_gorilla_monkey_bones
-huntrange=5
-huntmode=aa_aggressive_melee
 
 [mm_religious_trapdoor_guard]
 name=Monkey Guard
@@ -1163,8 +1162,10 @@ defence=200
 strength=130
 hitpoints=130
 magic=130
+huntrange=2
 respawnrate=25
 blockwalk=all
+huntmode=aa_aggressive_melee
 param=attackrate,4
 param=attackbonus,50
 param=damagetype,^crush_style
@@ -1175,8 +1176,6 @@ param=attack_sound,gorilla_attack
 param=defend_sound,gorilla_hit
 param=death_sound,gorilla_death
 param=death_drop,mm_bearded_gorilla_monkey_bones
-huntrange=2
-huntmode=aa_aggressive_melee
 
 [mm_elder_guard_1]
 name=Elder Guard
@@ -1190,13 +1189,13 @@ model1=quest_mm_npc_gorilla_body_basic
 model2=quest_mm_npc_gorilla_head_beard
 head1=chat_main_gorilla_beard
 wanderrange=0
-attackrange=1
 maxrange=2
 huntrange=1
-huntmode=mm_guard
 moverestrict=nomove
-defaultmode=none
+attackrange=1
 blockwalk=all
+huntmode=mm_guard
+defaultmode=none
 param=damagetype,^crush_style
 
 [mm_elder_guard_2]
@@ -1211,13 +1210,13 @@ model1=quest_mm_npc_gorilla_body_basic
 model2=quest_mm_npc_gorilla_head_beard
 head1=chat_main_gorilla_beard
 wanderrange=0
-attackrange=1
 maxrange=2
 huntrange=1
-huntmode=mm_guard
 moverestrict=nomove
-defaultmode=none
+attackrange=1
 blockwalk=all
+huntmode=mm_guard
+defaultmode=none
 param=damagetype,^crush_style
 
 [mm_zoo_monkey]
@@ -1265,7 +1264,9 @@ defence=60
 strength=60
 hitpoints=60
 magic=60
+huntrange=5
 respawnrate=100
+huntmode=aa_aggressive_melee
 param=attackbonus,35
 param=damagetype,^crush_style
 param=attack_anim,m_zombie_attack
@@ -1276,8 +1277,6 @@ param=defend_sound,zombie_monkey_hit
 param=death_sound,zombie_monkey_death
 param=death_drop,mm_large_zombie_monkey_bones
 param=undead,^true
-huntmode=aa_aggressive_melee
-huntrange=5
 
 [mm_zombie_monkey_large_guard]
 name=Monkey Zombie
@@ -1304,7 +1303,9 @@ defence=90
 strength=110
 hitpoints=90
 magic=90
+huntrange=2
 respawnrate=25
+huntmode=aa_aggressive_melee
 param=attackbonus,35
 param=damagetype,^crush_style
 param=attack_anim,m_zombie_attack
@@ -1315,8 +1316,6 @@ param=defend_sound,zombie_monkey_hit
 param=death_sound,zombie_monkey_death
 param=death_drop,mm_large_zombie_monkey_bones
 param=undead,^true
-huntmode=aa_aggressive_melee
-huntrange=2
 
 [mm_zombie_monkey_small]
 name=Monkey Zombie
@@ -1341,7 +1340,9 @@ defence=60
 strength=60
 hitpoints=60
 magic=60
+huntrange=2
 respawnrate=100
+huntmode=aa_aggressive_melee
 param=attackbonus,15
 param=damagetype,^crush_style
 param=attack_anim,m_zombie_attack
@@ -1352,8 +1353,6 @@ param=defend_sound,zombie_monkey_hit
 param=death_sound,zombie_monkey_death
 param=death_drop,mm_small_zombie_monkey_bones
 param=undead,^true
-huntmode=aa_aggressive_melee
-huntrange=2
 
 [mm_bonzara]
 name=Bonzara
@@ -1450,8 +1449,8 @@ strength=90
 hitpoints=110
 magic=110
 huntrange=16
-attackrange=15
 respawnrate=200
+attackrange=15
 huntmode=aa_aggressive_melee
 param=attackrate,4
 param=attackbonus,50
@@ -1467,7 +1466,7 @@ param=undead,^true
 
 [mm_demon]
 name=Jungle Demon
-desc=It's a large green Greater Jungle Demon. An aura of magic emanates from its hide.
+desc=A Greater Jungle Demon. A magical aura emanates from its hide.
 size=3
 walkanim=demon_walk
 readyanim=demon_ready
@@ -1496,8 +1495,8 @@ defence=170
 strength=170
 hitpoints=170
 magic=170
-attackrange=10
 timer=9
+attackrange=10
 param=attackrate,6
 param=attackbonus,50
 param=strengthbonus,50
@@ -1515,7 +1514,7 @@ param=death_drop,ashes
 
 [mm_warehouse_spider]
 name=Spider
-desc=It's an extremely small black spider. Probably very poisonous.
+desc=It's an extremely small brown spider. Probably very poisonous.
 walkanim=spider_walk
 minimap=no
 resizeh=64
@@ -1525,13 +1524,13 @@ vislevel=1
 model1=model_2996_npc
 recol1s=15855
 recol1d=5285
-blockwalk=none
 wanderrange=5
 maxrange=5
 hitpoints=2
-respawnrate=4
-huntmode=aa_aggressive_melee
 huntrange=1
+respawnrate=4
+blockwalk=none
+huntmode=aa_aggressive_melee
 param=attackrate,6
 param=attackbonus,1
 param=strengthbonus,1
@@ -1549,7 +1548,7 @@ param=poison_severity,7
 
 [mm_cutscene_spider]
 name=Spider
-desc=It's an extremely small and probably poisonous black spider.
+desc=It's an extremely small and probably poisonous brown spider.
 walkanim=spider_walk
 minimap=no
 resizeh=64
@@ -1565,6 +1564,7 @@ maxrange=10
 name=Bird
 desc=It's a brightly coloured bird of the jungle.
 walkanim=bird_walk
+readyanim=bird_walk
 resizeh=64
 resizev=64
 turnspeed=64
@@ -1575,7 +1575,6 @@ recol1s=15648
 recol1d=12037
 recol2s=16801
 recol2d=26149
-moverestrict=outdoors
 wanderrange=16
 maxrange=16
 attack=10
@@ -1584,6 +1583,7 @@ strength=10
 hitpoints=10
 magic=10
 respawnrate=10
+moverestrict=outdoors
 param=attackrate,4
 param=damagetype,^stab_style
 param=attack_anim,bird_attack
@@ -1597,6 +1597,7 @@ param=death_sound,bird_death
 name=Bird
 desc=It's a brightly coloured bird of the jungle. It flies very quickly.
 walkanim=bird_walk
+readyanim=bird_walk
 resizeh=64
 resizev=64
 turnspeed=64
@@ -1607,7 +1608,6 @@ recol1s=15648
 recol1d=13949
 recol2s=16801
 recol2d=31528
-moverestrict=outdoors
 wanderrange=64
 maxrange=64
 attack=5
@@ -1616,6 +1616,7 @@ strength=5
 hitpoints=5
 magic=5
 respawnrate=10
+moverestrict=outdoors
 param=attackrate,4
 param=damagetype,^stab_style
 param=attack_anim,bird_attack
@@ -1646,7 +1647,9 @@ defence=10
 strength=50
 hitpoints=15
 magic=10
+huntrange=1
 respawnrate=100
+huntmode=aa_aggressive_melee
 param=attackrate,4
 param=attackbonus,100
 param=strengthbonus,100
@@ -1659,8 +1662,6 @@ param=defend_sound,insect_hit
 param=death_sound,insect_death
 param=death_drop,null
 param=poison_severity,4
-huntmode=aa_aggressive_melee
-huntrange=1
 
 [mm_jungle_spider]
 name=Jungle spider
@@ -1683,7 +1684,9 @@ defence=10
 strength=30
 hitpoints=35
 magic=10
+huntrange=1
 respawnrate=50
+huntmode=aa_aggressive_melee
 param=attackrate,4
 param=attackbonus,100
 param=strengthbonus,100
@@ -1696,8 +1699,6 @@ param=defend_sound,insect_hit
 param=death_sound,insect_death
 param=death_drop,null
 param=poison_severity,4
-huntmode=aa_aggressive_melee
-huntrange=1
 
 [mm_jungle_snake]
 name=Snake
@@ -1718,7 +1719,9 @@ defence=10
 strength=25
 hitpoints=35
 magic=10
+huntrange=1
 respawnrate=100
+huntmode=aa_aggressive_melee
 param=attackrate,4
 param=attackbonus,100
 param=strengthbonus,100
@@ -1730,8 +1733,6 @@ param=attack_sound,snake_attack
 param=defend_sound,snake_hit
 param=death_sound,snake_death
 param=poison_severity,7
-huntmode=aa_aggressive_melee
-huntrange=1
 
 [mm_transmogrification_small_ninja_monkey]
 walkanim=m_monkey_walk

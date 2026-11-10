@@ -1,10 +1,10 @@
 [baxtorian_book_waterfall_quest]
-cost=2
 name=Book on baxtorian
-desc=A book on elven history in north runescape.
-model=inv_book
 recol1s=13472
 recol1d=7456
+cost=2
+desc=A book on elven history in northern RuneScape.
+model=inv_book
 2dzoom=840
 2dyan=152
 2dxan=256
@@ -15,14 +15,13 @@ tradeable=no
 
 [golrie_key_waterfall_quest]
 name=A key
-desc=This will unlock something
+desc=This will unlock something.
 model=inv_key
 2dxof=-3
 2dyof=5
 2dzoom=700
 2dyan=20
 2dxan=328
-weight=10g
 members=yes
 tradeable=no
 
@@ -58,39 +57,39 @@ tradeable=no
 
 [glarials_urn_full_waterfall_quest]
 name=Glarial's urn
-desc=An urn containing Glarial's ashes
+desc=An urn containing Glarial's ashes.
 model=inv_urn
 2dyof=-3
 2dzoom=1070
 2dyan=104
 2dxan=68
-weight=5oz
 members=yes
+weight=5oz
 tradeable=no
 
 [glarials_urn_empty_waterfall_quest]
 name=Glarial's urn
-desc=An empty urn made for Glarial's ashes
+desc=An empty urn made for Glarial's ashes.
 model=inv_urn
 2dyof=-3
 2dzoom=1070
 2dyan=104
 2dxan=68
-weight=3oz
 members=yes
+weight=3oz
 tradeable=no
 
 [baxtorian_key_waterfall_quest]
 name=A key
-desc=This will unlock something
+desc=This will unlock something.
 model=inv_key
 2dxof=-3
 2dyof=5
 2dzoom=700
 2dyan=20
 2dxan=328
-weight=10g
 members=yes
+weight=10g
 tradeable=no
 
 [mithril_seed]

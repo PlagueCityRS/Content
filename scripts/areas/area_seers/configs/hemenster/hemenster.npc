@@ -1,7 +1,7 @@
 [morris]
 vislevel=hide
 name=Morris
-desc=He checks the entrants to the fishing contest.
+desc=He checks the entrants to the Fishing Contest.
 walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
 readyanim=human_ready
 op1=Talk-to
@@ -26,7 +26,7 @@ defaultmode=none
 [bonzo]
 vislevel=hide
 name=Bonzo
-desc=The Fishing Contest Judge.
+desc=The Fishing Contest judge.
 walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
 readyanim=human_ready
 op1=Talk-to
@@ -83,7 +83,7 @@ moverestrict=indoors
 
 [sinister_stranger]
 vislevel=hide
-name=A Sinister Stranger
+name=Sinister Stranger
 desc=He looks a LOT like a vampire...
 walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
 readyanim=human_ready

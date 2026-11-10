@@ -1,13 +1,12 @@
 [ball_gnomeball_game]
 name=Gnomeball
-desc=A ball from the game Gnomeball
+desc=A ball used in Gnomeball.
 model=inv_gnomeball
 2dzoom=790
 2dyan=2020
 2dxan=108
-weight=500g
 iop2=Hold
-wearpos=righthand
 manwear=human_weapons_gnomeball,0
 womanwear=human_weapons_gnomeball,6
 members=yes
+wearpos=righthand

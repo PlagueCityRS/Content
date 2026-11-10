@@ -56,7 +56,7 @@ zoom=400
 xan=208
 yan=1687
 
-[com_5]
+[x_mark_0]
 type=model
 x=134
 y=203
@@ -70,7 +70,7 @@ zoom=1526
 xan=528
 yan=68
 
-[com_6]
+[x_mark_1]
 type=model
 x=156
 y=218
@@ -84,7 +84,7 @@ zoom=1526
 xan=528
 yan=68
 
-[com_7]
+[x_mark_2]
 type=model
 x=232
 y=222
@@ -98,7 +98,7 @@ zoom=1526
 xan=528
 yan=68
 
-[com_8]
+[x_mark_3]
 type=model
 x=253
 y=239
@@ -112,7 +112,7 @@ zoom=1526
 xan=528
 yan=68
 
-[com_9]
+[x_mark_4]
 type=model
 x=290
 y=246
@@ -126,7 +126,7 @@ zoom=1526
 xan=528
 yan=68
 
-[com_10]
+[x_mark_5]
 type=model
 x=336
 y=264
@@ -140,7 +140,7 @@ zoom=1526
 xan=528
 yan=68
 
-[com_11]
+[x_mark_6]
 type=model
 x=147
 y=174
@@ -154,7 +154,7 @@ zoom=1526
 xan=528
 yan=68
 
-[com_12]
+[x_mark_7]
 type=model
 x=177
 y=175
@@ -168,7 +168,7 @@ zoom=1526
 xan=528
 yan=68
 
-[com_13]
+[x_mark_8]
 type=model
 x=227
 y=191
@@ -182,7 +182,7 @@ zoom=1526
 xan=528
 yan=68
 
-[com_14]
+[x_mark_9]
 type=model
 x=261
 y=204
@@ -196,7 +196,7 @@ zoom=1526
 xan=528
 yan=68
 
-[com_15]
+[x_mark_10]
 type=model
 x=304
 y=214
@@ -210,7 +210,7 @@ zoom=1526
 xan=528
 yan=68
 
-[com_16]
+[x_mark_11]
 type=model
 x=343
 y=225
@@ -224,7 +224,7 @@ zoom=1526
 xan=528
 yan=68
 
-[com_17]
+[x_mark_12]
 type=model
 x=159
 y=142
@@ -238,7 +238,7 @@ zoom=1526
 xan=528
 yan=68
 
-[com_18]
+[x_mark_13]
 type=model
 x=193
 y=149
@@ -252,7 +252,7 @@ zoom=1526
 xan=528
 yan=68
 
-[com_19]
+[x_mark_14]
 type=model
 x=229
 y=157
@@ -266,7 +266,7 @@ zoom=1526
 xan=528
 yan=68
 
-[com_20]
+[x_mark_15]
 type=model
 x=272
 y=168
@@ -280,7 +280,7 @@ zoom=1526
 xan=528
 yan=68
 
-[com_21]
+[x_mark_16]
 type=model
 x=311
 y=175
@@ -294,7 +294,7 @@ zoom=1526
 xan=528
 yan=68
 
-[com_22]
+[x_mark_17]
 type=model
 x=346
 y=185
@@ -308,7 +308,7 @@ zoom=1526
 xan=528
 yan=68
 
-[com_23]
+[x_mark_18]
 type=model
 x=172
 y=112
@@ -322,7 +322,7 @@ zoom=1526
 xan=528
 yan=68
 
-[com_24]
+[x_mark_19]
 type=model
 x=205
 y=118
@@ -336,7 +336,7 @@ zoom=1526
 xan=528
 yan=68
 
-[com_25]
+[x_mark_20]
 type=model
 x=242
 y=126
@@ -350,7 +350,7 @@ zoom=1526
 xan=528
 yan=68
 
-[com_26]
+[x_mark_21]
 type=model
 x=278
 y=134
@@ -364,7 +364,7 @@ zoom=1526
 xan=528
 yan=68
 
-[com_27]
+[x_mark_22]
 type=model
 x=316
 y=145
@@ -378,7 +378,7 @@ zoom=1526
 xan=528
 yan=68
 
-[com_28]
+[x_mark_23]
 type=model
 x=354
 y=151
@@ -392,7 +392,7 @@ zoom=1526
 xan=528
 yan=68
 
-[com_29]
+[x_mark_24]
 type=model
 x=183
 y=83
@@ -406,7 +406,7 @@ zoom=1526
 xan=528
 yan=68
 
-[com_30]
+[x_mark_25]
 type=model
 x=215
 y=88
@@ -420,7 +420,7 @@ zoom=1526
 xan=528
 yan=68
 
-[com_31]
+[x_mark_26]
 type=model
 x=252
 y=96
@@ -434,7 +434,7 @@ zoom=1526
 xan=528
 yan=68
 
-[com_32]
+[x_mark_27]
 type=model
 x=285
 y=104
@@ -448,7 +448,7 @@ zoom=1526
 xan=528
 yan=68
 
-[com_33]
+[x_mark_28]
 type=model
 x=326
 y=112
@@ -462,7 +462,7 @@ zoom=1526
 xan=528
 yan=68
 
-[com_34]
+[x_mark_29]
 type=model
 x=361
 y=120
@@ -476,7 +476,7 @@ zoom=1526
 xan=528
 yan=68
 
-[com_35]
+[x_mark_30]
 type=model
 x=192
 y=57
@@ -490,7 +490,7 @@ zoom=1526
 xan=528
 yan=68
 
-[com_36]
+[x_mark_31]
 type=model
 x=222
 y=60
@@ -504,7 +504,7 @@ zoom=1526
 xan=528
 yan=68
 
-[com_37]
+[x_mark_32]
 type=model
 x=260
 y=67
@@ -518,7 +518,7 @@ zoom=1526
 xan=528
 yan=68
 
-[com_38]
+[x_mark_33]
 type=model
 x=293
 y=74
@@ -532,7 +532,7 @@ zoom=1526
 xan=528
 yan=68
 
-[com_39]
+[x_mark_34]
 type=model
 x=329
 y=81
@@ -546,7 +546,7 @@ zoom=1526
 xan=528
 yan=68
 
-[com_40]
+[x_mark_35]
 type=model
 x=367
 y=89
@@ -560,7 +560,7 @@ zoom=1526
 xan=528
 yan=68
 
-[com_41]
+[lumbridgetext]
 type=text
 x=309
 y=213
@@ -571,7 +571,7 @@ shadowed=yes
 text=Lumbridge
 colour=0x947440
 
-[com_42]
+[draynortext]
 type=text
 x=226
 y=157
@@ -582,7 +582,7 @@ shadowed=yes
 text=Draynor
 colour=0x947440
 
-[com_43]
+[varrocktext]
 type=text
 x=352
 y=105
@@ -593,7 +593,7 @@ shadowed=yes
 text=Varrock
 colour=0x947440
 
-[com_44]
+[faladortext]
 type=text
 x=198
 y=91
@@ -604,7 +604,7 @@ shadowed=yes
 text=Falador
 colour=0x947440
 
-[com_45]
+[village_text]
 type=text
 x=230
 y=172
@@ -615,7 +615,7 @@ shadowed=yes
 text=Village
 colour=0x947440
 
-[com_46]
+[port_text]
 type=text
 x=157
 y=190
@@ -626,7 +626,7 @@ shadowed=yes
 text=Port
 colour=0x947440
 
-[com_47]
+[sarim_text]
 type=text
 x=152
 y=204

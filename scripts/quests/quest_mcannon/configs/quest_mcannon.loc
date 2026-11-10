@@ -1,7 +1,7 @@
 [broken_multicannon]
 name=Broken MultiCannon
 desc=A powerful ranging device, unfortunately not working.
-model=model_loc_5
+model=broken_multicannon_8
 length=3
 width=3
 op1=Inspect
@@ -9,7 +9,7 @@ op1=Inspect
 [dwarf_multicannon1]
 name=Dwarf MultiCannon
 desc=A powerful ranging device that fires metal balls.
-model=model_loc_5
+model=broken_multicannon_8
 length=3
 width=3
 op1=Fire
@@ -28,7 +28,7 @@ blockwalk=no
 
 [multicannon_stand]
 name=Cannon stand
-desc=The mounting for the muticannon.
+desc=The mounting for the multicannon.
 model=quest_loc_8
 length=3
 width=3
@@ -70,7 +70,7 @@ param=next_loc_stage,elenagateopen
 
 [mcannonplain]
 name=Railing
-desc=Solid bars of iron.
+desc=Intended to keep the goblins away from the mines.
 model=fence_railing
 sharelight=yes
 hillskew=yes
@@ -79,7 +79,7 @@ op1=Inspect
 
 [mcannonrailing1]
 name=Railing
-desc=There is a hole in this section of the railing.
+desc=Intended to keep the goblins away from the mines.
 model=fence_railing
 sharelight=yes
 hillskew=yes
@@ -88,7 +88,7 @@ op1=Inspect
 
 [mcannonrailing2]
 name=Railing
-desc=There is a hole in this section of the railing.
+desc=Intended to keep the goblins away from the mines.
 model=fence_railing
 sharelight=yes
 hillskew=yes
@@ -97,7 +97,7 @@ op1=Inspect
 
 [mcannonrailing3]
 name=Railing
-desc=There is a hole in this section of the railing.
+desc=Intended to keep the goblins away from the mines.
 model=fence_railing
 sharelight=yes
 hillskew=yes
@@ -106,7 +106,7 @@ op1=Inspect
 
 [mcannonrailing4]
 name=Railing
-desc=There is a hole in this section of the railing.
+desc=Intended to keep the goblins away from the mines.
 model=fence_railing
 sharelight=yes
 hillskew=yes
@@ -115,7 +115,7 @@ op1=Inspect
 
 [mcannonrailing5]
 name=Railing
-desc=There is a hole in this section of the railing.
+desc=Intended to keep the goblins away from the mines.
 model=fence_railing
 sharelight=yes
 hillskew=yes
@@ -124,7 +124,7 @@ op1=Inspect
 
 [mcannonrailing6]
 name=Railing
-desc=There is a hole in this section of the railing.
+desc=Intended to keep the goblins away from the mines.
 model=fence_railing
 sharelight=yes
 hillskew=yes
@@ -133,10 +133,11 @@ op1=Inspect
 
 [mcannoncave]
 name=Cave Entrance
-desc=The entrance to the Goblin's cave.
+desc=Looks and smells like a place where goblins live.
 model=cave_entrance3
 width=4
 length=2
+forceapproach=south
 op1=Enter
 
 

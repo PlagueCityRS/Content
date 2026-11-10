@@ -1,6 +1,6 @@
 [wantcat1]
 vislevel=hide
-name=Civillian
+name=Civilian
 desc=A citizen of Ardougne.
 walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
 readyanim=human_ready
@@ -22,7 +22,7 @@ recol3d=20929
 
 [wantcat2]
 vislevel=hide
-name=Civillian
+name=Civilian
 desc=A citizen of Ardougne.
 walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
 readyanim=human_ready
@@ -43,7 +43,7 @@ recol3d=20934
 
 [wantcat3]
 vislevel=hide
-name=Civillian
+name=Civilian
 desc=A citizen of Ardougne.
 walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
 readyanim=human_ready

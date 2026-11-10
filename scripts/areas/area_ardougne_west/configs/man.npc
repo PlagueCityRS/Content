@@ -1,6 +1,6 @@
 [dskin_w_ardoungecitizen1]
 name=Man
-desc=One of RuneScapes' many citizens.
+desc=One of RuneScape's many citizens.
 walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
 readyanim=human_ready
 op1=Talk-to
@@ -32,7 +32,7 @@ param=damagetype,^crush_style
 [w_ardougnecitizen6]
 vislevel=hide
 name=Man
-desc=One of RuneScapes' many citizens.
+desc=One of RuneScape's many citizens.
 walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
 readyanim=human_ready
 model1=man_head_bald
@@ -56,7 +56,7 @@ recol4d=12547
 [w_ardougnecitizen1]
 vislevel=hide
 name=Man
-desc=One of RuneScapes' many citizens.
+desc=One of RuneScape's many citizens.
 walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
 readyanim=human_ready
 op1=Talk-to
@@ -77,7 +77,7 @@ recol2d=6208
 [w_ardougnecitizen2]
 vislevel=hide
 name=Man
-desc=One of RuneScapes' many citizens.
+desc=One of RuneScape's many citizens.
 walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
 readyanim=human_ready
 op1=Talk-to
@@ -100,7 +100,7 @@ recol3d=21000
 [w_ardougnecitizen3]
 vislevel=hide
 name=Man
-desc=One of RuneScapes' many citizens.
+desc=One of RuneScape's many citizens.
 walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
 readyanim=human_ready
 op1=Talk-to
@@ -123,7 +123,7 @@ recol3d=16808
 [w_ardougnecitizen4]
 vislevel=hide
 name=Man
-desc=One of RuneScapes' many citizens.
+desc=One of RuneScape's many citizens.
 walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
 readyanim=human_ready
 op1=Talk-to
@@ -146,7 +146,7 @@ recol3d=16808
 [w_ardougnecitizen5]
 vislevel=hide
 name=Man
-desc=One of RuneScapes' many citizens.
+desc=One of RuneScape's many citizens.
 walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
 readyanim=human_ready
 op1=Talk-to

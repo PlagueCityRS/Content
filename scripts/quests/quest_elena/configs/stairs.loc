@@ -4,7 +4,7 @@ desc=It's a flight of stairs.
 model=spooky_loc_1732
 width=2
 length=3
-op1=Walk-Down
+op1=Walk-down
 
 [plaguehousestairsup]
 name=Spooky stairs
@@ -12,7 +12,7 @@ desc=It's a flight of stairs.
 model=spooky_stairs
 width=2
 length=3
-op1=Walk-Up
+op1=Walk-up
 
 [rehnisonstairs]
 name=Stairs

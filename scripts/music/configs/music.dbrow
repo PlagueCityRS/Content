@@ -1744,26 +1744,26 @@ data=playbutton,music:well_of_voyage
 data=unlock,7,29
 data=track,well of voyage
 
+[music_Wilderness]
+table=music
+data=name,Wilderness
+data=playbutton,music:wilderness
+data=unlock,5,14
+data=track,wilderness
+
 [music_Wilderness2]
 table=music
 data=name,Wilderness2
 data=playbutton,music:wilderness2
-data=unlock,5,14
+data=unlock,5,15
 data=track,wilderness2
 
 [music_Wilderness3]
 table=music
 data=name,Wilderness3
 data=playbutton,music:wilderness3
-data=unlock,5,15
-data=track,wilderness3
-
-[music_Wilderness4]
-table=music
-data=name,Wilderness4
-data=playbutton,music:wilderness4
 data=unlock,5,16
-data=track,wilderness4
+data=track,wilderness3
 
 [music_Wildwood]
 table=music

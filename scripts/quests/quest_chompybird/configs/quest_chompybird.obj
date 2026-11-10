@@ -76,12 +76,12 @@ param=destroy_drop,^true
 
 [raw_chompy]
 name=Raw chompy
-desc=I need to cook this first.
-members=yes
-cost=5
-model=inv_chicken_carcass
 recol1s=15619
 recol1d=19014
+desc=I need to cook this first.
+members=yes
+cost=85
+model=inv_chicken_carcass
 2dxof=-3
 2dzoom=870
 2dyan=1748
@@ -90,18 +90,18 @@ weight=10kg
 
 [cooked_chompy]
 name=Cooked chompy
-desc=It might look delicious to an ogre.
-members=yes
-cost=10
-model=inv_chicken_carcass
 recol1s=15619
 recol1d=14690
+desc=It might look delicious to an ogre.
+members=yes
+cost=130
+model=inv_chicken_carcass
 2dxof=-3
 2dzoom=870
 2dyan=1748
 2dxan=88
-weight=10kg
 iop1=Eat
+weight=10kg
 category=category_5
 
 [ruined_chompy]
@@ -133,7 +133,9 @@ weight=10kg
 tradeable=no
 
 [chompy_bird_obj]
+name=Chompy bird obj
 model=chompy_bird
+2dyof=1
 weight=1lb
 dummyitem=graphic_only
 // there's a cert, so it must be tradeable and therefore not a dummyitem?

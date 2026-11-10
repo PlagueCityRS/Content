@@ -37,7 +37,7 @@ recol1d=15749
 [junglestatue]
 name=Mysterious statue
 desc=Its eyes stare off into the distance...
-model=model_loc_21
+model=junglestatue_8
 width=4
 length=4
 
@@ -59,11 +59,11 @@ op1=Open
 name=Wall Pipe
 desc=Looks like an outlet pipe to the lake.
 model=walldecor_wallpipe
-op1=Check
+op1=Search
 
 [compofishspot]
 name=Fishing spot
-desc=I can fish here.
+desc=I can see fish swimming in the water.
 model=outdoorfurniture_loc_42
 op1=Fish
 
@@ -74,19 +74,19 @@ model=outdoorfurniture_loc_42
 
 [sinisterfishspot]
 name=Fishing spot
-desc=I can fish here.
+desc=I can see really big fish swimming in the water.
 model=outdoorfurniture_loc_42
 op1=Fish
 
 [bigdavefishspot]
 name=Fishing spot
-desc=I can fish here.
+desc=Big Dave is fishing here.
 model=outdoorfurniture_loc_42
 op1=Fish
 
 [joshuafishspot]
 name=Fishing spot
-desc=I can fish here.
+desc=Joshua is fishing here.
 model=outdoorfurniture_loc_42
 op1=Fish
 
@@ -582,7 +582,7 @@ width=2
 anim=torch
 
 [cave_facetorch]
-model=model_loc_199
+model=cave_facetorch
 anim=torch
 
 [gnome_lamp]
@@ -620,11 +620,11 @@ model=walldecor_lantern
 ambient=50
 
 [skulltorch]
-model=model_loc_206
+model=skulltorch
 anim=torch
 
 [skulltorch_grubby]
-model=model_loc_206
+model=skulltorch
 anim=torch
 recol1s=32767
 recol1d=20048
@@ -637,7 +637,7 @@ desc=Scary lighting apparatus.
 model=spooky_candles
 
 [chandalier]
-name=Chandalier
+name=Chandelier
 desc=An ornamental lighting fixture.
 model=furniture_loc_209
 
@@ -668,14 +668,14 @@ model=ship_backsail
 width=5
 
 [bowcornerl]
-model=model_loc_213
+model=bowcornerl
 
 [bowcornerr]
-model=model_loc_213
+model=bowcornerl
 mirror=yes
 
 [bowmiddle]
-model=model_loc_215
+model=bowmiddle
 
 [bowshortl]
 model=ship_loc_216
@@ -704,23 +704,23 @@ mirror=yes
 [longsternl+bust]
 name=Figurehead
 desc=This figure brings luck to those who sail.
-model=model_loc_221
+model=longsternl+bust
 width=4
 
 [longsternr+bust]
 name=Figurehead
 desc=This figure brings luck to those who sail.
-model=model_loc_221
+model=longsternl+bust
 width=4
 mirror=yes
 
 [longsternrailingl]
-model=model_loc_223
+model=longsternrailingl
 active=no
 width=4
 
 [longsternrailingr]
-model=model_loc_223
+model=longsternrailingl
 active=no
 width=4
 mirror=yes
@@ -752,7 +752,7 @@ ambient=30
 contrast=30
 
 [shiphigherwall]
-model=model_loc_228
+model=shiphigherwall
 sharelight=yes
 
 [shiphigherwall_top]
@@ -760,85 +760,219 @@ model=ship_loc_229
 sharelight=yes
 
 [shiphigherwall_low]
-model=model_loc_230
+model=shiphigherwall_low
+recol1s=10598
+recol1d=17799
+recol2s=9541
+recol2d=17799
+recol3s=8484
+recol3d=17799
+recol4s=7427
+recol4d=17799
+recol5s=6370
+recol5d=17799
+sharelight=yes
 sharelight=yes
 
 [shiphigherwall_back]
-model=model_loc_231
+model=shiphigherwall_back
+recol1s=10598
+recol1d=17799
+recol2s=9541
+recol2d=17799
+recol3s=8484
+recol3d=17799
+recol4s=7427
+recol4d=17799
+recol5s=6370
+recol5d=17799
 width=2
 sharelight=yes
 
 [shiphigherwall_backedgel]
-model=model_loc_232
+model=shiphigherwall_backedgel
+recol1s=10598
+recol1d=17799
+recol2s=9541
+recol2d=17799
+recol3s=8484
+recol3d=17799
+recol4s=7427
+recol4d=17799
+recol5s=6370
+recol5d=17799
 width=2
 sharelight=yes
 
 [shiphigherwall_backedger]
-model=model_loc_232
+model=shiphigherwall_backedgel
+recol1s=10598
+recol1d=17799
+recol2s=9541
+recol2d=17799
+recol3s=8484
+recol3d=17799
+recol4s=7427
+recol4d=17799
+recol5s=6370
+recol5d=17799
 width=2
 sharelight=yes
 mirror=yes
 
 [shiphull]
-model=ship_loc_234
+model=shiphull
+recol1s=10598
+recol1d=17799
+recol2s=9541
+recol2d=17799
+recol3s=8484
+recol3d=17799
+recol4s=7427
+recol4d=17799
+recol5s=6370
+recol5d=15685
 sharelight=yes
 active=no
 
 [shiphull_filledl]
-model=ship_loc_235
+model=shiphull_filledl
+recol1s=10598
+recol1d=17799
+recol2s=9541
+recol2d=17799
+recol3s=8484
+recol3d=17799
+recol4s=7427
+recol4d=17799
+recol5s=6370
+recol5d=15685
 sharelight=yes
 active=no
 
 [shiphull_filledr]
-model=ship_loc_235
+model=shiphull_filledl
+recol1s=10598
+recol1d=17799
+recol2s=9541
+recol2d=17799
+recol3s=8484
+recol3d=17799
+recol4s=7427
+recol4d=17799
+recol5s=6370
+recol5d=15685
 sharelight=yes
 active=no
 mirror=yes
 
 [ship_fullwall]
-model=ship_loc_237
+model=ship_fullwall
+recol1s=10598
+recol1d=17799
+recol2s=9541
+recol2d=17799
+recol3s=8484
+recol3d=17799
+recol4s=7427
+recol4d=17799
+recol5s=6370
+recol5d=15685
 sharelight=yes
 active=no
 
 [shiphull_diag]
-model=ship_loc_238
+model=shiphull_diag
+recol1s=10598
+recol1d=17799
+recol2s=9541
+recol2d=17799
+recol3s=8484
+recol3d=17799
+recol4s=7427
+recol4d=17799
+recol5s=6370
+recol5d=15685
 sharelight=yes
 active=no
 
 [shiphull_doublefiller]
-model=model_loc_239
+model=shiphull_doublefiller
+recol1s=8484
+recol1d=17799
 active=no
 
 [shiphull_filler]
-model=ship_loc_240
+model=shiphull_filler
+recol1s=10598
+recol1d=17799
+recol2s=9541
+recol2d=17799
+recol3s=8484
+recol3d=17799
+recol4s=7427
+recol4d=17799
+recol5s=6370
+recol5d=15685
 active=no
+sharelight=yes
 
 [shiphull+cannonclosed]
-model=model_loc_241
+model=shiphull+cannonclosed
 sharelight=yes
 active=no
 
 [shiphull+cannonopen]
-model=ship_loc_242
+model=shiphull+cannonopen
+recol1s=10598
+recol1d=17799
+recol2s=9541
+recol2d=17799
+recol3s=8484
+recol3d=17799
+recol4s=7427
+recol4d=17799
+recol5s=6370
+recol5d=15685
 width=2
 sharelight=yes
 active=no
 
 [shiphull+porthole]
-model=ship_loc_243
+model=shiphull+porthole
+recol1s=10598
+recol1d=17799
+recol2s=9541
+recol2d=17799
+recol3s=8484
+recol3d=17799
+recol4s=7427
+recol4d=17799
+recol5s=7429
+recol5d=15685
 width=2
 sharelight=yes
 active=no
 
 [shiphull+window]
-model=model_loc_244
+model=shiphull+window
 sharelight=yes
 active=no
 
 [shipladder_angled]
 name=Ship's ladder
 desc=Allows access to other parts of the ship.
-model=model_loc_245
+model=shipladder_angled
+recol1s=10598
+recol1d=17799
+recol2s=9541
+recol2d=17799
+recol3s=8484
+recol3d=17799
+recol4s=7427
+recol4d=17799
+recol5s=6370
+recol5d=15685
 sharelight=yes
 op1=Climb-up
 forceapproach=south
@@ -846,10 +980,21 @@ forceapproach=south
 [shipladder_top_angled]
 name=Ship's ladder
 desc=Allows access to other parts of the ship.
-model=model_loc_246
+model=shipladder_top_angled
+recol1s=10598
+recol1d=17799
+recol2s=9541
+recol2d=17799
+recol3s=8484
+recol3d=17799
+recol4s=7427
+recol4d=17799
+recol5s=6370
+recol5d=15685
 sharelight=yes
 op1=Climb-down
 forceapproach=south
+offsety=-60
 
 [ship_net1]
 model=ship_net1
@@ -862,15 +1007,19 @@ active=no
 blockwalk=no
 
 [shiprail]
-model=ship_loc_249
+model=shiprail
+recol1s=14594
+recol1d=17799
+recol2s=15685
+recol2d=17799
 sharelight=yes
 
 [shiprailstern]
-model=model_loc_250
+model=shiprailstern
 active=no
 
 [shiprailstern2]
-model=model_loc_251
+model=shiprailstern2
 active=no
 
 [steeringwheel]
@@ -879,13 +1028,37 @@ desc=Without this I'm going around in circles.
 model=ship_steeringwheel
 
 [stern]
-model=ship_loc_253
+model=stern
+recol1s=10598
+recol1d=17799
+recol2s=9541
+recol2d=17799
+recol3s=8484
+recol3d=17799
+recol4s=7427
+recol4d=17799
+recol5s=6370
+recol5d=15685
+recol6s=5313
+recol6d=13571
 active=no
 
 [stern+bust]
 name=Figurehead
 desc=This figure brings luck to those who sail.
-model=model_loc_254
+model=stern+bust
+recol1s=10598
+recol1d=17799
+recol2s=9541
+recol2d=17799
+recol3s=8484
+recol3d=17799
+recol4s=7427
+recol4d=17799
+recol5s=6370
+recol5d=15685
+recol6s=5313
+recol6d=13571
 width=2
 
 [winch]
@@ -900,31 +1073,66 @@ width=8
 active=no
 
 [frontmast_supportl]
-model=model_loc_257
+model=frontmast_supportl
+recol1s=10598
+recol1d=17799
+recol2s=9541
+recol2d=17799
+recol3s=8484
+recol3d=17799
+recol4s=7427
+recol4d=17799
+recol5s=6370
+recol5d=15685
 width=2
 active=no
+sharelight=yes
 
 [frontmast_supportr]
-model=model_loc_257
+model=frontmast_supportl
+recol1s=10598
+recol1d=17799
+recol2s=9541
+recol2d=17799
+recol3s=8484
+recol3d=17799
+recol4s=7427
+recol4d=17799
+recol5s=6370
+recol5d=15685
 width=2
 mirror=yes
 active=no
+sharelight=yes
 
 [frontmast_suppport]
-model=model_loc_259
+model=frontmast_suppport
 width=2
 active=no
 
 [frontmast_support_bust]
 name=Figurehead
 desc=This figure brings luck to those who sail.
-model=model_loc_260
+model=frontmast_support_bust
+model2=frontmast_support_busti2
+recol1s=10598
+recol1d=17799
+recol2s=9541
+recol2d=17799
+recol3s=8484
+recol3d=17799
+recol4s=7427
+recol4d=17799
+recol5s=6370
+recol5d=15685
+recol6s=4256
+recol6d=17799
 width=2
+sharelight=yes
 
 [mast1]
-name=Mast
-desc=Holds up the sails.
 model=ship_mast1
+active=no
 
 [mast2]
 model=ship_mast2
@@ -932,10 +1140,11 @@ active=no
 
 [mast3]
 model=ship_mast3
-name=Mast
+active=no
 
 [mast4]
 model=ship_mast4
+active=no
 
 [sail1_l]
 name=Sail
@@ -981,14 +1190,30 @@ model=ship_anchor
 [ship_ladder]
 name=Ship's ladder
 desc=I can climb up here.
-model=ship_ladder
+model=ship_ladder_8
+recol1s=10598
+recol1d=12548
+recol2s=9541
+recol2d=11491
+recol3s=8484
+recol3d=10434
+recol4s=7427
+recol4d=10434
 op1=Climb-up
 forceapproach=south
 
 [ship_laddertop]
 name=Ship's ladder
 desc=I can go below decks with this ladder.
-model=model_loc_273
+model=ship_laddertop
+recol1s=10598
+recol1d=12548
+recol2s=9541
+recol2d=11491
+recol3s=8484
+recol3d=10434
+recol4s=7427
+recol4d=10434
 op1=Climb-down
 forceapproach=south
 
@@ -1034,33 +1259,87 @@ width=8
 model=ship_rudder
 
 [shiphull_broken]
-model=ship_loc_281
+model=shiphull_broken
+recol1s=10598
+recol1d=17799
+recol2s=9541
+recol2d=17799
+recol3s=8484
+recol3d=17799
+recol4s=7427
+recol4d=17799
+recol5s=6370
+recol5d=15685
+recol6s=5313
+recol6d=13571
 sharelight=yes
 active=no
 
 [shiphull_fixed]
-model=model_loc_282
+model=shiphull_fixed
 sharelight=yes
 active=no
 
 [shiphull_damaged_l]
-model=model_loc_283
+model=shiphull_damaged_l
+recol1s=10598
+recol1d=17799
+recol2s=9541
+recol2d=17799
+recol3s=8484
+recol3d=17799
+recol4s=7427
+recol4d=17799
+recol5s=6370
+recol5d=15685
 sharelight=yes
 active=no
 
 [shiphull_damaged_r]
-model=model_loc_283
+model=shiphull_damaged_l
+recol1s=10598
+recol1d=17799
+recol2s=9541
+recol2d=17799
+recol3s=8484
+recol3d=17799
+recol4s=7427
+recol4d=17799
+recol5s=6370
+recol5d=15685
 mirror=yes
 sharelight=yes
 active=no
 
 [shiphull_damaged_mid]
-model=model_loc_285
+model=shiphull_damaged_mid
+recol1s=10598
+recol1d=17799
+recol2s=9541
+recol2d=17799
+recol3s=8484
+recol3d=17799
+recol4s=7427
+recol4d=17799
+recol5s=6370
+recol5d=15685
 sharelight=yes
 active=no
 
 [shiphull_damaged_porthole]
-model=ship_loc_286
+model=shiphull_damaged_porthole
+recol1s=10598
+recol1d=17799
+recol2s=9541
+recol2d=17799
+recol3s=8484
+recol3d=17799
+recol4s=7427
+recol4d=17799
+recol5s=6370
+recol5d=15685
+recol6s=7429
+recol6d=15685
 width=2
 sharelight=yes
 active=no
@@ -1068,11 +1347,21 @@ active=no
 [ship_laddertop_noclimb]
 name=Ladder
 desc=I'm not allowed to climb this ladder.
-model=model_loc_273
+model=ship_laddertop
+recol1s=10598
+recol1d=12548
+recol2s=9541
+recol2d=11491
+recol3s=8484
+recol3d=10434
+recol4s=7427
+recol4d=10434
+recol5s=6370
+recol5d=12548
 op1=Climb-down
 
 [wake]
-model=model_loc_288
+model=wake
 anim=wake
 length=3
 active=no
@@ -1105,12 +1394,22 @@ forcedecor=yes
 sharelight=yes
 
 [hold_ladder_floor_2]
-model=model_loc_294
+model=hold_ladder_floor2
 forcedecor=yes
 sharelight=yes
 
 [ship_ladder_noclimb]
-model=ship_ladder
+model=ship_ladder_8
+recol1s=10598
+recol1d=12548
+recol2s=9541
+recol2d=11491
+recol3s=8484
+recol3d=10434
+recol4s=7427
+recol4d=10434
+recol5s=6370
+recol5d=12548
 active=no
 
 [plough]
@@ -1122,18 +1421,18 @@ length=2
 
 [scarecrow]
 name=Scarecrow
-desc=Disturbingly man like.
+desc=Disturbingly man-like.
 model=outdoorfurniture_scarecrow
 
 [foodtrough]
 name=Food trough
 desc=Animals have no table manners.
-model=outdoorfurniture_foodtrough_wooden
+model=foodtrough
 width=2
 
 [eggs]
 name=Eggs
-desc=A home for baby dragons.
+desc=A home for baby creatures.
 model=outdoorfurniture_loc_302
 
 [compost]
@@ -1185,7 +1484,7 @@ length=2
 [potato]
 name=Potato
 desc=Potato-licious!
-model=plants_potato
+model=potato
 op2=Pick
 blockwalk=no
 blockrange=no
@@ -1199,6 +1498,7 @@ ambient=10
 op2=Pick
 blockwalk=no
 blockrange=no
+mapscene=31
 
 [dugupsoil1]
 model=floor_dugupsoil1
@@ -1650,24 +1950,29 @@ forceapproach=east
 name=Wardrobe
 desc=I wonder what this spooky item contains.
 model=spooky_wardrobe
+model2=spookywardrobe
 forceapproach=east
 op1=Open
+ambient=20
 
 [spookywardrobe_open]
 name=Wardrobe
 desc=It smells funny in there.
 model=spooky_wardrobe_open
-forceapproach=east
+model2=spookywardrobe
 op2=Search
 op3=Close
 forceapproach=east
+ambient=20
 
 [spookywardrobe_open_skeleton]
 name=Wardrobe
 desc=It smells funny in there.
 model=spooky_wardrobe_open_skeleton
+model2=spookywardrobe
 op2=Search
 op3=Close
+ambient=20
 
 [cookingutensils]
 model=walldecor_cookingutensils
@@ -1697,12 +2002,12 @@ category=bookcase
 
 [pot_bamboo]
 name=Pot
-desc=bamboo storage!
+desc=Bamboo storage!
 model=wooden_pot_bamboo
 
 [pots_bamboo]
 name=Pots
-desc=bamboo storage!
+desc=Bamboo storage!
 model=wooden_pots_bamboo
 
 [cabinet2_dark]
@@ -1732,7 +2037,7 @@ blockrange=no
 
 [tombgravestone]
 name=Tombstone
-desc=The remiains of someone lie inside.
+desc=The remains of someone lie inside.
 model=graveyard_loc_402
 width=2
 blockrange=no
@@ -1795,9 +2100,9 @@ op1=Open
 
 [egyptcoffin2]
 name=Coffin
-desc=Whoevers inside must have been rich.
+desc=Whoever's inside must have been rich.
 model=egypt_coffin2
-op1=Close
+op1=Open
 
 [churchorgan]
 name=Church organ
@@ -1815,43 +2120,43 @@ length=2
 
 [bluebed]
 name=Bed
-desc=A stylish looking bed.
+desc=A stylish-looking bed.
 model=furniture_bed
-length=2
 recol1s=8456
 recol1d=21279
 recol2s=25224
 recol2d=10778
+length=2
 
 [brownbed]
 name=Bed
-desc=A drab looking bed.
+desc=A drab-looking bed.
 model=furniture_bed
-length=2
 recol1s=8456
 recol1d=14594
 recol2s=25224
 recol2d=19917
+length=2
 
 [orangebed]
 name=Bed
-desc=A stylish looking bed.
+desc=A stylish-looking bed.
 model=furniture_bed
-length=2
 recol1s=8456
 recol1d=31201
 recol2s=25224
 recol2d=2528
+length=2
 
 [darkknight_bed]
 name=Bed
-desc=A stylish looking bed.
+desc=A stylish-looking bed.
 model=furniture_bed
-length=2
 recol1s=8456
 recol1d=5252
 recol2s=25224
 recol2d=14402
+length=2
 
 [poorbed]
 name=Bed
@@ -1861,32 +2166,32 @@ length=2
 
 [poorbed2]
 name=Bed
-desc=I guess I could sleep in it if I was really tired.
+desc=I guess I could sleep in it if I were really tired.
 model=furniture_poorbed2
 width=2
 length=3
 
 [bigbed]
 name=Bed
-desc=Lovely comfy looking big bed.
+desc=Lovely comfy-looking big bed.
 model=furniture_bigbed
 width=2
 length=3
 
 [bigbed_orange]
 name=Bed
-desc=Lovely comfy looking big bed.
+desc=Lovely comfy-looking big bed.
 model=furniture_bigbed
-width=2
-length=3
 recol1s=14336
 recol1d=31201
 recol2s=25224
 recol2d=3554
+width=2
+length=3
 
 [bigbed2]
 name=Bed
-desc=Posh looking bed.
+desc=Posh-looking bed.
 model=furniture_bigbed2
 width=3
 length=3
@@ -1923,17 +2228,18 @@ model=outdoorfurniture_hammock
 width=2
 
 [egypt_bed]
-name=Chaise longue
+name=Chaise lounge
 desc=A comfortable seat to recline and recuperate.
 model=egypt_bed
 length=2
 
 [spookybed]
 name=Bed
-desc=I dont think anyone's slept here for a long long time.
+desc=I don't think anyone's slept here for a long time.
 model=spooky_bed
 width=3
 length=3
+ambient=30
 
 [bigbed_bamboo]
 name=Bed
@@ -2046,6 +2352,7 @@ desc=Some small stones.
 model=outdoorfurniture_boulder3
 blockwalk=no
 blockrange=no
+raiseobject=no
 
 [boulder4]
 name=Stones
@@ -2053,6 +2360,7 @@ desc=Some small stones.
 model=outdoorfurniture_boulder4
 blockwalk=no
 blockrange=no
+raiseobject=no
 
 [loc_448]
 model=walldecor_climbing_rocks
@@ -2665,7 +2973,7 @@ recol1s=12580
 recol1d=8352
 
 [loc_521]
-model=model_loc_521
+model=loc_521
 width=2
 length=2
 active=no
@@ -2677,7 +2985,7 @@ anim=crater
 blockrange=no
 
 [loc_522]
-model=model_loc_521
+model=loc_521
 active=no
 hillskew=yes
 shadow=no
@@ -2777,11 +3085,11 @@ recol1d=11627
 
 [stalagmite_twin_grey]
 name=Stalagmites
-desc=limestone ceiling growth.
+desc=Limestone floor growth.
 model=cave_stalagmite_twin
-hillskew=yes
 recol1s=13537
 recol1d=11627
+hillskew=yes
 
 [loc_533]
 name=Stalactite
@@ -3023,7 +3331,7 @@ desc=A monarch chiselled in stone.
 model=outdoorfurniture_statue_king
 
 [statue_queen]
-name=Statue of a queen.
+name=Statue of a queen
 desc=A monarch chiselled in stone.
 model=outdoorfurniture_statue_queen
 
@@ -3041,14 +3349,14 @@ model=outdoorfurniture_statue_malewarrior
 
 [tribalstatue]
 name=Tribal statue
-desc=A huge carving of a ancient race.
+desc=A huge carving of an ancient race.
 model=outdoorfurniture_tribalstatue
 width=2
 length=2
 
 [statue_dwarfminer]
 name=Dwarf statue
-desc=A depiction of a great dwarf miner.
+desc=A depiction of a great dwarven miner.
 model=outdoorfurniture_statue_dwarfminer
 
 [gnomestatue1]
@@ -3073,7 +3381,7 @@ model=gnome_bust2
 
 [gnomestatue3]
 name=Gnome statue
-desc=A depiction of a famous gnome baller.
+desc=A depiction of a famous gnomeballer.
 model=gnome_statue3
 
 [bust1]
@@ -3121,7 +3429,7 @@ model=egypt_statue4
 
 [egypt_statue5]
 name=Vase
-desc=An expertly crafted model of a vase.
+desc=An expertly crafted vase.
 model=egypt_statue5
 
 [egypt_statue6]
@@ -3146,7 +3454,7 @@ model=outdoorfurniture_statue_zamarok
 
 [statue_base]
 name=Statue steps
-desc= A base for the statue to sit on.
+desc=A base for the statue to sit on.
 model=outdoorfurniture_statue_base
 width=3
 length=3
@@ -3180,42 +3488,48 @@ active=no
 [silvermarket]
 name=Silver stall
 desc=Finely wrought wares of silver.
-model=outdoorfurniture_silkmarket
+model=outdoorfurniture_market
+model2=outdoorfurniture_silvermarket
 width=2
 length=2
 
 [silkmarket]
 name=Silk stall
 desc=Garments for the discerning.
-model=outdoorfurniture_silkmarket
+model=outdoorfurniture_market
+model2=outdoorfurniture_silkmarket
 width=2
 length=2
 
 [bakerymarket]
 name=Bakery stall
 desc=Bread cakes and pastries.
-model=outdoorfurniture_bakerymarket
+model=outdoorfurniture_market
+model2=outdoorfurniture_bakerymarket
 width=2
 length=2
 
 [gemmarket]
 name=Gem stall
 desc=Finest precious stones.
-model=outdoorfurniture_gemmarket
+model=outdoorfurniture_market
+model2=outdoorfurniture_gemmarket
 width=2
 length=2
 
 [furmarket]
 name=Fur stall
 desc=These will keep you warm.
-model=outdoorfurniture_furmarket
+model=outdoorfurniture_market
+model2=outdoorfurniture_furmarket
 width=2
 length=2
 
 [spicemarket]
 name=Spice stall
 desc=The spice is right.
-model=outdoorfurniture_spicemarket
+model=outdoorfurniture_market
+model2=outdoorfurniture_spicemarket
 width=2
 length=2
 
@@ -3229,7 +3543,8 @@ length=2
 [tea_stall]
 name=Tea stall
 desc=Fine brews from exotic regions.
-model=outdoorfurniture_teamarket
+model=outdoorfurniture_market
+model2=outdoorfurniture_teamarket
 width=2
 length=2
 op2=Steal-from
@@ -3449,12 +3764,14 @@ model=outdoorfurniture_barrel_breaking
 anim=barrel
 
 [gas]
-model=model_loc_673
+model=gas
 anim=gas
 
 [gas_chest]
-model=model_loc_674
-anim=smokepuff
+name=gas_chest
+model=gas_chest
+model2=gas_chesti2
+anim=seq_2709
 
 [gas_rocks1]
 model=macro_plainrock1
@@ -3469,10 +3786,10 @@ model=macro_plainrock3
 anim=gas
 
 [fishingspot]
-model=model_loc_678
+model=fishingspot
 
 [fishingspot2]
-model=model_loc_679
+model=fishingspot2
 
 [piano_a]
 name=Piano
@@ -3496,7 +3813,8 @@ width=2
 [grandfatherclock]
 name=Grandfather clock
 desc=Tick-tock, it's a clock.
-model=spooky_grandfatherclock
+model=grandfatherclock
+anim=tic_toc
 
 [weathervane]
 name=Weather vane
@@ -3520,12 +3838,12 @@ model=furniture_bathmirror
 
 [bathscreen]
 name=Bath screen
-desc=Use this to get changed behind.
+desc=A privacy aid!
 model=furniture_bathscreen
 length=2
 
 [dressing_screen]
-name=screen
+name=Screen
 desc=Use this to get changed behind and retain modesty.
 model=furniture_bathscreen
 length=2
@@ -3543,7 +3861,7 @@ model=furniture_witchesbroom
 
 [clothesmodel1]
 name=Clothes model
-desc=I'm guessing it's for making womens clothes.
+desc=I'm guessing it's for making women's clothes.
 model=furniture_clothesmodel1
 
 [clothesmodel2]
@@ -3570,7 +3888,7 @@ model=quest_bigegg
 
 [carcass]
 name=Carcass
-desc=Whatever it was I'm glad its not alive.
+desc=Whatever it was I'm glad it's not alive.
 model=quest_carcass
 width=2
 length=2
@@ -3600,7 +3918,7 @@ recol1s=31709
 recol1d=8456
 
 [tentacles]
-model=model_loc_704
+model=tentacles
 anim=tentacles
 
 [ceilingweb]
@@ -3621,12 +3939,12 @@ model=furniture_loc_708
 
 [bell_rope]
 name=Bell rope
-desc=Suprisingly rope shaped.
+desc=Surprisingly rope-shaped.
 model=furniture_loc_709
 
 [hole_in_wall]
 name=Hole in wall
-desc=Suspiciously hole shaped.
+desc=Suspiciously hole-shaped.
 model=walldecor_loc_710
 
 [crystal_cluster_1]
@@ -3651,14 +3969,14 @@ model=outdoorfurniture_fire_remains
 anim=fire
 
 [firewall_straight]
-model=model_loc_715
+model=firewall_straight
 anim=firewall
 ambient=100
 contrast=100
 shadow=no
 
 [firewall_diagonal]
-model=model_loc_716
+model=firewall_diagonal
 anim=firewall
 ambient=100
 contrast=100
@@ -3725,8 +4043,9 @@ model=castle_wiztorch_standingtorch
 anim=wiztorch
 
 [fire_graphic]
-desc=Fire !
-model=model_loc_725
+name=fire_graphic
+desc=Fire!
+model=fire_graphic
 anim=wiztorch
 ambient=100
 contrast=100
@@ -3820,12 +4139,12 @@ recol1d=14798
 
 [carcass_burnt]
 name=Carcass
-desc=Whatever it was I'm glad its not alive.
+desc=Whatever it was I'm glad it's not alive.
 model=quest_carcass
-width=2
-length=2
 recol1s=28538
 recol1d=14798
+width=2
+length=2
 
 [minigame_start_icon]
 model=floor_invisableicon
@@ -3844,7 +4163,7 @@ ambient=100
 contrast=100
 
 [ladder_old_base]
-name=Broken Ladder
+name=Broken ladder
 desc=Looks a little too broken to climb.
 model=outdoorfurniture_loc_741
 length=2
@@ -4099,16 +4418,16 @@ hillskew=yes
 forcedecor=yes
 
 [loc_777]
-model=model_3884
+model=loc_777
 active=no
 width=2
 length=2
 
 [loc_778]
-model=model_3884
+model=loc_778
 active=no
-width=2
-length=2
+width=3
+length=3
 
 [tbwt_bamboo_door]
 name=Bamboo Door
@@ -4176,7 +4495,7 @@ recol1d=2114
 active=no
 
 [regicide_darkelf_standard]
-model=model_3909
+model=regicide_darkelf_standard
 active=no
 
 [regicide_loom]
@@ -4184,6 +4503,7 @@ name=Loom
 desc=A loom.
 model=quest_regicide_loom
 active=yes
+op2=Weave
 
 [elf_city_gate_right]
 name=City Gate
@@ -4210,7 +4530,7 @@ sharelight=yes
 active=no
 
 [grandwall_roof_chimney]
-model=model_loc_1666
+model=grandwall_roof_chimney
 retex1s=elfwood
 retex1d=elfbrick
 recol2s=24308
@@ -4453,6 +4773,7 @@ model=gnome_damagedarmour4
 name=Target
 desc=For private use only!
 model=outdoorfurniture_target
+ambient=45
 
 [timberdefence]
 model=outdoorfurniture_timberdefence
@@ -4524,6 +4845,8 @@ recol2d=21147
 
 [wallshield]
 model=walldecor_wallshield
+recol1s=15
+recol1d=4405
 ambient=20
 
 [wallshield2]
@@ -4604,7 +4927,7 @@ recol2d=3204
 
 [standard_red]
 name=Standard
-desc=A red standard.
+desc=A standard.
 model=outdoorfurniture_standard_red
 
 [standard_blue]
@@ -4621,6 +4944,8 @@ model=outdoorfurniture_standard_blue2
 name=Standard
 desc=A blue standard.
 model=outdoorfurniture_standard_blue3
+recol1s=15
+recol1d=4405
 
 [gnomestandard1]
 name=Standard
@@ -4852,8 +5177,8 @@ active=yes
 name=Hanging banner
 desc=Mmmm decorative!
 model=walldecor_hangingbannerl
-ambient=50
-sharelight=yes
+contrast=100
+ambient=30
 active=yes
 
 [hangingbannerl_white]
@@ -4878,8 +5203,8 @@ recol5d=21147
 name=Hanging banner
 desc=I don't know art, but I like it!
 model=walldecor_hangingbannerr
-ambient=50
-sharelight=yes
+contrast=100
+ambient=30
 active=yes
 
 [hangingbannerr_white]
@@ -4908,7 +5233,7 @@ active=yes
 
 [dragonmountedhead]
 name=Dragon's head
-desc=A scary looking dragons head.
+desc=The scary-looking head of a scary-looking dragon.
 model=walldecor_dragonmountedhead
 active=yes
 
@@ -5117,21 +5442,25 @@ sharelight=yes
 
 [bluerugcorner]
 model=floor_rugcorner
-sharelight=yes
 recol1s=15360
-recol1d=7199
+recol1d=4405
+sharelight=yes
 
 [bluerugside]
 model=floor_rugside
-sharelight=yes
 recol1s=15360
-recol1d=7199
+recol1d=4405
+recol2s=0
+recol2d=21140
+sharelight=yes
 
 [bluerugmiddle]
 model=floor_rugmiddle
-sharelight=yes
 recol1s=15360
-recol1d=7199
+recol1d=4405
+recol2s=0
+recol2d=21140
+sharelight=yes
 
 [greenrugcorner]
 model=floor_rugcorner
@@ -5258,7 +5587,7 @@ active=yes
 
 [jollyroger]
 name=Jolly Roger
-desc=He dosen't look too jolly to me!
+desc=He doesn't look too jolly to me!
 model=walldecor_jollyroger
 contrast=100
 ambient=10
@@ -5351,10 +5680,10 @@ recol2d=5255
 
 [drystonewall]
 model=fence_drystonewall
-wallwidth=32
 sharelight=yes
 hillskew=yes
 blockrange=no
+sharelight=yes
 
 [fencing]
 model=fence
@@ -5392,6 +5721,7 @@ hillskew=yes
 
 [poshwallgatetop]
 model=fence_loc_986
+active=no
 sharelight=yes
 hillskew=yes
 length=3
@@ -5419,11 +5749,12 @@ recol1d=11559
 
 [poshwallgatetop_brown]
 model=fence_loc_986
+recol1s=15855
+recol1d=11559
 length=3
 sharelight=yes
 hillskew=yes
-recol1s=15855
-recol1d=11559
+active=no
 
 [grassyfencing]
 model=fence_grassy
@@ -5450,10 +5781,14 @@ hillskew=yes
 
 [goldenrailing]
 model=fence_woodenrailing
+recol1s=9412
+recol1d=18849
+recol2s=6241
+recol2d=18849
+recol3s=10468
+recol3d=18849
 sharelight=yes
 blockrange=no
-recol1s=10368
-recol1d=18849
 
 [railing]
 model=fence_railing
@@ -5528,18 +5863,21 @@ hillskew=yes
 blockrange=no
 
 [fence_terminator_right]
-model=fence_terminator
+model=fence_terminator_right
 sharelight=yes
-mirror=yes
 hillskew=yes
 blockrange=no
 
 [woodenrailing_blue]
 model=fence_woodenrailing
+recol1s=9412
+recol1d=15890
+recol2s=6241
+recol2d=15890
+recol3s=10468
+recol3d=15890
 sharelight=yes
 blockrange=no
-recol1s=10368
-recol1d=15890
 
 [barshelf_empty]
 name=Shelves
@@ -5615,6 +5953,7 @@ model=furniture_shelves1
 name=Clothing shelves
 desc=Tailor made for needlework supplies
 model=walldecor_clothesequip-shelves
+model2=clothesequip_shelves
 blockwalk=no
 
 [cookingshelfempty_dark]
@@ -5687,10 +6026,10 @@ recol1s=17633
 recol1d=7264
 
 [bluemoonsign]
-model=model_loc_1041
+model=bluemoonsign
 
 [jollyboarsign]
-model=model_loc_1042
+model=jollyboarsign
 
 [generalstoresign]
 model=walldecor_shopsign
@@ -5699,36 +6038,48 @@ recol1d=7264
 
 [archerystoresign]
 model=shopsigns_archerysign
+recol1s=17633
+recol1d=7264
 
 [clothesshopsign]
 model=shopsigns_clothessign
+recol1s=17633
+recol1d=7264
 
 [swordshopsign]
-model=model_loc_1046
+model=swordshopsign
+recol1s=17633
+recol1d=7264
 
 [axeshopsign]
-model=model_loc_1047
+model=axeshopsign
+recol1s=17633
+recol1d=7264
 
 [staffshopsign]
-model=model_loc_1048
+model=staffshopsign
+recol1s=17633
+recol1d=7264
 
 [banksign]
 model=shopsigns_banksign
+recol1s=17633
+recol1d=7264
 
 [grocersign]
-model=model_loc_1050
+model=grocersign
 
 [rustyanchorsign]
-model=model_loc_1051
+model=rustyanchorsign
 
 [fishingshopsign]
-model=model_loc_1052
+model=fishingshopsign
 
 [jewellerssign]
-model=model_loc_1053
+model=jewellerssign
 
 [2_handedsign]
-model=model_loc_1054
+model=2_handedsign
 
 [herbalistsign]
 model=shopsigns_herbsign
@@ -5738,7 +6089,7 @@ model=shopsigns_harrysfishingsign
 
 [shrimp+parrotsign]
 name=Sign
-desc=Ye olde shrimp and parrot.
+desc=Ye olde Shrimp and Parrot.
 model=shopsigns_shrimp_parrotsign
 active=yes
 
@@ -5746,31 +6097,31 @@ active=yes
 model=shopsigns_deadmanschestsign
 
 [risingsunsign]
-model=model_loc_1059
+model=risingsunsign
 
 [hicktonsarcherysign]
-model=model_loc_1060
+model=hicktonsarcherysign
 
 [forestersarmsign]
 model=shopsigns_forestersarmsign
 
 [rpdtsign]
-model=model_loc_1062
+model=rpdtsign
 
 [flyinghorsesign]
 model=shopsigns_flyinghorsesign
 
 [fancydresssign]
-model=model_loc_1064
+model=fancydresssign
 
 [dancingdonkeysign]
-model=model_loc_1065
+model=dancingdonkeysign
 
 [dragoninnsign]
 model=shopsigns_dragoninnsign
 
 [paramayahostelsign]
-model=model_loc_1067
+model=paramayahostelsign
 
 [blue_moon_plaque]
 name=Sign
@@ -5846,11 +6197,11 @@ recol1d=31649
 
 [dragon_inn_plaque]
 name=Sign
-desc=The Dragon Inn - Visit us for a firey frothy brew!
+desc=The Dragon Inn - Visit us for a fiery brew!
 model=walldecor_plaque
-active=yes
 recol1s=6240
 recol1d=31649
+active=yes
 
 [karamja_spirits_bar]
 name=Sign
@@ -5867,7 +6218,7 @@ model=outdoorfurniture_signpost2
 
 [draynor1_signpost]
 name=Signpost
-desc=North to Draynor Village :: East to Varrock.
+desc=North road to Draynor Village :: East road to Varrock.
 model=outdoorfurniture_signpost2
 
 [draynor2_signpost]
@@ -5877,32 +6228,38 @@ model=outdoorfurniture_signpost2
 
 [draynorjunction1_signpost]
 name=Signpost
-desc=North to Draynor Manor :: East to Lumbridge.
-model=outdoorfurniture_signpost4
+desc=North to Draynor Manor :: West to Asgarnia.
+model=draynorjunction1_signpost
+width=2
+length=2
+ambient=30
 
 [draynorjunction2_signpost]
 name=Signpost
-desc=South to  Wizards Tower ::  West to Asgarnia.
-model=outdoorfurniture_signpost4
+desc=South to the Wizards' Tower :: East to Lumbridge.
+model=draynorjunction1_signpost
+width=2
+length=2
+ambient=30
 
 [junction1_signpost]
 name=Signpost
-desc=South to Lumbridge :: West to Varrock :: East to Digsite.
+desc=South to Lumbridge :: West to Varrock :: East to the Digsite.
 model=outdoorfurniture_signpost4
 
 [junction2_signpost]
 name=Signpost
-desc=South to Al-Kharid :: West to Lumbridge :: East to Digsite.
+desc=South to Al-Kharid :: West to Lumbridge :: East to the Digsite.
 model=outdoorfurniture_signpost4
 
 [junction3_signpost]
 name=Signpost
-desc=North to Varrock :: East to digsite.
+desc=North to Varrock :: East to the Digsite.
 model=outdoorfurniture_signpost2
 
 [junctionsign4_signpost]
 name=Signpost
-desc=South to Wizards Tower :: North to Draynor Village :: East to Lumbridge.
+desc=South to the Wizards' Tower :: North to Draynor Village :: East to Lumbridge.
 model=outdoorfurniture_signpost4
 
 [chair]
@@ -6080,8 +6437,8 @@ width=2
 blockrange=no
 
 [stool_bamboo]
-name=stool
-desc=park it here...
+name=Stool
+desc=Park it here...
 model=furniture_stool_bamboo
 blockrange=no
 
@@ -6091,15 +6448,16 @@ desc=Wouldn't like to sit on that for too long...
 model=outdoorfurniture_icethrone
 width=2
 length=3
-blockrange=no
 
 [chair_dark]
 name=Chair
 desc=The ideal thing to sit on.
 model=furniture_chair
-blockrange=no
 recol1s=10401
 recol1d=1058
+recol2s=9377
+recol2d=1058
+blockrange=no
 
 [hedge]
 name=Hedge
@@ -6364,17 +6722,22 @@ width=2
 length=2
 
 [cabbage]
-desc=Cabbage... yuck !
-model=inv_cabbage
+name=Cabbage
+desc=Cabbage... yuck!
+model=cabbage
 op2=Pick
 blockwalk=no
 blockrange=no
 mapscene=9
+ambient=17
 
 [bullrushes]
 name=Bullrushes
 desc=Found near the water's edge.
-model=plants_bullrusha
+model=bullrushes
+resizex=100
+resizey=110
+resizez=100
 blockwalk=no
 blockrange=no
 
@@ -6452,21 +6815,25 @@ blockrange=no
 name=Fungus
 desc=I doubt that's edible.
 model=plants_nastyfungus
-blockrange=no
 recol1s=31302
 recol1d=11555
 recol2s=30415
 recol2d=14792
+recol3s=30347
+recol3d=14792
+blockrange=no
 
 [wildernessfungus]
 name=Fungus
 desc=I doubt that's edible.
 model=plants_nastyfungus
-blockrange=no
 recol1s=31302
 recol1d=17830
 recol2s=30415
 recol2d=25157
+recol3s=30347
+recol3d=25157
+blockrange=no
 
 [smallfern]
 name=Small fern
@@ -6477,7 +6844,7 @@ blockrange=no
 
 [thistle]
 name=Thistle
-desc=Spikey!
+desc=Spiky!
 model=plants_thistle
 blockwalk=no
 blockrange=no
@@ -6487,7 +6854,6 @@ name=Waterlily
 desc=A home for frogs.
 model=plants_waterlily1
 hillskew=yes
-ambient=50
 shadow=no
 blockwalk=no
 blockrange=no
@@ -6497,7 +6863,6 @@ name=Waterlily
 desc=Otherwise known as a lilypad.
 model=plants_waterlily2
 hillskew=yes
-ambient=50
 shadow=no
 blockwalk=no
 blockrange=no
@@ -6507,7 +6872,6 @@ name=Waterlily
 desc=A home for frogs.
 model=plants_waterlily3
 hillskew=yes
-ambient=50
 shadow=no
 blockwalk=no
 blockrange=no
@@ -6523,7 +6887,7 @@ recol1d=294
 
 [heather2]
 name=Heather
-desc=Who is this heather girl?
+desc=Who is this Heather girl?
 model=plants_heather2
 blockwalk=no
 blockrange=no
@@ -6537,10 +6901,11 @@ blockrange=no
 
 [nettles]
 name=Nettles
-desc=I better not get stung.
-model=plants_nettles
+desc=I'd better not get stung.
+model=nettles
 blockwalk=no
 blockrange=no
+op1=Pick
 
 [plantriddenwall]
 model=walldecor_plantridden
@@ -6582,10 +6947,10 @@ blockrange=no
 name=Flower
 desc=Blooming!
 model=plants_blueflower
+recol1s=7711
+recol1d=20513
 blockwalk=no
 blockrange=no
-recol1s=31
-recol1d=20513
 
 [daisys]
 name=Daisies
@@ -7198,11 +7563,13 @@ mapscene=6
 name=Fallen tree
 desc=This tree was either the victim of weather or mankind.
 model=plants_fallentree
+recol1s=17633
+recol1d=5218
+recol2s=28235
+recol2d=11523
 width=3
 length=2
 mapscene=6
-recol1s=17633
-recol1d=5218
 
 [fern]
 name=Fern
@@ -7268,24 +7635,24 @@ recol3d=19944
 name=Tree
 desc=A tree found in tropical areas.
 model=plants_jungletree2
+recol1s=14660
+recol1d=16773
 width=2
 length=2
 mapscene=5
-recol1s=7298
-recol1d=16773
 
 [jungletree2big_karamja]
 name=Tree
 desc=A tree found in tropical areas.
 model=plants_jungletree2
+recol1s=14660
+recol1d=16773
 width=2
 length=2
 mapscene=5
 resizex=170
 resizey=170
 resizez=170
-recol1s=7298
-recol1d=16773
 
 [loc_1310]
 name=Tree
@@ -7294,6 +7661,7 @@ model=plants_loc_1310
 width=2
 length=2
 mapscene=0
+active=yes
 
 [palm]
 name=Palm
@@ -7334,7 +7702,7 @@ recol2d=12869
 [mossbranch1]
 name=Mossy branch
 desc=The branch is infested with moss.
-model=model_loc_1320
+model=mossbranch1
 width=3
 length=4
 mapscene=1
@@ -7342,7 +7710,7 @@ mapscene=1
 [mossbranch2]
 name=Mossy branch
 desc=The branch is infested with moss.
-model=model_loc_1321
+model=mossbranch2
 width=3
 length=5
 mapscene=1
@@ -7410,6 +7778,10 @@ mapscene=6
 name=Hollow log
 desc=This old tree is rotting away.
 model=plants_hollowlog
+recol1s=20904
+recol1d=11490
+recol2s=18823
+recol2d=7330
 width=3
 mapscene=6
 
@@ -7417,6 +7789,10 @@ mapscene=6
 name=Hollow log
 desc=This old tree is rotting away.
 model=plants_hollowlogsmaller
+recol1s=20904
+recol1d=11490
+recol2s=18823
+recol2d=7330
 width=2
 mapscene=6
 
@@ -7444,6 +7820,10 @@ recol2d=32767
 name=Hollow log
 desc=This old tree is rotting away.
 model=plants_loc_1338
+recol1s=20904
+recol1d=11490
+recol2s=18823
+recol2d=7330
 
 [wildernessroot1]
 name=Roots
@@ -7684,41 +8064,88 @@ model=plants_jungle2
 width=2
 blockwalk=no
 blockrange=no
+mapscene=5
 
 [plant1]
 name=Plant
 desc=A leafy plant.
 model=plants_plant1
+recol1s=15855
+recol1d=5378
+recol2s=12684
+recol2d=5314
+recol3s=10570
+recol3d=7332
+recol4s=9513
+recol4d=6275
+recol5s=8456
+recol5d=5218
 width=2
 length=2
 blockrange=no
+ambient=40
+mapscene=5
 
 [plant2]
 name=Plant
 desc=A leafy fern.
 model=plants_plant2
+recol1s=15855
+recol1d=5378
+recol2s=12684
+recol2d=5314
+recol3s=10570
+recol3d=7332
+recol4s=9513
+recol4d=6275
+recol5s=8456
+recol5d=5218
 width=2
 length=2
 blockrange=no
+ambient=40
+mapscene=5
 
 [plant3]
 name=Plant
 desc=A small bushy plant.
 model=plants_plant3
+recol1s=15855
+recol1d=5378
+recol2s=12684
+recol2d=5314
+recol3s=6342
+recol3d=3200
+recol4s=10570
+recol4d=7332
+recol5s=9513
+recol5d=6275
+recol6s=8456
+recol6d=5218
 blockrange=no
+ambient=40
+mapscene=5
 
 [plant4]
 name=Plant
 desc=A leafy shrub.
 model=plants_plant4
+recol1s=15855
+recol1d=5378
+recol2s=12684
+recol2d=5314
+recol3s=10570
+recol3d=6275
 width=2
 length=2
+ambient=40
 blockrange=no
+mapscene=5
 
 [flytrap2]
 name=Fly trap
 desc=No flies on me.
-model=model_loc_1395
+model=flytrap2
 anim=flytrap
 blockrange=no
 
@@ -7766,7 +8193,17 @@ recol1d=9763
 [jungleplant2]
 name=Jungle plant
 desc=A type of jungle fern.
-model=plants_jungleplant2
+model=plants_plant1
+recol1s=15855
+recol1d=6754
+recol2s=12684
+recol2d=6690
+recol3s=10570
+recol3d=6754
+recol4s=9513
+recol4d=6275
+recol5s=8456
+recol5d=5218
 width=2
 length=2
 blockrange=no
@@ -7826,15 +8263,18 @@ blockrange=no
 
 [desertroofbeams]
 model=walldecor_desertroofbeams
+active=no
 
 [desertwall]
 model=desert_wall
 sharelight=yes
 occlude=yes
+active=no
 
 [desertroofwall]
 model=desert_roofwall
 sharelight=yes
+active=no
 
 [cavewall_face1]
 model=cavern_cavewall_face1
@@ -7859,7 +8299,7 @@ hillskew=yes
 active=no
 
 [cavewall_facewithledge1]
-model=model_loc_1421
+model=cavewall_facewithledge1
 width=2
 sharelight=yes
 
@@ -7880,12 +8320,12 @@ hillskew=yes
 mirror=yes
 
 [cavewall_facefordoorr]
-model=model_loc_1425
+model=cavewall_facefordoorr
 sharelight=yes
 hillskew=yes
 
 [cavewall_facefordoorl]
-model=model_loc_1425
+model=cavewall_facefordoorr
 sharelight=yes
 hillskew=yes
 mirror=yes
@@ -8380,14 +8820,14 @@ recol1s=12580
 recol1d=11627
 
 [cavewall_facefordoorr_grey]
-model=model_loc_1425
+model=cavewall_facefordoorr
 sharelight=yes
 hillskew=yes
 recol1s=12580
 recol1d=11627
 
 [cavewall_facefordoorl_grey]
-model=model_loc_1425
+model=cavewall_facefordoorr
 sharelight=yes
 hillskew=yes
 mirror=yes
@@ -8615,14 +9055,14 @@ active=no
 raiseobject=no
 
 [loc_1564]
-model=model_loc_1564
+model=loc_1564
 sharelight=yes
 occlude=yes
 blockrange=no
 raiseobject=no
 
 [loc_1565]
-model=model_loc_1564
+model=loc_1564
 sharelight=yes
 occlude=yes
 mirror=yes
@@ -8688,6 +9128,7 @@ model=basic_palacedoor-l
 active=yes
 mirror=yes
 raiseobject=no
+op1=Open
 
 [openpalacedoor_r]
 name=Doors
@@ -8806,11 +9247,10 @@ retex1d=mossybricks
 
 [inactivesecretdoor2]
 model=basic_wall
-active=yes
-active=no
-raiseobject=no
 retex1s=wall
 retex1d=mossybricks
+active=no
+raiseobject=no
 
 [lockedmetalgatel]
 name=Gate
@@ -8899,33 +9339,44 @@ recol2d=11458
 
 [timberwall]
 model=wooden_wall
+recol1s=7264
+recol1d=12548
+recol2s=8320
+recol2d=12548
 wallwidth=8
 sharelight=yes
 occlude=yes
 
 [timberwall_no_occlude]
 model=wooden_wall
+recol1s=7264
+recol1d=12548
+recol2s=8320
+recol2d=12548
 wallwidth=8
 sharelight=yes
 
 [thatched_timberroof]
 model=wooden_roof
-sharelight=yes
+model2=thatched_timberroof
 retex1s=roof
 retex1d=thatched
+sharelight=yes
 
 [thatched_timberroof_fill]
 model=wooden_roof
-sharelight=yes
+model2=thatched_timberroof
 retex1s=roof
 retex1d=thatched
+sharelight=yes
 
 [woodenroof_redslate]
 model=wooden_roof
+model2=thatched_timberroof
 sharelight=yes
 
 [timber_overhang]
-model=model_loc_1607
+model=timber_overhang
 
 [roof_veryspecial_thatched]
 model=basic_loc_1608
@@ -8944,7 +9395,7 @@ active=yes
 [timber_scafoldedge]
 name=Scaffold
 desc=A wooden structure used in the process of building.
-model=model_loc_1610
+model=timber_scafoldedge
 sharelight=yes
 active=yes
 
@@ -8977,7 +9428,7 @@ retex1s=mossybricks
 retex1d=wood2
 
 [timberwall_with_window]
-model=model_loc_1615
+model=timberwall_with_window
 wallwidth=8
 sharelight=yes
 occlude=yes
@@ -9003,7 +9454,7 @@ sharelight=yes
 occlude=yes
 
 [lum_bridge_e]
-model=model_loc_1619
+model=lum_bridgee
 sharelight=yes
 active=no
 
@@ -9095,6 +9546,8 @@ recol2d=5248
 
 [oldroof_chimney_redslate]
 model=basic_chimneyroof
+retex1s=wall
+retex1d=mossybricks
 sharelight=yes
 
 [oldroof_chimney_greyslate]
@@ -9287,7 +9740,7 @@ retex2s=wall
 retex2d=mossybricks
 
 [crumblywall_with_roof_diag]
-model=model_loc_1657
+model=crumblywall_with_roof_diag
 sharelight=yes
 retex1s=roof
 retex1d=wood2
@@ -9296,13 +9749,14 @@ recol2d=7329
 
 [oldwall_blackback_a]
 model=basic_loc_1658
-sharelight=yes
-occlude=yes
-hillskew=yes
 retex1s=wall
 retex1d=mossybricks
 recol2s=6342
 recol2d=5248
+sharelight=yes
+occlude=yes
+hillskew=yes
+active=no
 
 [oldwall_blackback_b]
 model=basic_loc_1659
@@ -9360,7 +9814,7 @@ model=elf_roof
 sharelight=yes
 
 [elfroof_chimney]
-model=model_loc_1666
+model=grandwall_roof_chimney
 sharelight=yes
 
 [elfroofedge]
@@ -9525,7 +9979,7 @@ occlude=yes
 active=no
 
 [pyramid_side]
-model=model_loc_1697
+model=pyramid_side
 sharelight=yes
 occlude=yes
 active=no
@@ -9543,7 +9997,7 @@ occlude=yes
 active=no
 
 [pyramid_filledcorner]
-model=model_loc_1700
+model=pyramid_filledcorner
 sharelight=yes
 occlude=yes
 active=no
@@ -9708,7 +10162,7 @@ mapscene=7
 
 [spookystairstop]
 name=Staircase
-desc=This stairs look spooky!
+desc=These stairs look spooky!
 model=spooky_stairstop
 width=2
 length=2
@@ -10013,7 +10467,8 @@ sharelight=yes
 [mill]
 name=Millstones
 desc=These huge stone discs grind grain to make flour.
-model=mill_loc_1778
+model=mill
+anim=mill_rotate
 width=2
 length=2
 
@@ -10021,8 +10476,7 @@ length=2
 name=Sails
 desc=These sails use the wind to drive the windmill.
 model=mill_sail
-length=4
-sharelight=yes
+length=6
 anim=millsail
 
 [sailobject]
@@ -10031,20 +10485,51 @@ desc=These sails use the wind to drive the windmill.
 model=mill_loc_1780
 
 [millbase]
-name=Flour bin
-desc=The ground flour comes down from the millstones above.
-model=mill_loc_1781
+name=millbase
 width=2
 length=2
-op1=Empty
+active=yes
+multivar=flour
+multiloc=0,millbase_empty
+multiloc=1,millbase_flour
+multiloc=2,millbase_flour
+multiloc=3,millbase_flour
+multiloc=4,millbase_flour
+multiloc=5,millbase_flour
+multiloc=6,millbase_flour
+multiloc=7,millbase_flour
+multiloc=8,millbase_flour
+multiloc=9,millbase_flour
+multiloc=10,millbase_flour
+multiloc=11,millbase_flour
+multiloc=12,millbase_flour
+multiloc=13,millbase_flour
+multiloc=14,millbase_flour
+multiloc=15,millbase_flour
+multiloc=16,millbase_flour
+multiloc=17,millbase_flour
+multiloc=18,millbase_flour
+multiloc=19,millbase_flour
+multiloc=20,millbase_flour
+multiloc=21,millbase_flour
+multiloc=22,millbase_flour
+multiloc=23,millbase_flour
+multiloc=24,millbase_flour
+multiloc=25,millbase_flour
+multiloc=26,millbase_flour
+multiloc=27,millbase_flour
+multiloc=28,millbase_flour
+multiloc=29,millbase_flour
+multiloc=30,millbase_flour
 
 [millbase_flour]
 name=Flour bin
-desc=The ground flour comes down from the millstones above.
+desc=I'll need an empty pot so I can collect my flour.
 model=mill_loc_1782
 width=2
 length=2
 op1=Empty
+active=yes
 
 [milltop1]
 model=mill_top1
@@ -10052,10 +10537,11 @@ width=2
 active=no
 
 [milltop2]
-model=mill_loc_1784
+model=milltop2
 width=2
 length=2
 active=no
+anim=mill_rotate
 
 [milltop3]
 model=mill_top3
@@ -10183,14 +10669,14 @@ param=next_loc_stage,loc_1535
 
 [championdoor]
 name=Door
-desc=The door to the champion's guild.
+desc=The door to the Champions' Guild.
 model=basic_wall
-active=yes
-op1=Open
 retex1s=wall
 retex1d=door2
 recol2s=6342
 recol2d=11458
+active=yes
+op1=Open
 param=next_loc_stage,loc_1535
 
 [cavern1]
@@ -10229,16 +10715,16 @@ recol1d=7366
 
 [sliced_web]
 name=Sliced web
-desc=I can walk through this tarrered web.
+desc=I can walk through this tattered web.
 model=cavern_loc_1811
-blockwalk=no
 recol1s=3171
 recol1d=7366
+blockwalk=no
 
 [loc_1812]
 name=Portal
 desc=A magical border of teleportation.
-model=model_loc_1812
+model=loc_1812
 sharelight=yes
 anim=seq_491
 
@@ -10460,7 +10946,7 @@ model=egypt_column
 active=no
 
 [egypt_column2]
-model=model_loc_1858
+model=egypt_column2
 active=no
 
 [egypt_column3]
@@ -10592,22 +11078,22 @@ width=3
 length=3
 
 [runetemple_pillar]
-model=model_loc_1886
+model=runetemple_pillar
 active=no
 
 [runetemple_altar_new]
-model=model_loc_1887
+model=runetemple_altar_new
 width=3
 length=3
 anim=rune_altar
 
 [runetemple_altar_old]
-model=model_loc_1888
+model=runetemple_altar_old
 width=3
 length=3
 
 [collapsed_floor_l]
-model=model_loc_1889
+model=collapsed_floor_l
 sharelight=yes
 hillskew=yes
 blockwalk=no
@@ -10615,7 +11101,7 @@ blockrange=no
 forcedecor=yes
 
 [collapsed_floor_r]
-model=model_loc_1889
+model=collapsed_floor_l
 sharelight=yes
 mirror=yes
 hillskew=yes
@@ -10624,7 +11110,7 @@ blockrange=no
 forcedecor=yes
 
 [collapsed_floor2_l]
-model=model_loc_1891
+model=collapsed_floor2_l
 sharelight=yes
 hillskew=yes
 blockwalk=no
@@ -10632,7 +11118,7 @@ blockrange=no
 forcedecor=yes
 
 [collapsed_floor2_r]
-model=model_loc_1891
+model=collapsed_floor2_l
 mirror=yes
 sharelight=yes
 hillskew=yes
@@ -10765,7 +11251,7 @@ sharelight=yes
 blockrange=no
 
 [castlebattlements_wiztorch]
-model=model_loc_1914
+model=castlebattlements_wiztorch
 anim=wiztorch
 active=no
 
@@ -10880,7 +11366,7 @@ retex1s=roof
 retex1d=wood2
 
 [ardoungewall]
-model=model_loc_1934
+model=ardoungewall
 active=no
 sharelight=yes
 occlude=yes
@@ -10889,7 +11375,7 @@ retex1s=wall
 retex1d=mossybricks
 
 [ardoungewallinsidecorner]
-model=model_loc_1935
+model=ardoungewallinsidecorner
 active=no
 sharelight=yes
 occlude=yes
@@ -10898,7 +11384,7 @@ retex1s=wall
 retex1d=mossybricks
 
 [ardoungewalloutsidecorner]
-model=model_loc_1936
+model=ardoungewalloutsidecorner
 active=no
 sharelight=yes
 occlude=yes
@@ -11000,6 +11486,7 @@ occlude=yes
 model=basic_loc_1658
 sharelight=yes
 occlude=yes
+active=no
 
 [treewall1_lvl1]
 model=gnome_bigtree_wall1-lvl1
@@ -11197,7 +11684,7 @@ op1=Open
 
 [waterfall_ledge_door_left]
 name=Ledge
-model=model_loc_2011
+model=waterfall_ledge_door_left
 sharelight=yes
 op1=Open
 
@@ -11221,7 +11708,7 @@ recol2d=9281
 category=red_vine
 
 [baxtorian_chalice_waterfall_quest]
-name=Chalice of eternity
+name=Chalice of Eternity
 desc=A magically elevated chalice full of tears.
 model=quest_chalice_elf
 op1=Take treasure
@@ -11229,14 +11716,14 @@ width=2
 length=2
 
 [baxtorian_chalice_waterfall_quest_ash]
-name=Chalice of eternity
+name=Chalice of Eternity
 desc=A magically elevated chalice full of ash.
 model=quest_chalice_elf
+recol1s=14800
+recol1d=7399
 op1=Take treasure
 width=2
 length=2
-recol1s=14800
-recol1d=7399
 
 [waterfall_foam]
 model=quest_waterfall_foam
@@ -11273,7 +11760,7 @@ active=no
 
 [whirlpool]
 name=Whirlpool
-model=model_loc_2019
+model=whirlpool
 width=3
 length=3
 anim=whirlpool
@@ -11398,7 +11885,7 @@ recol2d=11458
 [bioladder]
 name=Rope Ladder
 desc=Used for climbing.
-model=model_loc_2065
+model=bioladder
 op1=Investigate
 mapscene=21
 retex1s=wall
@@ -11406,14 +11893,15 @@ retex1d=mossybricks
 
 [bioladderwall]
 name=Wall
-model=model_loc_1934
+model=ardoungewall
 mapscene=21
 retex1s=wall
 retex1d=mossybricks
 
 [biowatchtower]
 name=Watchtower
-model=castle_spearwall_row
+model=biowatchtower
+model2=castle_spearwall_row
 hillskew=yes
 op1=Investigate
 
@@ -11466,7 +11954,7 @@ recol2d=5248
 
 [loc_2118]
 name=Whirlpool
-model=model_loc_2019
+model=whirlpool
 anim=whirlpool
 resizex=32
 resizey=32
@@ -11476,7 +11964,7 @@ blockrange=no
 [chest_macro_gas]
 name=Chest
 desc=An open chest.
-model=model_loc_674
+model=chest_macro_gas
 forceapproach=north
 anim=smokepuff
 blockrange=no
@@ -11627,29 +12115,29 @@ op2=Board
 blockrange=no
 
 [shilofurnacedoor]
-name=Blacksmiths door
+name=Blacksmith's door
 desc=The door is closed.
 model=basic_wall
-active=yes
-op1=Open
-active=yes
-op1=Open
 retex1s=wall
 retex1d=door
 recol2s=6342
 recol2d=11458
+active=yes
+op1=Open
+active=yes
+op1=Open
 
 [shilofurnacedoor_inactive]
-name=Blacksmiths door
+name=Blacksmith's door
 desc=The door is closed.
 model=basic_wall
-active=yes
-op1=Open
-active=yes
 retex1s=wall
 retex1d=door
 recol2s=6342
 recol2d=11458
+active=yes
+op1=Open
+active=yes
 
 [paramayaladderup]
 name=Ladder
@@ -11670,53 +12158,53 @@ mapscene=5
 
 [loc_2273]
 name=Rope swing
-desc=A odd looking rock with a rope tied to it.
-model=model_loc_2273
+desc=An odd-looking rock with a rope tied to it.
+model=loc_2273
 length=6
 blockwalk=no
 op1=Swing-on
 
 [loc_2274]
 name=Rope swing
-desc=A odd looking rock with a rope tied to it.
-model=model_loc_2273
+desc=An odd-looking rock with a rope tied to it.
+model=loc_2273
 length=6
 blockwalk=no
 op1=Swing-on
 
 [obstical_rockswing_middle]
 name=Rock
-desc=A odd looking rock formation.
-model=model_loc_2275
+desc=An odd-looking rock formation.
+model=obstical_rockswing_middle
 length=2
 blockwalk=no
 
 [loc_2276]
 name=Rock
-desc=A odd looking rock formation.
-model=model_loc_2276
+desc=An odd-looking rock formation.
+model=loc_2276
 length=6
 blockwalk=no
 
 [loc_2277]
 name=Rock
-desc=A odd looking rock formation.
-model=model_loc_2277
+desc=An odd-looking rock formation.
+model=loc_2277
+recol1s=12580
+recol1d=7329
 sharelight=yes
 width=2
 length=2
-recol1s=12580
-recol1d=7329
 
 [obstical_rockswing_endr]
 name=Rock
-desc=A odd looking rock formation.
-model=model_loc_2278
+desc=An odd-looking rock formation.
+model=obstical_rockswing_endr
+recol1s=12580
+recol1d=7329
 sharelight=yes
 width=2
 length=2
-recol1s=12580
-recol1d=7329
 
 [obstical_ropeswing_end]
 name=Ropeswing
@@ -11730,7 +12218,7 @@ length=2
 
 [loc_2281]
 name=Ropeswing
-model=model_loc_2281
+model=loc_2281
 length=2
 
 [log_balance1]
@@ -11784,7 +12272,7 @@ op1=Walk-across
 [spikes_few]
 name=Spikes
 desc=Pointy!
-model=model_loc_2304
+model=spikes_few
 
 [spikes_many]
 name=Spikes
@@ -12121,8 +12609,8 @@ forceapproach=east
 name=Cupboard
 desc=A cupboard.
 model=furniture_cupboard_open
-op1=Search
-op2=Close
+op1=Close
+op2=Search
 forceapproach=east
 
 [specimen_tray]
@@ -12169,9 +12657,9 @@ length=2
 [brokensamplechestclosed]
 name=Chest
 desc=I wonder what's inside...
-model=furniture_chestopen
+model=furniture_chestclosed
 op1=Search
-op2=Close
+op2=Open
 forceapproach=north
 
 [swamp_digdugupsoil1]
@@ -12314,13 +12802,17 @@ mapscene=7
 [zanarisdoor]
 name=Door
 desc=The door is closed.
-model=basic_wall
+model=zanarisdoor
+recol1s=19912
+recol1d=12581
+recol2s=16741
+recol2d=10467
+recol3s=8387
+recol3d=12581
+recol4s=7330
+recol4d=10403
 active=yes
 op1=Open
-retex1s=wall
-retex1d=door
-recol2s=6342
-recol2d=11458
 
 [zanarismagicdoor]
 name=Magic door
@@ -12345,6 +12837,8 @@ mapscene=7
 name=Tree
 desc=A commonly found tree.
 model=plants_tree2
+recol1s=5218
+recol1d=12548
 width=2
 length=2
 mapscene=1
@@ -12526,7 +13020,7 @@ op1=Shout-across
 [fishingcrane]
 name=Crane
 desc=It's used for loading and unloading fishing boats.
-model=model_loc_2520
+model=fishingcrane
 width=4
 length=4
 op1=Rotate
@@ -12540,160 +13034,174 @@ length=4
 
 [loc_2550]
 name=Door
+desc=A secure door.
 model=basic_wall
-active=yes
-op1=Open
-op2=Pick Lock
 retex1s=wall
 retex1d=door
 recol2s=6342
 recol2d=11458
+active=yes
+op1=Open
+op2=Pick-lock
 
 [loc_2551]
 name=Door
+desc=A secure door.
 model=basic_wall
-active=yes
-op1=Open
-op2=Pick Lock
 retex1s=wall
 retex1d=door
 recol2s=6342
 recol2d=11458
+active=yes
+op1=Open
+op2=Pick-lock
 
 [east_ardy_sewer_gate_north]
 name=Gate
-desc=A metal gate bars your way
+desc=A metal gate bars your way.
 model=outdoorfurniture_metalgateclosedl
 active=yes
 op1=Open
-op2=Pick Lock
+op2=Pick-lock
 
 [east_ardy_sewer_gate_south]
 name=Gate
-desc=A metal gate bars your way
+desc=A metal gate bars your way.
 model=outdoorfurniture_metalgateclosedl
 mirror=yes
 active=yes
 op1=Open
-op2=Pick Lock
+op2=Pick-lock
 
 [loc_2554]
 name=Door
+desc=A secure door.
 model=basic_wall
-active=yes
-op1=Open
-op2=Pick Lock
 retex1s=wall
 retex1d=door
 recol2s=6342
 recol2d=11458
+active=yes
+op1=Open
+op2=Pick-lock
 
 [loc_2555]
 name=Door
+desc=A secure door.
 model=basic_wall
-active=yes
-op1=Open
-op2=Pick Lock
 retex1s=wall
 retex1d=elfdoor
 recol2s=6342
 recol2d=11458
+active=yes
+op1=Open
+op2=Pick-lock
 
 [loc_2556]
 name=Door
+desc=A secure door.
 model=basic_wall
-active=yes
-op1=Open
-op2=Pick Lock
 retex1s=wall
 retex1d=elfdoor
 recol2s=6342
 recol2d=11458
+active=yes
+op1=Open
+op2=Pick-lock
 
 [loc_2557]
 name=Door
+desc=A secure door.
 model=basic_prisondoor
-active=yes
-op1=Open
-op2=Pick Lock
 retex1s=wall
 retex1d=door2
 recol2s=6342
 recol2d=11458
+active=yes
+op1=Open
+op2=Pick-lock
 
 [loc_2558]
 name=Door
+desc=A secure door.
 model=basic_wall
-active=yes
-op1=Open
-op2=Pick Lock
 retex1s=wall
 retex1d=door
 recol2s=6342
 recol2d=11458
+active=yes
+op1=Open
+op2=Pick-lock
 
 [loc_2559]
 name=Door
+desc=A secure door.
 model=basic_wall
-active=yes
-op1=Open
-op2=Pick Lock
 retex1s=wall
 retex1d=door2
 recol2s=6342
 recol2d=11458
+active=yes
+op1=Open
+op2=Pick-lock
 
 [silk_stall_stealing]
 name=Silk stall
 desc=Fine silk woven by experts.
-model=outdoorfurniture_silkmarket
+model=outdoorfurniture_market
+model2=outdoorfurniture_silkmarket
 width=2
 length=2
-op2=Steal from
+op2=Steal-from
 
 [bakers_stall_stealing]
 name=Baker's stall
 desc=This stall smells great.
-model=outdoorfurniture_bakerymarket
+model=outdoorfurniture_market
+model2=outdoorfurniture_bakerymarket
 width=2
 length=2
-op2=Steal from
+op2=Steal-from
 
 [gem_stall_stealing]
 name=Gem stall
 desc=Precious stones from around the world.
-model=outdoorfurniture_gemmarket
+model=outdoorfurniture_market
+model2=outdoorfurniture_gemmarket
 width=2
 length=2
-op2=Steal from
+op2=Steal-from
 
 [fur_stall_stealing]
 name=Fur stall
 desc=All manner of animal clothing.
-model=outdoorfurniture_furmarket
+model=outdoorfurniture_market
+model2=outdoorfurniture_furmarket
 width=2
 length=2
-op2=Steal from
+op2=Steal-from
 
 [spice_stall_stealing]
 name=Spice stall
-desc=Spices to tingle your tastebuds.
-model=outdoorfurniture_spicemarket
+desc=Spices to tingle your taste buds.
+model=outdoorfurniture_market
+model2=outdoorfurniture_spicemarket
 width=2
 length=2
-op2=Steal from
+op2=Steal-from
 
 [silver_stall_stealing]
 name=Silver stall
 desc=Fine silver items are for sale here.
-model=outdoorfurniture_silvermarket
+model=outdoorfurniture_market
+model2=outdoorfurniture_silvermarket
 width=2
 length=2
-op2=Steal from
+op2=Steal-from
 
 [chest_10_coins]
 name=Chest
-desc=I wonder what's inside it..
+desc=I wonder what's inside it.
 model=furniture_chestclosed
 active=yes
 op1=Open
@@ -12816,7 +13324,7 @@ op1=Open
 model=basic_wall
 blockrange=no
 
-[inviswall_no_blockrange]
+[invis2x2]
 model=blank
 model2=loc_4909
 width=2
@@ -12846,7 +13354,7 @@ op1=Look at
 op2=Use
 
 [decking_corner_c_chaos]
-model=model_4074
+model=decking_corner_c_chaos
 hillskew=yes
 forcedecor=yes
 
@@ -12877,14 +13385,14 @@ param=next_loc_stage,loc_1563
 
 [thttmineentrancel]
 name=Mine door entrance
-desc=Large solid, thick set oak doors.
+desc=Large doors made of solid oak.
 model=castle_doubledoorl
 op1=Open
 op2=Watch
 
 [thttmineentrancer]
 name=Mine door entrance
-desc=Large solid, thick set oak doors.
+desc=Large doors made of solid oak.
 model=castle_doubledoorl
 mirror=yes
 op1=Open
@@ -12907,14 +13415,14 @@ op2=Search
 
 [loc_2679]
 name=Captain Siad's Desk
-desc=A sturdy looking desk which the Captain works on.
+desc=A sturdy looking desk on which the Captain works.
 model=furniture_bigtable
-width=2
-op2=Search
 retex1s=darkwood
 retex1d=wood2
 retex2s=elfwood
 retex2d=wood2
+width=2
+op2=Search
 
 [thminebarrel_full]
 name=Barrel
@@ -13105,14 +13613,14 @@ op2=Search
 shadow=no
 
 [punishrocks]
-name=Rocks.
-desc=Stoney!
+name=Rocks
+desc=Rocky!
 model=mine_rock3
+recol1s=6342
+recol1d=7400
 op1=Mine
 op2=Prospect
 op3=hidden
-recol1s=6342
-recol1d=7400
 category=mining_rock_normal
 param=next_loc_stage_mining,rocks1
 
@@ -13175,7 +13683,7 @@ op2=Investigate
 
 [kebabpole]
 name=Kebab
-desc=A Spicy meat kebab is cooking here.
+desc=A spicy meat kebab is cooking here.
 model=furniture_kebabpole
 
 [general_store_icon]
@@ -13455,7 +13963,7 @@ recol1d=32767
 
 [magicalshield]
 name=Magical shield
-model=model_loc_2842
+model=magicalshield
 anim=magicwall
 length=2
 
@@ -13719,7 +14227,7 @@ recol1s=10570
 recol1d=17921
 
 [lum_bridge_a]
-model=model_loc_2999
+model=lum_bridgea
 sharelight=yes
 active=no
 
@@ -13732,43 +14240,43 @@ hillskew=yes
 blockrange=no
 
 [lum_bridge_b]
-model=model_loc_3001
+model=lum_bridge_b
 sharelight=yes
 active=no
 
 [lum_bridge_b_mirror]
-model=model_loc_3002
+model=lum_bridge_b_mirror
 sharelight=yes
 active=no
 
 [lum_bridge_c]
-model=model_loc_3003
+model=lum_bridgec
 sharelight=yes
 active=no
 
 [lum_bridge_c_mirror]
-model=model_loc_3004
+model=lum_bridge_c_mirror
 sharelight=yes
 active=no
 
 [lum_bridge_d]
-model=model_loc_3005
+model=lum_bridged
 sharelight=yes
 active=no
 
 [lum_bridge_d_mirror]
-model=model_loc_3006
+model=lum_bridge_d_mirror
 sharelight=yes
 active=no
 
 [lum_bridge_edge]
-model=model_loc_3007
+model=lum_bridge_edge
 hillskew=yes
 blockrange=no
 sharelight=yes
 
 [lum_bridge_e_l]
-model=model_loc_3008
+model=lum_bridge_e_l
 sharelight=yes
 active=no
 
@@ -13778,22 +14286,22 @@ sharelight=yes
 active=no
 
 [lum_bridge_f]
-model=model_loc_3010
+model=lum_bridgef
 sharelight=yes
 active=no
 
 [lum_bridge_f_low]
-model=model_loc_3011
+model=lum_bridge_f_low
 sharelight=yes
 active=no
 
 [lum_bridge_f_low_b]
-model=model_loc_3012
+model=lum_bridge_f_low_b
 sharelight=yes
 active=no
 
 [lum_bridge_d_low]
-model=model_loc_3013
+model=lum_bridge_d_low
 sharelight=yes
 active=no
 
@@ -14513,7 +15021,7 @@ recol3s=8353
 recol3d=13637
 
 [duel_scaffold_rail_up]
-model=model_loc_3126
+model=duel_scaffold_rail_up
 sharelight=yes
 hillskew=yes
 blockrange=no
@@ -14526,7 +15034,7 @@ recol3s=8353
 recol3d=13637
 
 [duel_scaffold_rail_up_mirror]
-model=model_loc_3126
+model=duel_scaffold_rail_up
 sharelight=yes
 hillskew=yes
 blockrange=no
@@ -14923,43 +15431,57 @@ active=no
 name=Chair
 desc=Wait here for a nurse.
 model=furniture_chair
+recol1s=10401
+recol1d=25368
+recol2s=9377
+recol2d=26425
 blockrange=no
 ambient=15
 contrast=15
 active=yes
-recol1s=10401
-recol1d=25368
 
 [arena_hospital_shelves1]
 name=Hospital shelves
 desc=Storage for drugs and bandages.
 model=warehouse_shop_shelves2
+recol1s=8386
+recol1d=26425
+recol2s=7329
+recol2d=25368
+recol3s=6272
+recol3d=24311
 active=yes
 ambient=15
 contrast=15
-recol1s=6272
-recol1d=25368
 
 [arena_hospital_shelves2]
 name=Hospital shelves
 desc=Storage for drugs and bandages.
 model=warehouse_shop_shelves3
+recol1s=8386
+recol1d=26425
+recol2s=7329
+recol2d=25368
+recol3s=6272
+recol3d=24311
 active=yes
 ambient=15
 contrast=15
-recol1s=6272
-recol1d=25368
 
 [arena_hospital_shelves3]
 name=Hospital shelves
 desc=Storage for drugs and bandages.
 model=warehouse_shop_shelves4
+recol1s=8386
+recol1d=26425
+recol2s=7329
+recol2d=25368
+recol3s=6272
+recol3d=24311
 active=yes
 ambient=15
 contrast=15
 active=yes
-recol1s=6272
-recol1d=25368
 
 [arena_hospital_operating_table]
 name=Operating Table
@@ -15015,10 +15537,10 @@ mapscene=7
 [barrel_godstaffs]
 name=Barrel
 desc=A barrel full of staffs...
-model=model_loc_3206
+model=barrel_godstaffs
 
 [fishingplatform_support]
-model=model_loc_3207
+model=fishingplatform_support
 active=no
 
 [death_camp_roof]
@@ -15089,13 +15611,11 @@ recol3d=5216
 [onion]
 name=Onion
 desc=Makes you cry.
-model=inv_garlic
+model=onion
 op2=Pick
 blockwalk=no
 blockrange=no
-mapscene=9
-recol1s=31674
-recol1d=24108
+mapscene=33
 
 [grandtree_prisondoor]
 name=Prison Door
@@ -15127,39 +15647,35 @@ mapscene=0
 [chompybird_spitroast]
 name=Ogre spit-roast
 desc=Useful for ogre dinners.
-model=model_ogre_spitroast_with_chompy
-width=2
-anim=roast
-blockrange=no
+model=chompybird_spitroast
 recol1s=26156
 recol1d=19014
+width=2
+blockrange=no
 
 [chompybird_spitroast_cooked]
 name=Ogre spit-roast
 desc=Useful for ogre dinners.
-model=model_ogre_spitroast_with_chompy
-width=2
-anim=roast
-blockrange=no
+model=chompybird_spitroast
 recol1s=26156
 recol1d=14690
+width=2
+blockrange=no
 
 [chompybird_spitroast_ruined]
 name=Ogre spit-roast
 desc=Useful for ogre dinners.
-model=model_ogre_spitroast_with_chompy
-width=2
-anim=roast
-blockrange=no
+model=chompybird_spitroast
 recol1s=26156
 recol1d=6273
+width=2
+blockrange=no
 
 [chompybird_spitroast_empty]
 name=Ogre spit-roast
 desc=Useful for ogre dinners.
-model=model_ogre_spitroast
+model=chompybird_spitroast_empty
 width=2
-anim=spit_fire
 blockrange=no
 
 [chompybird_rockbench]
@@ -15191,17 +15707,19 @@ op1=Search
 [chompybird_spitroast_chicken]
 name=Ogre spit-roast
 desc=Useful for ogre dinners.
-model=model_ogre_spitroast_with_chompy
+model=chompybird_spitroast
+recol1s=26156
+recol1d=22098
 width=2
-anim=roast
 blockrange=no
 
 [chompybird_spitroast_chicken_c]
 name=Ogre spit-roast
 desc=Useful for ogre dinners.
-model=model_ogre_spitroast_with_chompy
+model=chompybird_spitroast
+recol1s=26156
+recol1d=13472
 width=2
-anim=roast
 blockrange=no
 
 [cavewall_top_mudtogrey]

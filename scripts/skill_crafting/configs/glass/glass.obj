@@ -27,13 +27,14 @@ recol1d=28539
 weight=2oz
 
 [bucket_sand]
-members=yes
 name=Bucket of sand
-desc=One of the ingredients for making glass.
-cost=2
-model=inv_bucket-full
 recol1s=173
 recol1d=24205
+members=yes
+desc=One of the ingredients for making glass.
+cost=2
+iop4=Empty
+model=inv_bucket-full
 2dyof=-18
 2dzoom=1020
 2dyan=1688

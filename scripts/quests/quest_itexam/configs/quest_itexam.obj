@@ -23,41 +23,41 @@ members=yes
 tradeable=no
 
 [rock_sample1]
+name=Rock sample 1
 model=inv_rocksample1
 2dxof=8
 2dyof=-15
 2dzoom=1170
 2dyan=1904
 2dxan=120
-weight=3oz
-name=Rock sample 1
-desc=A carefully kept safe rock sample.
+desc=A carefully-kept-safe rock sample.
 members=yes
+weight=3oz
 tradeable=no
 
 [rock_sample2]
-model=inv_rocksample2
 name=Rock sample 2
-desc=A carefully kept safe rock sample.
+model=inv_rocksample2
+desc=A carefully-kept-safe rock sample.
 2dyof=-12
 2dzoom=1290
 2dyan=1952
 2dxan=144
-weight=3oz
 members=yes
+weight=3oz
 tradeable=no
 
 [rock_sample3]
-model=inv_rocksample3
 name=Rock sample 3
-desc=A carefully kept safe rock sample.
+model=inv_rocksample3
+desc=A carefully-kept-safe rock sample.
 2dxof=-2
 2dyof=-6
 2dzoom=1370
 2dyan=1908
 2dxan=104
-weight=3oz
 members=yes
+weight=3oz
 tradeable=no
 
 [cracked_sample]
@@ -152,7 +152,7 @@ stackable=yes
 tradeable=no
 
 [digtalisman]
-name=Talisman of zaros
+name=Zaros talisman
 desc=An unusual symbol of a lesser-known god.
 model=inv_talisman
 2dxof=-1
@@ -160,8 +160,8 @@ model=inv_talisman
 2dzoom=1150
 2dyan=1980
 2dxan=324
-weight=3oz
 members=yes
+weight=3oz
 tradeable=no
 
 [digplainletter]
@@ -244,15 +244,15 @@ tradeable=no
 
 [digsitebuttons]
 name=Buttons
-desc=Not Dick Whittingtons' helper at all!
+desc=Not Dick Whittington's helper at all!
 model=inv_buttons
 2dxof=-3
 2dyof=2
 2dzoom=600
 2dyan=112
 2dxan=236
-weight=1g
 members=yes
+weight=1g
 tradeable=no
 
 [digsitestaff]
@@ -282,42 +282,42 @@ members=yes
 tradeable=no
 
 [level1certificate]
-model=inv_scroll
 name=Level 1 certificate
-desc=The owner has passed earth sciences level 1 exam.
+model=inv_scroll
+desc=The owner has passed the Earth Sciences level 1 exam.
 2dxof=1
 2dyof=7
 2dzoom=1040
 2dyan=120
 2dxan=380
-weight=20g
 members=yes
+weight=20g
 tradeable=no
 
 [level2certificate]
-model=inv_scroll
 name=Level 2 certificate
-desc=The owner has passed earth sciences level 2 exam.
+model=inv_scroll
+desc=The owner has passed Earth Sciences level 2 exam.
 2dxof=1
 2dyof=7
 2dzoom=1040
 2dyan=120
 2dxan=380
-weight=20g
 members=yes
+weight=20g
 tradeable=no
 
 [level3certificate]
-model=inv_scroll
 name=Level 3 certificate
-desc=The owner has passed earth sciences level 3 exam.
+model=inv_scroll
+desc=The owner has passed Earth Sciences level 3 exam.
 2dxof=1
 2dyof=7
 2dzoom=1040
 2dyan=120
 2dxan=380
-weight=20g
 members=yes
+weight=20g
 tradeable=no
 
 [digsitepottery]
@@ -564,14 +564,14 @@ tradeable=no
 
 [digsitebook]
 name=Book on chemicals
-desc=It's about chemicals, judging from its' cover.
-model=inv_book_fancy
 recol1s=13472
 recol1d=8553
 recol2s=15855
 recol2d=3268
 recol3s=20033
 recol3d=3268
+desc=It's about chemicals, judging from its cover.
+model=inv_book_fancy
 2dxof=1
 2dyof=-21
 2dzoom=830
@@ -598,4 +598,14 @@ tradeable=no
 
 // rename: cert_display_tea
 [obj_713]
+name=Enjifern
+recol1s=2340
+recol1d=25073
+desc=Truly fun to have around.
+iop1=Wear
+cost=1
+model=inv_robebottoms
+2dyof=1
+2dzoom=1940
+2dxan=572
 tradeable=no

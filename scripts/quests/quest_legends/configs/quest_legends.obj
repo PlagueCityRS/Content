@@ -180,64 +180,64 @@ param=next_obj_stage,goldbowlbless_water
 
 [goldbowl_water]
 name=Golden bowl
+recol1s=19841
+recol1d=31528
 desc=A specially made golden bowl with water.
 cost=700
 members=yes
 model=inv_bowl-full
-recol1s=19841
-recol1d=31528
 2dzoom=910
 2dyan=1856
 2dxan=204
-iop1=Empty
+iop4=Empty
 weight=1kg
 tradeable=no
 param=next_obj_stage,goldbowl_empty
 
 [goldbowl_pure]
 name=Golden bowl
+recol1s=19841
+recol1d=31528
 desc=A specially made bowl constructed out of pure gold. It has pure water in it.
 cost=700
 members=yes
 model=inv_bowl-full
-recol1s=19841
-recol1d=31528
 2dzoom=910
 2dyan=1856
 2dxan=204
-iop1=Empty
+iop4=Empty
 weight=1kg
 tradeable=no
 param=next_obj_stage,goldbowl_empty
 
 [goldbowlbless_water]
 name=Golden bowl
+recol1s=19841
+recol1d=31528
 desc=A blessed golden bowl. It has water in it.
 cost=700
 members=yes
 model=inv_bowl-full
-recol1s=19841
-recol1d=31528
 2dzoom=910
 2dyan=1856
 2dxan=204
-iop1=Empty
+iop4=Empty
 weight=1kg
 tradeable=no
 param=next_obj_stage,goldbowlbless_empty
 
 [goldbowlbless_pure]
 name=Golden bowl
+recol1s=19841
+recol1d=31528
 desc=A blessed golden bowl. It has pure sacred water in it.
 cost=700
 members=yes
 model=inv_bowl-full
-recol1s=19841
-recol1d=31528
 2dzoom=910
 2dyan=1856
 2dxan=204
-iop1=Empty
+iop4=Empty
 weight=1kg
 tradeable=no
 param=next_obj_stage,goldbowlbless_empty
@@ -275,8 +275,6 @@ tradeable=no
 
 [book_of_binding]
 name=Book of binding
-desc=An ancient tome on Demonology.
-model=inv_book_studded
 recol1s=13472
 recol1d=3177
 recol2s=10570
@@ -287,12 +285,15 @@ recol4s=20033
 recol4d=20159
 recol5s=29594
 recol5d=9151
+desc=An ancient tome on Demonology.
+model=inv_book_studded
 2dyof=5
 2dzoom=1340
 2dyan=1940
 2dxan=412
 members=yes
 iop1=Read
+iop2=Enchant-Vials
 weight=18oz
 tradeable=no
 
@@ -388,24 +389,23 @@ tradeable=no
 
 [snakeweed_sol]
 name=Snakeweed mixture
-desc=It's a mixture of Snakeweed and water, I need another ingredient to finish this potion.
-model=inv_vial
 recol1s=15855
 recol1d=14273
+desc=It's a mixture of Snakeweed and water. Needs another ingredient.
+model=inv_vial
 2dyof=-1
 2dzoom=550
 2dyan=1996
 2dxan=84
-weight=25g
 members=yes
 tradeable=no
 
 [ardrigal_sol]
 name=Ardrigal mixture
-desc=It's a mixture of Ardrigal and water, I need another ingredient to finish this potion.
-model=inv_vial
 recol1s=15855
 recol1d=14725
+desc=It's a mixture of Ardrigal and water. Needs another ingredient.
+model=inv_vial
 members=yes
 2dyof=-1
 2dzoom=550
@@ -416,10 +416,10 @@ tradeable=no
 
 [bravery_pot]
 name=Bravery potion
-desc=A bravery potion which Gujuo gave you the details for, let's hope it works.
-model=inv_vial
 recol1s=15855
 recol1d=13472
+desc=A bravery potion for which Gujuo gave you the details, let's hope it works.
+model=inv_vial
 members=yes
 2dyof=-1
 2dzoom=550
@@ -513,18 +513,18 @@ iop1=Look-at
 tradeable=no
 
 [deathdagger]
+name=Dark dagger
 model=inv_deathdagger
 members=yes
 2dxof=1
 2dzoom=1000
 2dyan=248
 2dxan=412
-name=Black dagger
 desc=A black obsidian dagger, it has a strange aura about it.
 iop2=Wield
-wearpos=righthand
 manwear=human_weapons_deathdagger,0
 womanwear=human_weapons_deathdagger,6
+wearpos=righthand
 category=weapon_stab
 weight=1lb
 param=stabattack,5
@@ -540,18 +540,18 @@ param=slash_sound,stabsword_slash
 tradeable=no
 
 [deathdaggerdone]
+name=Glowing dagger
 model=inv_deathdagger_glow
 2dxof=1
 2dzoom=1000
 2dyan=248
 2dxan=412
-name=Glowing dagger
 desc=A black obsidian dagger, it has a strange aura about it - it seems to be glowing.
 members=yes
 iop2=Wield
+manwear=model_5116,0
+womanwear=model_5116,6
 wearpos=righthand
-manwear=human_weapons_deathdagger,0
-womanwear=human_weapons_deathdagger,6
 category=weapon_stab
 weight=1lb
 param=stabattack,5

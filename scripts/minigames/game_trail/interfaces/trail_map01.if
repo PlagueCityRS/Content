@@ -365,17 +365,17 @@ yan=7
 
 [com_33]
 type=text
-x=310
-y=176
-width=16
-height=11
+x=205
+y=172
+width=12
+height=12
 font=p11_full
-text=2W
+text=2E
 colour=0x4C3D26
 
 [com_34]
 type=model
-x=280
+x=218
 y=152
 width=32
 height=32
@@ -386,17 +386,6 @@ yan=1788
 
 [com_35]
 type=model
-x=329
-y=159
-width=32
-height=32
-model=if_trail_treeicon
-zoom=1548
-xan=624
-yan=2033
-
-[com_36]
-type=model
 x=236
 y=66
 width=32
@@ -406,7 +395,7 @@ zoom=1680
 xan=623
 yan=2009
 
-[com_37]
+[com_36]
 type=model
 x=195
 y=61
@@ -417,7 +406,7 @@ zoom=1667
 xan=620
 yan=2032
 
-[com_38]
+[com_37]
 type=model
 x=175
 y=76
@@ -428,10 +417,10 @@ zoom=1633
 xan=548
 yan=2028
 
-[com_39]
+[com_38]
 type=model
-x=297
-y=153
+x=202
+y=151
 width=32
 height=32
 model=if_trail_footsteps
@@ -439,7 +428,7 @@ zoom=1416
 xan=450
 yan=1006
 
-[com_40]
+[com_39]
 type=model
 x=264
 y=107
@@ -449,7 +438,7 @@ model=if_trail_rockicon
 zoom=2064
 xan=500
 
-[com_41]
+[com_40]
 type=model
 x=270
 y=85
@@ -459,7 +448,7 @@ model=if_trail_rockicon2
 zoom=2166
 xan=500
 
-[com_42]
+[com_41]
 type=model
 x=309
 y=82
@@ -469,7 +458,7 @@ model=if_trail_rockicon2
 zoom=2006
 xan=500
 
-[com_43]
+[com_42]
 type=model
 x=250
 y=88
@@ -479,7 +468,7 @@ model=if_trail_rockicon
 zoom=2064
 xan=500
 
-[com_44]
+[com_43]
 type=model
 x=292
 y=68
@@ -489,7 +478,7 @@ model=if_trail_rockicon
 zoom=2064
 xan=500
 
-[com_45]
+[com_44]
 type=model
 x=320
 y=66
@@ -499,7 +488,7 @@ model=if_trail_rockicon
 zoom=2064
 xan=500
 
-[com_46]
+[com_45]
 type=model
 x=290
 y=52
@@ -509,7 +498,7 @@ model=if_trail_rockicon2
 zoom=2134
 xan=500
 
-[com_47]
+[com_46]
 type=model
 x=315
 y=48
@@ -519,10 +508,10 @@ model=if_trail_rockicon2
 zoom=2006
 xan=500
 
-[com_48]
+[com_47]
 type=model
-x=308
-y=153
+x=191
+y=151
 width=32
 height=32
 model=if_trail_footsteps
@@ -530,7 +519,7 @@ zoom=1416
 xan=390
 yan=1002
 
-[com_49]
+[com_48]
 type=model
 x=176
 y=149

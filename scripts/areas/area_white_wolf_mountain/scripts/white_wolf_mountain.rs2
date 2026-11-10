@@ -31,7 +31,7 @@ p_delay(1);
 loc_change(rockslide4, 3);
 p_delay(1);
 // Temp note: dur updated
-loc_change(inviswall_no_blockrange, 4);
+loc_change(invis2x2, 4);
 if (coordx(coord) > coordx($loc_coord)) {
   ~forcemove(movecoord(coord, -2, 0, 0));
   ~forcemove(movecoord(coord, -1, 0, 1));

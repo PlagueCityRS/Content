@@ -709,7 +709,7 @@ y=20
 width=440
 height=299
 
-[com_90]
+[com_89]
 type=text
 x=181
 y=30
@@ -720,7 +720,7 @@ shadowed=yes
 text=The Bank of RuneScape
 colour=0xFF981F
 
-[com_91]
+[bankmain_close_button]
 type=text
 x=419
 y=32
@@ -733,22 +733,22 @@ text=Close Window
 colour=0x808080
 overcolour=0xFFFFFF
 
-[com_92]
+[com_91]
 type=layer
 x=37
 y=55
 width=427
 height=229
-scroll=1367
+scroll=1680
 
 [inv]
-layer=com_92
+layer=com_91
 type=inv
 x=38
 y=3
 clientcode=206
 width=8
-height=36
+height=44
 draggable=yes
 margin=15,6
 option1=Withdraw 1
@@ -757,7 +757,7 @@ option3=Withdraw 10
 option4=Withdraw All
 option5=Withdraw X
 
-[com_93]
+[com_92]
 type=graphic
 x=364
 y=291
@@ -769,7 +769,7 @@ script1=eq,1
 graphic=combatboxes,2
 activegraphic=combatboxes,3
 
-[com_94]
+[com_93]
 type=graphic
 x=291
 y=291
@@ -781,7 +781,7 @@ script1=eq,0
 graphic=combatboxes,2
 activegraphic=combatboxes,3
 
-[com_95]
+[com_94]
 type=text
 x=327
 y=284
@@ -792,7 +792,7 @@ shadowed=yes
 text=Withdraw as:
 colour=0xFF981F
 
-[com_96]
+[com_95]
 type=text
 x=315
 y=301
@@ -803,7 +803,7 @@ shadowed=yes
 text=Item
 colour=0xFF981F
 
-[com_97]
+[com_96]
 type=text
 x=100
 y=284
@@ -814,7 +814,7 @@ shadowed=yes
 text=Rearrange mode:
 colour=0xFF981F
 
-[com_98]
+[com_97]
 type=text
 x=387
 y=301
@@ -825,7 +825,7 @@ shadowed=yes
 text=Note
 colour=0xFF981F
 
-[com_99]
+[com_98]
 type=graphic
 x=75
 y=291
@@ -837,7 +837,7 @@ script1=eq,0
 graphic=combatboxes,2
 activegraphic=combatboxes,3
 
-[com_100]
+[com_99]
 type=graphic
 x=149
 y=291
@@ -849,7 +849,7 @@ script1=eq,1
 graphic=combatboxes,2
 activegraphic=combatboxes,3
 
-[com_101]
+[com_100]
 type=text
 x=168
 y=301
@@ -860,7 +860,7 @@ shadowed=yes
 text=Insert
 colour=0xFF981F
 
-[com_102]
+[com_101]
 type=text
 x=97
 y=301

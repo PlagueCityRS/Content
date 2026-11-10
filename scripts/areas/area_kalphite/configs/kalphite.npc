@@ -199,7 +199,7 @@ size=5
 walkanim=kalphite_walk
 readyanim=kalphite_ready
 op2=Attack
-headicon=8
+headicon=6
 vislevel=333
 model1=npc_1158
 wanderrange=20
@@ -223,7 +223,7 @@ param=death_anim,kalphite_death
 param=defend_sound,kalthite_queen_hit
 
 [kalphite_queen_dead]
-vislevel=296
+vislevel=333
 name=Kalphite Queen
 desc=I don't think insect repellent will work...
 size=5
@@ -243,7 +243,7 @@ readyanim=kalphite_queen_ready
 resizeh=256
 resizev=256
 op2=Attack
-headicon=3
+headicon=0
 vislevel=333
 model1=npc_1160
 wanderrange=20

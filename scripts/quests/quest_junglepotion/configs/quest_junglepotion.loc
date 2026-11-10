@@ -2,12 +2,13 @@
 name=Marshy jungle vine
 desc=A marshy jungle vine.
 model=plants_vine+sep_leaves
-hillskew=yes
-op2=Search
 recol1s=640
 recol1d=544
 recol2s=24449
 recol2d=30497
+hillskew=yes
+op2=Search
+op3=hidden
 
 [snake_vine_empty]
 name=Marshy jungle vine
@@ -19,7 +20,7 @@ recol1d=640
 
 [ardrigal_palm_full]
 name=Palm tree
-desc=A tall palm tree with some plants growing at it's stem.
+desc=A tall palm tree with some plants growing at its stem.
 model=plants_palm
 width=2
 length=2
@@ -74,12 +75,13 @@ mapscene=12
 name=Fungus covered Cavern wall
 desc=It looks as if it is covered in some fungus.
 model=walldecor_cave_detail2
+recol1s=12580
+recol1d=448
 contrast=100
 ambient=50
 active=yes
 op2=Search
-recol1s=12580
-recol1d=448
+op3=hidden
 
 [pothole_cave_entrance]
 name=Rocks

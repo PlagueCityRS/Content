@@ -188,13 +188,19 @@ model4=man_arms_fat
 model5=man_hands_basic
 model6=man_legs_turnups
 model7=man_feet_basic
+model8=model_4843
 head1=chat_male_head_mediumhair
+head2=npc_1760_head
 recol1s=2340
 recol1d=5378
 recol2s=14724
 recol2d=8353
-recol3s=24075
-recol3d=30385
+recol3s=6273
+recol3d=14594
+recol4s=24075
+recol4d=30385
+recol5s=14801
+recol5d=30385
 
 [generalshopkeeper1]
 vislevel=hide

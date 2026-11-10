@@ -20,7 +20,7 @@ zoom=622
 xan=26
 yan=240
 
-[com_2]
+[macro_emote_cry]
 type=text
 x=87
 y=56
@@ -33,7 +33,7 @@ shadowed=yes
 text=Cry
 colour=0x8686AF
 
-[com_3]
+[macro_emote_think]
 type=text
 x=80
 y=24
@@ -46,7 +46,7 @@ shadowed=yes
 text=Think
 colour=0x8686AF
 
-[com_4]
+[macro_emote_laugh]
 type=text
 x=148
 y=24
@@ -59,7 +59,7 @@ shadowed=yes
 text=Laugh
 colour=0x8686AF
 
-[com_5]
+[macro_emote_dance]
 type=text
 x=144
 y=56
@@ -72,7 +72,7 @@ shadowed=yes
 text=Dance
 colour=0x8686AF
 
-[com_6]
+[macro_emote_climbrope]
 type=text
 x=220
 y=25
@@ -98,7 +98,7 @@ shadowed=yes
 text=Lean on air
 colour=0x8686AF
 
-[com_8]
+[macro_emote_glasswall]
 type=text
 x=324
 y=56
@@ -111,7 +111,7 @@ shadowed=yes
 text=Glass Wall
 colour=0x8686AF
 
-[com_9]
+[macro_emote_glassbox]
 type=text
 x=326
 y=25

@@ -124,7 +124,7 @@ recol1d=15855
 
 [macro_maze_complete]
 name=Strange shrine
-desc=A shrine of the Gods!
+desc=A shrine of the gods!
 model=macroevents_gods_threeheadstatue
 anim=godstatue_spin
 length=3

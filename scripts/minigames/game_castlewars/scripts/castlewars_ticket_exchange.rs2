@@ -1,12 +1,13 @@
 [label,castlewars_ticket_exchange]
 if_openmain(castlewars_trade);
 
-[if_button,castlewars_trade:helm] @castlewars_buy_reward(castlewars_med_helm, castlewars_ticket, 4, "tickets");
-[if_button,castlewars_trade:body] @castlewars_buy_reward(castlewars_armour_body, castlewars_ticket, 8, "tickets");
-[if_button,castlewars_trade:legs] @castlewars_buy_reward(castlewars_armour_legs, castlewars_ticket, 6, "tickets");
-[if_button,castlewars_trade:sword] @castlewars_buy_reward(castlewars_sword, castlewars_ticket, 5, "tickets");
-[if_button,castlewars_trade:shield] @castlewars_buy_reward(castlewars_shield, castlewars_ticket, 6, "tickets");
-[if_button,castlewars_trade:manual] @castlewars_buy_reward(castlewars_manual, coins, 5, "coins");
+// todo
+// [if_button,castlewars_trade:helm] @castlewars_buy_reward(castlewars_med_helm, castlewars_ticket, 4, "tickets");
+// [if_button,castlewars_trade:body] @castlewars_buy_reward(castlewars_armour_body, castlewars_ticket, 8, "tickets");
+// [if_button,castlewars_trade:legs] @castlewars_buy_reward(castlewars_armour_legs, castlewars_ticket, 6, "tickets");
+// [if_button,castlewars_trade:sword] @castlewars_buy_reward(castlewars_sword, castlewars_ticket, 5, "tickets");
+// [if_button,castlewars_trade:shield] @castlewars_buy_reward(castlewars_shield, castlewars_ticket, 6, "tickets");
+// [if_button,castlewars_trade:manual] @castlewars_buy_reward(castlewars_manual, coins, 5, "coins");
 
 [label,castlewars_buy_reward](namedobj $reward, namedobj $currency, int $cost, string $currency_name)
 if (inv_total(inv, $currency) < $cost) {

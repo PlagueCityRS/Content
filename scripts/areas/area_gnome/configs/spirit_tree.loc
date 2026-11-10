@@ -31,7 +31,7 @@ mapscene=0
 [loc_1317]
 name=Spirit tree
 desc=A young sentient tree.
-model=plants_loc_1317
+model=loc_1317
 width=2
 length=2
 op1=Talk-to

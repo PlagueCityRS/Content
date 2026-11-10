@@ -263,3 +263,14 @@ font=p11_full
 shadowed=yes
 activetext=Dropped
 activecolour=0xFFFF00
+
+[castlewars_zamorak_eject]
+type=text
+x=247
+y=119
+width=4
+height=4
+center=yes
+font=p12_full
+shadowed=yes
+colour=0xFFFF00

@@ -710,7 +710,7 @@ width=218
 height=128
 scroll=188
 
-[com_91]
+[com_90]
 layer=com_88
 type=text
 x=42
@@ -748,7 +748,7 @@ shadowed=yes
 colour=0xAAAAAA
 margin=0,2
 
-[com_103]
+[com_99]
 layer=com_88
 type=text
 x=60
@@ -782,7 +782,7 @@ shadowed=yes
 colour=0xAAAAAA
 margin=0,2
 
-[com_92]
+[com_91]
 layer=com_89
 type=text
 x=37
@@ -808,7 +808,7 @@ shadowed=yes
 colour=0xAAAAAA
 margin=0,2
 
-[com_104]
+[com_100]
 layer=com_89
 type=text
 x=57
@@ -821,7 +821,7 @@ shadowed=yes
 text=Absolutely nothing!
 colour=0xAAAAAA
 
-[com_93]
+[com_92]
 type=text
 x=139
 y=27
@@ -833,7 +833,7 @@ shadowed=yes
 text=Are you sure you want to fight this duel?
 colour=0xFFAA44
 
-[com_97]
+[com_93]
 type=text
 x=425
 y=29
@@ -846,7 +846,7 @@ text=Close Window
 colour=0x808080
 overcolour=0xFFFFFF
 
-[com_98]
+[com_94]
 type=graphic
 x=325
 y=299
@@ -854,7 +854,7 @@ width=36
 height=36
 graphic=miscgraphics,3
 
-[com_99]
+[com_95]
 type=graphic
 x=239
 y=88
@@ -862,7 +862,7 @@ width=36
 height=36
 graphic=miscgraphics,2
 
-[com_100]
+[com_96]
 type=graphic
 x=239
 y=52
@@ -870,7 +870,7 @@ width=36
 height=36
 graphic=miscgraphics,2
 
-[com_101]
+[com_97]
 type=graphic
 x=239
 y=141
@@ -878,7 +878,7 @@ width=36
 height=36
 graphic=miscgraphics,2
 
-[com_102]
+[com_98]
 type=graphic
 x=239
 y=124
@@ -886,7 +886,7 @@ width=36
 height=36
 graphic=miscgraphics,2
 
-[com_105]
+[com_101]
 type=graphic
 x=260
 y=260
@@ -894,7 +894,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_106]
+[com_102]
 type=graphic
 x=296
 y=260
@@ -902,7 +902,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_107]
+[com_103]
 type=graphic
 x=332
 y=260
@@ -910,7 +910,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_108]
+[com_104]
 type=graphic
 x=368
 y=260
@@ -918,7 +918,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_109]
+[com_105]
 type=graphic
 x=404
 y=260
@@ -926,7 +926,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_110]
+[com_106]
 type=graphic
 x=440
 y=260
@@ -934,7 +934,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_111]
+[com_107]
 type=graphic
 x=458
 y=260
@@ -942,7 +942,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_112]
+[com_108]
 type=graphic
 x=18
 y=166
@@ -950,7 +950,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_113]
+[com_109]
 type=graphic
 x=54
 y=166
@@ -958,7 +958,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_114]
+[com_110]
 type=text
 x=265
 y=55
@@ -969,7 +969,7 @@ shadowed=yes
 text=Before the duel starts:
 colour=0xAA8822
 
-[com_115]
+[com_111]
 type=graphic
 x=239
 y=177
@@ -977,7 +977,7 @@ width=36
 height=36
 graphic=miscgraphics,2
 
-[com_116]
+[com_112]
 type=graphic
 x=239
 y=213
@@ -985,7 +985,7 @@ width=36
 height=36
 graphic=miscgraphics,2
 
-[com_117]
+[com_113]
 type=graphic
 x=239
 y=248
@@ -993,7 +993,7 @@ width=36
 height=36
 graphic=miscgraphics,2
 
-[com_118]
+[com_114]
 type=graphic
 x=239
 y=278
@@ -1035,7 +1035,7 @@ text=Accept
 colour=0x008000
 overcolour=0x00FF00
 
-[com_122]
+[com_115]
 type=graphic
 x=90
 y=166
@@ -1043,7 +1043,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_123]
+[com_116]
 type=graphic
 x=126
 y=166
@@ -1051,7 +1051,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_124]
+[com_117]
 type=graphic
 x=162
 y=166
@@ -1059,7 +1059,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_125]
+[com_118]
 type=graphic
 x=198
 y=166
@@ -1067,7 +1067,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_126]
+[com_119]
 type=graphic
 x=217
 y=166
@@ -1097,7 +1097,7 @@ shadowed=yes
 text=There will be obstacles in the arena.
 colour=0xAAAAAA
 
-[com_129]
+[com_120]
 type=text
 x=265
 y=129

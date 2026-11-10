@@ -1,6 +1,6 @@
 [plaguesheep_furnace]
-name=Furnace
-desc=Very hot.
+name=Incinerator
+desc=A special furnace for destroying contaminated items.
 model=furniture_loc_165
 width=3
 length=3

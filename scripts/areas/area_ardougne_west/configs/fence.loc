@@ -1,5 +1,5 @@
 [mournerstewfence]
 name=Fence
-model=fence_railing
+model=mournerstewfence
 sharelight=yes
-op1=Climb-over
+op1=Squeeze-through

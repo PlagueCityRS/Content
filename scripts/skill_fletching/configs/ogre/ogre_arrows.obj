@@ -22,18 +22,16 @@ weight=4g
 name=Achey tree logs
 desc=These logs are longer than normal.
 cost=4
-model=inv_woodlogs
-recol1s=15617
-recol1d=11556
-category=category_22
-2dxof=3
-2dyof=66
-2dzoom=670
-2dyan=120
-2dxan=280
-weight=3lb
+model=model_6821
+2dxof=-1
+2dyof=-4
+2dzoom=1310
+2dyan=1640
+2dxan=76
 members=yes
 op4=Light
+category=category_22
+weight=3lb
 
 [ogre_arrow_shaft]
 name=Ogre arrow shaft

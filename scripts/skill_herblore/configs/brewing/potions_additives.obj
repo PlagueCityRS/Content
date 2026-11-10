@@ -14,7 +14,7 @@ param=brew_potion_struct_secondary,3dose2attack
 
 [red_spiders_eggs]
 name=Red spiders' eggs
-desc=Eewww.
+desc=Ewww!
 cost=7
 model=inv_spidereggs
 2dxof=-3
@@ -29,19 +29,21 @@ param=brew_potion_struct_secondary,3dose2restore
 name=Limpwurt root
 desc=The root of a limpwurt plant.
 cost=7
-model=inv_root
-2dxof=3
-2dyof=4
-2dzoom=1130
-2dyan=380
-2dxan=456
+model=model_7221
+2dxof=-6
+2dyof=-3
+2dzoom=930
+2dyan=2036
+2dzan=1980
+2dxan=68
+ambient=15
 weight=7g
 param=brew_potion_struct,3dose1strength
 param=brew_potion_struct_secondary,3dose2strength
 
 [snape_grass]
 name=Snape grass
-desc=Strange spikey grass.
+desc=Strange spiky grass.
 cost=10
 members=yes
 model=inv_snapegrass

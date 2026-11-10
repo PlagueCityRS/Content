@@ -1,7 +1,6 @@
 [bamboo_picture2]
 model=quest_tbwt_bamboo_picture2
-sharelight=yes
-occlude=yes
+ambient=30
 
 [crate_halfburied]
 name=Crate
@@ -37,7 +36,7 @@ desc=It's full of brightly coloured fish.
 model=quest_tbwt_crate_tropicalfish
 
 [bones_in_paste_fire]
-name=Burning bones_
+name=Burning bones
 desc=It's a pile of burning bones.
 model=outdoorfurniture_fire_bones_in_paste
 anim=fire
@@ -193,6 +192,7 @@ name=Laundry Basket
 desc=It's full of dirty robes.
 model=loc_4039
 blockrange=no
+op1=Search
 
 [eadgar_aviary_wall]
 model=quest_eadgar_aviary_wall
@@ -374,7 +374,7 @@ op1=Search
 
 [mortton_dangersign]
 name=Warning sign
-desc=Danger! Sickness and affliction...stay away!
+desc=Danger! Sickness and affliction... stay away!
 model=outdoorfurniture_dangersign
 recol1s=10400
 recol1d=4160
@@ -687,21 +687,27 @@ op1=Open
 forceapproach=north
 
 [shadelairchestopen]
-name=Open Chest
-desc=It's open.
-model=furniture_chestopen
+name=Bronze Chest
+desc=A strangely decorated bronze chest, the open lock is painted blood red.
+model=shadelairchestopen
+retex1s=elfwood
+retex1d=wood2
+recol2s=10570
+recol2d=8354
+recol3s=16897
+recol3d=15360
 forceapproach=north
 
 [shadelairentrancel]
 name=Wooden doors
-desc=These doors look very ominous..a sign says...'to the tombs'.
+desc=These doors look very ominous. A sign says 'To the tombs'.
 model=basic_loc_2240
 width=2
 op1=Open
 
 [shadelairentrancer]
 name=Wooden doors
-desc=These doors look very ominous..a sign says...'to the tombs'.
+desc=These doors look very ominous. A sign says 'To the tombs'.
 model=basic_loc_2240
 width=2
 mirror=yes
@@ -848,7 +854,7 @@ mapscene=30
 
 [castlewars_saradomin_tele]
 name=Saradomin Portal
-desc=A portal to join the saradomin team.
+desc=A portal to join the Saradomin team.
 model=floor_glowingcircle
 recol1s=31658
 recol1d=349
@@ -865,7 +871,7 @@ op1=Enter
 
 [castlewars_zamorak_tele]
 name=Zamorak Portal
-desc=A portal to join the zamorak team.
+desc=A portal to join the Zamorak team.
 model=floor_glowingcircle
 recol1s=31658
 recol1d=30753
@@ -882,7 +888,7 @@ op1=Enter
 
 [castlewars_saradomin_exit]
 name=Portal
-desc=A portal to leave the saradomin team.
+desc=A portal to leave the Saradomin team.
 model=floor_glowingcircle
 recol1s=31658
 recol1d=349
@@ -899,7 +905,7 @@ op1=Exit
 
 [castlewars_zamorak_exit]
 name=Portal
-desc=A portal to leave the zamorak team.
+desc=A portal to leave the Zamorak team.
 model=floor_glowingcircle
 recol1s=31658
 recol1d=30753
@@ -1028,7 +1034,7 @@ hillskew=yes
 
 [castlewars_saradomin_quit]
 name=Portal
-desc=A portal to leave the saradomin team.
+desc=A portal to leave the Saradomin team.
 model=floor_glowingcircle
 recol1s=31658
 recol1d=349
@@ -1045,7 +1051,7 @@ op1=Leave
 
 [castlewars_zamorak_quit]
 name=Portal
-desc=A portal to leave the zamorak team.
+desc=A portal to leave the Zamorak team.
 model=floor_glowingcircle
 recol1s=31658
 recol1d=30753
@@ -1375,7 +1381,7 @@ sharelight=yes
 
 [castlewars_battlements_saradomin_climbable]
 name=Battlements
-desc=Maybe I could tie a rope to this..
+desc=Maybe I could tie a rope to this...
 model=castle_edge
 retex1s=wall
 retex1d=elfbrick
@@ -1385,7 +1391,7 @@ blockrange=no
 
 [castlewars_battlements_zamorak_climbable]
 name=Battlements
-desc=Maybe I could tie a rope to this..
+desc=Maybe I could tie a rope to this...
 model=castle_edge
 retex1s=wall
 retex1d=mossybricks
@@ -1594,9 +1600,8 @@ op1=Unlock
 raiseobject=no
 
 [castlewars_zamorak_sidedoor_open]
-param=next_loc_stage,castlewars_zamorak_sidedoor
 name=Door
-desc=The door is closed.
+desc=The door is open.
 model=basic_wall
 retex1s=wall
 retex1d=door
@@ -1609,7 +1614,7 @@ raiseobject=no
 [castlewars_saradomin_spawndoor]
 name=Energy Barrier
 desc=Only the Saradomin team may pass.
-model=model_4874
+model=castlewars_saradomin_spawndoor
 recol1s=15855
 recol1d=349
 active=yes
@@ -1622,7 +1627,7 @@ contrast=100
 [castlewars_zamorak_spawndoor]
 name=Energy Barrier
 desc=Only the Zamorak team may pass.
-model=model_4874
+model=castlewars_saradomin_spawndoor
 recol1s=15855
 recol1d=30753
 active=yes
@@ -1728,7 +1733,8 @@ ambient=50
 op1=View
 
 [slayertower_door]
-name=slayertower_door
+name=Door
+desc=A big wooden door.
 model=skill_slayer_wall_tower_door
 hillskew=yes
 ambient=20
@@ -1738,30 +1744,31 @@ resizey=192
 op1=Open
 
 [slayertower_door_arch]
-name=slayertower_door_arch
 model=skill_slayer_wall_tower_door_arch
+model2=slayertower_door_arch
 hillskew=yes
-ambient=20
 resizez=128
 resizex=128
 resizey=192
 op1=Open
 blockwalk=no
+active=no
 
 [slayertower_door_arch_mirror]
-name=slayertower_door_arch_mirror
 model=skill_slayer_wall_tower_door_arch
+model2=slayertower_door_arch
 hillskew=yes
-ambient=20
 resizez=128
 resizex=128
 resizey=192
 op1=Open
 blockwalk=no
 mirror=yes
+active=no
 
 [slayertower_door_mirror]
-name=slayertower_door_mirror
+name=Door
+desc=A big wooden door.
 model=skill_slayer_wall_tower_door
 hillskew=yes
 ambient=20
@@ -1772,7 +1779,8 @@ mirror=yes
 op1=Open
 
 [slayertower_door_open]
-name=slayertower_door_open
+name=Door
+desc=A big wooden door.
 model=skill_slayer_wall_tower_door
 hillskew=yes
 ambient=20
@@ -1782,7 +1790,8 @@ resizey=192
 op1=Close
 
 [slayertower_door_open_mirror]
-name=slayertower_door_open_mirror
+name=Door
+desc=A big wooden door.
 model=skill_slayer_wall_tower_door
 hillskew=yes
 ambient=20
@@ -1860,7 +1869,7 @@ mapscene=7
 
 [slayer_dungeon_entrance]
 name=Cave Entrance
-desc=An entrance to a cave.
+desc=Wow - it's a guinea pig! No, hang on, it's a cave.
 model=cave_entrance3
 recol1s=10400
 recol1d=11592
@@ -1879,7 +1888,7 @@ op1=Enter
 
 [slayer_dungeon_exit]
 name=Tunnel
-desc=This leads back to the surface.
+desc=This leads back to the cruel world above.
 model=skill_slayer_wall_caveexit
 width=3
 length=2
@@ -2007,14 +2016,16 @@ resizex=128
 resizey=192
 
 [loc_4513]
-name=slayertower_pile_bicks
+name=Heap of bricks
+desc=I doubt that was built to last...
 model=skill_slayer_wall_tower_pile_bricks
 sharelight=yes
 hillskew=yes
 ambient=20
-resizez=135
-resizex=130
-resizey=140
+resizez=125
+resizex=120
+resizey=130
+blockwalk=no
 
 [dugupsoil_slayer_1]
 model=floor_dugupsoil1
@@ -2067,28 +2078,31 @@ offsetz=0
 
 [slayer_corpse1]
 name=Corpse
-desc=Now that's what I call slimline!
+desc=How do you make a skeleton laugh?
 model=floor_corpse1
 recol1s=27413
 recol1d=12747
 blockrange=no
+blockwalk=no
 
 [slayer_corpse2]
 name=Corpse
-desc=He looks very relaxed.
+desc=Tickle his funny bone.
 model=floor_corpse2
 recol1s=27413
 recol1d=12747
 blockrange=no
+blockwalk=no
 
 [slayer_corpse3]
 name=Corpse
-desc=Now he's just too thin.
+desc=Clearly has been relaxing too long....
 model=floor_corpse3
 recol1s=27413
 recol1d=12747
 width=2
 blockrange=no
+blockwalk=no
 
 [slayer_short_grass_1]
 model=floor_new_grass1
@@ -2315,8 +2329,8 @@ resizex=128
 resizey=64
 
 [slayer_kursk_statue]
-name=statue
-desc=a statue of a big monster
+name=Statue
+desc=Did that thing just twitch?
 model=outdoorfurniture_statue_kursk
 model2=outdoorfurniture_statue_rock1
 recol1s=15855

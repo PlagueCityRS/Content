@@ -1,5 +1,3 @@
-type=overlay
-
 [com_0]
 type=graphic
 x=0
@@ -319,7 +317,7 @@ colour=0xFFFF00
 
 [com_27]
 type=text
-x=46
+x=2
 y=138
 width=100
 height=14
@@ -330,8 +328,8 @@ colour=0xFFFFFF
 
 [com_28]
 type=graphic
-x=56
-y=154
+x=10
+y=156
 buttontype=select
 width=36
 height=36
@@ -342,8 +340,8 @@ activegraphic=miscgraphics,9
 
 [com_29]
 type=graphic
-x=98
-y=154
+x=48
+y=156
 buttontype=select
 width=36
 height=36
@@ -354,8 +352,8 @@ activegraphic=miscgraphics,9
 
 [com_30]
 type=text
-x=66
-y=165
+x=19
+y=166
 width=15
 height=14
 font=p12_full
@@ -365,11 +363,68 @@ colour=0xFFFF00
 
 [com_31]
 type=text
-x=106
-y=164
+x=56
+y=167
 width=20
 height=14
 font=p12_full
 shadowed=yes
 text=Off
+colour=0xFFFF00
+
+[com_32]
+type=text
+x=114
+y=138
+width=60
+height=14
+font=p12_full
+shadowed=yes
+text=Accept Aid
+colour=0xFFFFFF
+
+[com_33]
+type=graphic
+x=105
+y=156
+buttontype=select
+width=36
+height=36
+script1op1=pushvar,option_aid
+script1=eq,1
+graphic=miscgraphics,0
+activegraphic=miscgraphics,9
+
+[com_34]
+type=graphic
+x=143
+y=156
+buttontype=select
+width=36
+height=36
+script1op1=pushvar,option_aid
+script1=eq,0
+graphic=miscgraphics,0
+activegraphic=miscgraphics,9
+
+[com_35]
+type=text
+x=113
+y=166
+width=21
+height=14
+font=p12_full
+shadowed=yes
+text=Yes
+colour=0xFFFF00
+
+[com_36]
+type=text
+x=154
+y=166
+width=15
+height=14
+font=p12_full
+shadowed=yes
+text=No
 colour=0xFFFF00

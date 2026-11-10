@@ -1,6 +1,6 @@
 [dskin_w_ardoungecitizen2]
 name=Woman
-desc=One of RuneScapes' many citizens.
+desc=One of RuneScape's many citizens.
 walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
 readyanim=human_ready
 op1=Talk-to
@@ -31,7 +31,7 @@ param=death_sound,female_death
 
 [w_ardoungecitizenlady1]
 name=Woman
-desc=One of RuneScapes' many citizens.
+desc=One of RuneScape's many citizens.
 walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
 readyanim=human_ready
 op1=Talk-to
@@ -60,7 +60,7 @@ param=death_sound,female_death
 
 [dskin_w_ardoungecitizenlady1]
 name=Woman
-desc=One of RuneScapes' many citizens.
+desc=One of RuneScape's many citizens.
 walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
 readyanim=human_ready
 op1=Talk-to
@@ -91,7 +91,7 @@ param=death_sound,female_death
 
 [dskin_w_ardoungecitizenlady3]
 name=Woman
-desc=One of RuneScapes' many citizens.
+desc=One of RuneScape's many citizens.
 walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
 readyanim=human_ready
 op1=Talk-to
@@ -122,7 +122,7 @@ param=death_sound,female_death
 
 [dskin_w_ardoungecitizenlady4]
 name=Woman
-desc=One of RuneScapes' many citizens.
+desc=One of RuneScape's many citizens.
 walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
 readyanim=human_ready
 op1=Talk-to
@@ -152,7 +152,7 @@ param=death_sound,female_death
 
 [w_ardoungecitizenlady2]
 name=Woman
-desc=One of RuneScapes' many citizens.
+desc=One of RuneScape's many citizens.
 walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
 readyanim=human_ready
 op1=Talk-to
@@ -178,7 +178,7 @@ param=death_sound,female_death
 
 [w_ardoungecitizenlady4]
 name=Woman
-desc=One of RuneScapes' many citizens.
+desc=One of RuneScape's many citizens.
 walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
 readyanim=human_ready
 op1=Talk-to

@@ -61,39 +61,13 @@ walkanim_r($walkr);
 runanim($run);
 buildappearance(worn);
 
-[proc,headicon_add](int $icon)
-def_int $current = headicons_get;
-def_int $bit = multiply(0x1, pow(2, $icon));
-headicons_set(or($current, $bit));
+[proc,skullicon_set](int $icon)
+skullicons_set($icon);
 buildappearance(worn);
 
-[proc,headicon_del](int $icon)
-def_int $current = headicons_get;
-def_int $bit = multiply(0x1, pow(2, $icon));
-headicons_set(and($current, sub($current, $bit)));
+[proc,headicon_set](int $icon)
+headicons_set($icon);
 buildappearance(worn);
-
-[proc,.headicon_del](int $icon)
-def_int $current = .headicons_get;
-def_int $bit = multiply(0x1, pow(2, $icon));
-.headicons_set(and($current, sub($current, $bit)));
-.buildappearance(worn);
-
-[proc,headicon_exists](int $icon)(boolean)
-def_int $current = headicons_get;
-def_int $bit = pow(2, $icon);
-if (and($current, $bit) = $bit) {
-    return(true);
-}
-return(false);
-
-[proc,headicons_clear]()
-headicons_set(0);
-buildappearance(worn);
-
-[proc,.headicons_clear]()
-.headicons_set(0);
-.buildappearance(worn);
 
 [proc,update_all](obj $previous_weapon)
 // secret sauce

@@ -17,23 +17,23 @@ weight=2lb
 param=prayerbonus,4
 
 [druidrobetop]
-model=inv_robetop
+name=Druid's robe
 recol1s=14724
 recol1d=32767
+model=inv_robetop
 2dyof=7
 2dzoom=1370
 2dxan=536
 members=yes
 cost=40
-name=Druid's robe
-desc=I feel closer to the Gods when I am wearing this.
+desc=I feel closer to the gods when I am wearing this.
 iop2=Wear
-wearpos=torso
-wearpos2=arms
 manwear=man_arms_longsleeves,0
 womanwear=woman_arms_longsleeves,0
 manwear2=man_torso_basic
 womanwear2=woman_torso_basic
+wearpos=torso
+wearpos2=arms
 weight=2lb
 param=prayerbonus,4
 
@@ -56,43 +56,43 @@ param=prayerbonus,5
 param=saradominitem,^true
 
 [monkrobetop]
-model=inv_robetop
+name=Monk's robe
 recol1s=14724
 recol1d=13539
+model=inv_robetop
 2dyof=7
 2dzoom=1370
 2dxan=536
 cost=40
-name=Monk's robe
-desc=I feel closer to the Gods when I am wearing this.
+desc=I feel closer to the gods when I am wearing this.
 iop2=Wear
-wearpos=torso
-wearpos2=arms
 manwear=man_arms_longsleeves,0
 womanwear=woman_arms_longsleeves,0
 manwear2=man_torso_basic
 womanwear2=woman_torso_basic
+wearpos=torso
+wearpos2=arms
 weight=2lb
 param=prayerbonus,6
 param=saradominitem,^true
 
 [blackrobetop]
-model=inv_robetop
+name=Shade robe
 recol1s=14724
 recol1d=0
+model=inv_robetop
 2dyof=7
 2dzoom=1370
 2dxan=536
 cost=40
-name=Shade robe
-desc=I feel closer to the Gods when I am wearing this.
+desc=I feel closer to the gods when I am wearing this.
 iop2=Wear
-wearpos=torso
-wearpos2=arms
 manwear=man_arms_longsleeves,0
 womanwear=woman_arms_longsleeves,0
 manwear2=man_torso_basic
 womanwear2=woman_torso_basic
+wearpos=torso
+wearpos2=arms
 weight=2lb
 param=prayerbonus,5
 

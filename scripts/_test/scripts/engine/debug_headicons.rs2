@@ -1,0 +1,10 @@
+[debugproc,headicons](int $id)
+mes("Setting headicon <tostring($id)>");
+headicons_set($id);
+buildappearance(worn);
+
+
+[debugproc,skullicons](int $id)
+mes("Setting skullicon <tostring($id)>");
+skullicons_set($id);
+buildappearance(worn);

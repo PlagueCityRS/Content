@@ -546,7 +546,7 @@ shadowed=yes
 text=Insert a very long name here!
 colour=0xFFAA44
 
-[com_68]
+[com_67]
 type=graphic
 x=37
 y=5
@@ -554,7 +554,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_69]
+[com_68]
 type=graphic
 x=37
 y=299
@@ -562,7 +562,7 @@ width=36
 height=36
 graphic=miscgraphics,3
 
-[com_70]
+[com_69]
 type=graphic
 x=12
 y=290
@@ -570,7 +570,7 @@ width=25
 height=30
 graphic=steelborder,2
 
-[com_71]
+[com_70]
 type=graphic
 x=475
 y=20
@@ -578,7 +578,7 @@ width=25
 height=30
 graphic=steelborder,1
 
-[com_72]
+[com_71]
 type=graphic
 x=439
 y=5
@@ -586,7 +586,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_73]
+[com_72]
 type=graphic
 x=475
 y=290
@@ -594,7 +594,7 @@ width=25
 height=30
 graphic=steelborder,3
 
-[com_74]
+[com_73]
 type=graphic
 x=439
 y=299
@@ -602,7 +602,7 @@ width=36
 height=36
 graphic=miscgraphics,3
 
-[com_75]
+[com_74]
 type=text
 x=100
 y=75
@@ -625,7 +625,7 @@ shadowed=yes
 text=Insert a very long name here!
 colour=0xFFAA44
 
-[com_77]
+[com_75]
 type=graphic
 x=183
 y=26
@@ -633,7 +633,7 @@ width=36
 height=36
 graphic=miscgraphics,2
 
-[com_78]
+[com_76]
 type=graphic
 x=183
 y=62
@@ -641,7 +641,7 @@ width=36
 height=36
 graphic=miscgraphics,2
 
-[com_79]
+[com_77]
 type=graphic
 x=183
 y=98
@@ -649,7 +649,7 @@ width=36
 height=36
 graphic=miscgraphics,2
 
-[com_80]
+[com_78]
 type=graphic
 x=183
 y=134
@@ -657,7 +657,7 @@ width=36
 height=36
 graphic=miscgraphics,2
 
-[com_81]
+[com_79]
 type=graphic
 x=183
 y=170
@@ -665,7 +665,7 @@ width=36
 height=36
 graphic=miscgraphics,2
 
-[com_82]
+[com_80]
 type=graphic
 x=162
 y=34
@@ -673,7 +673,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_83]
+[com_81]
 type=graphic
 x=144
 y=34
@@ -681,7 +681,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_84]
+[com_82]
 type=graphic
 x=108
 y=34
@@ -689,7 +689,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_85]
+[com_83]
 type=graphic
 x=72
 y=34
@@ -697,7 +697,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_86]
+[com_84]
 type=graphic
 x=36
 y=34
@@ -705,7 +705,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_87]
+[com_85]
 type=graphic
 x=17
 y=34
@@ -713,7 +713,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_88]
+[com_86]
 type=text
 x=21
 y=29
@@ -724,7 +724,7 @@ shadowed=yes
 text=Runelink
 colour=0xFFAA44
 
-[com_89]
+[com_87]
 type=model
 x=336
 y=253
@@ -741,7 +741,7 @@ width=7
 height=6
 margin=3,3
 
-[com_91]
+[com_88]
 type=graphic
 x=183
 y=206
@@ -749,7 +749,7 @@ width=36
 height=36
 graphic=miscgraphics,2
 
-[com_92]
+[com_89]
 type=graphic
 x=183
 y=242
@@ -757,7 +757,7 @@ width=36
 height=36
 graphic=miscgraphics,2
 
-[com_93]
+[com_90]
 type=graphic
 x=183
 y=278
@@ -765,15 +765,15 @@ width=36
 height=36
 graphic=miscgraphics,2
 
-[com_94]
+[com_91]
 type=layer
 x=26
 y=265
 width=78
 height=42
 
-[com_96]
-layer=com_94
+[com_92]
+layer=com_91
 type=rect
 x=6
 y=6
@@ -782,8 +782,8 @@ width=66
 height=31
 fill=yes
 
-[com_97]
-layer=com_94
+[com_93]
+layer=com_91
 type=text
 x=23
 y=14
@@ -795,8 +795,8 @@ text=Close
 colour=0x800000
 overcolour=0xFF0000
 
-[com_98]
-layer=com_94
+[com_94]
+layer=com_91
 type=graphic
 x=21
 y=-15
@@ -804,8 +804,8 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_99]
-layer=com_94
+[com_95]
+layer=com_91
 type=graphic
 x=0
 y=0
@@ -813,8 +813,8 @@ width=25
 height=30
 graphic=steelborder,0
 
-[com_100]
-layer=com_94
+[com_96]
+layer=com_91
 type=graphic
 x=53
 y=0
@@ -822,8 +822,8 @@ width=25
 height=30
 graphic=steelborder,1
 
-[com_101]
-layer=com_94
+[com_97]
+layer=com_91
 type=graphic
 x=0
 y=12
@@ -831,8 +831,8 @@ width=25
 height=30
 graphic=steelborder,2
 
-[com_102]
-layer=com_94
+[com_98]
+layer=com_91
 type=graphic
 x=53
 y=12
@@ -840,8 +840,8 @@ width=25
 height=30
 graphic=steelborder,3
 
-[com_103]
-layer=com_94
+[com_99]
+layer=com_91
 type=graphic
 x=21
 y=21
@@ -870,6 +870,7 @@ height=20
 model=inv_firerune
 zoom=1024
 xan=512
+yan=1024
 
 [p2_rune]
 type=model
@@ -880,6 +881,7 @@ height=20
 model=inv_waterrune
 zoom=1024
 xan=512
+yan=1024
 
 [status1]
 type=text

@@ -125,30 +125,40 @@ dummyitem=inv_only
 [invis_necklace1]
 name=Sapphire necklace
 model=floor_invisableicon_0
+2dyan=4
+2dxan=20
 param=crafting_jewelry_struct,sapphire_necklace
 dummyitem=inv_only
 
 [invis_necklace2]
 name=Emerald necklace
-desc=It's an Emerald necklace
+desc=It's an Emerald necklace.
 model=floor_invisableicon_0
+2dyan=4
+2dxan=20
 param=crafting_jewelry_struct,emerald_necklace
 dummyitem=inv_only
 
 [invis_necklace3]
 name=Ruby necklace
 model=floor_invisableicon_0
+2dyan=4
+2dxan=20
 param=crafting_jewelry_struct,ruby_necklace
 dummyitem=inv_only
 
 [invis_necklace4]
 name=Diamond necklace
 model=floor_invisableicon_0
+2dyan=4
+2dxan=20
 param=crafting_jewelry_struct,diamond_necklace
 dummyitem=inv_only
 
 [invis_necklace5]
 name=Dragon necklace
 model=floor_invisableicon_0
+2dyan=4
+2dxan=20
 param=crafting_jewelry_struct,dragonstone_necklace
 dummyitem=inv_only

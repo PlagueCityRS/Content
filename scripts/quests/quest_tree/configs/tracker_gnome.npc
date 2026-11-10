@@ -1,7 +1,7 @@
 [tracker1]
 vislevel=hide
-name=Gnome
-desc=Looks like a gnome to me.
+name=Tracker gnome 1
+desc=It's a gnome who specialises in covert operations.
 walkanim=midget_walk
 readyanim=midget_ready
 op1=Talk-to
@@ -18,8 +18,8 @@ param=death_sound,gnome_death
 
 [tracker2]
 vislevel=hide
-name=Gnome
-desc=Looks like a gnome to me.
+name=Tracker gnome 2
+desc=It's a gnome who specialises in covert operations.
 walkanim=midget_walk
 readyanim=midget_ready
 op1=Talk-to
@@ -36,8 +36,8 @@ param=death_sound,gnome_death
 
 [tracker3]
 vislevel=hide
-name=Gnome
-desc=Looks like a gnome to me.
+name=Tracker gnome 3
+desc=It's a gnome who specialises in covert operations.
 walkanim=midget_walk
 readyanim=midget_ready
 op1=Talk-to

@@ -1,18 +1,18 @@
 [iron_axe]
 name=Iron axe
-desc=A woodcutters axe.
-cost=56
-model=inv_hatchet
 recol1s=15855
 recol1d=8456
+desc=A woodcutter's axe.
+cost=56
+model=inv_hatchet
 2dxof=-15
 2dzoom=1060
 2dyan=1196
 2dxan=520
 iop2=Wield
-wearpos=righthand
 manwear=human_weapons_hatchet,0
 womanwear=human_weapons_hatchet,6
+wearpos=righthand
 category=weapon_axe
 weight=3lb
 respawnrate=500
@@ -34,19 +34,19 @@ param=axe_head,macro_iron_hatchethead
 
 [bronze_axe]
 name=Bronze axe
-desc=A woodcutters axe.
-cost=16
-model=inv_hatchet
 recol1s=15855
 recol1d=8354
+desc=A woodcutter's axe.
+cost=16
+model=inv_hatchet
 2dxof=-15
 2dzoom=1060
 2dyan=1196
 2dxan=520
 iop2=Wield
-wearpos=righthand
 manwear=human_weapons_hatchet,0
 womanwear=human_weapons_hatchet,6
+wearpos=righthand
 category=weapon_axe
 weight=3lb
 param=woodcutting_anim,human_woodcutting_bronze_axe
@@ -67,7 +67,7 @@ param=axe_head,macro_bronze_hatchethead
 
 [steel_axe]
 name=Steel axe
-desc=A woodcutters axe.
+desc=A woodcutter's axe.
 cost=200
 model=inv_hatchet
 2dxof=-15
@@ -75,9 +75,9 @@ model=inv_hatchet
 2dyan=1196
 2dxan=520
 iop2=Wield
-wearpos=righthand
 manwear=human_weapons_hatchet,0
 womanwear=human_weapons_hatchet,6
+wearpos=righthand
 category=weapon_axe
 weight=3lb
 param=woodcutting_anim,human_woodcutting_steel_axe

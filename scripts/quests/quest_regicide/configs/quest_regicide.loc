@@ -362,7 +362,7 @@ active=yes
 
 [regicide_trap_arrowtrip]
 name=Twigs
-desc=Its a trap!
+desc=It's a trap!
 model=quest_regicide_trap_arrowtrip
 blockwalk=no
 blockrange=no
@@ -383,7 +383,7 @@ length=2
 
 [regicide_trap_woodspring]
 name=Sticks
-desc=A odd looking group of tied sticks.
+desc=An odd-looking group of tied sticks.
 model=quest_regicide_trap_woodspring
 width=3
 blockwalk=no
@@ -427,7 +427,7 @@ op1=Climb
 
 [regicide_trap_logslam]
 name=Tree
-desc=Its a tree
+desc=It's a tree.
 model=quest_regicide_trap_logslam
 width=3
 length=3
@@ -774,14 +774,14 @@ model=loc_3965
 active=no
 
 [regicide_sulphar_gas]
-model=model_loc_673
+model=gas
 recol1s=28538
 recol1d=19016
 anim=gas
 active=no
 
 [regicide_tree_swamp1]
-name=tree
+name=Tree
 desc=A tree
 model=quest_regicide_tree_dead1
 recol1s=15784
@@ -793,7 +793,7 @@ resizey=80
 resizez=60
 
 [regicide_tree_swamp2]
-name=tree
+name=Tree
 desc=A tree
 model=quest_regicide_tree_dead1
 recol1s=15784
@@ -883,14 +883,14 @@ anim=up_catapult
 
 [regicide_catapult_left]
 name=Catapult-winch
-desc=Theres a winch on this side.
+desc=There's a winch on this side.
 model=loc_3977
 length=5
 active=yes
 
 [regicide_catapult_right]
 name=Catapult-lever
-desc=Theres a lever on this side.
+desc=There's a lever on this side.
 model=loc_3978
 length=5
 active=yes
@@ -904,7 +904,7 @@ active=no
 
 [regicide_tent_door]
 name=Tent flap
-desc=A way to get in the tent.
+desc=A way to get into the tent.
 model=quest_regicide_tent_door
 op1=Enter
 ambient=50
@@ -932,7 +932,7 @@ active=no
 
 [regicide_tentroofcentre1]
 name=Tent
-desc=A Tent.
+desc=A tent.
 model=tent_roofcentre1
 recol1s=26425
 recol1d=21069
@@ -941,7 +941,7 @@ active=yes
 
 [regicide_tentroof_high]
 name=Tent
-desc=A Tent.
+desc=A tent.
 model=quest_regicide_tentroof_high
 recol1s=26425
 recol1d=9623
@@ -952,7 +952,7 @@ active=yes
 
 [regicide_tentroof_high_centre]
 name=Tent
-desc=A Tent.
+desc=A tent.
 model=quest_regicide_tentroof_high_centre
 recol1s=26425
 recol1d=21069
@@ -961,7 +961,7 @@ active=yes
 
 [regicide_tentroof_highcorner]
 name=Tent
-desc=A Tent.
+desc=A tent.
 model=loc_3986
 recol1s=26425
 recol1d=9623
@@ -1006,7 +1006,8 @@ blockrange=no
 active=no
 
 [regicide_spearwall_straight]
-model=castle_spearwall_row
+model=biowatchtower
+model2=castle_spearwall_row
 recol1s=15649
 recol1d=14729
 recol2s=12513
@@ -1057,7 +1058,7 @@ model=quest_regicide_furnace
 
 [regicide_tent_human_for_fire]
 name=Tent wall
-desc=A tent wall
+desc=A tent wall.
 model=quest_regicide_tent
 ambient=50
 contrast=10
@@ -1065,7 +1066,7 @@ active=yes
 
 [regicide_tent_door_for_fire]
 name=Tent flap
-desc=A way to get in the tent.
+desc=A way to get into the tent.
 model=quest_regicide_tent_door
 op1=Enter
 ambient=50
@@ -1073,7 +1074,7 @@ contrast=10
 
 [regicide_tent_human_fire]
 name=Tent wall
-desc=A tent wall
+desc=A tent wall.
 model=quest_regicide_flamming_tent
 recol1s=26425
 recol1d=9623
@@ -1113,7 +1114,7 @@ recol2d=21069
 
 [regicide_tentcorner_roofed]
 name=Tent wall
-desc=A tent wall
+desc=A tent wall.
 model=quest_regicide_tentcorner_roofed
 recol1s=26425
 recol1d=9623
@@ -1211,7 +1212,7 @@ op1=Pray-at
 category=prayer_altar
 
 [regicide_bridge_a]
-model=model_loc_2999
+model=lum_bridgea
 retex1s=pebblefloor
 retex1d=elfbrick
 recol2s=12683
@@ -1220,7 +1221,7 @@ sharelight=yes
 active=no
 
 [regicide_bridge_b]
-model=model_loc_3001
+model=lum_bridge_b
 retex1s=pebblefloor
 retex1d=elfbrick
 recol2s=12683
@@ -1229,7 +1230,7 @@ sharelight=yes
 active=no
 
 [regicide_bridge_b_mirror]
-model=model_loc_3002
+model=lum_bridge_b_mirror
 retex1s=pebblefloor
 retex1d=elfbrick
 recol2s=12683
@@ -1238,7 +1239,7 @@ sharelight=yes
 active=no
 
 [regicide_bridge_c]
-model=model_loc_3003
+model=lum_bridgec
 retex1s=pebblefloor
 retex1d=elfbrick
 recol2s=12683
@@ -1247,7 +1248,7 @@ sharelight=yes
 active=no
 
 [regicide_bridge_c_mirror]
-model=model_loc_3004
+model=lum_bridge_c_mirror
 retex1s=pebblefloor
 retex1d=elfbrick
 recol2s=12683
@@ -1256,7 +1257,7 @@ sharelight=yes
 active=no
 
 [regicide_bridge_d]
-model=model_loc_3005
+model=lum_bridged
 retex1s=pebblefloor
 retex1d=elfbrick
 recol2s=12683
@@ -1265,7 +1266,7 @@ sharelight=yes
 active=no
 
 [regicide_bridge_d_mirror]
-model=model_loc_3006
+model=lum_bridge_d_mirror
 retex1s=pebblefloor
 retex1d=elfbrick
 recol2s=12683
@@ -1274,7 +1275,7 @@ sharelight=yes
 active=no
 
 [regicide_bridge_e]
-model=model_loc_1619
+model=lum_bridgee
 retex1s=pebblefloor
 retex1d=elfbrick
 recol2s=12683
@@ -1283,7 +1284,7 @@ sharelight=yes
 active=no
 
 [regicide_bridge_e_l]
-model=model_loc_3008
+model=lum_bridge_e_l
 retex1s=pebblefloor
 retex1d=elfbrick
 recol2s=12683
@@ -1301,7 +1302,7 @@ sharelight=yes
 active=no
 
 [regicide_bridge_f]
-model=model_loc_3010
+model=lum_bridgef
 retex1s=pebblefloor
 retex1d=elfbrick
 recol2s=12683
@@ -1310,7 +1311,7 @@ sharelight=yes
 active=no
 
 [regicide_bridge_f_low]
-model=model_loc_3011
+model=lum_bridge_f_low
 retex1s=pebblefloor
 retex1d=elfbrick
 recol2s=12683
@@ -1319,7 +1320,7 @@ sharelight=yes
 active=no
 
 [regicide_bridge_f_low_b]
-model=model_loc_3012
+model=lum_bridge_f_low_b
 retex1s=pebblefloor
 retex1d=elfbrick
 recol2s=12683
@@ -1328,7 +1329,7 @@ sharelight=yes
 active=no
 
 [regicide_bridge_d_low]
-model=model_loc_3013
+model=lum_bridge_d_low
 retex1s=pebblefloor
 retex1d=elfbrick
 recol2s=12683
@@ -1337,7 +1338,7 @@ sharelight=yes
 active=no
 
 [regicide_bridge_edge]
-model=model_loc_3007
+model=lum_bridge_edge
 retex1s=pebblefloor
 retex1d=elfbrick
 recol2s=12683
@@ -1347,7 +1348,8 @@ blockrange=no
 sharelight=yes
 
 [regicide_propbarrel]
-name=regicide_propbarrel
+name=Barrel
+desc=A barrel.
 model=quest_regicide_propbarrel
 anim=propbarrel_exploding_ready
 

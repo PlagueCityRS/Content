@@ -2,6 +2,7 @@
 model=blank
 model2=loc_4909
 breakroutefinding=yes
+blockrange=no
 active=no
 mapscene=22
 
@@ -177,7 +178,6 @@ name=Rope swing
 desc=Use this to swing over to the next platform.
 model=outdoorfurniture_ropeswing_long
 blockwalk=no
-sharelight=yes
 forcedecor=yes
 active=yes
 op1=Swing-on

@@ -1,7 +1,7 @@
 [flag_entrance_angled]
 name=Entrance
 desc=Flags marking the entrance to the arena.
-model=model_loc_3111
+model=flag_entrance_angled
 width=2
 ambient=60
 contrast=60
@@ -29,7 +29,7 @@ recol1d=12580
 [flag_entrancel_angled]
 name=Entrance
 desc=Flags marking the entrance to the arena.
-model=model_loc_3111
+model=flag_entrance_angled
 width=2
 ambient=60
 contrast=60
@@ -69,7 +69,7 @@ active=yes
 
 [loc_3193]
 name=Closed chest
-desc=Used to store players items whilst they duel.
+desc=Used to store players' items whilst they duel.
 model=furniture_chestclosed
 op1=Open
 forceapproach=north

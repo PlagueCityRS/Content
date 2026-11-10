@@ -35,7 +35,7 @@ param=shop_title,Edgeville General Store
 [generalassistant5]
 vislevel=hide
 name=Shop assistant
-desc=Is here on work experience.
+desc=She's here on work experience.
 walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
 readyanim=human_ready
 op1=Talk-to

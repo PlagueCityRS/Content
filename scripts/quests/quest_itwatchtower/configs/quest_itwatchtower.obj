@@ -1,7 +1,13 @@
 [explodingvial]
+name=Exploding vial
+desc=An exploding vial.
 model=human_weapons_vial
 manwear=human_weapons_explodingvial,0
 womanwear=human_weapons_explodingvial,6
+2dxof=29
+2dyof=32
+2dzoom=510
+2dxan=1956
 weight=25g
 dummyitem=graphic_only
 
@@ -324,14 +330,15 @@ tradeable=no
 name=Nightshade
 desc=Deadly!
 cost=30
-model=inv_nightshade_watchtower
-2dxof=10
-2dyof=-27
-2dzoom=1730
-2dyan=1860
-2dxan=220
+model=model_7254
+2dxof=12
+2dyof=3
+2dzoom=1190
+2dyan=1676
+2dzan=324
+2dxan=1924
 iop2=Eat
-weight=15g
 members=yes
+weight=15g
 category=category_1748
 tradeable=no

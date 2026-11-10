@@ -118,6 +118,7 @@ recol3d=5216
 
 [ikov_darkstairsdown]
 name=Stairs
+desc=A dark flight of stairs.
 model=furniture_stairsdown
 width=2
 length=3
@@ -143,7 +144,11 @@ recol2s=6342
 recol2d=11458
 
 [ikov_trapdoor]
+name=Trapdoor
+desc=Don't you open that trapdoor!
 model=furniture_trapdoor
+op1=Open
+blockwalk=no
 
 [ikov_trapladder]
 name=Ladder

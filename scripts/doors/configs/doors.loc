@@ -45,28 +45,20 @@ param=next_loc_stage,loc_1512
 [loc_1530]
 name=Door
 desc=The door is closed.
-model=basic_wall
+model=loc_1530
 active=yes
 op1=Open
 raiseobject=no
-retex1s=wall
-retex1d=door
-recol2s=6342
-recol2d=11458
 category=door_closed
 param=next_loc_stage,loc_1531
 
 [loc_1531]
 name=Door
 desc=The door is open.
-model=basic_wall
+model=loc_1530
 active=yes
 op1=Close
 raiseobject=no
-retex1s=wall
-retex1d=door
-recol2s=6342
-recol2d=11458
 category=door_opened
 param=next_loc_stage,loc_1530
 

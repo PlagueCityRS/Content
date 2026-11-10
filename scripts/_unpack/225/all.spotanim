@@ -311,16 +311,16 @@ anim=seq_451
 
 // unconfirmed name
 [portcullisclose]
-model=model_loc_3303
+model=portcullis_upass_8
 anim=portcullisclose
 
 // unconfirmed name
 [portcullisopen]
-model=model_loc_3303
+model=portcullis_upass_8
 anim=portcullisopen
 
 [whirlpool]
-model=model_loc_2019
+model=whirlpool_8
 anim=whirlpool
 
 [rockfall]
@@ -328,27 +328,27 @@ model=traps_rockfall
 anim=rockfall
 
 [swinginglogtrap_release]
-model=model_loc_3338
+model=upass_logtrap_8
 anim=swinginglogtrap_release
 
 [speartrap_release]
-model=model_loc_3234
+model=upass_speartrap_8
 anim=speartrap_release
 
 [springtrap_release]
-model=model_loc_3228
+model=upass_springtrap_8
 anim=springtrap_release
 
 [springtrap_reset]
-model=model_loc_3228
+model=upass_springtrap_8
 anim=springtrap_reset
 
 [double_springtrap_release]
-model=model_loc_3232
+model=upass_double_springtrap_8
 anim=double_springtrap_release
 
 [double_springtrap_reset]
-model=model_loc_3232
+model=upass_double_springtrap_8
 anim=double_springtrap_reset
 
 [rope_piece]
@@ -390,6 +390,8 @@ recol3d=32767
 
 // unconfirmed name
 [pickaxe_head_launch]
+model=model_7410
+anim=slayer_dustdevil_dust
 
 [spotanim_74]
 model=traps_rockfall
@@ -397,6 +399,7 @@ anim=seq_643
 
 // unconfirmed name
 [axe_head_launch]
+model=spells_zap
 
 [saradomin_lightning]
 model=spells_saradominlightning_s

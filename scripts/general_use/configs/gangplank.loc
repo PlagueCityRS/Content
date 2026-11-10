@@ -2,8 +2,10 @@
 name=Gangplank
 desc=Handy for boarding boats.
 model=ship_gangplank
+hillskew=yes
 op1=Cross
 active=yes
+sharelight=yes
 category=gangplank_board
 param=board_message,You must speak to the Customs Officer before it will set sail.
 
@@ -11,8 +13,10 @@ param=board_message,You must speak to the Customs Officer before it will set sai
 name=Gangplank
 desc=Handy for boarding boats.
 model=ship_gangplank
+hillskew=yes
 op1=Cross
 active=yes
+sharelight=yes
 category=gangplank_disembark
 
 [karamjashipplank_on]
@@ -21,6 +25,7 @@ desc=Handy for boarding boats.
 model=ship_gangplank
 op1=Cross
 active=yes
+sharelight=yes
 category=gangplank_board
 param=board_message,You must speak to one of the sailors before it will set sail.
 
@@ -30,6 +35,7 @@ desc=Handy for boarding boats.
 model=ship_gangplank
 op1=Cross
 active=yes
+sharelight=yes
 category=gangplank_disembark
 
 [brimhavenshipplank_on]
@@ -38,6 +44,7 @@ desc=Handy for boarding boats.
 model=ship_gangplank
 op1=Cross
 active=yes
+sharelight=yes
 category=gangplank_board
 param=board_message,You must speak to Captain Barnaby before it will set sail.
 
@@ -47,6 +54,7 @@ desc=Handy for boarding boats.
 model=ship_gangplank
 op1=Cross
 active=yes
+sharelight=yes
 category=gangplank_disembark
 
 [ardougneshipplank_on]
@@ -55,6 +63,7 @@ desc=Handy for boarding boats.
 model=ship_gangplank
 op1=Cross
 active=yes
+sharelight=yes
 category=gangplank_board
 param=board_message,You must speak to the Customs Officer before it will set sail.
 
@@ -64,12 +73,14 @@ desc=Handy for boarding boats.
 model=ship_gangplank
 op1=Cross
 active=yes
+sharelight=yes
 category=gangplank_disembark
 
 [ship_to_entrana_on]
 name=Gangplank
 desc=Handy for boarding the ship.
 model=ship_gangplank
+sharelight=yes
 active=yes
 op1=Cross
 category=gangplank_board
@@ -78,6 +89,7 @@ category=gangplank_board
 name=Gangplank
 desc=Handy for boarding the ship.
 model=ship_gangplank
+sharelight=yes
 active=yes
 op1=Cross
 category=gangplank_disembark
@@ -86,6 +98,7 @@ category=gangplank_disembark
 name=Gangplank
 desc=Handy for boarding the ship.
 model=ship_gangplank
+sharelight=yes
 active=yes
 op1=Cross
 category=gangplank_board
@@ -94,6 +107,7 @@ category=gangplank_board
 name=Gangplank
 desc=Handy for boarding the ship.
 model=ship_gangplank
+sharelight=yes
 active=yes
 op1=Cross
 category=gangplank_disembark

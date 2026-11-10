@@ -6,7 +6,7 @@ if(map_members = ^true & inv_total(inv, trail_clue_hard_riddle013) > 0) {
     return;
 }
 ~chatnpc("<p,quiz>Greetings traveller.");
-if (%prayer_guild < 1) {
+if (%prayguild < 1) {
     @multi3("Can you heal me? I'm injured.", can_you_heal_me_im_injured, "Isn't this place built a bit out the way?", isnt_this_place_built_a_bit_out_the_way, "How do I get further into the monastery?", ask_to_join_abbot_langley);
 } else {
     @multi2("Can you heal me? I'm injured.", can_you_heal_me_im_injured, "Isn't this place built a bit out the way?", isnt_this_place_built_a_bit_out_the_way);

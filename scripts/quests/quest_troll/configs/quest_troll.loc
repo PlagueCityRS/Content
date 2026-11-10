@@ -1,6 +1,6 @@
 [troll_pass_entrance]
 name=Cave Entrance
-desc=Looks like small cave.
+desc=Looks like a small cave.
 model=cave_entrance3
 recol1s=10400
 recol1d=11592
@@ -42,7 +42,7 @@ op1=Exit
 
 [troll_mad_eadgar_entrance]
 name=Cave Entrance
-desc=Looks like small cave.
+desc=Looks like a small cave.
 model=cave_entrance3
 recol1s=10400
 recol1d=11592

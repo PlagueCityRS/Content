@@ -1,11 +1,10 @@
-type=overlay
-
 [com_0]
 type=text
-x=8
+x=4
 y=45
-width=180
+width=185
 height=14
+center=yes
 font=p12_full
 shadowed=yes
 text=To reduce memory requirements
@@ -13,21 +12,23 @@ colour=0xFFFF00
 
 [com_1]
 type=text
-x=24
+x=4
 y=60
-width=136
+width=185
 height=14
+center=yes
 font=p12_full
 shadowed=yes
-text=Music + sounds are only
+text=music & sounds are only
 colour=0xFFFF00
 
 [com_2]
 type=text
-x=18
+x=4
 y=75
-width=151
+width=185
 height=14
+center=yes
 font=p12_full
 shadowed=yes
 text=available in the high-detail
@@ -35,10 +36,11 @@ colour=0xFFFF00
 
 [com_3]
 type=text
-x=21
+x=4
 y=145
-width=140
+width=185
 height=14
+center=yes
 font=p12_full
 shadowed=yes
 text=If you wish to hear these
@@ -46,43 +48,47 @@ colour=0xFFFF00
 
 [com_4]
 type=text
-x=7
+x=4
 y=160
-width=170
+width=185
 height=14
+center=yes
 font=p12_full
 shadowed=yes
-text=please switch version, but bear
+text=please switch versions, but
 colour=0xFFFF00
 
 [com_5]
 type=text
-x=15
+x=4
 y=175
-width=150
+width=185
 height=14
+center=yes
 font=p12_full
 shadowed=yes
-text=in mind things will run more
+text=bear in mind things will run
 colour=0xFFFF00
 
 [com_6]
 type=text
-x=43
+x=4
 y=190
-width=101
+width=185
 height=14
+center=yes
 font=p12_full
 shadowed=yes
-text=slowly as a result.
+text=more slowly as a result.
 colour=0xFFFF00
 
 [com_7]
 type=text
-x=33
+x=4
 y=90
-width=117
+width=185
 height=14
+center=yes
 font=p12_full
 shadowed=yes
 text=version of the game.

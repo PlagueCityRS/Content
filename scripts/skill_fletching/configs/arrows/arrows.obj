@@ -110,28 +110,36 @@ weight=4g
 
 [arrow_shaft]
 name=Arrow shaft
-desc=A wooden arrow shaft
+desc=A wooden arrow shaft.
 cost=1
 stackable=yes
 members=yes
-model=inv_arrow-shafts
+model=model_9032
 2dxof=6
 2dyof=-29
 2dzoom=1220
 2dyan=100
 2dxan=216
+count1=arrow_shaft_2,2
+count2=arrow_shaft_3,3
+count3=arrow_shaft_4,4
+count4=arrow_shaft_5,5
 weight=10g
 
 [headless_arrow]
 name=Headless arrow
-desc=A wooden arrow shaft with flights attached
+desc=A wooden arrow shaft with flights attached.
 cost=1
 stackable=yes
 members=yes
-model=inv_arrow-flights
+model=model_9028
 2dxof=6
 2dyof=-29
 2dzoom=1220
 2dyan=100
 2dxan=216
+count1=headless_arrow_2,2
+count2=headless_arrow_3,3
+count3=headless_arrow_4,4
+count4=headless_arrow_5,5
 weight=12g

@@ -246,8 +246,9 @@ def_int $logs_num = 0;
 if($log_type ! null) {
     $logs_num = inv_total(inv, $log_type);
 }
-def_int $chickens_num = min(inv_total(inv, raw_chicken), calc(5 - %eadgar_chickens));
-def_int $grain_num = min(inv_total(inv, grain), calc(10 - %eadgar_grain));
+// todo rework
+def_int $chickens_num = min(inv_total(inv, raw_chicken), calc(5 - %varp_338));
+def_int $grain_num = min(inv_total(inv, grain), calc(10 - %varp_337));
 def_int $clothes_num = inv_total(inv, eadgar_dirty_druid_robe);
 def_string $logs_str = "";
 def_string $chickens_str = "";
@@ -274,13 +275,13 @@ switch_int ($clothes_num) {
 }
 
 // done building strings, now clamp values so we don't eat the player's items
-$chickens_num = min(calc(5 - %eadgar_chickens), $chickens_num);
-$grain_num = min(calc(10 - %eadgar_grain), $grain_num);
+$chickens_num = min(calc(5 - %varp_338), $chickens_num);
+$grain_num = min(calc(10 - %varp_337), $grain_num);
 
 // videos show items are removed here, immediately before the player's "I have XYZ" dialog fires
-if ($logs_num >= 1 & testbit(%eadgar_bits, ^eadgar_given_logs) = ^false) {
+if ($logs_num >= 1 & testbit(%eadgar_varbit, ^eadgar_given_logs) = ^false) {
     inv_del(inv, $log_type, 1);
-    %eadgar_bits = setbit(%eadgar_bits, ^eadgar_given_logs);
+    %eadgar_varbit = setbit(%eadgar_varbit, ^eadgar_given_logs);
 } else {
     $logs_str = "no logs";
     // Resetting the strings to say "no" even if the items are present in the inventory is done on purpose to match OSRS/RS3.
@@ -303,20 +304,20 @@ if ($grain_num > 0) {
     $grain_str = "no grain";
 }
 
-if ($clothes_num >= 1 & testbit(%eadgar_bits, ^eadgar_given_clothes) = ^false) {
+if ($clothes_num >= 1 & testbit(%eadgar_varbit, ^eadgar_given_clothes) = ^false) {
     inv_del(inv, eadgar_dirty_druid_robe, 1); // only one is taken when turning in
-    %eadgar_bits = setbit(%eadgar_bits, ^eadgar_given_clothes);
+    %eadgar_varbit = setbit(%eadgar_varbit, ^eadgar_given_clothes);
 } else {
     $clothes_str = "no dirty clothes"; // when turning in other items with drop-tricked clothes in the inventory, the player's dialog says "no dirty clothes"
 }
 
 // increment what we've brought
-%eadgar_chickens = calc(%eadgar_chickens + $chickens_num);
-%eadgar_grain = calc(%eadgar_grain + $grain_num);
+%varp_338 = calc(%varp_338 + $chickens_num);
+%varp_337 = calc(%varp_337 + $grain_num);
 
 // check if anything more is needed
-def_int $chickens_needed = calc(5 - %eadgar_chickens);
-def_int $grain_needed = calc(10 - %eadgar_grain);
+def_int $chickens_needed = calc(5 - %varp_338);
+def_int $grain_needed = calc(10 - %varp_337);
 
 // TODO we are currently missing a possible dialog line here:
 //~chatplayer("<p,neutral>I don't have anything.");
@@ -331,9 +332,9 @@ def_int $grain_needed = calc(10 - %eadgar_grain);
 
 // if not all items are delivered, dialog goes back to default tree after eadgar tells you what else is needed
 // is clicking on eadgar after showing him the parrot but before hiding it the only way to see the scarecrow dialog tree?
-if(testbit(%eadgar_bits, ^eadgar_given_logs) ! 1 | $chickens_needed > 0 | $grain_needed > 0 | testbit(%eadgar_bits, ^eadgar_given_clothes) ! 1) {
+if(testbit(%eadgar_varbit, ^eadgar_given_logs) ! 1 | $chickens_needed > 0 | $grain_needed > 0 | testbit(%eadgar_varbit, ^eadgar_given_clothes) ! 1) {
     // todo probably a better way to do this w/o code duplication
-    switch_int (testbit(%eadgar_bits, ^eadgar_given_logs)) {
+    switch_int (testbit(%eadgar_varbit, ^eadgar_given_logs)) {
     case 1 : $logs_str = "no logs";
     case 0 : $logs_str = "the logs";
     }
@@ -347,7 +348,7 @@ if(testbit(%eadgar_bits, ^eadgar_given_logs) ! 1 | $chickens_needed > 0 | $grain
         case 1 : $grain_str = "one bundle of grain";
         case default : $grain_str = "<tostring($grain_needed)> bundles of grain";
     }
-    switch_int (testbit(%eadgar_bits, ^eadgar_given_clothes)) {
+    switch_int (testbit(%eadgar_varbit, ^eadgar_given_clothes)) {
         case 1 : $clothes_str = "no dirty clothes";
         case 0 : $clothes_str = "the dirty clothes";
     }
@@ -360,10 +361,10 @@ if(testbit(%eadgar_bits, ^eadgar_given_logs) ! 1 | $chickens_needed > 0 | $grain
 
 [debugproc,eadgar_resetitems]
 if(p_finduid(uid) = true) {
-    %eadgar_bits = clearbit(%eadgar_bits, ^eadgar_given_logs);
-    %eadgar_bits = clearbit(%eadgar_bits, ^eadgar_given_clothes);
-    %eadgar_chickens = 0;
-    %eadgar_grain = 0;
+    %eadgar_varbit = clearbit(%eadgar_varbit, ^eadgar_given_logs);
+    %eadgar_varbit = clearbit(%eadgar_varbit, ^eadgar_given_clothes);
+    %varp_338 = 0;
+    %varp_337 = 0;
 }
 
 [label,eadgar_thats_everything]

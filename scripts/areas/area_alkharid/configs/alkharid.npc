@@ -45,30 +45,30 @@ readyanim=human_ready
 op1=Talk-to
 op3=Trade
 model1=man_head_mediumhair
-model2=man_legs_basic
-model3=man_jaw_none
-model4=man_torso_apron
-model5=man_arms_basic
-model6=man_hands_basic
+model2=man_jaw_none
+model3=man_torso_apron
+model4=man_arms_longsleeves3
+model5=man_hands_basic
+model6=man_legs_turnups
 model7=man_feet_basic
 head1=chat_male_head_mediumhair
 recol1s=2340
 recol1d=8354
 recol2s=14724
-recol2d=26950
+recol2d=16777
 recol3s=6273
 recol3d=4226
 recol4s=14801
 recol4d=15652
 recol5s=24075
-recol5d=15652
+recol5d=16677
 recol6s=32735
 recol6d=13539
 moverestrict=indoors
 
 [kebab_seller]
 vislevel=hide
-name=Kebab seller
+name=Karim
 desc=Kebabs are full of meaty goodness!
 walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
 readyanim=human_ready
@@ -263,7 +263,7 @@ param=shop_title,Gem Trader.
 
 [louie_legs]
 vislevel=hide
-name=Louie legs
+name=Louie Legs
 desc=For the finest in armoured legware.
 walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
 readyanim=human_ready

@@ -117,13 +117,12 @@ moverestrict=indoors
 param=damagetype,^crush_style
 
 [mort_man]
+vislevel=hide
 name=Mort'ton Local
 desc=A local villager of Mort'ton.
 walkanim=human_walk_f
 readyanim=human_ready
 op1=Talk-to
-alwaysontop=yes
-vislevel=37
 model1=man_head_mediumhair
 model2=man_jaw_none
 model3=man_torso_basic
@@ -141,13 +140,12 @@ recol3d=24075
 category=category_348
 
 [mort_woman]
+vislevel=hide
 name=Mort'ton Local
 desc=A local villager of Mort'ton.
 walkanim=human_walk_f
 readyanim=human_ready
 op1=Talk-to
-alwaysontop=yes
-vislevel=34
 model1=woman_head_longhair
 model2=woman_torso_basic
 model3=woman_arms_bare
@@ -247,14 +245,12 @@ param=death_sound,zombie_death
 param=next_npc_type,mort_woman
 
 [mort_man2]
+vislevel=hide
 name=Mort'ton local
 desc=A local villager of Mort'ton.
 walkanim=human_walk_f
 readyanim=human_ready
 op1=Talk-to
-op2=Attack
-alwaysontop=yes
-vislevel=32
 model1=man_head_bald
 model2=man_jaw_medium
 model3=man_torso_tatty
@@ -273,14 +269,12 @@ recol3d=24075
 category=category_348
 
 [mort_woman2]
+vislevel=hide
 name=Mort'ton local
 desc=A local villager of Mort'ton.
 walkanim=human_walk_f
 readyanim=human_ready
 op1=Talk-to
-op2=Attack
-alwaysontop=yes
-vislevel=30
 model1=woman_head_pigtails
 model2=woman_torso_tatty
 model3=woman_arms_buff

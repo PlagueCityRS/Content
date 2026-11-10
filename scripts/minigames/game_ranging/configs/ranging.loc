@@ -18,6 +18,7 @@ mapscene=7
 name=Target
 desc=I wonder if I can hit a bullseye?
 model=outdoorfurniture_target
+ambient=20
 op1=Fire-at
 
 [ranging_guild_door]

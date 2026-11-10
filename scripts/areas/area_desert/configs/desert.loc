@@ -8,9 +8,9 @@ param=next_loc_stage,desert_cactus_empty
 
 [desert_cactus_empty]
 name=Kharidian cactus (Dry)
-desc=A less than succulent succulent.
+desc=A less-than-succulent succulent.
 model=plants_cactus_cut
-mapscene=4
 recol1s=320
 recol1d=384
+mapscene=4
 param=next_loc_stage,desert_cactus_full

@@ -1207,7 +1207,7 @@ data=musicdata,music_Troubled
 [musicregion_46_58]
 table=musicregion
 data=mapsquare,0_46_58_0_0
-data=musicdata,music_Wilderness4
+data=musicdata,music_Wilderness3
 
 [musicregion_46_59]
 table=musicregion
@@ -1308,7 +1308,7 @@ data=musicdata,music_Gaol
 [musicregion_47_59]
 table=musicregion
 data=mapsquare,0_47_59_0_0
-data=musicdata,music_Wilderness3
+data=musicdata,music_Wilderness2
 
 [musicregion_47_60]
 table=musicregion
@@ -1403,12 +1403,12 @@ data=musicdata,music_Undercurrent
 [musicregion_48_58]
 table=musicregion
 data=mapsquare,0_48_58_0_0
-data=musicdata,music_Wilderness2
+data=musicdata,music_Wilderness
 
 [musicregion_48_59]
 table=musicregion
 data=mapsquare,0_48_59_0_0
-data=musicdata,music_Wilderness3
+data=musicdata,music_Wilderness2
 
 [musicregion_48_60]
 table=musicregion
@@ -1513,7 +1513,7 @@ data=musicdata,music_Moody
 [musicregion_49_57]
 table=musicregion
 data=mapsquare,0_49_57_0_0
-data=musicdata,music_Wilderness3
+data=musicdata,music_Wilderness2
 
 [musicregion_49_58]
 table=musicregion

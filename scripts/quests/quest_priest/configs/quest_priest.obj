@@ -1,19 +1,21 @@
 [amulet_of_ghostspeak]
 name=Ghostspeak amulet
+recol1s=7399
+recol1d=31041
+recol2s=15855
+recol2d=31041
 desc=It lets me talk to ghosts.
 cost=35
 model=inv_amulet_ghostspeak
-recol1s=7399
-recol1d=31041
 2dxof=1
 2dyof=16
 2dzoom=620
 2dyan=68
 2dxan=424
 iop2=Wear
-wearpos=front
 manwear=man_necklaces_basic,0
 womanwear=woman_necklaces_basic,0
+wearpos=front
 weight=10g
 tradeable=no
 

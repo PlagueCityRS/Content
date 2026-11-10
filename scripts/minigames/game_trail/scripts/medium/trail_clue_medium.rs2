@@ -6,19 +6,19 @@
 ~full_trail_readclue_map(trail_map04);
 
 [opheld1,trail_clue_medium_map003]
-~full_trail_readclue_map(inter_86);
+~full_trail_readclue_map(trail_map07);
 
 [opheld1,trail_clue_medium_map004]
-~full_trail_readclue_map(inter_177);
+~full_trail_readclue_map(trail_map10);
 
 [opheld1,trail_clue_medium_map005]
-~full_trail_readclue_map(inter_182);
+~full_trail_readclue_map(trail_map15);
 
 [opheld1,trail_clue_medium_map006]
-~full_trail_readclue_map(inter_183);
+~full_trail_readclue_map(trail_map16);
 
 [opheld1,trail_clue_medium_map007]
-~full_trail_readclue_map(inter_184);
+~full_trail_readclue_map(trail_map17);
 
 [opheld1,_trail_clue_medium]
 ~full_trail_readclue(oc_param(last_item, trail_desc));

@@ -784,12 +784,12 @@ xan=200
 
 [page_left_button]
 type=layer
-x=34
-y=259
+x=55
+y=295
 width=45
 height=36
 
-[com_84]
+[com_38]
 layer=page_left_button
 type=graphic
 x=0
@@ -801,12 +801,12 @@ graphic=leftarrow,0
 
 [page_right_button]
 type=layer
-x=432
-y=259
+x=389
+y=292
 width=45
 height=36
 
-[com_86]
+[com_39]
 layer=page_right_button
 type=graphic
 x=0
@@ -1013,3 +1013,21 @@ width=195
 height=17
 font=q8_full
 text=line22
+
+[com_40]
+type=text
+x=29
+y=269
+width=54
+height=17
+font=q8_full
+text=Page%1
+
+[com_41]
+type=text
+x=422
+y=271
+width=57
+height=17
+font=q8_full
+text=Page%2

@@ -8,10 +8,12 @@ model=quest_eadgar_inv_herb2
 desc=A pale, tough looking herb.
 members=yes
 cost=1
-2dxof=-2
-2dzoom=730
-2dyan=2028
-2dxan=540
+2dxof=3
+2dyof=-1
+2dzoom=800
+2dyan=1770
+2dzan=97
+2dxan=581
 weight=7g
 tradeable=no
 

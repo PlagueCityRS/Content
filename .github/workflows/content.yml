@@ -21,8 +21,8 @@ jobs:
     - name: Clone Engine
       uses: actions/checkout@v6
       with:
-        repository: LostCityRS/Engine-TS
-        ref: '289'
+        repository: PlagueCityRS/Engine-TS
+        ref: '349'
         path: engine
 
     - name: Install Node.js

@@ -124,6 +124,8 @@ model=inv_feather
 2dxan=428
 stackable=yes
 cost=2
+manwear=model_8359,0
+womanwear=model_8359,6
 weight=2g
 category=category_532
 
@@ -1003,7 +1005,7 @@ weight=4g
 members=yes
 
 [mort_slimey_eel]
-name=Slimey eel
+name=Slimy eel
 desc=A slime covered eel - yuck!
 model=quest_routethrough_inv_slimey_eel
 2dxof=4
@@ -1015,7 +1017,7 @@ weight=2kg
 param=fishing_struct,fishing_struct_mort_slimey_eel
 
 [mort_slimey_eel_cooked]
-name=Cooked slimey eel
+name=Cooked slimy eel
 recol1s=5346
 recol1d=16613
 recol2s=4256
@@ -1026,7 +1028,7 @@ recol4s=30718
 recol4d=23847
 recol5s=30653
 recol5d=17921
-desc=A cooked slimey eel - not delicious, but pretty nutritious.
+desc=A cooked slimy eel - not delicious, but pretty nutritious.
 model=quest_routethrough_inv_slimey_eel
 2dxof=4
 2dzoom=1650

@@ -64,7 +64,7 @@ recol2d=11458
 [loc_2534]
 name=Door
 desc=There's black cross on the door.
-model=model_loc_2534
+model=loc_2534
 active=yes
 op1=Open
 retex1s=wall
@@ -75,7 +75,7 @@ recol2d=11458
 [loc_2535]
 name=Door
 desc=The door is closed.
-model=model_loc_2534
+model=loc_2534
 active=yes
 op1=Open
 retex1s=wall
@@ -85,7 +85,7 @@ recol2d=11458
 
 [loc_2536]
 name=Door
-model=model_loc_2534
+model=loc_2534
 active=yes
 retex1s=wall
 retex1d=door
@@ -95,7 +95,7 @@ recol2d=11458
 [loc_2997]
 name=Door
 desc=The door is closed.
-model=model_loc_2534
+model=loc_2534
 active=yes
 op1=Open
 raiseobject=no
@@ -105,7 +105,7 @@ param=next_loc_stage,loc_2998
 [loc_2998]
 name=Door
 desc=The door is open.
-model=model_loc_2534
+model=loc_2534
 active=yes
 op1=Close
 raiseobject=no

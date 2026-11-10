@@ -355,6 +355,7 @@ param=defend_sound,dagganoth_hit
 param=death_sound,dagganoth_death
 
 [horror_dagannoth_jr1]
+vislevel=100
 name=Dagannoth
 desc=A horror from the ocean depths...
 size=2
@@ -362,7 +363,6 @@ resizeh=82
 resizev=82
 walkanim=horror_dagannoth_emerge_a
 readyanim=horror_dagannoth_emerge_a
-vislevel=92
 model1=quest_horror_npc_dagannoth
 recol1s=13740
 recol1d=14796
@@ -394,6 +394,7 @@ param=defend_sound,dagganoth_hit
 param=death_sound,dagganoth_death
 
 [horror_dagannoth_jr2]
+vislevel=100
 name=Dagannoth
 desc=A horror from the ocean depths...
 size=2
@@ -401,7 +402,6 @@ resizeh=82
 resizev=82
 walkanim=horror_dagannoth_emerge_b
 readyanim=horror_dagannoth_emerge_b
-vislevel=100
 model1=quest_horror_npc_dagannoth
 recol1s=13740
 recol1d=14796
@@ -433,6 +433,7 @@ param=defend_sound,dagganoth_hit
 param=death_sound,dagganoth_death
 
 [horror_dagannoth_jr3]
+vislevel=100
 name=Dagannoth
 desc=A horror from the ocean depths...
 size=2
@@ -440,7 +441,6 @@ resizeh=82
 resizev=82
 walkanim=horror_dagannoth_emerge_c
 readyanim=horror_dagannoth_emerge_c
-vislevel=100
 model1=quest_horror_npc_dagannoth
 recol1s=13740
 recol1d=14796
@@ -472,6 +472,7 @@ param=defend_sound,dagganoth_hit
 param=death_sound,dagganoth_death
 
 [horror_dagannoth_jr4]
+vislevel=100
 name=Dagannoth
 desc=A horror from the ocean depths...
 size=2
@@ -480,7 +481,6 @@ resizev=82
 walkanim=horror_dagannoth_walk
 readyanim=horror_dagannoth_ready
 op2=Attack
-vislevel=100
 model1=quest_horror_npc_dagannoth
 recol1s=13740
 recol1d=14796

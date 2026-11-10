@@ -13,7 +13,7 @@ manwear=human_weapons_knife,0
 womanwear=human_weapons_knife,0
 
 [fur]
-name=Fur
+name=Bear fur
 desc=This would make warm clothing.
 model=inv_fur
 2dxof=-2
@@ -38,26 +38,32 @@ weight=1kg
 
 [spade]
 name=Spade
+recol1s=15855
+recol1d=16878
+recol2s=14798
+recol2d=15821
+recol3s=17969
+recol3d=18992
 desc=A slightly muddy spade.
 cost=3
-model=inv_spade
+model=model_7304
 manwear=human_weapons_spade,0
 womanwear=human_weapons_spade,0
-2dxof=4
-2dyof=4
-2dzoom=2030
-2dyan=1512
-2dxan=332
-weight=4lb
+2dzoom=1860
+2dyan=1532
+2dxan=396
 iop1=Dig
+weight=4lb
 
 [rope]
 name=Rope
+recol1s=11524
+recol1d=7296
 desc=A coil of rope.
 cost=18
 model=ship_pileofrope2
-recol1s=11524
-recol1d=7296
+manwear=model_10131,0
+womanwear=model_10131,6
 2dxof=-2
 2dyof=-30
 2dzoom=1240
@@ -103,7 +109,7 @@ category=category_475
 
 [christmas_cracker]
 name=Christmas cracker
-desc=I need to pull this
+desc=I need to pull this.
 model=inv_cracker
 2dxof=-3
 2dyof=40
@@ -219,13 +225,14 @@ param=stab_sound,hacksword_stab
 
 [cooking_pot]
 name=Cooking pot
-model=furniture_cauldron
 recol1s=10570
 recol1d=12615
 recol2s=544
 recol2d=16673
 recol3s=320
 recol3d=12448
+desc=A cooking pot.
+model=furniture_cauldron
 2dzoom=2050
 2dyan=36
 2dxan=116
@@ -242,7 +249,7 @@ dummyitem=inv_only
 
 [discofreturning]
 name=Disk of returning
-desc=Used to get out of Thordur's blackhole
+desc=Used to get out of Thordur's blackhole.
 cost=12
 model=inv_discofreturning
 2dyof=2
@@ -255,10 +262,10 @@ param=party_clean_exempt,^true
 
 [edgevilledungeonkey]
 name=Brass key
-desc=A mysterious key made of brass.
-model=inv_key
 recol1s=31393
 recol1d=22945
+desc=Opens a door that leads into a dungeon.
+model=inv_key
 2dxof=-3
 2dyof=5
 2dzoom=700
@@ -268,7 +275,7 @@ weight=10g
 
 [keyhalf1]
 name=Half of a key
-desc=A very shiny key.
+desc=The tooth end of the mysterious Crystal Key. Can you find the other half?
 members=yes
 model=inv_keypart1
 2dxof=-7
@@ -280,7 +287,7 @@ weight=5g
 
 [keyhalf2]
 name=Half of a key
-desc=A very shiny key.
+desc=The loop end of the mysterious Crystal Key. Can you find the other half?
 members=yes
 model=inv_keypart2
 2dxof=2
@@ -306,10 +313,10 @@ weight=10g
 
 [muddy_key]
 name=Muddy key
-desc=It looks like a key to a chest.
-model=inv_key
 recol1s=31393
 recol1d=15621
+desc=It looks like the key to a chest.
+model=inv_key
 2dxof=-3
 2dyof=5
 2dzoom=700
@@ -534,45 +541,43 @@ weight=6g
 members=yes
 
 [zamrobebottom]
-name=Robe of zamorak
+name=Zamorak robe
+recol1s=2340
+recol1d=19489
 desc=A robe worn by worshippers of Zamorak.
 cost=30
 model=inv_robebottoms
-recol1s=2340
-recol1d=19489
 2dyof=1
 2dzoom=1940
 2dxan=572
 iop2=Wear
-wearpos=legs
 manwear=man_legs_robe,0
 womanwear=woman_legs_longskirt,0
-weight=2lb
 members=yes
+wearpos=legs
+weight=2lb
 param=zamorakitem,^true
 param=magicattack,2
 param=magicdefence,3
 param=prayerbonus,3
 
 [zamrobetop]
-name=Robe of zamorak
-desc=A robe worn by worshippers of Zamorak.
-model=inv_robetop
+name=Zamorak robe
 recol1s=14724
 recol1d=19489
+desc=A robe worn by worshippers of Zamorak.
+model=inv_robetop
 cost=40
 2dyof=7
 2dzoom=1370
 2dxan=536
 iop2=Wear
-wearpos=torso
-wearpos2=arms
 manwear=man_arms_longsleeves,0
 womanwear=woman_arms_longsleeves,0
 manwear2=man_torso_basic
 womanwear2=woman_torso_basic
-weight=2lb
 members=yes
+weight=2lb
 param=zamorakitem,^true
 param=magicattack,2
 param=magicdefence,3
@@ -601,21 +606,20 @@ param=rangedefence,7
 tradeable=no
 
 [ibanstaff]
+name=Iban's staff
 members=yes
 model=inv_ibanstaff
 2dyof=-15
 2dzoom=1640
 2dyan=1464
 2dxan=196
-name=Staff of iban
-desc=A Magical staff.
-desc=A highly magical staff.
+desc=An ancient staff, formerly the property of Iban.
 cost=42500
 iop2=Wield
-wearpos=righthand
-category=weapon_staff
 manwear=human_weapons_ibanstaff,0
 womanwear=human_weapons_ibanstaff,6
+wearpos=righthand
+category=weapon_staff
 weight=5lb
 param=stabattack,10
 param=slashattack,-1
@@ -641,8 +645,8 @@ tradeable=no
 // osrs crush attack sound newstaff / crush attack sound is a guess.
 
 [brokenibanstaff]
-name=Broken iban staff
-desc=The staff is unusable in this state.
+name=Iban's staff
+desc=I'll need to get this repaired before I can use it.
 model=inv_ibanstaff_broken
 2dxof=8
 2dzoom=1410
@@ -654,7 +658,8 @@ weight=4lb
 tradeable=no
 
 [farmers_fork]
-name=Farmers fork
+name=Farmer's fork
+desc=A farmer's fork.
 model=inv_farmersfork
 2dxof=-2
 2dyof=3
@@ -670,6 +675,7 @@ dummyitem=inv_only
 
 [halberd]
 name=Halberd
+desc=A halberd.
 model=inv_halberd
 2dxof=-7
 2dyof=-6
@@ -681,6 +687,7 @@ dummyitem=inv_only
 
 [warhammer]
 name=Warhammer
+desc=A warhammer.
 model=inv_warhammer
 2dxof=3
 2dyof=3
@@ -692,6 +699,7 @@ dummyitem=inv_only
 
 [javelin]
 name=Javelin
+desc=A javelin.
 model=inv_javelin
 2dxof=-2
 2dyof=63
@@ -703,7 +711,7 @@ dummyitem=inv_only
 
 [scythe]
 name=Scythe
-category=weapon_scythe
+desc=It's a Scythe.
 model=inv_scythe
 2dxof=1
 2dyof=17
@@ -711,10 +719,11 @@ model=inv_scythe
 2dyan=20
 2dxan=336
 iop2=Wield
-wearpos=righthand
-wearpos2=lefthand
 manwear=human_weapons_scythe,0
 womanwear=human_weapons_scythe,0
+category=weapon_scythe
+wearpos=righthand
+wearpos2=lefthand
 weight=7lb
 param=stabattack,3
 param=slashattack,8
@@ -911,6 +920,16 @@ tradeable=no
 
 // rename: cert_grip_keys
 [obj_1589]
+name=Pretty girl
+recol1s=2340
+recol1d=25073
+desc=To be handled with caution.
+iop1=Wear
+cost=1
+model=inv_robebottoms
+2dyof=1
+2dzoom=1940
+2dxan=572
 tradeable=no
 
 [dusty_key]
@@ -1035,25 +1054,90 @@ tradeable=no
 
 // rename: cert_blondwig
 [obj_2420]
+name=Brass monkey
+recol1s=2340
+recol1d=25073
+desc=Suffers in cold weather.
+iop1=Wear
+cost=1
+model=inv_robebottoms
+2dyof=1
+2dzoom=1940
+2dxan=572
 dummyitem=inv_only
 
 // rename: cert_plainwig
 [obj_2422]
+name=Blue partyhat
+recol1s=15360
+recol1d=31
+desc=A nice hat from a cracker.
+model=inv_partyhat
+2dxof=1
+2dyof=1
+2dzoom=440
+2dyan=1852
+2dxan=76
+iop2=Wear
+manwear=man_hat_party,0
+womanwear=woman_hat_party,0
+manhead=chat_male_party
+womanhead=chat_female_party
 dummyitem=inv_only
 
 // rename: cert_skinpaste
 [obj_2425]
+name=Orbital knife
+recol1s=2340
+recol1d=25073
+desc=On average, it's accurate.
+iop1=Wear
+cost=1
+model=inv_robebottoms
+2dyof=1
+2dzoom=1940
+2dxan=572
 dummyitem=inv_only
 
 // rename: cert_ground_charcoal
 [obj_2480]
+name=Firestarter
+recol1s=2340
+recol1d=25073
+desc=Distorted.
+iop1=Wear
+cost=1
+model=inv_robebottoms
+2dyof=1
+2dzoom=1940
+2dxan=572
 dummyitem=inv_only
 
 [newbieshrimp]
+name=Box of delights
+recol1s=2340
+recol1d=25073
+desc=What could be in here?
+iop1=Wear
+cost=1
+model=inv_robebottoms
+2dyof=1
+2dzoom=1940
+2dxan=572
 dummyitem=inv_only
 
 // rename: cert_newbieshrimp
 [obj_2513]
+name=Waste disposal
+recol1s=2340
+recol1d=25073
+desc=Gets rid of all that nasty kitchen waste.
+iop1=Wear
+cost=1
+model=inv_robebottoms
+2dyof=1
+2dzoom=1940
+2dxan=572
 dummyitem=inv_only
 
 [rotten_tomato]

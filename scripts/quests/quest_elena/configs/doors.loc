@@ -1,23 +1,25 @@
 [elenagateshut]
 name=Door
+desc=The door of a small prison.
 model=basic_wall
-active=yes
-op1=Open
 retex1s=wall
 retex1d=door
 recol2s=6342
 recol2d=11458
+active=yes
+op1=Open
 category=door_open_and_close
 param=next_loc_stage,elenagateopen
 
 [elenagateopen]
 name=Door
+desc=The door of a small prison.
 model=basic_wall
-active=yes
 retex1s=wall
 retex1d=door
 recol2s=6342
 recol2d=11458
+active=yes
 category=door_open_and_close
 param=next_loc_stage,elenagateshut
 

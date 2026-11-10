@@ -55,7 +55,6 @@ loops=11
 maxloops=3
 preanim_move=delayanim
 postanim_move=abortanim
-duplicatebehaviour=reset_loop
 frame1=anim_1594
 frame2=anim_1887
 frame3=anim_2185
@@ -1675,7 +1674,6 @@ frame7=anim_9836
 [potteryoven_quick]
 replaceheldleft=hide
 replaceheldright=hide
-duplicatebehaviour=reset_loop
 postanim_move=abortanim
 frame1=anim_1295
 frame2=anim_1576

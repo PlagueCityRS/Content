@@ -13,5 +13,8 @@ scope=perm
 type=npc_uid
 scope=temp
 
+[cat_colour]
+scope=perm
+
 [cat_growth]
 scope=perm

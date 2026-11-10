@@ -53,7 +53,11 @@ desc=Best used with a bucket.
 model=outdoorfurniture_well
 width=2
 length=2
+resizex=90
+resizey=100
+resizez=90
 blockrange=no
+ambient=20
 category=well
 
 [mortton_sink]

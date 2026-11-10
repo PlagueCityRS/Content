@@ -1,10 +1,7 @@
-type=overlay
-
 [com_0]
 type=graphic
 x=0
 y=40
-buttontype=select
 width=36
 height=36
 script1op1=pushvar,option_brightness
@@ -28,7 +25,6 @@ activegraphic=miscgraphics,8
 type=graphic
 x=46
 y=40
-buttontype=select
 width=36
 height=36
 script1op1=pushvar,option_brightness
@@ -52,7 +48,6 @@ activegraphic=miscgraphics,8
 type=graphic
 x=92
 y=40
-buttontype=select
 width=36
 height=36
 script1op1=pushvar,option_brightness
@@ -76,7 +71,6 @@ activegraphic=miscgraphics,8
 type=graphic
 x=139
 y=40
-buttontype=select
 width=36
 height=36
 script1op1=pushvar,option_brightness
@@ -542,7 +536,7 @@ colour=0xFFFF00
 
 [com_46]
 type=text
-x=46
+x=2
 y=138
 width=100
 height=14
@@ -553,8 +547,8 @@ colour=0xFFFFFF
 
 [com_47]
 type=graphic
-x=56
-y=154
+x=10
+y=156
 buttontype=select
 width=36
 height=36
@@ -565,8 +559,8 @@ activegraphic=miscgraphics,9
 
 [com_48]
 type=graphic
-x=98
-y=154
+x=48
+y=156
 buttontype=select
 width=36
 height=36
@@ -577,8 +571,8 @@ activegraphic=miscgraphics,9
 
 [com_49]
 type=text
-x=66
-y=165
+x=19
+y=166
 width=15
 height=14
 font=p12_full
@@ -588,11 +582,68 @@ colour=0xFFFF00
 
 [com_50]
 type=text
-x=106
-y=164
+x=56
+y=166
 width=20
 height=14
 font=p12_full
 shadowed=yes
 text=Off
+colour=0xFFFF00
+
+[com_51]
+type=text
+x=114
+y=138
+width=60
+height=14
+font=p12_full
+shadowed=yes
+text=Accept Aid
+colour=0xFFFFFF
+
+[com_52]
+type=graphic
+x=105
+y=156
+buttontype=select
+width=36
+height=36
+script1op1=pushvar,option_aid
+script1=eq,1
+graphic=miscgraphics,0
+activegraphic=miscgraphics,9
+
+[com_53]
+type=graphic
+x=143
+y=156
+buttontype=select
+width=36
+height=36
+script1op1=pushvar,option_aid
+script1=eq,0
+graphic=miscgraphics,0
+activegraphic=miscgraphics,9
+
+[com_54]
+type=text
+x=113
+y=166
+width=21
+height=14
+font=p12_full
+shadowed=yes
+text=Yes
+colour=0xFFFF00
+
+[com_55]
+type=text
+x=154
+y=166
+width=15
+height=14
+font=p12_full
+shadowed=yes
+text=No
 colour=0xFFFF00

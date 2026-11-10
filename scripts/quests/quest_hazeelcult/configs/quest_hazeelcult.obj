@@ -1,5 +1,5 @@
 [hazeel_scroll]
-name=Scroll of hazeel
+name=Hazeel scroll
 desc=Scroll containing a powerful enchantment of restoration.
 model=inv_scroll
 members=yes
@@ -13,7 +13,7 @@ param=no_alchemy,1
 tradeable=no
 
 [carnilleanchestkey]
-name=Key
+name=Chest key
 desc=This key opens a chest in the Carnillean household.
 members=yes
 model=inv_key
@@ -28,26 +28,24 @@ tradeable=no
 
 [carnillean_armour]
 name=Carnillean armour
-desc=Decorative armour; an heirloom of the Carnillean family.
-cost=65
-model=inv_platemail
 recol1s=15855
 recol1d=19489
 recol2s=10570
 recol2d=20
+desc=Decorative armour; an heirloom of the Carnillean family.
+cost=65
+model=inv_platemail
 members=yes
-2dxof=1
-2dyof=12
-2dzoom=1320
-2dzan=52
-2dxan=464
+2dxof=-1
+2dzoom=1250
+2dxan=488
 iop2=Wear
-wearpos=torso
-wearpos2=arms
 manwear=man_torso_platemail,0
 manwear2=man_arms_platemail
 womanwear=woman_torso_platemail,0
 womanwear2=woman_arms_platemail
+wearpos=torso
+wearpos2=arms
 weight=20lb
 category=armour_body
 param=stabdefence,20
@@ -56,8 +54,8 @@ param=crushdefence,8
 tradeable=no
 
 [mark_of_hazeel]
-name=Mark of hazeel
-desc=Sign of my commitment to Hazeel.
+name=Hazeel's mark
+desc=A sign of my commitment to Hazeel.
 model=inv_markofhazeel
 members=yes
 2dxof=-1
@@ -66,8 +64,8 @@ members=yes
 2dyan=1764
 2dxan=288
 iop2=Wear
-wearpos=front
 manwear=man_necklaces_stylezamarock,0
 womanwear=woman_necklaces_stylezamarock,0
+wearpos=front
 weight=12g
 tradeable=no

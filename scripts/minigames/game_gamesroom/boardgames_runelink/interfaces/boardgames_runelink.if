@@ -546,7 +546,7 @@ shadowed=yes
 text=Insert a very long name here!
 colour=0xFFAA44
 
-[com_68]
+[com_67]
 type=graphic
 x=37
 y=5
@@ -554,7 +554,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_69]
+[com_68]
 type=graphic
 x=37
 y=299
@@ -562,7 +562,7 @@ width=36
 height=36
 graphic=miscgraphics,3
 
-[com_70]
+[com_69]
 type=graphic
 x=12
 y=290
@@ -570,7 +570,7 @@ width=25
 height=30
 graphic=steelborder,2
 
-[com_71]
+[com_70]
 type=graphic
 x=475
 y=20
@@ -578,7 +578,7 @@ width=25
 height=30
 graphic=steelborder,1
 
-[com_72]
+[com_71]
 type=graphic
 x=439
 y=5
@@ -586,7 +586,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_73]
+[com_72]
 type=graphic
 x=475
 y=290
@@ -594,7 +594,7 @@ width=25
 height=30
 graphic=steelborder,3
 
-[com_74]
+[com_73]
 type=graphic
 x=439
 y=299
@@ -602,7 +602,7 @@ width=36
 height=36
 graphic=miscgraphics,3
 
-[com_75]
+[com_74]
 type=text
 x=100
 y=75
@@ -625,7 +625,7 @@ shadowed=yes
 text=Insert a very long name here!
 colour=0xFFAA44
 
-[com_77]
+[com_75]
 type=graphic
 x=183
 y=26
@@ -633,7 +633,7 @@ width=36
 height=36
 graphic=miscgraphics,2
 
-[com_78]
+[com_76]
 type=graphic
 x=183
 y=62
@@ -641,7 +641,7 @@ width=36
 height=36
 graphic=miscgraphics,2
 
-[com_79]
+[com_77]
 type=graphic
 x=183
 y=98
@@ -649,7 +649,7 @@ width=36
 height=36
 graphic=miscgraphics,2
 
-[com_80]
+[com_78]
 type=graphic
 x=183
 y=134
@@ -657,7 +657,7 @@ width=36
 height=36
 graphic=miscgraphics,2
 
-[com_81]
+[com_79]
 type=graphic
 x=183
 y=170
@@ -665,7 +665,7 @@ width=36
 height=36
 graphic=miscgraphics,2
 
-[com_82]
+[com_80]
 type=graphic
 x=162
 y=34
@@ -673,7 +673,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_83]
+[com_81]
 type=graphic
 x=144
 y=34
@@ -681,7 +681,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_84]
+[com_82]
 type=graphic
 x=108
 y=34
@@ -689,7 +689,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_85]
+[com_83]
 type=graphic
 x=72
 y=34
@@ -697,7 +697,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_86]
+[com_84]
 type=graphic
 x=36
 y=34
@@ -705,7 +705,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_87]
+[com_85]
 type=graphic
 x=17
 y=34
@@ -713,7 +713,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_88]
+[com_86]
 type=text
 x=50
 y=122
@@ -734,15 +734,15 @@ height=32
 model=if_sand_timer
 zoom=2048
 
-[com_90]
+[com_87]
 type=layer
 x=26
 y=265
 width=78
 height=42
 
-[com_93]
-layer=com_90
+[com_90]
+layer=com_87
 type=rect
 x=6
 y=6
@@ -751,8 +751,8 @@ width=66
 height=31
 fill=yes
 
-[com_94]
-layer=com_90
+[com_91]
+layer=com_87
 type=text
 x=21
 y=14
@@ -764,8 +764,8 @@ text=Resign
 colour=0x800000
 overcolour=0xFF0000
 
-[com_97]
-layer=com_90
+[com_93]
+layer=com_87
 type=graphic
 x=21
 y=-15
@@ -773,8 +773,8 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_101]
-layer=com_90
+[com_96]
+layer=com_87
 type=graphic
 x=0
 y=0
@@ -782,8 +782,8 @@ width=25
 height=30
 graphic=steelborder,0
 
-[com_103]
-layer=com_90
+[com_98]
+layer=com_87
 type=graphic
 x=53
 y=0
@@ -791,8 +791,8 @@ width=25
 height=30
 graphic=steelborder,1
 
-[com_105]
-layer=com_90
+[com_100]
+layer=com_87
 type=graphic
 x=0
 y=12
@@ -800,8 +800,8 @@ width=25
 height=30
 graphic=steelborder,2
 
-[com_107]
-layer=com_90
+[com_102]
+layer=com_87
 type=graphic
 x=53
 y=12
@@ -809,8 +809,8 @@ width=25
 height=30
 graphic=steelborder,3
 
-[com_108]
-layer=com_90
+[com_103]
+layer=com_87
 type=graphic
 x=21
 y=21
@@ -818,7 +818,7 @@ width=36
 height=36
 graphic=miscgraphics,3
 
-[com_91]
+[com_88]
 type=layer
 x=26
 y=215
@@ -826,7 +826,7 @@ width=78
 height=43
 
 [offer_draw]
-layer=com_91
+layer=com_88
 type=rect
 x=6
 y=6
@@ -836,8 +836,8 @@ height=31
 fill=yes
 option=Offer your opponent a draw
 
-[com_96]
-layer=com_91
+[com_92]
+layer=com_88
 type=text
 x=9
 y=14
@@ -849,8 +849,8 @@ text=Offer draw
 colour=0x888800
 overcolour=0xFFFF00
 
-[com_98]
-layer=com_91
+[com_94]
+layer=com_88
 type=graphic
 x=21
 y=-15
@@ -858,8 +858,8 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_100]
-layer=com_91
+[com_95]
+layer=com_88
 type=graphic
 x=22
 y=21
@@ -867,8 +867,8 @@ width=36
 height=36
 graphic=miscgraphics,3
 
-[com_102]
-layer=com_91
+[com_97]
+layer=com_88
 type=graphic
 x=0
 y=0
@@ -876,8 +876,8 @@ width=25
 height=30
 graphic=steelborder,0
 
-[com_104]
-layer=com_91
+[com_99]
+layer=com_88
 type=graphic
 x=53
 y=0
@@ -885,8 +885,8 @@ width=25
 height=30
 graphic=steelborder,1
 
-[com_106]
-layer=com_91
+[com_101]
+layer=com_88
 type=graphic
 x=0
 y=12
@@ -894,8 +894,8 @@ width=25
 height=30
 graphic=steelborder,2
 
-[com_109]
-layer=com_91
+[com_104]
+layer=com_88
 type=graphic
 x=53
 y=12
@@ -903,7 +903,7 @@ width=25
 height=30
 graphic=steelborder,3
 
-[com_92]
+[com_89]
 type=text
 x=21
 y=29
@@ -925,7 +925,7 @@ shadowed=yes
 text=A very long name
 colour=0xAAAAAA
 
-[com_110]
+[com_105]
 type=model
 x=336
 y=253
@@ -965,7 +965,7 @@ shadowed=yes
 text=Blah blah blah blah blah blah blah!
 colour=0xAAAAAA
 
-[com_114]
+[com_106]
 type=graphic
 x=183
 y=206
@@ -973,7 +973,7 @@ width=36
 height=36
 graphic=miscgraphics,2
 
-[com_115]
+[com_107]
 type=graphic
 x=183
 y=242
@@ -981,7 +981,7 @@ width=36
 height=36
 graphic=miscgraphics,2
 
-[com_116]
+[com_108]
 type=graphic
 x=183
 y=278
@@ -1076,7 +1076,7 @@ shadowed=yes
 text=Blah blah blah blah blah!
 colour=0xAAAAAA
 
-[com_126]
+[com_109]
 type=layer
 x=26
 y=265
@@ -1084,8 +1084,8 @@ width=78
 height=42
 hide=yes
 
-[com_127]
-layer=com_126
+[com_110]
+layer=com_109
 type=rect
 x=6
 y=6
@@ -1094,8 +1094,8 @@ width=66
 height=31
 fill=yes
 
-[com_128]
-layer=com_126
+[com_111]
+layer=com_109
 type=text
 x=23
 y=14
@@ -1107,8 +1107,8 @@ text=Close
 colour=0x800000
 overcolour=0xFF0000
 
-[com_129]
-layer=com_126
+[com_112]
+layer=com_109
 type=graphic
 x=21
 y=-15
@@ -1116,8 +1116,8 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[com_130]
-layer=com_126
+[com_113]
+layer=com_109
 type=graphic
 x=0
 y=0
@@ -1125,8 +1125,8 @@ width=25
 height=30
 graphic=steelborder,0
 
-[com_131]
-layer=com_126
+[com_114]
+layer=com_109
 type=graphic
 x=53
 y=0
@@ -1134,8 +1134,8 @@ width=25
 height=30
 graphic=steelborder,1
 
-[com_132]
-layer=com_126
+[com_115]
+layer=com_109
 type=graphic
 x=0
 y=12
@@ -1143,8 +1143,8 @@ width=25
 height=30
 graphic=steelborder,2
 
-[com_133]
-layer=com_126
+[com_116]
+layer=com_109
 type=graphic
 x=53
 y=12
@@ -1152,8 +1152,8 @@ width=25
 height=30
 graphic=steelborder,3
 
-[com_134]
-layer=com_126
+[com_117]
+layer=com_109
 type=graphic
 x=21
 y=21
@@ -1170,6 +1170,7 @@ height=20
 model=inv_firerune
 zoom=1024
 xan=512
+yan=1024
 
 [p2_rune]
 type=model
@@ -1180,3 +1181,4 @@ height=20
 model=inv_waterrune
 zoom=1024
 xan=512
+yan=1024

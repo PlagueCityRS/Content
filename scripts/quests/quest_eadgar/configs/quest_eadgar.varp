@@ -1,11 +1,11 @@
 [eadgar_quest]
 scope=perm
 
-[eadgar_bits]
+[eadgar_varbit]
 scope=perm
 
-[eadgar_grain]
+[varp_337]
 scope=perm
 
-[eadgar_chickens]
+[varp_338]
 scope=perm

@@ -1,0 +1,9 @@
+[opheld4,bucket_water]
+inv_del(inv, bucket_water, 1);
+inv_add(inv, bucket_empty, 1);
+mes("You empty the contents of the bucket on the floor.");
+
+[opheld4,bucket_milk]
+inv_del(inv, bucket_milk, 1);
+inv_add(inv, bucket_empty, 1);
+mes("You empty the contents of the bucket on the floor.");

@@ -1,0 +1,97 @@
+[secret_ghost_top]
+name=Ghostly robe
+desc=A particularly spooky robe top.
+model=obj_6107
+manwear=obj_6107_manwear,0
+womanwear=obj_6107_womanwear,0
+iop2=Wear
+cost=300
+2dyof=6
+2dzoom=1320
+2dxan=556
+members=yes
+wearpos=torso
+wearpos2=arms
+weight=1lb
+
+[secret_ghost_bottom]
+name=Ghostly robe
+desc=An unearthly set of robe bottoms.
+model=obj_6108
+iop2=Wear
+cost=300
+manwear=obj_6108_manwear,0
+womanwear=obj_6108_womanwear,0
+2dzoom=1980
+2dxan=460
+members=yes
+wearpos=legs
+weight=1lb
+
+[secret_ghost_hat]
+name=Ghostly hood
+desc=A ghostly hood, fit for a ghostly head.
+model=obj_6109
+manwear=obj_6109_manwear,0
+manwear2=obj_6109_manwear2
+womanwear=obj_6109_womanwear,0
+womanwear2=obj_6109_womanwear2
+manhead=obj_6109_manhead
+womanhead=obj_6109_womanhead
+cost=300
+iop2=Wear
+2dyof=-2
+2dzoom=930
+2dyan=52
+2dxan=124
+members=yes
+wearpos=hat
+wearpos2=head
+weight=10g
+
+[secret_ghost_boots]
+name=Ghostly boots
+desc=They seem to be not quite of this world...
+model=obj_6106
+manwear=obj_6106_manwear,0
+womanwear=obj_6106_womanwear,0
+iop2=Wear
+cost=300
+2dxof=3
+2dzoom=880
+2dyan=120
+2dxan=96
+members=yes
+wearpos=feet
+weight=10g
+
+[secret_ghost_gloves]
+name=Ghostly gloves
+desc=They seem to fade in and out of existence...
+cost=300
+model=obj_6110
+iop2=Wear
+manwear=obj_6110_manwear,0
+womanwear=obj_6110_womanwear,0
+2dyof=10
+2dzoom=750
+2dxan=404
+members=yes
+wearpos=hands
+weight=10g
+
+[secret_ghost_cloak]
+name=Ghostly cloak
+cost=250
+desc=Made of a strange ghostly material...
+model=obj_6111
+iop2=Wear
+manwear=obj_6111_manwear,0
+womanwear=obj_6111_womanwear,0
+2dyof=8
+2dzoom=2080
+2dyan=540
+2dxan=448
+members=yes
+wearpos=back
+weight=10g

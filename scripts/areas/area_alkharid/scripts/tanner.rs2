@@ -47,20 +47,6 @@ switch_obj(last_useitem) {
 
 // // https://web.archive.org/web/20040804232357/http://runehq.com/viewcityguide.php?id=00390
 [label,tan_leather_choices]
-// if(npc_type = werewolftanner) {
-//     // use temp var to determine which prices to use after if_button, we dont need npc access so
-//     // this should be fine
-//     %temp = ^true;
-//     if_settext(tanner:tanning_a, "Dragonhides: All 45 gp per hide");
-//     if_settext(tanner:tanning_f, "\\n\\n\\n\\n\\n\\nSoft leather: 2 gp");
-//     // if_settext(tanner:com_101, "\\n\\n\\n\\n\\n\\nHard leather: 5 gp");
-// } else {
-//     %temp = ^false;
-//     if_settext(tanner:tanning_a, "Dragonhides: All 20 gp per hide");
-//     if_settext(tanner:tanning_f, "\\n\\n\\n\\n\\n\\nSoft leather: 1 gp");
-//     // if_settext(tanner:com_101, "\\n\\n\\n\\n\\n\\nHard leather: 3 gp");
-// }
-
 // https://web.archive.org/web/20060507213058/http://runescape.salmoneus.net:80/cities/images/canifistannery.jpg
 if_openmain(tanner);
 if_setobject(tanner:tanning_a_model, cow_hide, 250);
@@ -80,13 +66,27 @@ if_settext(tanner:tanning_f_text, "Blue D'hide");
 if_settext(tanner:tanning_g_text, "Red D'hide");
 if_settext(tanner:tanning_h_text, "Black D'hide");
 
-if_settext(tanner:tanning_a_price, "2 coins");
-if_settext(tanner:tanning_b_price, "5 coins");
-if_settext(tanner:tanning_d_price, "25 coins");
-if_settext(tanner:tanning_e_price, "45 coins");
-if_settext(tanner:tanning_f_price, "45 coins");
-if_settext(tanner:tanning_g_price, "45 coins");
-if_settext(tanner:tanning_h_price, "45 coins");
+if(npc_type = werewolftanner) {
+    // use temp var to determine which prices to use after if_button, we dont need npc access so
+    // this should be fine
+    %temp = ^true;
+    if_settext(tanner:tanning_a_price, "2 coins");
+    if_settext(tanner:tanning_b_price, "5 coins");
+    if_settext(tanner:tanning_d_price, "25 coins");
+    if_settext(tanner:tanning_e_price, "45 coins");
+    if_settext(tanner:tanning_f_price, "45 coins");
+    if_settext(tanner:tanning_g_price, "45 coins");
+    if_settext(tanner:tanning_h_price, "45 coins");
+} else {
+    %temp = ^false;
+    if_settext(tanner:tanning_a_price, "1 coins"); // matches osrs
+    if_settext(tanner:tanning_b_price, "3 coins");
+    if_settext(tanner:tanning_d_price, "15 coins");
+    if_settext(tanner:tanning_e_price, "20 coins");
+    if_settext(tanner:tanning_f_price, "20 coins");
+    if_settext(tanner:tanning_g_price, "20 coins");
+    if_settext(tanner:tanning_h_price, "20 coins");
+}
 
 if (inv_total(inv, cow_hide) = 0 | inv_total(inv, coins) < 2) {
     if_setcolour(tanner:tanning_a_text, ^red_rgb);

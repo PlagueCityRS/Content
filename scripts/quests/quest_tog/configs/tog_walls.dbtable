@@ -1,0 +1,7 @@
+[tog_walls]
+column=index,int,INDEXED,REQUIRED
+column=coord,coord,INDEXED,REQUIRED
+column=angle,int
+column=blue,loc
+column=green,loc
+column=off,loc

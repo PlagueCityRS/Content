@@ -5,6 +5,7 @@ switch_obj (last_useitem)
     case uncut_sapphire, uncut_emerald, uncut_ruby, uncut_diamond, uncut_dragonstone, uncut_opal, uncut_jade, uncut_red_topaz : @crafting_gem(last_useitem);
     case opal, smalloysterpearls, bigoysterpearls : @make_bolt_tips(last_useitem);
     case wolf_bones : @make_wolf_bone_tips;
+    case tog_stone : @tog_make_bowl;
     case zqbonebeads : @craft_ivorybeads;
     case default :
         if(oc_category(last_useitem) = category_3) @craft_snelm(last_useitem);

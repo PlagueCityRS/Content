@@ -1,0 +1,13 @@
+^tog_not_started = 0
+^tog_need_bowl = 1
+^tog_complete = 2
+
+^tog_stream_off = 0
+^tog_stream_blue = 1
+^tog_stream_green = 2
+
+^tog_stream_duration = 16
+^tog_cave_entrance = 2_50_148_51_44
+^tog_cave_inside = 2_50_148_57_45
+^tog_required_questpoints = 43
+^tog_juna_coord = 2_50_148_52_44

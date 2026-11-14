@@ -1,0 +1,218 @@
+[label,tog_minigame_enter]
+if_close;
+%tog_qp_before_return = %qp;
+%tog_tears_collected = 0;
+%tog_minigame_collecting = ^false;
+%tog_time_left_tenths = 10;
+%tog_ticks_left = %qp;
+inv_setslot(worn, ^wearpos_rhand, tog_bowl, 1);
+~update_bas;
+~tog_minigame_tabs;
+p_delay(0);
+~forcewalk2(^tog_cave_entrance);
+facesquare(^tog_juna_coord);
+if (loc_find(^tog_juna_coord, tog_juna) = true) {
+    loc_anim(tog_snake_openclose);
+}
+p_delay(1);
+p_exactmove(coord, movecoord(^tog_cave_entrance, 2, 0, 0), 0, 60, ^exact_east);
+p_delay(2);
+p_exactmove(coord, movecoord(coord, 0, 0, 1), 0, 30, ^exact_north);
+p_delay(1);
+p_exactmove(coord, ^tog_cave_inside, 0, 120, ^exact_east);
+p_delay(4);
+settimer(tog_minigame, 1);
+
+[proc,tog_minigame_tabs]
+if_settab(null, 0);
+if_settab(null, 1);
+if_settab(null, 2);
+if_settab(null, 4);
+if_settab(null, 5);
+if_settab(null, 6);
+if_settab(null, 11);
+if_settab(null, 12);
+if_settab(tog_sidepanel, ^tab_inventory);
+if_settabactive(^tab_inventory);
+
+[timer,tog_minigame]
+if (inzone(2_50_148_53_41, 2_50_148_62_50, coord) = false) {
+    cleartimer(tog_minigame);
+    ~tog_minigame_reset;
+    return;
+}
+if (getqueue(tog_collect) = 0) {
+    %tog_minigame_collecting = ^false;
+}
+%tog_ticks_left = sub(%tog_ticks_left, 1);
+%tog_time_left_tenths = min(10, calc((%tog_ticks_left * 10 + %tog_qp_before_return - 1) / max(1, %tog_qp_before_return)));
+if (%tog_ticks_left > 0) {
+    return;
+}
+cleartimer(tog_minigame);
+queue(tog_minigame_end, 0, 0);
+
+[oploc1,tog_weepingwall]
+if (%tog_ticks_left <= 0) {
+    mes("You need a bowl to collect the tears.");
+    return;
+}
+%tog_collect_wall = loc_coord;
+%tog_minigame_collecting = ^true;
+anim(tog_lean_forward_bowl, 0);
+weakqueue(tog_collect, 1, 0);
+
+[queue,tog_collect]
+if (%tog_ticks_left <= 0) {
+    %tog_minigame_collecting = ^false;
+    return;
+}
+db_find(tog_walls:coord, %tog_collect_wall);
+def_dbrow $wall = db_findnext;
+if ($wall = null) {
+    return;
+}
+if (loc_find(%tog_collect_wall, db_getfield($wall, tog_walls:blue, 0)) = true) {
+    %tog_tears_collected = min(511, add(%tog_tears_collected, 1));
+} else if (loc_find(%tog_collect_wall, db_getfield($wall, tog_walls:green, 0)) = true) {
+    %tog_tears_collected = max(0, sub(%tog_tears_collected, 1));
+}
+weakqueue(tog_collect, 1, 0);
+
+[queue,tog_minigame_end]
+clearqueue(tog_collect);
+%tog_minigame_collecting = ^false;
+anim(tog_lean_back_bowl, 0);
+mes("Your time in the cave is up.");
+p_delay(0);
+~forcewalk2(movecoord(^tog_juna_coord, 1, 0, 1));
+p_exactmove(coord, movecoord(^tog_juna_coord, 1, 0, 0), 0, 30, ^exact_south);
+p_delay(1);
+facesquare(^tog_cave_entrance);
+if (loc_find(^tog_juna_coord, tog_juna) = true) {
+    loc_anim(tog_snake_openclose);
+}
+p_delay(1);
+p_exactmove(coord, ^tog_cave_entrance, 0, 60, ^exact_west);
+p_delay(2);
+mes("You drink the liquid...");
+anim(tog_drink_bowl, 0);
+p_delay(3);
+~tog_minigame_reward;
+%tog_last_visit_day = calc(date_minutes / 1440);
+~tog_minigame_reset;
+
+[proc,tog_minigame_reward]
+def_stat $lowest = null;
+def_stat $stat;
+def_int $i = 0;
+while ($i < enum_getoutputcount(tog_reward_stats)) {
+    $stat = enum(int, stat, tog_reward_stats, $i);
+    if ($stat = runecraft & %runemysteries < ^runemysteries_complete) {
+        $stat = null;
+    } else if ($stat = herblore & %druidquest < ^druid_complete) {
+        $stat = null;
+    }
+    if ($stat ! null) {
+        if ($lowest = null) {
+            $lowest = $stat;
+        } else if (stat_base($stat) < stat_base($lowest)) {
+            $lowest = $stat;
+        }
+    }
+    $i = add($i, 1);
+}
+if ($lowest = null) {
+    return;
+}
+mes(enum(stat, string, tog_reward_messages, $lowest));
+if (%tog_tears_collected > 0) {
+    stat_advance($lowest, multiply(%tog_tears_collected, enum(int, int, tog_level_experience, stat_base($lowest))));
+}
+
+[proc,tog_minigame_reset]
+clearqueue(tog_collect);
+%tog_ticks_left = 0;
+%tog_tears_collected = 0;
+%tog_time_left_tenths = 0;
+%tog_minigame_collecting = ^false;
+if (inv_getobj(worn, ^wearpos_rhand) = tog_bowl) {
+    inv_delslot(worn, ^wearpos_rhand);
+}
+inv_del(inv, tog_bowl, inv_total(inv, tog_bowl));
+~update_bas;
+~initalltabs;
+
+[proc,tog_minigame_mapzone]
+if (inzone(2_50_148_53_41, 2_50_148_62_50, coord) = true & %tog_ticks_left <= 0) {
+    ~tog_minigame_reset;
+    p_teleport(^tog_cave_entrance);
+}
+
+[ai_timer,tog_juna_dummy]
+def_int $clock = %tog_stream_clock;
+if ($clock = 0) {
+    %tog_stream_wall0 = 1;
+    %tog_stream_wall1 = 2;
+    %tog_stream_wall2 = 3;
+    %tog_stream_wall3 = 4;
+    %tog_stream_wall4 = 5;
+    %tog_stream_wall5 = 6;
+}
+%tog_stream_clock = add($clock, 1);
+switch_int (modulo($clock, ^tog_stream_duration)) {
+    case 0 : %tog_stream_wall0 = ~tog_stream_move(%tog_stream_wall0, ^tog_stream_green);
+    case 3 : %tog_stream_wall1 = ~tog_stream_move(%tog_stream_wall1, ^tog_stream_green);
+    case 5 : %tog_stream_wall2 = ~tog_stream_move(%tog_stream_wall2, ^tog_stream_green);
+    case 8 : %tog_stream_wall3 = ~tog_stream_move(%tog_stream_wall3, ^tog_stream_blue);
+    case 11 : %tog_stream_wall4 = ~tog_stream_move(%tog_stream_wall4, ^tog_stream_blue);
+    case 13 : %tog_stream_wall5 = ~tog_stream_move(%tog_stream_wall5, ^tog_stream_blue);
+}
+
+[proc,tog_stream_move](int $current, int $colour)(int)
+def_int $free_count = 0;
+def_int $wall = 1;
+while ($wall <= 9) {
+    if (~tog_stream_occupied($wall) = false) {
+        $free_count = add($free_count, 1);
+    }
+    $wall = add($wall, 1);
+}
+def_int $pick = random($free_count);
+def_int $target = 0;
+$wall = 1;
+while ($wall <= 9 & $target = 0) {
+    if (~tog_stream_occupied($wall) = false) {
+        if ($pick = 0) {
+            $target = $wall;
+        }
+        $pick = sub($pick, 1);
+    }
+    $wall = add($wall, 1);
+}
+if ($target = 0) {
+    return($current);
+}
+~tog_wall_set($current, ^tog_stream_off);
+~tog_wall_set($target, $colour);
+return($target);
+
+[proc,tog_stream_occupied](int $wall)(boolean)
+if (%tog_stream_wall0 = $wall | %tog_stream_wall1 = $wall | %tog_stream_wall2 = $wall | %tog_stream_wall3 = $wall | %tog_stream_wall4 = $wall | %tog_stream_wall5 = $wall) {
+    return(true);
+}
+return(false);
+
+[proc,tog_wall_set](int $wall, int $colour)
+db_find(tog_walls:index, $wall);
+def_dbrow $row = db_findnext;
+if ($row = null) {
+    return;
+}
+def_loc $type = db_getfield($row, tog_walls:off, 0);
+if ($colour = ^tog_stream_blue) {
+    $type = db_getfield($row, tog_walls:blue, 0);
+} else if ($colour = ^tog_stream_green) {
+    $type = db_getfield($row, tog_walls:green, 0);
+}
+loc_add(db_getfield($row, tog_walls:coord, 0), $type, db_getfield($row, tog_walls:angle, 0), walldecor_straight_nooffset, 6000);

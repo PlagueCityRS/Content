@@ -1,8 +1,9 @@
 ^tanner_soft_leather_cost = 1
 ^tanner_hard_leather_cost = 3
-^tanner_snakehide_cost = 25
-^tanner_dragonhide_cost = 45
+^tanner_snakehide_cost = 15
+^tanner_dragonhide_cost = 20
 
 ^werewolftanner_soft_leather_cost = 2
 ^werewolftanner_hard_leather_cost = 5
+^werewolftanner_snakehide_cost = 25
 ^werewolftanner_dragonhide_cost = 45

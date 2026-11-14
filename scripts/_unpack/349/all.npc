@@ -26287,6 +26287,7 @@ model2=npc_2809i2
 model3=npc_2809i3
 head1=npc_2809_head
 wanderrange=5
+moverestrict=outdoors
 
 [elly_the_camel]
 name=Elly the Camel
@@ -26573,6 +26574,7 @@ recol5s=24075
 recol5d=15652
 recol6s=32735
 recol6d=13539
+moverestrict=indoors
 
 [deal_pete]
 name=Pirate Pete

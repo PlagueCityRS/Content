@@ -242,10 +242,9 @@ if (inv_total(inv, coins) < $cost & $hides > $hides_to_be_tanned) {
 }
 
 [label,tan_snakeskin](int $count)
-
 def_int $total_snake_hides = min($count, inv_total(inv, village_snake_hide));
-def_int $cost = ^tanner_dragonhide_cost;
-if(%temp = ^true) $cost = ^werewolftanner_dragonhide_cost;
+def_int $cost = ^tanner_snakehide_cost;
+if(%temp = ^true) $cost = ^tanner_snakehide_cost;
 if ($total_snake_hides < 1) {
     mes("You don't have any snake hides to tan."); // osrs
     return;

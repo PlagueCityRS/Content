@@ -19,35 +19,14 @@ if (~duel_arena_prayer_check = false) {
 }
 return(true);
 
-
-[proc,display_headicons](int $prayer)
-def_int $current_headicon = headicons_get;
-def_int $headicon = enum(int, int, prayer_headicons, $prayer);
-
-if ($current_headicon = $headicon) {
-    switch_int($prayer) {
-        case ^prayer_protectfrommelee : return(~headicon_set(^headicon_none));
-        case ^prayer_protectfrommagic : return(~headicon_set(^headicon_none));
-        case ^prayer_protectfrommissiles : return(~headicon_set(^headicon_none));
-    }
-    return;
-}
-
-switch_int($prayer) {
-    case ^prayer_protectfrommelee : return(~headicon_set(^headicon_prayer_protectfrommelee));
-    case ^prayer_protectfrommagic : return(~headicon_set(^headicon_prayer_protectfrommagic));
-    case ^prayer_protectfrommissiles : return(~headicon_set(^headicon_prayer_protectfromrange));
-}
-
 [proc,prayer_activate](dbrow $data)
 ~prayer_deactivate_conflicting($data);
 sound_synth(db_getfield($data, prayers:sound, 0), 0, 0);
-
-def_int $prayer = db_getfield($data, prayers:prayer, 0);
-
 // activate headicon
-~display_headicons($prayer);
-
+def_int $headicon = enum(int, int, prayer_headicons, db_getfield($data, prayers:prayer, 0));
+if ($headicon > -1) {
+    ~headicon_set($headicon);
+}
 //https://www.youtube.com/watch?v=cVisNIAVvfk&t=169s 
 //https://twitter.com/JagexAsh/status/1646903747837059072
 if (gettimer(prayer_drain) < 1) {
@@ -65,8 +44,10 @@ sound_synth(cancel_prayer, 1, 0);
 if (~prayers_are_active = false) {
     cleartimer(prayer_drain);
 }
-
-~display_headicons($prayer);
+def_int $headicon = enum(int, int, prayer_headicons, $prayer);
+if ($headicon > -1) {
+    ~headicon_set(^headicon_none);
+}
 
 ~player_combat_stat; // THIS IS VERY IMPORTANT
 
@@ -127,7 +108,10 @@ switch_int($prayer) {
         if (%prayer14 = ^true) %prayer_drain_effect = sub(%prayer_drain_effect, $drain);
         %prayer14 = ^false;
 }
-~display_headicons($prayer);
+def_int $headicon = enum(int, int, prayer_headicons, $prayer);
+if ($headicon > -1) {
+    ~headicon_set($headicon);
+}
 
 if (~prayers_are_active = false) {
     cleartimer(prayer_drain);

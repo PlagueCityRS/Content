@@ -55,3 +55,18 @@ param=defend_anim,human_sword_def
 param=slash_sound,sickle_slash
 param=stab_sound,sickle_stab
 param=crafting_jewelry_struct,silver_sickle
+
+[tiara]
+name=Tiara
+desc=Makes me feel like a Princess.
+model=obj_5525
+iop2=Wear
+2dyof=-25
+2dzoom=480
+2dxan=232
+manwear=obj_5525_manwear,0
+womanwear=obj_5525_womanwear,0
+manhead=obj_5525_manhead
+womanhead=obj_5525_manhead
+cost=100
+param=crafting_jewelry_struct,tiara

@@ -271,23 +271,100 @@ sound_synth(furnace, 1, 0);
 p_delay(2);
 ~crafting_gold($product, $gem, $productexp, $count);
 
-
-[label,craft_silver]
-def_namedobj $product;
-def_int $count;
-// https://web.archive.org/web/20060111201853im_/http://www.runeweb.net/Roth/Creature_Quest/10.PNG
-// should prob always show holy/unholy and show others depending on inv moulds?
-if(inv_total(inv, sickle_mould) > 0 & map_members = ^true) {
-    $product, $count = ~skill_multi3(nostringsnake, 0, -10, 175, "\\n\\n\\n\\nSymbol of Zamorak",
-       nostringstar, 0, -10, 175, "\\n\\n\\n\\nSymbol of Saradomin",
-       silver_sickle, 0, -15, 175, "\\n\\n\\n\\n@blu@Silver sickle"
-    );
+// I'm guessing the zoom is 100. In 2007 the zoom was definitely larger,
+// https://youtu.be/WJ2gW6dx_vo?t=109
+// However, our interface uses invs for the display of items when you have the mould
+// the size 100 makes everything consistent. Additionally, we would have to manually
+// reposition each mould for the zoom from that video to work properly.
+[label,display_silver_crafting_if]
+if (inv_total(inv, holy_symbol_mould) = 0) {
+    if_sethide(crafting_silver_casting:com_90, true);
+    if_sethide(crafting_silver_casting:com_93, false);
+    if_setobject(crafting_silver_casting:com_94, holy_symbol_mould, 100);
 } else {
-    $product, $count = ~skill_multi2(nostringsnake, 0, -10, 175, "\\n\\n\\n\\nSymbol of Zamorak",
-       nostringstar, 0, -10, 175, "\\n\\n\\n\\nSymbol of Saradomin"
-    );
+    if_sethide(crafting_silver_casting:com_90, false);
+    if_sethide(crafting_silver_casting:com_93, true);
+    inv_transmit(silvercast_holysymbol, crafting_silver_casting:com_91);
 }
 
+if(inv_total(inv, unholy_symbol_mould) = 0) {
+    if_sethide(crafting_silver_casting:com_97, true);
+    if_sethide(crafting_silver_casting:com_100, false);
+    if_setobject(crafting_silver_casting:com_101, unholy_symbol_mould, 100);
+} else {
+    if_sethide(crafting_silver_casting:com_97, false);
+    if_sethide(crafting_silver_casting:com_100, true);
+    inv_transmit(silvercast_unholysymbol, crafting_silver_casting:com_98);
+}
+
+if (inv_total(inv, sickle_mould) = 0) {
+    if_sethide(crafting_silver_casting:silvercast_sickle, true);
+    if_sethide(crafting_silver_casting:com_107, false);
+    if_setobject(crafting_silver_casting:com_108, sickle_mould, 100);
+} else {
+    if_sethide(crafting_silver_casting:silvercast_sickle, false);
+    if_sethide(crafting_silver_casting:com_107, true);
+    inv_transmit(silvercast_sickle, crafting_silver_casting:com_105);
+}
+
+if (inv_total(inv, fenk_lightning_mould) = 0) {
+    if_sethide(crafting_silver_casting:silvercast_lightning, true);
+    if_sethide(crafting_silver_casting:com_114, false);
+    if_setobject(crafting_silver_casting:com_115, fenk_lightning_mould, 100);
+} else {
+    if_sethide(crafting_silver_casting:silvercast_lightning, false);
+    if_sethide(crafting_silver_casting:com_114, true);
+    inv_transmit(silvercast_lightning, crafting_silver_casting:com_112);
+}
+
+if (inv_total(inv, tiara_mould) = 0) {
+    if_sethide(crafting_silver_casting:silvercast_tiara, true);
+    if_sethide(crafting_silver_casting:com_121, false);
+    if_setobject(crafting_silver_casting:com_122, tiara_mould, 100);
+} else {
+    if_sethide(crafting_silver_casting:silvercast_tiara, false);
+    if_sethide(crafting_silver_casting:com_121, true);
+    inv_transmit(silvercast_tiara, crafting_silver_casting:com_119);
+}
+
+if (inv_total(inv, agrith_sigil_mould) = 0) {
+    if_sethide(crafting_silver_casting:silvercast_agrith, true);
+    if_sethide(crafting_silver_casting:com_129, false);
+    if_setobject(crafting_silver_casting:com_130, agrith_sigil_mould, 100);
+} else {
+    if_sethide(crafting_silver_casting:silvercast_agrith, false);
+    if_sethide(crafting_silver_casting:com_129, true);
+    inv_transmit(silvercast_agrith, crafting_silver_casting:com_127);
+}
+
+if_openmain(crafting_silver_casting);
+
+[inv_button1,crafting_silver_casting:com_91] @craft_silver(nostringstar, 1);
+[inv_button2,crafting_silver_casting:com_91] @craft_silver(nostringstar, 5);
+[inv_button3,crafting_silver_casting:com_91] @craft_silver(nostringstar, 10);
+
+[inv_button1,crafting_silver_casting:com_98] @craft_silver(nostringsnake, 1);
+[inv_button2,crafting_silver_casting:com_98] @craft_silver(nostringsnake, 5);
+[inv_button3,crafting_silver_casting:com_98] @craft_silver(nostringsnake, 10);
+
+[inv_button1,crafting_silver_casting:com_105] @craft_silver(silver_sickle, 1);
+[inv_button2,crafting_silver_casting:com_105] @craft_silver(silver_sickle, 5);
+[inv_button3,crafting_silver_casting:com_105] @craft_silver(silver_sickle, 10);
+
+[inv_button1,crafting_silver_casting:com_112] @craft_silver(fenk_conductor, 1);
+[inv_button2,crafting_silver_casting:com_112] @craft_silver(fenk_conductor, 5);
+[inv_button3,crafting_silver_casting:com_112] @craft_silver(fenk_conductor, 10);
+
+[inv_button1,crafting_silver_casting:com_119] @craft_silver(tiara, 1);
+[inv_button2,crafting_silver_casting:com_119] @craft_silver(tiara, 5);
+[inv_button3,crafting_silver_casting:com_119] @craft_silver(tiara, 10);
+
+[inv_button1,crafting_silver_casting:com_127] @craft_silver(agrith_sigil, 1);
+[inv_button2,crafting_silver_casting:com_127] @craft_silver(agrith_sigil, 5);
+[inv_button3,crafting_silver_casting:com_127] @craft_silver(agrith_sigil, 10);
+
+[label,craft_silver](namedobj $product, int $count)
+if_close;
 if($count = 0) {
     return;
 }
@@ -320,7 +397,7 @@ if (afk_event = ^true) {
 [label,process_craft_silver](struct $struct, namedobj $product, int $count)
 anim(human_furnace, 0);
 sound_synth(furnace, 1, 0);
-// initial is 2t, afterwards is 3t cause processing order, not action_delay dependennt
+// initial is 2t, afterwards is 3t cause processing order, not action_delay dependent
 weakqueue*(craft_silver, 2)($struct, $product, $count);
 
 [queue,craft_silver](struct $struct, namedobj $product, int $count)
@@ -332,6 +409,9 @@ if(inv_total(inv, silver_bar) = 0) {
 inv_del(inv, silver_bar, 1);
 inv_add(inv, $product, 1);
 stat_advance(crafting, struct_param($struct, productexp));
+// By the end of 2005 I'm not sure if it's accurate to have a message when crafting.
+// The above video unfortunately waits to long for the display. The message is gone
+// 2009 however.
 // Confirmed, no period at the end. https://i.imgur.com/sCKRVO9.png
 mes("You make <~add_article(struct_param($struct, name))>");
 if(sub($count, 1) < 1) {

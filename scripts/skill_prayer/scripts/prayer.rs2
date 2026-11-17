@@ -24,7 +24,9 @@ return(true);
 sound_synth(db_getfield($data, prayers:sound, 0), 0, 0);
 // activate headicon
 def_int $headicon = enum(int, int, prayer_headicons, db_getfield($data, prayers:prayer, 0));
-~headicon_set($headicon);
+if ($headicon > -1) {
+    ~headicon_set($headicon);
+}
 //https://www.youtube.com/watch?v=cVisNIAVvfk&t=169s 
 //https://twitter.com/JagexAsh/status/1646903747837059072
 if (gettimer(prayer_drain) < 1) {
@@ -43,7 +45,9 @@ if (~prayers_are_active = false) {
     cleartimer(prayer_drain);
 }
 def_int $headicon = enum(int, int, prayer_headicons, $prayer);
-~headicon_set(^headicon_none);
+if ($headicon > -1) {
+    ~headicon_set(^headicon_none);
+}
 
 ~player_combat_stat; // THIS IS VERY IMPORTANT
 
@@ -105,7 +109,9 @@ switch_int($prayer) {
         %prayer14 = ^false;
 }
 def_int $headicon = enum(int, int, prayer_headicons, $prayer);
-~headicon_set($headicon);
+if ($headicon > -1) {
+    ~headicon_set($headicon);
+}
 
 if (~prayers_are_active = false) {
     cleartimer(prayer_drain);

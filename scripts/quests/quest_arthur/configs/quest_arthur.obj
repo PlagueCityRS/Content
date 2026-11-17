@@ -10,6 +10,9 @@ model=inv_candle-lit
 2dzoom=570
 2dyan=1864
 2dxan=168
+weight=1oz
+category=light_source_lit
+param=next_obj_stage,unlit_black_candle
 iop1=Extinguish
 tradeable=no
 
@@ -25,6 +28,7 @@ model=inv_candle-lit
 2dxan=168
 iop1=Extinguish
 category=light_source_lit
+param=next_obj_stage,unlit_candle
 tradeable=no
 
 [cert_lit_candle]

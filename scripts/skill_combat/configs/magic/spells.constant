@@ -31,6 +31,7 @@
 ^bind = 46
 ^snare = 47
 ^entangle = 48
+^tele_block = 55
 
 //utility
 ^enchant_lvl1 = 22
@@ -55,6 +56,9 @@
 ^ardougne_teleport = 49
 ^lumbridge_teleport = 50
 ^trollheim_teleport = 52
+^teleother_lumbridge = 53
+^teleother_falador = 54
+^teleother_camelot = 56
 
 // npc spells
 ^skeleton_mage_attack = 100

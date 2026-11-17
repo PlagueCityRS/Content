@@ -9,7 +9,7 @@ if(%mm_karam = ^karam_spoken) {
 }
 ~chatplayer("<p,quiz>Hello? Is anybody there?");
 ~chatnpc("<p,neutral>That depends on who is asking...");
-~chatplayer("<p,neutral>I am in the service of King Narnode Shareen. I have been sent here to locate the missing 10th squad of the Royal Guard.");
+~chatplayer("<p,neutral>I am in the service of King Narnode Shareen.|I have been sent here to locate the missing|10th squad of the Royal Guard.");
 ~chatnpc("<p,neutral>I see. As you can see, this is a dangerous place to be.");
 ~chatplayer("<p,neutral>It certainly is ... who are you?");
 ~chatnpc("<p,neutral>Karam, 10th squad, Royal Guard. High Assassin at your service.");

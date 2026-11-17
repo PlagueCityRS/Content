@@ -13918,6 +13918,7 @@ param=shop_sell_multiplier,1200
 param=shop_buy_multiplier,600
 param=shop_delta,30
 param=shop_title,Draynor Seed Market.
+members=yes
 wanderrange=0
 maxrange=5
 
@@ -13951,6 +13952,7 @@ recol4s=4192
 recol4d=8388
 recol5s=32735
 recol5d=15817
+members=yes
 wanderrange=5
 maxrange=10
 
@@ -13982,6 +13984,7 @@ recol4s=6273
 recol4d=28299
 recol5s=0
 recol5d=12485
+members=yes
 wanderrange=5
 maxrange=10
 
@@ -14029,6 +14032,7 @@ param=defend_anim,human_sword_def
 param=attack_sound,stabsword_crush
 param=defend_sound,human_block_1
 param=market_guard,1
+members=yes
 
 [lumbridge_guide2_man]
 walkanim=human_halberdwalk_f,human_halberdwalk_b,human_halberdwalk_l,human_halberdwalk_r
@@ -16057,6 +16061,7 @@ recol3s=24075
 recol3d=29362
 recol4s=6273
 recol4d=23937
+members=yes
 wanderrange=0
 
 [dantaera]
@@ -16083,6 +16088,7 @@ recol3s=6273
 recol3d=27342
 recol4s=14801
 recol4d=24075
+members=yes
 wanderrange=0
 maxrange=5
 
@@ -16115,6 +16121,7 @@ recol4s=6273
 recol4d=11588
 recol5s=6144
 recol5d=12580
+members=yes
 wanderrange=0
 
 [lyra]
@@ -16146,6 +16153,7 @@ recol5s=14764
 recol5d=11723
 recol6s=16878
 recol6d=13837
+members=yes
 wanderrange=0
 
 [francis]
@@ -16173,6 +16181,7 @@ recol3s=6273
 recol3d=17932
 recol4s=14801
 recol4d=24075
+members=yes
 wanderrange=0
 
 [npc_2328]
@@ -16195,6 +16204,7 @@ recol3s=352
 recol3d=10528
 recol4s=13728
 recol4d=6274
+members=yes
 
 [iago]
 name=Iago
@@ -16227,6 +16237,7 @@ recol5s=32702
 recol5d=29525
 recol6s=6144
 recol6d=25297
+members=yes
 
 [farming_gardener_fruit_3]
 name=Garth
@@ -16259,6 +16270,7 @@ recol5s=14801
 recol5d=24075
 recol6s=24452
 recol6d=12617
+members=yes
 wanderrange=0
 
 [farming_gardener_fruit_4]
@@ -16290,6 +16302,7 @@ recol5s=5299
 recol5d=19946
 recol6s=6341
 recol6d=16775
+members=yes
 wanderrange=0
 
 [farming_gardener_hops_1]
@@ -16319,6 +16332,7 @@ recol4s=14801
 recol4d=24075
 recol5s=6144
 recol5d=7328
+members=yes
 wanderrange=0
 
 [farming_gardener_hops_3]
@@ -16351,6 +16365,7 @@ recol4s=14801
 recol4d=24075
 recol5s=6144
 recol5d=7328
+members=yes
 wanderrange=0
 
 [farming_gardener_hops_4]
@@ -16383,6 +16398,7 @@ recol5s=6144
 recol5d=9445
 recol6s=14801
 recol6d=24075
+members=yes
 wanderrange=0
 
 [farming_gardener_bush_1]
@@ -16416,6 +16432,7 @@ recol5s=24075
 recol5d=25133
 recol6s=6273
 recol6d=10433
+members=yes
 wanderrange=0
 
 [farming_gardener_bush_2]
@@ -16476,6 +16493,7 @@ recol3s=2340
 recol3d=5314
 recol4s=6144
 recol4d=6274
+members=yes
 wanderrange=0
 
 [farming_gardener_bush_4]
@@ -16503,6 +16521,7 @@ recol3s=6144
 recol3d=12516
 recol4s=14801
 recol4d=24075
+members=yes
 wanderrange=0
 
 [farming_gardener_tree_1]
@@ -16534,6 +16553,7 @@ recol5s=6144
 recol5d=6307
 recol6s=24075
 recol6d=21961
+members=yes
 wanderrange=0
 
 [farming_gardener_tree_2]
@@ -16564,6 +16584,7 @@ recol5s=6144
 recol5d=6272
 recol6s=24329
 recol6d=6272
+members=yes
 wanderrange=0
 
 [farming_gardener_tree_3]
@@ -16588,6 +16609,7 @@ recol2s=14724
 recol2d=8353
 recol3s=15855
 recol3d=8354
+members=yes
 wanderrange=0
 
 [farming_gardener_tree_4]
@@ -16618,6 +16640,7 @@ recol5s=24075
 recol5d=25166
 recol6s=24329
 recol6d=5216
+members=yes
 wanderrange=0
 
 [farming_gardener_fruit_1]
@@ -16641,6 +16664,7 @@ recol4s=13728
 recol4d=8353
 recol5s=6144
 recol5d=8353
+members=yes
 wanderrange=0
 
 [farming_gardener_fruit_2]
@@ -16659,6 +16683,7 @@ model6=obj_5331_manwear
 model7=woman_legs_longskirt
 model8=obj_5345_womanwear
 head1=chat_female_head_longhair
+members=yes
 wanderrange=0
 
 [herder_plaguesheep_1]
@@ -21115,6 +21140,7 @@ recol3s=15855
 recol3d=15755
 recol4s=31649
 recol4d=15655
+members=yes
 maxrange=10
 
 [wom_olivia]
@@ -26666,6 +26692,7 @@ model2=npc_2809i2
 model3=npc_2809i3
 head1=npc_2809_head
 wanderrange=5
+moverestrict=outdoors
 
 [elly_the_camel]
 name=Elly the Camel
@@ -26952,6 +26979,7 @@ recol5s=24075
 recol5d=15652
 recol6s=32735
 recol6d=13539
+moverestrict=indoors
 
 [deal_pete]
 name=Pirate Pete

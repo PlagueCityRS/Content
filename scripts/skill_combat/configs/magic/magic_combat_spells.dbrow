@@ -610,3 +610,20 @@ data=sound_success,flames_of_zamorak
 data=sound_fail,flames_of_zamorak_fail
 data=continue_by_autocast,true
 data=maxhit,20
+
+[magic_spell_tele_block]
+table=magic_spell_table
+data=spell,^tele_block
+data=spellcom,magic:teleport_block
+data=name,Tele Block
+data=members,true
+data=levelrequired,85
+data=runesrequired,chaosrune,1,deathrune,1,lawrune,1
+data=experience,836
+data=anim,human_casting_tele_block
+data=staffanim,human_casting_tele_block_staff
+data=spotanim_target,tele_block_impact,0
+data=sound_success,teleportblock_cast
+// data=sound_impact,teleportblock_impact
+data=sound_fail,spellfail
+data=continue_by_autocast,false

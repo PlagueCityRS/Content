@@ -420,7 +420,7 @@ if (divide(%misc_affection, 10) = ^misc_affection_s2_base) {
     }
 }
 
-if (%misc_affection = ^misc_affection_s3_step4 & %misc_s3_d1 = 1 & %misc_s3_d2 = 1 & %misc_s3_d3 = 1 & %misc_s3_emote = 1) {
+if (%misc_affection > ^misc_affection_s3_step3 & %misc_s3_d1 = 1 & %misc_s3_d2 = 1 & %misc_s3_d3 = 1 & %misc_s3_emote = 1) {
     if ($item = gold_ring | $item = sapphire_ring | $item = emerald_ring | $item = ruby_ring | $item = diamond_ring | 
         $item = dragonstone_ring | $item = ring_of_life | $item = ring_of_wealth) {
         ~chatnpc("<p,happy>Is this for me? Really?");
@@ -464,15 +464,17 @@ if (gender = ^gender_male | %misc_affection = ^misc_affection_not_started) {
     switch_seq ($anim) {
         case emote_bow, emote_wave : ~chatnpc("<p,neutral>Hello!");
         case emote_angry, emote_cry : ~chatnpc("<p,confused>What's wrong, Madam?");
-        case emote_cheer, emote_clap : ~chatnpc("<p,happy>Thank you. It's nice to be appreciated.");
+        case emote_cheer, emote_clap : {
+            if(%misc_s1_emote = ^false) {
+                %misc_s1_emote = 1;
+                %misc_affection = add(%misc_affection, 1); 
+            }
+            ~chatnpc("<p,happy>Thank you. It's nice to be appreciated.");
+        }
         case emote_beckon : ~chatnpc("<p,neutral>I'm staying right here.");
         case emote_laugh : ~chatnpc("<p,confused>What's so funny, Madam?");
         case emote_glass_box, emote_climbing_rope, emote_mime_lean, emote_glass_wall : ~chatnpc("<p,laugh>You are silly!");
-        case emote_dance : {
-            %misc_s1_emote = 1;
-            %misc_affection = add(%misc_affection, 1); 
-            ~chatnpc("<p,quiz>You dance well, Madam.");
-        }
+        case emote_dance : ~chatnpc("<p,quiz>You dance well, Madam.");
         case emote_blow_kiss : ~chatnpc("<p,shock>Let's not get ahead of ourselves now, Madam?");
     }
 } else if (divide(%misc_affection, 10) = ^misc_affection_s2_base) {
@@ -498,7 +500,7 @@ if (gender = ^gender_male | %misc_affection = ^misc_affection_not_started) {
         case emote_blow_kiss : {
             if(%misc_s3_emote = ^false) {
                 %misc_s3_emote = 1;
-                if(%misc_affection < ^misc_affection_complete_base) %misc_affection = add(%misc_affection, 1);
+                %misc_affection = add(%misc_affection, 1);
             }
             ~chatnpc("<p,happy>You flatter me, my darling.");
         }

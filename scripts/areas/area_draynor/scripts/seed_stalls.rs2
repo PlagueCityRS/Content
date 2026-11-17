@@ -1,0 +1,5 @@
+[oploc2,seed_stall]
+if (map_members = ^false) {
+    mes(^mes_members_thieving);
+    return;
+}

@@ -390,7 +390,7 @@ if (divide(%misc_affection, 10) = ^misc_affection_s2_base) {
     }
 }
 
-if (%misc_affection = ^misc_affection_s3_step4 & %misc_s3_d1 = 1 & %misc_s3_d2 = 1 & %misc_s3_d3 = 1 & %misc_s3_emote = 1) {
+if (%misc_affection > ^misc_affection_s3_step3 & %misc_s3_d1 = 1 & %misc_s3_d2 = 1 & %misc_s3_d3 = 1 & %misc_s3_emote = 1) {
     if ($item = gold_ring | $item = sapphire_ring | $item = emerald_ring | $item = ruby_ring | $item = diamond_ring | $item = ring_of_life) {
         ~chatnpc("<p,happy>Is this for me? Really?");
         $op = ~p_choice2("Yes", 1, "No", 2);
@@ -440,8 +440,13 @@ if (gender = ^gender_female | %misc_affection = ^misc_affection_not_started) {
         case emote_laugh : ~chatnpc("<p,neutral>What's so funny, Sir?");
         case emote_glass_box, emote_climbing_rope, emote_mime_lean, emote_glass_wall : ~chatnpc("<p,neutral>You are silly!");
         case emote_dance : {
-            %misc_s1_emote = 1;
-            %misc_affection = add(%misc_affection, 1); 
+            // you can repeatedly use these emotes on any stage in osrs and gain affection
+            // which can leave the quest in a bugged state until you switch with Vargas... there isn't any
+            // reports of this before the quest update so I assume it was introduced then
+            if(%misc_s1_emote = ^false) {
+                %misc_s1_emote = 1;
+                %misc_affection = add(%misc_affection, 1);
+            }
             ~chatnpc("<p,happy>You dance well, Sir.");
         }
         case emote_blow_kiss : ~chatnpc("<p,neutral>Let's not get ahead of ourselves now, Sir?");
@@ -470,7 +475,7 @@ if (gender = ^gender_female | %misc_affection = ^misc_affection_not_started) {
         case emote_blow_kiss : {
             if(%misc_s3_emote = ^false) {
                 %misc_s3_emote = 1;
-                if(%misc_affection < ^misc_affection_complete_base) %misc_affection = add(%misc_affection, 1);
+                %misc_affection = add(%misc_affection, 1);
             }
             ~chatnpc("<p,happy>You flatter me, my dear.");
         }

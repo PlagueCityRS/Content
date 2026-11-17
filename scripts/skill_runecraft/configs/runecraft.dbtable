@@ -10,3 +10,5 @@ column=multiplier,int
 column=altar_coord,coord
 column=enter_coord,coord,int,int,int,LIST
 column=exit_coord,coord,int,int,int,LIST
+column=tiara_experience,int
+column=tiara,namedobj

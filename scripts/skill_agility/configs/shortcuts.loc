@@ -6,6 +6,7 @@ length=2
 hillskew=yes
 op1=Climb-over
 blockrange=no
+category=stile
 
 [castlecrumbly]
 name=Crumbling wall

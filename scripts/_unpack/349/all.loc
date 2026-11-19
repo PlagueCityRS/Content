@@ -23538,6 +23538,7 @@ length=2
 hillskew=yes
 op1=Climb-over
 blockrange=no
+category=stile
 
 [farming_fermenting_vat]
 name=Fermenting Vat

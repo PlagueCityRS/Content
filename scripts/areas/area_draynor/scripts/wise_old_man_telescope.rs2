@@ -67,7 +67,6 @@ if(npc_findexact(0_48_50_16_55, wise_old_man) = true) {
     ~chatplayer("<p,quiz>I see you've got your telescope pointing|at the Wizard's Tower.");
     ~chatnpc("<p,shifty>Oh, do I? Well, why does that interest you?");
 
-
     // These messages change if you've watched the bank robbery
     if (testbit(%wise_old_man_misc, ^has_seen_draynor_robbery) = ^true) {
         ~chatplayer("<p,shifty>Well, you robbed a bank, and I bet you're now planning something to do with that Tower!");
@@ -81,15 +80,3 @@ if(npc_findexact(0_48_50_16_55, wise_old_man) = true) {
         ~chatplayer("<p,neutral>Hmmm...");
     }
 }
-
-[proc,has_spoken_to_wise_old_man]()(boolean)
-if (testbit(%wise_old_man_misc, ^has_spoken_to_wom) = ^true) {
-    return (true);
-}
-return (false);
-
-[oploc1,narrowstairs_wooden_bottom]
-p_teleport(1_48_50_17_52);
-
-[oploc1,narrowstairs_wooden_top]
-p_teleport(0_48_50_17_51);

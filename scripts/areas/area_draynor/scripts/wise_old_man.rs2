@@ -1,0 +1,19 @@
+// TODO: All the dialogue, it's too much.
+[opnpc1,wise_old_man]
+if (~has_spoken_to_wise_old_man = ^false) {
+    @wise_old_man_initial;
+} else {
+    ~chatnpc("<p,happy>This is where the rest of the dialogue would be...");
+    ~chatnpc("<p,angry>IF I HAD ANY!");
+}
+
+[label,wise_old_man_initial]
+~chatnpc("<p,happy>It's all temporary i don't wanna do this rn");
+~chatplayer("<p,happy>I understand completely");
+%wise_old_man_misc = setbit(%wise_old_man_misc, ^has_spoken_to_wom);
+
+[proc,has_spoken_to_wise_old_man]()(boolean)
+if (testbit(%wise_old_man_misc, ^has_spoken_to_wom) = ^true) {
+    return (true);
+}
+return (false);

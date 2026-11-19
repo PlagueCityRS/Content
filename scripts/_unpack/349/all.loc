@@ -4650,6 +4650,7 @@ ambient=10
 op2=Pick
 blockwalk=no
 blockrange=no
+category=wheat
 
 [wheat_small]
 name=Wheat
@@ -4664,6 +4665,7 @@ resizez=100
 offsetx=20
 blockwalk=no
 blockrange=no
+category=wheat
 
 [wheat_smallest]
 name=Wheat
@@ -4678,6 +4680,7 @@ resizez=100
 offsetx=30
 blockwalk=no
 blockrange=no
+category=wheat
 
 [dugupsoil1_light_no_glow]
 model=floor_dugupsoil1
@@ -17660,6 +17663,8 @@ model=loc_7049
 op1=Open
 active=yes
 blockrange=no
+category=gate_main_closed
+param=next_loc_stage,farming_openfencegate_l
 
 [farming_fencegate_r]
 name=Gate
@@ -17669,6 +17674,8 @@ mirror=yes
 op1=Open
 active=yes
 blockrange=no
+category=gate_outer_closed
+param=next_loc_stage,farming_openfencegate_r
 
 [farming_openfencegate_l]
 name=Gate
@@ -17677,6 +17684,8 @@ model=loc_7049
 op1=Close
 active=yes
 blockrange=no
+category=gate_main_open
+param=next_loc_stage,farming_fencegate_l
 
 [farming_openfencegate_r]
 name=Gate
@@ -17685,6 +17694,8 @@ model=loc_7049
 mirror=yes
 op1=Close
 blockrange=no
+category=gate_outer_open
+param=next_loc_stage,farming_fencegate_r
 
 [seed_stall]
 name=Seed Stall

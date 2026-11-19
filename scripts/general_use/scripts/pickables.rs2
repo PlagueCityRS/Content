@@ -11,7 +11,7 @@ if(inv_freespace(inv) = 0) {
 }
 
 // Pickable Wheat
-[oploc2,wheat]
+[oploc2,_wheat]
 p_arrivedelay;
 if(inv_freespace(inv) = 0) {
     mes("You can't carry any more grain.");

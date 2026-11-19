@@ -104,6 +104,8 @@ switch_obj(last_item) {
         @player_consume_item(consume_effect_antipoison, null, null);
     case 1dose2antipoison, 2dose2antipoison, 3dose2antipoison, 4dose2antipoison :
         @player_consume_item(consume_effect_super_antipoison, null, null);
+    case relicyms_balm1, relicyms_balm2, relicyms_balm3, relicyms_balm4 :
+        @player_consume_item(consume_effect_relicyms_balm, null, null);
     case default : @player_consume_item(consume_effect_stat, null, null);
 }
 [opheld1,macro_triffidfruit]@player_consume_item(consume_effect_strange_fruit, 2, 3);

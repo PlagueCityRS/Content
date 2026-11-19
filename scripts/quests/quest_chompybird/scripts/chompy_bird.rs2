@@ -102,7 +102,7 @@ if (%damagetype ! ^ranged_style) {
     return;
 }
 
-if ($rhand ! ogre_bow) {
+if ($rhand ! ogre_bow & $rhand ! zogre_bow) {
     // todo confirm for 2004
     mes("Your ranged weapon isn't powerful enough to hurt the Chompy bird.");
     return;
@@ -121,9 +121,13 @@ if ($ammo = null) {
     return;
 }
 
-if ($ammo ! ogre_arrow) {
+if ($ammo ! ogre_arrow & oc_category($ammo) ! ogre_brutal) {
     // todo confirm for 2004
     mes("You can't use that ammo with your bow.");
+    return;
+}
+if ($rhand = ogre_bow & ($ammo = zogre_brutal_adamant | $ammo = zogre_brutal_rune)) {
+    mes("Your bow isn't powerful enough for those arrows.");
     return;
 }
 

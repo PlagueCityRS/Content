@@ -1,0 +1,68 @@
+[if_button,questlist:zogre]
+def_string $text;
+if (%zogre = ^zogre_not_started) {
+    $text = append($text, "@dbl@I can start this quest by speaking to @dre@Grish@dbl@ at @dre@Jiggig@dbl@, south of|@dre@Castle Wars@dbl@.|");
+    $text = append($text, "@dbl@To start this quest I need:|");
+    $text = append($text, "<~quest_req_colour(%chompybird, ^chompybird_complete)>Big Chompy Bird Hunting|");
+    $text = append($text, "<~quest_req_colour(%junglepotion, ^junglepotion_complete)>Jungle Potion|");
+    $text = append($text, "<~quest_req_colour(stat(smithing), ^zogre_smithing_level)>Level <tostring(^zogre_smithing_level)> Smithing|");
+    $text = append($text, "<~quest_req_colour(stat(herblore), ^zogre_herblore_level)>Level <tostring(^zogre_herblore_level)> Herblore|");
+    $text = append($text, "<~quest_req_colour(stat(ranged), ^zogre_ranged_level)>Level <tostring(^zogre_ranged_level)> Ranged|");
+    $text = append($text, "@dbl@I must be able to defeat a level 111 enemy.");
+    ~quest_journal("Zogre Flesh Eaters", $text);
+    return;
+}
+if (%zogre = ^zogre_complete) {
+    $text = append($text, "@str@Grish asked me to find out why undead ogres had appeared at|@str@Jiggig. I discovered that the wizard Sithik Ints had paid|@str@Brentle Vahn to cast a necromantic spell on the area. The|@str@spell is permanent, so the ogres will move their ceremonial|@str@dancing area. I recovered the ogre artefacts from the|@str@burial tomb for the new Jiggig.||");
+    $text = append($text, "@red@QUEST COMPLETE!");
+    ~quest_journal("Zogre Flesh Eaters", $text);
+    return;
+}
+$text = append($text, "@str@Grish asked me to find out why the undead ogres have|@str@appeared at Jiggig and how to put them back in the ground.|");
+if (%zogre < ^zogre_seen_tomb) {
+    if (%thzfe_blocking_barricade = ^false) {
+        $text = append($text, "@dbl@The @dre@ogre guard@dbl@ by the barricade may let me into Jiggig.");
+    } else {
+        $text = append($text, "@dbl@I should search the @dre@tombs below Jiggig@dbl@ for clues.");
+    }
+    ~quest_journal("Zogre Flesh Eaters", $text);
+    return;
+}
+$text = append($text, "@str@I found a charred area in the tombs below Jiggig.|");
+if (%zogre < ^zogre_sent_to_sithik) {
+    $text = append($text, "@dbl@I should look for clues there. A @dre@torn page@dbl@, a @dre@black prism@dbl@ and a|@dre@tankard@dbl@ might be useful. A tankard from the @dre@Dragon Inn@dbl@ and a|@dre@wizard@dbl@ in @dre@Yanille@dbl@ might help.");
+    ~quest_journal("Zogre Flesh Eaters", $text);
+    return;
+}
+$text = append($text, "@str@Zavistic Rarve of the Wizards' Guild in Yanille suggested I|@str@talk to Sithik Ints, who lodges in the guest house north of the|@str@guild.|");
+if (%zogre < ^zogre_given_potion) {
+    $text = append($text, "@dbl@I need to find evidence to show @dre@Zavistic Rarve@dbl@ that Sithik is|@dbl@involved. I could search @dre@Sithik's room@dbl@, and the @dre@Dragon Inn@dbl@|@dbl@bartender might recognise him from a @dre@portrait@dbl@.");
+    ~quest_journal("Zogre Flesh Eaters", $text);
+    return;
+}
+$text = append($text, "@str@Zavistic was convinced by my evidence and gave me a|@str@strange potion.|");
+if (%zogre = ^zogre_given_potion) {
+    $text = append($text, "@dbl@I should use the @dre@potion@dbl@ on @dre@Sithik@dbl@ somehow.");
+    ~quest_journal("Zogre Flesh Eaters", $text);
+    return;
+}
+if (%zogre = ^zogre_sithik_transformed) {
+    $text = append($text, "@dbl@I put the potion into Sithik's tea. I should leave the house,|@dbl@then come back and @dre@question Sithik@dbl@.");
+    ~quest_journal("Zogre Flesh Eaters", $text);
+    return;
+}
+$text = append($text, "@str@Sithik admitted that Brentle Vahn cast the spell for him.|@str@The spell is permanent.|");
+if (%zogre = ^zogre_sithik_confessed) {
+    $text = append($text, "@dbl@I should tell @dre@Grish@dbl@ what I have found out.");
+    ~quest_journal("Zogre Flesh Eaters", $text);
+    return;
+}
+$text = append($text, "@str@Grish needs the ogre artefacts from the burial tomb to make|@str@a new Jiggig.|");
+if (%zogre = ^zogre_given_key) {
+    $text = append($text, "@dbl@I should use the @dre@ogre gate key@dbl@ to enter the lowest tomb and|@dbl@search the @dre@stand@dbl@ for the @dre@artefacts@dbl@.");
+    ~quest_journal("Zogre Flesh Eaters", $text);
+    return;
+}
+$text = append($text, "@str@I defeated Slash Bash in the burial tomb.|");
+$text = append($text, "@dbl@I should take the @dre@ogre artefact@dbl@ to @dre@Grish@dbl@.");
+~quest_journal("Zogre Flesh Eaters", $text);

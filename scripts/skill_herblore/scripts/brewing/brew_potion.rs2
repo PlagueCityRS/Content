@@ -92,6 +92,9 @@ switch_obj(last_useitem) {
 [opheldu,ashes]
 ~attempt_brew_potion(last_useslot, last_slot);
 
+[opheldu,rogues_purse_sol]
+~attempt_brew_potion(last_useslot, last_slot);
+
 [opheldu,ashesvial]
 ~attempt_brew_potion(last_useslot, last_slot);
 
@@ -109,6 +112,11 @@ if (map_members = ^false) {
 }
 
 if(($struct = ashesvial | $struct = mort_serum3_tarrominvial | $struct = mort_serum3_ashesvial) & %morttonquest < ^mortton_read_diary) {
+    mes("You're not sure what effect this might have.");
+    return(false);
+}
+
+if(($struct = unf_rogues_purse_potion | $struct = relicyms_balm) & %thzfe_makecuredisease = ^false) {
     mes("You're not sure what effect this might have.");
     return(false);
 }

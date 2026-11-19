@@ -1,0 +1,52 @@
+^zogre_not_started = 0
+^zogre_started = 1
+^zogre_barricade_opened = 2
+^zogre_seen_tomb = 3
+^zogre_shown_tankard = 4
+^zogre_sent_to_sithik = 5
+^zogre_searched_sithik = 6
+^zogre_portrait_signed = 7
+^zogre_given_potion = 8
+^zogre_sithik_transformed = 9
+^zogre_sithik_confessed = 10
+^zogre_given_key = 11
+^zogre_killed_slash_bash = 12
+^zogre_complete = 13
+
+^zogre_prism_not_searched = 0
+^zogre_prism_found_hole = 1
+^zogre_prism_unlocked = 2
+^zogre_prism_lid_open = 3
+^zogre_prism_taken = 4
+
+^zogre_sithik_human = 0
+^zogre_sithik_ogre = 1
+^zogre_sithik_cured = 2
+
+^zogre_skeleton_not_searched = 0
+^zogre_skeleton_zombie_spawned = 1
+^zogre_skeleton_zombie_killed = 2
+
+^zogre_smithing_level = 4
+^zogre_herblore_level = 8
+^zogre_ranged_level = 30
+^zogre_coffin_thieving_level = 20
+
+^zogre_jiggig_lower_bound = 0_38_47_24_0
+^zogre_jiggig_upper_bound = 0_38_47_63_63
+^zogre_tomb_lower_bound = 2_38_146_0_0
+^zogre_tomb_upper_bound = 2_38_147_63_63
+^zogre_charred_lower_bound = 2_38_147_4_46
+^zogre_charred_upper_bound = 2_38_147_16_58
+^zogre_boss_lower_bound = 0_38_147_0_0
+^zogre_boss_upper_bound = 0_38_147_63_63
+
+^zogre_surface_stairs_landing = 0_38_47_54_37
+^zogre_tomb_stairs_landing = 2_38_147_46_32
+^zogre_lower_stairs_top_landing = 2_38_147_14_10
+^zogre_lower_stairs_bottom_landing = 0_38_147_14_10
+^zogre_zavistic_bell_spawn = 0_40_48_38_12
+^zogre_brentle_zombie_spawn = 2_38_147_9_50
+^zogre_slash_bash_spawn = 0_38_147_47_37
+^zogre_sithik_room_lower_bound = 1_40_48_30_31
+^zogre_sithik_room_upper_bound = 1_40_48_33_32

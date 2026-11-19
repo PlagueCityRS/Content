@@ -1,0 +1,352 @@
+[oploc1,zogre_multi_blocking_barricade_l] @zogre_climb_barricade;
+[oploc1,zogre_multi_blocking_barricade_r] @zogre_climb_barricade;
+
+[label,zogre_climb_barricade]
+if (%thzfe_blocking_barricade = ^false) {
+    ~displaymessage(^dm_default);
+    return;
+}
+def_coord $start = movecoord(loc_coord, -1, 0, 0);
+def_coord $end = movecoord(loc_coord, 1, 0, 0);
+def_int $dir = ^exact_east;
+if (coordx(coord) > coordx(loc_coord)) {
+    $start = movecoord(loc_coord, 1, 0, 0);
+    $end = movecoord(loc_coord, -1, 0, 0);
+    $dir = ^exact_west;
+}
+p_teleport($start);
+p_delay(0);
+~agility_exactmove(human_walk_style, 0, 2, $start, $end, 0, 60, $dir, true);
+
+[oploc1,ogre_stairs_down]
+p_arrivedelay;
+if (loc_coord = 0_38_47_53_34) {
+    mes("You climb down the steps.");
+    ~climb_ladder(^zogre_tomb_stairs_landing, false);
+    return;
+}
+mes("You climb down the steps.");
+~climb_ladder(^zogre_lower_stairs_bottom_landing, false);
+
+[oploc1,ogre_stairs]
+p_arrivedelay;
+if (loc_coord = 2_38_147_46_29) {
+    mes("You climb up the steps.");
+    ~climb_ladder(^zogre_surface_stairs_landing, true);
+    return;
+}
+mes("You climb up the steps.");
+~climb_ladder(^zogre_lower_stairs_top_landing, true);
+
+[zone,2_38_147_8_48] ~zogre_charred_area_cutscene;
+[zone,2_38_147_0_48] ~zogre_charred_area_cutscene;
+
+[proc,zogre_charred_area_cutscene]
+if (inzone(^zogre_charred_lower_bound, ^zogre_charred_upper_bound, coord) = false) {
+    return;
+}
+if (%thzfe_cut_scene = ^true) {
+    return;
+}
+queue(zogre_charred_area, 0, 0);
+
+[queue,zogre_charred_area]
+if (%thzfe_cut_scene = ^true) {
+    return;
+}
+%thzfe_cut_scene = ^true;
+p_stopaction;
+cam_moveto(2_38_147_14_47, 600, 4, 4);
+cam_lookat(2_38_147_10_51, 100, 4, 4);
+p_delay(3);
+~mesbox("You enter this blackened, charred area - it looks like some sort of explosion has taken place.");
+cam_reset;
+mes("You enter this blackened, charred area - it looks there's been an explosion!");
+if (%zogre = ^zogre_barricade_opened) {
+    %zogre = ^zogre_seen_tomb;
+    ~send_quest_progress(questlist:zogre, %zogre, ^zogre_complete);
+}
+
+[oploc1,zogre_lecturn]
+mes("You search the broken down lectern.");
+p_delay(1);
+if (%zogre < ^zogre_started | ~obj_gettotal(zogre_necromantic_page) > 0 | %zogre >= ^zogre_given_potion) {
+    mes("You find nothing of interest.");
+    return;
+}
+if (inv_freespace(inv) < 1) {
+    ~mesbox("You don't have enough space in your inventory.");
+    return;
+}
+inv_add(inv, zogre_necromantic_page, 1);
+~objbox(zogre_necromantic_page, "You find a half torn page...it has spidery writing all over it.", 250, 0, 0);
+
+[oploc1,zogre_brentle_skeleton]
+if (%zogre < ^zogre_started) {
+    mes("You search the skeleton but find nothing.");
+    return;
+}
+if (%thzfe_brentle_skele = ^zogre_skeleton_zombie_killed & (~obj_gettotal(zogre_brentle_vahn_backpack) > 0 | ~obj_gettotal(zogre_dragon_tankard) > 0 | %zogre >= ^zogre_given_potion)) {
+    mes("You search the skeleton but find nothing.");
+    return;
+}
+if (npc_find(coord, zogre_human_brentle_vahn, 10, 0) = true) {
+    mes("You search the skeleton but find nothing.");
+    return;
+}
+mes("Something screams into life right in front of you.");
+%thzfe_brentle_skele = ^zogre_skeleton_zombie_spawned;
+npc_add(^zogre_brentle_zombie_spawn, zogre_human_brentle_vahn, 500);
+npc_say("Raaarrrggghhh");
+npc_setmode(opplayer2);
+
+[opheld1,zogre_brentle_vahn_backpack]
+if (inv_freespace(inv) < 2) {
+    mes("You don't have enough room in your inventory for the contents of this bag.");
+    return;
+}
+inv_delslot(inv, last_slot);
+~objbox(zogre_brentle_vahn_backpack, "Just before you open the backpack, you notice a small leather patch with the moniker: 'B.Vahn', on it.", 250, 0, 0);
+inv_add(inv, zogre_dragon_tankard, 1);
+~objbox(zogre_dragon_tankard, "You find an interesting looking tankard.", 250, 0, 0);
+inv_add(inv, knife, 1);
+inv_add(inv, rotten_food, 1);
+~doubleobjbox(knife, rotten_food, "You find a knife and some rotten food, the backpack is ripped to shreds.", 250);
+mes("You find a knife and some rotten food.");
+mes("You find an interesting looking tankard.");
+
+[oploc1,zogre_coffin_special_entity]
+if (%zogre < ^zogre_started) {
+    ~mesbox("You search the coffin and find a small geometrically shaped hole in the side. It looks as if this hole was made with a considerable amount of force, maybe the thing which made the hole is still inside?");
+    return;
+}
+switch_int (%thzfe_prismsearch) {
+    case ^zogre_prism_not_searched, ^zogre_prism_found_hole :
+        ~mesbox("You search the coffin and find a small geometrically shaped hole in the side. It looks as if this hole was made with a considerable amount of force, maybe the thing which made the hole is still inside?");
+        ~mesbox("The lock looks quite crude, with some skill and a slender blade, you may be able to force it.");
+        %thzfe_prismsearch = ^zogre_prism_found_hole;
+    case ^zogre_prism_unlocked : @zogre_lift_coffin_lid;
+    case default : @zogre_take_prism;
+}
+
+[oplocu,zogre_coffin_special_entity]
+if (last_useitem ! knife | %thzfe_prismsearch ! ^zogre_prism_found_hole) {
+    ~displaymessage(^dm_default);
+    return;
+}
+%thzfe_prismsearch = ^zogre_prism_unlocked;
+~objbox(knife, "With some skill you manage to slide the blade along the lock edge and click into place the teeth of the primitive mechanism.", 250, 0, 0);
+
+[label,zogre_lift_coffin_lid]
+if (inv_freespace(inv) < 1) {
+    ~mesbox("You start to lift the lid and see something inside, but you have no space in your inventory to store the item.");
+    return;
+}
+~mesbox("The lid looks heavy, but now that you've unlocked it, you may be able to lift it. You prepare yourself.");
+~chatplayer("<p,angry>Urrrgggg.");
+say("Urrrgggg.");
+p_delay(1);
+~chatplayer("<p,angry>Aarrrgghhh!");
+say("Aarrrgghhh!");
+p_delay(1);
+if (stat_random(strength, 64, 256) = false) {
+    stat_sub(strength, 1, 0);
+    ~mesbox("You struggle, but just get weakened from your experience. Perhaps you should try again after you've recovered from the effort?");
+    return;
+}
+~chatplayer("<p,happy>Raarrrggggg! Yes!");
+say("Raarrrggggg! Yes!");
+%thzfe_prismsearch = ^zogre_prism_lid_open;
+~mesbox("You eventually manage to lift the lid.");
+
+[label,zogre_take_prism]
+if (~obj_gettotal(zogre_black_prism) > 0 | %thzfe_prismsold = ^true) {
+    mes("You search the coffin but find nothing.");
+    return;
+}
+if (inv_freespace(inv) < 1) {
+    ~mesbox("You start to lift the lid and see something inside, but you have no space in your inventory to store the item.");
+    return;
+}
+inv_add(inv, zogre_black_prism, 1);
+%thzfe_prismsearch = ^zogre_prism_taken;
+~objbox(zogre_black_prism, "You find a creepy looking black prism inside.", 250, 0, 0);
+
+[opheld1,zogre_necromantic_page]
+~mesbox("You don't manage to understand all of it as there is only a half page here. But it seems the spell was used to place a curse on an area and for all time raise the dead.");
+~mesbox("If you look very carefully, you see what looks like a guild emblem.");
+
+[opheld1,zogre_dragon_tankard]
+~objbox(zogre_dragon_tankard, "A stout ceramic tankard with a Dragon Emblem on the side, the words, 'Ye Olde Dragon Inn' are inscribed in the bottom.", 250, 0, 0);
+
+[opheld1,zogre_black_prism]
+~objbox(zogre_black_prism, "It looks like a smokey black gem of some sort...very creepy. Some magical force must have prevented it from being shattered when it hit the coffin.", 250, 0, 0);
+
+[oploc1,ogre_cavedoorl] @zogre_tomb_door(^left);
+[oploc1,ogre_cavedoorr] @zogre_tomb_door(^right);
+
+[label,zogre_tomb_door](int $side)
+def_boolean $entering = ~check_axis_locactive(coord);
+if ($entering = true) {
+    if (inv_total(inv, zogre_tomb_artefact_key) = 0) {
+        mes("These gates are locked, you don't seem to be able to open them.");
+        return;
+    }
+    mes("You use the Ogre Tomb Key to unlock the door.");
+} else {
+    mes("You push the gates open.");
+}
+~open_and_close_double_door($entering, $side);
+
+[oploc1,zogre_stand]
+~mesbox("You search the plinth...");
+if (%zogre < ^zogre_given_key) {
+    mes("You find nothing in particular.");
+    return;
+}
+if (%zogre = ^zogre_given_key) {
+    if (npc_find(coord, zogre_slash_bash, 15, 0) = true) {
+        mes("You find nothing in particular.");
+        return;
+    }
+    mes("Something stirs behind you!");
+    npc_add(^zogre_slash_bash_spawn, zogre_slash_bash, 500);
+    npc_setmode(opplayer2);
+    return;
+}
+if (%zogre = ^zogre_killed_slash_bash & ~obj_gettotal(zogre_artifacts) = 0) {
+    if (inv_freespace(inv) < 1) {
+        ~mesbox("You don't have enough space in your inventory.");
+        return;
+    }
+    inv_add(inv, zogre_artifacts, 1);
+    ~objbox(zogre_artifacts, "An ogre artefact appears in front of you. You quickly put it into your backpack.", 250, 0, 0);
+    return;
+}
+mes("You find nothing in particular.");
+
+[oploc1,zogre_signpost]
+~mesbox("'Leave da dead-uns boxes 'lone or else ya goes down da 'ole'");
+
+[oploc1,_ogre_coffin]
+if (inv_total(inv, zogre_coffinkey) = 0) {
+    mes("The coffin is locked.");
+    return;
+}
+if (%zogre < ^zogre_started) {
+    @zogre_coffin_guard_warning;
+}
+inv_del(inv, zogre_coffinkey, 1);
+mes("You unlock the coffin with the key.");
+@zogre_coffin_open;
+
+[oploc2,_ogre_coffin]
+if (%zogre < ^zogre_started) {
+    @zogre_coffin_guard_warning;
+}
+if (add(%lastcombat, 8) > map_clock) {
+    mes("You're in mortal danger, thieving is the last thing on your mind.");
+    return;
+}
+if (stat(thieving) < ^zogre_coffin_thieving_level) {
+    ~mesbox("You need a Thieving level of <tostring(^zogre_coffin_thieving_level)> to pick the lock on this coffin.");
+    return;
+}
+mes("You attempt to pick the lock on the coffin.");
+anim(human_pickupfloor, 0);
+p_delay(1);
+if (random(stat(agility)) < 10) {
+    queue(disease_player, 0, 10);
+}
+def_boolean $success = stat_random(thieving, 0, 128);
+if (inv_total(inv, lockpick) > 0) {
+    $success = stat_random(thieving, 0, 192);
+}
+if ($success = false) {
+    mes("You fail to pick the lock - your fingers get numb from fumbling with the lock.");
+    stat_advance(thieving, 5);
+    stat_sub(thieving, add(randominc(3), 1), 0);
+    return;
+}
+mes("You manage to pick the lock.");
+stat_advance(thieving, 270);
+@zogre_coffin_open;
+
+[label,zogre_coffin_guard_warning]
+if (npc_find(coord, zogre_ogre_coffin_guard, 15, 0) = true) {
+    ~chatnpc("<p,angry>Oi! Yous creature leave dat dead-uns box 'lone! Yous go see Grish if yous wants to know what's what!");
+}
+
+[label,zogre_coffin_open]
+def_loc $open = loc_param(next_loc_stage);
+anim(human_openchest, 0);
+sound_synth(coffin_open, 1, 0);
+loc_change($open, 50);
+p_delay(1);
+def_int $roll = random(128);
+if ($roll < 64) {
+    ~zogre_give_or_drop(zogre_bones, 1);
+} else if ($roll < 78) {
+    ~zogre_give_or_drop(zogre_ancestral_bones_fayg, 1);
+} else if ($roll < 88) {
+    ~zogre_give_or_drop(zogre_ancestral_bones_raurg, 1);
+} else if ($roll < 93) {
+    ~zogre_give_or_drop(zogre_ancestral_bones_ourg, 1);
+}
+def_namedobj $loot = null;
+def_int $count = 1;
+$roll = random(100);
+if ($roll < 24) {
+    $loot = null;
+} else if ($roll < 39) {
+    $loot = coins;
+    $count = ~random_range(6, 20);
+} else if ($roll < 42) {
+    $loot = bronze_axe;
+} else if ($roll < 45) {
+    $loot = iron_axe;
+} else if ($roll < 48) {
+    $loot = steel_axe;
+} else if ($roll < 51) {
+    $loot = bronze_pickaxe;
+} else if ($roll < 54) {
+    $loot = iron_pickaxe;
+} else if ($roll < 57) {
+    $loot = steel_pickaxe;
+} else if ($roll < 60) {
+    $loot = bronze_dagger;
+} else if ($roll < 63) {
+    $loot = iron_dagger;
+} else if ($roll < 66) {
+    $loot = steel_dagger;
+} else if ($roll < 68) {
+    $loot = nails_bronze;
+    $count = ~random_range(1, 11);
+} else if ($roll < 70) {
+    $loot = nails_iron;
+    $count = ~random_range(1, 11);
+} else if ($roll < 72) {
+    $loot = nails;
+    $count = ~random_range(1, 11);
+} else if ($roll < 74) {
+    $loot = nails_black;
+    $count = ~random_range(1, 11);
+} else if ($roll < 77) {
+    $loot = knife;
+} else if ($roll < 80) {
+    $loot = leather_armour;
+} else if ($roll < 82) {
+    $loot = tinderbox;
+} else if ($roll < 85) {
+    $loot = uncut_opal;
+} else if ($roll < 88) {
+    $loot = uncut_jade;
+} else if ($roll < 89) {
+    $loot = unidentified_lantadyme;
+}
+if ($loot ! null) {
+    ~zogre_give_or_drop($loot, $count);
+    mes("You find something.");
+    return;
+}
+mes("You find nothing of value.");

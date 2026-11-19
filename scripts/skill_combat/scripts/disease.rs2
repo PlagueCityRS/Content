@@ -1,0 +1,60 @@
+[proc,npc_disease_player]
+if (npc_param(disease_severity) > 0) {
+    queue(disease_player, 0, npc_param(disease_severity));
+}
+
+[queue,disease_player](int $severity)
+if (map_members = ^false) {
+    return;
+}
+if (%disease = 0) {
+    mes("You have been diseased!");
+}
+%disease = max(%disease, multiply($severity, 5));
+~set_disease_timer;
+
+[timer,disease]
+if (%disease <= 0) {
+    %disease = 0;
+    cleartimer(disease);
+    return;
+}
+queue(disease_damage, 0, calc((%disease + 4) / 5));
+%disease = sub(%disease, 1);
+
+[queue,disease_damage](int $amount)
+if (stat(hitpoints) < 1) {
+    return;
+}
+def_stat $stat = enum(int, stat, disease_stats, random(enum_getoutputcount(disease_stats)));
+if (stat($stat) >= 2) {
+    stat_sub($stat, $amount, 0);
+    return;
+}
+if_close;
+damage(uid, ^hitmark_disease, $amount);
+if (stat(hitpoints) = 0) {
+    queue(player_death, 0, 0);
+}
+
+[proc,cure_disease](int $amount)
+%disease = max(0, sub(%disease, $amount));
+if (%disease = 0) {
+    clearqueue(disease_damage);
+    cleartimer(disease);
+}
+
+[proc,clear_disease]
+clearqueue(disease_damage);
+%disease = 0;
+cleartimer(disease);
+
+[proc,set_disease_login]
+if (%disease > 0) {
+    ~set_disease_timer;
+}
+
+[proc,set_disease_timer]
+if (gettimer(disease) < 1) {
+    settimer(disease, 30);
+}

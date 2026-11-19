@@ -1,0 +1,98 @@
+[proc,zogre_max_dealt](int $maxhit, int $spell)(int)
+if ($spell = ^crumble_undead) {
+    return(divide($maxhit, 2));
+}
+def_obj $rhand = inv_getobj(worn, ^wearpos_rhand);
+if ($spell = 0 & ($rhand = ogre_bow | $rhand = zogre_bow) & oc_category(inv_getobj(worn, ^wearpos_quiver)) = ogre_brutal) {
+    return($maxhit);
+}
+return(divide($maxhit, 4));
+
+[ai_queue3,_zogre]
+gosub(npc_death);
+if (npc_findhero = ^false) {
+    return;
+}
+switch_npc (npc_type) {
+    case zogre_human_brentle_vahn :
+        obj_add(npc_coord, zogre_brentle_vahn_backpack, 1, ^lootdrop_duration);
+        queue(zogre_brentle_zombie_killed, 0, 0);
+    case zogre_slash_bash :
+        obj_add(npc_coord, zogre_artifacts, 1, ^lootdrop_duration);
+        obj_add(npc_coord, zogre_ancestral_bones_ourg, 3, ^lootdrop_duration);
+        obj_add(npc_coord, zogre_bones, 2, ^lootdrop_duration);
+        queue(zogre_slash_bash_killed, 0, 0);
+    case default :
+        obj_add(npc_coord, zogre_bones, 1, ^lootdrop_duration);
+        obj_add(npc_coord, zogre_coffinkey, 1, ^lootdrop_duration);
+}
+
+[queue,zogre_brentle_zombie_killed]
+if (%thzfe_brentle_skele = ^zogre_skeleton_zombie_spawned) {
+    %thzfe_brentle_skele = ^zogre_skeleton_zombie_killed;
+}
+
+[queue,zogre_slash_bash_killed]
+if (%zogre = ^zogre_given_key) {
+    %zogre = ^zogre_killed_slash_bash;
+    ~send_quest_progress(questlist:zogre, %zogre, ^zogre_complete);
+}
+
+[opnpc1,zogre_human_brentle_vahn]
+npc_say("Raaarrrggghhh");
+
+[ai_opplayer2,zogre_slash_bash]
+~zogre_slash_bash_attack;
+
+[ai_applayer2,zogre_slash_bash]
+~zogre_slash_bash_attack;
+
+[proc,zogre_slash_bash_attack]
+if (%npc_action_delay > map_clock) {
+    return;
+}
+if (~npc_check_notcombat = false) {
+    npc_setmode(null);
+    return;
+}
+if (~npc_check_notcombat_self = false) {
+    return;
+}
+if (npc_range(coord) <= 1 & random(2) = 0) {
+    if (~check_protect_prayer(^melee_style) = true) {
+        stat_sub(prayer, 2, 0);
+    }
+    gosub(npc_default_attack);
+    return;
+}
+npc_setmode(applayer2);
+if (npc_range(coord) > 8) {
+    return;
+}
+npc_anim(ogre_breath, 0);
+sound_synth(zogre_attack, 1, 0);
+spotanim_pl(thzfe_sporecloud, 0, 30);
+%npc_action_delay = add(map_clock, npc_param(attackrate));
+if (~check_protect_prayer(^ranged_style) = true) {
+    stat_sub(prayer, 2, 0);
+}
+if (randominc(~npc_ranged_attack_roll) > randominc(~player_defence_roll_specific(^ranged_style))) {
+    ~playerhit_n_ranged(true, randominc(13), 30, npc_param(attackrate));
+    ~npc_disease_player;
+    return;
+}
+~playerhit_n_ranged(true, 0, 30, npc_param(attackrate));
+
+[opheld2,zogre_bow]
+if (%thzfe_makecompozogrebow = ^false) {
+    mes("You need to speak to Grish about this bow before you can wield it.");
+    return;
+}
+@levelrequire_ranged(^zogre_ranged_level, last_slot);
+
+[opheld2,_ogre_brutal]
+if (%thzfe_makebrutalarrow = ^false) {
+    mes("You need to have learned about brutal arrows from Sithik before you can use these.");
+    return;
+}
+~equip(last_slot);

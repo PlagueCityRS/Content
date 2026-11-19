@@ -42,6 +42,7 @@ switch_int($option) {
 if(testbit(%barcrawl, ^dragoninn_index) = ^false & last_useitem = barcrawl_card) {
     @dragoninn_barcrawl;
 }
+@zogre_bartender_item(last_useitem);
 
 [label,dragoninn_barcrawl]
 ~chatplayer("<p,happy>I'm doing Alfred Grimhand's Barcrawl.");

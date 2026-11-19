@@ -181,3 +181,11 @@ val=1,mort_serum1
 val=2,mort_serum2
 val=3,mort_serum3
 val=4,mort_serum4
+
+[potion_relicyms_balm]
+inputtype=int
+outputtype=namedobj
+val=1,relicyms_balm1
+val=2,relicyms_balm2
+val=3,relicyms_balm3
+val=4,relicyms_balm4

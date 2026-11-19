@@ -29,6 +29,7 @@ if_settab(null, 12);
 p_delay(2);
 p_transmogrify(desert_treasure_invisible_npc);
 buildappearance(worn);
+~follower_logout;
 p_teleport(0_48_49_36_38);
 ~fade_in();
 
@@ -62,6 +63,7 @@ anim(null, 0);
 
 p_delay(0);
 // Find and walk to WOM
+queue(follower_login, 0, 0);
 if(npc_findexact(0_48_50_16_55, wise_old_man) = true) {
     p_walk(0_48_50_16_54);
     ~chatplayer("<p,quiz>I see you've got your telescope pointing|at the Wizard's Tower.");

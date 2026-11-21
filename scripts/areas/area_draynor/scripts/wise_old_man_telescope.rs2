@@ -1,0 +1,18 @@
+[oploc1,wise_old_man_telescope]
+p_arrivedelay;
+facesquare(movecoord(coord, 0, 0, -1));
+anim(human_use_wom_telecope, 0);
+mes("You look through the telescope...");
+p_delay(1);
+cam_moveto(0_48_49_32_39, 900, 100, 100);
+cam_lookat(0_48_49_33_9, 900, 100, 100);
+if_openmain(wom_telescope);
+p_delay(22);
+if_close;
+cam_reset;
+anim(null, 0);
+~chatplayer("<p,quiz>I see you've got your telescope pointing at the Wizard's Tower.");
+~chatnpc_specific("Wise Old Man", wise_old_man, "<p,quiz>Oh, do I? Well, why does that interest you?");
+~chatplayer("<p,shifty>Well, you robbed a bank, and I bet you're now planning something to do with that Tower!");
+~chatnpc_specific("Wise Old Man", wise_old_man, "<p,neutral>No, no, I'm not planning anything like that again.");
+~chatplayer("<p,neutral>Well I'll be watching you...");

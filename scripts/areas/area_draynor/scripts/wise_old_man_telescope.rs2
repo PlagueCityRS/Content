@@ -3,7 +3,7 @@
 [oploc1,wise_old_man_telescope]
 p_arrivedelay;
 
-if (~has_spoken_to_wise_old_man = false) {
+if (%wom_task < 1) {
     ~chatnpc_specific("Wise Old Man", wise_old_man, "<p,angry>It'd be politer to come and talk to me before you start messing around with my possessions!");
     return;
 }

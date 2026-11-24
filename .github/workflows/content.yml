@@ -2,10 +2,7 @@ name: Verify Content
 
 on:
   pull_request:
-  push:
-    paths:
-    - '.github/workflows/content.yml'
-    - '**'
+    types: [opened, synchronize, reopened]
   workflow_dispatch:
 
 jobs:

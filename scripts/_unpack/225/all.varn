@@ -3,8 +3,14 @@
 [npc_attacking_uid]
 type=player_uid
 
+[npc_attacking_npc_uid]
+type=npc_uid
+
 [npc_aggressive_player]
 type=player_uid
+
+[npc_aggressive_npc]
+type=npc_uid
 
 [npc_lastcombat]
 

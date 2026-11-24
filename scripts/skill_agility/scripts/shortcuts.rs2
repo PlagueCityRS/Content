@@ -195,7 +195,7 @@ anim(human_monkeybars_off, 0);
 sound_synth(monkeybars_off, 1, 0);
 p_delay(0);
 
-[oploc1,fullstyle]
+[oploc1,_stile]
 def_coord $start_coord = loc_coord;
 def_int $mod = 1;
 def_int $dir = ^exact_north;
@@ -269,3 +269,35 @@ if(stat_random(agility, 50, 253) = false) {
 }
 stat_advance(agility, 30);
 mes("You manage to make the jump.");
+
+[oploc1,lumbridge_sc_fencejump]
+if (map_members = ^false) {
+    mes(^mes_members_feature);
+    return;
+}
+
+[oploc1,loc_9299]
+if (map_members = ^false) {
+    mes(^mes_members_feature);
+    return;
+}
+
+[oploc1,falador_sc_castlewall_north]
+if (map_members = ^false) {
+    mes(^mes_members_feature);
+    return;
+}
+
+[oploc1,falador_sc_castlewall_south]
+if (map_members = ^false) {
+    mes(^mes_members_feature);
+    return;
+}
+
+// Dwarven Mine Crevice
+[oploc1,loc_9325]
+if (map_members = ^false) {
+    mes(^mes_members_feature);
+    return;
+}
+

@@ -1094,6 +1094,7 @@ model=obj_4201
 2dzoom=1540
 2dyan=500
 2dxan=292
+param=crafting_jewelry_struct,fenk_conductor
 
 [ring_of_charos]
 name=Ring of charos
@@ -16108,20 +16109,6 @@ model=obj_5523
 2dxan=400
 cost=100
 
-[tiara]
-name=Tiara
-desc=Makes me feel like a Princess.
-model=obj_5525
-iop2=Wear
-2dyof=-25
-2dzoom=480
-2dxan=232
-manwear=obj_5525_manwear,0
-womanwear=obj_5525_womanwear,0
-manhead=obj_5525_manhead
-womanhead=obj_5525_manhead
-cost=100
-
 [tiara_air]
 name=Air tiara
 recol1s=22198
@@ -28230,6 +28217,7 @@ womanwear=obj_6748_manwear,6
 2dxan=344
 members=yes
 iop1=Chant
+param=crafting_jewelry_struct,agrith_sigil
 
 [agrith_book]
 name=Demonic tome

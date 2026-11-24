@@ -57,7 +57,7 @@ if(last_useitem = misc_giant_pen) {
 ~chatnpc("<p,neutral>By Miscellanious tradition, one may not become ruler of the kingdom if one is not part of the royal family.");
 if (%misc_quest = 0) {
     %misc_quest = ^misc_talked_to_king;
-    %misc_approval =  ^MISC_APPROVAL_25_PERCENT; // reset approval
+    %misc_approval = ^MISC_APPROVAL_25_PERCENT; // reset approval
     ~send_quest_progress(questlist:misc, %misc_quest, ^misc_complete);
 }
 if (gender = ^gender_male) {

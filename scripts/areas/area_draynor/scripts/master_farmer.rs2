@@ -1,0 +1,5 @@
+[opnpc3,master_farmer_1]
+if (map_members = ^false) {
+    mes(^mes_members_thieving);
+    return;
+}

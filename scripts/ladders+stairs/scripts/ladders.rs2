@@ -151,6 +151,11 @@ p_arrivedelay;
 p_arrivedelay;
 ~climb_ladder(movecoord(coord(), 0, -1, 0), false);
 
+[oploc1,vampire_ladder]
+p_arrivedelay;
+~climb_ladder(0_48_50_46_43, true);
+
+
 [proc,climb_ladder](coord $coord, boolean $up)
 if ($up = true) {
     anim(human_reachforladder, 0);

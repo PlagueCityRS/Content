@@ -1,19 +1,10 @@
 [opnpc1,misc_miner]
+~manage_misc_daily_update;
 if (%misc_quest = ^misc_complete) {
     ~chatnpcnoturn("<~man_misc_mesanim>Good day, Your Royal Highness.");
 } else {
     ~chatnpcnoturn("<~man_misc_mesanim>Hello.");
 }
-if (%misc_quest >= ^misc_king_signed_treaty) {
-    @multi2(
-        "Miner Magnus.", magnus_main_talk,
-        "Your approval rating.", misc_quest_approval_rating
-    );
-} else {
-    @magnus_main_talk;
-}
-
-[label,magnus_main_talk]
 ~chatplayer("<p,happy>Good day. What are you doing?");
 ~chatnpcnoturn("<~man_misc_mesanim>I'm mining coal. It's pretty tough going.");
 ~chatplayer("<p,happy>Good luck with that.");
@@ -30,21 +21,13 @@ mes("Miner Magnus is already mining that.");
 @prospect_rock(finish_prospect_normal);
 
 // This is to intercept mining in miscellania
-[proc,magnus_intercept_ore](string $fishing_mes, int $exp)(boolean)
+[proc,magnus_intercept_ore](string $ore_name, int $exp)(boolean)
 if (inzone(^miscellania_lower_bound, ^miscellania_upper_bound, coord) = true) {
-    if (%misc_approval < 127) { %misc_approval = add(%misc_approval, 1); }
-    if (npc_find(0_39_60_30_53, misc_miner, 2, 0) = true) { 
-        npc_say("Thanks!"); 
-        if (%misc_approval >= 127) {
-            if (%misc_quest = ^misc_complete) {
-                ~chatnpcnoturn("<p,happy> Don't trouble yourself further, Your Highness, you've already done so much!");
-            } else {
-                ~chatnpcnoturn("<p,happy> Don't trouble yourself further, <text_gender("Sir", "Madam")>, you've already done so much!");
-            }
-        }
-    }
-    stat_advance(mining, $exp);
-    mes("<substring($fishing_mes, 0, sub(string_length($fishing_mes), 1))>, and give it to Miner Magnus.");
+    if (%misc_approval < 127) %misc_approval = add(%misc_approval, 1);
+    if (npc_find(0_39_60_30_53, misc_miner, 2, 0) = true) npc_say("Thanks!");
+    // https://youtu.be/3JPE0glCQnY?si=-tTogcIxfipgGEhp&t=189
+    stat_advance(mining, 1);
+    mes("You manage to mine some <$ore_name>, and give it to Miner Magnus.");
     return (true);
 }
 return (false);

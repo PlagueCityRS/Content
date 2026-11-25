@@ -1,20 +1,60 @@
-[opnpcu,cow]
-switch_obj(last_useitem) {
-    case bucket_empty : @milk_cow;
-    case default : mes("The cow doesn't want that."); // osrs
-}
-[opnpcu,cow2]
-switch_obj(last_useitem) {
-    case bucket_empty : @milk_cow;
-    case default : mes("The cow doesn't want that."); // osrs
-}
-[opnpcu,cow_beef]
+[oploc1,fat_cow] @milk_cow_direct;
+
+[oplocu,fat_cow]
 switch_obj(last_useitem) {
     case bucket_empty : @milk_cow;
     case default : mes("The cow doesn't want that."); // osrs
 }
 
+[opnpcu,cow]
+switch_obj(last_useitem) {
+    case bucket_empty : mes("Only dairy cows are suitable for milking.");
+    case default : mes("The cow doesn't want that."); // osrs
+}
+
+[opnpcu,cow2]
+switch_obj(last_useitem) {
+    case bucket_empty : mes("Only dairy cows are suitable for milking.");
+    case default : mes("The cow doesn't want that."); // osrs
+}
+
+[opnpcu,cow_beef]
+switch_obj(last_useitem) {
+    case bucket_empty : mes("Only dairy cows are suitable for milking.");
+    case default : mes("The cow doesn't want that."); // osrs
+}
+
+[opnpcu,calf]
+switch_obj(last_useitem) {
+    case bucket_empty : mes("Calves are too young to be milked.");
+    case bucket_milk : mes("Calves aren't really used to drinking milk from buckets!");
+    case default : mes("The calf doesn't want that.");
+}
+
+[opnpcu,cow2_calf]
+switch_obj(last_useitem) {
+    case bucket_empty : mes("Calves are too young to be milked.");
+    case bucket_milk : mes("Calves aren't really used to drinking milk from buckets!");
+    case default : mes("The calf doesn't want that.");
+}
+
+[opnpcu,cow3_calf]
+switch_obj(last_useitem) {
+    case bucket_empty : mes("Calves are too young to be milked.");
+    case bucket_milk : mes("Calves aren't really used to drinking milk from buckets!");
+    case default : mes("The calf doesn't want that.");
+}
+
+[label,milk_cow_direct]
+if (inv_total(inv, bucket_empty) < 1) {
+    mes("You will need a empty bucket to do this.");
+    return;
+}
+@milk_cow;
+
 [label,milk_cow]
 inv_del(inv, bucket_empty, 1);
 inv_add(inv, bucket_milk, 1);
 mes("You milk the cow."); // osrs and rsc
+anim(milkit, 0);
+sound_synth(milk_cow, 0, 0);

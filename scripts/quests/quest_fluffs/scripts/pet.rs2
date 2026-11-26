@@ -233,7 +233,7 @@ if (map_members = ^false) {
     mes(^mes_members_do_that); //todo: verify if there is a specific message for trying to drop in f2p
     return;
 }
-if (npc_finduid(%follower_uid) = true) {
+if (npc_finduid(%follower_uid) = true | %follower_obj ! null) {
     mes("You already have a follower."); //osrs
     return;
 }

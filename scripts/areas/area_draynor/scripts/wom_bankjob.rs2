@@ -1,0 +1,605 @@
+[label,wom_bank_robbery_cutscene]
+def_coord $exit = coord;
+if (%wom_bankjob < 2) {
+    %wom_bankjob = 2;
+}
+if_openchat(message_np1);
+if_settext(message_np1:com_0, "You close your eyes and watch the recording...");
+~follower_logout;
+~fade_out();
+p_delay(2);
+
+def_coord $instance = region_create(2, 4, 3);
+def_coord $baseCoord = region_getcoord(0, 0, 0);
+~region_set_block(0_33_76_0_32, 0, 4, 3);
+~region_set_block(1_33_76_0_32, 1, 4, 3);
+region_setexitcoord($exit);
+
+%cutscene_status = 1;
+
+minimap_toggle(2);
+if_settab(null, 0);
+if_settab(null, 1);
+if_settab(null, 2);
+if_settab(null, 3);
+if_settab(null, 4);
+if_settab(null, 5);
+if_settab(null, 6);
+if_settab(null, 11);
+if_settab(null, 12);
+
+p_transmogrify(desert_treasure_invisible_npc);
+buildappearance(worn);
+p_teleport(movecoord($baseCoord, 16, 0, 14));
+p_delay(0);
+
+npc_add(movecoord($baseCoord, 4, 0, 16), wom_olivia, 500);
+if (npc_findexact(movecoord($baseCoord, 4, 0, 16), wom_olivia) = true) {
+    npc_setmode(none);
+    npc_facesquare(movecoord(npc_coord, -1, 0, 0));
+}
+
+npc_add(movecoord($baseCoord, 18, 0, 13), wom_banker1, 500);
+if (npc_findexact(movecoord($baseCoord, 18, 0, 13), wom_banker1) = true) {
+    npc_setmode(none);
+}
+
+npc_add(movecoord($baseCoord, 18, 0, 11), wom_banker2, 500);
+if (npc_findexact(movecoord($baseCoord, 18, 0, 11), wom_banker2) = true) {
+    npc_setmode(none);
+}
+
+npc_add(movecoord($baseCoord, 18, 0, 10), wom_banker3, 500);
+if (npc_findexact(movecoord($baseCoord, 18, 0, 10), wom_banker3) = true) {
+    npc_setmode(none);
+}
+
+npc_add(movecoord($baseCoord, 21, 0, 10), wom_fakeplayer2, 500);
+if (npc_findexact(movecoord($baseCoord, 21, 0, 10), wom_fakeplayer2) = true) {
+    npc_setmode(none);
+    npc_facesquare(movecoord(npc_coord, 1, 0, 0));
+}
+
+npc_add(movecoord($baseCoord, 22, 0, 10), wom_fakeplayer3, 500);
+if (npc_findexact(movecoord($baseCoord, 22, 0, 10), wom_fakeplayer3) = true) {
+    npc_setmode(none);
+    npc_facesquare(movecoord(npc_coord, -1, 0, 0));
+}
+
+npc_add(movecoord($baseCoord, 21, 0, 12), wom_fakeplayer4, 500);
+if (npc_findexact(movecoord($baseCoord, 21, 0, 12), wom_fakeplayer4) = true) {
+    npc_setmode(none);
+}
+
+npc_add(movecoord($baseCoord, 16, 0, 23), wom_cutscene_1, 500);
+if (npc_findexact(movecoord($baseCoord, 16, 0, 23), wom_cutscene_1) = true) {
+    npc_setmode(none);
+}
+
+npc_add(movecoord($baseCoord, 24, 0, 18), wom_fakeplayer1, 500);
+if (npc_findexact(movecoord($baseCoord, 24, 0, 18), wom_fakeplayer1) = true) {
+    npc_setmode(none);
+}
+
+npc_add(movecoord($baseCoord, 8, 0, 20), wom_fakeplayer5, 500);
+if (npc_findexact(movecoord($baseCoord, 8, 0, 20), wom_fakeplayer5) = true) {
+    npc_setmode(none);
+    npc_facesquare(movecoord(npc_coord, 0, 0, 1));
+}
+
+npc_add(movecoord($baseCoord, 12, 0, 16), wom_marketguard, 500);
+if (npc_findexact(movecoord($baseCoord, 12, 0, 16), wom_marketguard) = true) {
+    npc_setmode(none);
+}
+
+p_delay(0);
+cam_moveto(movecoord($baseCoord, 27, 0, 14), 900, 10, 10);
+cam_lookat(movecoord($baseCoord, 16, 0, 15), 25, 10, 10);
+p_delay(3);
+
+~fade_in();
+p_delay(1);
+if_openoverlay(null);
+
+if (npc_findexact(movecoord($baseCoord, 12, 0, 16), wom_marketguard) = true) {
+        if (.npc_findexact(movecoord($baseCoord, 8, 0, 20), wom_fakeplayer5) = true) {
+            .npc_anim(human_pickuptable, 0);
+            npc_say("Hey! Get your hands off there!");
+            p_delay(1);
+            %npc_attacking_npc_uid = .npc_uid;
+            npc_setmode(opnpc2);
+    }
+}
+p_delay(5);
+
+p_teleport(movecoord($baseCoord, 22, 0, 14));
+p_delay(0);
+
+if (npc_findexact(movecoord($baseCoord, 24, 0, 18), wom_fakeplayer1) = true) {
+    npc_walk(movecoord($baseCoord, 21, 0, 15));
+    p_delay(0);
+
+    cam_moveto(movecoord($baseCoord, 27, 0, 15), 950, 2, 1);
+    cam_lookat(movecoord($baseCoord, 18, 0, 12), 25, 2, 1);
+    p_delay(2);
+
+    npc_tele(movecoord($baseCoord, 20, 0, 13));
+    p_delay(0);
+
+    npc_facesquare(movecoord(npc_coord, -1, 0, 0));
+} else {
+    p_delay(3);
+}
+
+if (npc_findexact(movecoord($baseCoord, 18, 0, 13), wom_banker1) = true) {
+    npc_facesquare(movecoord(npc_coord, 1, 0, 0));
+}
+p_delay(0);
+
+if (npc_findexact(movecoord($baseCoord, 21, 0, 10), wom_fakeplayer2) = true) {
+    npc_say("Thx");
+    npc_walk(movecoord($baseCoord, 20, 0, 10));
+}
+p_delay(0);
+
+if (npc_findexact(movecoord($baseCoord, 18, 0, 10), wom_banker3) = true) {
+    npc_facesquare(movecoord(npc_coord, 1, 0, 0));
+}
+
+if (npc_findexact(movecoord($baseCoord, 22, 0, 10), wom_fakeplayer3) = true) {
+    if (.npc_findexact(movecoord($baseCoord, 21, 0, 12), wom_fakeplayer4) = true) {
+        npc_say("Yw");
+        .npc_say("Buying 2k nats - no noob offers");
+        cam_moveto(movecoord($baseCoord, 27, 0, 9), 950, 1, 1);
+        cam_lookat(movecoord($baseCoord, 18, 0, 12), 125, 1, 1);
+        p_delay(2);
+        npc_say("I h4ve n4ts");
+        p_delay(2);
+        .npc_say("You sell?");
+        p_delay(1);
+        npc_walk(movecoord($baseCoord, 21, 0, 11));
+        p_delay(1);
+        npc_say("Tr4de");
+        p_delay(0);
+        p_teleport(movecoord($baseCoord, 17, 0, 19));
+        npc_facesquare(movecoord(npc_coord, 0, 0, 1));
+        p_delay(0);
+        cam_moveto(movecoord($baseCoord, 27, 0, 15), 975, 2, 1);
+        cam_lookat(movecoord($baseCoord, 18, 0, 16), 25, 1, 1);
+    }
+}
+
+if (npc_findexact(movecoord($baseCoord, 16, 0, 23), wom_cutscene_1) = true) {
+    if (.npc_findexact(movecoord($baseCoord, 20, 0, 10), wom_fakeplayer2) = true) {
+        .npc_walk(movecoord($baseCoord, 20, 0, 17));
+    }
+    if (.npc_findexact(movecoord($baseCoord, 4, 0, 16), wom_olivia) = true) {
+        .npc_walk(movecoord($baseCoord, 12, 0, 17));
+    }
+    if (.npc_findexact(movecoord($baseCoord, 20, 0, 13), wom_fakeplayer1) = true) {
+        .npc_walk(movecoord($baseCoord, 16, 0, 17));
+        npc_walk(movecoord($baseCoord, 16, 0, 19));
+        p_delay(5);
+        npc_anim(human_castwave_staff, 0);
+        spotanim_npc(wom_wall_crush_casting, 92, 0);
+
+        if (loc_find(movecoord($baseCoord, 16, 0, 19), loc_1530) = true) {
+            loc_del(1000);
+        }
+        loc_add(movecoord($baseCoord, 16, 0, 18), loc_1531, 0, wall_straight, 1000);
+
+        projanim_map(movecoord($baseCoord, 16, 0, 19), movecoord($baseCoord, 16, 0, 17), wom_wall_crush_travel, 36, 31, 25, 86, 16, 64);
+        .spotanim_npc(wom_wall_crush_impact, 124, 86);
+        sound_synth(door_open, 1, 0);
+        sound_synth(earthwave_cast_and_fire, 1, 0);
+        sound_synth(earthwave_hit, 1, 86);
+        cam_moveto(movecoord($baseCoord, 23, 0, 17), 525, 2, 1);
+        cam_lookat(movecoord($baseCoord, 17, 0, 16), 175, 2, 1);
+        p_delay(1);
+    }
+
+    if (.npc_findexact(movecoord($baseCoord, 20, 0, 17), wom_fakeplayer2) = true) {
+        .npc_facesquare(movecoord(.npc_coord, -1, 0, 0));
+        .npc_say("Huh?");
+        npc_walk(movecoord($baseCoord, 16, 0, 18));
+        p_delay(0);
+        npc_say("Please don't block my line of fire!");
+        p_delay(0);
+        .npc_walk(movecoord($baseCoord, 21, 0, 16));
+    }
+
+    if (.npc_findexact(movecoord($baseCoord, 16, 0, 17), wom_fakeplayer1) = true) {
+        .spotanim_npc(human_to_skeleton_death, 0, 0);
+        .npc_anim(human_become_skeleton_death, 0);
+        ~sound_area(elemental_wizard_death, 0, movecoord($baseCoord, 16, 0, 17), 15);
+        p_delay(1);
+        .npc_del;
+    }
+    npc_facesquare(movecoord($baseCoord, 12, 0, 17));
+
+    if (.npc_findexact(movecoord($baseCoord, 12, 0, 17), wom_olivia) = true) {
+        .npc_say("Hey, what are you doing?");
+        obj_add(movecoord($baseCoord, 16, 0, 17), coins, 50, 199);
+        obj_add(movecoord($baseCoord, 16, 0, 17), ashes, 1, 7);
+        .npc_walk(movecoord($baseCoord, 13, 0, 17));
+        p_delay(2);
+
+        spotanim_npc(teleport_other_casting, 0, 0);
+        npc_anim(human_teleport_other_casting, 0);
+        npc_say("Olivia - please go away!");
+        sound_synth(tele_other_cast, 1, 0);
+        p_delay(1);
+
+        .spotanim_npc(teleport_other_impact, 92, 0);
+        .npc_anim(human_teleport_other_impact, 0);
+        .npc_say("Eeeek!");
+        sound_synth(teleport_all, 1, 0);
+        p_delay(1);
+        .npc_del;
+        p_delay(1);
+
+        npc_facesquare(movecoord($baseCoord, 16, 0, 15));
+        npc_say("Ah, now I can get on with it...");
+        p_delay(0);
+        npc_anim(human_pickupfloor, 0);
+        p_delay(0);
+        if (obj_find(movecoord($baseCoord, 16, 0, 17), coins) = true) {
+            obj_del;
+        }
+        sound_synth(pick2, 1, 0);
+        p_delay(2);
+
+        npc_anim(human_castwave_staff, 0);
+        spotanim_npc(wom_wall_crush_casting, 92, 0);
+        projanim_map(movecoord($baseCoord, 16, 0, 18), movecoord($baseCoord, 16, 0, 14), wom_wall_crush_travel, 36, 31, 25, 116, 16, 64);
+        sound_synth(earthwave_cast_and_fire, 1, 0);
+        p_delay(2);
+
+        spotanim_map(wom_wall_crush_impact, movecoord($baseCoord, 16, 0, 14), 0, 0);
+        if (loc_find(movecoord($baseCoord, 16, 0, 14), wom_unbroken_wall) = true) {
+            loc_del(1000);
+        }
+        loc_add(movecoord($baseCoord, 16, 0, 14), wom_broken_wall, 0, centrepiece_straight, 1000);
+        sound_synth(earthwave_hit, 1, 0);
+        npc_walk(movecoord($baseCoord, 16, 0, 17));
+        p_delay(1);
+
+        npc_tele(movecoord($baseCoord, 15, 0, 15));
+        cam_moveto(movecoord($baseCoord, 20, 0, 6), 500, 100, 10);
+        cam_lookat(movecoord($baseCoord, 16, 0, 14), 300, 100, 10);
+        p_delay(0);
+        npc_tele(movecoord($baseCoord, 17, 0, 14));
+        p_delay(0);
+        npc_facesquare(movecoord(npc_coord, 1, 0, -1));
+        npc_say("Could everyone please not move?");
+        p_delay(1);
+    }
+}
+
+if (npc_findexact(movecoord($baseCoord, 18, 0, 13), wom_banker1) = true) {
+    npc_say("Hey - you can't come in here!");
+    npc_walk(movecoord($baseCoord, 18, 0, 14));
+    p_delay(0);
+
+    if (.npc_findexact(movecoord($baseCoord, 18, 0, 11), wom_banker2) = true) {
+        .npc_tele(movecoord($baseCoord, 16, 0, 11));
+        p_delay(0);
+
+        npc_facesquare(movecoord($baseCoord, 17, 0, 14));
+        .npc_walk(movecoord($baseCoord, 16, 0, 13));
+        .npc_say("Oi!");
+        if (npc_findexact(movecoord($baseCoord, 18, 0, 10), wom_banker3) = true) {
+            npc_say("Uh-oh!");
+            npc_walk(movecoord($baseCoord, 18, 0, 8));
+        }
+        p_delay(1);
+
+        if (npc_findexact(movecoord($baseCoord, 17, 0, 14), wom_cutscene_1) = true) {
+            npc_anim(human_blunt_pound, 0);
+            npc_facesquare(movecoord($baseCoord, 18, 0, 14));
+        }
+        .npc_facesquare(movecoord($baseCoord, 17, 0, 14));
+        sound_synth(human_hit, 1, 1);
+        p_delay(0);
+    }
+}
+
+if (npc_findexact(movecoord($baseCoord, 18, 0, 14), wom_banker1) = true) {
+    npc_anim(human_unarmed_def, 0);
+    if (.npc_findexact(movecoord($baseCoord, 18, 0, 8), wom_banker3) = true) {
+        .npc_facesquare(movecoord($baseCoord, 18, 0, 10));
+    }
+    ~sound_area(unarmed_punch, 0, movecoord($baseCoord, 18, 0, 14), 15);
+    p_delay(0);
+
+    npc_damage(^hitmark_damage, 15);
+    p_delay(0);
+
+    npc_anim(human_death, 0);
+    ~sound_area(human_death, 0, movecoord($baseCoord, 18, 0, 14), 15);
+    if (.npc_findexact(movecoord($baseCoord, 16, 0, 13), wom_banker2) = true) {
+        .npc_tele(movecoord($baseCoord, 16, 0, 14));
+        p_delay(0);
+
+        .npc_facesquare(movecoord($baseCoord, 17, 0, 14));
+        p_delay(0);
+
+        npc_del;
+        obj_add(movecoord($baseCoord, 18, 0, 14), bones, 1, 199);
+        obj_add(movecoord($baseCoord, 18, 0, 14), coins, 250, 199);
+        .npc_anim(human_unarmedpunch, 0);
+        sound_synth(unarmed_punch, 1, 0);
+        p_delay(0);
+
+        if (npc_findexact(movecoord($baseCoord, 17, 0, 14), wom_cutscene_1) = true) {
+            npc_anim(human_blunt_block, 0);
+            npc_facesquare(movecoord($baseCoord, 16, 0, 14));
+            npc_damage(^hitmark_block, 0);
+            p_delay(1);
+
+            npc_anim(human_blunt_pound, 0);
+            .npc_anim(human_unarmed_def, 0);
+            .npc_damage(^hitmark_damage, 11);
+            sound_synth(human_hit, 1, 10);
+            p_delay(1);
+
+            npc_say("I do wish you'd just stop it!");
+            .npc_anim(human_unarmedpunch, 0);
+            sound_synth(unarmed_punch, 1, 0);
+            p_delay(0);
+
+            npc_anim(human_blunt_block, 0);
+            npc_damage(^hitmark_block, 0);
+            sound_synth(warhammer_crush, 1, 0);
+            p_delay(1);
+
+            npc_anim(human_blunt_pound, 0);
+            sound_synth(human_hit, 1, 10);
+            p_delay(1);
+
+            npc_facesquare(movecoord($baseCoord, 18, 0, 8));
+            .npc_anim(human_unarmed_def, 0);
+            .npc_damage(^hitmark_damage, 12);
+            ~sound_area(unarmed_punch, 0, movecoord($baseCoord, 16, 0, 14), 15);
+            p_delay(0);
+
+            .npc_anim(human_death, 0);
+            ~sound_area(human_death, 0, movecoord($baseCoord, 16, 0, 14), 15);
+            cam_moveto(movecoord($baseCoord, 27, 0, 8), 650, 6, 3);
+            cam_lookat(movecoord($baseCoord, 16, 0, 12), 200, 6, 3);
+        }
+
+        if (npc_findexact(movecoord($baseCoord, 18, 0, 8), wom_banker3) = true) {
+            npc_walk(movecoord($baseCoord, 16, 0, 8));
+            p_delay(1);
+
+            .npc_del;
+            obj_add(movecoord($baseCoord, 16, 0, 14), bones, 1, 199);
+            obj_add(movecoord($baseCoord, 16, 0, 14), coins, 250, 199);
+            if (.npc_findexact(movecoord($baseCoord, 21, 0, 12), wom_fakeplayer4) = true) {
+                .npc_say("Hey - how'd he get in there?");
+                .npc_walk(movecoord($baseCoord, 20, 0, 12));
+            }
+            p_delay(0);
+
+            npc_facesquare(movecoord($baseCoord, 17, 0, 10));
+            npc_say("Help! Help!");
+            p_delay(0);
+        }
+    }
+}
+
+if (npc_findexact(movecoord($baseCoord, 21, 0, 11), wom_fakeplayer3) = true) {
+    npc_facesquare(movecoord($baseCoord, 20, 0, 11));
+    npc_say("Hax!");
+}
+
+if (npc_findexact(movecoord($baseCoord, 17, 0, 14), wom_cutscene_1) = true) {
+    npc_facesquare(movecoord($baseCoord, 20, 0, 12));
+    if (.npc_findexact(movecoord($baseCoord, 20, 0, 12), wom_fakeplayer4) = true) {
+        .npc_facesquare(movecoord($baseCoord, 17, 0, 14));
+        p_delay(1);
+
+        npc_say("My sincerest regrets, dear lady...");
+        p_delay(1);
+
+        npc_anim(human_castwave_staff, 0);
+        spotanim_npc(wom_wall_crush_casting, 92, 0);
+        projanim_map(movecoord($baseCoord, 17, 0, 14), movecoord($baseCoord, 20, 0, 12), wom_wall_crush_travel, 36, 31, 25, 86, 16, 64);
+        ~sound_area(earthwave_cast_and_fire, 0, movecoord($baseCoord, 17, 0, 14), 10);
+        ~sound_area(earthwave_hit, 86, movecoord($baseCoord, 17, 0, 14), 10);
+        p_delay(1);
+
+        .spotanim_npc(human_to_skeleton_death, 0, 30);
+        .npc_anim(human_become_skeleton_death, 30);
+        ~sound_area(elemental_wizard_death, 0, movecoord($baseCoord, 20, 0, 12), 15);
+        npc_facesquare(movecoord($baseCoord, 21, 0, 11));
+        p_delay(1);
+
+        npc_say("And also you, sir...");
+        p_delay(0);
+
+        .npc_del;
+        obj_add(movecoord($baseCoord, 20, 0, 12), ashes, 1, 7);
+        obj_add(movecoord($baseCoord, 20, 0, 12), obj_2422, 1, 199);
+    }
+    p_delay(0);
+
+    npc_anim(human_castwave_staff, 0);
+    spotanim_npc(wom_wall_crush_casting, 92, 0);
+    projanim_map(movecoord($baseCoord, 17, 0, 14), movecoord($baseCoord, 21, 0, 11), wom_wall_crush_travel, 36, 31, 25, 86, 16, 64);
+    ~sound_area(earthwave_cast_and_fire, 0, movecoord($baseCoord, 17, 0, 14), 10);
+    ~sound_area(earthwave_hit, 86, movecoord($baseCoord, 17, 0, 14), 10);
+    p_delay(1);
+
+    if (.npc_findexact(movecoord($baseCoord, 21, 0, 16), wom_fakeplayer2) = true) {
+        .npc_walk(movecoord($baseCoord, 21, 0, 12));
+    }
+    if (.npc_findexact(movecoord($baseCoord, 21, 0, 11), wom_fakeplayer3) = true) {
+        .spotanim_npc(human_to_skeleton_death, 0, 30);
+        .npc_anim(human_become_skeleton_death, 30);
+        ~sound_area(elemental_wizard_death, 0, movecoord($baseCoord, 21, 0, 11), 15);
+        p_delay(2);
+
+        .npc_del;
+        obj_add(movecoord($baseCoord, 21, 0, 11), ashes, 1, 7);
+    }
+    p_delay(0);
+
+    if (.npc_findexact(movecoord($baseCoord, 21, 0, 12), wom_fakeplayer2) = true) {
+        .npc_say("How you do that?");
+        p_delay(0);
+
+        .npc_facesquare(movecoord($baseCoord, 17, 0, 14));
+        p_delay(2);
+
+        npc_say("Oh dear - another one...");
+        p_delay(0);
+
+        npc_anim(human_castwave_staff, 0);
+        spotanim_npc(wom_wall_crush_casting, 92, 0);
+        projanim_map(movecoord($baseCoord, 17, 0, 14), movecoord($baseCoord, 21, 0, 12), wom_wall_crush_travel, 36, 31, 25, 86, 16, 64);
+        ~sound_area(earthwave_cast_and_fire, 0, movecoord($baseCoord, 17, 0, 14), 10);
+        ~sound_area(earthwave_hit, 86, movecoord($baseCoord, 17, 0, 14), 10);
+        npc_walk(movecoord($baseCoord, 18, 0, 14));
+        p_delay(1);
+
+        .spotanim_npc(human_to_skeleton_death, 0, 30);
+        .npc_anim(human_become_skeleton_death, 30);
+        ~sound_area(elemental_wizard_death, 0, movecoord($baseCoord, 21, 0, 12), 15);
+        p_delay(0);
+
+        npc_facesquare(movecoord($baseCoord, 20, 0, 12));
+        npc_say("Ooh - a party hat?");
+        p_delay(1);
+
+        .npc_del;
+        obj_add(movecoord($baseCoord, 21, 0, 12), ashes, 1, 3);
+    }
+    p_delay(0);
+
+    if (obj_find(movecoord($baseCoord, 20, 0, 12), obj_2422) = true) { // no telegrab anim if partyhat isn't there https://youtu.be/Bxz9429xFMk?si=py-unIVTspYWFSZv&t=26
+        spotanim_npc(telegrab_casting, 92, 0);
+        npc_anim(human_casttelegrab, 0);
+        projanim_map(movecoord($baseCoord, 18, 0, 14), movecoord($baseCoord, 20, 0, 12), telegrab_travel, 35, 0, 48, 86, 16, 64);
+        spotanim_map(telegrab_impact, movecoord($baseCoord, 20, 0, 12), 20, 86);
+        ~sound_area(telegrab_all, 0, movecoord($baseCoord, 18, 0, 14), 10); // guess before telegrab synth update
+        // ~sound_area(telegrab_cast_and_fire, 0, movecoord($baseCoord, 18, 0, 14), 10);
+        // ~sound_area(telegrab_hit, 4, movecoord($baseCoord, 20, 0, 12), 10);
+        p_delay(2);
+        obj_del;
+    }
+    p_delay(2);
+
+    npc_changetype(wom_cutscene_2, 500);
+    p_delay(1);
+
+    npc_walk(movecoord($baseCoord, 18, 0, 10));
+    p_delay(0);
+
+    npc_say("Now, my dear...");
+    p_delay(1);
+
+    if (.npc_findexact(movecoord($baseCoord, 16, 0, 8), wom_banker3) = true) {
+        .npc_facesquare(movecoord($baseCoord, 18, 0, 11));
+        .npc_say("Eeeek!");
+    }
+    p_delay(1);
+
+    npc_facesquare(movecoord($baseCoord, 16, 0, 8));
+    p_delay(0);
+
+    npc_say("Just give me the money, please.");
+    p_delay(2);
+
+    npc_facesquare(movecoord($baseCoord, 18, 0, 13));
+    .npc_add(movecoord($baseCoord, 18, 0, 13), wom_watchman, 500);
+    .npc_setmode(none);
+    .npc_say("Old man, you're for da cage!");
+    cam_moveto(movecoord($baseCoord, 25, 0, 10), 400, 2, 1);
+    cam_lookat(movecoord($baseCoord, 19, 0, 10), 100, 2, 1);
+    sound_synth(smokepuff, 1, 0);
+    p_delay(0);
+
+    .npc_walk(movecoord($baseCoord, 18, 0, 11));
+    p_delay(2);
+
+    npc_say("Oh, am I?");
+    p_delay(2);
+
+    anim(human_casting, 0);
+    spotanim_npc(teleport_casting, 128, 32);
+    npc_say("Ahh!");
+    sound_synth(charge, 1, 0);
+    p_delay(1);
+
+    npc_anim(human_casting, 0);
+    p_delay(0);
+
+    .spotanim_npc(saradomin_lightning, 128, 64);
+    sound_synth(saradomin_strike, 1, 0);
+    p_delay(1);
+
+    .npc_say("Aaargh!");
+    .npc_damage(^hitmark_damage, divide(.npc_basestat(hitpoints), 5)); // Does 20% of hp
+    p_delay(1);
+
+    npc_anim(wom_kung_fu_attack, 0);
+    npc_say("Yah!");
+    p_delay(0);
+
+    .npc_anim(wom_recoil, 0);
+    sound_synth(human_hit, 1, 10);
+    p_delay(1);
+
+    .npc_anim(wom_watchman_death, 0);
+    ~sound_area(human_death, 0, movecoord($baseCoord, 18, 0, 11), 15);
+    p_delay(1);
+
+    npc_facesquare(movecoord($baseCoord, 20, 0, 10));
+    npc_say("And YOU can stop spying on me!");
+    .npc_del;
+    obj_add(movecoord($baseCoord, 18, 0, 11), bones, 1, 199);
+    obj_add(movecoord($baseCoord, 18, 0, 11), coins, 250, 199);
+    cam_moveto(movecoord($baseCoord, 24, 0, 10), 375, 1, 1);
+    cam_lookat(movecoord($baseCoord, 18, 0, 10), 100, 1, 1);
+    p_delay(1);
+
+    npc_anim(human_casting_tele_block_staff, 0);
+    projanim_map(movecoord($baseCoord, 18, 0, 10), movecoord($baseCoord, 25, 0, 10), wom_wall_crush_travel, 36, 36, 25, 86, 0, 64);
+    sound_synth(saradomin_strike, 1, 0);
+    p_delay(1);
+}
+
+if_openoverlay(wom_smashed_glass);
+p_delay(2);
+
+~fade_out();
+p_delay(0);
+
+p_teleport($exit);
+p_delay(0);
+
+%cutscene_status = 0;
+p_transmogrify(null);
+buildappearance(worn);
+~initalltabs;
+minimap_toggle(0);
+cam_reset;
+~fade_in();
+queue(follower_login, 0, 0);
+if_openoverlay(null);
+~mesbox("End of recording.");
+
+[ai_timer,wom_fakeplayer5]
+// It must check if guard exists, rs3 broke the combat but she doesn't continue theiving, but if guard dies normally, she does.
+if (.npc_find(npc_coord, wom_marketguard, 10, 0) = false) {
+    npc_setmode(none);
+    npc_facesquare(movecoord(npc_coord, 0, 0, 1));
+    npc_anim(human_pickuptable, 0);
+}
+npc_settimer(7);
+
+[opobj2,obj_2422]
+inv_del(inv, obj_2422, 1);
+mes("Please send a bug report to Jagex telling them how you got that hat.");

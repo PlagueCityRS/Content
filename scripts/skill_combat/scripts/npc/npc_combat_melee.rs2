@@ -31,6 +31,32 @@ if (randominc($attack_roll) > randominc($defence_roll)) {
 }
 ~playerhit_n_melee(true, 0, npc_param(attackrate));
 
+// perform a basic melee attack from the npc to the other npc.
+[proc,npc_meleeattack_npc]
+def_int $attack_roll = ~npc_melee_attack_roll;
+def_int $defence_roll = ~.npc_defence_roll_specific(npc_param(damagetype));
+def_int $maxhit = ~npc_melee_maxhit;
+
+if (randominc($attack_roll) > randominc($defence_roll)) {
+    ~npchit_n_melee(randominc($maxhit), npc_param(attackrate));
+    def_int $poison_severity = npc_param(poison_severity);
+    if ($poison_severity > 0) {
+        ~.npc_poison_start_npcs($poison_severity);
+    }
+    return;
+}
+~npchit_n_melee(0, npc_param(attackrate));
+
+[proc,npchit_n_melee](int $damage, int $delay)
+~npc_set_attack_vars_npc;
+%npc_action_delay = add(map_clock, $delay);
+if (npc_stat(hitpoints) = 0) {
+    return;
+}
+.npc_queue(9, $damage, 0);
+~.npc_retaliate_npc(0);
+
+
 [proc,playerhit_n_melee](boolean $check_protect_prayer, int $damage, int $delay)
 //~damage_self($damage);
 if_close; // close the player interface when taking a hit.

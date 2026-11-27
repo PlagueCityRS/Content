@@ -1499,6 +1499,7 @@ op2=Pick
 blockwalk=no
 blockrange=no
 mapscene=31
+category=wheat
 
 [dugupsoil1]
 model=floor_dugupsoil1
@@ -7550,6 +7551,7 @@ length=2
 op1=Chop down
 op3=hidden
 mapscene=0
+param=ent,macro_ent_dramen
 
 [fallentree]
 name=Fallen tree

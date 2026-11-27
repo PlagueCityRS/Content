@@ -1033,27 +1033,27 @@ size=1
 
 [silvercast_holysymbol]
 size=1
-stock0=nostringstar,1
+stock1=nostringstar,1
 
 [silvercast_unholysymbol]
 size=1
-stock0=nostringsnake,1
+stock1=nostringsnake,1
 
 [silvercast_sickle]
 size=1
-stock0=silver_sickle,1
+stock1=silver_sickle,1
 
 [silvercast_lightning]
 size=1
-stock0=fenk_conductor,1
+stock1=fenk_conductor,1
 
 [silvercast_tiara]
 size=1
-stock0=tiara,1
+stock1=tiara,1
 
 [silvercast_agrith]
 size=1
-stock0=agrith_sigil,1
+stock1=agrith_sigil,1
 
 [generalshopnardah]
 size=40

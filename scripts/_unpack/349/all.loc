@@ -4402,46 +4402,6 @@ ambient=40
 blockwalk=no
 blockrange=no
 
-[loc_5551]
-name=Willow
-desc=A droopy tree.
-model=loc_5551
-width=2
-length=2
-mapscene=3
-op1=Chop down
-op3=hidden
-
-[loc_5552]
-name=Willow
-desc=These trees are found near water.
-model=loc_5551
-width=2
-length=2
-mirror=yes
-mapscene=3
-op1=Chop down
-op3=hidden
-
-[loc_5553]
-name=Willow
-desc=These trees are found near water.
-model=loc_5553
-width=2
-length=2
-mapscene=3
-op1=Chop down
-op3=hidden
-
-[willow_tree2or3or4_stump]
-name=Tree Stump
-desc=This is what is left of a willow tree.
-model=loc_5554
-width=2
-length=2
-mapscene=3
-op3=hidden
-
 [hanging_tapestry1]
 name=Hanging tapestry
 desc=I don't know art, but I like it!
@@ -4638,19 +4598,6 @@ model=loc_5353
 length=2
 width=2
 
-[log_withaxe]
-name=Logs
-desc=Someone's been chopping logs.
-model=loc_5581
-recol1s=15855
-recol1d=8354
-op1=Take-axe
-
-[log_withoutaxe]
-name=Logs
-desc=Someone's been chopping logs.
-model=loc_5582
-
 [wheat_tall]
 name=Wheat
 desc=Baby bread.
@@ -4663,6 +4610,7 @@ ambient=10
 op2=Pick
 blockwalk=no
 blockrange=no
+category=wheat
 
 [wheat_small]
 name=Wheat
@@ -4677,6 +4625,7 @@ resizez=100
 offsetx=20
 blockwalk=no
 blockrange=no
+category=wheat
 
 [wheat_smallest]
 name=Wheat
@@ -4691,6 +4640,7 @@ resizez=100
 offsetx=30
 blockwalk=no
 blockrange=no
+category=wheat
 
 [dugupsoil1_light_no_glow]
 model=floor_dugupsoil1
@@ -17673,6 +17623,8 @@ model=loc_7049
 op1=Open
 active=yes
 blockrange=no
+category=gate_main_closed
+param=next_loc_stage,farming_openfencegate_l
 
 [farming_fencegate_r]
 name=Gate
@@ -17682,6 +17634,8 @@ mirror=yes
 op1=Open
 active=yes
 blockrange=no
+category=gate_outer_closed
+param=next_loc_stage,farming_openfencegate_r
 
 [farming_openfencegate_l]
 name=Gate
@@ -17690,6 +17644,8 @@ model=loc_7049
 op1=Close
 active=yes
 blockrange=no
+category=gate_main_open
+param=next_loc_stage,farming_fencegate_l
 
 [farming_openfencegate_r]
 name=Gate
@@ -17698,6 +17654,8 @@ model=loc_7049
 mirror=yes
 op1=Close
 blockrange=no
+category=gate_outer_open
+param=next_loc_stage,farming_fencegate_r
 
 [seed_stall]
 name=Seed Stall
@@ -21741,42 +21699,6 @@ resizey=150
 resizex=150
 mapscene=5
 
-[willow_tree_stump_new]
-name=Tree Stump
-desc=This is what is left of a willow tree.
-model=loc_7399
-width=2
-length=2
-mapscene=3
-op3=hidden
-
-[maple_tree_stump_new]
-name=Tree Stump
-desc=This is what is left of a maple tree.
-model=loc_7400
-width=2
-length=2
-mapscene=3
-op3=hidden
-
-[magic_tree_stump_new]
-name=Tree Stump
-desc=This is what is left of a magic tree.
-model=loc_7401
-width=2
-length=2
-mapscene=3
-op3=hidden
-
-[yew_tree_stump_new]
-name=Tree Stump
-desc=This is what is left of a yew tree.
-model=loc_7402
-width=3
-length=3
-mapscene=3
-op3=hidden
-
 [farming_applebarrel_empty]
 name=Apple Barrel
 desc=An empty barrel.
@@ -23540,6 +23462,7 @@ length=2
 hillskew=yes
 op1=Climb-over
 blockrange=no
+category=stile
 
 [farming_fermenting_vat]
 name=Fermenting Vat
@@ -52412,44 +52335,6 @@ desc=Many rare plants such as this usually have exotic tubers.
 model=loc_9033
 hillskew=yes
 blockrange=no
-
-[mahoganytree]
-name=Mahogany
-desc=A beautiful old mahogany tree.
-model=loc_9034
-recol1s=5218
-recol1d=3136
-width=3
-length=3
-op1=Chop down
-op3=hidden
-mapscene=1
-
-[mahogany_stump]
-name=Tree stump
-desc=This once was a beautiful tree.
-model=loc_9035
-recol1s=5218
-recol1d=3136
-width=3
-length=3
-
-[teaktree]
-name=Teak
-desc=A beautiful old teak tree.
-model=loc_9036
-recol1s=5218
-recol1d=12576
-mapscene=1
-op1=Chop down
-op3=hidden
-
-[teak_stump]
-name=Tree stump
-desc=This tree has been cut down.
-model=loc_9037
-recol1s=5218
-recol1d=12576
 
 [tbwcu_bamboo_door_l]
 name=Hardwood Grove Doors

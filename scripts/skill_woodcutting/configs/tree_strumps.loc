@@ -239,3 +239,64 @@ width=2
 length=2
 ambient=25
 mapscene=6
+
+[willow_tree2or3or4_stump]
+name=Tree Stump
+desc=This is what is left of a willow tree.
+model=loc_5554
+width=2
+length=2
+mapscene=3
+op3=hidden
+
+[willow_tree_stump_new]
+name=Tree Stump
+desc=This is what is left of a willow tree.
+model=loc_7399
+width=2
+length=2
+mapscene=3
+op3=hidden
+
+[maple_tree_stump_new]
+name=Tree Stump
+desc=This is what is left of a maple tree.
+model=loc_7400
+width=2
+length=2
+mapscene=3
+op3=hidden
+
+[magic_tree_stump_new]
+name=Tree Stump
+desc=This is what is left of a magic tree.
+model=loc_7401
+width=2
+length=2
+mapscene=3
+op3=hidden
+
+[yew_tree_stump_new]
+name=Tree Stump
+desc=This is what is left of a yew tree.
+model=loc_7402
+width=3
+length=3
+mapscene=3
+op3=hidden
+
+[teak_stump]
+name=Tree stump
+desc=This tree has been cut down.
+model=loc_9037
+recol1s=5218
+recol1d=12576
+
+[mahogany_stump]
+name=Tree stump
+desc=This once was a beautiful tree.
+model=loc_9035
+recol1s=5218
+recol1d=3136
+width=3
+length=3

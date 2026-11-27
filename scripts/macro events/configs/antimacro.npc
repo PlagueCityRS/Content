@@ -1694,3 +1694,467 @@ wanderrange=0
 moverestrict=nomove
 defaultmode=none
 param=is_whirlpool,^true
+
+[macro_ent_jungle_tree1]
+name=Jungle Tree
+desc=This is a fairly tall tree with sparse foliage.
+walkanim=seq_1742
+readyanim=seq_1742
+vislevel=hide
+op1=Chop down
+op3=hidden
+model1=npc_1791
+recol1s=15855
+recol1d=5378
+recol2s=12684
+recol2d=5314
+recol3s=10570
+recol3d=7298
+param=ent_tree_loc,mm_bush_kharazi_jungle_tree1
+
+[macro_ent_jungle_tree2]
+name=Jungle Tree
+desc=This is a fairly tall tree with sparse foliage.
+size=2
+walkanim=seq_1742
+readyanim=seq_1742
+vislevel=hide
+op1=Chop down
+op3=hidden
+model1=npc_1792
+param=ent_tree_loc,mm_bush_kharazi_jungle_tree2
+
+[macro_ent_tree1]
+name=Tree
+desc=One of the most common trees in RuneScape.
+size=2
+walkanim=seq_1675
+readyanim=seq_1675
+vislevel=hide
+op1=Chop down
+op3=hidden
+model1=npc_1719
+recol1s=5218
+recol1d=12548
+param=ent_tree_loc,tree
+
+[macro_ent_tree2]
+name=Tree
+desc=One of the most common trees in RuneScape.
+size=2
+walkanim=seq_1675
+readyanim=seq_1675
+vislevel=hide
+op1=Chop down
+op3=hidden
+model1=npc_1719
+recol1s=5218
+recol1d=17633
+param=ent_tree_loc,lighttree
+
+[macro_ent_tree3]
+name=Tree
+desc=A commonly found tree.
+size=2
+walkanim=seq_1677
+readyanim=seq_1677
+vislevel=hide
+op1=Chop down
+op3=hidden
+model1=npc_1721
+recol1s=5218
+recol1d=12548
+param=ent_tree_loc,tree2
+
+[macro_ent_dead_tree1]
+name=Dead tree
+desc=This tree has long been dead.
+size=2
+walkanim=seq_1679
+readyanim=seq_1679
+vislevel=hide
+op1=Chop down
+op3=hidden
+model1=npc_1722
+param=ent_tree_loc,deadtree1
+
+[macro_ent_dead_tree2]
+name=Dead tree
+desc=This tree has long been dead.
+size=2
+walkanim=seq_1679
+readyanim=seq_1679
+vislevel=hide
+op1=Chop down
+op3=hidden
+model1=npc_1722
+recol1s=4194
+recol1d=13602
+param=ent_tree_loc,lightdeadtree1
+
+[macro_ent_dead_tree3]
+name=Dead tree
+desc=It's only useful for firewood now.
+walkanim=seq_1681
+readyanim=seq_1681
+vislevel=hide
+op1=Chop down
+op3=hidden
+model1=npc_1724
+recol1s=6240
+recol1d=5218
+recol2s=7296
+recol2d=5218
+param=ent_tree_loc,deadtree2
+
+[macro_ent_dead_tree4]
+name=Dead tree
+desc=It's only useful for firewood now.
+walkanim=seq_1681
+readyanim=seq_1681
+vislevel=hide
+op1=Chop down
+op3=hidden
+model1=npc_1724
+recol1s=7296
+recol1d=3203
+recol2s=6240
+recol2d=3203
+param=ent_tree_loc,deadtree2_swamp
+
+// unused ?
+[macro_ent_dead_tree5]
+name=Dead tree
+desc=It's only useful for firewood now.
+walkanim=seq_1681
+readyanim=seq_1681
+vislevel=hide
+op1=Chop down
+op3=hidden
+model1=npc_1724
+
+[macro_ent_dead_tree6]
+name=Dead tree
+desc=It's only useful for firewood now.
+walkanim=seq_1681
+readyanim=seq_1681
+vislevel=hide
+op1=Chop down
+op3=hidden
+model1=npc_1724
+recol1s=7296
+recol1d=4194
+recol2s=6240
+recol2d=4194
+param=ent_tree_loc,deadtree2_dark
+
+[macro_ent_dead_tree7]
+name=Dead tree
+desc=It's only useful for firewood now.
+size=2
+walkanim=seq_1683
+readyanim=seq_1683
+vislevel=hide
+op1=Chop down
+op3=hidden
+model1=npc_1728
+param=ent_tree_loc,deadtree3
+
+[macro_ent_dead_tree8]
+name=Dead tree
+desc=It's only useful for firewood now.
+walkanim=seq_1681
+readyanim=seq_1681
+vislevel=hide
+op1=Chop down
+op3=hidden
+model1=npc_1724
+recol1s=7296
+recol1d=30619
+param=ent_tree_loc,deadtree2_snowy
+
+// unused ?
+[macro_ent_dead_tree9]
+name=Dead tree
+desc=This tree has long been dead.
+size=2
+walkanim=seq_1685
+readyanim=seq_1685
+vislevel=hide
+op1=Chop down
+op3=hidden
+model1=npc_1730
+
+[macro_ent_dead_tree10]
+name=Dead tree
+desc=This tree has long been dead.
+size=2
+walkanim=seq_1685
+readyanim=seq_1685
+vislevel=hide
+op1=Chop down
+op3=hidden
+model1=npc_1730
+recol1s=4193
+recol1d=5218
+param=ent_tree_loc,deadtree6
+
+[macro_ent_dead_tree11]
+name=Dead tree
+desc=This tree has long been dead.
+size=2
+walkanim=seq_1687
+readyanim=seq_1687
+vislevel=hide
+op1=Chop down
+op3=hidden
+model1=npc_1732
+param=ent_tree_loc,deadtree1_large
+
+[macro_ent_dramen]
+name=Dramen tree
+desc=An ancient magical tree.
+size=2
+walkanim=seq_1689
+readyanim=seq_1689
+vislevel=hide
+op1=Chop down
+op3=hidden
+model1=npc_1733
+param=ent_tree_loc,dramentree
+
+[macro_ent_magic]
+name=Magic tree
+desc=The tree shimmers with a magical force.
+size=2
+walkanim=seq_1691
+readyanim=seq_1691
+vislevel=hide
+op1=Chop down
+op3=hidden
+model1=npc_1734
+param=ent_tree_loc,magictree
+
+[macro_ent_maple]
+name=Maple tree
+desc=I bet this makes good syrup!
+size=2
+walkanim=seq_1693
+readyanim=seq_1693
+vislevel=hide
+op1=Chop down
+op3=hidden
+model1=npc_1735
+param=ent_tree_loc,mapletree
+
+[macro_ent_willow1]
+name=Willow
+desc=These trees are found near water.
+size=2
+walkanim=seq_1695
+readyanim=seq_1695
+vislevel=hide
+op1=Chop down
+op3=hidden
+model1=npc_1736
+param=ent_tree_loc,willowtree
+
+[macro_ent_willow2]
+name=Willow
+desc=A droopy tree.
+size=2
+walkanim=seq_1697
+readyanim=seq_1697
+vislevel=hide
+op1=Chop down
+op3=hidden
+model1=npc_1737
+param=ent_tree_loc,willow_tree2
+
+[macro_ent_willow3]
+name=Willow
+desc=These trees are found near water.
+size=2
+walkanim=seq_1699
+readyanim=seq_1699
+vislevel=hide
+op1=Chop down
+op3=hidden
+model1=npc_1738
+param=ent_tree_loc,willow_tree4
+
+[macro_ent_oak]
+name=Oak
+desc=A beautiful old oak.
+size=3
+walkanim=seq_1721
+readyanim=seq_1721
+vislevel=hide
+op1=Chop down
+op3=hidden
+model1=npc_1739
+param=ent_tree_loc,oaktree
+
+[macro_ent_yew]
+name=Yew
+desc=A splendid tree.
+size=3
+walkanim=seq_1701
+readyanim=seq_1701
+vislevel=hide
+op1=Chop down
+op3=hidden
+model1=npc_1740
+param=ent_tree_loc,yewtree
+
+[macro_ent_evergreen1]
+name=Evergreen
+desc=A hardy evergreen tree.
+size=2
+walkanim=seq_1703
+readyanim=seq_1703
+vislevel=hide
+op1=Chop down
+op3=hidden
+model1=npc_1741
+param=ent_tree_loc,evergreen
+
+[macro_ent_evergreen2]
+name=Evergreen
+desc=A hardy evergreen tree.
+size=3
+walkanim=seq_1705
+readyanim=seq_1705
+vislevel=hide
+op1=Chop down
+op3=hidden
+model1=npc_1742
+param=ent_tree_loc,evergreen_large
+
+[macro_ent_evergreen3]
+name=Evergreen
+desc=This would make good firewood.
+size=3
+walkanim=seq_1707
+readyanim=seq_1707
+vislevel=hide
+op1=Chop down
+op3=hidden
+model1=npc_1743
+param=ent_tree_loc,evergreen_vsnowy_large
+
+[macro_ent_tree4]
+name=Tree
+desc=It's thick with snow.
+size=3
+walkanim=seq_1709
+readyanim=seq_1709
+vislevel=hide
+op1=Chop down
+op3=hidden
+model1=npc_1744
+param=ent_tree_loc,snowtree1
+
+[macro_ent_dead_tree12]
+name=Dead tree
+desc=It's only useful for firewood now.
+size=2
+walkanim=seq_1711
+readyanim=seq_1711
+vislevel=hide
+op1=Chop down
+op3=hidden
+model1=npc_1745
+param=ent_tree_loc,deadtree_burnt
+
+[macro_ent_achey]
+name=Achey Tree
+desc=An interesting tree with long straight branches.
+size=2
+walkanim=seq_1713
+readyanim=seq_1713
+vislevel=hide
+op1=Chop down
+op3=hidden
+model1=npc_1746
+param=ent_tree_loc,achey_tree
+
+[macro_ent_tree5]
+name=tree1
+desc=a tree
+size=3
+walkanim=seq_1715
+readyanim=seq_1715
+vislevel=hide
+op1=Chop down
+op3=hidden
+model1=npc_1747
+param=ent_tree_loc,regicide_tree_large
+
+[macro_ent_tree6]
+name=tree1
+desc=a tree
+size=3
+resizeh=64
+resizev=84
+walkanim=seq_1715
+readyanim=seq_1715
+vislevel=hide
+op1=Chop down
+op3=hidden
+model1=npc_1747
+param=ent_tree_loc,regicide_tree_small
+
+[macro_ent_hollow1]
+name=tree1
+desc=a tree
+walkanim=seq_1717
+readyanim=seq_1717
+vislevel=hide
+op1=Chop down
+op3=hidden
+model1=npc_1749
+recol1s=8352
+recol1d=7428
+recol2s=7330
+recol2d=5283
+param=ent_tree_loc,hollow_tree
+
+[macro_ent_hollow2]
+name=tree1
+desc=a tree
+size=2
+walkanim=seq_1719
+readyanim=seq_1719
+vislevel=hide
+op1=Chop down
+op3=hidden
+model1=npc_1750
+recol1s=8352
+recol1d=7428
+recol2s=7330
+recol2d=5283
+param=ent_tree_loc,hollow_tree_big
+
+[macro_mahogany_ent]
+name=Mahogany
+desc=A beautiful old mahogany tree.
+size=3
+walkanim=seq_2408
+readyanim=seq_2408
+vislevel=hide
+op1=Chop down
+op3=hidden
+model1=npc_2534
+param=ent_tree_loc,mahoganytree
+
+[macro_teak_ent]
+name=Teak
+desc=A beautiful old teak tree.
+walkanim=seq_2406
+readyanim=seq_2406
+vislevel=hide
+op1=Chop down
+op3=hidden
+model1=npc_2535
+param=ent_tree_loc,teaktree

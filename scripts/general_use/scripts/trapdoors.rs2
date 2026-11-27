@@ -1,17 +1,39 @@
 // https://youtu.be/0lPiEWFcXTM?t=99
-[oploc1,trapdoor]
+[oploc1,trapdoor] 
+@open_trapdoor(trapdoor_open);
+
+// https://youtu.be/0lPiEWFcXTM?t=196
+[oploc1,trapdoor_open] 
+@climb_trapdoor(movecoord(coord(), 0, 0, 6400));
+
+[oploc2,trapdoor_open] 
+@close_trapdoor(trapdoor);
+
+[oploc1,vampire_trap1]
+@open_trapdoor(vampire_trap2);
+
+[oploc1,vampire_trap2]
+switch_coord (loc_coord) {
+    case 0_48_50_46_44 : @climb_trapdoor(0_48_150_46_44);
+}
+@climb_trapdoor(movecoord(coord(), 0, 0, 6400));
+
+[oploc2,vampire_trap2]
+@close_trapdoor(vampire_trap1);
+
+
+[label,open_trapdoor](loc $trapdoor_open)
 mes("The trapdoor opens...");
 sound_synth(door_open, 1, 0);
 // Temp note: dur does not need updated ? @indio
-loc_change(trapdoor_open, 500);
+loc_change($trapdoor_open, 500);
 
-// https://youtu.be/0lPiEWFcXTM?t=196
-[oploc1,trapdoor_open]
-mes("You climb down through the trapdoor...");
-p_telejump(movecoord(coord(), 0, 0, 6400));
-
-[oploc2,trapdoor_open]
+[label,close_trapdoor](loc $trapdoor_close)
 mes("You close the trapdoor.");
 sound_synth(door_close, 1, 0 );
 // Temp note: dur does not need updated ? @indio
-loc_change(trapdoor, 500);
+loc_change($trapdoor_close, 500);
+
+[label,climb_trapdoor](coord $coord)
+mes("You climb down through the trapdoor...");
+p_telejump($coord);

@@ -2028,22 +2028,22 @@ basevar=giantdwarf_main
 startbit=28
 endbit=28
 
-[varbit_585]
+[giantdwarf_boots]
 basevar=giantdwarf_subquests
 startbit=0
 endbit=9
 
-[varbit_586]
+[giantdwarf_torso]
 basevar=giantdwarf_subquests
 startbit=10
 endbit=19
 
-[varbit_587]
+[giantdwarf_axe]
 basevar=giantdwarf_subquests
 startbit=20
 endbit=25
 
-[varbit_588]
+[giantdwarf_thurgo]
 basevar=giantdwarf_subquests
 startbit=26
 endbit=31

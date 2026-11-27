@@ -631,6 +631,8 @@
 [command,npc_basestat](npc_stat $stat)(int)
 // info: Get the current level of $stat
 [command,npc_stat](npc_stat $stat)(int)
+// info: Get the current level of $stat for secondary npcs
+[command,.npc_stat](npc_stat $stat)(int)
 // info: Boost $stat
 [command,npc_statadd](npc_stat $stat, int $constant, int $percent)
 // info: Heal $stat back to base

@@ -1059,6 +1059,7 @@ op3=hidden
 mapscene=5
 category=tree
 param=next_loc_stage,mm_bush_kharazi_jungle_tree1_stump
+param=ent,macro_ent_jungle_tree1
 
 [mm_bush_kharazi_jungle_tree1_stump]
 name=Jungle Tree Stump
@@ -1077,6 +1078,7 @@ length=2
 mapscene=5
 category=tree
 param=next_loc_stage,mm_bush_kharazi_jungle_tree2_stump
+param=ent,macro_ent_jungle_tree2
 
 [mm_bush_kharazi_jungle_tree2_stump]
 name=Jungle Tree Stump

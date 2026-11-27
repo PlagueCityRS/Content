@@ -39,3 +39,15 @@ if ($severity > %npc_poison) {
     npc_settimer(30);
     %npc_poison = $severity;
 }
+
+[proc,.npc_poison_start_npcs](int $severity)
+if (.npc_hasop(2) = false) {
+    return;
+}
+if (map_members = ^false) {
+    return;
+}
+if ($severity > .%npc_poison) {
+    .npc_settimer(30);
+    .%npc_poison = $severity;
+}

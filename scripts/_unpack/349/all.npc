@@ -3194,386 +3194,6 @@ recol4d=20969
 recol5s=14801
 recol5d=20969
 
-[macro_ent_tree1]
-name=Tree
-desc=One of the most common trees in RuneScape.
-size=2
-walkanim=seq_1675
-readyanim=seq_1675
-vislevel=hide
-op1=Chop down
-op3=hidden
-model1=npc_1719
-recol1s=5218
-recol1d=12548
-
-[macro_ent_tree2]
-name=Tree
-desc=One of the most common trees in RuneScape.
-size=2
-walkanim=seq_1675
-readyanim=seq_1675
-vislevel=hide
-op1=Chop down
-op3=hidden
-model1=npc_1719
-recol1s=5218
-recol1d=17633
-
-[macro_ent_tree3]
-name=Tree
-desc=A commonly found tree.
-size=2
-walkanim=seq_1677
-readyanim=seq_1677
-vislevel=hide
-op1=Chop down
-op3=hidden
-model1=npc_1721
-recol1s=5218
-recol1d=12548
-
-[macro_ent_dead_tree1]
-name=Dead tree
-desc=This tree has long been dead.
-size=2
-walkanim=seq_1679
-readyanim=seq_1679
-vislevel=hide
-op1=Chop down
-op3=hidden
-model1=npc_1722
-
-[macro_ent_dead_tree2]
-name=Dead tree
-desc=This tree has long been dead.
-size=2
-walkanim=seq_1679
-readyanim=seq_1679
-vislevel=hide
-op1=Chop down
-op3=hidden
-model1=npc_1722
-recol1s=4194
-recol1d=13602
-
-[macro_ent_dead_tree3]
-name=Dead tree
-desc=It's only useful for firewood now.
-walkanim=seq_1681
-readyanim=seq_1681
-vislevel=hide
-op1=Chop down
-op3=hidden
-model1=npc_1724
-recol1s=6240
-recol1d=5218
-recol2s=7296
-recol2d=5218
-
-[macro_ent_dead_tree4]
-name=Dead tree
-desc=It's only useful for firewood now.
-walkanim=seq_1681
-readyanim=seq_1681
-vislevel=hide
-op1=Chop down
-op3=hidden
-model1=npc_1724
-recol1s=7296
-recol1d=3203
-recol2s=6240
-recol2d=3203
-
-[macro_ent_dead_tree5]
-name=Dead tree
-desc=It's only useful for firewood now.
-walkanim=seq_1681
-readyanim=seq_1681
-vislevel=hide
-op1=Chop down
-op3=hidden
-model1=npc_1724
-
-[macro_ent_dead_tree6]
-name=Dead tree
-desc=It's only useful for firewood now.
-walkanim=seq_1681
-readyanim=seq_1681
-vislevel=hide
-op1=Chop down
-op3=hidden
-model1=npc_1724
-recol1s=7296
-recol1d=4194
-recol2s=6240
-recol2d=4194
-
-[macro_ent_dead_tree7]
-name=Dead tree
-desc=It's only useful for firewood now.
-size=2
-walkanim=seq_1683
-readyanim=seq_1683
-vislevel=hide
-op1=Chop down
-op3=hidden
-model1=npc_1728
-
-[macro_ent_dead_tree8]
-name=Dead tree
-desc=It's only useful for firewood now.
-walkanim=seq_1681
-readyanim=seq_1681
-vislevel=hide
-op1=Chop down
-op3=hidden
-model1=npc_1724
-recol1s=7296
-recol1d=30619
-
-[macro_ent_dead_tree9]
-name=Dead tree
-desc=This tree has long been dead.
-size=2
-walkanim=seq_1685
-readyanim=seq_1685
-vislevel=hide
-op1=Chop down
-op3=hidden
-model1=npc_1730
-
-[macro_ent_dead_tree10]
-name=Dead tree
-desc=This tree has long been dead.
-size=2
-walkanim=seq_1685
-readyanim=seq_1685
-vislevel=hide
-op1=Chop down
-op3=hidden
-model1=npc_1730
-recol1s=4193
-recol1d=5218
-
-[macro_ent_dead_tree11]
-name=Dead tree
-desc=This tree has long been dead.
-size=2
-walkanim=seq_1687
-readyanim=seq_1687
-vislevel=hide
-op1=Chop down
-op3=hidden
-model1=npc_1732
-
-[macro_ent_dramen]
-name=Dramen tree
-desc=An ancient magical tree.
-size=2
-walkanim=seq_1689
-readyanim=seq_1689
-vislevel=hide
-op1=Chop down
-op3=hidden
-model1=npc_1733
-
-[macro_ent_magic]
-name=Magic tree
-desc=The tree shimmers with a magical force.
-size=2
-walkanim=seq_1691
-readyanim=seq_1691
-vislevel=hide
-op1=Chop down
-op3=hidden
-model1=npc_1734
-
-[macro_ent_maple]
-name=Maple tree
-desc=I bet this makes good syrup!
-size=2
-walkanim=seq_1693
-readyanim=seq_1693
-vislevel=hide
-op1=Chop down
-op3=hidden
-model1=npc_1735
-
-[macro_ent_willow1]
-name=Willow
-desc=These trees are found near water.
-size=2
-walkanim=seq_1695
-readyanim=seq_1695
-vislevel=hide
-op1=Chop down
-op3=hidden
-model1=npc_1736
-
-[macro_ent_willow2]
-name=Willow
-desc=A droopy tree.
-size=2
-walkanim=seq_1697
-readyanim=seq_1697
-vislevel=hide
-op1=Chop down
-op3=hidden
-model1=npc_1737
-
-[macro_ent_willow3]
-name=Willow
-desc=These trees are found near water.
-size=2
-walkanim=seq_1699
-readyanim=seq_1699
-vislevel=hide
-op1=Chop down
-op3=hidden
-model1=npc_1738
-
-[macro_ent_oak]
-name=Oak
-desc=A beautiful old oak.
-size=3
-walkanim=seq_1721
-readyanim=seq_1721
-vislevel=hide
-op1=Chop down
-op3=hidden
-model1=npc_1739
-
-[macro_ent_yew]
-name=Yew
-desc=A splendid tree.
-size=3
-walkanim=seq_1701
-readyanim=seq_1701
-vislevel=hide
-op1=Chop down
-op3=hidden
-model1=npc_1740
-
-[macro_ent_evergreen1]
-name=Evergreen
-desc=A hardy evergreen tree.
-size=2
-walkanim=seq_1703
-readyanim=seq_1703
-vislevel=hide
-op1=Chop down
-op3=hidden
-model1=npc_1741
-
-[macro_ent_evergreen2]
-name=Evergreen
-desc=A hardy evergreen tree.
-size=3
-walkanim=seq_1705
-readyanim=seq_1705
-vislevel=hide
-op1=Chop down
-op3=hidden
-model1=npc_1742
-
-[macro_ent_evergreen3]
-name=Evergreen
-desc=This would make good firewood.
-size=3
-walkanim=seq_1707
-readyanim=seq_1707
-vislevel=hide
-op1=Chop down
-op3=hidden
-model1=npc_1743
-
-[macro_ent_tree4]
-name=Tree
-desc=It's thick with snow.
-size=3
-walkanim=seq_1709
-readyanim=seq_1709
-vislevel=hide
-op1=Chop down
-op3=hidden
-model1=npc_1744
-
-[macro_ent_dead_tree12]
-name=Dead tree
-desc=It's only useful for firewood now.
-size=2
-walkanim=seq_1711
-readyanim=seq_1711
-vislevel=hide
-op1=Chop down
-op3=hidden
-model1=npc_1745
-
-[macro_ent_achey]
-name=Achey Tree
-desc=An interesting tree with long straight branches.
-size=2
-walkanim=seq_1713
-readyanim=seq_1713
-vislevel=hide
-op1=Chop down
-op3=hidden
-model1=npc_1746
-
-[macro_ent_tree5]
-name=tree1
-desc=a tree
-size=3
-walkanim=seq_1715
-readyanim=seq_1715
-vislevel=hide
-op1=Chop down
-op3=hidden
-model1=npc_1747
-
-[macro_ent_tree6]
-name=tree1
-desc=a tree
-size=3
-resizeh=64
-resizev=84
-walkanim=seq_1715
-readyanim=seq_1715
-vislevel=hide
-op1=Chop down
-op3=hidden
-model1=npc_1747
-
-[macro_ent_hollow1]
-name=tree1
-desc=a tree
-walkanim=seq_1717
-readyanim=seq_1717
-vislevel=hide
-op1=Chop down
-op3=hidden
-model1=npc_1749
-recol1s=8352
-recol1d=7428
-recol2s=7330
-recol2d=5283
-
-[macro_ent_hollow2]
-name=tree1
-desc=a tree
-size=2
-walkanim=seq_1719
-readyanim=seq_1719
-vislevel=hide
-op1=Chop down
-op3=hidden
-model1=npc_1750
-recol1s=8352
-recol1d=7428
-recol2s=7330
-recol2d=5283
-
 [crow]
 vislevel=hide
 name=Crow
@@ -3900,6 +3520,24 @@ model1=npc_1769
 model2=npc_1769i2
 model3=npc_1769i3
 model4=npc_1769i4
+wanderrange=15
+maxrange=17
+hitpoints=5
+respawnrate=140
+param=attackbonus,-21
+param=strengthbonus,-15
+param=stabdefence,-15
+param=slashdefence,-15
+param=crushdefence,-15
+param=magicdefence,-15
+param=rangedefence,-15
+param=damagetype,^crush_style
+param=attack_anim,goblin_attack_unarmed
+param=defend_anim,goblin_block
+param=death_anim,goblin_death
+param=attack_sound,goblin_attack
+param=defend_sound,goblin_hit
+param=death_sound,goblin_death
 
 [goblin_unarmed_melee_2]
 name=Goblin
@@ -3918,6 +3556,24 @@ model5=npc_1770i3
 model6=model_2951_npc
 recol1s=11744
 recol1d=11720
+wanderrange=15
+maxrange=17
+hitpoints=5
+respawnrate=140
+param=attackbonus,-21
+param=strengthbonus,-15
+param=stabdefence,-15
+param=slashdefence,-15
+param=crushdefence,-15
+param=magicdefence,-15
+param=rangedefence,-15
+param=damagetype,^crush_style
+param=attack_anim,goblin_attack_unarmed
+param=defend_anim,goblin_block
+param=death_anim,goblin_death
+param=attack_sound,goblin_attack
+param=defend_sound,goblin_hit
+param=death_sound,goblin_death
 
 [goblin_unarmed_melee_3]
 name=Goblin
@@ -3937,6 +3593,24 @@ recol1s=11744
 recol1d=14914
 recol2s=11520
 recol2d=11456
+wanderrange=15
+maxrange=17
+hitpoints=5
+respawnrate=140
+param=attackbonus,-21
+param=strengthbonus,-15
+param=stabdefence,-15
+param=slashdefence,-15
+param=crushdefence,-15
+param=magicdefence,-15
+param=rangedefence,-15
+param=damagetype,^crush_style
+param=attack_anim,goblin_attack_unarmed
+param=defend_anim,goblin_block
+param=death_anim,goblin_death
+param=attack_sound,goblin_attack
+param=defend_sound,goblin_hit
+param=death_sound,goblin_death
 
 [goblin_unarmed_melee_4]
 name=Goblin
@@ -3955,6 +3629,24 @@ model5=npc_1771i2
 model6=model_2951_npc
 recol1s=11744
 recol1d=10759
+wanderrange=15
+maxrange=17
+hitpoints=5
+respawnrate=140
+param=attackbonus,-21
+param=strengthbonus,-15
+param=stabdefence,-15
+param=slashdefence,-15
+param=crushdefence,-15
+param=magicdefence,-15
+param=rangedefence,-15
+param=damagetype,^crush_style
+param=attack_anim,goblin_attack_unarmed
+param=defend_anim,goblin_block
+param=death_anim,goblin_death
+param=attack_sound,goblin_attack
+param=defend_sound,goblin_hit
+param=death_sound,goblin_death
 
 [goblin_unarmed_melee_5]
 name=Goblin
@@ -3972,6 +3664,24 @@ model4=npc_1769i4
 model5=npc_1771i2
 recol1s=11744
 recol1d=18059
+wanderrange=15
+maxrange=17
+hitpoints=5
+respawnrate=140
+param=attackbonus,-21
+param=strengthbonus,-15
+param=stabdefence,-15
+param=slashdefence,-15
+param=crushdefence,-15
+param=magicdefence,-15
+param=rangedefence,-15
+param=damagetype,^crush_style
+param=attack_anim,goblin_attack_unarmed
+param=defend_anim,goblin_block
+param=death_anim,goblin_death
+param=attack_sound,goblin_attack
+param=defend_sound,goblin_hit
+param=death_sound,goblin_death
 
 [goblin_unarmed_melee_6]
 name=Goblin
@@ -3991,6 +3701,24 @@ recol1s=11744
 recol1d=13826
 recol2s=11520
 recol2d=11527
+wanderrange=15
+maxrange=17
+hitpoints=5
+respawnrate=140
+param=attackbonus,-21
+param=strengthbonus,-15
+param=stabdefence,-15
+param=slashdefence,-15
+param=crushdefence,-15
+param=magicdefence,-15
+param=rangedefence,-15
+param=damagetype,^crush_style
+param=attack_anim,goblin_attack_unarmed
+param=defend_anim,goblin_block
+param=death_anim,goblin_death
+param=attack_sound,goblin_attack
+param=defend_sound,goblin_hit
+param=death_sound,goblin_death
 
 [goblin_unarmed_melee_7]
 name=Goblin
@@ -4010,6 +3738,24 @@ recol1s=11744
 recol1d=17954
 recol2s=11520
 recol2d=11456
+wanderrange=15
+maxrange=17
+hitpoints=5
+respawnrate=140
+param=attackbonus,-21
+param=strengthbonus,-15
+param=stabdefence,-15
+param=slashdefence,-15
+param=crushdefence,-15
+param=magicdefence,-15
+param=rangedefence,-15
+param=damagetype,^crush_style
+param=attack_anim,goblin_attack_unarmed
+param=defend_anim,goblin_block
+param=death_anim,goblin_death
+param=attack_sound,goblin_attack
+param=defend_sound,goblin_hit
+param=death_sound,goblin_death
 
 [goblin_unarmed_melee_8]
 name=Goblin
@@ -4026,6 +3772,24 @@ model3=npc_1771
 model4=npc_1772i2
 recol1s=11744
 recol1d=15940
+wanderrange=15
+maxrange=17
+hitpoints=5
+respawnrate=140
+param=attackbonus,-21
+param=strengthbonus,-15
+param=stabdefence,-15
+param=slashdefence,-15
+param=crushdefence,-15
+param=magicdefence,-15
+param=rangedefence,-15
+param=damagetype,^crush_style
+param=attack_anim,goblin_attack_unarmed
+param=defend_anim,goblin_block
+param=death_anim,goblin_death
+param=attack_sound,goblin_attack
+param=defend_sound,goblin_hit
+param=death_sound,goblin_death
 
 [roving_update_female_woodelf]
 name=Ilfeen
@@ -4333,33 +4097,6 @@ recol2s=416
 recol2d=9603
 wanderrange=10
 maxrange=40
-
-[macro_ent_jungle_tree1]
-name=Jungle Tree
-desc=This is a fairly tall tree with sparse foliage.
-walkanim=seq_1742
-readyanim=seq_1742
-vislevel=hide
-op1=Chop down
-op3=hidden
-model1=npc_1791
-recol1s=15855
-recol1d=5378
-recol2s=12684
-recol2d=5314
-recol3s=10570
-recol3d=7298
-
-[macro_ent_jungle_tree2]
-name=Jungle Tree
-desc=This is a fairly tall tree with sparse foliage.
-size=2
-walkanim=seq_1742
-readyanim=seq_1742
-vislevel=hide
-op1=Chop down
-op3=hidden
-model1=npc_1792
 
 [favour_tassie_slipcast]
 vislevel=hide
@@ -13774,6 +13511,7 @@ param=shop_sell_multiplier,1200
 param=shop_buy_multiplier,600
 param=shop_delta,30
 param=shop_title,Draynor Seed Market.
+members=yes
 wanderrange=0
 maxrange=5
 
@@ -13807,6 +13545,7 @@ recol4s=4192
 recol4d=8388
 recol5s=32735
 recol5d=15817
+members=yes
 wanderrange=5
 maxrange=10
 
@@ -13838,6 +13577,7 @@ recol4s=6273
 recol4d=28299
 recol5s=0
 recol5d=12485
+members=yes
 wanderrange=5
 maxrange=10
 
@@ -13866,6 +13606,26 @@ recol3s=15855
 recol3d=15755
 recol4s=31649
 recol4d=15655
+attack=17
+defence=13
+strength=18
+hitpoints=22
+respawnrate=50
+param=attackrate,9
+param=attackbonus,9
+param=strengthbonus,7
+param=stabdefence,24
+param=slashdefence,14
+param=crushdefence,19
+param=magicdefence,4
+param=rangedefence,16
+param=damagetype,^crush_style
+param=attack_anim,human_blunt_pound
+param=defend_anim,human_sword_def
+param=attack_sound,stabsword_crush
+param=defend_sound,human_block_1
+param=market_guard,1
+members=yes
 
 [lumbridge_guide2_man]
 walkanim=human_halberdwalk_f,human_halberdwalk_b,human_halberdwalk_l,human_halberdwalk_r
@@ -14620,6 +14380,24 @@ model1=npc_1769
 model2=npc_1769i2
 model3=npc_1769i3
 model4=npc_1769i4
+wanderrange=15
+maxrange=17
+hitpoints=5
+respawnrate=140
+param=attackbonus,-21
+param=strengthbonus,-15
+param=stabdefence,-15
+param=slashdefence,-15
+param=crushdefence,-15
+param=magicdefence,-15
+param=rangedefence,-15
+param=damagetype,^crush_style
+param=attack_anim,goblin_attack_unarmed
+param=defend_anim,goblin_block
+param=death_anim,goblin_death
+param=attack_sound,goblin_attack
+param=defend_sound,goblin_hit
+param=death_sound,goblin_death
 
 [goblin_unarmed_melee_in_2]
 name=Goblin
@@ -14638,6 +14416,24 @@ model5=npc_1770i3
 model6=model_2951_npc
 recol1s=11744
 recol1d=11720
+wanderrange=15
+maxrange=17
+hitpoints=5
+respawnrate=140
+param=attackbonus,-21
+param=strengthbonus,-15
+param=stabdefence,-15
+param=slashdefence,-15
+param=crushdefence,-15
+param=magicdefence,-15
+param=rangedefence,-15
+param=damagetype,^crush_style
+param=attack_anim,goblin_attack_unarmed
+param=defend_anim,goblin_block
+param=death_anim,goblin_death
+param=attack_sound,goblin_attack
+param=defend_sound,goblin_hit
+param=death_sound,goblin_death
 
 [goblin_unarmed_melee_in_3]
 name=Goblin
@@ -14657,6 +14453,24 @@ recol1s=11744
 recol1d=14914
 recol2s=11520
 recol2d=11456
+wanderrange=15
+maxrange=17
+hitpoints=5
+respawnrate=140
+param=attackbonus,-21
+param=strengthbonus,-15
+param=stabdefence,-15
+param=slashdefence,-15
+param=crushdefence,-15
+param=magicdefence,-15
+param=rangedefence,-15
+param=damagetype,^crush_style
+param=attack_anim,goblin_attack_unarmed
+param=defend_anim,goblin_block
+param=death_anim,goblin_death
+param=attack_sound,goblin_attack
+param=defend_sound,goblin_hit
+param=death_sound,goblin_death
 
 [goblin_unarmed_melee_in_4]
 name=Goblin
@@ -14675,6 +14489,24 @@ model5=npc_1771i2
 model6=model_2951_npc
 recol1s=11744
 recol1d=10759
+wanderrange=15
+maxrange=17
+hitpoints=5
+respawnrate=140
+param=attackbonus,-21
+param=strengthbonus,-15
+param=stabdefence,-15
+param=slashdefence,-15
+param=crushdefence,-15
+param=magicdefence,-15
+param=rangedefence,-15
+param=damagetype,^crush_style
+param=attack_anim,goblin_attack_unarmed
+param=defend_anim,goblin_block
+param=death_anim,goblin_death
+param=attack_sound,goblin_attack
+param=defend_sound,goblin_hit
+param=death_sound,goblin_death
 
 [goblin_unarmed_melee_in_5]
 name=Goblin
@@ -14692,6 +14524,24 @@ model4=npc_1769i4
 model5=npc_1771i2
 recol1s=11744
 recol1d=18059
+wanderrange=15
+maxrange=17
+hitpoints=5
+respawnrate=140
+param=attackbonus,-21
+param=strengthbonus,-15
+param=stabdefence,-15
+param=slashdefence,-15
+param=crushdefence,-15
+param=magicdefence,-15
+param=rangedefence,-15
+param=damagetype,^crush_style
+param=attack_anim,goblin_attack_unarmed
+param=defend_anim,goblin_block
+param=death_anim,goblin_death
+param=attack_sound,goblin_attack
+param=defend_sound,goblin_hit
+param=death_sound,goblin_death
 
 [goblin_unarmed_melee_in_6]
 name=Goblin
@@ -14711,6 +14561,24 @@ recol1s=11744
 recol1d=13826
 recol2s=11520
 recol2d=11527
+wanderrange=15
+maxrange=17
+hitpoints=5
+respawnrate=140
+param=attackbonus,-21
+param=strengthbonus,-15
+param=stabdefence,-15
+param=slashdefence,-15
+param=crushdefence,-15
+param=magicdefence,-15
+param=rangedefence,-15
+param=damagetype,^crush_style
+param=attack_anim,goblin_attack_unarmed
+param=defend_anim,goblin_block
+param=death_anim,goblin_death
+param=attack_sound,goblin_attack
+param=defend_sound,goblin_hit
+param=death_sound,goblin_death
 
 [goblin_unarmed_melee_in_7]
 name=Goblin
@@ -14730,6 +14598,24 @@ recol1s=11744
 recol1d=17954
 recol2s=11520
 recol2d=11456
+wanderrange=15
+maxrange=17
+hitpoints=5
+respawnrate=140
+param=attackbonus,-21
+param=strengthbonus,-15
+param=stabdefence,-15
+param=slashdefence,-15
+param=crushdefence,-15
+param=magicdefence,-15
+param=rangedefence,-15
+param=damagetype,^crush_style
+param=attack_anim,goblin_attack_unarmed
+param=defend_anim,goblin_block
+param=death_anim,goblin_death
+param=attack_sound,goblin_attack
+param=defend_sound,goblin_hit
+param=death_sound,goblin_death
 
 [goblin_unarmed_melee_in_8]
 name=Goblin
@@ -14746,6 +14632,24 @@ model3=npc_1771
 model4=npc_1772i2
 recol1s=11744
 recol1d=15940
+wanderrange=15
+maxrange=17
+hitpoints=5
+respawnrate=140
+param=attackbonus,-21
+param=strengthbonus,-15
+param=stabdefence,-15
+param=slashdefence,-15
+param=crushdefence,-15
+param=magicdefence,-15
+param=rangedefence,-15
+param=damagetype,^crush_style
+param=attack_anim,goblin_attack_unarmed
+param=defend_anim,goblin_block
+param=death_anim,goblin_death
+param=attack_sound,goblin_attack
+param=defend_sound,goblin_hit
+param=death_sound,goblin_death
 
 [rd_observer_room_1]
 vislevel=hide
@@ -15750,6 +15654,7 @@ recol3s=24075
 recol3d=29362
 recol4s=6273
 recol4d=23937
+members=yes
 wanderrange=0
 
 [dantaera]
@@ -15776,6 +15681,7 @@ recol3s=6273
 recol3d=27342
 recol4s=14801
 recol4d=24075
+members=yes
 wanderrange=0
 maxrange=5
 
@@ -15808,6 +15714,7 @@ recol4s=6273
 recol4d=11588
 recol5s=6144
 recol5d=12580
+members=yes
 wanderrange=0
 
 [lyra]
@@ -15839,6 +15746,7 @@ recol5s=14764
 recol5d=11723
 recol6s=16878
 recol6d=13837
+members=yes
 wanderrange=0
 
 [francis]
@@ -15866,6 +15774,7 @@ recol3s=6273
 recol3d=17932
 recol4s=14801
 recol4d=24075
+members=yes
 wanderrange=0
 
 [npc_2328]
@@ -15888,6 +15797,7 @@ recol3s=352
 recol3d=10528
 recol4s=13728
 recol4d=6274
+members=yes
 
 [iago]
 name=Iago
@@ -15920,6 +15830,7 @@ recol5s=32702
 recol5d=29525
 recol6s=6144
 recol6d=25297
+members=yes
 
 [farming_gardener_fruit_3]
 name=Garth
@@ -15952,6 +15863,7 @@ recol5s=14801
 recol5d=24075
 recol6s=24452
 recol6d=12617
+members=yes
 wanderrange=0
 
 [farming_gardener_fruit_4]
@@ -15983,6 +15895,7 @@ recol5s=5299
 recol5d=19946
 recol6s=6341
 recol6d=16775
+members=yes
 wanderrange=0
 
 [farming_gardener_hops_1]
@@ -16012,6 +15925,7 @@ recol4s=14801
 recol4d=24075
 recol5s=6144
 recol5d=7328
+members=yes
 wanderrange=0
 
 [farming_gardener_hops_3]
@@ -16044,6 +15958,7 @@ recol4s=14801
 recol4d=24075
 recol5s=6144
 recol5d=7328
+members=yes
 wanderrange=0
 
 [farming_gardener_hops_4]
@@ -16076,6 +15991,7 @@ recol5s=6144
 recol5d=9445
 recol6s=14801
 recol6d=24075
+members=yes
 wanderrange=0
 
 [farming_gardener_bush_1]
@@ -16109,6 +16025,7 @@ recol5s=24075
 recol5d=25133
 recol6s=6273
 recol6d=10433
+members=yes
 wanderrange=0
 
 [farming_gardener_bush_2]
@@ -16169,6 +16086,7 @@ recol3s=2340
 recol3d=5314
 recol4s=6144
 recol4d=6274
+members=yes
 wanderrange=0
 
 [farming_gardener_bush_4]
@@ -16196,6 +16114,7 @@ recol3s=6144
 recol3d=12516
 recol4s=14801
 recol4d=24075
+members=yes
 wanderrange=0
 
 [farming_gardener_tree_1]
@@ -16227,6 +16146,7 @@ recol5s=6144
 recol5d=6307
 recol6s=24075
 recol6d=21961
+members=yes
 wanderrange=0
 
 [farming_gardener_tree_2]
@@ -16257,6 +16177,7 @@ recol5s=6144
 recol5d=6272
 recol6s=24329
 recol6d=6272
+members=yes
 wanderrange=0
 
 [farming_gardener_tree_3]
@@ -16281,6 +16202,7 @@ recol2s=14724
 recol2d=8353
 recol3s=15855
 recol3d=8354
+members=yes
 wanderrange=0
 
 [farming_gardener_tree_4]
@@ -16311,6 +16233,7 @@ recol5s=24075
 recol5d=25166
 recol6s=24329
 recol6d=5216
+members=yes
 wanderrange=0
 
 [farming_gardener_fruit_1]
@@ -16334,6 +16257,7 @@ recol4s=13728
 recol4d=8353
 recol5s=6144
 recol5d=8353
+members=yes
 wanderrange=0
 
 [farming_gardener_fruit_2]
@@ -16352,6 +16276,7 @@ model6=obj_5331_manwear
 model7=woman_legs_longskirt
 model8=obj_5345_womanwear
 head1=chat_female_head_longhair
+members=yes
 wanderrange=0
 
 [herder_plaguesheep_1]
@@ -19992,27 +19917,6 @@ recol5s=6273
 recol5d=27412
 wanderrange=3
 
-[macro_mahogany_ent]
-name=Mahogany
-desc=A beautiful old mahogany tree.
-size=3
-walkanim=seq_2408
-readyanim=seq_2408
-vislevel=hide
-op1=Chop down
-op3=hidden
-model1=npc_2534
-
-[macro_teak_ent]
-name=Teak
-desc=A beautiful old teak tree.
-walkanim=seq_2406
-readyanim=seq_2406
-vislevel=hide
-op1=Chop down
-op3=hidden
-model1=npc_2535
-
 [macro_niles]
 name=Niles
 desc=The brother of Miles and Giles.
@@ -20642,371 +20546,6 @@ recol2d=17900
 recol3s=9475
 recol3d=9410
 wanderrange=2
-
-[wom_cutscene_1]
-name=Wise Old Man
-desc=A venerable sage.
-walkanim=walk_walkingstick,human_walk_b,human_walk_l,human_walk_r
-readyanim=human_staffready
-vislevel=hide
-op1=Talk-to
-model1=npc_2566
-model2=man_jaw_santa
-model3=man_torso_basic
-model4=man_torsoextra_cloak
-model5=man_arms_longsleeves
-model6=man_hands_basic
-model7=human_weapons_saradominstaff
-model8=man_legs_robe_narrow
-model9=man_feet_basic
-head1=npc_2566_head
-head2=npc_2253_headi2
-recol1s=14724
-recol1d=10498
-recol2s=8386
-recol2d=2159
-recol3s=15360
-recol3d=29
-recol4s=31649
-recol4d=14726
-recol5s=2340
-recol5d=10498
-wanderrange=0
-maxrange=50
-
-[wom_cutscene_2]
-name=Wise Old Man
-desc=A venerable and rich sage.
-walkanim=walk_walkingstick,human_walk_b,human_walk_l,human_walk_r
-readyanim=human_staffready
-vislevel=hide
-op1=Talk-to
-model1=man_hat_party
-model2=npc_2253
-model3=man_jaw_santa
-model4=man_torso_basic
-model5=man_torsoextra_cloak
-model6=man_arms_longsleeves
-model7=man_hands_basic
-model8=human_weapons_saradominstaff
-model9=man_legs_robe_narrow
-model10=man_feet_basic
-head1=npc_2253_head
-head2=npc_2253_headi2
-recol1s=14724
-recol1d=10498
-recol2s=8386
-recol2d=2159
-recol3s=15360
-recol3d=29
-recol4s=31649
-recol4d=14726
-recol5s=2340
-recol5d=10498
-wanderrange=0
-maxrange=50
-
-[wom_banker1]
-vislevel=hide
-name=Banker
-desc=He can look after my money.
-walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
-readyanim=human_ready
-op1=Talk-to
-op3=Bank
-model1=man_head_shorthair
-model2=man_jaw_none
-model3=man_torso_basic
-model4=man_arms_longsleeves2
-model5=man_hands_basic
-model6=man_legs_basic
-model7=man_feet_basic
-model8=man_torsoextra_jacket
-head1=chat_male_head_shorthair
-recol1s=2340
-recol1d=11627
-recol2s=14724
-recol2d=11627
-recol3s=15855
-recol3d=24075
-recol4s=6273
-recol4d=10570
-maxrange=10
-
-[wom_banker2]
-vislevel=hide
-name=Banker
-desc=Good with money.
-walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
-readyanim=human_ready
-op1=Talk-to
-op3=Bank
-model1=woman_head_bun
-model2=woman_torso_basic3
-model3=woman_arms_longsleeves2
-model4=woman_hands_basic
-model5=woman_legs_basic
-model6=woman_feet_basic
-head1=chat_female_head_bun
-recol1s=2340
-recol1d=11627
-recol2s=14724
-recol2d=11627
-recol3s=6273
-recol3d=10570
-recol4s=14724
-recol4d=11627
-maxrange=10
-
-[wom_banker3]
-vislevel=hide
-name=Banker
-desc=Good with money.
-walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
-readyanim=human_ready
-op1=Talk-to
-op3=Bank
-model1=woman_head_bun
-model2=woman_torso_basic3
-model3=woman_arms_longsleeves2
-model4=woman_hands_basic
-model5=woman_legs_basic
-model6=woman_feet_basic
-head1=chat_female_head_bun
-recol1s=2340
-recol1d=11627
-recol2s=14724
-recol2d=11627
-recol3s=6273
-recol3d=10570
-recol4s=14724
-recol4d=11627
-maxrange=10
-
-[wom_marketguard]
-name=Market Guard
-desc=He guards the Draynor Market stalls from thieves.
-walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
-readyanim=human_ready
-op2=Attack
-vislevel=20
-model1=man_head_otherhelmetopen
-model2=man_jaw_medium
-model3=man_torso_halfleather
-model4=man_torsoextra_cloak_plain
-model5=man_arms_leather
-model6=man_hands_basic
-model7=human_weapons_longsword
-model8=human_weapons_roundshield4
-model9=man_legs_turnups
-model10=man_feet_boots
-recol1s=2340
-recol1d=8484
-recol2s=14801
-recol2d=26124
-recol3s=15855
-recol3d=15755
-recol4s=31649
-recol4d=15655
-maxrange=10
-
-[wom_olivia]
-name=Olivia
-desc=She's a seed merchant.
-walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
-readyanim=human_ready
-op1=Talk-to
-op3=Trade
-vislevel=hide
-model1=woman_head_mediumhair
-model2=woman_headextra_ponytail
-model3=woman_torso_apron
-model4=woman_arms_longsleeves
-model5=woman_hands_basic
-model6=woman_legs_longskirt
-model7=obj_5345_womanwear
-head1=chat_female_head_mediumhair
-head2=model_136_npc_head
-recol1s=32735
-recol1d=9509
-recol2s=14724
-recol2d=13769
-recol3s=2340
-recol3d=6371
-recol4s=7298
-recol4d=5314
-recol5s=6273
-recol5d=18627
-recol6s=14801
-recol6d=24075
-wanderrange=0
-maxrange=10
-
-[wom_watchman]
-name=Watchman
-desc=The strong arm of the law.
-walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
-readyanim=human_ready
-op2=Attack
-alwaysontop=yes
-vislevel=253
-model1=man_head_otherhelmetopen
-model2=man_jaw_medium
-model3=man_torso_chainmail
-model4=man_arms_leather
-model5=man_hands_basic
-model6=man_legs_turnups
-model7=man_feet_boots
-model8=human_weapons_mace
-model9=human_weapons_roundshield4
-recol1s=14801
-recol1d=7364
-wanderrange=0
-maxrange=10
-
-[wom_bankguard]
-vislevel=hide
-name=Bank guard
-desc=He's guarding the bank.
-walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
-readyanim=human_ready
-op1=Talk-to
-model1=man_head_shorthair
-model2=man_jaw_none
-model3=man_torso_basic
-model4=man_arms_longsleeves2
-model5=man_hands_basic
-model6=man_legs_basic
-model7=man_feet_basic
-model8=man_torsoextra_jacket
-head1=chat_male_head_shorthair
-recol1s=2340
-recol1d=11627
-recol2s=14724
-recol2d=11627
-recol3s=15855
-recol3d=24075
-recol4s=6273
-recol4d=10570
-maxrange=2
-wanderrange=1
-
-[wom_fakeplayer1]
-name=Purepker895
-desc=A player.
-walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
-readyanim=human_ready
-vislevel=52
-op3=Walk here
-op4=Follow
-op5=Trade
-model1=obj_5554_manwear
-model2=man_jaw_goaty
-model3=obj_5553_manwear
-model4=obj_5553_manwear2
-model5=man_hands_largeblackgloves
-model6=human_weapons_deathdagger
-model7=human_weapons_roundshield
-model8=man_legs_basic
-model9=man_feet_boots
-recol1s=11626
-recol1d=7398
-recol2s=2340
-recol2d=2180
-recol3s=14801
-recol3d=3172
-recol4s=7298
-recol4d=4226
-
-[wom_fakeplayer2]
-name=Qutiedoll
-desc=A player.
-walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
-readyanim=human_ready
-vislevel=16
-op3=Walk here
-op4=Follow
-op5=Trade
-model1=man_hat_bunnyears
-model2=man_head_bald
-model3=man_jaw_moustache
-model4=man_necklaces_goldnecklace
-model5=man_torso_leather_studded
-model6=man_arms_leather
-model7=man_hands_basic
-model8=human_weapons_dualclaws
-model9=man_legs_chap_dragonhide
-model10=man_feet_boots
-recol1s=2340
-recol1d=4226
-recol2s=14724
-recol2d=4226
-
-[wom_fakeplayer3]
-name=1337sp34kr
-desc=A player.
-walkanim=walk_walkingstick,human_walk_b,human_walk_l,human_walk_r
-readyanim=human_ready
-vislevel=63
-op3=Walk here
-op4=Follow
-op5=Trade
-model1=man_head_spikeyhair
-model2=man_jaw_long
-model3=obj_6139_manwear
-model4=obj_6149_manwear
-model5=obj_4170_manwear
-model6=obj_4156_manwear
-model7=man_legs_turnups
-model8=obj_5345_manwear
-recol1s=11626
-recol1d=7398
-recol2s=2340
-recol2d=2180
-
-[wom_fakeplayer4]
-name=Elfinlocks
-desc=A player.
-walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
-readyanim=human_ready
-vislevel=87
-op3=Walk here
-op4=Follow
-op5=Trade
-model1=woman_hat_party
-model2=woman_head_longhair
-model3=obj_5030_womanwear
-model4=woman_torsoextra_cloak2
-model5=obj_5024_womanwear2
-model6=woman_hands_basic
-model7=obj_4151_manwear
-model8=obj_6135_womanwear
-model9=woman_feet_spurboots
-recol1s=6273
-recol1d=1632
-recol2s=15360
-recol2d=3187
-
-[wom_fakeplayer5]
-name=Cool Mom227
-desc=A player.
-walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
-readyanim=human_ready
-op3=Walk here
-op4=Follow
-op5=Trade
-vislevel=27
-model1=woman_hat_chefs
-model2=woman_head_pigtails
-model3=woman_torso_basic
-model4=woman_torsoextra_cloak2
-model5=woman_arms_basic
-model6=woman_hands_basic
-model7=human_weapons_dagger
-model8=obj_5048_womanwear
-model9=obj_5557_womanwear
-recol1s=14724
-recol1d=32767
 
 [bernald]
 name=Bernald
@@ -23342,6 +22881,24 @@ model5=npc_1772
 model6=npc_1770i3
 recol1s=11744
 recol1d=15776
+wanderrange=15
+maxrange=17
+hitpoints=5
+respawnrate=140
+param=attackbonus,-21
+param=strengthbonus,-15
+param=stabdefence,-15
+param=slashdefence,-15
+param=crushdefence,-15
+param=magicdefence,-15
+param=rangedefence,-15
+param=damagetype,^crush_style
+param=attack_anim,goblin_attack_unarmed
+param=defend_anim,goblin_block
+param=death_anim,goblin_death
+param=attack_sound,goblin_attack
+param=defend_sound,goblin_hit
+param=death_sound,goblin_death
 
 [goblin_armed_melee_2]
 name=Goblin
@@ -23359,6 +22916,24 @@ model4=npc_1772i2
 model5=npc_2679
 recol1s=11744
 recol1d=15882
+wanderrange=15
+maxrange=17
+hitpoints=5
+respawnrate=140
+param=attackbonus,-21
+param=strengthbonus,-15
+param=stabdefence,-15
+param=slashdefence,-15
+param=crushdefence,-15
+param=magicdefence,-15
+param=rangedefence,-15
+param=damagetype,^crush_style
+param=attack_anim,goblin_attack_unarmed
+param=defend_anim,goblin_block
+param=death_anim,goblin_death
+param=attack_sound,goblin_attack
+param=defend_sound,goblin_hit
+param=death_sound,goblin_death
 
 [goblin_armed_melee_3]
 name=Goblin
@@ -23376,6 +22951,24 @@ model4=model_2956_npc
 model5=npc_1770
 recol1s=11744
 recol1d=10630
+wanderrange=15
+maxrange=17
+hitpoints=5
+respawnrate=140
+param=attackbonus,-21
+param=strengthbonus,-15
+param=stabdefence,-15
+param=slashdefence,-15
+param=crushdefence,-15
+param=magicdefence,-15
+param=rangedefence,-15
+param=damagetype,^crush_style
+param=attack_anim,goblin_attack_unarmed
+param=defend_anim,goblin_block
+param=death_anim,goblin_death
+param=attack_sound,goblin_attack
+param=defend_sound,goblin_hit
+param=death_sound,goblin_death
 
 [goblin_armed_melee_4]
 name=Goblin
@@ -23392,6 +22985,24 @@ model3=model_2955_npc
 model4=npc_1769i4
 recol1s=11744
 recol1d=14827
+wanderrange=15
+maxrange=17
+hitpoints=5
+respawnrate=140
+param=attackbonus,-21
+param=strengthbonus,-15
+param=stabdefence,-15
+param=slashdefence,-15
+param=crushdefence,-15
+param=magicdefence,-15
+param=rangedefence,-15
+param=damagetype,^crush_style
+param=attack_anim,goblin_attack_unarmed
+param=defend_anim,goblin_block
+param=death_anim,goblin_death
+param=attack_sound,goblin_attack
+param=defend_sound,goblin_hit
+param=death_sound,goblin_death
 
 [rat_indoors]
 name=Rat
@@ -26287,6 +25898,7 @@ model2=npc_2809i2
 model3=npc_2809i3
 head1=npc_2809_head
 wanderrange=5
+moverestrict=outdoors
 
 [elly_the_camel]
 name=Elly the Camel
@@ -26573,6 +26185,7 @@ recol5s=24075
 recol5d=15652
 recol6s=32735
 recol6d=13539
+moverestrict=indoors
 
 [deal_pete]
 name=Pirate Pete

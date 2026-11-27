@@ -1,0 +1,155 @@
+[opnpc1,wom_bankguard]
+~chatnpc("<p,neutral>Yes?");
+if (%wom_bankjob < 1) {
+    @wom_bankguard_before_recording;
+} else if (%wom_bankjob = 1) {
+    ~chatplayer("<p,quiz>Do you have any idea who robbed the bank yet?");
+    @wom_bankguard_knows_recording;
+} else {
+    @wom_bankguard_watched_recording;
+}
+
+[label,wom_bankguard_before_recording]
+def_int $choice = ~p_choice3_header("Can I deposit my stuff here?", 1, "That wall doesn't look very good.", 2, "Sorry, I don't want anything.", 3, "What would you like to say?");
+if ($choice = 1) {
+    ~chatplayer("<p,happy>Hello. Can I deposit my stuff here?");
+    ~chatnpc("<p,neutral>No. I'm a security guard, not a bank clerk.");
+    $choice = ~p_choice2_header("That wall doesn't look very good.", 1, "Alright, I'll stop bothering you now.", 2, "What would you like to say?");
+    if ($choice = 1) {
+        @wom_bankguard_wall;
+    } else if ($choice = 2) {
+        @wom_bankguard_bothering;
+    }
+} else if ($choice = 2) {
+    @wom_bankguard_wall;
+} else if ($choice = 3) {
+    ~chatplayer("<p,neutral>Sorry, I don't want anything.");
+    ~chatnpc("<p,neutral>Ok.");
+    return;
+}
+
+[label,wom_bankguard_bothering]
+~chatplayer("<p,neutral>Alright, I'll stop bothering you now.");
+~chatnpc("<p,neutral>Good day, <text_gender("sir", "ma'am")>.");
+
+[label,wom_bankguard_wall]
+~chatplayer("<p,quiz>That wall doesn't look very good.");
+~chatnpc("<p,neutral>No, it doesn't.");
+def_int $choice = ~p_choice2_header("Are you going to tell me what happened?", 1, "Alright, I'll stop bothering you now.", 2, "What would you like to say?");
+if ($choice = 1) {
+    @wom_bankguard_explain;
+} else if ($choice = 2) {
+    @wom_bankguard_bothering;
+}
+
+[label,wom_bankguard_explain]
+~chatplayer("<p,quiz>Are you going to tell me what happened?");
+~chatnpc("<p,neutral>I could do.");
+~chatplayer("<p,happy>Ok, go on!");
+
+if (%wom_bankjob < 1) {
+    %wom_bankjob = 1;
+}
+
+~chatnpc("<p,neutral>Someone smashed the wall when|they were robbing the bank.");
+~chatplayer("<p,shock>Someone's robbed the bank?");
+~chatnpc("<p,neutral>Yes.");
+~chatplayer("<p,shock>But... was anyone hurt?|Did they get anything valuable?");
+~chatnpc("<p,neutral>Yes, but we were able to get more staff and mend the|wall easily enough.");
+~chatnpc("<p,neutral>The Bank has already replaced all the stolen items that|belonged to customers.");
+~chatplayer("<p,shock>Oh, good... but the bank staff got hurt?");
+~chatnpc("<p,neutral>Yes, but the new ones are just as good.");
+~chatplayer("<p,neutral>You're not very nice, are you?");
+~chatnpc("<p,neutral>No-one's expecting me to be nice.");
+~chatplayer("<p,confused>Anyway... So, someone's robbed the bank?");
+~chatnpc("<p,neutral>Yes.");
+~chatplayer("<p,quiz>Do you know who did it?");
+@wom_bankguard_knows_recording;
+
+[label,wom_bankguard_robber]
+~chatplayer("<p,happy>So who was the robber?");
+~chatnpc("<p,neutral>I can't disclose that information.");
+def_int $choice = ~p_choice2_header("Can I see the recording?", 1, "Alright, I'll stop bothering you now.", 2, "What would you like to say?");
+if ($choice = 1) {
+    @wom_bankguard_see_recording;
+} else if ($choice = 2) {
+    @wom_bankguard_bothering;
+}
+
+[label,wom_bankguard_see_recording]
+~chatplayer("<p,happy>Can I see the recording?");
+~chatnpc("<p,neutral>I suppose so. But it's quite long.");
+def_int $choice = ~p_choice2_header("That's ok, show me the recording.", 1, "Thanks, maybe another day.", 2, "What would you like to say?");
+if ($choice = 1) {
+    @wom_bankguard_show_recording;
+} else if ($choice = 2) {
+    @wom_bankguard_thanks;
+}
+
+[label,wom_bankguard_thanks]
+~chatplayer("<p,neutral>Thanks, maybe another day.");
+~chatnpc("<p,neutral>Ok.");
+
+[label,wom_bankguard_show_recording]
+~chatplayer("<p,happy>That's ok, show me the recording.");
+~chatnpc("<p,neutral>Alright... The bank's magical playback device will feed the|recorded images into your mind. Just shut your eyes.");
+@wom_bank_robbery_cutscene;
+
+[label,wom_bankguard_knows_recording]
+~chatnpc("<p,neutral>We are fairly sure we know who the robber was. The|security recording was damaged in the attack, but it still|shows his face clearly enough.");
+~chatplayer("<p,quiz>You've got a security recording?");
+~chatnpc("<p,neutral>Yes. Our insurers insisted that we|install a magical scrying orb.");
+def_int $choice = ~p_choice2_header("Can I see the recording?", 1, "So who was the robber?", 2, "What would you like to say?");
+if ($choice = 1) {
+    @wom_bankguard_see_recording;
+} else if ($choice = 2) {
+    @wom_bankguard_robber;
+}
+
+[label,wom_bankguard_watched_recording]
+def_int $choice = ~p_choice3_header("The robber in the recording looked familiar.", 1, "Can I see that recording again, please?", 2, "Sorry, I don't want anything.", 3, "What would you like to say?");
+if ($choice = 1) {
+    ~chatplayer("<p,shifty>The robber in the recording looked familiar.");
+    ~chatnpc("<p,neutral>Oh, you recognised him too?");
+    if (%wom_bankjob < 3) {
+        ~chatplayer("<p,neutral>Yes, and I can tell you where he lives.");
+        ~chatnpc("<p,neutral>Thanks, but we already know where to find our|suspect.");
+    } else {
+        ~chatplayer("<p,neutral>Yes, and he's admitted that he did the robbery!");
+        ~chatnpc("<p,neutral>The amount of evidence against him makes that almost|unnecessary.");
+    }
+    ~chatplayer("<p,shifty>So are you going to have him arrested?");
+    ~chatnpc("<p,neutral>We're certainly keeping an eye on him. I'm afraid I|can't give you any more details about the case.");
+    ~chatplayer("<p,neutral>Fair enough.");
+} else if ($choice = 2) {
+    ~chatplayer("<p,happy>Can I see that recording again, please?");
+    ~chatnpc("<p,neutral>I'd like you to pay me 50 gp first.");
+    if (inv_total(inv, coins) < 50) {
+        ~chatplayer("<p,sad>I'm not carrying that much.");
+        if (inv_total(bank, coins) >= 50) {
+            ~chatnpc("<p,neutral>As a bank employee, I suppose I could take the money|directly from your bank account.");
+            $choice = ~p_choice2_header("Ok, you can take 50 gp from my bank account.", 1, "Thanks, maybe another day.", 2, "What would you like to say?");
+            if ($choice = 1) {
+                ~chatplayer("<p,happy>Ok, you can take 50 gp from my bank account.");
+                inv_del(bank, coins, 50);
+                @wom_bank_robbery_cutscene;
+            } else if ($choice = 2) {
+                @wom_bankguard_thanks;
+            }
+        } else {
+            ~chatnpc("<p,neutral>Oh well, maybe another day.");
+        }
+    } else {
+        $choice = ~p_choice2_header("Ok, here's 50 gp.", 1, "Thanks, maybe another day.", 2, "What would you like to say?");
+        if ($choice = 1) {
+            ~chatplayer("<p,happy>Ok, here's 50 gp.");
+            inv_del(inv, coins, 50);
+            @wom_bank_robbery_cutscene;
+        } else if ($choice = 2) {
+            @wom_bankguard_thanks;
+        }
+    }
+} else if ($choice = 3) {
+    ~chatplayer("<p,neutral>Sorry, I don't want anything.");
+    ~chatnpc("<p,neutral>Ok.");
+}

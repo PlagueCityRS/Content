@@ -5,6 +5,23 @@
 [if_button,magic:ardougne_teleport] @magic_teleport(^ardougne_teleport);
 [if_button,magic:watchtower_teleport] @magic_teleport(^watchtower_teleport);
 [if_button,magic:trollheim_teleport] @magic_teleport(^trollheim_teleport);
+[opplayert,magic:teleother_lumbridge] @magic_teleother(^teleother_lumbridge);
+[applayert,magic:teleother_lumbridge] @magic_teleother(^teleother_lumbridge);
+[opplayert,magic:teleother_falador] @magic_teleother(^teleother_falador);
+[applayert,magic:teleother_falador] @magic_teleother(^teleother_falador);
+[opplayert,magic:teleother_camelot] @magic_teleother(^teleother_camelot);
+[applayert,magic:teleother_camelot] @magic_teleother(^teleother_camelot);
+
+// temporary check just for f2p
+[label,magic_teleother](int $spell)
+if_close;
+p_stopaction;
+if (p_finduid(uid) = true) {
+    def_dbrow $spell_data = ~get_spell_data($spell);
+    if (~check_spell_requirements($spell_data) = false) {
+        return;
+    }
+}
 
 [label,magic_teleport](int $spell)
 if_close;

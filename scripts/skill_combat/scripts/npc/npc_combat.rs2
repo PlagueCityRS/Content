@@ -1,10 +1,16 @@
 [ai_queue1,_] gosub(npc_default_retaliate);
 [ai_queue2,_] ~npc_default_damage(last_int);
 [ai_queue3,_] gosub(npc_default_death);
+[ai_queue9,_] ~npc_default_damage_npc(last_int); // todo: better way? 
 [ai_opplayer2,_] gosub(npc_default_attack);
+[ai_opnpc2,_] gosub(npc_default_attack_npc);
 
 // a default melee retaliate script.
 [proc,npc_default_retaliate]
+if (%npc_aggressive_npc ! null) {
+    gosub(npc_default_retaliate_npc);
+    return;
+}
 if (finduid(%npc_aggressive_player) = false) {
     return;
 }
@@ -26,6 +32,22 @@ if (npc_stat(hitpoints) > npc_param(retreat)) {
         npc_setmode(playerescape);
     }
 }
+
+[proc,npc_default_retaliate_npc]
+if (.npc_finduid(%npc_aggressive_npc) = false) {
+    return;
+}
+// Would this exist? Maybe.. 
+if (npc_stat(hitpoints) <= npc_param(retreat)) {
+    npc_setmode(null);
+    return;
+}
+if (~npc_retal_ready = false) {
+    return;
+}
+%npc_action_delay = add(map_clock, divide(npc_param(attackrate), 2)); // flinch
+%npc_attacking_npc_uid = %npc_aggressive_npc;
+npc_setmode(opnpc2);
 
 // mostly used for ranged and magic npc's
 [proc,npc_default_retaliate_ap]
@@ -52,6 +74,18 @@ if (npc_stat(hitpoints) > npc_param(retreat)) {
     }
 }
 
+// mostly used for ranged and magic npc's
+[proc,npc_default_retaliate_ap_npc]
+if (.npc_finduid(%npc_aggressive_npc) = false) {
+    return;
+}
+if (~npc_retal_ready = false) {
+    return;
+}
+%npc_action_delay = add(map_clock, divide(npc_param(attackrate), 2)); // flinch
+%npc_attacking_npc_uid = %npc_aggressive_npc;
+npc_setmode(apnpc2);
+
 
 // a default melee attack script.
 [proc,npc_default_attack]
@@ -74,6 +108,29 @@ if (npc_param(attack_sound) ! null) {
 }
 ~npc_meleeattack;
 
+[proc,npc_default_attack_npc]
+if (npc_stat(hitpoints) = 0 | .npc_stat(hitpoints) = 0) {
+    npc_setmode(null);
+    return;
+}
+if (%npc_action_delay > map_clock) return;
+if (~npc_check_notcombat_npc = false) {
+    npc_setmode(null);
+    return;
+}
+if (~npc_check_notcombat_self_npc = false) { // Doesnt change mode! Keeps trying!
+    return;
+}
+.npc_anim(nc_param(.npc_type, defend_anim), 0);
+npc_anim(npc_param(attack_anim), 0);
+if (npc_param(attack_sound) ! null) {
+    ~sound_area(npc_param(attack_sound), 0, npc_coord, 10);
+}
+if (nc_param(.npc_type, defend_sound) ! null) {
+    ~sound_area(nc_param(.npc_type, defend_sound), 0, .npc_coord, 10);
+}
+~npc_meleeattack_npc;
+
 // a default damage script.
 [proc,npc_default_damage](int $damage)
 // if the npc is already dead
@@ -90,6 +147,22 @@ if (npc_stat(hitpoints) > 0) {
     return;
 }
 // if the npc died from this damage
+%npc_aggressive_npc = null; // not killed by an npc
+npc_queue(3, 0, 0);
+
+[proc,npc_default_damage_npc](int $damage)
+if (npc_stat(hitpoints) = 0) {
+    return;
+}
+if ($damage = 0) {
+    npc_damage(^hitmark_block, 0);
+} else {
+    npc_damage(^hitmark_damage, $damage);
+}
+if (npc_stat(hitpoints) > 0) {
+    return;
+}
+if (%npc_aggressive_npc = null) %npc_aggressive_npc = npc_uid; // killed by an npc
 npc_queue(3, 0, 0);
 
 // a default death script.
@@ -316,7 +389,7 @@ return (false);
 
 
 [proc,npc_retal_ready]()(boolean)
-if ((add(%npc_action_delay, 8) < map_clock) | (npc_getmode ! applayer2 & npc_getmode ! opplayer2)) {
+if ((add(%npc_action_delay, 8) < map_clock) | (npc_getmode ! applayer2 & npc_getmode ! opplayer2 & npc_getmode ! opnpc2 & npc_getmode ! apnpc2)) {
     return (true);
 }
 return (false);
@@ -329,6 +402,18 @@ if ($damagetype = ^magic_style) {
 }
 def_int $defencebonus = ~npc_combat_defencebonus($damagetype);
 def_int $effective_defence = ~combat_effective_stat(npc_stat($stat), 100); // no prayerbonus
+$effective_defence = add($effective_defence, 9); // 'style bonus' of 1
+def_int $defence_roll = ~combat_stat($effective_defence, $defencebonus);
+return($defence_roll);
+
+// returns the defence roll for an attacking style for secondary npcs.
+[proc,.npc_defence_roll_specific](int $damagetype)(int)
+def_npc_stat $stat = defence;
+if ($damagetype = ^magic_style) {
+    $stat = magic;
+}
+def_int $defencebonus = ~.npc_combat_defencebonus($damagetype);
+def_int $effective_defence = ~combat_effective_stat(.npc_stat($stat), 100); // no prayerbonus
 $effective_defence = add($effective_defence, 9); // 'style bonus' of 1
 def_int $defence_roll = ~combat_stat($effective_defence, $defencebonus);
 return($defence_roll);
@@ -352,6 +437,17 @@ switch_int ($style) {
 }
 error("style of <tostring($style)> not defined in switch for npc_combat_defencebonus");
 
+// get the npc bonus depending on the attacking style for secondary npc
+[proc,.npc_combat_defencebonus](int $style)(int)
+switch_int ($style) {
+    case ^stab_style : return(nc_param(.npc_type, stabdefence));
+    case ^slash_style : return(nc_param(.npc_type, slashdefence));
+    case ^crush_style : return(nc_param(.npc_type, crushdefence));
+    case ^ranged_style : return(nc_param(.npc_type, rangedefence));
+    case ^magic_style : return(nc_param(.npc_type, magicdefence));
+}
+error("style of <tostring($style)> not defined in switch for .npc_combat_defencebonus");
+
 //  this should be strong queued. Some damage is queued, some isnt
 [queue,combat_damage_player](int $damage)
 if (inv_getobj(worn, ^wearpos_ring) = ring_of_recoil & map_members = ^true & npc_finduid(%aggressive_npc) = true & npc_hasop(2) = true & %npc_attacking_uid = uid & $damage > 0 & stat(hitpoints) > 0) {
@@ -367,17 +463,49 @@ if (inv_getobj(worn, ^wearpos_ring) = ring_of_recoil & map_members = ^true & npc
 [proc,npc_retaliate](int $queue_delay)
 npc_queue(1, 0, $queue_delay);
 %npc_aggressive_player = uid;
+%npc_aggressive_npc = null;
 if(%npc_lastcombat < map_clock) %npc_lastcombat = map_clock;
 
 [proc,.npc_retaliate](int $queue_delay)
 .npc_queue(1, 0, $queue_delay);
 .%npc_aggressive_player = uid;
+.%npc_aggressive_npc = null;
 if(.%npc_lastcombat < map_clock) .%npc_lastcombat = map_clock;
+
+[proc,.npc_retaliate_npc](int $queue_delay)
+.npc_queue(1, 0, $queue_delay);
+.%npc_aggressive_npc = npc_uid;
+.%npc_aggressive_player = null;
+if(.%npc_lastcombat < map_clock) .%npc_lastcombat = map_clock;
+
+[proc,npc_check_notcombat_npc]()(boolean)
+if (map_multiway(npc_coord) = false & nc_param(npc_type, npc_forcemulti) = ^false) {
+    if (add(.%npc_lastcombat, 8) > map_clock) {
+        if (.%npc_aggressive_player ! null) return(false);
+        if (.%npc_aggressive_npc ! null & .%npc_aggressive_npc ! npc_uid) return(false);
+    }
+}
+return(true);
+
+[proc,npc_check_notcombat_self_npc]()(boolean)
+if (map_multiway(npc_coord) = false & nc_param(npc_type, npc_forcemulti) = ^false) {
+    if (add(%npc_lastcombat, 8) > map_clock) {
+        if (%npc_aggressive_player ! null) return(false);
+        if (%npc_aggressive_npc ! null & %npc_aggressive_npc ! .npc_uid) return(false);
+    }
+}
+return(true);
 
 [proc,npc_set_attack_vars]
 %lastcombat = map_clock;
 %npc_attacking_uid = uid;
 %aggressive_npc = npc_uid;
+
+[proc,npc_set_attack_vars_npc]
+%npc_attacking_npc_uid = .npc_uid;
+%npc_aggressive_npc = .npc_uid;
+%npc_aggressive_player = null;
+if (%npc_lastcombat < map_clock) %npc_lastcombat = map_clock;
 
 [proc,npc_check_notcombat]()(boolean)
 if (map_multiway(npc_coord) = false & nc_param(npc_type, npc_forcemulti) = ^false) { // checks npc coord ALWAYS!
@@ -393,6 +521,9 @@ return(true);
 [proc,npc_check_notcombat_self]()(boolean)
 if (map_multiway(npc_coord) = false & nc_param(npc_type, npc_forcemulti) = ^false) {
     if (add(%npc_lastcombat, 8) > map_clock & %npc_aggressive_player ! null & %npc_aggressive_player ! uid) {
+        return(false);
+    }
+    if (add(%npc_lastcombat, 8) > map_clock & %npc_aggressive_npc ! null) {
         return(false);
     }
 }

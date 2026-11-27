@@ -9,4 +9,5 @@ op1=Chop down
 op3=hidden
 ambient=25
 category=tree
-param=next_loc_stage,treestump2_green
+param=next_loc_stage,maple_tree_stump_new
+param=ent,macro_ent_maple

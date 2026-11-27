@@ -1066,24 +1066,6 @@ model=inv_robebottoms
 2dxan=572
 dummyitem=inv_only
 
-// rename: cert_plainwig
-[obj_2422]
-name=Blue partyhat
-recol1s=15360
-recol1d=31
-desc=A nice hat from a cracker.
-model=inv_partyhat
-2dxof=1
-2dyof=1
-2dzoom=440
-2dyan=1852
-2dxan=76
-iop2=Wear
-manwear=man_hat_party,0
-womanwear=woman_hat_party,0
-manhead=chat_male_party
-womanhead=chat_female_party
-dummyitem=inv_only
 
 // rename: cert_skinpaste
 [obj_2425]

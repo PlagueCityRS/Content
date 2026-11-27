@@ -70,3 +70,12 @@ if (p_finduid(uid) = true) {
     npc_add(0_37_55_33_10, kologre, 100);
     npc_setmode(applayer2);
 }
+
+[debugproc,npc_fight]
+if (p_finduid(uid) = true) {
+    npc_add(movecoord(coord, 0, 0, 1), guard1, 100);
+    .npc_add(movecoord(coord, 1, 0, 2), goblin, 100);
+    %npc_attacking_npc_uid = .npc_uid;
+    npc_setmode(opnpc2);
+
+}

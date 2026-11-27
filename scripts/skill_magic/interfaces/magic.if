@@ -8421,7 +8421,7 @@ actionverb=Cast on
 actiontarget=npc,player
 action=Magic Dart
 
-[com_459]
+[teleother_lumbridge]
 layer=com_458
 type=graphic
 x=0
@@ -8454,7 +8454,7 @@ actionverb=Cast on
 actiontarget=npc,player
 action=Teleother Lumbridge
 
-[com_469]
+[teleother_falador]
 layer=com_458
 type=graphic
 x=120
@@ -8485,7 +8485,7 @@ actionverb=Cast on
 actiontarget=npc,player
 action=Teleother Falador
 
-[com_479]
+[teleport_block]
 layer=com_458
 type=graphic
 x=144
@@ -8508,7 +8508,7 @@ actionverb=Cast on
 actiontarget=npc,player
 action=Tele Block
 
-[com_489]
+[teleother_camelot]
 layer=com_458
 type=graphic
 x=24

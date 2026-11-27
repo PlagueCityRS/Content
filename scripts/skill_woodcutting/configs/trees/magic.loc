@@ -1,4 +1,3 @@
-// looks like they just used the normal tree stump!!?
 [magictree]
 name=Magic tree
 desc=The tree shimmers with a magical force.
@@ -10,4 +9,5 @@ op3=hidden
 mapscene=0
 ambient=25
 category=tree
-param=next_loc_stage,treestump2
+param=next_loc_stage,magic_tree_stump_new
+param=ent,macro_ent_magic

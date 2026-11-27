@@ -19,7 +19,7 @@ body:
     attributes:
       label: What Needs to be Done?
       description: Describe the feature, mechanic, or content being added.
-      validations:
+    validations:
       required: true
 
   - type: textarea

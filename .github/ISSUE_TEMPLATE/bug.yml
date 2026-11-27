@@ -10,8 +10,8 @@ body:
 
   - type: checkboxes
     id: affected-repos
-    description: If you are unsure, just leave this blank.
     attributes:
+      description: If you are unsure, just leave this blank.
       label: Affected Repository / Component
       options:
         - label: Engine-TS

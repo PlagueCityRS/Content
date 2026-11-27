@@ -19,7 +19,7 @@ body:
     attributes:
       label: Objective
       description: What needs to be done and why?
-      validations:
+    validations:
         required: true
 
   - type: textarea
